@@ -1,6 +1,15 @@
 # PokéBonk Unbound — Modding Documentation
 
-PokéBonk Unbound includes an offline-only mod engine located in `./mods/`. Mods never load in Online Mode and do not touch online accounts or save files.
+PokéBonk Unbound includes an offline-only mod engine located in `./mods/`. Mods never execute or inject in Online Mode and never touch online accounts or online save files.
+
+**Core Modding API features** built directly into the mod engine (always available whenever the Offline Mod Engine is enabled, without requiring any extra enabler mod):
+- **Custom Attacks** (`customMoves` / `movesDir`)
+- **Custom Visual Effects (VFX)** (`customVfx` / `vfxDir`, inline move `vfx`, and `customUlt.vfx`)
+- **Additive Custom Music & SFX** (`customMusic` / `musicDir` & `customSfx` / `sfxDir`)
+- **Custom Pokéball Pickup Items** (`customItems` / `itemsDir`)
+- **Custom Characters, Regions, Assets, Data Patches, Bundle Patches, Scripts & CSS**
+
+All mod toggles, configuration, and per-mod actions are managed inside **Unbound Settings**. Non-cheat Offline build mod settings can also be pre-configured from **Unbound Settings** while in Online Mode, while Online Mode itself stays 100% vanilla and all gameplay-altering cheats remain locked until Offline Mode.
 
 ---
 
@@ -51,15 +60,17 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `regions` | `object[]` | Adds selectable region tabs in Character Select and Pokédex. |
 | `characters` | `object[]` | Inline custom character definitions. |
 | `charactersDir` | `string` | Relative directory containing `.json` character files (e.g. `"characters"`). |
-| `customMoves` | `object[]` | Inline custom attack definitions. |
-| `movesDir` | `string` | Relative directory containing `.json` attack files. |
+| `customMoves` | `object[]` | Core API: inline custom attack definitions. |
+| `movesDir` | `string` | Core API: relative directory containing `.json` attack files. |
+| `customVfx` | `object[]` | Core API: reusable declarative GPU visual effect presets. |
+| `vfxDir` | `string` | Core API: relative directory containing `.json` VFX preset files. |
 | `customItems` | `object[]` | Inline custom Pokéball pickup item definitions. |
 | `itemsDir` | `string` | Relative directory containing `.json` item files. |
-| `customMusic` | `object[]` | Additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
-| `musicDir` | `string` | Relative directory of custom music `.json` descriptors or drop-in audio files. |
-| `customSfx` | `object[]` | Additive custom SFX clips routed through the native SFX bus. |
-| `sfxDir` | `string` | Relative directory of custom SFX `.json` descriptors or drop-in audio files. |
-| `toolbarActions` | `object[]` | Adds entries to Offline Mode's **Mod Options** toolbar menu. |
+| `customMusic` | `object[]` | Core API: additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
+| `musicDir` | `string` | Core API: relative directory of custom music `.json` descriptors or drop-in audio files. |
+| `customSfx` | `object[]` | Core API: additive custom SFX clips routed through the native SFX bus. |
+| `sfxDir` | `string` | Core API: relative directory of custom SFX `.json` descriptors or drop-in audio files. |
+| `toolbarActions` | `object[]` | Action buttons displayed inside the mod's card in **Unbound Settings -> Installed Mods**. |
 | `styles` | `string[]` | Relative CSS files injected into the game document. |
 | `scripts` | `string[]` | Relative JS files executed in Offline Mode with `window.pokebonkModAPI`. |
 | `assetsDir` | `string` | Directory whose files override matching game asset paths. |
@@ -150,9 +161,9 @@ Characters start **locked by default** (`"unlock": false`) for standard progress
 
 ---
 
-## 4. Custom Attacks (`customMoves` / `movesDir`)
+## 4. Custom Attacks & Custom Visual Effects (Core API)
 
-Custom attacks use PokéBonk's native GPU particle VFX and procedural WebAudio SFX engine — no external VFX textures or sound files are required.
+Custom attacks (`customMoves` / `movesDir`) and custom visual effects (`customVfx` / `vfxDir` or inline `vfx`) are first-class **Core Modding API** features active whenever the Offline Mod Engine is enabled. They run directly on PokéBonk's native GPU particle/beam/ring VFX and WebAudio SFX engine with no external texture files required.
 
 ### Valid Archetypes
 
@@ -162,37 +173,94 @@ The engine supports 23 native movement/hitbox archetypes:
 
 Aliases are normalized automatically: `slash`/`cleave` -> `strike`, `burst`/`blast` -> `nova`, `slam` -> `smite`, `spread` -> `barrage`, `shot` -> `bolt`.
 
-### Example Custom Attack
+### Extended `params` Tuning
+
+Any custom move can tune gameplay behavior via `params`:
+- `count` (projectile/strike count), `spread` (radians between projectiles), `pulses` (nova/burst pulse count)
+- `dmgMul`, `cdMul` / `cd`, `areaMul` / `r`, `speedMul` / `speed`, `durMul` / `dur`, `pierce`
+- `status` (`"burn"`, `"freeze"`, `"paralysis"`, `"poison"`, `"stun"`, `"root"`, `"wet"`, `"charm"`), `statusChance` (`0`–`1`)
+
+### Declarative Custom Visual Effects (`customVfx` / inline `vfx`)
+
+Define reusable VFX presets in `"customVfx"` (or `"vfxDir"`) and link them to moves via `"vfxId"`, or attach an inline `"vfx": { ... }` object directly to any move:
 
 ```json
-{
-  "key": "emerald-slash",
-  "name": "Emerald Slash",
-  "type": "steel",
+"customVfx": [
+  {
+    "id": "link-picori-slash",
+    "preset": "slash",
+    "shape": "PixSlash",
+    "color": "#4aff80",
+    "color2": "#ffe866",
+    "size": 1.35,
+    "strikeArc": true,
+    "strikeSparks": 9,
+    "hitShape": "Twinkle",
+    "hitColor": "#ffe866",
+    "hitCount": 7
+  }
+],
+"customMoves": [
+  {
+    "key": "picori-blade",
+    "name": "Picori Blade",
+    "type": "steel",
+    "cls": "physical",
+    "power": 78,
+    "accuracy": 100,
+    "pp": 25,
+    "crit": 1,
+    "flavor": "Link strikes swiftly with the sacred Picori Blade in twin emerald-gold sword arcs.",
+    "archetype": "strike",
+    "params": { "count": 2, "dmgMul": 1.15, "areaMul": 1.2, "cdMul": 0.85 },
+    "vfxId": "link-picori-slash",
+    "vfxPreset": "slash",
+    "sfxPreset": "slash"
+  }
+]
+```
+
+#### Custom VFX Spec Fields
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `id` | `string` | Preset identifier (when declared in `customVfx` / `vfxDir`). |
+| `preset` | `string` | Optional vanilla `QT` move key to inherit base behavior from (e.g. `slash`, `razor-leaf`, `gust`, `psybeam`, `flamethrower`, `thunderbolt`, `shadow-ball`, `dragon-claw`). |
+| `shape` | `string` | Native GPU particle shape from `O.*` (e.g. `Soft`, `Star`, `Spark`, `Ring`, `Leaf`, `Flame`, `Bubble`, `Flake`, `Bolt`, `Rock`, `Swirl`, `Crescent`, `Cross`, `Feather`, `Twinkle`, `Shard`, `Wisp`, `Gem`, `PixSlash`, `PixFlame`, `PixBolt`, `PixWave`, `PixTornado`, `PixLeaf`, `PixStar`, `PixSparkle`, `PixGem`). |
+| `color` / `color2` | `string \| number` | Primary and secondary accent colors as hex strings (`"#4aff80"`) or 24-bit RGB integers (`4915072`). |
+| `size` / `glow` | `number` | Particle scale multiplier and additive glow intensity (`0`–`1`). |
+| `trailShape` / `trailColor` / `trailSize` / `trailRate` | mixed | Projectile trail particles (`trailRate`: `0`–`1`). |
+| `hitShape` / `hitColor` / `hitCount` / `hitSize` / `hitSpeed` | mixed | Impact burst flash and particles. |
+| `strikeArc` / `strikeSparks` | `boolean \| number` | Dual-color slash arc ribbons and spark burst for `strike` moves. |
+| `beamWidth` / `beamCoreColor` | `number \| string` | Custom dual-layer beam width multiplier and inner core color for `beam` moves. |
+| `ringStyle` / `ringColor` / `boomRing` / `boomCount` | mixed | Ground shockwave ring style from `k.*` (`Plain`, `Dashed`, `Ripple`, `Runes`, `Petals`, `Jagged`, `Flames`) and explosion burst count. |
+
+#### Custom Ultimate VFX (`customUlt.vfx`)
+
+Any character's `customUlt` can customize its shockwave rings and particle burst:
+
+```json
+"customUlt": {
+  "name": "Four Sword Hurricane Spin",
+  "type": "grass",
   "cls": "physical",
-  "power": 78,
-  "accuracy": 100,
-  "pp": 20,
-  "crit": 1,
-  "ailment": null,
-  "ailmentChance": 0,
-  "flinch": 0,
-  "drain": 0,
-  "healing": 0,
-  "flavor": "Cuts enemies in a wide emerald arc.",
-  "archetype": "strike",
-  "params": { "r": 3.1, "arc": 2.35, "cd": 0.78 },
-  "vfxPreset": "slash",
-  "sfxPreset": "slash",
-  "vfxColor": 4915072,
-  "vfxSize": 1.25
+  "tint": 3403130,
+  "radius": 15,
+  "dmgMul": 5.2,
+  "dur": 1.9,
+  "knock": 9,
+  "vfx": {
+    "ringStyle": "Runes",
+    "secondaryRingStyle": "Petals",
+    "color2": "#ffe866",
+    "particleShape": "PixSlash",
+    "particleCount": 30
+  }
 }
 ```
 
-- `vfxPreset` / `sfxPreset`: Any existing vanilla move key (e.g. `slash`, `flamethrower`, `psybeam`, `razor-leaf`, `thunderbolt`, `gust`, `ember`, `shadow-ball`, `quick-attack`, `hyper-beam`).
-- `vfxColor`: 24-bit decimal RGB integer (e.g. `0x4AFF80` = `4915072`).
-- `vfxShape` (optional): Native particle shape key (defaults to `Soft`).
-- Reference the attack's `key` inside any character's `kit` array.
+- At runtime, `window.pokebonkVfx` lists available `shapes`, `rings`, and active custom `presets`, and `GET /local-api/mod-api/moves` / `GET /local-api/mod-api/vfx` return active definitions.
+- Reference any attack's `key` inside any character's `kit` array.
 
 ---
 
@@ -304,9 +372,9 @@ Custom SFX clips decode once via Web Audio API and play through PokéBonk's nati
 
 ---
 
-## 7. Dynamic Toolbar Actions (`toolbarActions`)
+## 7. Mod Actions (`toolbarActions` in Unbound Settings)
 
-Mods can declare entries that appear under Offline Mode's **Mod Options** menu when the mod is enabled.
+Mods can declare action buttons that appear inside the mod's card in **Unbound Settings -> Installed Mods** when the mod is enabled. Non-cheat actions (such as opening a mod subfolder) work in any mode; profile-mutating unlock/cheat actions remain locked until Offline Mode.
 
 Supported item shapes:
 
@@ -354,6 +422,9 @@ Supported item shapes:
 Scripts listed in `"scripts"` execute in Offline Mode with access to `window.pokebonkModAPI`:
 - `GET /local-api/mod-api/profile` — active offline profile (with non-destructive mod patches)
 - `GET /local-api/mod-api/characters` — active custom characters, regions, and `maxDex`
+- `GET /local-api/mod-api/moves` — active custom attacks
+- `GET /local-api/mod-api/vfx` — active custom VFX presets
+- `GET /local-api/mod-api/audio` — active additive custom music and SFX catalog
 - `POST /local-api/mod-api/mutate` — apply a profile mutation (Offline Mode + Mods ON only)
 
 ### Asset Overrides & Aliases
@@ -379,23 +450,54 @@ Apply in-memory replacements to served JS/CSS chunks without modifying files on 
 
 ---
 
-## 9. Publishing Mods to the GitHub Mod Browser
+## 9. Mod Showcase File (`info.json`) & GitHub Mod Browser
 
 Unbound Settings' **Mod Browser** reads from `HyruleChosenOne/Pokebonk-Unbound` (`mods-database/` on `main`) by default and supports any public GitHub `owner/repo`.
 
-### Option A: Curated `mods-database/mods-index.json` (Recommended)
+### Mod Info Showcase File (`info.json`)
 
-Add a `mods-database/mods-index.json` file (or root `mods-index.json`) listing each mod's metadata, folder path, and optional explicit file list:
+Every mod folder can include an `info.json` alongside `mod.json` to showcase its description, highlights, category, requirements, and banner image in both the in-app **Mod Browser** and `mods-datas.md`:
 
 ```json
 {
+  "id": "my-mod-id",
+  "name": "My Mod Name",
+  "version": "1.0.0",
+  "author": "AuthorName",
+  "category": "Characters",
+  "tagline": "Short summary shown on the Mod Browser card.",
+  "description": "Full showcase description shown when expanding Details in the Mod Browser.",
+  "highlights": [
+    "Playable fighter with 8-direction animations",
+    "Custom attacks and GPU VFX presets"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode (Mod Engine ON)"
+}
+```
+
+- **`image`**: Relative path inside the mod folder (e.g. `"preview.png"`, recommended `16:9` aspect ratio such as `640x360` or `960x540`) or an external `https://` image URL. If the image file is not added yet, the Mod Browser automatically renders a clean placeholder banner.
+
+### Option A: Curated `mods-database/mods-index.json` (Recommended)
+
+Add a `mods-database/mods-index.json` file (generated automatically via `node scripts/sync-mods-database.js`) listing each mod's metadata, `info.json` showcase fields, preview image path, folder path, and explicit file list:
+
+```json
+{
+  "schemaVersion": 2,
   "mods": [
     {
       "id": "my-mod-id",
       "name": "My Mod Name",
       "version": "1.0.0",
       "author": "AuthorName",
-      "description": "Short description.",
+      "category": "Characters",
+      "tagline": "Short summary.",
+      "fullDescription": "Full showcase description.",
+      "highlights": ["Feature 1", "Feature 2"],
+      "infoFile": "info.json",
+      "image": "preview.png",
+      "hasImage": true,
       "tags": ["character", "audio"],
       "path": "mods-database/my-mod-id"
     }
@@ -405,15 +507,17 @@ Add a `mods-database/mods-index.json` file (or root `mods-index.json`) listing e
 
 ### Option B: Automatic Folder Discovery
 
-Place each mod in its own folder under `mods-database/` or `mods/` containing a `mod.json`:
+Place each mod in its own folder under `mods-database/` or `mods/` containing `mod.json` (and optionally `info.json` + `preview.png`):
 
 ```text
 repo/
   mods-database/
     my-mod-id/
       mod.json
+      info.json
+      preview.png
       characters/
         ...
 ```
 
-The Mod Browser scans the repository via GitHub's API, reads each `mod.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the user clicks **Install**.
+The Mod Browser scans the repository via GitHub's API, reads `mod.json` and `info.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the user clicks **Install**.

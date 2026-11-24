@@ -1,9 +1,9 @@
 {
   "id": "national-dex-gen3-9",
-  "name": "National Dex Expansion (Gen 3–9: Hoenn → Paldea)",
-  "version": "2.0.0",
+  "name": "National Dex Expansion (Gen 3-9: Hoenn to Paldea)",
+  "version": "1.0.0",
   "author": "HyruleChosenOne",
-  "description": "Adds ALL 7 missing Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom Gen 3-9 attacks & 24 custom Ultimates, all 419 base families, and all 774 species. Pair with the separate Gen 3-9 Regions & Levels Pack for regional maps. Starts locked by default.",
+  "description": "Adds all 7 Gen 3-9 Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom Gen 3-9 attacks, 24 signature Ultimates, 419 playable base families, and 774 species. Pure Pokémon & attacks expansion (zero bundled levels — pair with Gen 3-9 Regions & Levels Pack for regional maps).",
   "tags": [
     "gen3",
     "gen4",
@@ -9076,6 +9076,7 @@
   ],
   "toolbarActions": [
     {
+      "id": "unlock-all-gen39",
       "label": "Unlock All Gen 3-9 Pokémon (#252-#1025)",
       "type": "unlock-mod-characters",
       "speciesRange": [
@@ -9087,6 +9088,7 @@
       "label": "Unlock Individual Generation",
       "submenu": [
         {
+          "id": "unlock-gen-3",
           "label": "Unlock Hoenn (Gen 3 · #252-#386)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9095,6 +9097,7 @@
           ]
         },
         {
+          "id": "unlock-gen-4",
           "label": "Unlock Sinnoh (Gen 4 · #387-#493)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9103,6 +9106,7 @@
           ]
         },
         {
+          "id": "unlock-gen-5",
           "label": "Unlock Unova (Gen 5 · #494-#649)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9111,6 +9115,7 @@
           ]
         },
         {
+          "id": "unlock-gen-6",
           "label": "Unlock Kalos (Gen 6 · #650-#721)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9119,6 +9124,7 @@
           ]
         },
         {
+          "id": "unlock-gen-7",
           "label": "Unlock Alola (Gen 7 · #722-#809)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9127,6 +9133,7 @@
           ]
         },
         {
+          "id": "unlock-gen-8",
           "label": "Unlock Galar (Gen 8 · #810-#905)",
           "type": "unlock-mod-characters",
           "speciesRange": [
@@ -9135,6 +9142,7 @@
           ]
         },
         {
+          "id": "unlock-gen-9",
           "label": "Unlock Paldea (Gen 9 · #906-#1025)",
           "type": "unlock-mod-characters",
           "speciesRange": [

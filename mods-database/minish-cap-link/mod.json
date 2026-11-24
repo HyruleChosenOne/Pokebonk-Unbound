@@ -3,13 +3,86 @@
   "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
   "version": "1.0.0",
   "author": "HyruleChosenOne",
-  "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 authentic Minish Cap custom attacks (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items!",
+  "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 custom Minish Cap attacks with dedicated custom VFX (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items.",
   "tags": [
     "character",
     "zelda",
     "minish-cap",
     "custom-attacks",
+    "custom-vfx",
     "custom-items"
+  ],
+  "customVfx": [
+    {
+      "id": "link-picori-slash",
+      "preset": "slash",
+      "shape": "PixSlash",
+      "color": "#4aff80",
+      "color2": "#ffe866",
+      "size": 1.35,
+      "strikeArc": true,
+      "strikeSparks": 9,
+      "hitShape": "Twinkle",
+      "hitColor": "#ffe866",
+      "hitCount": 7
+    },
+    {
+      "id": "link-magic-boomerang",
+      "preset": "razor-leaf",
+      "shape": "Crescent",
+      "color": "#33ee9a",
+      "color2": "#99ffff",
+      "size": 1.35,
+      "trailShape": "Spark",
+      "trailColor": "#99ffff",
+      "trailRate": 0.75,
+      "hitShape": "Cross",
+      "hitColor": "#33ee9a",
+      "hitCount": 6
+    },
+    {
+      "id": "link-gust-gale",
+      "preset": "gust",
+      "shape": "PixTornado",
+      "color": "#99ffff",
+      "color2": "#ffffff",
+      "size": 1.45,
+      "trailShape": "Swirl",
+      "trailColor": "#ccffff",
+      "trailRate": 0.7,
+      "hitShape": "PixWave",
+      "hitColor": "#99ffff",
+      "hitCount": 8
+    },
+    {
+      "id": "link-pacci-beam",
+      "preset": "psybeam",
+      "shape": "Star",
+      "color": "#ff69b4",
+      "color2": "#ffe866",
+      "size": 1.3,
+      "beamWidth": 1.35,
+      "beamCoreColor": "#ffe866",
+      "trailShape": "Twinkle",
+      "hitShape": "Gem",
+      "hitColor": "#ff69b4",
+      "hitCount": 7
+    },
+    {
+      "id": "link-flame-lantern",
+      "preset": "flamethrower",
+      "shape": "PixFlame",
+      "color": "#ff8800",
+      "color2": "#ffeb77",
+      "size": 1.35,
+      "ringStyle": "Flames",
+      "ringColor": "#ff6600",
+      "boomRing": true,
+      "boomCount": 16,
+      "hitShape": "PixFlame",
+      "hitColor": "#ffeb77",
+      "hitCount": 8
+    }
   ],
   "customMoves": [
     {
@@ -17,28 +90,28 @@
       "name": "Picori Blade",
       "type": "steel",
       "cls": "physical",
-      "power": 72,
+      "power": 78,
       "accuracy": 100,
       "pp": 25,
       "crit": 1,
-      "flavor": "Link strikes swiftly with the sacred Picori Blade in a wide emerald-silver arc.",
+      "flavor": "Link strikes swiftly with the sacred Picori Blade in twin emerald-gold sword arcs.",
       "archetype": "strike",
       "params": {
-        "r": 3.1,
-        "arc": 2.35,
-        "cd": 0.78
+        "count": 2,
+        "dmgMul": 1.15,
+        "areaMul": 1.2,
+        "cdMul": 0.85
       },
+      "vfxId": "link-picori-slash",
       "vfxPreset": "slash",
-      "sfxPreset": "slash",
-      "vfxColor": 4915072,
-      "vfxSize": 1.25
+      "sfxPreset": "slash"
     },
     {
       "key": "magical-boomerang",
       "name": "Magical Boomerang",
       "type": "grass",
       "cls": "physical",
-      "power": 68,
+      "power": 72,
       "accuracy": 100,
       "pp": 20,
       "flinch": 25,
@@ -47,77 +120,77 @@
       "flavor": "Throws the Magical Boomerang in a curved returning arc that slices and stuns foes twice.",
       "archetype": "boomerang",
       "params": {
-        "speed": 17,
-        "dist": 12,
-        "count": 2
+        "count": 2,
+        "spread": 0.3,
+        "dmgMul": 1.1,
+        "speedMul": 1.15
       },
+      "vfxId": "link-magic-boomerang",
       "vfxPreset": "razor-leaf",
-      "sfxPreset": "quick-attack",
-      "vfxColor": 3403130,
-      "vfxSize": 1.2
+      "sfxPreset": "quick-attack"
     },
     {
       "key": "gust-jar",
       "name": "Gust Jar",
       "type": "flying",
       "cls": "special",
-      "power": 82,
+      "power": 84,
       "accuracy": 100,
       "pp": 15,
       "flavor": "Unleashes a roaring compressed gale from the Gust Jar that blasts crowds backward.",
       "archetype": "wave",
       "params": {
-        "speed": 15,
-        "width": 3.2,
-        "pierce": 5,
-        "knock": 7.5
+        "count": 2,
+        "dmgMul": 1.15,
+        "areaMul": 1.25,
+        "pierce": 5
       },
+      "vfxId": "link-gust-gale",
       "vfxPreset": "gust",
-      "sfxPreset": "gust",
-      "vfxColor": 10092543,
-      "vfxSize": 1.35
+      "sfxPreset": "gust"
     },
     {
       "key": "cane-of-pacci",
       "name": "Cane of Pacci",
       "type": "fairy",
       "cls": "special",
-      "power": 95,
+      "power": 96,
       "accuracy": 100,
       "pp": 15,
       "crit": 1,
-      "flavor": "Fires an overturning bolt of Picori magic from the Cane of Pacci that flips enemies.",
+      "flavor": "Fires an overturning beam of Picori magic from the Cane of Pacci that flips enemies.",
       "archetype": "beam",
       "params": {
-        "len": 13.5,
-        "width": 1.5,
+        "dmgMul": 1.2,
+        "areaMul": 1.15,
         "pierce": 4
       },
+      "vfxId": "link-pacci-beam",
       "vfxPreset": "psybeam",
-      "sfxPreset": "psybeam",
-      "vfxColor": 16738740,
-      "vfxSize": 1.25
+      "sfxPreset": "psybeam"
     },
     {
       "key": "flame-lantern",
       "name": "Flame Lantern",
       "type": "fire",
       "cls": "special",
-      "power": 85,
+      "power": 88,
       "accuracy": 100,
       "pp": 15,
       "ailment": "burn",
       "ailmentChance": 35,
-      "flavor": "Swings the Flame Lantern to hurl blazing embers that ignite nearby enemies.",
+      "flavor": "Swings the Flame Lantern to unleash a searing ring of embers that ignites surrounding foes.",
       "archetype": "nova",
       "params": {
-        "r": 4.2,
-        "count": 3
+        "pulses": 2,
+        "dmgMul": 1.2,
+        "areaMul": 1.15,
+        "status": "burn",
+        "statusChance": 0.4
       },
+      "vfxId": "link-flame-lantern",
       "vfxPreset": "flamethrower",
-      "sfxPreset": "ember",
-      "vfxColor": 16747520,
-      "vfxSize": 1.25
+      "sfxPreset": "ember"
     }
   ],
   "customItems": [
@@ -195,12 +268,19 @@
         "name": "Four Sword Hurricane Spin",
         "type": "grass",
         "cls": "physical",
-        "desc": "Link splits into the Four Sword formation and unleashes a massive emerald-gold hurricane spin shockwave!",
+        "desc": "Link splits into the Four Sword formation and unleashes a massive emerald-gold hurricane spin shockwave.",
         "tint": 3403130,
         "radius": 15,
         "dmgMul": 5.2,
         "dur": 1.9,
-        "knock": 9
+        "knock": 9,
+        "vfx": {
+          "ringStyle": "Runes",
+          "secondaryRingStyle": "Petals",
+          "color2": "#ffe866",
+          "particleShape": "PixSlash",
+          "particleCount": 30
+        }
       },
       "flavor": "Chosen Hero of Hyrule accompanied by Ezlo the Minish Cap. Wields the Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and the legendary Four Sword.",
       "sprite": "characters/minish-link-front.png",

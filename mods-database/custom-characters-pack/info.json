@@ -1,0 +1,17 @@
+{
+  "id": "custom-characters-pack",
+  "name": "Custom Characters & Custom Attacks Pack",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "category": "Characters",
+  "tagline": "5 playable Mega, Primal, and Battle Bond forms with 10 signature custom attacks, 5 Ultimates, and drop-in character support.",
+  "description": "Adds 5 iconic special forms into the Custom playable roster (#2001-#2005): Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja. Every fighter comes with tailored stats, animated sprites, 2 dedicated signature custom attacks (10 total), a custom Ultimate, and 3 custom Pokéball pickup items. Also supports dropping your own standalone character .json and .png files into ./characters/.",
+  "highlights": [
+    "5 playable special forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja",
+    "10 signature custom attacks including Delta Dragon Ascent, Precipice Blades, Origin Pulse, Psystrike, and Bond Water Shuriken",
+    "5 custom signature Ultimates and 3 custom Pokéball pickup items",
+    "Drop-in ./characters/ folder support for adding your own custom fighters without creating a separate mod"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode + Hyrule's Mods (Custom Characters Enabler)"
+}

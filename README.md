@@ -12,12 +12,13 @@
 
 - **Isolated Online Mode**
   - Runs `https://pokebonk.com/` in a dedicated, sandboxed browser session (`persist:pokebonk-unbound-online`) with no request interception and no injected scripts.
-  - Mods and trainer tools are strictly locked to Offline Mode and never touch Online Mode or online saves.
+  - Online Mode stays 100% vanilla and never loads mods or touches online saves.
+  - Non-cheat Offline mod settings can be configured in advance from **Unbound Settings** while in Online Mode; all gameplay-altering cheats (Run Speed, God Mode, Overdrive, Difficulty Unlocks) and save unlock tools remain strictly locked until you switch to Offline Mode.
   - Includes one-click Online savefile export and one-way sync to Offline Mode.
 
 - **1:1 Vanilla Offline Mode**
-  - Serves PokéBonk locally from `127.0.0.1` with local API emulation.
-  - When **Enable Mods** is turned off, Offline Mode runs vanilla PokéBonk without gameplay alterations.
+  - Serves PokéBonk locally from `127.0.0.1` with local API emulation and a local-only multi-profile leaderboard.
+  - Releases ship clean without bundled mods — Offline Mode runs pure 1:1 vanilla out of the box.
 
 - **Multi-Profile Local Save System**
   - Create, switch, rename, import, export, and delete independent offline trainer profiles.
@@ -26,38 +27,32 @@
 - **Local Build Version History**
   - Maintain and switch between the bundled Preserved Build and synced Live Updates from `pokebonk.com` inside **Unbound Settings**.
 
-- **Offline Mod Engine (`./mods/`)**
-  - Supports custom playable characters (animated 8-direction spritesheets, shiny variants, portraits, icons, cries, and custom Ultimates), custom attacks, custom Pokéball pickup items, additive custom music tracks and custom SFX (without replacing existing songs), asset overrides, JSON data patches, bundle patches, scripts, and CSS.
+- **Core Offline Modding Engine (`./mods/`)**
+  - Built-in core API support for **Custom Attacks**, **Custom Visual Effects (VFX)**, **Additive Custom Music & SFX** (without replacing vanilla songs), **Custom Playable Characters** (8-direction animated spritesheets, shiny variants, portraits, icons, cries, and custom Ultimates), **Custom Pokéball Items**, asset overrides, JSON data patches, bundle patches, scripts, and CSS.
   - See [docs/MODDING.md](docs/MODDING.md) for the complete modding reference.
 
-- **Unbound Settings & GitHub Mod Browser**
-  - Manage game builds, toggle mods, configure Hyrule's Mods options, manage local profiles, and browse/install mods directly from `mods-database/` in `HyruleChosenOne/Pokebonk-Unbound` (or any custom GitHub `owner/repo`).
+- **Streamlined Toolbar, Unbound Settings & Mod Browser**
+  - Clean top toolbar (`Mode | Saves | Unbound Settings`) with dynamic status indicator icons.
+  - All mod toggles, per-mod actions, version history, local profiles, and the in-app **Mod Browser** (pulling directly from `mods-database/` in `HyruleChosenOne/Pokebonk-Unbound` or any custom GitHub `owner/repo`) live inside **Unbound Settings**.
 
 ---
 
-## Release Editions
+## Release Editions (v1.0.0)
 
-Two Windows portable executables are provided:
+Two Windows portable executables are provided on the [Releases](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases) page. Neither release comes bundled with mods — install any optional mod with 1 click through **Unbound Settings -> Mod Browser**.
 
 | Edition | Output File | Contents |
 | --- | --- | --- |
-| **Portable** | `PokeBonk-Unbound-Portable-2.0.0.exe` | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the full offline build into `./build-data/` alongside the executable. |
-| **Complete** | `PokeBonk-Unbound-Complete-2.0.0.exe` | Self-contained release bundling the complete offline game build, sprites, and optional mods out of the box. |
+| **Portable** | `PokeBonk-Unbound-Portable-1.0.0.exe` | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the full offline build into `./build-data/` alongside the executable. |
+| **Complete** | `PokeBonk-Unbound-Complete-1.0.0.exe` | Self-contained release bundling the complete offline game build and sprites out of the box (no bundled mods). |
 
 ---
 
-## Included Optional Mods
+## Available Mods
 
-All shipped mods start **disabled by default** and operate exclusively in Offline Mode:
+Mods are not bundled in the executables and are installed on demand through **Unbound Settings -> Mod Browser**.
 
-| Mod ID | Description |
-| --- | --- |
-| `hyrules-mods` | Quality-of-life, enablers, and trainer cheats collection: Custom Characters Enabler, Events Enabler (Choose-Mode hub preserving wallpaper/music), P2P `IP:Port` Multiplayer, Main Menu 3D Background & Music selector, Run Speed (`1×`/`1.5×`/`2×`), Unlock All Difficulties, Clean Main Menu, God Mode, Overdrive, and profile/unlock tools. |
-| `minish-cap-link` | Playable Link (*The Minish Cap*) with 8-direction animated sprites, Four Sword Red shiny variant, 5 custom attacks, Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball items. |
-| `custom-characters-pack` | 5 custom forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, Ash-Greninja), 10 custom attacks, 5 signature Ultimates, and 3 custom Pokéball items. Also supports drop-in character JSONs in `characters/`. |
-| `national-dex-gen3-9` | Gen 3–9 National Dex character expansion covering 7 regions, 419 base families, 72 custom attacks, and 24 signature Ultimates. |
-| `gen3-9-regions-levels` | Standalone Gen 3–9 Regions & Levels Pack adding 14 unique maps (2 per region from Hoenn to Paldea) with distinct terrain profiles, weather, sanctuaries, and 3D centerpiece landmarks. |
-| `pokemon-audio-pack` | Additive Pokémon soundtrack & SFX pack curated from HeartGold/SoulSilver and FireRed/LeafGreen (17 battle, menu, and boss themes + 4 iconic SFX) without replacing vanilla songs. |
+For the full catalog of official available mods, descriptions, preview images, and highlights, see **[mods-datas.md](mods-datas.md)**.
 
 ---
 
@@ -73,7 +68,7 @@ All shipped mods start **disabled by default** and operate exclusively in Offlin
 
 - **Offline Build Data (`versions/`, `pokeapi/`, `pokeapi-sprites/`)**: Stored in `./build-data/` alongside the `.exe` folder (falls back to `%APPDATA%\pokebonk-unbound\build-data` if the executable directory is read-only). Override with `POKEBONK_UNBOUND_BUILD_DIR`.
 - **Savefiles, Profiles & Session Data (`saves/`, preferences, browser sessions)**: Stored in `%APPDATA%\pokebonk-unbound` on Windows so saves and sessions stay consistent across editions. Override with `POKEBONK_UNBOUND_DATA_DIR`.
-- **Mods**: Loaded from `%APPDATA%\pokebonk-unbound\mods` and `./mods/` beside the executable.
+- **Mods**: Downloaded by the Mod Browser into `%APPDATA%\pokebonk-unbound\mods` (also reads `./mods/` beside the executable if created manually).
 
 ---
 
@@ -111,7 +106,7 @@ npm test
 # Portable edition (lightweight, downloads offline build on demand)
 npm run build:portable
 
-# Complete edition (includes bundled-build/ and default mods)
+# Complete edition (includes bundled-build/, zero bundled mods)
 npm run build:complete
 ```
 
@@ -119,7 +114,7 @@ npm run build:complete
 
 ## Modding Documentation
 
-For mod creation, `mod.json` schemas, custom characters, custom attacks, custom Pokéball items, procedural and 3D `.glb` levels, and GitHub Mod Browser publishing, see **[docs/MODDING.md](docs/MODDING.md)**.
+For mod creation, `mod.json` and `info.json` showcase schemas, core custom attacks, custom visual effects (VFX), additive custom music & SFX, custom characters, custom Pokéball items, and GitHub Mod Browser publishing, see **[docs/MODDING.md](docs/MODDING.md)**.
 
 ---
 

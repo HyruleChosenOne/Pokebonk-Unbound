@@ -1,0 +1,18 @@
+{
+  "id": "minish-cap-link",
+  "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "category": "Characters",
+  "tagline": "Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate.",
+  "description": "Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully animated playable fighter in the Custom region (#2010). Features complete 8-direction walk, idle, attack, and hurt spritesheets, a Four Sword Red shiny variant, 5 signature Minish Cap custom attacks built with the Core Custom VFX engine, a custom Four Sword Hurricane Spin Ultimate, and 2 Hyrule Pokéball pickup items.",
+  "highlights": [
+    "Full 8-direction GBA-style animated spritesheet plus Four Sword Red shiny variant",
+    "5 custom attacks: Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and Flame Lantern",
+    "5 custom GPU VFX presets showcasing dual-color slash arcs, returning crescents, gale waves, magic beams, and flame rings",
+    "Custom Ultimate: Four Sword Hurricane Spin with rune/petal shockwaves and slash bursts",
+    "2 custom Pokéball items: Gold Kinstone and Pegasus Boots"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode + Hyrule's Mods (Custom Characters Enabler)"
+}

@@ -1,8 +1,8 @@
 {
   "id": "custom-characters-pack",
   "name": "Custom Characters & Custom Attacks Pack",
-  "version": "2.0.0",
-  "author": "Hyrule",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
   "description": "Playable Custom Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, Ash-Greninja) complete with 10 signature custom attacks, 5 custom Ultimates, 3 custom Pokéball pickup items (vanilla icons, zero custom VFX assets), and drop-in ./characters/*.json support. Controlled by Hyrule's Mods -> Custom Characters Enabler.",
   "tags": [
     "custom-characters",

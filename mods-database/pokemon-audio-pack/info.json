@@ -1,0 +1,18 @@
+{
+  "id": "pokemon-audio-pack",
+  "name": "Pokémon Soundtrack Audio Pack (HGSS & FRLG)",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "category": "Audio",
+  "tagline": "17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs.",
+  "description": "Additive Pokémon soundtrack and sound effects mod curated from the HeartGold/SoulSilver and FireRed/LeafGreen soundtracks. Registers 3 peaceful menu themes, 8 high-energy wild/trainer/gym battle themes into the in-game music rotation, 6 legendary/champion boss themes into the boss pool, and 4 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.",
+  "highlights": [
+    "3 selectable main menu themes: Title Screen (FRLG), Title Screen (HGSS), and National Park (HGSS)",
+    "8 battle/run themes added to the in-game playlist alongside vanilla songs",
+    "6 legendary and champion boss themes (Ho-Oh, Lugia, Suicune, Champion Lance/Red, Deoxys, Mewtwo/Legendary)",
+    "4 short iconic SFX clips routed through PokéBonk's native SFX volume slider",
+    "100% additive — every vanilla PokéBonk song remains selectable and intact"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode (Mod Engine ON)"
+}
