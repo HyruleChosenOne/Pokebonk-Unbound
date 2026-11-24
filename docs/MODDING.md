@@ -70,7 +70,8 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `musicDir` | `string` | Core API: relative directory of custom music `.json` descriptors or drop-in audio files. |
 | `customSfx` | `object[]` | Core API: additive custom SFX clips routed through the native SFX bus. |
 | `sfxDir` | `string` | Core API: relative directory of custom SFX `.json` descriptors or drop-in audio files. |
-| `toolbarActions` | `object[]` | Action buttons displayed inside the mod's card in **Unbound Settings -> Installed Mods**. |
+| `settings` | `object[]` | Declarative mod settings (`toggle` / `select`) rendered automatically in **Unbound Settings -> Mod Settings** when the mod is enabled. |
+| `toolbarActions` | `object[]` | Action buttons displayed inside **Unbound Settings -> Installed Mods** and **Mod Settings**. |
 | `styles` | `string[]` | Relative CSS files injected into the game document. |
 | `scripts` | `string[]` | Relative JS files executed in Offline Mode with `window.pokebonkModAPI`. |
 | `assetsDir` | `string` | Directory whose files override matching game asset paths. |
@@ -372,9 +373,45 @@ Custom SFX clips decode once via Web Audio API and play through PokéBonk's nati
 
 ---
 
-## 7. Mod Actions (`toolbarActions` in Unbound Settings)
+## 7. Dynamic Mod Settings (`settings`) & Mod Actions (`toolbarActions`)
 
-Mods can declare action buttons that appear inside the mod's card in **Unbound Settings -> Installed Mods** when the mod is enabled. Non-cheat actions (such as opening a mod subfolder) work in any mode; profile-mutating unlock/cheat actions remain locked until Offline Mode.
+Whenever a mod is enabled, **Unbound Settings -> Mod Settings** (on Desktop and Android) dynamically renders a configuration card for that mod using its `settings` schema, `toolbarActions`, and additive audio metadata.
+
+### Declarative Mod Settings (`settings`)
+
+Add a `"settings"` array to `mod.json` to expose persistent per-mod toggles and dropdowns (saved automatically in `<modsDir>/mod-settings.json` and readable in Offline Mode):
+
+```json
+"settings": [
+  {
+    "key": "extraMusicWeight",
+    "label": "High Custom Track Frequency",
+    "desc": "Play custom regional battle tracks more frequently in runs.",
+    "type": "toggle",
+    "default": true,
+    "cheat": false
+  },
+  {
+    "key": "spawnTier",
+    "label": "Custom Boss Density",
+    "desc": "Adjusts custom boss encounter rate in Offline Mode.",
+    "type": "select",
+    "default": "normal",
+    "options": [
+      { "value": "normal", "label": "Normal (1:1)" },
+      { "value": "high", "label": "High" }
+    ],
+    "cheat": true
+  }
+]
+```
+
+- Supported `type` values: `"toggle"` (boolean switch) and `"select"` (dropdown list of strings or `{ "value", "label" }` objects).
+- Set `"cheat": true` on any gameplay-altering setting — the engine automatically locks that control while in Online Mode so only non-cheat preferences can be pre-configured online.
+
+### Mod Actions (`toolbarActions`)
+
+Mods can also declare action buttons that appear inside the mod's card in **Unbound Settings -> Installed Mods** and **Mod Settings** when the mod is enabled. Non-cheat actions (such as opening a mod subfolder) work in any mode; profile-mutating unlock/cheat actions remain locked until Offline Mode.
 
 Supported item shapes:
 

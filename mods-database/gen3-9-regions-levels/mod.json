@@ -16,6 +16,32 @@
     "gen8",
     "gen9"
   ],
+  "toolbarActions": [
+    {
+      "id": "unlock-all-gen3-9-levels",
+      "label": "Unlock All 14 Gen 3-9 Regional Maps",
+      "type": "profile-mutate",
+      "mutation": {
+        "unlockBiomes": {
+          "hoenn_petalburg": 3,
+          "hoenn_chimney": 3,
+          "sinnoh_coronet": 3,
+          "sinnoh_eterna": 3,
+          "unova_relic_desert": 3,
+          "unova_dragonspiral": 3,
+          "kalos_azure_bay": 3,
+          "kalos_reflection_cave": 3,
+          "alola_melemele": 3,
+          "alola_wela_volcano": 3,
+          "galar_wild_area": 3,
+          "galar_crown_tundra": 3,
+          "paldea_asado_mesa": 3,
+          "paldea_area_zero": 3
+        }
+      },
+      "reload": true
+    }
+  ],
   "regions": [
     {
       "id": "hoenn",
