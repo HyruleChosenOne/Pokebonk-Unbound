@@ -2,6 +2,7 @@
   "id": "minish-cap-link",
   "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
   "version": "1.0.0",
+  "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 custom Minish Cap attacks with dedicated custom VFX (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items.",
   "tags": [

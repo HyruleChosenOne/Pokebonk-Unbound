@@ -8,14 +8,14 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 
 ## Quick Overview
 
-| Mod ID | Name | Featured | Category | Size | Version | Summary |
-| --- | --- | --- | --- | --- | --- | --- |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Featured** | Levels | 1.03 MB | `v1.0.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
-| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | **Featured** | Quality of Life | 1.07 MB | `v1.0.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Featured** | Characters | 1.08 MB | `v1.0.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
-| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | — | Characters | 5.66 MB | `v1.1.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | — | Characters | 1.18 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
-| `pokemon-audio-pack` | [Pokémon Soundtrack Audio Pack (HGSS & FRLG)](#pokemon-audio-pack) | — | Audio | 28.87 MB | `v1.0.0` | 17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs. |
+| Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 1.03 MB | `v1.0.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
+| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | Client (Optional) | **Featured** | Quality of Life | 1.08 MB | `v1.0.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 1.08 MB | `v1.0.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
+| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 5.66 MB | `v1.1.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.12 MB | `v1.1.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds) plus 6 iconic SFX added alongside every vanilla song. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 1.18 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
 
 ---
 
@@ -27,6 +27,7 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 ![Gen 3-9 Regions & Levels Pack (14 Unique Maps)](mods-database/gen3-9-regions-levels/preview.png)
 
 - **ID**: `gen3-9-regions-levels`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
 - **Size**: 1.03 MB (3 files)
 - **Version**: `v1.0.0`
@@ -53,8 +54,9 @@ Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's
 ![Hyrule's Mods (QoL & Cheats Collection)](mods-database/hyrules-mods/preview.png)
 
 - **ID**: `hyrules-mods`
+- **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Quality of Life (**Featured**)
-- **Size**: 1.07 MB (3 files)
+- **Size**: 1.08 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -76,6 +78,7 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 ![National Dex Expansion (Gen 3-9: Hoenn to Paldea)](mods-database/national-dex-gen3-9/preview.png)
 
 - **ID**: `national-dex-gen3-9`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters (**Featured**)
 - **Size**: 1.08 MB (3 files)
 - **Version**: `v1.0.0`
@@ -100,6 +103,7 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 ![Custom & Non-Dexed Pokémon Pack (18 Fighters)](mods-database/custom-characters-pack/preview.png)
 
 - **ID**: `custom-characters-pack`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
 - **Size**: 5.66 MB (87 files)
 - **Version**: `v1.1.0`
@@ -118,12 +122,38 @@ Expands the core Custom region (#2000-#9999) with 18 fully animated playable fig
 - Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)
 
 
+<a id="pokemon-audio-pack"></a>
+### Gen 1&2 Soundtrack
+
+![Gen 1&2 Soundtrack](mods-database/pokemon-audio-pack/preview.png)
+
+- **ID**: `pokemon-audio-pack`
+- **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
+- **Category**: Audio
+- **Size**: 64.12 MB (52 files)
+- **Version**: `v1.1.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON)
+- **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
+- **Tags**: `audio`, `music`, `sfx`, `gen1`, `gen2`, `kanto`, `johto`, `frlg`, `hgss`, `soundtrack`
+
+Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Registers 10 nostalgic menu themes, 20 battle/route/dungeon themes into the in-game music rotation, 13 legendary & champion boss themes into the boss pool, and 6 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.
+
+**Highlights:**
+- 10 selectable main menu themes: Title Screen (FRLG & HGSS), Pallet Town, New Bark Town, National Park, Route 1, Route 29, Goldenrod, Ecruteak & Cerulean City
+- 20 in-game battle & dungeon themes: Wild, Trainer, Gym Leader, Rival, Team Rocket, Rocket Hideout, Silph Co., Victory Road, Pokémon Tower, Battle Tower & GB Sounds classics
+- 13 legendary & champion boss themes: Mewtwo, Legendary Birds, Deoxys, Champion Blue/Lance/Red, Ho-Oh, Lugia, Raikou, Entei, Suicune, Frontier Brain & Super-Ancient
+- 6 short iconic SFX clips (Level Up, Item Get, Heal, Caught, Badge Get & Evolution) routed through PokéBonk's native SFX slider
+- 100% additive — every vanilla PokéBonk song remains selectable and intact
+
+
 <a id="minish-cap-link"></a>
 ### Link (The Minish Cap) — Playable Character & Custom Attacks
 
 ![Link (The Minish Cap) — Playable Character & Custom Attacks](mods-database/minish-cap-link/preview.png)
 
 - **ID**: `minish-cap-link`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
 - **Size**: 1.18 MB (8 files)
 - **Version**: `v1.0.0`
@@ -140,30 +170,6 @@ Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully a
 - 5 custom GPU VFX presets showcasing dual-color slash arcs, returning crescents, gale waves, magic beams, and flame rings
 - Custom Ultimate: Four Sword Hurricane Spin with rune/petal shockwaves and slash bursts
 - 2 custom Pokéball items: Gold Kinstone and Pegasus Boots
-
-
-<a id="pokemon-audio-pack"></a>
-### Pokémon Soundtrack Audio Pack (HGSS & FRLG)
-
-![Pokémon Soundtrack Audio Pack (HGSS & FRLG)](mods-database/pokemon-audio-pack/preview.png)
-
-- **ID**: `pokemon-audio-pack`
-- **Category**: Audio
-- **Size**: 28.87 MB (24 files)
-- **Version**: `v1.0.0`
-- **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode (Mod Engine ON)
-- **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
-- **Tags**: `audio`, `music`, `sfx`, `hgss`, `frlg`, `soundtrack`
-
-Additive Pokémon soundtrack and sound effects mod curated from the HeartGold/SoulSilver and FireRed/LeafGreen soundtracks. Registers 3 peaceful menu themes, 8 high-energy wild/trainer/gym battle themes into the in-game music rotation, 6 legendary/champion boss themes into the boss pool, and 4 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.
-
-**Highlights:**
-- 3 selectable main menu themes: Title Screen (FRLG), Title Screen (HGSS), and National Park (HGSS)
-- 8 battle/run themes added to the in-game playlist alongside vanilla songs
-- 6 legendary and champion boss themes (Ho-Oh, Lugia, Suicune, Champion Lance/Red, Deoxys, Mewtwo/Legendary)
-- 4 short iconic SFX clips routed through PokéBonk's native SFX volume slider
-- 100% additive — every vanilla PokéBonk song remains selectable and intact
 
 ---
 

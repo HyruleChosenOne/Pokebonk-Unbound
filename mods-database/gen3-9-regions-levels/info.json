@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "HyruleChosenOne",
   "category": "Levels",
+  "scope": "gameplay",
   "featured": true,
   "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
   "description": "Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features its own terrain relief, color palette, weather pool, sanctuary arena, regional encounters, and a dedicated 3D centerpiece landmark. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).",

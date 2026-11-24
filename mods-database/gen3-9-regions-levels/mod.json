@@ -2,6 +2,7 @@
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
   "version": "1.0.0",
+  "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 2 distinct playable maps each (14 levels total), featuring unique terrain profiles, weather, sanctuaries, and 3D centerpiece landmarks. Works standalone or paired with National Dex Gen 3-9.",
   "tags": [
@@ -18,8 +19,8 @@
   ],
   "toolbarActions": [
     {
-      "id": "unlock-all-gen3-9-levels",
-      "label": "Unlock All 14 Gen 3-9 Regional Maps",
+      "id": "unlock-all-gen39-levels",
+      "label": "Unlock All 14 Gen 3-9 Levels (Master Tier)",
       "type": "profile-mutate",
       "mutation": {
         "unlockBiomes": {
@@ -3060,32 +3061,6 @@
           5
         ]
       }
-    }
-  ],
-  "toolbarActions": [
-    {
-      "id": "unlock-all-gen39-levels",
-      "label": "Unlock All 14 Gen 3-9 Levels (Master Tier)",
-      "type": "profile-mutate",
-      "mutation": {
-        "unlockBiomes": {
-          "hoenn_petalburg": 3,
-          "hoenn_chimney": 3,
-          "sinnoh_coronet": 3,
-          "sinnoh_eterna": 3,
-          "unova_relic_desert": 3,
-          "unova_dragonspiral": 3,
-          "kalos_azure_bay": 3,
-          "kalos_reflection_cave": 3,
-          "alola_melemele": 3,
-          "alola_wela_volcano": 3,
-          "galar_wild_area": 3,
-          "galar_crown_tundra": 3,
-          "paldea_asado_mesa": 3,
-          "paldea_area_zero": 3
-        }
-      },
-      "reload": true
     }
   ]
 }

@@ -2,6 +2,7 @@
   "id": "national-dex-gen3-9",
   "name": "National Dex Expansion (Gen 3-9: Hoenn to Paldea)",
   "version": "1.0.0",
+  "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Adds all 7 Gen 3-9 Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom Gen 3-9 attacks, 24 signature Ultimates, 419 playable base families, and 774 species. Pure Pokémon & attacks expansion (zero bundled levels — pair with Gen 3-9 Regions & Levels Pack for regional maps).",
   "tags": [

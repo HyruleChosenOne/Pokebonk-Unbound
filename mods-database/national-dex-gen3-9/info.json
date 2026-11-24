@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "HyruleChosenOne",
   "category": "Characters",
+  "scope": "gameplay",
   "featured": true,
   "tagline": "Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates.",
   "description": "Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea (#252-#1025). Adds 419 playable base evolution families, 774 species with animated sprites, 72 custom Gen 3-9 attacks across all 18 types, and 24 custom signature Ultimates for iconic starters, pseudos, and legendaries. Pure Pokémon and attacks pack with zero bundled levels; pair with Gen 3-9 Regions & Levels Pack for regional maps.",

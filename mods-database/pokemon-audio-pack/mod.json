@@ -1,15 +1,20 @@
 {
   "id": "pokemon-audio-pack",
-  "name": "Pokémon Soundtrack Audio Pack (HGSS & FRLG)",
-  "version": "1.0.0",
+  "name": "Gen 1&2 Soundtrack",
+  "version": "1.1.0",
+  "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Additive Pokémon music and SFX pack curated from HeartGold/SoulSilver and FireRed/LeafGreen soundtracks (3 menu themes, 8 battle/run themes, 6 legendary/champion boss themes, and 4 iconic SFX). Never replaces vanilla PokéBonk songs.",
+  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (10 menu themes, 20 battle & dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX). Never replaces vanilla PokéBonk songs.",
   "tags": [
     "audio",
     "music",
     "sfx",
-    "hgss",
+    "gen1",
+    "gen2",
+    "kanto",
+    "johto",
     "frlg",
+    "hgss",
     "soundtrack"
   ],
   "customMusic": [
@@ -34,6 +39,26 @@
       "weight": 1
     },
     {
+      "id": "frlg-pallet-town",
+      "name": "Pallet Town (FRLG)",
+      "desc": "Peaceful Kanto Pallet Town theme",
+      "file": "audio/music/frlg-pallet-town.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-new-bark",
+      "name": "New Bark Town (HGSS)",
+      "desc": "Peaceful Johto New Bark Town theme",
+      "file": "audio/music/hgss-new-bark.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
       "id": "hgss-national-park",
       "name": "National Park (HGSS)",
       "desc": "Peaceful Johto National Park theme",
@@ -41,6 +66,56 @@
       "pool": "menu",
       "loop": 0,
       "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "frlg-route-1",
+      "name": "Route 1 (FRLG)",
+      "desc": "Classic Kanto Route 1 overworld theme",
+      "file": "audio/music/frlg-route-1.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.88,
+      "weight": 1
+    },
+    {
+      "id": "hgss-route-29",
+      "name": "Route 29 (HGSS)",
+      "desc": "Classic Johto Route 29 overworld theme",
+      "file": "audio/music/hgss-route-29.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.88,
+      "weight": 1
+    },
+    {
+      "id": "hgss-goldenrod",
+      "name": "Goldenrod City (HGSS)",
+      "desc": "Lively Goldenrod City theme",
+      "file": "audio/music/hgss-goldenrod.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.88,
+      "weight": 1
+    },
+    {
+      "id": "hgss-ecruteak",
+      "name": "Ecruteak City (HGSS)",
+      "desc": "Traditional Ecruteak City theme",
+      "file": "audio/music/hgss-ecruteak.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.88,
+      "weight": 1
+    },
+    {
+      "id": "frlg-cerulean",
+      "name": "Cerulean City (FRLG)",
+      "desc": "Bright Kanto Cerulean City theme",
+      "file": "audio/music/frlg-cerulean.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.88,
       "weight": 1
     },
     {
@@ -94,6 +169,26 @@
       "weight": 1
     },
     {
+      "id": "hgss-trainer-johto",
+      "name": "Trainer Battle - Johto (HGSS)",
+      "desc": "Johto Trainer encounter battle theme",
+      "file": "audio/music/hgss-trainer-johto.ogg",
+      "pool": "ingame",
+      "loop": 4.5,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-trainer-kanto",
+      "name": "Trainer Battle - Kanto (HGSS)",
+      "desc": "Arranged Kanto Trainer battle theme",
+      "file": "audio/music/hgss-trainer-kanto.ogg",
+      "pool": "ingame",
+      "loop": 4.5,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
       "id": "hgss-gym-johto",
       "name": "Gym Leader Battle - Johto (HGSS)",
       "desc": "Johto Gym Leader battle theme",
@@ -121,6 +216,106 @@
       "pool": "ingame",
       "loop": 4.2,
       "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-team-rocket",
+      "name": "Team Rocket Battle (HGSS)",
+      "desc": "Team Rocket executive & grunt battle theme",
+      "file": "audio/music/hgss-team-rocket.ogg",
+      "pool": "ingame",
+      "loop": 4,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-rocket-hideout",
+      "name": "Rocket Hideout (FRLG)",
+      "desc": "Celadon Rocket Hideout dungeon theme",
+      "file": "audio/music/frlg-rocket-hideout.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-silph-co",
+      "name": "Silph Co. (FRLG)",
+      "desc": "Saffron City Silph Co. infiltration theme",
+      "file": "audio/music/frlg-silph-co.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-victory-road",
+      "name": "Victory Road (FRLG)",
+      "desc": "Kanto Victory Road gauntlet theme",
+      "file": "audio/music/frlg-victory-road.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "hgss-victory-road",
+      "name": "Victory Road (HGSS)",
+      "desc": "Johto Victory Road march theme",
+      "file": "audio/music/hgss-victory-road.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "frlg-pokemon-tower",
+      "name": "Pokémon Tower (FRLG)",
+      "desc": "Lavender Town Pokémon Tower theme",
+      "file": "audio/music/frlg-pokemon-tower.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-route-24",
+      "name": "Route 24 / Cerulean Cape (FRLG)",
+      "desc": "Upbeat Kanto Route 24 adventure theme",
+      "file": "audio/music/frlg-route-24.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-battle-tower",
+      "name": "Battle Tower (HGSS)",
+      "desc": "Johto Battle Frontier arena theme",
+      "file": "audio/music/hgss-battle-tower.ogg",
+      "pool": "ingame",
+      "loop": 0,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "gb-wild-johto",
+      "name": "Wild Battle - Johto [GB Sounds]",
+      "desc": "Authentic 8-bit Gen 2 chiptune wild battle",
+      "file": "audio/music/gb-wild-johto.ogg",
+      "pool": "ingame",
+      "loop": 4,
+      "volume": 0.82,
+      "weight": 1
+    },
+    {
+      "id": "gb-gym-johto",
+      "name": "Gym Leader Battle - Johto [GB Sounds]",
+      "desc": "Authentic 8-bit Gen 2 chiptune Gym battle",
+      "file": "audio/music/gb-gym-johto.ogg",
+      "pool": "ingame",
+      "loop": 4.5,
+      "volume": 0.82,
       "weight": 1
     },
     {
@@ -154,6 +349,16 @@
       "weight": 1
     },
     {
+      "id": "frlg-deoxys",
+      "name": "Deoxys Battle (FRLG)",
+      "desc": "Birth Island Deoxys encounter theme",
+      "file": "audio/music/frlg-deoxys.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
       "id": "hgss-champion",
       "name": "Champion / Red Battle (HGSS)",
       "desc": "Mt. Silver Red & Champion Lance theme",
@@ -181,6 +386,66 @@
       "pool": "boss",
       "loop": 5,
       "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-raikou",
+      "name": "Raikou Battle (HGSS)",
+      "desc": "Legendary Beast Raikou encounter theme",
+      "file": "audio/music/hgss-raikou.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-entei",
+      "name": "Entei Battle (HGSS)",
+      "desc": "Legendary Beast Entei encounter theme",
+      "file": "audio/music/hgss-entei.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-suicune",
+      "name": "Suicune Battle (HGSS)",
+      "desc": "Legendary Beast Suicune encounter theme",
+      "file": "audio/music/hgss-suicune.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-frontier-brain",
+      "name": "Frontier Brain Battle (HGSS)",
+      "desc": "Battle Frontier Brain showdown theme",
+      "file": "audio/music/hgss-frontier-brain.ogg",
+      "pool": "boss",
+      "loop": 4.5,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-super-ancient",
+      "name": "Super-Ancient Pokémon Battle (HGSS)",
+      "desc": "Embedded Tower Groudon / Kyogre / Rayquaza theme",
+      "file": "audio/music/hgss-super-ancient.ogg",
+      "pool": "boss",
+      "loop": 4.5,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "gb-champion",
+      "name": "Champion / Red Battle [GB Sounds]",
+      "desc": "Authentic 8-bit Gen 2 chiptune Champion theme",
+      "file": "audio/music/gb-champion.ogg",
+      "pool": "boss",
+      "loop": 4.5,
+      "volume": 0.86,
       "weight": 1
     }
   ],
@@ -216,6 +481,24 @@
       "id": "pkmn-caught",
       "name": "Caught a Pokémon! (FRLG)",
       "file": "audio/sfx/pkmn-caught.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    },
+    {
+      "id": "pkmn-badge-get",
+      "name": "Obtained a Badge! (FRLG)",
+      "file": "audio/sfx/pkmn-badge-get.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    },
+    {
+      "id": "pkmn-evolved",
+      "name": "Pokémon Evolved! (HGSS)",
+      "file": "audio/sfx/pkmn-evolved.ogg",
       "volume": 0.85,
       "pitch": 1,
       "pitchVar": 0,
