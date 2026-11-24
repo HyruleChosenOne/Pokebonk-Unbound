@@ -37,14 +37,81 @@
 
 ---
 
+## Screenshots
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/modding-gen3-9.png">
+        <img src="docs/assets/screenshots/modding-gen3-9.png" alt="Modding — Gen 3-9 National Dex" width="420" />
+      </a>
+      <br />
+      <strong>Modding (Gen 3–9 National Dex)</strong>
+      <br />
+      <sub>Playable Hoenn–Paldea roster, custom Gen 3–9 attacks, and signature Ultimates.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/custom-levels.png">
+        <img src="docs/assets/screenshots/custom-levels.png" alt="Modding — Gen 3-9 Custom Levels" width="420" />
+      </a>
+      <br />
+      <strong>Modding (Gen 3–9 Regions &amp; Levels)</strong>
+      <br />
+      <sub>14 playable maps across 7 regions with unique terrain, sanctuaries, and 3D landmarks.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/p2p-coop.png">
+        <img src="docs/assets/screenshots/p2p-coop.png" alt="P2P Online Co-op" width="420" />
+      </a>
+      <br />
+      <strong>P2P Online (Direct IP:Port Co-op)</strong>
+      <br />
+      <sub>Functional peer-to-peer co-op hosting and joining via IP:Port.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/profiles.png">
+        <img src="docs/assets/screenshots/profiles.png" alt="Offline Profiles" width="420" />
+      </a>
+      <br />
+      <strong>Offline Profiles</strong>
+      <br />
+      <sub>Compact multi-profile local save chooser right on the Offline start screen.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/offline-menu.png">
+        <img src="docs/assets/screenshots/offline-menu.png" alt="Offline Main Menu & Local Leaderboard" width="420" />
+      </a>
+      <br />
+      <strong>Offline Main Menu &amp; Local Leaderboard</strong>
+      <br />
+      <sub>Local multi-profile leaderboard, restored Seasonal Events hub, and P2P Co-op.</sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="docs/assets/screenshots/unbound-mod-browser.png">
+        <img src="docs/assets/screenshots/unbound-mod-browser.png" alt="Unbound Settings & Mod Browser" width="420" />
+      </a>
+      <br />
+      <strong>Unbound Settings &amp; Mod Browser</strong>
+      <br />
+      <sub>1-click GitHub mod installs, version history, and per-mod configuration.</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
 ## Release Editions (v1.0.0)
 
 Two Windows portable executables are provided on the [Releases](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases) page. Neither release comes bundled with mods — install any optional mod with 1 click through **Unbound Settings -> Mod Browser**.
 
-| Edition | Output File | Contents |
-| --- | --- | --- |
-| **Portable** | `PokeBonk-Unbound-Portable-1.0.0.exe` | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the full offline build into `./build-data/` alongside the executable. |
-| **Complete** | `PokeBonk-Unbound-Complete-1.0.0.exe` | Self-contained release bundling the complete offline game build and sprites out of the box (no bundled mods). |
+| Edition | Output File | Bundled PokéBonk Version | Contents |
+| --- | --- | --- | --- |
+| **Portable** | `PokeBonk-Unbound-Portable-1.0.0.exe` | Downloaded on demand | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the latest live build into `./build-data/` alongside the executable. |
+| **Complete** | `PokeBonk-Unbound-Complete-1.0.0.exe` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained release bundling the complete `v0.10.29` offline game build and sprites out of the box (no bundled mods; updatable anytime in Unbound Settings). |
 
 ---
 
