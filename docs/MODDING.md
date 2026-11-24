@@ -23,8 +23,11 @@ mods/
       hero-front.png
       hero-portrait.png
       hero-icon.png
-    levels/
-      my-arena.glb
+    audio/
+      music/
+        my-theme.ogg
+      sfx/
+        my-hit.ogg
     assets/
     style.css
     script.js
@@ -39,7 +42,7 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | Field | Type | Description |
 | --- | --- | --- |
 | `id` | `string` | Unique mod identifier (defaults to folder name). |
-| `name` | `string` | Display name shown in menus and Control Center. |
+| `name` | `string` | Display name shown in menus and Unbound Settings. |
 | `version` | `string` | Semver version string (e.g. `"1.0.0"`). |
 | `author` | `string` | Author name. |
 | `description` | `string` | Short summary of what the mod adds. |
@@ -52,8 +55,10 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `movesDir` | `string` | Relative directory containing `.json` attack files. |
 | `customItems` | `object[]` | Inline custom Pokéball pickup item definitions. |
 | `itemsDir` | `string` | Relative directory containing `.json` item files. |
-| `customLevels` | `object[]` | Inline custom level definitions (`procedural` or `model`). |
-| `levelsDir` | `string` | Relative directory containing `.json` level files. |
+| `customMusic` | `object[]` | Additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
+| `musicDir` | `string` | Relative directory of custom music `.json` descriptors or drop-in audio files. |
+| `customSfx` | `object[]` | Additive custom SFX clips routed through the native SFX bus. |
+| `sfxDir` | `string` | Relative directory of custom SFX `.json` descriptors or drop-in audio files. |
 | `toolbarActions` | `object[]` | Adds entries to Offline Mode's **Mod Options** toolbar menu. |
 | `styles` | `string[]` | Relative CSS files injected into the game document. |
 | `scripts` | `string[]` | Relative JS files executed in Offline Mode with `window.pokebonkModAPI`. |
@@ -215,84 +220,87 @@ Custom items enter PokéBonk's in-run Pokéball item pickup pool and reuse vanil
 
 ---
 
-## 6. Custom Levels (`customLevels` / `levelsDir`)
+## 6. Custom Audio (Additive Music & SFX)
 
-PokéBonk Unbound supports two custom level modes:
+PokéBonk Unbound supports adding new music tracks and sound effects **without replacing any vanilla songs or SFX**. Supported audio formats: `.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, and `.flac`.
 
-1. **`"mode": "procedural"`** — Generates a vanilla-style procedural 3D map with custom colors, lighting, enemy pools, bosses, guardians, totems, sanctuary, and music.
-2. **`"mode": "model"`** — Loads a custom 3D `.glb` mesh, automatically bakes floor height and obstacle collisions from the model's triangles, and spawns procedural PokéBonk POIs (bosses, guardians, upgrades, shrines, chests, and totems) onto walkable surfaces.
+### Custom Music (`customMusic` / `musicDir`)
 
-### Procedural Level Example
-
-```json
-{
-  "id": "emerald_grove",
-  "name": "Emerald Grove",
-  "desc": "Dense woodland filled with Grass, Fairy, and Steel Pokémon.",
-  "mode": "procedural",
-  "region": "custom",
-  "envFrom": "forest",
-  "thumbnailFrom": "forest",
-  "size": 340,
-  "types": ["grass", "fairy", "steel"],
-  "late": ["dragon", "electric"],
-  "residents": [1, 25, 35, 43, 123, 133, 251],
-  "specials": [251],
-  "bosses": [123, 149, 251],
-  "legendaries": [251],
-  "sky": [1994828, 7265460],
-  "fog": 5218940,
-  "ground": [3306040, 4882256, 2518824, 1990440],
-  "props": ["tree", "pine", "bush", "rock"],
-  "propDensity": 0.9,
-  "weather": ["clear", "sun"],
-  "unlockedByDefault": true
-}
-```
-
-### Custom 3D Model (`.glb`) Level Example
+Custom music tracks are registered additively alongside vanilla tracks. Built-in vanilla IDs (`menu`, `halloween-menu`, `johto-menu`, `dynamax-menu`, `ingame1`–`ingame5`, `boss`) are protected automatically; if a mod uses a colliding ID, it is namespaced as `<mod-id>-<id>`.
 
 ```json
-{
-  "id": "ancient_citadel",
-  "name": "Ancient Citadel",
-  "desc": "Custom 3D arena with baked floor heights, wall collisions, and procedural bosses/upgrades.",
-  "mode": "model",
-  "model": "levels/ancient-citadel.glb",
-  "thumbnail": "levels/ancient-citadel-thumb.png",
-  "region": "custom",
-  "envFrom": "ruins",
-  "size": 280,
-  "modelScale": 1,
-  "modelOffset": [0, 0, 0],
-  "maxSlope": 0.62,
-  "hideBaseTerrain": true,
-  "walkableRadius": 115,
-  "propDensity": 0.08,
-  "types": ["steel", "psychic", "dragon"],
-  "residents": [63, 94, 123, 149, 150],
-  "bosses": [94, 149, 150],
-  "legendaries": [150],
-  "unlockedByDefault": true
-}
+"customMusic": [
+  {
+    "id": "forest-battle",
+    "name": "Forest Battle",
+    "desc": "Custom battle theme",
+    "file": "audio/music/forest-battle.ogg",
+    "pool": "ingame",
+    "loop": 12.5,
+    "volume": 0.9,
+    "weight": 1
+  },
+  {
+    "id": "boss-encounter",
+    "name": "Boss Encounter",
+    "desc": "Custom legendary boss theme",
+    "file": "audio/music/boss-encounter.ogg",
+    "pool": "boss",
+    "loop": 4.2,
+    "volume": 1.0
+  }
+]
 ```
 
-### How `.glb` Collision Baking & POI Spawning Work
+| Field | Default | Description |
+| --- | --- | --- |
+| `id` | filename stem | Unique track ID. Served at `/assets/music/custom/<id>.<ext>`. |
+| `name` | `id` | Display name in **Settings -> Audio -> Main Menu Music** and Unbound Settings. |
+| `desc` | pool summary | Short subtitle shown in the in-game music list. |
+| `file` | required | Relative path to the audio file inside the mod folder. |
+| `pool` | `"custom"` | `"ingame"` adds the track to the random in-game BGM playlist alongside `ingame1`–`ingame5`; `"boss"` adds it to the boss music pool alongside `boss`; `"menu"` / `"custom"` make it selectable in Settings and playable via scripts. |
+| `loop` | `0` | Loop start point in seconds (skips intro when repeating). |
+| `volume` | `1.0` | Relative volume multiplier (`0.05`–`2.5`). |
+| `weight` | `1` | Selection weight (`1`–`10`) when `pool` is `"ingame"` or `"boss"`. |
 
-When a `"mode": "model"` level loads:
-1. The `.glb` file is served at `/assets/models/custom_<id>.glb` and placed into the scene with `modelScale` and `modelOffset`.
-2. When `hideBaseTerrain` is `true` (default), PokéBonk's base procedural terrain mesh is hidden while keeping sky, lighting, and weather active.
-3. Every mesh in the `.glb` is traversed and projected onto the engine's height grid (`Terrain.heights`) using 2D XZ barycentric triangle interpolation:
-   - Triangles with `|normal.y| >= maxSlope` (default `0.62`, roughly <= 51 deg slope) become **walkable floor** heights.
-   - Triangles steeper than `maxSlope`, OR any mesh whose name contains `wall`, `collider`, `block`, `obstacle`, or `barrier` (case-insensitive), are marked as **solid obstacles** in `Terrain._customBlocked` and registered as boundary colliders via `Terrain.addCollider(...)`.
-   - Grid cells outside the model footprint are automatically marked blocked so players cannot walk off the edge.
-4. Once baking completes, `window.__pbOnCustomLevelBaked(terrain)` snaps the player and all procedural POIs (shrines, chests, upgrades, interactables, guardians, and bosses) onto valid, non-solid walkable points on the custom model.
+- **Zero-JSON drop-in**: Any audio file placed inside `musicDir` is auto-registered with `pool: "ingame"`.
 
-**Blender Export Guidelines**:
-- Export as **glTF Binary (`.glb`)** with **+Y Up** and applied transforms (`Ctrl+A -> All Transforms`).
-- Center the playable area around `(0, 0, 0)` with walkable floor near `Y = 0`.
-- Keep total arena diameter roughly within `size` units (default `280`).
-- Name invisible barriers or vertical walls with `wall` or `collider` in their object name so they are guaranteed solid.
+### Custom SFX (`customSfx` / `sfxDir`)
+
+Custom SFX clips decode once via Web Audio API and play through PokéBonk's native `sfxBus`, automatically respecting the in-game Master and SFX volume sliders without replacing vanilla sounds.
+
+```json
+"customSfx": [
+  {
+    "id": "picori-slash",
+    "file": "audio/sfx/picori-slash.ogg",
+    "volume": 0.95,
+    "pitch": 1.0,
+    "pitchVar": 0.08,
+    "cooldown": 0.04
+  }
+]
+```
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `id` | filename stem | Unique SFX ID. Served at `/assets/sfx/custom/<id>.<ext>`. |
+| `file` | required | Relative path to the audio file inside the mod folder. |
+| `volume` | `1.0` | Gain multiplier (`0.05`–`3.0`). |
+| `pitch` | `1.0` | Base playback rate (`0.25`–`4.0`). |
+| `pitchVar` | `0.05` | Random pitch jitter (`0`–`0.5`) to keep repeated hits organic. |
+| `cooldown` | `0.03` | Minimum seconds between plays (`0`–`2.0`). |
+
+### Binding Custom SFX to Attacks & Ultimates
+
+- **On `customMoves`**: Set `"customSfx": "picori-slash"`, `"customImpactSfx": "hit-id"`, or `"customChargeSfx": "charge-id"` (or point directly to an audio file with `"sfx": "audio/sfx/slash.ogg"`, `"impactSfx"`, `"chargeSfx"`). Add `"layerSfx": true` to play both the custom sample and the vanilla `sfxPreset` together.
+- **On `customUlt`**: Set `"customSfx": "ult-id"` inside a character's `customUlt` object.
+- **Runtime Audio SDK (`window.pokebonkAudio`)**: Custom mod scripts can trigger audio directly at any time:
+  - `window.pokebonkAudio.playMusic(id, offsetSec)`
+  - `window.pokebonkAudio.stopMusic()`
+  - `window.pokebonkAudio.playSfx(id, { volume, pitch, pitchVar })`
+  - `window.pokebonkAudio.listMusic()` / `window.pokebonkAudio.listSfx()`
+  - `GET /local-api/mod-api/audio` returns the active custom music and SFX catalog.
 
 ---
 
@@ -373,26 +381,11 @@ Apply in-memory replacements to served JS/CSS chunks without modifying files on 
 
 ## 9. Publishing Mods to the GitHub Mod Browser
 
-Control Center's **Mod Browser** defaults to `HyruleChosenOne/pokebonk-mods` (`main` branch) and supports any public GitHub `owner/repo`.
+Unbound Settings' **Mod Browser** reads from `HyruleChosenOne/Pokebonk-Unbound` (`mods-database/` on `main`) by default and supports any public GitHub `owner/repo`.
 
-### Option A: Automatic Folder Discovery (No Index File Needed)
+### Option A: Curated `mods-database/mods-index.json` (Recommended)
 
-Place each mod in its own folder under `mods/` (or at the repository root) containing a `mod.json`:
-
-```text
-pokebonk-mods/
-  mods/
-    my-mod-id/
-      mod.json
-      characters/
-        ...
-```
-
-The Mod Browser scans the repository tree via GitHub's API, reads each `mod.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the user clicks **Install**.
-
-### Option B: Curated `mods-index.json` (Optional)
-
-Add a `mods-index.json` file at the repository root to control ordering, preview metadata, or explicit file lists:
+Add a `mods-database/mods-index.json` file (or root `mods-index.json`) listing each mod's metadata, folder path, and optional explicit file list:
 
 ```json
 {
@@ -403,9 +396,24 @@ Add a `mods-index.json` file at the repository root to control ordering, preview
       "version": "1.0.0",
       "author": "AuthorName",
       "description": "Short description.",
-      "tags": ["character", "level"],
-      "path": "mods/my-mod-id"
+      "tags": ["character", "audio"],
+      "path": "mods-database/my-mod-id"
     }
   ]
 }
 ```
+
+### Option B: Automatic Folder Discovery
+
+Place each mod in its own folder under `mods-database/` or `mods/` containing a `mod.json`:
+
+```text
+repo/
+  mods-database/
+    my-mod-id/
+      mod.json
+      characters/
+        ...
+```
+
+The Mod Browser scans the repository via GitHub's API, reads each `mod.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the user clicks **Install**.

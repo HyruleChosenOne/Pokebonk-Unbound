@@ -1,0 +1,105 @@
+{
+  "id": "hyrules-mods",
+  "name": "Hyrule's Mods (QoL & Cheats Collection)",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Custom Characters Enabler, Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
+  "tags": ["qol", "collection", "enabler", "events", "p2p", "themes", "cheats", "unlocks"],
+  "isHyruleCollection": true,
+  "toolbarActions": [
+    {
+      "id": "hyrule-toggle-custom-chars",
+      "label": "Custom Characters Enabler",
+      "type": "hyrule-toggle",
+      "feature": "customCharacters",
+      "reload": true
+    },
+    {
+      "id": "hyrule-toggle-events",
+      "label": "Events Enabler (Choose-Mode Hub)",
+      "type": "hyrule-toggle",
+      "feature": "eventsEnabler",
+      "reload": true
+    },
+    {
+      "id": "hyrule-toggle-p2p",
+      "label": "P2P Multiplayer (IP:Port Co-op)",
+      "type": "hyrule-toggle",
+      "feature": "p2pMultiplayer",
+      "reload": true
+    },
+    { "type": "separator" },
+    {
+      "label": "Main Menu Background",
+      "submenu": [
+        { "id": "bg-auto", "label": "Auto (Season Default)", "type": "hyrule-set", "key": "menuBg", "value": "auto", "live": true },
+        { "id": "bg-pond", "label": "Launch Waterfall (Kanto Pond - v0.1)", "type": "hyrule-set", "key": "menuBg", "value": "pond", "live": true },
+        { "id": "bg-johto", "label": "Ecruteak Sunset (Season 3 Johto)", "type": "hyrule-set", "key": "menuBg", "value": "johto", "live": true },
+        { "id": "bg-lake", "label": "Lake of Rage (Red Gyarados)", "type": "hyrule-set", "key": "menuBg", "value": "lake", "live": true },
+        { "id": "bg-expedition", "label": "The Great Expedition (Wild Valley)", "type": "hyrule-set", "key": "menuBg", "value": "expedition", "live": true },
+        { "id": "bg-mega", "label": "Dynamax Sky (Season 4)", "type": "hyrule-set", "key": "menuBg", "value": "mega", "live": true },
+        { "id": "bg-halloween", "label": "Lavender Tower Night (Halloween)", "type": "hyrule-set", "key": "menuBg", "value": "halloween", "live": true }
+      ]
+    },
+    {
+      "label": "Main Menu Music",
+      "submenu": [
+        { "id": "mus-auto", "label": "Auto (Follow Wallpaper / Season)", "type": "hyrule-set", "key": "menuMusic", "value": "auto", "live": true },
+        { "id": "mus-menu", "label": "Launch Waterfall (Original Theme)", "type": "hyrule-set", "key": "menuMusic", "value": "menu", "live": true },
+        { "id": "mus-johto", "label": "Ecruteak Sunset (Season 3 Theme)", "type": "hyrule-set", "key": "menuMusic", "value": "johto-menu", "live": true },
+        { "id": "mus-dynamax", "label": "Dynamax Sky (Season 4 Theme)", "type": "hyrule-set", "key": "menuMusic", "value": "dynamax-menu", "live": true },
+        { "id": "mus-halloween", "label": "Lavender Tower Night (Halloween Theme)", "type": "hyrule-set", "key": "menuMusic", "value": "halloween-menu", "live": true },
+        { "type": "separator" },
+        { "id": "mus-ingame1", "label": "Wild Route (In-Game 1)", "type": "hyrule-set", "key": "menuMusic", "value": "ingame1", "live": true },
+        { "id": "mus-ingame2", "label": "Full Speed (In-Game 2)", "type": "hyrule-set", "key": "menuMusic", "value": "ingame2", "live": true },
+        { "id": "mus-ingame3", "label": "Relentless (In-Game 3)", "type": "hyrule-set", "key": "menuMusic", "value": "ingame3", "live": true },
+        { "id": "mus-ingame4", "label": "Tall Grass (In-Game 4)", "type": "hyrule-set", "key": "menuMusic", "value": "ingame4", "live": true },
+        { "id": "mus-ingame5", "label": "Johto Wind (In-Game 5)", "type": "hyrule-set", "key": "menuMusic", "value": "ingame5", "live": true },
+        { "id": "mus-boss", "label": "Legendary Boss Encounter", "type": "hyrule-set", "key": "menuMusic", "value": "boss", "live": true }
+      ]
+    },
+    {
+      "label": "Seasonal Events",
+      "submenu": [
+        { "id": "ev-all", "label": "Restore All Seasonal Events", "type": "events-toggle", "action": "enable-all" },
+        { "type": "separator" },
+        { "id": "ev-halloween", "label": "Lavender Tower Night", "type": "events-toggle", "action": "toggle", "eventId": "halloween26" },
+        { "id": "ev-mewtwo", "label": "Mewtwo Strikes Back", "type": "events-toggle", "action": "toggle", "eventId": "rush26" }
+      ]
+    },
+    {
+      "label": "Gameplay QoL",
+      "submenu": [
+        { "id": "spd-1", "label": "Run Speed: 1x (Vanilla)", "type": "hyrule-set", "key": "runSpeed", "value": 1, "live": true },
+        { "id": "spd-15", "label": "Run Speed: 1.5x (Fast)", "type": "hyrule-set", "key": "runSpeed", "value": 1.5, "live": true },
+        { "id": "spd-2", "label": "Run Speed: 2x (Turbo)", "type": "hyrule-set", "key": "runSpeed", "value": 2, "live": true },
+        { "type": "separator" },
+        { "id": "hyrule-toggle-diffs", "label": "Unlock All Biome Difficulties", "type": "hyrule-toggle", "feature": "unlockAllDifficulties", "reload": true },
+        { "id": "hyrule-toggle-clean", "label": "Clean Main Menu (Hide Social Links)", "type": "hyrule-toggle", "feature": "cleanMenu", "live": true }
+      ]
+    },
+    { "type": "separator" },
+    {
+      "label": "Trainer Cheats & Unlocks",
+      "submenu": [
+        { "id": "cheat-godmode", "label": "God Mode (Invincible Solo Runs)", "type": "hyrule-toggle", "feature": "godMode", "live": true },
+        { "id": "cheat-xpmult", "label": "Overdrive (5x Damage & Speed, Solo)", "type": "hyrule-toggle", "feature": "overdrive", "live": true },
+        { "type": "separator" },
+        { "id": "grant-stardust", "label": "+50,000 Stardust", "type": "profile-mutate", "mutation": { "addStardust": 50000 }, "reload": true },
+        { "id": "grant-stardust-max", "label": "+500,000 Stardust", "type": "profile-mutate", "mutation": { "addStardust": 500000 }, "reload": true },
+        { "id": "grant-bonkoins", "label": "+500 Bonkoins", "type": "profile-mutate", "mutation": { "addBonk": 500 }, "reload": true },
+        { "id": "grant-bonkoins-max", "label": "+5,000 Bonkoins", "type": "profile-mutate", "mutation": { "addBonk": 5000 }, "reload": true },
+        { "type": "separator" },
+        { "id": "cheat-bag-99", "label": "Max All Bag Items (99x)", "type": "profile-mutate", "mutation": { "setBag": { "rare-candy": 99, "lucky-egg": 99, "amulet-coin": 99, "honey": 99, "shiny-stone": 99, "master-ball": 99 } }, "reload": true },
+        { "id": "cheat-max-lab", "label": "Max All Lab Upgrades", "type": "profile-mutate", "mutation": { "maxAllLab": true }, "reload": true },
+        { "id": "cheat-exp-rich", "label": "+50,000 Expedition Coins, +500 Seals & Mats", "type": "profile-mutate", "mutation": { "expedition": { "addCoins": 50000, "addSeals": 500, "addMats": { "scrap": 500, "shard": 250, "core": 100 } } }, "reload": true },
+        { "type": "separator" },
+        { "id": "unlock-vanilla-roster", "label": "Unlock Kanto & Johto (#1-#251) + Biomes", "type": "profile-mutate", "mutation": { "unlockSpeciesRange": [1, 251], "rangeIncludeLeague": true, "unlockAllVanillaBiomes": true, "researchLevel": 100 }, "reload": true },
+        { "id": "unlock-everything", "label": "Unlock All Pokémon (#1-#1025 + Custom) & Biomes", "type": "profile-mutate", "mutation": { "unlockSpeciesRange": [1, 1025], "rangeIncludeLeague": true, "unlockSpecies": [2001, 2002, 2003, 2004, 2005, 2010], "unlockAllVanillaBiomes": true, "researchLevel": 100 }, "reload": true },
+        { "id": "unlock-all-shinies", "label": "Unlock All Shinies & Classic Forms", "type": "profile-mutate", "mutation": { "unlockShiniesRange": [1, 1025], "unlockShinies": [2001, 2002, 2003, 2004, 2005, 2010] }, "reload": true },
+        { "type": "separator" },
+        { "id": "reset-offline-save", "label": "Reset Current Offline Profile", "type": "profile-mutate", "confirm": "Reset your active Offline Mode profile back to a fresh start? Online Mode and other offline profiles are never touched.", "mutation": { "resetProfile": true }, "reload": true }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": 2005,
+  "key": "ash-greninja",
+  "name": "Ash-Greninja",
+  "pokeApiId": 10117,
+  "start": true,
+  "unlock": false,
+  "role": "Battle Bond Ninja",
+  "rank": "legendary",
+  "types": [
+    "water",
+    "dark"
+  ],
+  "stats": {
+    "hp": 72,
+    "atk": 145,
+    "def": 67,
+    "spa": 153,
+    "spd": 71,
+    "spe": 132
+  },
+  "passive": "sniper",
+  "kit": [
+    "ash-water-shuriken",
+    "bond-night-slash",
+    "water-pulse",
+    "dark-pulse"
+  ],
+  "ultFrom": 9,
+  "cryFrom": 130,
+  "height": 15,
+  "weight": 400,
+  "color": "blue",
+  "flavor": "Through Battle Bond, Greninja forms a giant Water Shuriken on its back and moves faster than the eye can follow.",
+  "spriteMeta": {
+    "w": 320,
+    "h": 3280,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 80,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "idle": {
+        "y": 640,
+        "fw": 80,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          26,
+          12,
+          16,
+          10
+        ]
+      },
+      "attack": {
+        "y": 1280,
+        "fw": 80,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          2,
+          3,
+          3,
+          3
+        ]
+      },
+      "hurt": {
+        "y": 1920,
+        "fw": 80,
+        "fh": 80,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          3,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2560,
+        "fw": 80,
+        "fh": 80,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          24,
+          24
+        ]
+      },
+      "charge": {
+        "y": 2640,
+        "fw": 80,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    }
+  },
+  "portrait": "assets/portraits/2005.png",
+  "pmdSheet": "assets/pmd/2005.png",
+  "overrideLearnset": true,
+  "customUlt": {
+    "name": "Giant Golden Water Shuriken",
+    "type": "water",
+    "cls": "special",
+    "desc": "Ash-Greninja unleashes a colossal spinning Battle Bond Water Shuriken!",
+    "tint": 3457279,
+    "radius": 15,
+    "dmgMul": 5.3,
+    "dur": 1.8,
+    "knock": 9
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "id": "pokemon-audio-pack",
+  "name": "Pokémon Soundtrack Audio Pack (HGSS & FRLG)",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "description": "Additive Pokémon music and SFX pack curated from HeartGold/SoulSilver and FireRed/LeafGreen soundtracks (3 menu themes, 8 battle/run themes, 6 legendary/champion boss themes, and 4 iconic SFX). Never replaces vanilla PokéBonk songs.",
+  "tags": [
+    "audio",
+    "music",
+    "sfx",
+    "hgss",
+    "frlg",
+    "soundtrack"
+  ],
+  "customMusic": [
+    {
+      "id": "frlg-title",
+      "name": "Title Screen (FRLG)",
+      "desc": "FireRed & LeafGreen main title theme",
+      "file": "audio/music/frlg-title.ogg",
+      "pool": "menu",
+      "loop": 6,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-title",
+      "name": "Title Screen (HGSS)",
+      "desc": "HeartGold & SoulSilver main title theme",
+      "file": "audio/music/hgss-title.ogg",
+      "pool": "menu",
+      "loop": 5,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-national-park",
+      "name": "National Park (HGSS)",
+      "desc": "Peaceful Johto National Park theme",
+      "file": "audio/music/hgss-national-park.ogg",
+      "pool": "menu",
+      "loop": 0,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "frlg-wild",
+      "name": "Wild Pokémon Battle (FRLG)",
+      "desc": "Classic Kanto wild battle theme",
+      "file": "audio/music/frlg-wild.ogg",
+      "pool": "ingame",
+      "loop": 4.5,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-trainer",
+      "name": "Trainer Battle (FRLG)",
+      "desc": "High-energy Kanto Trainer battle theme",
+      "file": "audio/music/frlg-trainer.ogg",
+      "pool": "ingame",
+      "loop": 6.2,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-gym",
+      "name": "Gym Leader Battle (FRLG)",
+      "desc": "Kanto Gym Leader battle theme",
+      "file": "audio/music/frlg-gym.ogg",
+      "pool": "ingame",
+      "loop": 5.8,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-wild-johto",
+      "name": "Wild Pokémon Battle - Johto (HGSS)",
+      "desc": "Johto wild encounter battle theme",
+      "file": "audio/music/hgss-wild-johto.ogg",
+      "pool": "ingame",
+      "loop": 4,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-wild-kanto",
+      "name": "Wild Pokémon Battle - Kanto (HGSS)",
+      "desc": "Arranged Kanto wild battle theme",
+      "file": "audio/music/hgss-wild-kanto.ogg",
+      "pool": "ingame",
+      "loop": 4,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-gym-johto",
+      "name": "Gym Leader Battle - Johto (HGSS)",
+      "desc": "Johto Gym Leader battle theme",
+      "file": "audio/music/hgss-gym-johto.ogg",
+      "pool": "ingame",
+      "loop": 5.5,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-gym-kanto",
+      "name": "Gym Leader Battle - Kanto (HGSS)",
+      "desc": "Arranged Kanto Gym Leader battle theme",
+      "file": "audio/music/hgss-gym-kanto.ogg",
+      "pool": "ingame",
+      "loop": 5.5,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "hgss-rival",
+      "name": "Rival Battle (HGSS)",
+      "desc": "Johto Rival encounter battle theme",
+      "file": "audio/music/hgss-rival.ogg",
+      "pool": "ingame",
+      "loop": 4.2,
+      "volume": 0.85,
+      "weight": 1
+    },
+    {
+      "id": "frlg-legendary",
+      "name": "Legendary Pokémon Battle (FRLG)",
+      "desc": "Kanto Legendary Birds encounter theme",
+      "file": "audio/music/frlg-legendary.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "frlg-mewtwo",
+      "name": "Mewtwo Battle (FRLG)",
+      "desc": "Cerulean Cave Mewtwo encounter theme",
+      "file": "audio/music/frlg-mewtwo.ogg",
+      "pool": "boss",
+      "loop": 4,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "frlg-champion",
+      "name": "Champion Battle (FRLG)",
+      "desc": "Indigo Plateau Champion final battle theme",
+      "file": "audio/music/frlg-champion.ogg",
+      "pool": "boss",
+      "loop": 7.5,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-champion",
+      "name": "Champion / Red Battle (HGSS)",
+      "desc": "Mt. Silver Red & Champion Lance theme",
+      "file": "audio/music/hgss-champion.ogg",
+      "pool": "boss",
+      "loop": 5,
+      "volume": 0.9,
+      "weight": 2
+    },
+    {
+      "id": "hgss-ho-oh",
+      "name": "Ho-Oh Battle (HGSS)",
+      "desc": "Bell Tower Ho-Oh legendary encounter theme",
+      "file": "audio/music/hgss-ho-oh.ogg",
+      "pool": "boss",
+      "loop": 6,
+      "volume": 0.9,
+      "weight": 1
+    },
+    {
+      "id": "hgss-lugia",
+      "name": "Lugia Battle (HGSS)",
+      "desc": "Whirl Islands Lugia legendary encounter theme",
+      "file": "audio/music/hgss-lugia.ogg",
+      "pool": "boss",
+      "loop": 5,
+      "volume": 0.9,
+      "weight": 1
+    }
+  ],
+  "customSfx": [
+    {
+      "id": "pkmn-level-up",
+      "name": "Level Up! (HGSS)",
+      "file": "audio/sfx/pkmn-level-up.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.2
+    },
+    {
+      "id": "pkmn-item-get",
+      "name": "Obtained an Item! (HGSS)",
+      "file": "audio/sfx/pkmn-item-get.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.2
+    },
+    {
+      "id": "pkmn-heal",
+      "name": "Pokémon Healed (HGSS)",
+      "file": "audio/sfx/pkmn-heal.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    },
+    {
+      "id": "pkmn-caught",
+      "name": "Caught a Pokémon! (FRLG)",
+      "file": "audio/sfx/pkmn-caught.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": 2003,
+  "key": "primal-kyogre",
+  "name": "Primal Kyogre",
+  "pokeApiId": 10077,
+  "start": true,
+  "unlock": false,
+  "role": "Primordial Sea Titan",
+  "rank": "legendary",
+  "types": [
+    "water"
+  ],
+  "stats": {
+    "hp": 100,
+    "atk": 150,
+    "def": 90,
+    "spa": 180,
+    "spd": 160,
+    "spe": 90
+  },
+  "passive": "water-absorb",
+  "kit": [
+    "primal-origin-pulse",
+    "primordial-deluge",
+    "surf",
+    "hydro-pump"
+  ],
+  "ultFrom": 9,
+  "cryFrom": 382,
+  "height": 98,
+  "weight": 4300,
+  "color": "blue",
+  "flavor": "Awakened by the Blue Orb, Primal Kyogre summons torrential storms and overwhelms enemies with Origin Pulse.",
+  "spriteMeta": {
+    "w": 800,
+    "h": 3016,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 64,
+        "fh": 72,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "idle": {
+        "y": 576,
+        "fw": 64,
+        "fh": 72,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          10,
+          14,
+          14,
+          14,
+          14,
+          10,
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "attack": {
+        "y": 1152,
+        "fw": 80,
+        "fh": 72,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          6,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 1728,
+        "fw": 64,
+        "fh": 88,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2432,
+        "fw": 64,
+        "fh": 72,
+        "n": 6,
+        "rows": 1,
+        "d": [
+          16,
+          12,
+          16,
+          16,
+          12,
+          16
+        ]
+      },
+      "charge": {
+        "y": 2504,
+        "fw": 64,
+        "fh": 64,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "portrait": "assets/portraits/2003.png",
+  "pmdSheet": "assets/pmd/2003.png",
+  "overrideLearnset": true,
+  "customUlt": {
+    "name": "Primordial Sea Tempest",
+    "type": "water",
+    "cls": "special",
+    "desc": "Primal Kyogre engulfs the arena in glowing abyssal blue tidal beams.",
+    "tint": 1875199,
+    "radius": 16,
+    "dmgMul": 5.5,
+    "dur": 2,
+    "knock": 10
+  }
+}

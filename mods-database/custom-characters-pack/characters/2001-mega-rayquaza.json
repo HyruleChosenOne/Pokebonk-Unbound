@@ -1,0 +1,153 @@
+{
+  "id": 2001,
+  "key": "mega-rayquaza",
+  "name": "Mega Rayquaza",
+  "pokeApiId": 10079,
+  "start": true,
+  "unlock": false,
+  "role": "Delta Sky Lord",
+  "rank": "legendary",
+  "types": [
+    "dragon",
+    "flying"
+  ],
+  "stats": {
+    "hp": 105,
+    "atk": 180,
+    "def": 100,
+    "spa": 180,
+    "spd": 100,
+    "spe": 115
+  },
+  "passive": "multiscale",
+  "kit": [
+    "mega-dragon-ascent",
+    "emerald-twister",
+    "dragon-claw",
+    "hurricane"
+  ],
+  "ultFrom": 149,
+  "cryFrom": 384,
+  "height": 108,
+  "weight": 3920,
+  "color": "green",
+  "flavor": "Powered by meteorite energy in its mikado organ, Mega Rayquaza commands emerald winds and devastates hordes with Delta Stream.",
+  "spriteMeta": {
+    "w": 1760,
+    "h": 5600,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 144,
+        "fh": 128,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          16,
+          16,
+          16,
+          16
+        ]
+      },
+      "idle": {
+        "y": 1024,
+        "fw": 144,
+        "fh": 136,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          10,
+          14,
+          14,
+          14,
+          14,
+          10,
+          14,
+          14,
+          14,
+          14
+        ]
+      },
+      "attack": {
+        "y": 2112,
+        "fw": 176,
+        "fh": 144,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          4,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 3264,
+        "fw": 104,
+        "fh": 144,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 4416,
+        "fw": 72,
+        "fh": 96,
+        "n": 8,
+        "rows": 1,
+        "d": [
+          10,
+          10,
+          10,
+          30,
+          10,
+          10,
+          10,
+          30
+        ]
+      },
+      "charge": {
+        "y": 4512,
+        "fw": 128,
+        "fh": 136,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "portrait": "assets/portraits/2001.png",
+  "pmdSheet": "assets/pmd/2001.png",
+  "overrideLearnset": true,
+  "customUlt": {
+    "name": "Delta Stream Cataclysm",
+    "type": "dragon",
+    "cls": "physical",
+    "desc": "Mega Rayquaza tears open the upper sky with emerald Delta Stream meteors.",
+    "tint": 3403130,
+    "radius": 16,
+    "dmgMul": 5.5,
+    "dur": 2,
+    "knock": 10
+  }
+}

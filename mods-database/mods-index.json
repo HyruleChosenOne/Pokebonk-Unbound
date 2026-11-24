@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "repository": "HyruleChosenOne/Pokebonk-Unbound",
+  "updatedAt": "2026-11-24T18:31:42.752Z",
+  "mods": [
+    {
+      "id": "custom-characters-pack",
+      "name": "Custom Characters & Custom Attacks Pack",
+      "version": "2.0.0",
+      "author": "Hyrule",
+      "description": "Playable Custom Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, Ash-Greninja) complete with 10 signature custom attacks, 5 custom Ultimates, 3 custom Pokéball pickup items (vanilla icons, zero custom VFX assets), and drop-in ./characters/*.json support. Controlled by Hyrule's Mods -> Custom Characters Enabler.",
+      "tags": [
+        "custom-characters",
+        "custom-attacks",
+        "custom-items",
+        "forms",
+        "offline-only"
+      ],
+      "path": "mods-database/custom-characters-pack",
+      "files": [
+        "assets/pmd/2001.png",
+        "assets/pmd/2002.png",
+        "assets/pmd/2003.png",
+        "assets/pmd/2004.png",
+        "assets/pmd/2005.png",
+        "assets/pmd-shiny/2004.png",
+        "assets/pmd-shiny/2005.png",
+        "assets/portraits/2001.png",
+        "assets/portraits/2002.png",
+        "assets/portraits/2003.png",
+        "assets/portraits/2004.png",
+        "assets/portraits/2005.png",
+        "characters/2001-mega-rayquaza.json",
+        "characters/2002-primal-groudon.json",
+        "characters/2003-primal-kyogre.json",
+        "characters/2004-mega-mewtwo-x.json",
+        "characters/2005-ash-greninja.json",
+        "characters/README-CUSTOM-CHARACTERS.txt",
+        "mod.json"
+      ]
+    },
+    {
+      "id": "gen3-9-regions-levels",
+      "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "description": "Standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 2 distinct playable maps each (14 levels total), featuring unique terrain profiles, weather, sanctuaries, and 3D centerpiece landmarks. Works standalone or paired with National Dex Gen 3-9.",
+      "tags": [
+        "levels",
+        "regions",
+        "maps",
+        "gen3",
+        "gen4",
+        "gen5",
+        "gen6",
+        "gen7",
+        "gen8",
+        "gen9"
+      ],
+      "path": "mods-database/gen3-9-regions-levels",
+      "files": [
+        "mod.json"
+      ]
+    },
+    {
+      "id": "hyrules-mods",
+      "name": "Hyrule's Mods (QoL & Cheats Collection)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Custom Characters Enabler, Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
+      "tags": [
+        "qol",
+        "collection",
+        "enabler",
+        "events",
+        "p2p",
+        "themes",
+        "cheats",
+        "unlocks"
+      ],
+      "path": "mods-database/hyrules-mods",
+      "files": [
+        "mod.json"
+      ]
+    },
+    {
+      "id": "minish-cap-link",
+      "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 authentic Minish Cap custom attacks (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items!",
+      "tags": [
+        "character",
+        "zelda",
+        "minish-cap",
+        "custom-attacks",
+        "custom-items"
+      ],
+      "path": "mods-database/minish-cap-link",
+      "files": [
+        "characters/minish-link-front.png",
+        "characters/minish-link-icon.png",
+        "characters/minish-link-pmd.png",
+        "characters/minish-link-portrait.png",
+        "characters/minish-link-shiny.png",
+        "mod.json"
+      ]
+    },
+    {
+      "id": "national-dex-gen3-9",
+      "name": "National Dex Expansion (Gen 3–9: Hoenn → Paldea)",
+      "version": "2.0.0",
+      "author": "HyruleChosenOne",
+      "description": "Adds ALL 7 missing Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom Gen 3-9 attacks & 24 custom Ultimates, all 419 base families, and all 774 species. Pair with the separate Gen 3-9 Regions & Levels Pack for regional maps. Starts locked by default.",
+      "tags": [
+        "gen3",
+        "gen4",
+        "gen5",
+        "gen6",
+        "gen7",
+        "gen8",
+        "gen9",
+        "custom-moves",
+        "national-dex"
+      ],
+      "path": "mods-database/national-dex-gen3-9",
+      "files": [
+        "mod.json"
+      ]
+    },
+    {
+      "id": "pokemon-audio-pack",
+      "name": "Pokémon Soundtrack Audio Pack (HGSS & FRLG)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "description": "Additive Pokémon music and SFX pack curated from HeartGold/SoulSilver and FireRed/LeafGreen soundtracks (3 menu themes, 8 battle/run themes, 6 legendary/champion boss themes, and 4 iconic SFX). Never replaces vanilla PokéBonk songs.",
+      "tags": [
+        "audio",
+        "music",
+        "sfx",
+        "hgss",
+        "frlg",
+        "soundtrack"
+      ],
+      "path": "mods-database/pokemon-audio-pack",
+      "files": [
+        "audio/music/frlg-champion.ogg",
+        "audio/music/frlg-gym.ogg",
+        "audio/music/frlg-legendary.ogg",
+        "audio/music/frlg-mewtwo.ogg",
+        "audio/music/frlg-title.ogg",
+        "audio/music/frlg-trainer.ogg",
+        "audio/music/frlg-wild.ogg",
+        "audio/music/hgss-champion.ogg",
+        "audio/music/hgss-gym-johto.ogg",
+        "audio/music/hgss-gym-kanto.ogg",
+        "audio/music/hgss-ho-oh.ogg",
+        "audio/music/hgss-lugia.ogg",
+        "audio/music/hgss-national-park.ogg",
+        "audio/music/hgss-rival.ogg",
+        "audio/music/hgss-title.ogg",
+        "audio/music/hgss-wild-johto.ogg",
+        "audio/music/hgss-wild-kanto.ogg",
+        "audio/sfx/pkmn-caught.ogg",
+        "audio/sfx/pkmn-heal.ogg",
+        "audio/sfx/pkmn-item-get.ogg",
+        "audio/sfx/pkmn-level-up.ogg",
+        "mod.json"
+      ]
+    }
+  ]
+}

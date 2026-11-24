@@ -1,0 +1,129 @@
+{
+  "id": 2004,
+  "key": "mega-mewtwo-x",
+  "name": "Mega Mewtwo X",
+  "pokeApiId": 10043,
+  "start": true,
+  "unlock": false,
+  "role": "Psychic Brawler",
+  "rank": "legendary",
+  "types": [
+    "psychic",
+    "fighting"
+  ],
+  "stats": {
+    "hp": 106,
+    "atk": 190,
+    "def": 100,
+    "spa": 154,
+    "spd": 100,
+    "spe": 130
+  },
+  "passive": "mew",
+  "kit": [
+    "mewtwo-psystrike",
+    "aura-shatter-palm",
+    "psycho-cut",
+    "aura-sphere"
+  ],
+  "ultFrom": 150,
+  "cryFrom": 150,
+  "height": 23,
+  "weight": 1270,
+  "color": "purple",
+  "flavor": "Psychic power augments its muscles to mythic strength, tearing through wild hordes with overwhelming physical and telekinetic force.",
+  "spriteMeta": {
+    "w": 224,
+    "h": 3280,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 56,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          7,
+          7,
+          7,
+          7
+        ]
+      },
+      "idle": {
+        "y": 640,
+        "fw": 56,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          26,
+          12,
+          16,
+          10
+        ]
+      },
+      "attack": {
+        "y": 1280,
+        "fw": 56,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          2,
+          3,
+          3,
+          3
+        ]
+      },
+      "hurt": {
+        "y": 1920,
+        "fw": 56,
+        "fh": 80,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          3,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2560,
+        "fw": 56,
+        "fh": 80,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          24,
+          24
+        ]
+      },
+      "charge": {
+        "y": 2640,
+        "fw": 56,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          3,
+          3,
+          3,
+          3
+        ]
+      }
+    }
+  },
+  "portrait": "assets/portraits/2004.png",
+  "pmdSheet": "assets/pmd/2004.png",
+  "overrideLearnset": true,
+  "customUlt": {
+    "name": "Infinite Psystrike Barrage",
+    "type": "psychic",
+    "cls": "special",
+    "desc": "Mega Mewtwo X compresses psychic and martial energy into a shattering shockwave.",
+    "tint": 15165439,
+    "radius": 15,
+    "dmgMul": 5.4,
+    "dur": 1.9,
+    "knock": 9
+  }
+}

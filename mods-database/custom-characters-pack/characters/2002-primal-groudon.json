@@ -1,0 +1,152 @@
+{
+  "id": 2002,
+  "key": "primal-groudon",
+  "name": "Primal Groudon",
+  "pokeApiId": 10078,
+  "start": true,
+  "unlock": false,
+  "role": "Desolate Land Titan",
+  "rank": "legendary",
+  "types": [
+    "ground",
+    "fire"
+  ],
+  "stats": {
+    "hp": 100,
+    "atk": 180,
+    "def": 160,
+    "spa": 150,
+    "spd": 90,
+    "spe": 90
+  },
+  "passive": "blaze",
+  "kit": [
+    "primal-precipice-blades",
+    "desolate-eruption",
+    "earthquake",
+    "fire-blast"
+  ],
+  "ultFrom": 6,
+  "cryFrom": 383,
+  "height": 50,
+  "weight": 9997,
+  "color": "red",
+  "flavor": "Through Primal Reversion, Groudon overflows with volcanic magma, evaporating oceans and scorching the earth.",
+  "spriteMeta": {
+    "w": 1008,
+    "h": 3448,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 72,
+        "fh": 80,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          10,
+          12,
+          10,
+          12
+        ]
+      },
+      "idle": {
+        "y": 640,
+        "fw": 72,
+        "fh": 80,
+        "n": 14,
+        "rows": 8,
+        "d": [
+          60,
+          10,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          10
+        ]
+      },
+      "attack": {
+        "y": 1280,
+        "fw": 88,
+        "fh": 104,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          6,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 2112,
+        "fw": 72,
+        "fh": 80,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2752,
+        "fw": 64,
+        "fh": 56,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 2808,
+        "fw": 64,
+        "fh": 80,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "portrait": "assets/portraits/2002.png",
+  "pmdSheet": "assets/pmd/2002.png",
+  "overrideLearnset": true,
+  "customUlt": {
+    "name": "Desolate Land Cataclysm",
+    "type": "ground",
+    "cls": "physical",
+    "desc": "Primal Groudon splits the crust in a sea of blinding magma.",
+    "tint": 16733952,
+    "radius": 16,
+    "dmgMul": 5.5,
+    "dur": 2,
+    "status": "burn",
+    "knock": 10
+  }
+}

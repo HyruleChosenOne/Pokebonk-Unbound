@@ -1,0 +1,287 @@
+{
+  "id": "minish-cap-link",
+  "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 authentic Minish Cap custom attacks (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items!",
+  "tags": [
+    "character",
+    "zelda",
+    "minish-cap",
+    "custom-attacks",
+    "custom-items"
+  ],
+  "customMoves": [
+    {
+      "key": "picori-blade",
+      "name": "Picori Blade",
+      "type": "steel",
+      "cls": "physical",
+      "power": 72,
+      "accuracy": 100,
+      "pp": 25,
+      "crit": 1,
+      "flavor": "Link strikes swiftly with the sacred Picori Blade in a wide emerald-silver arc.",
+      "archetype": "strike",
+      "params": {
+        "r": 3.1,
+        "arc": 2.35,
+        "cd": 0.78
+      },
+      "vfxPreset": "slash",
+      "sfxPreset": "slash",
+      "vfxColor": 4915072,
+      "vfxSize": 1.25
+    },
+    {
+      "key": "magical-boomerang",
+      "name": "Magical Boomerang",
+      "type": "grass",
+      "cls": "physical",
+      "power": 68,
+      "accuracy": 100,
+      "pp": 20,
+      "flinch": 25,
+      "minHits": 2,
+      "maxHits": 2,
+      "flavor": "Throws the Magical Boomerang in a curved returning arc that slices and stuns foes twice.",
+      "archetype": "boomerang",
+      "params": {
+        "speed": 17,
+        "dist": 12,
+        "count": 2
+      },
+      "vfxPreset": "razor-leaf",
+      "sfxPreset": "quick-attack",
+      "vfxColor": 3403130,
+      "vfxSize": 1.2
+    },
+    {
+      "key": "gust-jar",
+      "name": "Gust Jar",
+      "type": "flying",
+      "cls": "special",
+      "power": 82,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Unleashes a roaring compressed gale from the Gust Jar that blasts crowds backward.",
+      "archetype": "wave",
+      "params": {
+        "speed": 15,
+        "width": 3.2,
+        "pierce": 5,
+        "knock": 7.5
+      },
+      "vfxPreset": "gust",
+      "sfxPreset": "gust",
+      "vfxColor": 10092543,
+      "vfxSize": 1.35
+    },
+    {
+      "key": "cane-of-pacci",
+      "name": "Cane of Pacci",
+      "type": "fairy",
+      "cls": "special",
+      "power": 95,
+      "accuracy": 100,
+      "pp": 15,
+      "crit": 1,
+      "flavor": "Fires an overturning bolt of Picori magic from the Cane of Pacci that flips enemies.",
+      "archetype": "beam",
+      "params": {
+        "len": 13.5,
+        "width": 1.5,
+        "pierce": 4
+      },
+      "vfxPreset": "psybeam",
+      "sfxPreset": "psybeam",
+      "vfxColor": 16738740,
+      "vfxSize": 1.25
+    },
+    {
+      "key": "flame-lantern",
+      "name": "Flame Lantern",
+      "type": "fire",
+      "cls": "special",
+      "power": 85,
+      "accuracy": 100,
+      "pp": 15,
+      "ailment": "burn",
+      "ailmentChance": 35,
+      "flavor": "Swings the Flame Lantern to hurl blazing embers that ignite nearby enemies.",
+      "archetype": "nova",
+      "params": {
+        "r": 4.2,
+        "count": 3
+      },
+      "vfxPreset": "flamethrower",
+      "sfxPreset": "ember",
+      "vfxColor": 16747520,
+      "vfxSize": 1.25
+    }
+  ],
+  "customItems": [
+    {
+      "key": "gold-kinstone",
+      "name": "Gold Kinstone",
+      "desc": "+14% Crit Chance & +15% Luck from fused Picori fortune.",
+      "icon": "items/star-piece.png",
+      "rarity": 2,
+      "max": 3,
+      "mods": [
+        {
+          "stat": "critChance",
+          "add": 0.14
+        },
+        {
+          "stat": "luck",
+          "add": 0.15
+        }
+      ]
+    },
+    {
+      "key": "pegasus-boots",
+      "name": "Pegasus Boots",
+      "desc": "+14% Move Speed & +12% Attack Speed — dash like the wind!",
+      "icon": "items/quick-claw.png",
+      "rarity": 2,
+      "max": 3,
+      "mods": [
+        {
+          "stat": "moveSpeed",
+          "mul": 1.14
+        },
+        {
+          "stat": "attackSpeed",
+          "mul": 1.12
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "id": 2010,
+      "key": "minish-cap-link",
+      "name": "Link (Minish Cap)",
+      "gen": 99,
+      "types": [
+        "grass",
+        "steel"
+      ],
+      "stats": {
+        "hp": 92,
+        "atk": 122,
+        "def": 96,
+        "spa": 104,
+        "spd": 94,
+        "spe": 124
+      },
+      "role": "Hero of the Minish",
+      "passive": "sniper",
+      "rank": "legendary",
+      "color": "green",
+      "start": true,
+      "unlock": false,
+      "cryFrom": 251,
+      "kit": [
+        "picori-blade",
+        "magical-boomerang",
+        "gust-jar",
+        "cane-of-pacci",
+        "flame-lantern"
+      ],
+      "overrideLearnset": true,
+      "customUlt": {
+        "name": "Four Sword Hurricane Spin",
+        "type": "grass",
+        "cls": "physical",
+        "desc": "Link splits into the Four Sword formation and unleashes a massive emerald-gold hurricane spin shockwave!",
+        "tint": 3403130,
+        "radius": 15,
+        "dmgMul": 5.2,
+        "dur": 1.9,
+        "knock": 9
+      },
+      "flavor": "Chosen Hero of Hyrule accompanied by Ezlo the Minish Cap. Wields the Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and the legendary Four Sword.",
+      "sprite": "characters/minish-link-front.png",
+      "pmdSheet": "characters/minish-link-pmd.png",
+      "pmdShinySheet": "characters/minish-link-shiny.png",
+      "portrait": "characters/minish-link-portrait.png",
+      "icon": "characters/minish-link-icon.png",
+      "overrideSprite": true,
+      "spriteMeta": {
+        "w": 256,
+        "h": 1024,
+        "anims": {
+          "walk": {
+            "y": 0,
+            "fw": 32,
+            "fh": 32,
+            "n": 8,
+            "rows": 8,
+            "d": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          },
+          "idle": {
+            "y": 256,
+            "fw": 32,
+            "fh": 32,
+            "n": 2,
+            "rows": 8,
+            "d": [
+              18,
+              18
+            ]
+          },
+          "attack": {
+            "y": 512,
+            "fw": 32,
+            "fh": 32,
+            "n": 6,
+            "rows": 8,
+            "d": [
+              3,
+              3,
+              3,
+              4,
+              4,
+              4
+            ]
+          },
+          "hurt": {
+            "y": 768,
+            "fw": 32,
+            "fh": 32,
+            "n": 2,
+            "rows": 8,
+            "d": [
+              8,
+              8
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "toolbarActions": [
+    {
+      "id": "unlock-minish-link",
+      "label": "Unlock Link (Minish Cap)",
+      "type": "profile-mutate",
+      "mutation": {
+        "unlockSpecies": [
+          2010
+        ]
+      },
+      "reload": true
+    }
+  ]
+}

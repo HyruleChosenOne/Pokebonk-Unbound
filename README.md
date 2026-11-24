@@ -24,14 +24,14 @@
   - Logging out opens the profile chooser; if no offline profiles exist yet, you are prompted to enter a trainer name before starting.
 
 - **Local Build Version History**
-  - Maintain and switch between the bundled Preserved Build and synced Live Updates from `pokebonk.com` inside the Control Center.
+  - Maintain and switch between the bundled Preserved Build and synced Live Updates from `pokebonk.com` inside **Unbound Settings**.
 
 - **Offline Mod Engine (`./mods/`)**
-  - Supports custom playable characters (animated 8-direction spritesheets, shiny variants, portraits, icons, cries, and custom Ultimates), custom attacks using the native GPU VFX and WebAudio SFX engine, custom Pokéball pickup items, custom procedural and 3D `.glb` levels (with automatic triangle-mesh height/wall collision baking and procedural POI spawning), asset overrides, JSON data patches, bundle patches, scripts, and CSS.
+  - Supports custom playable characters (animated 8-direction spritesheets, shiny variants, portraits, icons, cries, and custom Ultimates), custom attacks, custom Pokéball pickup items, additive custom music tracks and custom SFX (without replacing existing songs), asset overrides, JSON data patches, bundle patches, scripts, and CSS.
   - See [docs/MODDING.md](docs/MODDING.md) for the complete modding reference.
 
-- **Control Center & GitHub Mod Browser**
-  - Manage game builds, toggle mods, configure Hyrule's Mods options, manage local profiles, and browse/install mods directly from a GitHub repository (`HyruleChosenOne/pokebonk-mods` by default, or any custom `owner/repo`).
+- **Unbound Settings & GitHub Mod Browser**
+  - Manage game builds, toggle mods, configure Hyrule's Mods options, manage local profiles, and browse/install mods directly from `mods-database/` in `HyruleChosenOne/Pokebonk-Unbound` (or any custom GitHub `owner/repo`).
 
 ---
 
@@ -41,8 +41,8 @@ Two Windows portable executables are provided:
 
 | Edition | Output File | Contents |
 | --- | --- | --- |
-| **Portable Web** | `PokeBonk-Unbound-Portable-Web-2.0.0.exe` | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the full live build on first launch. |
-| **Complete Live** | `PokeBonk-Unbound-Complete-Live-2.0.0.exe` | Self-contained release bundling the complete offline game build, sprites, and optional mods out of the box. |
+| **Portable** | `PokeBonk-Unbound-Portable-2.0.0.exe` | Lightweight client shell and Online Mode. Switching to Offline Mode automatically downloads the full offline build into `./build-data/` alongside the executable. |
+| **Complete** | `PokeBonk-Unbound-Complete-2.0.0.exe` | Self-contained release bundling the complete offline game build, sprites, and optional mods out of the box. |
 
 ---
 
@@ -53,9 +53,11 @@ All shipped mods start **disabled by default** and operate exclusively in Offlin
 | Mod ID | Description |
 | --- | --- |
 | `hyrules-mods` | Quality-of-life, enablers, and trainer cheats collection: Custom Characters Enabler, Events Enabler (Choose-Mode hub preserving wallpaper/music), P2P `IP:Port` Multiplayer, Main Menu 3D Background & Music selector, Run Speed (`1×`/`1.5×`/`2×`), Unlock All Difficulties, Clean Main Menu, God Mode, Overdrive, and profile/unlock tools. |
-| `minish-cap-link` | Playable Link (*The Minish Cap*) with 8-direction animated sprites, Four Sword Red shiny variant, 5 custom attacks, Four Sword Hurricane Spin Ultimate, 2 custom Hyrule Pokéball items, and the Minish Woods procedural level. |
+| `minish-cap-link` | Playable Link (*The Minish Cap*) with 8-direction animated sprites, Four Sword Red shiny variant, 5 custom attacks, Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball items. |
 | `custom-characters-pack` | 5 custom forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, Ash-Greninja), 10 custom attacks, 5 signature Ultimates, and 3 custom Pokéball items. Also supports drop-in character JSONs in `characters/`. |
-| `national-dex-gen3-9` | Gen 3–9 National Dex expansion covering 7 regions, 419 base families, 72 custom attacks, and 24 signature Ultimates. |
+| `national-dex-gen3-9` | Gen 3–9 National Dex character expansion covering 7 regions, 419 base families, 72 custom attacks, and 24 signature Ultimates. |
+| `gen3-9-regions-levels` | Standalone Gen 3–9 Regions & Levels Pack adding 14 unique maps (2 per region from Hoenn to Paldea) with distinct terrain profiles, weather, sanctuaries, and 3D centerpiece landmarks. |
+| `pokemon-audio-pack` | Additive Pokémon soundtrack & SFX pack curated from HeartGold/SoulSilver and FireRed/LeafGreen (17 battle, menu, and boss themes + 4 iconic SFX) without replacing vanilla songs. |
 
 ---
 
@@ -89,7 +91,7 @@ npm install
 npm start
 ```
 
-### Bundle the Complete Offline Build (Required for Complete Live Edition)
+### Bundle the Complete Offline Build (Required for Complete Edition)
 
 The repository excludes the upstream PokéBonk build files (`bundled-build/`). To download and package a local copy from `pokebonk.com`:
 
@@ -106,10 +108,10 @@ npm test
 ### Build Windows Executables
 
 ```bash
-# Portable Web edition (lightweight, downloads offline build on demand)
-npm run build:portable-web
+# Portable edition (lightweight, downloads offline build on demand)
+npm run build:portable
 
-# Complete Live edition (includes bundled-build/ and default mods)
+# Complete edition (includes bundled-build/ and default mods)
 npm run build:complete
 ```
 
