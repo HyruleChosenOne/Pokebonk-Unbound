@@ -1,0 +1,146 @@
+{
+  "id": 2014,
+  "key": "shadow-lugia",
+  "name": "Shadow Lugia (XD001)",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Cipher Apex",
+  "rank": "legendary",
+  "types": [
+    "dark",
+    "flying"
+  ],
+  "stats": {
+    "hp": 110,
+    "atk": 120,
+    "def": 130,
+    "spa": 135,
+    "spd": 145,
+    "spe": 115
+  },
+  "passive": "multiscale",
+  "kit": [
+    "shadow-blast-xd",
+    "shadow-storm-xd",
+    "aeroblast",
+    "dark-pulse"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 249,
+  "height": 52,
+  "weight": 2160,
+  "color": "black",
+  "flavor": "Codename XD001 from Pokémon XD: Gale of Darkness. Cipher closed the door to its heart, unleashing catastrophic Shadow Moves.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2014.png",
+  "icon": "assets/icons/2014.png",
+  "portrait": "assets/portraits/2014.png",
+  "pmdSheet": "assets/pmd/2014.png",
+  "spriteMeta": {
+    "w": 1040,
+    "h": 4176,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 80,
+        "fh": 96,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          4,
+          4
+        ]
+      },
+      "idle": {
+        "y": 768,
+        "fw": 72,
+        "fh": 96,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          30,
+          30
+        ]
+      },
+      "attack": {
+        "y": 1536,
+        "fw": 104,
+        "fh": 112,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          4,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 2432,
+        "fw": 88,
+        "fh": 112,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 3328,
+        "fw": 56,
+        "fh": 80,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 3408,
+        "fw": 72,
+        "fh": 96,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "XD001 Shadow Tempest",
+    "type": "dark",
+    "cls": "special",
+    "desc": "Shadow Lugia unleashes an arena-wide violet-crimson storm of pure Cipher Shadow energy.",
+    "tint": 6828799,
+    "radius": 18,
+    "dmgMul": 5.7,
+    "dur": 2.1,
+    "knock": 11,
+    "vfx": {
+      "ringStyle": "Flames",
+      "secondaryRingStyle": "Runes",
+      "color2": "#ff3366",
+      "particleShape": "PixWave",
+      "particleCount": 34
+    }
+  }
+}

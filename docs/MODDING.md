@@ -87,7 +87,7 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 ### ID Ranges
 
 - **`252`–`1025`**: Official National Dex species. Loaded whenever the owning mod is enabled.
-- **`2000`–`9999`**: Non-standard / custom characters. Automatically placed in the **Custom** region tab and gated by **Hyrule's Mods -> Custom Characters Enabler** (automatically enabled when a `2000+` character pack is turned on).
+- **`2000`–`9999`**: Non-dexed / custom characters. Automatically placed in the **Custom** region tab whenever the Offline Mod Engine is ON — built directly into the core Modding API with no separate enabler mod required.
 
 Characters start **locked by default** (`"unlock": false`) for standard progression. Set `"unlock": true` to unlock automatically, or provide a `toolbarActions` unlock button.
 

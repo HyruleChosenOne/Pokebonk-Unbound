@@ -1,0 +1,155 @@
+{
+  "id": 2021,
+  "key": "mikon",
+  "name": "Mikon (Beta Vulpix)",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "SpaceWorld 97 Beta",
+  "rank": "uncommon",
+  "types": [
+    "fire"
+  ],
+  "stats": {
+    "hp": 72,
+    "atk": 76,
+    "def": 68,
+    "spa": 106,
+    "spd": 88,
+    "spe": 114
+  },
+  "passive": "blaze",
+  "kit": [
+    "beta-ember-fox",
+    "fox-tail-twirl",
+    "flamethrower",
+    "quick-attack"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 37,
+  "height": 4,
+  "weight": 55,
+  "color": "red",
+  "flavor": "The cut pre-evolution of Vulpix from the 1997 SpaceWorld Gold & Silver demo, sporting three bright ember tails.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2021.png",
+  "icon": "assets/icons/2021.png",
+  "portrait": "assets/portraits/2021.png",
+  "pmdSheet": "assets/pmd/2021.png",
+  "spriteMeta": {
+    "w": 720,
+    "h": 2008,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 40,
+        "n": 6,
+        "rows": 8,
+        "d": [
+          4,
+          6,
+          4,
+          6,
+          6,
+          4
+        ]
+      },
+      "idle": {
+        "y": 320,
+        "fw": 32,
+        "fh": 40,
+        "n": 7,
+        "rows": 8,
+        "d": [
+          38,
+          2,
+          2,
+          5,
+          3,
+          3,
+          2
+        ]
+      },
+      "attack": {
+        "y": 640,
+        "fw": 72,
+        "fh": 80,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      "hurt": {
+        "y": 1280,
+        "fw": 48,
+        "fh": 56,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 1728,
+        "fw": 24,
+        "fh": 24,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 1752,
+        "fw": 32,
+        "fh": 32,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "SpaceWorld Ember Dance",
+    "type": "fire",
+    "cls": "special",
+    "desc": "Mikon spins its three glowing beta tails to ignite a swirling golden-amber foxfire storm.",
+    "tint": 16747520,
+    "radius": 14,
+    "dmgMul": 4.9,
+    "dur": 1.8,
+    "knock": 8,
+    "status": "burn",
+    "vfx": {
+      "ringStyle": "Flames",
+      "secondaryRingStyle": "Petals",
+      "color2": "#ffdd66",
+      "particleShape": "PixFlame",
+      "particleCount": 26
+    }
+  }
+}

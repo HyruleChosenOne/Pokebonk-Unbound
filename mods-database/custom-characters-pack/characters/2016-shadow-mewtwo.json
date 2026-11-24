@@ -1,0 +1,157 @@
+{
+  "id": 2016,
+  "key": "shadow-mewtwo",
+  "name": "Shadow Mewtwo",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Synergy Berserker",
+  "rank": "legendary",
+  "types": [
+    "psychic",
+    "dark"
+  ],
+  "stats": {
+    "hp": 106,
+    "atk": 145,
+    "def": 90,
+    "spa": 165,
+    "spd": 95,
+    "spe": 138
+  },
+  "passive": "sniper",
+  "kit": [
+    "dark-psystrike",
+    "synergy-vortex",
+    "psychic",
+    "shadow-ball"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 150,
+  "height": 20,
+  "weight": 1220,
+  "color": "black",
+  "flavor": "Consumed by the Shadow Synergy Stone in Pokkén Tournament, Shadow Mewtwo overwhelms foes with ruthless obsidian-violet bursts.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2016.png",
+  "icon": "assets/icons/2016.png",
+  "portrait": "assets/portraits/2016.png",
+  "pmdSheet": "assets/pmd/2016.png",
+  "spriteMeta": {
+    "w": 880,
+    "h": 2728,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 48,
+        "fh": 56,
+        "n": 6,
+        "rows": 8,
+        "d": [
+          12,
+          6,
+          6,
+          12,
+          6,
+          6
+        ]
+      },
+      "idle": {
+        "y": 448,
+        "fw": 32,
+        "fh": 64,
+        "n": 8,
+        "rows": 8,
+        "d": [
+          40,
+          2,
+          4,
+          6,
+          8,
+          6,
+          4,
+          2
+        ]
+      },
+      "attack": {
+        "y": 960,
+        "fw": 80,
+        "fh": 88,
+        "n": 11,
+        "rows": 8,
+        "d": [
+          2,
+          3,
+          4,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 1664,
+        "fw": 48,
+        "fh": 72,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2240,
+        "fw": 32,
+        "fh": 40,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 2280,
+        "fw": 32,
+        "fh": 56,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Dark Nova Burst",
+    "type": "dark",
+    "cls": "special",
+    "desc": "Shadow Mewtwo channels the Shadow Synergy Stone into a colossal violet-orange Synergy explosion.",
+    "tint": 11153663,
+    "radius": 17,
+    "dmgMul": 5.6,
+    "dur": 2,
+    "knock": 10,
+    "vfx": {
+      "ringStyle": "Jagged",
+      "secondaryRingStyle": "Flames",
+      "color2": "#ff7722",
+      "particleShape": "PixBolt",
+      "particleCount": 32
+    }
+  }
+}

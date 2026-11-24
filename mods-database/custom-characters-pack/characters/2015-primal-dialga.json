@@ -1,0 +1,153 @@
+{
+  "id": 2015,
+  "key": "primal-dialga",
+  "name": "Primal Dialga",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Lord of Frozen Time",
+  "rank": "legendary",
+  "types": [
+    "dragon",
+    "steel"
+  ],
+  "stats": {
+    "hp": 110,
+    "atk": 130,
+    "def": 130,
+    "spa": 162,
+    "spd": 110,
+    "spe": 98
+  },
+  "passive": "sturdy",
+  "kit": [
+    "primal-roar-of-time",
+    "temporal-collapse",
+    "flash-cannon",
+    "dragon-pulse"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 483,
+  "height": 54,
+  "weight": 6830,
+  "color": "blue",
+  "flavor": "The dark form of Dialga from Pokémon Mystery Dungeon: Explorers of Sky, driven berserk by the collapse of Temporal Tower.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2015.png",
+  "icon": "assets/icons/2015.png",
+  "portrait": "assets/portraits/2015.png",
+  "pmdSheet": "assets/pmd/2015.png",
+  "spriteMeta": {
+    "w": 1344,
+    "h": 4608,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 72,
+        "fh": 104,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          12,
+          14,
+          12,
+          14
+        ]
+      },
+      "idle": {
+        "y": 832,
+        "fw": 72,
+        "fh": 104,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          80,
+          45
+        ]
+      },
+      "attack": {
+        "y": 1664,
+        "fw": 96,
+        "fh": 128,
+        "n": 14,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          6,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 2688,
+        "fw": 80,
+        "fh": 120,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 3648,
+        "fw": 64,
+        "fh": 64,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 3712,
+        "fw": 72,
+        "fh": 112,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Temporal Tower Collapse",
+    "type": "dragon",
+    "cls": "special",
+    "desc": "Primal Dialga freezes time across the arena before shattering it in a crimson-orange temporal detonation.",
+    "tint": 16737840,
+    "radius": 18,
+    "dmgMul": 5.7,
+    "dur": 2.1,
+    "knock": 10,
+    "status": "stun",
+    "vfx": {
+      "ringStyle": "Runes",
+      "secondaryRingStyle": "Flames",
+      "color2": "#ff8822",
+      "particleShape": "Shard",
+      "particleCount": 32
+    }
+  }
+}

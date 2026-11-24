@@ -1,15 +1,20 @@
 {
   "id": "custom-characters-pack",
-  "name": "Custom Characters & Custom Attacks Pack",
-  "version": "1.0.0",
+  "name": "Custom & Non-Dexed Pokémon Pack (18 Fighters)",
+  "version": "1.1.0",
   "author": "HyruleChosenOne",
-  "description": "Playable Custom Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, Ash-Greninja) complete with 10 signature custom attacks, 5 custom Ultimates, 3 custom Pokéball pickup items (vanilla icons, zero custom VFX assets), and drop-in ./characters/*.json support. Controlled by Hyrule's Mods -> Custom Characters Enabler.",
+  "description": "18 playable Custom & Non-Dexed Pokémon in the Custom region: MissingNo. (with DMG-Green Glitch Shiny), Substitute Doll, Bad Egg, Shadow Lugia (XD001), Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon (Beta Vulpix), Pikachu Libre, Hakogame (Beta Turtle), Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja — with 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and drop-in ./characters/ support.",
   "tags": [
     "custom-characters",
+    "non-dexed",
+    "missingno",
+    "shadow-lugia",
+    "primal-dialga",
+    "beta-pokemon",
     "custom-attacks",
+    "custom-vfx",
     "custom-items",
-    "forms",
-    "offline-only"
+    "forms"
   ],
   "charactersDir": "characters",
   "customItems": [
@@ -74,14 +79,60 @@
         }
       ],
       "max": 3
+    },
+    {
+      "key": "glitch-rare-candy-128",
+      "name": "Item #6 Overflow (x128)",
+      "desc": "+16% XP Gain, +12% Damage, and +10% Luck — corrupted Cinnabar Island fortune.",
+      "icon": "items/rare-candy.png",
+      "rarity": 3,
+      "max": 2,
+      "mods": [
+        {
+          "stat": "xp",
+          "mul": 1.16
+        },
+        {
+          "stat": "damage",
+          "mul": 1.12
+        },
+        {
+          "stat": "luck",
+          "add": 0.1
+        }
+      ]
+    },
+    {
+      "key": "cipher-shadow-shard",
+      "name": "Shadow Synergy Shard",
+      "desc": "+20% Crit Damage, +12% Attack Speed, and +10% Area.",
+      "icon": "items/dusk-stone.png",
+      "rarity": 2,
+      "max": 3,
+      "mods": [
+        {
+          "stat": "critDamage",
+          "add": 0.2
+        },
+        {
+          "stat": "attackSpeed",
+          "mul": 1.12
+        },
+        {
+          "stat": "area",
+          "mul": 1.1
+        }
+      ]
     }
   ],
   "toolbarActions": [
     {
-      "label": "Unlock All Custom Characters (Mega Rayquaza, Primals, Ash-Greninja & Drop-Ins)",
+      "id": "unlock-all-custom-pack",
+      "label": "Unlock All 18 Custom & Non-Dexed Pokémon",
       "type": "unlock-mod-characters"
     },
     {
+      "id": "open-custom-chars-dir",
       "label": "Open Custom Characters Folder (./characters/)",
       "type": "open-mod-subdir",
       "subdir": "characters"
@@ -98,7 +149,7 @@
       ],
       "maps": [],
       "slots": 0,
-      "emblem": 2001,
+      "emblem": 2011,
       "c": "#a855f7",
       "c2": "#ec4899"
     }
@@ -310,6 +361,750 @@
       "sfxPreset": "slash",
       "vfxColor": 7225535,
       "vfxSize": 1.3
+    },
+    {
+      "key": "glitch-sky-attack",
+      "name": "Glitch Sky Attack",
+      "type": "flying",
+      "cls": "physical",
+      "power": 115,
+      "accuracy": 100,
+      "pp": 15,
+      "crit": 1,
+      "flavor": "MissingNo. warps across coordinates in a corrupted Bird-type dive.",
+      "archetype": "dash",
+      "params": {
+        "dmgMul": 1.25,
+        "speedMul": 1.2,
+        "pierce": 8
+      },
+      "vfxId": "vfx-glitch-slash",
+      "vfxPreset": "slash",
+      "sfxPreset": "wing-attack"
+    },
+    {
+      "key": "water-gun-x128",
+      "name": "Water Gun x128",
+      "type": "water",
+      "cls": "special",
+      "power": 78,
+      "accuracy": 100,
+      "pp": 25,
+      "flavor": "Fires an overflowed barrage of duplicated Water Gun streams.",
+      "archetype": "barrage",
+      "params": {
+        "count": 6,
+        "spread": 0.36,
+        "dmgMul": 0.95
+      },
+      "vfxId": "vfx-glitch-water",
+      "vfxPreset": "water-gun",
+      "sfxPreset": "water-gun"
+    },
+    {
+      "key": "corrupted-static",
+      "name": "Corrupted Static",
+      "type": "normal",
+      "cls": "special",
+      "power": 92,
+      "accuracy": 100,
+      "pp": 15,
+      "ailment": "paralysis",
+      "ailmentChance": 30,
+      "flavor": "Emits a jagged static burst of garbled Gen 1 sprite tiles.",
+      "archetype": "nova",
+      "params": {
+        "pulses": 2,
+        "dmgMul": 1.15,
+        "status": "paralysis",
+        "statusChance": 0.35
+      },
+      "vfxId": "vfx-glitch-nova",
+      "vfxPreset": "thunderbolt",
+      "sfxPreset": "thunderbolt"
+    },
+    {
+      "key": "decoy-slam",
+      "name": "Decoy Slam",
+      "type": "normal",
+      "cls": "physical",
+      "power": 86,
+      "accuracy": 100,
+      "pp": 20,
+      "flinch": 25,
+      "flavor": "Bounces forward with uncanny plush momentum to knock hordes back.",
+      "archetype": "strike",
+      "params": {
+        "count": 2,
+        "dmgMul": 1.15,
+        "areaMul": 1.2
+      },
+      "vfxId": "vfx-decoy-star",
+      "vfxPreset": "quick-attack",
+      "sfxPreset": "karate-chop"
+    },
+    {
+      "key": "substitute-nova",
+      "name": "Substitute Nova",
+      "type": "fairy",
+      "cls": "special",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Releases a protective starlight pulse that blasts every nearby enemy.",
+      "archetype": "nova",
+      "params": {
+        "pulses": 2,
+        "dmgMul": 1.15
+      },
+      "vfxId": "vfx-decoy-star",
+      "vfxPreset": "quick-attack",
+      "sfxPreset": "swift"
+    },
+    {
+      "key": "hex-overflow",
+      "name": "Hex Overflow",
+      "type": "ghost",
+      "cls": "special",
+      "power": 102,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Hurls an unstable checksum orb that detonates in cursed spectral wisps.",
+      "archetype": "orb",
+      "params": {
+        "count": 2,
+        "spread": 0.3,
+        "dmgMul": 1.2
+      },
+      "vfxId": "vfx-bad-egg-hex",
+      "vfxPreset": "shadow-ball",
+      "sfxPreset": "shadow-ball"
+    },
+    {
+      "key": "memory-leak",
+      "name": "Memory Leak",
+      "type": "dark",
+      "cls": "special",
+      "power": 95,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Opens a corrupting void vortex that pulls enemies inward and drains them.",
+      "archetype": "vortex",
+      "params": {
+        "dmgMul": 1.2,
+        "areaMul": 1.2
+      },
+      "vfxId": "vfx-bad-egg-hex",
+      "vfxPreset": "shadow-ball",
+      "sfxPreset": "hex"
+    },
+    {
+      "key": "shadow-blast-xd",
+      "name": "Shadow Blast",
+      "type": "dark",
+      "cls": "special",
+      "power": 112,
+      "accuracy": 100,
+      "pp": 15,
+      "crit": 2,
+      "flavor": "Fires XD001's wicked beam of condensed Cipher Shadow energy.",
+      "archetype": "beam",
+      "params": {
+        "dmgMul": 1.25,
+        "areaMul": 1.2,
+        "pierce": 6
+      },
+      "vfxId": "vfx-shadow-lugia",
+      "vfxPreset": "psybeam",
+      "sfxPreset": "shadow-ball"
+    },
+    {
+      "key": "shadow-storm-xd",
+      "name": "Shadow Storm",
+      "type": "flying",
+      "cls": "special",
+      "power": 105,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Whips up a raging violet-crimson tornado of shadow wind.",
+      "archetype": "vortex",
+      "params": {
+        "dmgMul": 1.2,
+        "areaMul": 1.25
+      },
+      "vfxId": "vfx-shadow-lugia",
+      "vfxPreset": "gust",
+      "sfxPreset": "gust"
+    },
+    {
+      "key": "primal-roar-of-time",
+      "name": "Primal Roar of Time",
+      "type": "dragon",
+      "cls": "special",
+      "power": 128,
+      "accuracy": 100,
+      "pp": 10,
+      "flavor": "Unleashes an uncontrollable crimson-orange beam that distorts time itself.",
+      "archetype": "beam",
+      "params": {
+        "dmgMul": 1.35,
+        "areaMul": 1.2,
+        "pierce": 8
+      },
+      "vfxId": "vfx-primal-dialga",
+      "vfxPreset": "solar-beam",
+      "sfxPreset": "thunder"
+    },
+    {
+      "key": "temporal-collapse",
+      "name": "Temporal Collapse",
+      "type": "steel",
+      "cls": "special",
+      "power": 104,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Drops glowing orange-gold pillars of frozen time onto nearby foes.",
+      "archetype": "smite",
+      "params": {
+        "count": 3,
+        "dmgMul": 1.2,
+        "status": "stun",
+        "statusChance": 0.3
+      },
+      "vfxId": "vfx-primal-dialga",
+      "vfxPreset": "thunder",
+      "sfxPreset": "earthquake"
+    },
+    {
+      "key": "dark-psystrike",
+      "name": "Dark Psystrike",
+      "type": "psychic",
+      "cls": "special",
+      "power": 115,
+      "accuracy": 100,
+      "pp": 15,
+      "crit": 1,
+      "flavor": "Detonates an obsidian-violet psychic shockwave fueled by Shadow Synergy.",
+      "archetype": "nova",
+      "params": {
+        "pulses": 2,
+        "dmgMul": 1.25,
+        "areaMul": 1.15
+      },
+      "vfxId": "vfx-shadow-mewtwo",
+      "vfxPreset": "psychic",
+      "sfxPreset": "psychic"
+    },
+    {
+      "key": "synergy-vortex",
+      "name": "Shadow Synergy Arc",
+      "type": "dark",
+      "cls": "special",
+      "power": 96,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Chains crackling violet-orange Synergy lightning across enemy ranks.",
+      "archetype": "chain",
+      "params": {
+        "count": 5,
+        "dmgMul": 1.2
+      },
+      "vfxId": "vfx-shadow-mewtwo",
+      "vfxPreset": "thunderbolt",
+      "sfxPreset": "thunderbolt"
+    },
+    {
+      "key": "light-of-ruin",
+      "name": "Light of Ruin",
+      "type": "fairy",
+      "cls": "special",
+      "power": 135,
+      "accuracy": 100,
+      "pp": 10,
+      "flavor": "Draws power from the Eternal Flower to fire a devastating scarlet beam.",
+      "archetype": "beam",
+      "params": {
+        "dmgMul": 1.35,
+        "areaMul": 1.25,
+        "pierce": 8
+      },
+      "vfxId": "vfx-light-of-ruin",
+      "vfxPreset": "solar-beam",
+      "sfxPreset": "psybeam"
+    },
+    {
+      "key": "eternal-petals",
+      "name": "Eternal Petals",
+      "type": "fairy",
+      "cls": "special",
+      "power": 86,
+      "accuracy": 100,
+      "pp": 20,
+      "flavor": "Surrounds Floette with orbiting crimson blossoms that shred attackers.",
+      "archetype": "orbit",
+      "params": {
+        "count": 4,
+        "dmgMul": 1.15,
+        "durMul": 1.2
+      },
+      "vfxId": "vfx-light-of-ruin",
+      "vfxPreset": "razor-leaf",
+      "sfxPreset": "swift"
+    },
+    {
+      "key": "prismatic-photon-geyser",
+      "name": "Prismatic Geyser",
+      "type": "psychic",
+      "cls": "special",
+      "power": 120,
+      "accuracy": 100,
+      "pp": 10,
+      "flavor": "Erupts blazing pillars of Ultra Space prism light beneath enemy swarms.",
+      "archetype": "smite",
+      "params": {
+        "count": 4,
+        "dmgMul": 1.25
+      },
+      "vfxId": "vfx-ultra-necrozma",
+      "vfxPreset": "thunder",
+      "sfxPreset": "thunder"
+    },
+    {
+      "key": "radiant-laser-nova",
+      "name": "Ultra Radiant Nova",
+      "type": "dragon",
+      "cls": "special",
+      "power": 112,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Radiates blinding golden dragon-prism bursts in every direction.",
+      "archetype": "nova",
+      "params": {
+        "pulses": 2,
+        "dmgMul": 1.25,
+        "areaMul": 1.2
+      },
+      "vfxId": "vfx-ultra-necrozma",
+      "vfxPreset": "fire-blast",
+      "sfxPreset": "fire-blast"
+    },
+    {
+      "key": "beta-judgment",
+      "name": "Beta Judgment",
+      "type": "normal",
+      "cls": "special",
+      "power": 115,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Rains untyped white-gold bolts of prototype creation across the field.",
+      "archetype": "barrage",
+      "params": {
+        "count": 6,
+        "spread": 0.38,
+        "dmgMul": 1.05
+      },
+      "vfxId": "vfx-beta-arceus",
+      "vfxPreset": "swift",
+      "sfxPreset": "swift"
+    },
+    {
+      "key": "primordial-ring",
+      "name": "Primordial Ring",
+      "type": "psychic",
+      "cls": "special",
+      "power": 92,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Orbits shimmering creation shards around the Original Prototype.",
+      "archetype": "orbit",
+      "params": {
+        "count": 4,
+        "dmgMul": 1.15
+      },
+      "vfxId": "vfx-beta-arceus",
+      "vfxPreset": "swift",
+      "sfxPreset": "psybeam"
+    },
+    {
+      "key": "thiefs-retribution",
+      "name": "Thief's Retribution",
+      "type": "dark",
+      "cls": "physical",
+      "power": 96,
+      "accuracy": 100,
+      "pp": 20,
+      "crit": 2,
+      "flavor": "Ultra-fast twin shopkeeper slashes that punish anyone who dares flee.",
+      "archetype": "strike",
+      "params": {
+        "count": 2,
+        "dmgMul": 1.2,
+        "cdMul": 0.82
+      },
+      "vfxId": "vfx-kecleon-slash",
+      "vfxPreset": "slash",
+      "sfxPreset": "slash"
+    },
+    {
+      "key": "kecleon-outrage",
+      "name": "Shopkeeper Blitz",
+      "type": "normal",
+      "cls": "physical",
+      "power": 92,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Spins rapidly with unstoppable Mystery Dungeon speed.",
+      "archetype": "spin",
+      "params": {
+        "count": 3,
+        "dmgMul": 1.2
+      },
+      "vfxId": "vfx-kecleon-slash",
+      "vfxPreset": "slash",
+      "sfxPreset": "rapid-spin"
+    },
+    {
+      "key": "beta-ember-fox",
+      "name": "Tri-Tail Ember",
+      "type": "fire",
+      "cls": "special",
+      "power": 82,
+      "accuracy": 100,
+      "pp": 20,
+      "ailment": "burn",
+      "ailmentChance": 30,
+      "flavor": "Fires three homing wisps of SpaceWorld 97 foxfire.",
+      "archetype": "homing",
+      "params": {
+        "count": 3,
+        "dmgMul": 1.15,
+        "status": "burn",
+        "statusChance": 0.3
+      },
+      "vfxId": "vfx-mikon-flame",
+      "vfxPreset": "flamethrower",
+      "sfxPreset": "ember"
+    },
+    {
+      "key": "fox-tail-twirl",
+      "name": "Foxfire Twirl",
+      "type": "fire",
+      "cls": "special",
+      "power": 86,
+      "accuracy": 100,
+      "pp": 15,
+      "ailment": "burn",
+      "ailmentChance": 25,
+      "flavor": "Swirls a playful ring of golden embers around Mikon.",
+      "archetype": "boomerang",
+      "params": {
+        "count": 2,
+        "spread": 0.32,
+        "dmgMul": 1.1
+      },
+      "vfxId": "vfx-mikon-flame",
+      "vfxPreset": "flamethrower",
+      "sfxPreset": "fire-spin"
+    },
+    {
+      "key": "flying-press-libre",
+      "name": "Flying Press",
+      "type": "fighting",
+      "cls": "physical",
+      "power": 102,
+      "accuracy": 100,
+      "pp": 15,
+      "crit": 1,
+      "flavor": "Dives from the top rope in an electrifying luchadora body slam.",
+      "archetype": "meteor",
+      "params": {
+        "dmgMul": 1.25,
+        "status": "paralysis",
+        "statusChance": 0.3
+      },
+      "vfxId": "vfx-libre-volt",
+      "vfxPreset": "thunderbolt",
+      "sfxPreset": "earthquake"
+    },
+    {
+      "key": "volt-lucha-dash",
+      "name": "Volt Lucha Dash",
+      "type": "electric",
+      "cls": "physical",
+      "power": 90,
+      "accuracy": 100,
+      "pp": 20,
+      "ailment": "paralysis",
+      "ailmentChance": 30,
+      "flavor": "Charges forward cloaked in golden thunder and crimson fighting spirit.",
+      "archetype": "dash",
+      "params": {
+        "dmgMul": 1.2,
+        "speedMul": 1.2,
+        "status": "paralysis",
+        "statusChance": 0.3
+      },
+      "vfxId": "vfx-libre-volt",
+      "vfxPreset": "thunderbolt",
+      "sfxPreset": "thunderbolt"
+    },
+    {
+      "key": "beta-shell-bash",
+      "name": "Cube Shell Bash",
+      "type": "steel",
+      "cls": "physical",
+      "power": 94,
+      "accuracy": 100,
+      "pp": 20,
+      "flavor": "Spins rapidly inside its armored prototype shell to crush hordes.",
+      "archetype": "spin",
+      "params": {
+        "count": 3,
+        "dmgMul": 1.2
+      },
+      "vfxId": "vfx-hakogame-shell",
+      "vfxPreset": "water-gun",
+      "sfxPreset": "rapid-spin"
+    },
+    {
+      "key": "prototype-aqua-ring",
+      "name": "Prototype Surge",
+      "type": "water",
+      "cls": "special",
+      "power": 88,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Launches twin pressurized streams of SpaceWorld ocean water.",
+      "archetype": "barrage",
+      "params": {
+        "count": 4,
+        "spread": 0.32,
+        "dmgMul": 1.1
+      },
+      "vfxId": "vfx-hakogame-shell",
+      "vfxPreset": "water-gun",
+      "sfxPreset": "water-gun"
+    }
+  ],
+  "customVfx": [
+    {
+      "id": "vfx-glitch-slash",
+      "preset": "slash",
+      "shape": "Square",
+      "color": "#ff2a78",
+      "color2": "#33ffff",
+      "size": 1.35,
+      "strikeArc": true,
+      "strikeSparks": 10,
+      "hitShape": "Cross",
+      "hitColor": "#33ffff",
+      "hitCount": 8
+    },
+    {
+      "id": "vfx-glitch-water",
+      "preset": "water-gun",
+      "shape": "PixWaterBall",
+      "color": "#33ffff",
+      "color2": "#ff2a78",
+      "size": 1.3,
+      "trailShape": "Square",
+      "trailColor": "#ff2a78",
+      "trailRate": 0.7,
+      "hitShape": "PixSplash",
+      "hitColor": "#33ffff",
+      "hitCount": 6
+    },
+    {
+      "id": "vfx-glitch-nova",
+      "preset": "thunderbolt",
+      "shape": "Square",
+      "color": "#33ffff",
+      "color2": "#ff2a78",
+      "size": 1.35,
+      "ringStyle": "Jagged",
+      "ringColor": "#ff2a78",
+      "boomRing": true,
+      "boomCount": 16,
+      "hitShape": "Spark",
+      "hitColor": "#33ffff",
+      "hitCount": 8
+    },
+    {
+      "id": "vfx-decoy-star",
+      "preset": "quick-attack",
+      "shape": "Star",
+      "color": "#66ee99",
+      "color2": "#fff275",
+      "size": 1.3,
+      "ringStyle": "Petals",
+      "ringColor": "#66ee99",
+      "boomRing": true,
+      "boomCount": 12,
+      "hitShape": "Twinkle",
+      "hitColor": "#fff275",
+      "hitCount": 7
+    },
+    {
+      "id": "vfx-bad-egg-hex",
+      "preset": "shadow-ball",
+      "shape": "Wisp",
+      "color": "#9933ff",
+      "color2": "#ff44cc",
+      "size": 1.4,
+      "trailShape": "Square",
+      "trailColor": "#ff44cc",
+      "trailRate": 0.65,
+      "ringStyle": "Runes",
+      "ringColor": "#9933ff",
+      "hitShape": "Skull",
+      "hitColor": "#ff44cc",
+      "hitCount": 8
+    },
+    {
+      "id": "vfx-shadow-lugia",
+      "preset": "psybeam",
+      "shape": "PixWave",
+      "color": "#6622cc",
+      "color2": "#ff3366",
+      "size": 1.45,
+      "beamWidth": 1.4,
+      "beamCoreColor": "#ff3366",
+      "trailShape": "Wisp",
+      "trailColor": "#6622cc",
+      "hitShape": "Cross",
+      "hitColor": "#ff3366",
+      "hitCount": 9
+    },
+    {
+      "id": "vfx-primal-dialga",
+      "preset": "solar-beam",
+      "shape": "Shard",
+      "color": "#ff5511",
+      "color2": "#ffbb33",
+      "size": 1.45,
+      "beamWidth": 1.45,
+      "beamCoreColor": "#ffee88",
+      "ringStyle": "Runes",
+      "ringColor": "#ff5511",
+      "hitShape": "Twinkle",
+      "hitColor": "#ffbb33",
+      "hitCount": 9
+    },
+    {
+      "id": "vfx-shadow-mewtwo",
+      "preset": "psychic",
+      "shape": "PixBolt",
+      "color": "#aa33ff",
+      "color2": "#ff7722",
+      "size": 1.4,
+      "ringStyle": "Jagged",
+      "ringColor": "#aa33ff",
+      "boomRing": true,
+      "boomCount": 16,
+      "hitShape": "Spark",
+      "hitColor": "#ff7722",
+      "hitCount": 8
+    },
+    {
+      "id": "vfx-light-of-ruin",
+      "preset": "solar-beam",
+      "shape": "PixPetal",
+      "color": "#ff3377",
+      "color2": "#ffcce0",
+      "size": 1.45,
+      "beamWidth": 1.4,
+      "beamCoreColor": "#ffffff",
+      "trailShape": "PixPetal",
+      "trailColor": "#ff6699",
+      "hitShape": "Twinkle",
+      "hitColor": "#ff3377",
+      "hitCount": 10
+    },
+    {
+      "id": "vfx-ultra-necrozma",
+      "preset": "thunder",
+      "shape": "PixStar",
+      "color": "#ffee55",
+      "color2": "#ffffff",
+      "size": 1.5,
+      "ringStyle": "Flames",
+      "ringColor": "#ffdd33",
+      "boomRing": true,
+      "boomCount": 18,
+      "hitShape": "Twinkle",
+      "hitColor": "#ffffff",
+      "hitCount": 10
+    },
+    {
+      "id": "vfx-beta-arceus",
+      "preset": "swift",
+      "shape": "Twinkle",
+      "color": "#ffffff",
+      "color2": "#ffe866",
+      "size": 1.35,
+      "trailShape": "Star",
+      "trailColor": "#ffe866",
+      "trailRate": 0.75,
+      "hitShape": "Gem",
+      "hitColor": "#ffffff",
+      "hitCount": 7
+    },
+    {
+      "id": "vfx-kecleon-slash",
+      "preset": "slash",
+      "shape": "PixSlash",
+      "color": "#bb44ff",
+      "color2": "#ffd700",
+      "size": 1.35,
+      "strikeArc": true,
+      "strikeSparks": 9,
+      "hitShape": "Spark",
+      "hitColor": "#ffd700",
+      "hitCount": 7
+    },
+    {
+      "id": "vfx-mikon-flame",
+      "preset": "flamethrower",
+      "shape": "PixFlame",
+      "color": "#ff6622",
+      "color2": "#ffdd66",
+      "size": 1.3,
+      "trailShape": "PixFlame",
+      "trailColor": "#ff9933",
+      "trailRate": 0.7,
+      "hitShape": "Spark",
+      "hitColor": "#ffdd66",
+      "hitCount": 6
+    },
+    {
+      "id": "vfx-libre-volt",
+      "preset": "thunderbolt",
+      "shape": "PixBolt",
+      "color": "#ffdd00",
+      "color2": "#ff3333",
+      "size": 1.35,
+      "ringStyle": "Jagged",
+      "ringColor": "#ffdd00",
+      "boomRing": true,
+      "boomCount": 14,
+      "hitShape": "PixFist",
+      "hitColor": "#ff3333",
+      "hitCount": 8
+    },
+    {
+      "id": "vfx-hakogame-shell",
+      "preset": "water-gun",
+      "shape": "PixWaterBall",
+      "color": "#3399ff",
+      "color2": "#b0e0ff",
+      "size": 1.3,
+      "ringStyle": "Ripple",
+      "ringColor": "#3399ff",
+      "boomRing": true,
+      "boomCount": 12,
+      "hitShape": "PixSplash",
+      "hitColor": "#b0e0ff",
+      "hitCount": 7
     }
   ]
 }

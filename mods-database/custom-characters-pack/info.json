@@ -1,17 +1,18 @@
 {
   "id": "custom-characters-pack",
-  "name": "Custom Characters & Custom Attacks Pack",
-  "version": "1.0.0",
+  "name": "Custom & Non-Dexed Pokémon Pack (18 Fighters)",
+  "version": "1.1.0",
   "author": "HyruleChosenOne",
   "category": "Characters",
-  "tagline": "5 playable Mega, Primal, and Battle Bond forms with 10 signature custom attacks, 5 Ultimates, and drop-in character support.",
-  "description": "Adds 5 iconic special forms into the Custom playable roster (#2001-#2005): Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja. Every fighter comes with tailored stats, animated sprites, 2 dedicated signature custom attacks (10 total), a custom Ultimate, and 3 custom Pokéball pickup items. Also supports dropping your own standalone character .json and .png files into ./characters/.",
+  "tagline": "18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more.",
+  "description": "Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.",
   "highlights": [
-    "5 playable special forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja",
-    "10 signature custom attacks including Delta Dragon Ascent, Precipice Blades, Origin Pulse, Psystrike, and Bond Water Shuriken",
-    "5 custom signature Ultimates and 3 custom Pokéball pickup items",
-    "Drop-in ./characters/ folder support for adding your own custom fighters without creating a separate mod"
+    "Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)",
+    "Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)",
+    "Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja",
+    "37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items",
+    "Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)"
   ],
   "image": "preview.png",
-  "requirements": "Offline Mode + Hyrule's Mods (Custom Characters Enabler)"
+  "requirements": "Offline Mode (Mod Engine ON)"
 }

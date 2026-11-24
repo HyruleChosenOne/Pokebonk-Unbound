@@ -1,0 +1,162 @@
+{
+  "id": 2019,
+  "key": "beta-arceus",
+  "name": "Beta Arceus",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Primordial Prototype",
+  "rank": "legendary",
+  "types": [
+    "normal",
+    "psychic"
+  ],
+  "stats": {
+    "hp": 120,
+    "atk": 125,
+    "def": 120,
+    "spa": 135,
+    "spd": 120,
+    "spe": 120
+  },
+  "passive": "mew",
+  "kit": [
+    "beta-judgment",
+    "primordial-ring",
+    "hyper-beam",
+    "psychic"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 493,
+  "height": 32,
+  "weight": 3200,
+  "color": "white",
+  "flavor": "The mysterious unreleased Diamond & Pearl prototype sprite of Arceus — an eerie white silhouette of the Original One.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2019.png",
+  "icon": "assets/icons/2019.png",
+  "portrait": "assets/portraits/2019.png",
+  "pmdSheet": "assets/pmd/2019.png",
+  "spriteMeta": {
+    "w": 728,
+    "h": 3600,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 40,
+        "fh": 88,
+        "n": 8,
+        "rows": 8,
+        "d": [
+          8,
+          10,
+          8,
+          10,
+          8,
+          10,
+          8,
+          10
+        ]
+      },
+      "idle": {
+        "y": 704,
+        "fw": 32,
+        "fh": 80,
+        "n": 3,
+        "rows": 8,
+        "d": [
+          11,
+          11,
+          11
+        ]
+      },
+      "attack": {
+        "y": 1344,
+        "fw": 56,
+        "fh": 88,
+        "n": 13,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          6,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 2048,
+        "fw": 48,
+        "fh": 96,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2816,
+        "fw": 32,
+        "fh": 80,
+        "n": 8,
+        "rows": 1,
+        "d": [
+          10,
+          9,
+          8,
+          14,
+          10,
+          9,
+          8,
+          14
+        ]
+      },
+      "charge": {
+        "y": 2896,
+        "fw": 40,
+        "fh": 88,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Genesis Prototype",
+    "type": "normal",
+    "cls": "special",
+    "desc": "Beta Arceus summons primordial white-gold creation rings that erase everything in sight.",
+    "tint": 16777215,
+    "radius": 18,
+    "dmgMul": 5.7,
+    "dur": 2,
+    "knock": 10,
+    "vfx": {
+      "ringStyle": "Runes",
+      "secondaryRingStyle": "Ripple",
+      "color2": "#ffe866",
+      "particleShape": "Twinkle",
+      "particleCount": 36
+    }
+  }
+}

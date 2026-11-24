@@ -8,8 +8,9 @@ Your character automatically appears natively inside PokéBonk's menus:
   3. 3D In-Game Gameplay (moving, attacking, casting Ultimate!)
 
 Characters start LOCKED by default (`"unlock": false`). Unlock them anytime via
-the native toolbar:  Mods Config -> Custom Characters Support -> Unlock All Custom Characters
+Unbound Settings -> Installed Mods -> Custom & Non-Dexed Pokémon Pack -> Unlock All 18 Custom & Non-Dexed Pokémon
 (or set `"unlock": true` in a character's JSON if you prefer that character unlocked immediately).
+Custom Characters (#2000-#9999) are built directly into the Core Modding API — no separate enabler mod is needed!
 
 Sprites via PokéAPI (Recommended — zero art needed!):
   Simply set `"pokeApiId": <id>` to ANY PokéAPI Pokémon or alternate form ID:

@@ -1,0 +1,140 @@
+{
+  "id": 2011,
+  "key": "missingno",
+  "name": "MissingNo.",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Glitch Anomaly",
+  "rank": "legendary",
+  "types": [
+    "flying",
+    "normal"
+  ],
+  "stats": {
+    "hp": 88,
+    "atk": 136,
+    "def": 60,
+    "spa": 112,
+    "spd": 60,
+    "spe": 108
+  },
+  "passive": "sniper",
+  "kit": [
+    "glitch-sky-attack",
+    "water-gun-x128",
+    "corrupted-static",
+    "hyper-beam"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 137,
+  "height": 30,
+  "weight": 1590,
+  "color": "gray",
+  "flavor": "A legendary Kanto glitch entity encountered off Cinnabar Island. Corrupts memory buffers and duplicates item slot #6 by 128.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2011.png",
+  "icon": "assets/icons/2011.png",
+  "portrait": "assets/portraits/2011.png",
+  "pmdSheet": "assets/pmd/2011.png",
+  "pmdShinySheet": "assets/pmd-shiny/2011.png",
+  "spriteMeta": {
+    "w": 128,
+    "h": 1536,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 32,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          8,
+          8,
+          8,
+          8
+        ]
+      },
+      "idle": {
+        "y": 256,
+        "fw": 32,
+        "fh": 32,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          16,
+          12,
+          16,
+          12
+        ]
+      },
+      "attack": {
+        "y": 512,
+        "fw": 32,
+        "fh": 32,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          4,
+          5,
+          5,
+          6
+        ]
+      },
+      "hurt": {
+        "y": 768,
+        "fw": 32,
+        "fh": 32,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          5,
+          8
+        ]
+      },
+      "faint": {
+        "y": 1024,
+        "fw": 32,
+        "fh": 32,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          12,
+          24
+        ]
+      },
+      "charge": {
+        "y": 1280,
+        "fw": 32,
+        "fh": 32,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          6,
+          6,
+          6,
+          6
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Item #6 Overflow",
+    "type": "normal",
+    "cls": "special",
+    "desc": "MissingNo. overflows the battlefield buffer with corrupted cyan-crimson glitch shockwaves.",
+    "tint": 16724856,
+    "radius": 17,
+    "dmgMul": 5.5,
+    "dur": 2,
+    "knock": 10,
+    "status": "stun",
+    "vfx": {
+      "ringStyle": "Jagged",
+      "secondaryRingStyle": "Runes",
+      "color2": "#33ffff",
+      "particleShape": "Square",
+      "particleCount": 34
+    }
+  }
+}

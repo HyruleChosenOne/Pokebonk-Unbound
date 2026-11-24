@@ -1,0 +1,156 @@
+{
+  "id": 2013,
+  "key": "bad-egg",
+  "name": "Bad Egg",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Corrupted Relic",
+  "rank": "legendary",
+  "types": [
+    "ghost",
+    "dark"
+  ],
+  "stats": {
+    "hp": 118,
+    "atk": 96,
+    "def": 115,
+    "spa": 128,
+    "spd": 115,
+    "spe": 82
+  },
+  "passive": "phantom",
+  "kit": [
+    "hex-overflow",
+    "memory-leak",
+    "shadow-ball",
+    "dark-pulse"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 201,
+  "height": 6,
+  "weight": 999,
+  "color": "purple",
+  "flavor": "A dreaded checksum-failed Egg that never hatches — radiating forbidden hex anomalies and pulling foes into a memory leak.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2013.png",
+  "icon": "assets/icons/2013.png",
+  "portrait": "assets/portraits/2013.png",
+  "pmdSheet": "assets/pmd/2013.png",
+  "spriteMeta": {
+    "w": 704,
+    "h": 1688,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 40,
+        "n": 7,
+        "rows": 8,
+        "d": [
+          12,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "idle": {
+        "y": 320,
+        "fw": 24,
+        "fh": 32,
+        "n": 5,
+        "rows": 8,
+        "d": [
+          22,
+          6,
+          2,
+          6,
+          6
+        ]
+      },
+      "attack": {
+        "y": 576,
+        "fw": 64,
+        "fh": 64,
+        "n": 11,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          4,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 1088,
+        "fw": 32,
+        "fh": 48,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 1472,
+        "fw": 24,
+        "fh": 24,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 1496,
+        "fw": 24,
+        "fh": 24,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Save File Corruption",
+    "type": "ghost",
+    "cls": "special",
+    "desc": "Bad Egg fractures reality with a cascading checksum collapse that roots and crushes nearby foes.",
+    "tint": 8922879,
+    "radius": 16,
+    "dmgMul": 5.3,
+    "dur": 1.9,
+    "knock": 8,
+    "status": "root",
+    "vfx": {
+      "ringStyle": "Runes",
+      "secondaryRingStyle": "Jagged",
+      "color2": "#ff44cc",
+      "particleShape": "Wisp",
+      "particleCount": 30
+    }
+  }
+}

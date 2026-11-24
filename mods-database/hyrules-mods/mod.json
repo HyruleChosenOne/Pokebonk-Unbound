@@ -3,17 +3,10 @@
   "name": "Hyrule's Mods (QoL & Cheats Collection)",
   "version": "1.0.0",
   "author": "HyruleChosenOne",
-  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Custom Characters Enabler, Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
+  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
   "tags": ["qol", "collection", "enabler", "events", "p2p", "themes", "cheats", "unlocks"],
   "isHyruleCollection": true,
   "toolbarActions": [
-    {
-      "id": "hyrule-toggle-custom-chars",
-      "label": "Custom Characters Enabler",
-      "type": "hyrule-toggle",
-      "feature": "customCharacters",
-      "reload": true
-    },
     {
       "id": "hyrule-toggle-events",
       "label": "Events Enabler (Choose-Mode Hub)",
@@ -95,8 +88,8 @@
         { "id": "cheat-exp-rich", "label": "+50,000 Expedition Coins, +500 Seals & Mats", "type": "profile-mutate", "mutation": { "expedition": { "addCoins": 50000, "addSeals": 500, "addMats": { "scrap": 500, "shard": 250, "core": 100 } } }, "reload": true },
         { "type": "separator" },
         { "id": "unlock-vanilla-roster", "label": "Unlock Kanto & Johto (#1-#251) + Biomes", "type": "profile-mutate", "mutation": { "unlockSpeciesRange": [1, 251], "rangeIncludeLeague": true, "unlockAllVanillaBiomes": true, "researchLevel": 100 }, "reload": true },
-        { "id": "unlock-everything", "label": "Unlock All Pokémon (#1-#1025 + Custom) & Biomes", "type": "profile-mutate", "mutation": { "unlockSpeciesRange": [1, 1025], "rangeIncludeLeague": true, "unlockSpecies": [2001, 2002, 2003, 2004, 2005, 2010], "unlockAllVanillaBiomes": true, "researchLevel": 100 }, "reload": true },
-        { "id": "unlock-all-shinies", "label": "Unlock All Shinies & Classic Forms", "type": "profile-mutate", "mutation": { "unlockShiniesRange": [1, 1025], "unlockShinies": [2001, 2002, 2003, 2004, 2005, 2010] }, "reload": true },
+        { "id": "unlock-everything", "label": "Unlock All Pokémon (#1-#1025 + Custom) & Biomes", "type": "profile-mutate", "mutation": { "unlockSpeciesRange": [1, 1025], "rangeIncludeLeague": true, "unlockSpecies": [2001, 2002, 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023], "unlockAllVanillaBiomes": true, "researchLevel": 100 }, "reload": true },
+        { "id": "unlock-all-shinies", "label": "Unlock All Shinies & Classic Forms", "type": "profile-mutate", "mutation": { "unlockShiniesRange": [1, 1025], "unlockShinies": [2001, 2002, 2003, 2004, 2005, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023] }, "reload": true },
         { "type": "separator" },
         { "id": "reset-offline-save", "label": "Reset Current Offline Profile", "type": "profile-mutate", "confirm": "Reset your active Offline Mode profile back to a fresh start? Online Mode and other offline profiles are never touched.", "mutation": { "resetProfile": true }, "reload": true }
       ]

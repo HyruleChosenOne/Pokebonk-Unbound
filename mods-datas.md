@@ -10,9 +10,9 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 
 | Mod ID | Name | Category | Version | Author | Summary |
 | --- | --- | --- | --- | --- | --- |
-| `custom-characters-pack` | [Custom Characters & Custom Attacks Pack](#custom-characters-pack) | Characters | `v1.0.0` | HyruleChosenOne | 5 playable Mega, Primal, and Battle Bond forms with 10 signature custom attacks, 5 Ultimates, and drop-in character support. |
+| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | Characters | `v1.1.0` | HyruleChosenOne | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
 | `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | Levels | `v1.0.0` | HyruleChosenOne | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
-| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | Quality of Life | `v1.0.0` | HyruleChosenOne | Essential Offline Mode enablers, live main menu customization, P2P multiplayer, and optional solo cheats. |
+| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | Quality of Life | `v1.0.0` | HyruleChosenOne | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
 | `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | Characters | `v1.0.0` | HyruleChosenOne | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
 | `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | Characters | `v1.0.0` | HyruleChosenOne | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
 | `pokemon-audio-pack` | [Pokémon Soundtrack Audio Pack (HGSS & FRLG)](#pokemon-audio-pack) | Audio | `v1.0.0` | HyruleChosenOne | 17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs. |
@@ -22,25 +22,26 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 ## Mod Details
 
 <a id="custom-characters-pack"></a>
-### Custom Characters & Custom Attacks Pack
+### Custom & Non-Dexed Pokémon Pack (18 Fighters)
 
 > Preview image slot: `mods-database/custom-characters-pack/preview.png` *(coming soon)*
 
 - **ID**: `custom-characters-pack`
 - **Category**: Characters
-- **Version**: `v1.0.0`
+- **Version**: `v1.1.0`
 - **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode + Hyrule's Mods (Custom Characters Enabler)
+- **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
-- **Tags**: `custom-characters`, `custom-attacks`, `custom-items`, `forms`, `offline-only`
+- **Tags**: `custom-characters`, `non-dexed`, `missingno`, `shadow-lugia`, `primal-dialga`, `beta-pokemon`, `custom-attacks`, `custom-vfx`, `custom-items`, `forms`
 
-Adds 5 iconic special forms into the Custom playable roster (#2001-#2005): Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja. Every fighter comes with tailored stats, animated sprites, 2 dedicated signature custom attacks (10 total), a custom Ultimate, and 3 custom Pokéball pickup items. Also supports dropping your own standalone character .json and .png files into ./characters/.
+Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.
 
 **Highlights:**
-- 5 playable special forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja
-- 10 signature custom attacks including Delta Dragon Ascent, Precipice Blades, Origin Pulse, Psystrike, and Bond Water Shuriken
-- 5 custom signature Ultimates and 3 custom Pokéball pickup items
-- Drop-in ./characters/ folder support for adding your own custom fighters without creating a separate mod
+- Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)
+- Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)
+- Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja
+- 37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items
+- Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)
 
 
 <a id="gen3-9-regions-levels"></a>
@@ -81,10 +82,9 @@ Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's
 - **Info File**: [`mods-database/hyrules-mods/info.json`](mods-database/hyrules-mods/info.json)
 - **Tags**: `qol`, `collection`, `enabler`, `events`, `p2p`, `themes`, `cheats`, `unlocks`
 
-All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Enables the Custom Characters region (2000-9999), restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.
+All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.
 
 **Highlights:**
-- Custom Characters Enabler for non-standard character packs (#2000-#9999)
 - Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub
 - Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining
 - Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)
@@ -100,7 +100,7 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **Category**: Characters
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode + Hyrule's Mods (Custom Characters Enabler)
+- **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
 - **Tags**: `character`, `zelda`, `minish-cap`, `custom-attacks`, `custom-vfx`, `custom-items`
 

@@ -1,0 +1,161 @@
+{
+  "id": 2017,
+  "key": "eternal-floette",
+  "name": "Eternal Flower Floette",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Ancient Blossom",
+  "rank": "legendary",
+  "types": [
+    "fairy"
+  ],
+  "stats": {
+    "hp": 82,
+    "atk": 70,
+    "def": 75,
+    "spa": 138,
+    "spd": 132,
+    "spe": 104
+  },
+  "passive": "natural-cure",
+  "kit": [
+    "light-of-ruin",
+    "eternal-petals",
+    "moonblast",
+    "dazzling-gleam"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 670,
+  "height": 2,
+  "weight": 9,
+  "color": "red",
+  "flavor": "AZ's immortal partner wielding an extinct crimson flower and the unreleased signature devastation beam Light of Ruin.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2017.png",
+  "icon": "assets/icons/2017.png",
+  "portrait": "assets/portraits/2017.png",
+  "pmdSheet": "assets/pmd/2017.png",
+  "spriteMeta": {
+    "w": 1008,
+    "h": 2656,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 64,
+        "n": 8,
+        "rows": 8,
+        "d": [
+          10,
+          10,
+          6,
+          6,
+          10,
+          10,
+          6,
+          6
+        ]
+      },
+      "idle": {
+        "y": 512,
+        "fw": 32,
+        "fh": 64,
+        "n": 8,
+        "rows": 8,
+        "d": [
+          10,
+          8,
+          8,
+          8,
+          10,
+          8,
+          8,
+          8
+        ]
+      },
+      "attack": {
+        "y": 1024,
+        "fw": 72,
+        "fh": 80,
+        "n": 14,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          6,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 1664,
+        "fw": 48,
+        "fh": 64,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 2176,
+        "fw": 24,
+        "fh": 32,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 2208,
+        "fw": 32,
+        "fh": 56,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Ultimate Weapon Bloom",
+    "type": "fairy",
+    "cls": "special",
+    "desc": "Eternal Flower Floette opens its crimson blossom to unleash a towering scarlet-pink radiance across the arena.",
+    "tint": 16724856,
+    "radius": 17,
+    "dmgMul": 5.5,
+    "dur": 2,
+    "knock": 9,
+    "vfx": {
+      "ringStyle": "Petals",
+      "secondaryRingStyle": "Runes",
+      "color2": "#ff99cc",
+      "particleShape": "PixPetal",
+      "particleCount": 36
+    }
+  }
+}

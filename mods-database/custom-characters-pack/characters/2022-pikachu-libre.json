@@ -1,0 +1,153 @@
+{
+  "id": 2022,
+  "key": "pikachu-libre",
+  "name": "Pikachu Libre",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Masked Luchadora",
+  "rank": "rare",
+  "types": [
+    "electric",
+    "fighting"
+  ],
+  "stats": {
+    "hp": 82,
+    "atk": 124,
+    "def": 80,
+    "spa": 96,
+    "spd": 80,
+    "spe": 132
+  },
+  "passive": "iron-fist",
+  "kit": [
+    "flying-press-libre",
+    "volt-lucha-dash",
+    "thunderbolt",
+    "brick-break"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 25,
+  "height": 4,
+  "weight": 60,
+  "color": "yellow",
+  "flavor": "The champion masked Cosplay Pikachu of ORAS Contest Spectaculars and Pokkén Tournament, diving in with electrifying Flying Press combos.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2022.png",
+  "icon": "assets/icons/2022.png",
+  "portrait": "assets/portraits/2022.png",
+  "pmdSheet": "assets/pmd/2022.png",
+  "spriteMeta": {
+    "w": 800,
+    "h": 2280,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 40,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          8,
+          10,
+          8,
+          10
+        ]
+      },
+      "idle": {
+        "y": 320,
+        "fw": 40,
+        "fh": 56,
+        "n": 6,
+        "rows": 8,
+        "d": [
+          40,
+          2,
+          3,
+          3,
+          3,
+          2
+        ]
+      },
+      "attack": {
+        "y": 768,
+        "fw": 80,
+        "fh": 80,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          4,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          4
+        ]
+      },
+      "hurt": {
+        "y": 1408,
+        "fw": 48,
+        "fh": 64,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 1920,
+        "fw": 32,
+        "fh": 40,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 1960,
+        "fw": 40,
+        "fh": 40,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Electrifying Flying Press",
+    "type": "fighting",
+    "cls": "physical",
+    "desc": "Pikachu Libre leaps skyward and slams down in a blazing gold-crimson thunder ring.",
+    "tint": 16766720,
+    "radius": 15,
+    "dmgMul": 5.2,
+    "dur": 1.8,
+    "knock": 10,
+    "status": "paralysis",
+    "vfx": {
+      "ringStyle": "Jagged",
+      "secondaryRingStyle": "Flames",
+      "color2": "#ff3b3b",
+      "particleShape": "PixBolt",
+      "particleCount": 30
+    }
+  }
+}

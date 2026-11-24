@@ -1,0 +1,150 @@
+{
+  "id": 2020,
+  "key": "purple-kecleon",
+  "name": "Purple Kecleon",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "Dungeon Shopkeeper",
+  "rank": "rare",
+  "types": [
+    "normal",
+    "dark"
+  ],
+  "stats": {
+    "hp": 96,
+    "atk": 132,
+    "def": 94,
+    "spa": 88,
+    "spd": 120,
+    "spe": 134
+  },
+  "passive": "technician",
+  "kit": [
+    "thiefs-retribution",
+    "kecleon-outrage",
+    "slash",
+    "quick-attack"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 352,
+  "height": 10,
+  "weight": 220,
+  "color": "purple",
+  "flavor": "The legendary Mystery Dungeon Kecleon Shop brother — calm merchant by day, terrifying level-100 pursuer if you steal from his mat.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2020.png",
+  "icon": "assets/icons/2020.png",
+  "portrait": "assets/portraits/2020.png",
+  "pmdSheet": "assets/pmd/2020.png",
+  "spriteMeta": {
+    "w": 640,
+    "h": 2208,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 32,
+        "fh": 40,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          8,
+          10,
+          8,
+          10
+        ]
+      },
+      "idle": {
+        "y": 320,
+        "fw": 32,
+        "fh": 48,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          40,
+          2,
+          6,
+          2
+        ]
+      },
+      "attack": {
+        "y": 704,
+        "fw": 64,
+        "fh": 80,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          6,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 1344,
+        "fw": 48,
+        "fh": 64,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 1856,
+        "fw": 32,
+        "fh": 32,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 1888,
+        "fw": 32,
+        "fh": 40,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Pay For Your Goods!",
+    "type": "dark",
+    "cls": "physical",
+    "desc": "Purple Kecleon goes full Mystery Dungeon Shopkeeper mode, shredding every thief in a violet-gold blitz.",
+    "tint": 11819775,
+    "radius": 15,
+    "dmgMul": 5.3,
+    "dur": 1.8,
+    "knock": 9,
+    "vfx": {
+      "ringStyle": "Jagged",
+      "secondaryRingStyle": "Runes",
+      "color2": "#ffd700",
+      "particleShape": "PixSlash",
+      "particleCount": 28
+    }
+  }
+}

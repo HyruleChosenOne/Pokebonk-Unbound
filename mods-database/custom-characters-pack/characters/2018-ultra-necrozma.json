@@ -1,0 +1,153 @@
+{
+  "id": 2018,
+  "key": "ultra-necrozma",
+  "name": "Ultra Necrozma",
+  "gen": 99,
+  "start": true,
+  "unlock": false,
+  "role": "The Blinding One",
+  "rank": "legendary",
+  "types": [
+    "psychic",
+    "dragon"
+  ],
+  "stats": {
+    "hp": 100,
+    "atk": 167,
+    "def": 97,
+    "spa": 167,
+    "spd": 97,
+    "spe": 129
+  },
+  "passive": "hustle",
+  "kit": [
+    "prismatic-photon-geyser",
+    "radiant-laser-nova",
+    "dragon-pulse",
+    "psychic"
+  ],
+  "overrideLearnset": true,
+  "cryFrom": 800,
+  "height": 75,
+  "weight": 2300,
+  "color": "yellow",
+  "flavor": "True radiant dragon form of Necrozma blazing with stolen Ultra Space light capable of incinerating entire worlds.",
+  "overrideSprite": true,
+  "sprite": "assets/front/2018.png",
+  "icon": "assets/icons/2018.png",
+  "portrait": "assets/portraits/2018.png",
+  "pmdSheet": "assets/pmd/2018.png",
+  "spriteMeta": {
+    "w": 1320,
+    "h": 4384,
+    "anims": {
+      "walk": {
+        "y": 0,
+        "fw": 72,
+        "fh": 104,
+        "n": 4,
+        "rows": 8,
+        "d": [
+          8,
+          12,
+          8,
+          12
+        ]
+      },
+      "idle": {
+        "y": 832,
+        "fw": 72,
+        "fh": 96,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          40,
+          30
+        ]
+      },
+      "attack": {
+        "y": 1600,
+        "fw": 88,
+        "fh": 128,
+        "n": 15,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "hurt": {
+        "y": 2624,
+        "fw": 72,
+        "fh": 112,
+        "n": 2,
+        "rows": 8,
+        "d": [
+          2,
+          8
+        ]
+      },
+      "faint": {
+        "y": 3520,
+        "fw": 72,
+        "fh": 96,
+        "n": 2,
+        "rows": 1,
+        "d": [
+          30,
+          35
+        ]
+      },
+      "charge": {
+        "y": 3616,
+        "fw": 72,
+        "fh": 96,
+        "n": 10,
+        "rows": 8,
+        "d": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "customUlt": {
+    "name": "Light That Burns the Sky",
+    "type": "psychic",
+    "cls": "special",
+    "desc": "Ultra Necrozma condenses blazing golden prism light into a blinding supernova.",
+    "tint": 16771664,
+    "radius": 18,
+    "dmgMul": 5.8,
+    "dur": 2.1,
+    "knock": 11,
+    "vfx": {
+      "ringStyle": "Flames",
+      "secondaryRingStyle": "Ripple",
+      "color2": "#ffffff",
+      "particleShape": "PixStar",
+      "particleCount": 38
+    }
+  }
+}
