@@ -2,55 +2,33 @@
 
 PokéBonk Unbound releases ship cleanly without bundled mods. Every mod below is 100% optional, runs strictly in **Offline Mode**, and can be installed with 1 click inside **Unbound Settings -> Mod Browser**.
 
-Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manifest and an `info.json` showcase file (providing its description, highlights, category, and preview image slot for the in-app Mod Browser).
+Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manifest, an `info.json` showcase file, and a full-sized thumbnail preview image for the in-app Mod Browser.
 
 ---
 
 ## Quick Overview
 
-| Mod ID | Name | Category | Version | Author | Summary |
-| --- | --- | --- | --- | --- | --- |
-| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | Characters | `v1.1.0` | HyruleChosenOne | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | Levels | `v1.0.0` | HyruleChosenOne | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
-| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | Quality of Life | `v1.0.0` | HyruleChosenOne | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | Characters | `v1.0.0` | HyruleChosenOne | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | Characters | `v1.0.0` | HyruleChosenOne | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
-| `pokemon-audio-pack` | [Pokémon Soundtrack Audio Pack (HGSS & FRLG)](#pokemon-audio-pack) | Audio | `v1.0.0` | HyruleChosenOne | 17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs. |
+| Mod ID | Name | Featured | Category | Size | Version | Summary |
+| --- | --- | --- | --- | --- | --- | --- |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Featured** | Levels | 1.03 MB | `v1.0.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
+| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | **Featured** | Quality of Life | 1.07 MB | `v1.0.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Featured** | Characters | 1.08 MB | `v1.0.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
+| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | — | Characters | 5.66 MB | `v1.1.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | — | Characters | 1.18 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
+| `pokemon-audio-pack` | [Pokémon Soundtrack Audio Pack (HGSS & FRLG)](#pokemon-audio-pack) | — | Audio | 28.87 MB | `v1.0.0` | 17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs. |
 
 ---
 
 ## Mod Details
 
-<a id="custom-characters-pack"></a>
-### Custom & Non-Dexed Pokémon Pack (18 Fighters)
-
-> Preview image slot: `mods-database/custom-characters-pack/preview.png` *(coming soon)*
-
-- **ID**: `custom-characters-pack`
-- **Category**: Characters
-- **Version**: `v1.1.0`
-- **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode (Mod Engine ON)
-- **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
-- **Tags**: `custom-characters`, `non-dexed`, `missingno`, `shadow-lugia`, `primal-dialga`, `beta-pokemon`, `custom-attacks`, `custom-vfx`, `custom-items`, `forms`
-
-Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.
-
-**Highlights:**
-- Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)
-- Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)
-- Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja
-- 37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items
-- Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)
-
-
 <a id="gen3-9-regions-levels"></a>
-### Gen 3-9 Regions & Levels Pack (14 Unique Maps)
+### Gen 3-9 Regions & Levels Pack (14 Unique Maps) *(Featured)*
 
-> Preview image slot: `mods-database/gen3-9-regions-levels/preview.png` *(coming soon)*
+![Gen 3-9 Regions & Levels Pack (14 Unique Maps)](mods-database/gen3-9-regions-levels/preview.png)
 
 - **ID**: `gen3-9-regions-levels`
-- **Category**: Levels
+- **Category**: Levels (**Featured**)
+- **Size**: 1.03 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
@@ -70,12 +48,13 @@ Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's
 
 
 <a id="hyrules-mods"></a>
-### Hyrule's Mods (QoL & Cheats Collection)
+### Hyrule's Mods (QoL & Cheats Collection) *(Featured)*
 
-> Preview image slot: `mods-database/hyrules-mods/preview.png` *(coming soon)*
+![Hyrule's Mods (QoL & Cheats Collection)](mods-database/hyrules-mods/preview.png)
 
 - **ID**: `hyrules-mods`
-- **Category**: Quality of Life
+- **Category**: Quality of Life (**Featured**)
+- **Size**: 1.07 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -91,36 +70,14 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, and Trainer Save Utilities)
 
 
-<a id="minish-cap-link"></a>
-### Link (The Minish Cap) — Playable Character & Custom Attacks
-
-> Preview image slot: `mods-database/minish-cap-link/preview.png` *(coming soon)*
-
-- **ID**: `minish-cap-link`
-- **Category**: Characters
-- **Version**: `v1.0.0`
-- **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode (Mod Engine ON)
-- **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
-- **Tags**: `character`, `zelda`, `minish-cap`, `custom-attacks`, `custom-vfx`, `custom-items`
-
-Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully animated playable fighter in the Custom region (#2010). Features complete 8-direction walk, idle, attack, and hurt spritesheets, a Four Sword Red shiny variant, 5 signature Minish Cap custom attacks built with the Core Custom VFX engine, a custom Four Sword Hurricane Spin Ultimate, and 2 Hyrule Pokéball pickup items.
-
-**Highlights:**
-- Full 8-direction GBA-style animated spritesheet plus Four Sword Red shiny variant
-- 5 custom attacks: Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and Flame Lantern
-- 5 custom GPU VFX presets showcasing dual-color slash arcs, returning crescents, gale waves, magic beams, and flame rings
-- Custom Ultimate: Four Sword Hurricane Spin with rune/petal shockwaves and slash bursts
-- 2 custom Pokéball items: Gold Kinstone and Pegasus Boots
-
-
 <a id="national-dex-gen3-9"></a>
-### National Dex Expansion (Gen 3-9: Hoenn to Paldea)
+### National Dex Expansion (Gen 3-9: Hoenn to Paldea) *(Featured)*
 
-> Preview image slot: `mods-database/national-dex-gen3-9/preview.png` *(coming soon)*
+![National Dex Expansion (Gen 3-9: Hoenn to Paldea)](mods-database/national-dex-gen3-9/preview.png)
 
 - **ID**: `national-dex-gen3-9`
-- **Category**: Characters
+- **Category**: Characters (**Featured**)
+- **Size**: 1.08 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -137,13 +94,62 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 - Characters start locked by default for progression, with per-generation unlock tools in Unbound Settings
 
 
+<a id="custom-characters-pack"></a>
+### Custom & Non-Dexed Pokémon Pack (18 Fighters)
+
+![Custom & Non-Dexed Pokémon Pack (18 Fighters)](mods-database/custom-characters-pack/preview.png)
+
+- **ID**: `custom-characters-pack`
+- **Category**: Characters
+- **Size**: 5.66 MB (87 files)
+- **Version**: `v1.1.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON)
+- **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
+- **Tags**: `custom-characters`, `non-dexed`, `missingno`, `shadow-lugia`, `primal-dialga`, `beta-pokemon`, `custom-attacks`, `custom-vfx`, `custom-items`, `forms`
+
+Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.
+
+**Highlights:**
+- Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)
+- Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)
+- Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja
+- 37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items
+- Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)
+
+
+<a id="minish-cap-link"></a>
+### Link (The Minish Cap) — Playable Character & Custom Attacks
+
+![Link (The Minish Cap) — Playable Character & Custom Attacks](mods-database/minish-cap-link/preview.png)
+
+- **ID**: `minish-cap-link`
+- **Category**: Characters
+- **Size**: 1.18 MB (8 files)
+- **Version**: `v1.0.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON)
+- **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
+- **Tags**: `character`, `zelda`, `minish-cap`, `custom-attacks`, `custom-vfx`, `custom-items`
+
+Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully animated playable fighter in the Custom region (#2010). Features complete 8-direction walk, idle, attack, and hurt spritesheets, a Four Sword Red shiny variant, 5 signature Minish Cap custom attacks built with the Core Custom VFX engine, a custom Four Sword Hurricane Spin Ultimate, and 2 Hyrule Pokéball pickup items.
+
+**Highlights:**
+- Full 8-direction GBA-style animated spritesheet plus Four Sword Red shiny variant
+- 5 custom attacks: Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and Flame Lantern
+- 5 custom GPU VFX presets showcasing dual-color slash arcs, returning crescents, gale waves, magic beams, and flame rings
+- Custom Ultimate: Four Sword Hurricane Spin with rune/petal shockwaves and slash bursts
+- 2 custom Pokéball items: Gold Kinstone and Pegasus Boots
+
+
 <a id="pokemon-audio-pack"></a>
 ### Pokémon Soundtrack Audio Pack (HGSS & FRLG)
 
-> Preview image slot: `mods-database/pokemon-audio-pack/preview.png` *(coming soon)*
+![Pokémon Soundtrack Audio Pack (HGSS & FRLG)](mods-database/pokemon-audio-pack/preview.png)
 
 - **ID**: `pokemon-audio-pack`
 - **Category**: Audio
+- **Size**: 28.87 MB (24 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -163,7 +169,7 @@ Additive Pokémon soundtrack and sound effects mod curated from the HeartGold/So
 
 ## Installing Mods
 
-1. Open **Unbound Settings** from the top toolbar (`Unbound Settings -> Open Unbound Settings...`).
+1. Open **Unbound Settings** from the top toolbar (Desktop) or floating **Unbound** button (Android).
 2. Switch to the **Mod Browser** tab.
 3. Click **Install** on any mod you want, then enable the **Offline Mod Engine** and toggle the mod on in **Installed Mods**.
 

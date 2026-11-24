@@ -1,14 +1,149 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "repository": "HyruleChosenOne/Pokebonk-Unbound",
-  "updatedAt": "2026-11-24T20:53:11.791Z",
+  "releaseTag": "mods-database",
+  "updatedAt": "2026-11-24T22:10:57.581Z",
   "mods": [
+    {
+      "id": "gen3-9-regions-levels",
+      "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "category": "Levels",
+      "featured": true,
+      "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
+      "description": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
+      "fullDescription": "Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features its own terrain relief, color palette, weather pool, sanctuary arena, regional encounters, and a dedicated 3D centerpiece landmark. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).",
+      "highlights": [
+        "Hoenn: Petalburg Canopy & Mt. Chimney Caldera",
+        "Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau",
+        "Unova: Desert Resort Relic Castle & Dragonspiral Tower",
+        "Kalos: Azure Bay Sea Arch & Reflection Cave Prisms",
+        "Alola: Melemele Tapu Ruins & Wela Volcano Fire Altar",
+        "Galar: Galar Wild Area Dynamax Den & Crown Tundra Temple",
+        "Paldea: Asado Desert Titan Mesa & Area Zero Terastal Spire"
+      ],
+      "requirements": "Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)",
+      "tags": [
+        "levels",
+        "regions",
+        "maps",
+        "gen3",
+        "gen4",
+        "gen5",
+        "gen6",
+        "gen7",
+        "gen8",
+        "gen9"
+      ],
+      "infoFile": "info.json",
+      "image": "preview.png",
+      "hasImage": true,
+      "sizeBytes": 1079335,
+      "sizeFormatted": "1.03 MB",
+      "archiveSizeBytes": 1034903,
+      "fileCount": 3,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels.zip",
+      "path": "mods-database/gen3-9-regions-levels",
+      "files": [
+        "info.json",
+        "mod.json",
+        "preview.png"
+      ]
+    },
+    {
+      "id": "hyrules-mods",
+      "name": "Hyrule's Mods (QoL & Cheats Collection)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "category": "Quality of Life",
+      "featured": true,
+      "tagline": "Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats.",
+      "description": "Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats.",
+      "fullDescription": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.",
+      "highlights": [
+        "Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub",
+        "Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining",
+        "Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)",
+        "Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, and Trainer Save Utilities)"
+      ],
+      "requirements": "Offline Mode (Mod Engine ON)",
+      "tags": [
+        "qol",
+        "collection",
+        "enabler",
+        "events",
+        "p2p",
+        "themes",
+        "cheats",
+        "unlocks"
+      ],
+      "infoFile": "info.json",
+      "image": "preview.png",
+      "hasImage": true,
+      "sizeBytes": 1127186,
+      "sizeFormatted": "1.07 MB",
+      "archiveSizeBytes": 1121027,
+      "fileCount": 3,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/hyrules-mods.zip",
+      "path": "mods-database/hyrules-mods",
+      "files": [
+        "info.json",
+        "mod.json",
+        "preview.png"
+      ]
+    },
+    {
+      "id": "national-dex-gen3-9",
+      "name": "National Dex Expansion (Gen 3-9: Hoenn to Paldea)",
+      "version": "1.0.0",
+      "author": "HyruleChosenOne",
+      "category": "Characters",
+      "featured": true,
+      "tagline": "Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates.",
+      "description": "Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates.",
+      "fullDescription": "Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea (#252-#1025). Adds 419 playable base evolution families, 774 species with animated sprites, 72 custom Gen 3-9 attacks across all 18 types, and 24 custom signature Ultimates for iconic starters, pseudos, and legendaries. Pure Pokémon and attacks pack with zero bundled levels; pair with Gen 3-9 Regions & Levels Pack for regional maps.",
+      "highlights": [
+        "Expands the Pokédex cap from #251 to #1025 across all 7 Gen 3-9 regions",
+        "419 playable base families (all starters, fan favorites, Paradox Pokémon, and legendaries)",
+        "72 custom Gen 3-9 attacks across all 18 types rendered via PokéBonk's native GPU VFX engine",
+        "24 custom Ultimates (Rayquaza, Lucario, Garchomp, Greninja, Zacian, Koraidon, Miraidon, Raging Bolt, Terapagos, and more)",
+        "Characters start locked by default for progression, with per-generation unlock tools in Unbound Settings"
+      ],
+      "requirements": "Offline Mode (Mod Engine ON)",
+      "tags": [
+        "gen3",
+        "gen4",
+        "gen5",
+        "gen6",
+        "gen7",
+        "gen8",
+        "gen9",
+        "custom-moves",
+        "national-dex"
+      ],
+      "infoFile": "info.json",
+      "image": "preview.png",
+      "hasImage": true,
+      "sizeBytes": 1132584,
+      "sizeFormatted": "1.08 MB",
+      "archiveSizeBytes": 948202,
+      "fileCount": 3,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/national-dex-gen3-9.zip",
+      "path": "mods-database/national-dex-gen3-9",
+      "files": [
+        "info.json",
+        "mod.json",
+        "preview.png"
+      ]
+    },
     {
       "id": "custom-characters-pack",
       "name": "Custom & Non-Dexed Pokémon Pack (18 Fighters)",
       "version": "1.1.0",
       "author": "HyruleChosenOne",
       "category": "Characters",
+      "featured": false,
       "tagline": "18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more.",
       "description": "18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more.",
       "fullDescription": "Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.",
@@ -34,7 +169,12 @@
       ],
       "infoFile": "info.json",
       "image": "preview.png",
-      "hasImage": false,
+      "hasImage": true,
+      "sizeBytes": 5936780,
+      "sizeFormatted": "5.66 MB",
+      "archiveSizeBytes": 5287785,
+      "fileCount": 87,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack.zip",
       "path": "mods-database/custom-characters-pack",
       "files": [
         "assets/front/2011.png",
@@ -122,82 +262,8 @@
         "characters/2023-hakogame.json",
         "characters/README-CUSTOM-CHARACTERS.txt",
         "info.json",
-        "mod.json"
-      ]
-    },
-    {
-      "id": "gen3-9-regions-levels",
-      "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-      "version": "1.0.0",
-      "author": "HyruleChosenOne",
-      "category": "Levels",
-      "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
-      "description": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
-      "fullDescription": "Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features its own terrain relief, color palette, weather pool, sanctuary arena, regional encounters, and a dedicated 3D centerpiece landmark. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).",
-      "highlights": [
-        "Hoenn: Petalburg Canopy & Mt. Chimney Caldera",
-        "Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau",
-        "Unova: Desert Resort Relic Castle & Dragonspiral Tower",
-        "Kalos: Azure Bay Sea Arch & Reflection Cave Prisms",
-        "Alola: Melemele Tapu Ruins & Wela Volcano Fire Altar",
-        "Galar: Galar Wild Area Dynamax Den & Crown Tundra Temple",
-        "Paldea: Asado Desert Titan Mesa & Area Zero Terastal Spire"
-      ],
-      "requirements": "Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)",
-      "tags": [
-        "levels",
-        "regions",
-        "maps",
-        "gen3",
-        "gen4",
-        "gen5",
-        "gen6",
-        "gen7",
-        "gen8",
-        "gen9"
-      ],
-      "infoFile": "info.json",
-      "image": "preview.png",
-      "hasImage": false,
-      "path": "mods-database/gen3-9-regions-levels",
-      "files": [
-        "info.json",
-        "mod.json"
-      ]
-    },
-    {
-      "id": "hyrules-mods",
-      "name": "Hyrule's Mods (QoL & Cheats Collection)",
-      "version": "1.0.0",
-      "author": "HyruleChosenOne",
-      "category": "Quality of Life",
-      "tagline": "Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats.",
-      "description": "Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats.",
-      "fullDescription": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.",
-      "highlights": [
-        "Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub",
-        "Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining",
-        "Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)",
-        "Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, and Trainer Save Utilities)"
-      ],
-      "requirements": "Offline Mode (Mod Engine ON)",
-      "tags": [
-        "qol",
-        "collection",
-        "enabler",
-        "events",
-        "p2p",
-        "themes",
-        "cheats",
-        "unlocks"
-      ],
-      "infoFile": "info.json",
-      "image": "preview.png",
-      "hasImage": false,
-      "path": "mods-database/hyrules-mods",
-      "files": [
-        "info.json",
-        "mod.json"
+        "mod.json",
+        "preview.png"
       ]
     },
     {
@@ -206,6 +272,7 @@
       "version": "1.0.0",
       "author": "HyruleChosenOne",
       "category": "Characters",
+      "featured": false,
       "tagline": "Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate.",
       "description": "Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate.",
       "fullDescription": "Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully animated playable fighter in the Custom region (#2010). Features complete 8-direction walk, idle, attack, and hurt spritesheets, a Four Sword Red shiny variant, 5 signature Minish Cap custom attacks built with the Core Custom VFX engine, a custom Four Sword Hurricane Spin Ultimate, and 2 Hyrule Pokéball pickup items.",
@@ -227,7 +294,12 @@
       ],
       "infoFile": "info.json",
       "image": "preview.png",
-      "hasImage": false,
+      "hasImage": true,
+      "sizeBytes": 1237253,
+      "sizeFormatted": "1.18 MB",
+      "archiveSizeBytes": 1220348,
+      "fileCount": 8,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link.zip",
       "path": "mods-database/minish-cap-link",
       "files": [
         "characters/minish-link-front.png",
@@ -236,44 +308,8 @@
         "characters/minish-link-portrait.png",
         "characters/minish-link-shiny.png",
         "info.json",
-        "mod.json"
-      ]
-    },
-    {
-      "id": "national-dex-gen3-9",
-      "name": "National Dex Expansion (Gen 3-9: Hoenn to Paldea)",
-      "version": "1.0.0",
-      "author": "HyruleChosenOne",
-      "category": "Characters",
-      "tagline": "Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates.",
-      "description": "Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates.",
-      "fullDescription": "Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea (#252-#1025). Adds 419 playable base evolution families, 774 species with animated sprites, 72 custom Gen 3-9 attacks across all 18 types, and 24 custom signature Ultimates for iconic starters, pseudos, and legendaries. Pure Pokémon and attacks pack with zero bundled levels; pair with Gen 3-9 Regions & Levels Pack for regional maps.",
-      "highlights": [
-        "Expands the Pokédex cap from #251 to #1025 across all 7 Gen 3-9 regions",
-        "419 playable base families (all starters, fan favorites, Paradox Pokémon, and legendaries)",
-        "72 custom Gen 3-9 attacks across all 18 types rendered via PokéBonk's native GPU VFX engine",
-        "24 custom Ultimates (Rayquaza, Lucario, Garchomp, Greninja, Zacian, Koraidon, Miraidon, Raging Bolt, Terapagos, and more)",
-        "Characters start locked by default for progression, with per-generation unlock tools in Unbound Settings"
-      ],
-      "requirements": "Offline Mode (Mod Engine ON)",
-      "tags": [
-        "gen3",
-        "gen4",
-        "gen5",
-        "gen6",
-        "gen7",
-        "gen8",
-        "gen9",
-        "custom-moves",
-        "national-dex"
-      ],
-      "infoFile": "info.json",
-      "image": "preview.png",
-      "hasImage": false,
-      "path": "mods-database/national-dex-gen3-9",
-      "files": [
-        "info.json",
-        "mod.json"
+        "mod.json",
+        "preview.png"
       ]
     },
     {
@@ -282,6 +318,7 @@
       "version": "1.0.0",
       "author": "HyruleChosenOne",
       "category": "Audio",
+      "featured": false,
       "tagline": "17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs.",
       "description": "17 curated HeartGold/SoulSilver and FireRed/LeafGreen music tracks plus 4 iconic SFX added without replacing vanilla songs.",
       "fullDescription": "Additive Pokémon soundtrack and sound effects mod curated from the HeartGold/SoulSilver and FireRed/LeafGreen soundtracks. Registers 3 peaceful menu themes, 8 high-energy wild/trainer/gym battle themes into the in-game music rotation, 6 legendary/champion boss themes into the boss pool, and 4 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.",
@@ -303,7 +340,12 @@
       ],
       "infoFile": "info.json",
       "image": "preview.png",
-      "hasImage": false,
+      "hasImage": true,
+      "sizeBytes": 30275682,
+      "sizeFormatted": "28.87 MB",
+      "archiveSizeBytes": 30163758,
+      "fileCount": 24,
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/pokemon-audio-pack.zip",
       "path": "mods-database/pokemon-audio-pack",
       "files": [
         "audio/music/frlg-champion.ogg",
@@ -328,7 +370,8 @@
         "audio/sfx/pkmn-item-get.ogg",
         "audio/sfx/pkmn-level-up.ogg",
         "info.json",
-        "mod.json"
+        "mod.json",
+        "preview.png"
       ]
     }
   ]

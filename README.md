@@ -3,24 +3,29 @@
 </p>
 
 <p align="center">
-  Cross-platform desktop client for <a href="https://pokebonk.com/">PokéBonk</a> (Windows and Linux / SteamOS) with isolated Online Mode, self-contained Offline Mode, local build versioning, multi-profile saves, dynamic mod settings, in-app updates, and an offline modding engine.
+  Cross-platform client for <a href="https://pokebonk.com/">PokéBonk</a> (Windows, Linux / SteamOS, and Android) with isolated Online Mode, self-contained Offline Mode, global 11-language translation synced across modes, multi-profile saves, dynamic mod settings, in-app updates, and an offline modding engine.
 </p>
 
 ---
 
 ## Features
 
-- **Cross-Platform Desktop (Windows & Linux / SteamOS)**
+- **Cross-Platform Client (Windows, Linux / SteamOS & Android)**
   - **Windows & Linux (SteamOS / Steam Deck)**: Full Electron desktop client with native toolbar, dynamic status icons, `1280x800` Steam Deck support, and Wayland/X11 auto-detection (`--ozone-platform-hint=auto`).
+  - **Android (`minSdk 24` — Android 7.0 through Android 17+)**: Universal APK (`arm64-v8a`, `armeabi-v7a`, `x86_64`) with 16 KB page-size aligned Node.js runtime, mobile-friendly **Unbound Settings** sheet, and a redesigned edge-docking **Unbound** button that automatically hides during active gameplay sessions and reappears on menus.
+
+- **Global 11-Language Translation (Online & Offline Synced)**
+  - Supports all 11 languages from base PokéBonk: English, Español, Português, Français, Deutsch, Italiano, 日本語, 한국어, Русский, 简体中文, and 繁體中文.
+  - Defaults automatically to your in-game PokéBonk language (`pokebonk.lang`) and persists seamlessly between Online Mode and Offline Mode across all menus, settings, and mod browsers.
 
 - **Isolated Online Mode**
   - Runs `https://pokebonk.com/` in a dedicated, sandboxed browser session (`persist:pokebonk-unbound-online`) with no request interception and no injected scripts.
-  - Online Mode stays 100% vanilla and never loads mods or touches online saves.
+  - Online Mode stays 100% vanilla and never loads mods or touches online saves (only your chosen language preference stays synced with Offline Mode).
   - Non-cheat Offline mod settings can be configured in advance from **Unbound Settings** while in Online Mode; all gameplay-altering cheats (Run Speed, God Mode, Overdrive, Difficulty Unlocks) and save unlock tools remain strictly locked until you switch to Offline Mode.
   - Includes one-click Online savefile export and one-way sync to Offline Mode.
 
 - **1:1 Vanilla Offline Mode**
-  - Serves PokéBonk locally from `127.0.0.1` with local API emulation, a local-only multi-profile leaderboard, fresh **PokéBonk Unbound** release notes, and direct **GitHub** + **Creator X (`@ImCharcher`)** links on the menu.
+  - Serves PokéBonk locally from `127.0.0.1` with same-origin local API emulation across Windows, Linux, and Android, a local-only multi-profile leaderboard, fresh **PokéBonk Unbound** release notes, and direct **GitHub** + **Creator X (`@ImCharcher`)** links on the menu.
   - Releases ship clean without bundled mods — Offline Mode runs pure 1:1 vanilla out of the box.
 
 - **Multi-Profile Local Save System**
@@ -35,10 +40,10 @@
   - Built-in core API support for **Custom Attacks**, **Custom Visual Effects (VFX)**, **Additive Custom Music & SFX** (without replacing vanilla songs), **Custom Playable Characters** (8-direction animated spritesheets, shiny variants, portraits, icons, cries, and custom Ultimates), **Custom Stages & Regions**, **Custom Pokéball Items**, declarative **Mod Settings**, asset overrides, JSON data patches, bundle patches, scripts, and CSS.
   - See [docs/MODDING.md](docs/MODDING.md) for the complete modding reference.
 
-- **Streamlined Unbound Settings, Dynamic Mod Settings & Mod Browser**
-  - Clean desktop top toolbar (`Mode | Saves | Unbound Settings`) with dynamic status indicator icons.
+- **Streamlined Unbound Settings, Dynamic Mod Settings & Reworked Mod Browser**
+  - Clean desktop top toolbar (`Mode | Saves | Unbound Settings`) with dynamic status indicator icons; compact auto-hiding floating **Unbound** emblem on Android.
   - Dynamic **Mod Settings** tab automatically populates settings, toggles, and actions for every currently enabled mod.
-  - Built-in **Mod Browser** installs optional mods in 1 click directly from `mods-database/` in `HyruleChosenOne/Pokebonk-Unbound` or any custom GitHub `owner/repo`.
+  - Reworked **Mod Browser** with **Featured** star highlights & filter (highlighting **Hyrule's Mods** and **Gen 3-9** packs), live **Total Downloads** counters, exact **Mod Size**, full-sized `1280x720` thumbnail previews with click-to-expand lightbox, and fast 1-click installs from `HyruleChosenOne/Pokebonk-Unbound` or any custom GitHub `owner/repo`.
 
 ---
 
@@ -109,20 +114,23 @@
 
 ---
 
-## Release Editions (v1.0.0)
+## Release Editions (v1.0.1)
 
-Clean builds for **Windows** and **Linux / SteamOS** are provided on the [Releases](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases) page. Neither Portable nor Complete comes bundled with mods — install any optional mod with 1 click through **Unbound Settings -> Mod Browser**.
+Clean builds for **Windows**, **Linux / SteamOS**, and **Android** are provided on the [Releases](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases) page. Neither Portable nor Complete comes bundled with mods — install any optional mod with 1 click through **Unbound Settings -> Mod Browser**.
 
 | Platform | Edition | Output File | Bundled PokéBonk Version | Notes |
 | --- | --- | --- | --- | --- |
-| **Windows (x64)** | **Portable** | `PokeBonk-Unbound-Portable-1.0.0.exe` | Downloaded on demand | Lightweight shell + Online Mode; switching to Offline Mode downloads the latest live build into `./build-data/`. |
-| **Windows (x64)** | **Complete** | `PokeBonk-Unbound-Complete-1.0.0.exe` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained executable bundling the complete `v0.10.29` offline build and sprites out of the box (updatable anytime). |
-| **Linux / SteamOS (x64)** | **Portable** | `PokeBonk-Unbound-Portable-1.0.0-linux-x64.tar.gz` | Downloaded on demand | Extract and run `./Pokebonk-Unbound.sh` (or add to Steam as a Non-Steam Game on Steam Deck). Includes `./install-desktop-shortcut.sh`. |
-| **Linux / SteamOS (x64)** | **Complete** | `PokeBonk-Unbound-Complete-1.0.0-linux-x64.tar.gz` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained Linux/SteamOS archive bundling the complete `v0.10.29` offline build and sprites (zero bundled mods). |
+| **Windows (x64)** | **Portable** | `PokeBonk-Unbound-Portable-1.0.1.exe` | Downloaded on demand | Lightweight shell + Online Mode; switching to Offline Mode downloads the latest live build into `./build-data/`. |
+| **Windows (x64)** | **Complete** | `PokeBonk-Unbound-Complete-1.0.1.exe` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained executable bundling the complete `v0.10.29` offline build and sprites out of the box (updatable anytime). |
+| **Linux / SteamOS (x64)** | **Portable** | `PokeBonk-Unbound-Portable-1.0.1-linux-x64.tar.gz` | Downloaded on demand | Extract and run `./Pokebonk-Unbound.sh` (or add to Steam as a Non-Steam Game on Steam Deck). Includes `./install-desktop-shortcut.sh`. |
+| **Linux / SteamOS (x64)** | **Complete** | `PokeBonk-Unbound-Complete-1.0.1-linux-x64.tar.gz` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained Linux/SteamOS archive bundling the complete `v0.10.29` offline build and sprites (zero bundled mods). |
+| **Android (7.0–17+ Universal)** | **Portable** | `PokeBonk-Unbound-Portable-1.0.1.apk` | Downloaded on demand | Universal 16 KB-aligned APK (`arm64-v8a`, `armeabi-v7a`, `x86_64`) with auto-hiding floating **Unbound** button and mobile **Unbound Settings**. |
+| **Android (7.0–17+ Universal)** | **Complete** | `PokeBonk-Unbound-Complete-1.0.1.apk` | **PokéBonk `v0.10.29`** (build `mwtpofww`) | Self-contained universal 16 KB-aligned APK bundling the complete `v0.10.29` offline build and sprites (zero bundled mods). |
 
 ### Platform Quick Start
 
 - **SteamOS / Steam Deck**: Extract the `.tar.gz` in Desktop Mode, run `./Pokebonk-Unbound.sh` (or `./install-desktop-shortcut.sh`), or right-click `Pokebonk-Unbound.sh` -> **Add to Steam** to launch from Gaming Mode (`1280x800` supported natively).
+- **Android**: Install either the **Portable** or **Complete** `.apk` (`minSdk 24`, compatible with Android 7.0 through Android 17+ including 16 KB page-size devices like Pixel 9/10/11 series). Tap the floating **Unbound** emblem on any menu to switch modes, manage profiles, change language, or browse/install mods — it automatically tucks to the screen edge and hides cleanly during active runs.
 
 ---
 
@@ -150,12 +158,14 @@ For the full catalog of official available mods, descriptions, preview images, a
 - **Linux / SteamOS**:
   - Offline Build Data: `./build-data/` beside the extracted folder or AppImage (fallback `~/.config/pokebonk-unbound/build-data`).
   - Saves, Profiles, Mods & Sessions: `~/.config/pokebonk-unbound` (also reads `./mods/` beside the folder if present).
+- **Android**:
+  - Offline Build Data, Saves, Profiles & Installed Mods: stored in the app's private data directory (`/data/data/com.hyrulechosenone.pokebonkunbound/files/pokebonk-data`), with in-app JSON save export/import and 1-click Mod Browser installation.
 
 ---
 
 ## Building from Source
 
-Requires Node.js 20+ and npm.
+Requires Node.js 20+ and npm (plus Android SDK & NDK for Android APKs).
 
 ```bash
 npm install
@@ -191,6 +201,9 @@ npm run build:complete
 # Linux / SteamOS Portable & Complete (.tar.gz / .AppImage on Linux)
 npm run build:linux:portable
 npm run build:linux:complete
+
+# Android Universal 16 KB-aligned Portable & Complete (.apk)
+npm run build:android:all
 ```
 
 ---
