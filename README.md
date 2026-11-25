@@ -144,8 +144,9 @@ Mods are optional and installed on demand through **Unbound Settings -> Mod Brow
 ## Shortcuts (Desktop)
 
 - `F1` — Show / hide the optional native top toolbar (hidden by default; use the in-game **Unbound Settings** button anytime in Offline Mode)
+- `F5` — Refresh the game
 - `F11` — Toggle fullscreen
-- `Alt+Left` / `Alt+Right` — Browser back / forward
+
 
 ---
 
