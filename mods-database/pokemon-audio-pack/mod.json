@@ -1,24 +1,24 @@
 {
   "id": "pokemon-audio-pack",
   "name": "Gen 1&2 Soundtrack",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (53 tracks covering EVERY PokéBonk song including Main Menu, Lavender Tower Night / Halloween, Johto Sunset, Dynamax Sky, Mewtwo Strikes Back Boss Rush, all 5 In-Game battle themes, dungeons, and legendary/champion bosses).",
+  "description": "Replaces menu, event, battle, and boss music with 53 looping FRLG, HGSS, and GB Sounds tracks.",
   "defaultMenuMusic": "frlg-title",
   "settings": [
     {
       "key": "replaceMenuMusic",
       "type": "toggle",
       "label": "Replace Title Screen & Main Menu Song",
-      "desc": "Automatically play your selected Gen 1 & Gen 2 title or town theme on the Title Screen and Main Menu instead of the default PokéBonk menu song.",
+      "desc": "Play your chosen Gen 1 & 2 track on the Title Screen and Main Menu.",
       "default": true
     },
     {
       "key": "menuTrack",
       "type": "select",
       "label": "Title Screen & Main Menu Theme",
-      "desc": "Choose which Gen 1 & Gen 2 theme plays on the Title Screen and Main Menu (overridden if you manually pick a different track in the in-game Audio menu).",
+      "desc": "Default Title Screen and Main Menu theme.",
       "default": "frlg-title",
       "options": [
         {

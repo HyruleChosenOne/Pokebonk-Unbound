@@ -21,13 +21,13 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 19.13 MB | `v1.2.1` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.0` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
-| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.0` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.1` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.14 MB | `v2.0.1` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
-| `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 9.85 MB | `v2.0.0` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
+| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.1` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 19.13 MB | `v1.2.2` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.1` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
+| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.1` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.2` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.14 MB | `v2.0.2` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
+| `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 9.85 MB | `v2.0.1` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
 
 ---
 
@@ -42,7 +42,7 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Quality of Life (**Featured**)
 - **Size**: 1.23 MB (3 files)
-- **Version**: `v1.2.0`
+- **Version**: `v1.2.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/hyrules-mods/info.json`](mods-database/hyrules-mods/info.json)
@@ -67,7 +67,7 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
 - **Size**: 19.13 MB (102 files)
-- **Version**: `v1.2.1`
+- **Version**: `v1.2.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
 - **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
@@ -94,7 +94,7 @@ Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinn
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters (**Featured**)
 - **Size**: 54.54 MB (3141 files)
-- **Version**: `v1.2.0`
+- **Version**: `v1.2.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/national-dex-gen3-9/info.json`](mods-database/national-dex-gen3-9/info.json)
@@ -119,7 +119,7 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
 - **Size**: 2.22 MB (97 files)
-- **Version**: `v1.1.0`
+- **Version**: `v1.1.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/classic-sfx-pack/info.json`](mods-database/classic-sfx-pack/info.json)
@@ -143,7 +143,7 @@ Overhauls PokéBonk with 94 authentic Gen 3 sound effects: genuine Pokémon Emer
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
 - **Size**: 83.29 MB (62 files)
-- **Version**: `v1.3.1`
+- **Version**: `v1.3.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
@@ -167,7 +167,7 @@ Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, Heart
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
 - **Size**: 5.14 MB (23 files)
-- **Version**: `v2.0.1`
+- **Version**: `v2.0.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
@@ -193,7 +193,7 @@ Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) wi
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
 - **Size**: 9.85 MB (157 files)
-- **Version**: `v2.0.0`
+- **Version**: `v2.0.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)

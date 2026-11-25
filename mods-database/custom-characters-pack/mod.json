@@ -1,10 +1,10 @@
 {
   "id": "custom-characters-pack",
   "name": "Non-Dexed Pokémon Pack (18 Fighters)",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Polished 18-fighter Non-Dexed Pokémon expansion featuring MissingNo. (with DMG-Green Classic & Neon Cyber Alt Shiny), Substitute Doll, Bad Egg, Shadow Lugia (XD001), Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon (Beta Vulpix), Pikachu Libre, Hakogame (Beta Turtle), Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja — all with 100% animated multi-frame sprites, Dual Shinies (Classic + Alt Palette), 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and full 11-language global translation.",
+  "description": "Adds 18 Non-Dexed & Mega/Primal fighters with animated sprites, Dual Shinies, custom moves, and Ultimates.",
   "tags": [
     "custom-characters",
     "non-dexed",
@@ -131,12 +131,12 @@
   "toolbarActions": [
     {
       "id": "unlock-all-custom-pack",
-      "label": "Unlock All 18 Custom & Non-Dexed Pokémon",
+      "label": "Unlock All 18 Non-Dexed Pokémon",
       "type": "unlock-mod-characters"
     },
     {
       "id": "open-custom-chars-dir",
-      "label": "Open Custom Characters Folder (./characters/)",
+      "label": "Open Characters Folder",
       "type": "open-mod-subdir",
       "subdir": "characters"
     }

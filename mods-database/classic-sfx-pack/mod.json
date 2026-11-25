@@ -1,10 +1,10 @@
 {
   "id": "classic-sfx-pack",
   "name": "Classic Sound Effects Pack",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Replaces PokéBonk menu UI sounds, Poké Balls, battle hits/faints, Shiny sparkle, and all Pokémon attack/move sound effects with authentic Pokémon Emerald GBA sound effects paired with classic Gen 3 milestone fanfares.",
+  "description": "Replaces menu UI, Poké Ball, hit, Shiny, and 144+ move SFX with authentic Pokémon Emerald sounds and Gen 3 fanfares.",
   "tags": [
     "audio",
     "sfx",

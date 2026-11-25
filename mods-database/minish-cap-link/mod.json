@@ -1,10 +1,10 @@
 {
   "id": "minish-cap-link",
   "name": "Link (The Minish Cap) — Playable Character, Hyrule & Dark World",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.",
+  "description": "Playable Minish Cap Link (unlocked by default) with Sword & Item moveset, Light Arrows Fusion, and Hyrule & Dark World stages.",
   "tags": [
     "character",
     "zelda",
@@ -540,13 +540,17 @@
   ],
   "toolbarActions": [
     {
-      "id": "unlock-minish-link",
-      "label": "Unlock Link (Minish Cap)",
+      "id": "unlock-zelda-master-tiers",
+      "label": "Unlock Hyrule & Dark World (Master Tier)",
       "type": "profile-mutate",
       "mutation": {
         "unlockSpecies": [
           2010
-        ]
+        ],
+        "unlockBiomes": {
+          "hyrule_field": 3,
+          "dark_world": 3
+        }
       },
       "reload": true
     }

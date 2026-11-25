@@ -1,10 +1,10 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Events Enabler (Choose-Mode Hub), P2P Multiplayer (IP:Port + Local Lobbies), Main Menu Background & Music selector, Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities. Keep OFF for 1:1 Vanilla Offline Mode.",
+  "description": "Offline QoL, Events Enabler, P2P Co-op, custom 3D menu themes, solo combat cheats, and profile unlocks.",
   "tags": [
     "qol",
     "collection",
