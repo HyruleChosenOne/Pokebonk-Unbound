@@ -1,13 +1,14 @@
 {
   "id": "pokemon-audio-pack",
   "name": "Gen 1&2 Soundtrack",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "HyruleChosenOne",
   "category": "Audio",
   "scope": "client",
-  "tagline": "43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds) plus 6 iconic SFX added alongside every vanilla song.",
-  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Registers 10 nostalgic menu themes, 20 battle/route/dungeon themes into the in-game music rotation, 13 legendary & champion boss themes into the boss pool, and 6 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.",
+  "tagline": "43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds), Title Screen & Main Menu song replacement, plus 6 iconic SFX.",
+  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Replaces the Title Screen & Main Menu song automatically (configurable in Unbound Settings -> Mod Configs), registers 10 menu themes, 20 battle/route/dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX stings — while keeping every vanilla PokéBonk track selectable.",
   "highlights": [
+    "Replaces the Title Screen & Main Menu song automatically with FRLG Title Screen (customizable to HGSS Title, Random, or any Kanto/Johto town theme in Mod Configs)",
     "10 selectable main menu themes: Title Screen (FRLG & HGSS), Pallet Town, New Bark Town, National Park, Route 1, Route 29, Goldenrod, Ecruteak & Cerulean City",
     "20 in-game battle & dungeon themes: Wild, Trainer, Gym Leader, Rival, Team Rocket, Rocket Hideout, Silph Co., Victory Road, Pokémon Tower, Battle Tower & GB Sounds classics",
     "13 legendary & champion boss themes: Mewtwo, Legendary Birds, Deoxys, Champion Blue/Lance/Red, Ho-Oh, Lugia, Raikou, Entei, Suicune, Frontier Brain & Super-Ancient",

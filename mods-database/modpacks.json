@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "modpacks": [
+    {
+      "id": "gen3-9-complete-expansion",
+      "name": "Gen 3-9 Complete Expansion",
+      "author": "HyruleChosenOne",
+      "category": "Modpacks",
+      "scope": "gameplay",
+      "featured": true,
+      "badge": "Modpack",
+      "tagline": "Gen 3-9 Characters + Gen 3-9 Stages bundled together in 1 click.",
+      "description": "Installs and enables both National Dex Gen 3-9 (Hoenn through Paldea playable Pokemon, 72 signature moves, classic & alternate shiny variants) and Gen 3-9 Regions & Levels Pack (14 custom stages across 7 regions with bespoke pixel-art environments and 3D landmarks) together.",
+      "mods": [
+        "national-dex-gen3-9",
+        "gen3-9-regions-levels"
+      ],
+      "tags": [
+        "modpack",
+        "collection",
+        "gen3-9",
+        "characters",
+        "stages",
+        "levels"
+      ]
+    }
+  ]
+}

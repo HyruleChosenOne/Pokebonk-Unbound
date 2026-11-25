@@ -373,6 +373,56 @@ Custom SFX clips decode once via Web Audio API and play through PokéBonk's nati
 
 ---
 
+## 6b. Custom Treasures (`customTreasures` / `treasuresDir`)
+
+Add custom Treasure wheels to PokéBonk's **Treasures** roulette using the exact same progression, odds, pity, titles, animated frames, profile backgrounds (title cards), bag items, and mastery skins (`t1` / `t2`) as vanilla Series 1 & Series 2 wheels.
+
+```json
+"customTreasures": [
+  {
+    "id": "triforce",
+    "series": 3,
+    "seriesName": "Series 3",
+    "seriesSub": "Hyrule",
+    "seriesFresh": true,
+    "starter": 2001,
+    "show": 2001,
+    "name": "Link Treasures",
+    "color": "#22c55e",
+    "color2": "#fde047",
+    "color3": "#ffffff",
+    "items": [
+      ["rare-candy", 4, 30],
+      ["amulet-coin", 3, 27],
+      ["lucky-egg", 3, 25]
+    ],
+    "title1": "Hero of Minish",
+    "frame1": "Kokiri Frame",
+    "banner": "Hyrule Castle",
+    "look1": "Golden Tunic",
+    "look1Style": "aurora",
+    "look1Pal": "#102808 #2f8520 #facc15 #fef9c3",
+    "grandTitle": "Chosen of the Triforce",
+    "grandFrame": "Triforce Crown",
+    "grandLook": "Eternal Triforce",
+    "grandLookStyle": "circuit",
+    "grandLookPal": "#081c10 #15803d #fde047 #ffffff",
+    "frameFx": "electric",
+    "stageBgImage": "treasures/bg-triforce.png",
+    "bannerImage": "treasures/tr-triforce.jpg",
+    "frame1Image": "treasures/tr-triforce-1.png",
+    "grandFrameImage": "treasures/tr-triforce-2.png"
+  }
+]
+```
+
+- **Custom Series & Collapsible Tabs**: Assign `"series": 3` (or higher) with `"seriesName"` and `"seriesSub"` to create a new collapsible group in the Treasures sidebar alongside Series 2 (Season 4) and Series 1 (Kanto).
+- **Mastery Skins & Shaders**: `look1Style` and `grandLookStyle` accept any built-in PokéBonk look shader (`metal`, `crystal`, `holo`, `galaxy`, `shadow`, `neon`, `stone`, `aurora`, `gb`, `magma`, `ember`, `verdant`, `tidal`, `psionic`, `spectre`, `storm`, `geode`, `candy`, `frost`, `gothic`, `circuit`, `toxic`, `ukiyo`, `glitch`, `calavera`, `synth`) paired with a 4-color hex palette (`look1Pal`, `grandLookPal`).
+- **Optional Art Fallbacks**: Omit `stageBgImage`, `bannerImage`, `frame1Image`, or `grandFrameImage` to automatically reuse a matching vanilla theme (`stageBgFrom`, `bannerFrom`, `frameFrom`, `frameFx`).
+- **Offline Spin Backend**: Custom wheels are automatically registered on `POST /api/treasures/spin` and persist won prizes, titles, frames, banners, items, and mastery looks in the active offline savefile.
+
+---
+
 ## 7. Dynamic Mod Settings (`settings`) & Mod Actions (`toolbarActions`)
 
 Whenever a mod is enabled, **Unbound Settings -> Mod Settings** (on Desktop and Android) dynamically renders a configuration card for that mod using its `settings` schema, `toolbarActions`, and additive audio metadata.

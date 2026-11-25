@@ -1,10 +1,40 @@
 {
   "id": "pokemon-audio-pack",
   "name": "Gen 1&2 Soundtrack",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (10 menu themes, 20 battle & dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX). Never replaces vanilla PokéBonk songs.",
+  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (10 menu & title themes, 20 battle & dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX). Replaces the Title Screen / Main Menu song by default (configurable in Mod Configs) while keeping every vanilla song selectable.",
+  "defaultMenuMusic": "frlg-title",
+  "settings": [
+    {
+      "key": "replaceMenuMusic",
+      "type": "toggle",
+      "label": "Replace Title Screen & Main Menu Song",
+      "desc": "Automatically play a Gen 1 & Gen 2 title or town theme on the Title Screen and Main Menu instead of the default PokéBonk menu song.",
+      "default": true
+    },
+    {
+      "key": "menuTrack",
+      "type": "select",
+      "label": "Title Screen & Main Menu Theme",
+      "desc": "Choose which Gen 1 & Gen 2 theme plays on the Title Screen and Main Menu (overridden if you manually pick a different track in the in-game Audio menu).",
+      "default": "frlg-title",
+      "options": [
+        { "value": "frlg-title", "label": "Title Screen (FireRed / LeafGreen)" },
+        { "value": "hgss-title", "label": "Title Screen (HeartGold / SoulSilver)" },
+        { "value": "random", "label": "Random Gen 1 & Gen 2 Menu Theme" },
+        { "value": "frlg-pallet-town", "label": "Pallet Town (FRLG)" },
+        { "value": "hgss-new-bark", "label": "New Bark Town (HGSS)" },
+        { "value": "hgss-national-park", "label": "National Park (HGSS)" },
+        { "value": "frlg-route-1", "label": "Route 1 (FRLG)" },
+        { "value": "hgss-route-29", "label": "Route 29 (HGSS)" },
+        { "value": "hgss-goldenrod", "label": "Goldenrod City (HGSS)" },
+        { "value": "hgss-ecruteak", "label": "Ecruteak City (HGSS)" },
+        { "value": "frlg-cerulean", "label": "Cerulean City (FRLG)" }
+      ]
+    }
+  ],
   "tags": [
     "audio",
     "music",

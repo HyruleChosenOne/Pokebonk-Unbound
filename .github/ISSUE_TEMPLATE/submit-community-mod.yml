@@ -1,0 +1,112 @@
+name: Community Mod Submission
+description: Submit your PokéBonk Unbound mod for manual testing and approval into community-mods/
+title: "[Community Mod] "
+labels: ["community-mod", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submit your mod for manual testing and approval by **HyruleChosenOne**.
+        Once reviewed and approved, your mod will be added to `community-mods/` and automatically appear in PokéBonk Unbound's in-app **Mod Browser**!
+        Need help building a mod? Read `docs/MODDING.md` first.
+
+  - type: input
+    id: mod_name
+    attributes:
+      label: Mod Name
+      description: Public display name shown in the Mod Browser
+      placeholder: "e.g. Johto Stadium Arena"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_id
+    attributes:
+      label: Mod ID (folder slug)
+      description: Lowercase letters, numbers, and hyphens only (must match `id` in `mod.json`)
+      placeholder: "e.g. johto-stadium-arena"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_version
+    attributes:
+      label: Mod Version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: mod_author
+    attributes:
+      label: Author / Creator Name
+      placeholder: "Your GitHub username or handle"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Characters
+        - Levels
+        - Audio
+        - Quality of Life
+        - General
+    validations:
+      required: true
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Co-op Scope
+      description: Select Gameplay if your mod adds/modifies characters, attacks, items, levels, or gameplay data; Client if it only affects audio, UI, or visuals.
+      options:
+        - gameplay (All Co-op players must match this mod & version)
+        - client (Client-side only; optional in Co-op)
+    validations:
+      required: true
+
+  - type: input
+    id: download_url
+    attributes:
+      label: Repository or Direct ZIP Download URL
+      description: Link to your GitHub repo, release `.zip`, or PR containing `mod.json`, `info.json`, and assets
+      placeholder: "https://github.com/yourname/your-mod-repo"
+    validations:
+      required: true
+
+  - type: input
+    id: preview_url
+    attributes:
+      label: Preview Thumbnail Image (16:9)
+      description: Link to a screenshot/thumbnail or confirm `preview.png` / `preview.jpg` is included in your archive
+      placeholder: "Included as preview.png in the zip"
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description & Highlights
+      description: Describe what your mod adds, any custom character IDs (#2000-#9999) or custom level IDs used, and key features.
+      placeholder: |
+        - Adds ...
+        - Compatible with PokéBonk Unbound v1.0.3+
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission Checklist
+      options:
+        - label: My mod includes valid `mod.json` and `info.json` manifests (following `docs/MODDING.md`)
+          required: true
+        - label: My mod works cleanly in Offline Mode and has been tested locally
+          required: true
+        - label: My mod contains no obfuscated executables, malware, or Online Mode tampering
+          required: true
+        - label: I understand HyruleChosenOne will manually test and review this mod before approving it into `community-mods/`
+          required: true

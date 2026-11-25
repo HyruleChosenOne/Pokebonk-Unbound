@@ -6,6 +6,16 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 
 ---
 
+## Curated Modpacks
+
+Install multi-mod collections together with 1 click inside **Unbound Settings -> Mod Browser -> Modpacks**.
+
+| Pack ID | Name | Included Mods | Scope | Summary |
+| --- | --- | --- | --- | --- |
+| `gen3-9-complete-expansion` | **Gen 3-9 Complete Expansion** | `national-dex-gen3-9` + `gen3-9-regions-levels` | **Gameplay** | Gen 3-9 Characters + Gen 3-9 Stages bundled together in 1 click. |
+
+---
+
 ## Quick Overview
 
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
@@ -14,7 +24,7 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 | `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 2.22 MB | `v1.1.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
 | `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 49.23 MB | `v1.1.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, Dual Shinies (Classic + Alt Palette), 72 clean-named attacks, and 24 Ultimates. |
 | `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 5.91 MB | `v1.3.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.17 MB | `v1.1.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds) plus 6 iconic SFX added alongside every vanilla song. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.17 MB | `v1.2.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds), Title Screen & Main Menu song replacement, plus 6 iconic SFX. |
 | `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 1.55 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
 
 ---
@@ -131,15 +141,16 @@ Expands the core Custom region (#2000-#9999) with 18 fully animated playable fig
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
 - **Size**: 64.17 MB (52 files)
-- **Version**: `v1.1.0`
+- **Version**: `v1.2.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
 - **Tags**: `audio`, `music`, `sfx`, `gen1`, `gen2`, `kanto`, `johto`, `frlg`, `hgss`, `soundtrack`
 
-Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Registers 10 nostalgic menu themes, 20 battle/route/dungeon themes into the in-game music rotation, 13 legendary & champion boss themes into the boss pool, and 6 classic SFX stings — all without overwriting or removing a single vanilla PokéBonk track.
+Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Replaces the Title Screen & Main Menu song automatically (configurable in Unbound Settings -> Mod Configs), registers 10 menu themes, 20 battle/route/dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX stings — while keeping every vanilla PokéBonk track selectable.
 
 **Highlights:**
+- Replaces the Title Screen & Main Menu song automatically with FRLG Title Screen (customizable to HGSS Title, Random, or any Kanto/Johto town theme in Mod Configs)
 - 10 selectable main menu themes: Title Screen (FRLG & HGSS), Pallet Town, New Bark Town, National Park, Route 1, Route 29, Goldenrod, Ecruteak & Cerulean City
 - 20 in-game battle & dungeon themes: Wild, Trainer, Gym Leader, Rival, Team Rocket, Rocket Hideout, Silph Co., Victory Road, Pokémon Tower, Battle Tower & GB Sounds classics
 - 13 legendary & champion boss themes: Mewtwo, Legendary Birds, Deoxys, Champion Blue/Lance/Red, Ho-Oh, Lugia, Raikou, Entei, Suicune, Frontier Brain & Super-Ancient
@@ -175,8 +186,12 @@ Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully a
 
 ## Installing Mods
 
-1. Open **Unbound Settings** from the top toolbar (Desktop) or floating **Unbound** button (Android).
+1. Open **Unbound Settings** from the Offline Main Menu (**Unbound Settings** button, or press `F1` for the top toolbar on Desktop; floating **Unbound** button on Android).
 2. Switch to the **Mod Browser** tab.
-3. Click **Install** on any mod you want — downloaded mods are automatically enabled by default in Offline Mode.
+3. Click **Install** on any official or approved community mod — downloaded mods are automatically enabled in Offline Mode.
+
+## Community Mods (`community-mods/`)
+
+No approved community mods yet — submit yours for manual review via the **[Community Mod Submission Form](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues/new?template=submit-community-mod.yml)** or see [`community-mods/README.md`](community-mods/README.md)!
 
 Want to create or publish your own mod? See [docs/MODDING.md](docs/MODDING.md).
