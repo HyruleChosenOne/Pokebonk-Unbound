@@ -32,8 +32,8 @@
       "scope": "client",
       "featured": true,
       "badge": "Modpack",
-      "tagline": "Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (45 FRLG/GBA SFX) bundled together.",
-      "description": "Complete classic Pokemon audio overhaul combining Gen 1&2 Soundtrack (covering every PokéBonk menu, seasonal event, battle, dungeon, and boss theme from FireRed/LeafGreen & HeartGold/SoulSilver) with Classic Sound Effects (authentic FRLG menu/milestone fanfares and GBA elemental combat attack SFX). 100% Client-side and Co-op safe.",
+      "tagline": "Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (94 Emerald menu/attack SFX & Gen 3 fanfares) bundled together.",
+      "description": "Complete classic Pokemon audio overhaul combining Gen 1&2 Soundtrack (covering every PokéBonk menu, seasonal event, battle, dungeon, and boss theme from FireRed/LeafGreen & HeartGold/SoulSilver with seamless looping) with Classic Sound Effects (authentic Pokémon Emerald menu UI, Poké Ball, battle hit, Shiny sparkle, and 144+ move/attack SFX paired with Gen 3 milestone fanfares). 100% Client-side and Co-op safe.",
       "mods": [
         "pokemon-audio-pack",
         "classic-sfx-pack"

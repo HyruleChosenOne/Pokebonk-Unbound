@@ -1,7 +1,7 @@
 {
   "id": "minish-cap-link",
   "name": "Link (The Minish Cap) — Playable Character, Hyrule & Dark World",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.",
@@ -1225,6 +1225,39 @@
         {
           "find": "a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],",
           "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/dom-.*\\.js$",
+      "patches": [
+        {
+          "find": "playSong(e,t,n,r){if(!this.ctx)return;this.stopTrack();",
+          "replace": "playSong(e,t,n,r){if(!this.ctx)return;this._pbTrackGen=(this._pbTrackGen||0)+1;this.stopTrack();"
+        },
+        {
+          "find": "this.stopSeq(),this.stopTrack(),this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,",
+          "replace": "this.stopSeq(),this.stopTrack();const _pbGen=(this._pbTrackGen=(this._pbTrackGen||0)+1);this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,"
+        },
+        {
+          "find": "if(!i||this.ctx!==i||this.trackWant!==e||this.track)return;let o=i.createBufferSource();",
+          "replace": "if(!i||this.ctx!==i||this.trackWant!==e||this.track||_pbGen!==this._pbTrackGen||this.musicOn)return;this.stopSeq();if(this._pbLiveTracks){for(const _ot of this._pbLiveTracks){try{_ot._stopped=!0;_ot.gain.gain.cancelScheduledValues(i.currentTime);_ot.gain.gain.setValueAtTime(0,i.currentTime);_ot.src.stop();_ot.gain.disconnect()}catch{}}this._pbLiveTracks.clear()}let o=i.createBufferSource();"
+        },
+        {
+          "find": "o.loop=!0,o.loopStart=c,o.loopEnd=a.duration;",
+          "replace": "let _pbLe=a.duration;try{const _ch=a.getChannelData(0),_sr=a.sampleRate;let _ei=a.length-1;while(_ei>_sr*(c+1)&&Math.abs(_ch[_ei])<0.008)_ei-=64;_pbLe=Math.max(c+1,Math.min(a.duration-0.025,_ei/_sr))}catch{_pbLe=Math.max(c+0.5,a.duration-0.025)}o.loop=!0,o.loopStart=c,o.loopEnd=_pbLe;"
+        },
+        {
+          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration};(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track)",
+          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
+        },
+        {
+          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration}",
+          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
+        },
+        {
+          "find": "stopTrack(){this.trackWant=null;let e=this.track;if(this.track=null,!e||!this.ctx)return;let t=this.ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+.6),e.src.stop(t+.65),e.src.onended=()=>e.gain.disconnect()}",
+          "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr._stopped=!0;_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{e._stopped=!0;let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
         }
       ]
     }

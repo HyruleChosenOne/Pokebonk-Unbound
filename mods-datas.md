@@ -13,7 +13,7 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | Pack ID | Name | Included Mods | Scope | Summary |
 | --- | --- | --- | --- | --- |
 | `gen3-9-complete-expansion` | **Gen 3-9 Complete Expansion** | `national-dex-gen3-9` + `gen3-9-regions-levels` | **Gameplay** | Gen 3-9 Characters + Gen 3-9 Stages bundled together in 1 click. |
-| `classic-gen1-2-audio-collection` | **Classic Gen 1&2 Audio Collection** | `pokemon-audio-pack` + `classic-sfx-pack` | Client | Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (45 FRLG/GBA SFX) bundled together. |
+| `classic-gen1-2-audio-collection` | **Classic Gen 1&2 Audio Collection** | `pokemon-audio-pack` + `classic-sfx-pack` | Client | Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (94 Emerald menu/attack SFX & Gen 3 fanfares) bundled together. |
 
 ---
 
@@ -22,11 +22,11 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 17.64 MB | `v1.2.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 18.05 MB | `v1.2.1` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
 | `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.0` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
-| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 1.44 MB | `v1.0.0` | Authentic FireRed/LeafGreen menu fanfares, GBA UI clicks, and classic elemental attack sound effects. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 73.85 MB | `v1.3.0` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.53 MB | `v2.0.0` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
+| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.0` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 82.24 MB | `v1.3.1` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.14 MB | `v2.0.1` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
 | `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 8.72 MB | `v2.0.0` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
 
 ---
@@ -66,8 +66,8 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `gen3-9-regions-levels`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
-- **Size**: 17.64 MB (102 files)
-- **Version**: `v1.2.0`
+- **Size**: 18.05 MB (102 files)
+- **Version**: `v1.2.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
 - **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
@@ -118,20 +118,20 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 - **ID**: `classic-sfx-pack`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
-- **Size**: 1.44 MB (48 files)
-- **Version**: `v1.0.0`
+- **Size**: 2.22 MB (97 files)
+- **Version**: `v1.1.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/classic-sfx-pack/info.json`](mods-database/classic-sfx-pack/info.json)
-- **Tags**: `audio`, `sfx`, `sound-effects`, `frlg`, `gen1`, `gen3`, `classic`, `menus`, `attacks`
+- **Tags**: `audio`, `sfx`, `sound-effects`, `emerald`, `frlg`, `gen3`, `classic`, `menus`, `attacks`
 
-Transforms PokéBonk's soundscape with 45 classic sound effects: 17 authentic FireRed & LeafGreen soundtrack fanfares and jingles (Level Up!, Pokémon Healed, Caught a Pokémon!, Obtained an Item/Key Item/Badge, Evolution, Victory, Defeat, Jackpot, Move Deleted, Trainers' Eyes Meet, Boss Appearance, Poké Flute, Mystery Gift) paired with 28 crisp GBA-era menu UI clicks, Poké Ball sounds, effectiveness hit crunches, and elemental combat attack SFX.
+Overhauls PokéBonk with 94 authentic Gen 3 sound effects: genuine Pokémon Emerald menu & UI sounds (SE_SELECT confirm, cursor scroll, denied buzzer, Poké Mart shop, save, PokéNav, EXP bar pip, Shiny sparkle, Poké Ball throw/open/shake/click), Emerald battle effectiveness hits & Faint KO, 47 authentic Emerald move & attack sounds wired directly into PokéBonk's move dispatcher (Ember, Flamethrower, Surf, Hydro Pump, Thunderbolt, Razor Leaf, Solar Beam, Ice Beam, Blizzard, Psybeam, Shadow Ball, Bite, Brick Break, Earthquake, Hyper Beam, Explosion, and more), plus 16 Gen 3 milestone fanfares.
 
 **Highlights:**
-- 17 authentic FireRed & LeafGreen fanfares sourced from archive.org/download/pkmn-frlg-soundtrack
-- Classic GBA menu confirm, cursor tick, EXP pip, coin chime, and Poké Ball capture SFX
-- Full combat & elemental attack overhaul (Normal / Super Effective / Weak hits, KO, Fire, Water, Electric, Grass, Ice, Psychic, Ghost, Slash, Beam, Boom)
-- Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed
+- Authentic Pokémon Emerald menu & UI SFX (SE_SELECT confirm, cursor scroll, denied buzzer, item use, shop, save, PokéNav, Shiny sparkle, Poké Ball capture)
+- 47 authentic Pokémon Emerald move & elemental attack SFX hooked directly into PokéBonk's per-move audio engine across all 144+ moves & all 18 types
+- Genuine Emerald effectiveness hits (Normal / Super Effective / Not Very Effective), Faint KO, ledge hop, and flee dash
+- 16 classic Gen 3 milestone fanfares (Level Up!, Healed, Caught!, Evolved!, Victory, Defeat, Jackpot, Boss Intro) — 100% Client-side & Co-op safe
 
 
 <a id="pokemon-audio-pack"></a>
@@ -142,8 +142,8 @@ Transforms PokéBonk's soundscape with 45 classic sound effects: 17 authentic Fi
 - **ID**: `pokemon-audio-pack`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
-- **Size**: 73.85 MB (62 files)
-- **Version**: `v1.3.0`
+- **Size**: 82.24 MB (62 files)
+- **Version**: `v1.3.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
@@ -166,8 +166,8 @@ Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, Heart
 - **ID**: `minish-cap-link`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
-- **Size**: 5.53 MB (23 files)
-- **Version**: `v2.0.0`
+- **Size**: 5.14 MB (23 files)
+- **Version**: `v2.0.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)

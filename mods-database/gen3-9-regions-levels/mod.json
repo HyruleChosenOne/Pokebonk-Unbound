@@ -1,7 +1,7 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures & thumbnails, and full 11-language global translation.",
@@ -4770,15 +4770,23 @@
         },
         {
           "find": "if(!i||this.ctx!==i||this.trackWant!==e||this.track)return;let o=i.createBufferSource();",
-          "replace": "if(!i||this.ctx!==i||this.trackWant!==e||this.track||_pbGen!==this._pbTrackGen||this.musicOn)return;this.stopSeq();if(this._pbLiveTracks){for(const _ot of this._pbLiveTracks){try{_ot.gain.gain.cancelScheduledValues(i.currentTime);_ot.gain.gain.setValueAtTime(0,i.currentTime);_ot.src.stop();_ot.gain.disconnect()}catch{}}this._pbLiveTracks.clear()}let o=i.createBufferSource();"
+          "replace": "if(!i||this.ctx!==i||this.trackWant!==e||this.track||_pbGen!==this._pbTrackGen||this.musicOn)return;this.stopSeq();if(this._pbLiveTracks){for(const _ot of this._pbLiveTracks){try{_ot._stopped=!0;_ot.gain.gain.cancelScheduledValues(i.currentTime);_ot.gain.gain.setValueAtTime(0,i.currentTime);_ot.src.stop();_ot.gain.disconnect()}catch{}}this._pbLiveTracks.clear()}let o=i.createBufferSource();"
+        },
+        {
+          "find": "o.loop=!0,o.loopStart=c,o.loopEnd=a.duration;",
+          "replace": "let _pbLe=a.duration;try{const _ch=a.getChannelData(0),_sr=a.sampleRate;let _ei=a.length-1;while(_ei>_sr*(c+1)&&Math.abs(_ch[_ei])<0.008)_ei-=64;_pbLe=Math.max(c+1,Math.min(a.duration-0.025,_ei/_sr))}catch{_pbLe=Math.max(c+0.5,a.duration-0.025)}o.loop=!0,o.loopStart=c,o.loopEnd=_pbLe;"
+        },
+        {
+          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration};(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track)",
+          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
         },
         {
           "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration}",
-          "replace": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration};(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track)"
+          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
         },
         {
           "find": "stopTrack(){this.trackWant=null;let e=this.track;if(this.track=null,!e||!this.ctx)return;let t=this.ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+.6),e.src.stop(t+.65),e.src.onended=()=>e.gain.disconnect()}",
-          "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
+          "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr._stopped=!0;_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{e._stopped=!0;let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
         }
       ]
     },

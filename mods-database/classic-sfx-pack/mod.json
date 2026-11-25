@@ -1,67 +1,868 @@
 {
   "id": "classic-sfx-pack",
   "name": "Classic Sound Effects Pack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Replaces PokéBonk menu UI clicks, milestone fanfares (Level Up, Caught, Evolved, Healed, Item & Badge Get, Victory, Defeat, Jackpot, Boss Intro, Poké Flute), and combat/elemental attack impacts with authentic FireRed & LeafGreen soundtrack fanfares and classic GBA chiptune sound effects.",
+  "description": "Replaces PokéBonk menu UI sounds, Poké Balls, battle hits/faints, Shiny sparkle, and all Pokémon attack/move sound effects with authentic Pokémon Emerald GBA sound effects paired with classic Gen 3 milestone fanfares.",
   "tags": [
     "audio",
     "sfx",
     "sound-effects",
+    "emerald",
     "frlg",
-    "gen1",
     "gen3",
     "classic",
     "menus",
     "attacks"
   ],
   "customSfx": [
-    { "id": "sfx-level-up", "name": "Level Up! (FRLG)", "file": "audio/sfx/sfx-level-up.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
-    { "id": "sfx-heal", "name": "Pokémon Healed (FRLG)", "file": "audio/sfx/sfx-heal.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
-    { "id": "sfx-caught", "name": "Caught a Pokémon! (FRLG)", "file": "audio/sfx/sfx-caught.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
-    { "id": "sfx-item-get", "name": "Obtained an Item! (FRLG)", "file": "audio/sfx/sfx-item-get.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
-    { "id": "sfx-key-item", "name": "Obtained a Key Item! (FRLG)", "file": "audio/sfx/sfx-key-item.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.3 },
-    { "id": "sfx-badge-get", "name": "Obtained a Badge! (FRLG)", "file": "audio/sfx/sfx-badge-get.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
-    { "id": "sfx-evolve-done", "name": "Congratulations! Your Pokémon Evolved! (FRLG)", "file": "audio/sfx/sfx-evolve-done.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
-    { "id": "sfx-evolve", "name": "Evolution Start (FRLG)", "file": "audio/sfx/sfx-evolve.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
-    { "id": "sfx-victory", "name": "Victory! (FRLG)", "file": "audio/sfx/sfx-victory.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.6 },
-    { "id": "sfx-defeat", "name": "Lose / Defeat (FRLG)", "file": "audio/sfx/sfx-defeat.ogg", "volume": 0.88, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
-    { "id": "sfx-jackpot", "name": "Jackpot! (FRLG)", "file": "audio/sfx/sfx-jackpot.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
-    { "id": "sfx-win-coins", "name": "Win! (FRLG)", "file": "audio/sfx/sfx-win-coins.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.3 },
-    { "id": "sfx-deny", "name": "Move Deleted / Deny (FRLG)", "file": "audio/sfx/sfx-deny.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
-    { "id": "sfx-encounter", "name": "Trainers' Eyes Meet (FRLG)", "file": "audio/sfx/sfx-encounter.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0, "cooldown": 0.35 },
-    { "id": "sfx-boss-start", "name": "Boss Appearance (FRLG)", "file": "audio/sfx/sfx-boss-start.ogg", "volume": 0.92, "pitch": 1, "pitchVar": 0, "cooldown": 0.6 },
-    { "id": "sfx-melody", "name": "Poké Flute (FRLG)", "file": "audio/sfx/sfx-melody.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
-    { "id": "sfx-mystery", "name": "Mystery Gift (FRLG)", "file": "audio/sfx/sfx-mystery.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
-    { "id": "sfx-click", "name": "Menu Confirm (Classic GBA)", "file": "audio/sfx/sfx-click.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.02, "cooldown": 0.03 },
-    { "id": "sfx-hover", "name": "Menu Cursor (Classic GBA)", "file": "audio/sfx/sfx-hover.ogg", "volume": 0.45, "pitch": 1, "pitchVar": 0.02, "cooldown": 0.035 },
-    { "id": "sfx-coin", "name": "Coin Get (Classic GBA)", "file": "audio/sfx/sfx-coin.ogg", "volume": 0.6, "pitch": 1, "pitchVar": 0.03, "cooldown": 0.05 },
-    { "id": "sfx-xp", "name": "EXP Pip (Classic GBA)", "file": "audio/sfx/sfx-xp.ogg", "volume": 0.48, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.035 },
-    { "id": "sfx-ping", "name": "Alert Chime (Classic GBA)", "file": "audio/sfx/sfx-ping.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0, "cooldown": 0.2 },
-    { "id": "sfx-ball-open", "name": "Poké Ball Open (Classic GBA)", "file": "audio/sfx/sfx-ball-open.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.08 },
-    { "id": "sfx-ball-shake", "name": "Poké Ball Shake (Classic GBA)", "file": "audio/sfx/sfx-ball-shake.ogg", "volume": 0.68, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.08 },
-    { "id": "sfx-ball-click", "name": "Poké Ball Lock (Classic GBA)", "file": "audio/sfx/sfx-ball-click.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0, "cooldown": 0.1 },
-    { "id": "sfx-hit-normal", "name": "Normal Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-normal.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.035 },
-    { "id": "sfx-hit-super", "name": "Super Effective Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-super.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.045 },
-    { "id": "sfx-hit-weak", "name": "Not Very Effective Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-weak.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.04 },
-    { "id": "sfx-ko", "name": "Faint / KO (Classic GBA)", "file": "audio/sfx/sfx-ko.ogg", "volume": 0.74, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.06 },
-    { "id": "sfx-hurt", "name": "Damage Taken (Classic GBA)", "file": "audio/sfx/sfx-hurt.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.08 },
-    { "id": "sfx-dodge", "name": "Quick Dash (Classic GBA)", "file": "audio/sfx/sfx-dodge.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.07 },
-    { "id": "sfx-jump", "name": "Jump / Bounce (Classic GBA)", "file": "audio/sfx/sfx-jump.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.07 },
-    { "id": "sfx-slam", "name": "Heavy Slam (Classic GBA)", "file": "audio/sfx/sfx-slam.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.09 },
-    { "id": "sfx-atk-fire", "name": "Fire Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-fire.ogg", "volume": 0.62, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
-    { "id": "sfx-atk-water", "name": "Water Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-water.ogg", "volume": 0.62, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
-    { "id": "sfx-atk-electric", "name": "Electric Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-electric.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
-    { "id": "sfx-atk-grass", "name": "Grass Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-grass.ogg", "volume": 0.6, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
-    { "id": "sfx-atk-ice", "name": "Ice Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-ice.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.06 },
-    { "id": "sfx-atk-psychic", "name": "Psychic Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-psychic.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.065 },
-    { "id": "sfx-atk-ghost", "name": "Ghost / Dark Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-ghost.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.065 },
-    { "id": "sfx-atk-slash", "name": "Slash Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-slash.ogg", "volume": 0.66, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.05 },
-    { "id": "sfx-atk-beam", "name": "Hyper Beam (Classic GBA)", "file": "audio/sfx/sfx-atk-beam.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.12 },
-    { "id": "sfx-atk-boom", "name": "Explosion / Nova (Classic GBA)", "file": "audio/sfx/sfx-atk-boom.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.08 },
-    { "id": "sfx-atk-power", "name": "Stat Boost (Classic GBA)", "file": "audio/sfx/sfx-atk-power.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.03, "cooldown": 0.12 },
-    { "id": "sfx-atk-shot", "name": "Projectile Shot (Classic GBA)", "file": "audio/sfx/sfx-atk-shot.ogg", "volume": 0.56, "pitch": 1, "pitchVar": 0.09, "cooldown": 0.05 }
+    {
+      "id": "sfx-level-up",
+      "name": "Level Up! (Gen 3)",
+      "file": "audio/sfx/sfx-level-up.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.25
+    },
+    {
+      "id": "sfx-heal",
+      "name": "Pokémon Healed (Gen 3)",
+      "file": "audio/sfx/sfx-heal.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.4
+    },
+    {
+      "id": "sfx-caught",
+      "name": "Caught a Pokémon! (Gen 3)",
+      "file": "audio/sfx/sfx-caught.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.4
+    },
+    {
+      "id": "sfx-item-get",
+      "name": "Obtained an Item! (Gen 3)",
+      "file": "audio/sfx/sfx-item-get.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.25
+    },
+    {
+      "id": "sfx-key-item",
+      "name": "Obtained a Key Item! (Gen 3)",
+      "file": "audio/sfx/sfx-key-item.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    },
+    {
+      "id": "sfx-badge-get",
+      "name": "Obtained a Badge! (Gen 3)",
+      "file": "audio/sfx/sfx-badge-get.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.4
+    },
+    {
+      "id": "sfx-evolve-done",
+      "name": "Pokémon Evolved! (Gen 3)",
+      "file": "audio/sfx/sfx-evolve-done.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.5
+    },
+    {
+      "id": "sfx-evolve",
+      "name": "Evolution Start (Gen 3)",
+      "file": "audio/sfx/sfx-evolve.ogg",
+      "volume": 0.82,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.5
+    },
+    {
+      "id": "sfx-victory",
+      "name": "Victory! (Gen 3)",
+      "file": "audio/sfx/sfx-victory.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.6
+    },
+    {
+      "id": "sfx-defeat",
+      "name": "Lose / Defeat (Gen 3)",
+      "file": "audio/sfx/sfx-defeat.ogg",
+      "volume": 0.88,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.5
+    },
+    {
+      "id": "sfx-jackpot",
+      "name": "Jackpot! (Gen 3)",
+      "file": "audio/sfx/sfx-jackpot.ogg",
+      "volume": 0.9,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.4
+    },
+    {
+      "id": "sfx-win-coins",
+      "name": "Win! (Gen 3)",
+      "file": "audio/sfx/sfx-win-coins.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.3
+    },
+    {
+      "id": "sfx-encounter",
+      "name": "Trainers' Eyes Meet (Gen 3)",
+      "file": "audio/sfx/sfx-encounter.ogg",
+      "volume": 0.82,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.35
+    },
+    {
+      "id": "sfx-boss-start",
+      "name": "Boss Appearance (Gen 3)",
+      "file": "audio/sfx/sfx-boss-start.ogg",
+      "volume": 0.92,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.6
+    },
+    {
+      "id": "sfx-melody",
+      "name": "Poké Flute (Gen 3)",
+      "file": "audio/sfx/sfx-melody.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.5
+    },
+    {
+      "id": "sfx-mystery",
+      "name": "Mystery Gift (Gen 3)",
+      "file": "audio/sfx/sfx-mystery.ogg",
+      "volume": 0.85,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.4
+    },
+    {
+      "id": "sfx-click",
+      "name": "Menu Select (Emerald SE_SELECT)",
+      "file": "audio/sfx/sfx-click.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0.01,
+      "cooldown": 0.03
+    },
+    {
+      "id": "sfx-hover",
+      "name": "Menu Cursor (Emerald SE_DEX_SCROLL)",
+      "file": "audio/sfx/sfx-hover.ogg",
+      "volume": 0.55,
+      "pitch": 1,
+      "pitchVar": 0.01,
+      "cooldown": 0.035
+    },
+    {
+      "id": "sfx-deny",
+      "name": "Denied / Buzzer (Emerald SE_BOO)",
+      "file": "audio/sfx/sfx-deny.ogg",
+      "volume": 0.75,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-win-open",
+      "name": "Window / Menu Open (Emerald SE_WIN_OPEN)",
+      "file": "audio/sfx/sfx-win-open.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-use-item",
+      "name": "Use / Pick Item (Emerald SE_USE_ITEM)",
+      "file": "audio/sfx/sfx-use-item.ogg",
+      "volume": 0.78,
+      "pitch": 1,
+      "pitchVar": 0.02,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-pc-off",
+      "name": "Close / Salvage (Emerald SE_PC_OFF)",
+      "file": "audio/sfx/sfx-pc-off.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-shop",
+      "name": "Shop / Sell (Emerald SE_SHOP)",
+      "file": "audio/sfx/sfx-shop.ogg",
+      "volume": 0.8,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-save",
+      "name": "Save / Forge (Emerald SE_SAVE)",
+      "file": "audio/sfx/sfx-save.ogg",
+      "volume": 0.82,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.25
+    },
+    {
+      "id": "sfx-slot-tick",
+      "name": "Slot Tick (Emerald SE_CLICK)",
+      "file": "audio/sfx/sfx-slot-tick.ogg",
+      "volume": 0.62,
+      "pitch": 1,
+      "pitchVar": 0.02,
+      "cooldown": 0.03
+    },
+    {
+      "id": "sfx-slot-stop",
+      "name": "Slot Stop (Emerald SE_SWITCH)",
+      "file": "audio/sfx/sfx-slot-stop.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-slot-lever",
+      "name": "Slot Lever (Emerald SE_VEND)",
+      "file": "audio/sfx/sfx-slot-lever.ogg",
+      "volume": 0.76,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-ping",
+      "name": "Alert Ping (Emerald SE_PIN)",
+      "file": "audio/sfx/sfx-ping.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.18
+    },
+    {
+      "id": "sfx-pokenav",
+      "name": "PokéNav Call (Emerald SE_POKENAV_CALL)",
+      "file": "audio/sfx/sfx-pokenav.ogg",
+      "volume": 0.78,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.25
+    },
+    {
+      "id": "sfx-coin",
+      "name": "Coin Clink (Emerald SE_M_PAY_DAY)",
+      "file": "audio/sfx/sfx-coin.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.05
+    },
+    {
+      "id": "sfx-xp",
+      "name": "EXP Gain Pip (Emerald SE_EXP)",
+      "file": "audio/sfx/sfx-xp.ogg",
+      "volume": 0.56,
+      "pitch": 1,
+      "pitchVar": 0.03,
+      "cooldown": 0.035
+    },
+    {
+      "id": "sfx-exp-max",
+      "name": "EXP Full Ding (Emerald SE_EXP_MAX)",
+      "file": "audio/sfx/sfx-exp-max.ogg",
+      "volume": 0.78,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.15
+    },
+    {
+      "id": "sfx-shiny",
+      "name": "Shiny Sparkle (Emerald SE_SHINY)",
+      "file": "audio/sfx/sfx-shiny.ogg",
+      "volume": 0.88,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.25
+    },
+    {
+      "id": "sfx-ball-throw",
+      "name": "Poké Ball Throw (Emerald SE_BALL_THROW)",
+      "file": "audio/sfx/sfx-ball-throw.ogg",
+      "volume": 0.76,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-ball-open",
+      "name": "Poké Ball Open (Emerald SE_BALL_OPEN)",
+      "file": "audio/sfx/sfx-ball-open.ogg",
+      "volume": 0.78,
+      "pitch": 1,
+      "pitchVar": 0.03,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-ball-shake",
+      "name": "Poké Ball Shake (Emerald SE_BALL_BOUNCE_1)",
+      "file": "audio/sfx/sfx-ball-shake.ogg",
+      "volume": 0.74,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-ball-click",
+      "name": "Poké Ball Click (Emerald SE_RG_BALL_CLICK)",
+      "file": "audio/sfx/sfx-ball-click.ogg",
+      "volume": 0.82,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-alarm",
+      "name": "Warning Beep (Emerald SE_LOW_HEALTH)",
+      "file": "audio/sfx/sfx-alarm.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0,
+      "cooldown": 0.35
+    },
+    {
+      "id": "sfx-hit-normal",
+      "name": "Normal Hit (Emerald SE_EFFECTIVE)",
+      "file": "audio/sfx/sfx-hit-normal.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.04
+    },
+    {
+      "id": "sfx-hit-super",
+      "name": "Super Effective Hit (Emerald SE_SUPER_EFFECTIVE)",
+      "file": "audio/sfx/sfx-hit-super.ogg",
+      "volume": 0.82,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.05
+    },
+    {
+      "id": "sfx-hit-weak",
+      "name": "Not Very Effective Hit (Emerald SE_NOT_EFFECTIVE)",
+      "file": "audio/sfx/sfx-hit-weak.ogg",
+      "volume": 0.6,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.04
+    },
+    {
+      "id": "sfx-ko",
+      "name": "Faint / KO (Emerald SE_FAINT)",
+      "file": "audio/sfx/sfx-ko.ogg",
+      "volume": 0.74,
+      "pitch": 1,
+      "pitchVar": 0.03,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-hurt",
+      "name": "Damage Taken (Emerald SE_BANG)",
+      "file": "audio/sfx/sfx-hurt.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.09
+    },
+    {
+      "id": "sfx-dodge",
+      "name": "Quick Dash (Emerald SE_FLEE)",
+      "file": "audio/sfx/sfx-dodge.ogg",
+      "volume": 0.62,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-jump",
+      "name": "Jump / Ledge Hop (Emerald SE_LEDGE)",
+      "file": "audio/sfx/sfx-jump.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-pop",
+      "name": "Hop / Pop (Emerald SE_BIKE_HOP)",
+      "file": "audio/sfx/sfx-pop.ogg",
+      "volume": 0.6,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.05
+    },
+    {
+      "id": "sfx-slam",
+      "name": "Heavy Slam (Emerald SE_M_STRENGTH)",
+      "file": "audio/sfx/sfx-slam.ogg",
+      "volume": 0.76,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.09
+    },
+    {
+      "id": "sfx-m-ember",
+      "name": "Ember (Emerald SE_M_EMBER)",
+      "file": "audio/sfx/sfx-m-ember.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-flamethrower",
+      "name": "Flamethrower (Emerald SE_M_FLAMETHROWER)",
+      "file": "audio/sfx/sfx-m-flamethrower.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-flame-wheel",
+      "name": "Flame Wheel (Emerald SE_M_FLAME_WHEEL)",
+      "file": "audio/sfx/sfx-m-flame-wheel.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-bubble",
+      "name": "Bubble (Emerald SE_M_BUBBLE)",
+      "file": "audio/sfx/sfx-m-bubble.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-surf",
+      "name": "Surf (Emerald SE_M_SURF)",
+      "file": "audio/sfx/sfx-m-surf.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-hydro-pump",
+      "name": "Hydro Pump (Emerald SE_M_HYDRO_PUMP)",
+      "file": "audio/sfx/sfx-m-hydro-pump.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-waterfall",
+      "name": "Waterfall (Emerald SE_M_WATERFALL)",
+      "file": "audio/sfx/sfx-m-waterfall.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-m-dive",
+      "name": "Dive (Emerald SE_M_DIVE)",
+      "file": "audio/sfx/sfx-m-dive.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-m-thunderbolt",
+      "name": "Thunderbolt (Emerald SE_M_THUNDERBOLT)",
+      "file": "audio/sfx/sfx-m-thunderbolt.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-thunder",
+      "name": "Thunder (Emerald SE_THUNDER)",
+      "file": "audio/sfx/sfx-m-thunder.ogg",
+      "volume": 0.74,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-thunder-wave",
+      "name": "Thunder Wave (Emerald SE_M_THUNDER_WAVE)",
+      "file": "audio/sfx/sfx-m-thunder-wave.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-charge",
+      "name": "Charge (Emerald SE_M_CHARGE)",
+      "file": "audio/sfx/sfx-m-charge.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-razor-wind",
+      "name": "Razor Leaf / Wind (Emerald SE_M_RAZOR_WIND)",
+      "file": "audio/sfx/sfx-m-razor-wind.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-solar-beam",
+      "name": "Solar Beam (Emerald SE_M_SOLAR_BEAM)",
+      "file": "audio/sfx/sfx-m-solar-beam.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0.03,
+      "cooldown": 0.16
+    },
+    {
+      "id": "sfx-m-giga-drain",
+      "name": "Giga Drain (Emerald SE_M_GIGA_DRAIN)",
+      "file": "audio/sfx/sfx-m-giga-drain.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-powder",
+      "name": "Spore / Powder (Emerald SE_M_POISON_POWDER)",
+      "file": "audio/sfx/sfx-m-powder.ogg",
+      "volume": 0.62,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-icy-wind",
+      "name": "Icy Wind / Ice Beam (Emerald SE_M_ICY_WIND)",
+      "file": "audio/sfx/sfx-m-icy-wind.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-blizzard",
+      "name": "Blizzard (Emerald SE_M_BLIZZARD)",
+      "file": "audio/sfx/sfx-m-blizzard.ogg",
+      "volume": 0.7,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.14
+    },
+    {
+      "id": "sfx-m-mist",
+      "name": "Mist / Haze (Emerald SE_M_MIST)",
+      "file": "audio/sfx/sfx-m-mist.ogg",
+      "volume": 0.62,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-psybeam",
+      "name": "Psybeam / Psychic (Emerald SE_M_PSYBEAM)",
+      "file": "audio/sfx/sfx-m-psybeam.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-barrier",
+      "name": "Barrier / Reflect (Emerald SE_M_BARRIER)",
+      "file": "audio/sfx/sfx-m-barrier.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-m-confuse-ray",
+      "name": "Confuse Ray / Ghost (Emerald SE_M_CONFUSE_RAY)",
+      "file": "audio/sfx/sfx-m-confuse-ray.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-lick",
+      "name": "Lick (Emerald SE_M_LICK)",
+      "file": "audio/sfx/sfx-m-lick.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-bite",
+      "name": "Bite / Crunch (Emerald SE_M_BITE)",
+      "file": "audio/sfx/sfx-m-bite.ogg",
+      "volume": 0.7,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-faint-attack",
+      "name": "Faint Attack / Dark (Emerald SE_M_FAINT_ATTACK)",
+      "file": "audio/sfx/sfx-m-faint-attack.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-brick-break",
+      "name": "Brick Break / Fighting (Emerald SE_M_BRICK_BREAK)",
+      "file": "audio/sfx/sfx-m-brick-break.ogg",
+      "volume": 0.72,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-sky-uppercut",
+      "name": "Sky Uppercut (Emerald SE_M_SKY_UPPERCUT)",
+      "file": "audio/sfx/sfx-m-sky-uppercut.ogg",
+      "volume": 0.7,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-cut",
+      "name": "Cut / Slash (Emerald SE_M_CUT)",
+      "file": "audio/sfx/sfx-m-cut.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-scratch",
+      "name": "Scratch (Emerald SE_M_SCRATCH)",
+      "file": "audio/sfx/sfx-m-scratch.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.08,
+      "cooldown": 0.05
+    },
+    {
+      "id": "sfx-m-headbutt",
+      "name": "Headbutt / Tackle (Emerald SE_M_HEADBUTT)",
+      "file": "audio/sfx/sfx-m-headbutt.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-swift",
+      "name": "Swift / Projectile (Emerald SE_M_SWIFT)",
+      "file": "audio/sfx/sfx-m-swift.ogg",
+      "volume": 0.64,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.055
+    },
+    {
+      "id": "sfx-m-hyper-beam",
+      "name": "Hyper Beam (Emerald SE_M_HYPER_BEAM)",
+      "file": "audio/sfx/sfx-m-hyper-beam.ogg",
+      "volume": 0.74,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-m-explosion",
+      "name": "Explosion / Boom (Emerald SE_M_EXPLOSION)",
+      "file": "audio/sfx/sfx-m-explosion.ogg",
+      "volume": 0.78,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-m-rock-throw",
+      "name": "Rock Throw (Emerald SE_M_ROCK_THROW)",
+      "file": "audio/sfx/sfx-m-rock-throw.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-earthquake",
+      "name": "Earthquake (Emerald SE_M_EARTHQUAKE)",
+      "file": "audio/sfx/sfx-m-earthquake.ogg",
+      "volume": 0.74,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.16
+    },
+    {
+      "id": "sfx-m-dig",
+      "name": "Dig (Emerald SE_M_DIG)",
+      "file": "audio/sfx/sfx-m-dig.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-bonemerang",
+      "name": "Bonemerang (Emerald SE_M_BONEMERANG)",
+      "file": "audio/sfx/sfx-m-bonemerang.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-toxic",
+      "name": "Toxic / Poison (Emerald SE_M_TOXIC)",
+      "file": "audio/sfx/sfx-m-toxic.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-horn-attack",
+      "name": "Horn Attack / Bug (Emerald SE_M_HORN_ATTACK)",
+      "file": "audio/sfx/sfx-m-horn-attack.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.07,
+      "cooldown": 0.06
+    },
+    {
+      "id": "sfx-m-string-shot",
+      "name": "String Shot / Bind (Emerald SE_M_STRING_SHOT)",
+      "file": "audio/sfx/sfx-m-string-shot.ogg",
+      "volume": 0.64,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-gust",
+      "name": "Gust / Hurricane (Emerald SE_M_GUST2)",
+      "file": "audio/sfx/sfx-m-gust.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-wing-attack",
+      "name": "Wing Attack / Flying (Emerald SE_M_WING_ATTACK)",
+      "file": "audio/sfx/sfx-m-wing-attack.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.07
+    },
+    {
+      "id": "sfx-m-dragon-rage",
+      "name": "Dragon Rage / Twister (Emerald SE_M_DRAGON_RAGE)",
+      "file": "audio/sfx/sfx-m-dragon-rage.ogg",
+      "volume": 0.7,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-m-charm",
+      "name": "Charm / Fairy (Emerald SE_M_CHARM)",
+      "file": "audio/sfx/sfx-m-charm.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.08
+    },
+    {
+      "id": "sfx-m-supersonic",
+      "name": "Supersonic / Sound (Emerald SE_M_SUPERSONIC)",
+      "file": "audio/sfx/sfx-m-supersonic.ogg",
+      "volume": 0.66,
+      "pitch": 1,
+      "pitchVar": 0.05,
+      "cooldown": 0.1
+    },
+    {
+      "id": "sfx-m-stat-up",
+      "name": "Stat Increase (Emerald SE_M_STAT_INCREASE)",
+      "file": "audio/sfx/sfx-m-stat-up.ogg",
+      "volume": 0.68,
+      "pitch": 1,
+      "pitchVar": 0.03,
+      "cooldown": 0.12
+    },
+    {
+      "id": "sfx-m-metronome",
+      "name": "Metronome / Status (Emerald SE_M_METRONOME)",
+      "file": "audio/sfx/sfx-m-metronome.ogg",
+      "volume": 0.65,
+      "pitch": 1,
+      "pitchVar": 0.04,
+      "cooldown": 0.08
+    }
   ],
   "bundlePatches": [
     {
@@ -69,7 +870,7 @@
       "patches": [
         {
           "find": "let r=e.createBiquadFilter();r.type=`highshelf`,r.frequency.value=2800",
-          "replace": "if(!this._pbClassicSfxWired){this._pbClassicSfxWired=!0;const _fanfares=new Set([`sfx-level-up`,`sfx-heal`,`sfx-caught`,`sfx-item-get`,`sfx-key-item`,`sfx-badge-get`,`sfx-evolve`,`sfx-evolve-done`,`sfx-victory`,`sfx-defeat`,`sfx-jackpot`,`sfx-win-coins`,`sfx-encounter`,`sfx-boss-start`,`sfx-melody`]);const _ensureDefs=()=>{if(!this._customSfxDefs)this.playCustomSfx?.(`__pb_init__`);return this._customSfxDefs};const _play=(id,opts={})=>{if(!this.ctx)return!0;const defs=_ensureDefs();const def=defs&&defs[id];if(!def)return!1;const now=performance.now();const lm=this._customSfxLast||(this._customSfxLast=new Map());if(def.cooldown>0&&now-(lm.get(id)||0)<def.cooldown*1e3)return!0;lm.set(id,now);const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const buf=cache.get(id);const startBuf=(b)=>{if(!b||!this.ctx||this.ctx.state===`closed`)return;if(_fanfares.has(id)&&this._pbCurFanfare){try{this._pbCurFanfare.stop()}catch{}this._pbCurFanfare=null}const src=this.ctx.createBufferSource();src.buffer=b;const pv=opts.pitchVar??def.pitchVar??0;const bp=opts.pitch??def.pitch??1;src.playbackRate.value=Math.max(0.25,Math.min(4,bp+(pv?(Math.random()*2-1)*pv:0)));const g=this.ctx.createGain();g.gain.value=Math.max(0.01,Math.min(3,(opts.volume??1)*(def.volume??1)));src.connect(g);g.connect(this.sfxBus||this.master);if(_fanfares.has(id)){this._pbCurFanfare=src;src.onended=()=>{if(this._pbCurFanfare===src)this._pbCurFanfare=null}}src.start()};if(buf&&buf!==`loading`&&buf!==`missing`){startBuf(buf);return!0}if(!buf){cache.set(id,`loading`);fetch(h(def.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b){cache.set(id,b);startBuf(b)}else cache.set(id,`missing`)}).catch(()=>{cache.set(id,`missing`)})}return!0};const _map={click:`sfx-click`,hover:`sfx-hover`,deny:`sfx-deny`,levelUp:`sfx-level-up`,heal:`sfx-heal`,caught:`sfx-caught`,evolve:`sfx-evolve`,evolveDone:`sfx-evolve-done`,victory:`sfx-victory`,defeat:`sfx-defeat`,slotCurse:`sfx-defeat`,jackpot:`sfx-jackpot`,slotCoins:`sfx-jackpot`,bonkGet:`sfx-item-get`,chest:`sfx-item-get`,gearLoot:`sfx-item-get`,gearPick:`sfx-item-get`,bonkDrop:`sfx-key-item`,reveal:`sfx-key-item`,shiny:`sfx-badge-get`,streakMilestone:`sfx-badge-get`,extractDone:`sfx-badge-get`,encounter:`sfx-encounter`,alarm:`sfx-encounter`,bossStart:`sfx-boss-start`,melody:`sfx-melody`,matchFound:`sfx-win-coins`,overtake:`sfx-win-coins`,coin:`sfx-coin`,chat:`sfx-ping`,ping:`sfx-ping`,ballOpen:`sfx-ball-open`,ballShake:`sfx-ball-shake`,ballClick:`sfx-ball-click`,ko:`sfx-ko`,hurt:`sfx-hurt`,dodge:`sfx-dodge`,whoosh:`sfx-dodge`,glide:`sfx-dodge`,jump:`sfx-jump`,bounce:`sfx-jump`,roll:`sfx-jump`,slam:`sfx-slam`,land:`sfx-slam`,dive:`sfx-slam`,dig:`sfx-slam`,erupt:`sfx-slam`,spikes:`sfx-slam`,slash:`sfx-atk-slash`,zap:`sfx-atk-electric`,power:`sfx-atk-power`};for(const[m,sid]of Object.entries(_map)){const orig=this[m]?.bind(this);this[m]=(...a)=>{if(!_play(sid))orig?.(...a)}}const _origXp=this.xp?.bind(this);this.xp=(c=1)=>{const pitch=Math.min(1.65,0.92+Math.min(c-1,14)*0.045);if(!_play(`sfx-xp`,{pitch}))_origXp?.(c)};const _origHit=this.hit?.bind(this);this.hit=(eff=1,crit=!1,mega=!1)=>{const sid=eff>1.01||mega?`sfx-hit-super`:eff<0.99?`sfx-hit-weak`:`sfx-hit-normal`;if(!_play(sid,{pitch:crit?1.16:1,volume:mega?1.15:1}))_origHit?.(eff,crit,mega)};const _origShot=this.shot?.bind(this);this.shot=(tp,v=0.5)=>{const em={fire:`sfx-atk-fire`,water:`sfx-atk-water`,electric:`sfx-atk-electric`,grass:`sfx-atk-grass`,ice:`sfx-atk-ice`,psychic:`sfx-atk-psychic`,ghost:`sfx-atk-ghost`,dark:`sfx-atk-ghost`};if(!_play(em[tp]||`sfx-atk-shot`,{volume:Math.max(0.55,Math.min(1.15,(v||0.5)*1.4))}))_origShot?.(tp,v)};const _origBeam=this.beam?.bind(this);this.beam=(tp)=>{if(!_play(tp===`ice`?`sfx-atk-ice`:`sfx-atk-beam`))_origBeam?.(tp)};const _origCone=this.cone?.bind(this);this.cone=(tp,d)=>{if(!_play(tp===`fire`?`sfx-atk-fire`:`sfx-atk-water`))_origCone?.(tp,d)};const _origBoom=this.boom?.bind(this);this.boom=(s=1)=>{if(!_play(`sfx-atk-boom`,{volume:Math.max(0.65,Math.min(1.2,0.7+(s||1)*0.3))}))_origBoom?.(s)};const _origNova=this.nova?.bind(this);this.nova=(tp)=>{const em={fire:`sfx-atk-fire`,water:`sfx-atk-water`,electric:`sfx-atk-electric`,ice:`sfx-atk-ice`,psychic:`sfx-atk-psychic`,ghost:`sfx-atk-ghost`};if(!_play(em[tp]||`sfx-atk-boom`))_origNova?.(tp)};setTimeout(()=>{const pre=[`sfx-click`,`sfx-hover`,`sfx-hit-normal`,`sfx-hit-super`,`sfx-hit-weak`,`sfx-ko`,`sfx-xp`,`sfx-coin`,`sfx-atk-fire`,`sfx-atk-water`,`sfx-atk-electric`,`sfx-atk-grass`,`sfx-atk-ice`,`sfx-atk-psychic`,`sfx-atk-ghost`,`sfx-atk-slash`,`sfx-atk-beam`,`sfx-atk-boom`,`sfx-atk-shot`,`sfx-level-up`,`sfx-item-get`,`sfx-heal`];const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const defs=_ensureDefs();if(!defs)return;for(const id of pre){const d=defs[id];if(!d||cache.has(id))continue;cache.set(id,`loading`);fetch(h(d.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b)cache.set(id,b)}).catch(()=>{cache.delete(id)})}},350)}let r=e.createBiquadFilter();r.type=`highshelf`,r.frequency.value=2800"
+          "replace": "if(!this._pbClassicSfxWired){this._pbClassicSfxWired=!0;const _fanfares=new Set([\"sfx-level-up\",\"sfx-heal\",\"sfx-caught\",\"sfx-item-get\",\"sfx-key-item\",\"sfx-badge-get\",\"sfx-evolve\",\"sfx-evolve-done\",\"sfx-victory\",\"sfx-defeat\",\"sfx-jackpot\",\"sfx-win-coins\",\"sfx-encounter\",\"sfx-boss-start\",\"sfx-melody\"]);const _ensureDefs=()=>{if(!this._customSfxDefs)this.playCustomSfx?.(\"__pb_init__\");return this._customSfxDefs};const _play=(id,opts={})=>{if(!this.ctx)return!0;const defs=_ensureDefs();const def=defs&&defs[id];if(!def)return!1;const now=performance.now();const lm=this._customSfxLast||(this._customSfxLast=new Map());if(def.cooldown>0&&now-(lm.get(id)||0)<def.cooldown*1e3)return!0;lm.set(id,now);const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const buf=cache.get(id);const startBuf=(b)=>{if(!b||!this.ctx||this.ctx.state===\"closed\")return;if(_fanfares.has(id)&&this._pbCurFanfare){try{this._pbCurFanfare.stop()}catch{}this._pbCurFanfare=null}const src=this.ctx.createBufferSource();src.buffer=b;const pv=opts.pitchVar??def.pitchVar??0;const bp=opts.pitch??def.pitch??1;src.playbackRate.value=Math.max(0.25,Math.min(4,bp+(pv?(Math.random()*2-1)*pv:0)));const g=this.ctx.createGain();g.gain.value=Math.max(0.01,Math.min(3,(opts.volume??1)*(def.volume??1)));src.connect(g);g.connect(this.sfxBus||this.master);if(_fanfares.has(id)){this._pbCurFanfare=src;src.onended=()=>{if(this._pbCurFanfare===src)this._pbCurFanfare=null}}src.start()};if(buf&&buf!==\"loading\"&&buf!==\"missing\"){startBuf(buf);return!0}if(!buf){cache.set(id,\"loading\");fetch(h(def.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b){cache.set(id,b);startBuf(b)}else cache.set(id,\"missing\")}).catch(()=>{cache.set(id,\"missing\")})}return!0};const _map={click:\"sfx-click\",hover:\"sfx-hover\",deny:\"sfx-deny\",gearEquip:\"sfx-win-open\",extractOpen:\"sfx-win-open\",gearPick:\"sfx-use-item\",chest:\"sfx-use-item\",bonkGet:\"sfx-item-get\",gearLoot:\"sfx-item-get\",gearDrop:\"sfx-pc-off\",salvage:\"sfx-pc-off\",sell:\"sfx-shop\",slotCoins:\"sfx-shop\",forge:\"sfx-save\",extractDone:\"sfx-save\",slotTick:\"sfx-slot-tick\",slotStop:\"sfx-slot-stop\",slotLever:\"sfx-slot-lever\",slotTease:\"sfx-ping\",chat:\"sfx-ping\",ping:\"sfx-ping\",extractCall:\"sfx-pokenav\",matchFound:\"sfx-pokenav\",coin:\"sfx-coin\",overtake:\"sfx-exp-max\",streak:\"sfx-exp-max\",shiny:\"sfx-shiny\",bonkDrop:\"sfx-ball-throw\",ballOpen:\"sfx-ball-open\",ballShake:\"sfx-ball-shake\",ballClick:\"sfx-ball-click\",alarm:\"sfx-alarm\",levelUp:\"sfx-level-up\",heal:\"sfx-heal\",caught:\"sfx-caught\",evolve:\"sfx-evolve\",evolveDone:\"sfx-evolve-done\",victory:\"sfx-victory\",defeat:\"sfx-defeat\",slotCurse:\"sfx-defeat\",jackpot:\"sfx-jackpot\",reveal:\"sfx-key-item\",streakMilestone:\"sfx-badge-get\",encounter:\"sfx-encounter\",bossStart:\"sfx-boss-start\",melody:\"sfx-melody\",ko:\"sfx-ko\",hurt:\"sfx-hurt\",dodge:\"sfx-dodge\",whoosh:\"sfx-dodge\",glide:\"sfx-dodge\",jump:\"sfx-jump\",roll:\"sfx-jump\",pop:\"sfx-pop\",bounce:\"sfx-pop\",slam:\"sfx-slam\",land:\"sfx-slam\",dive:\"sfx-m-dive\",dig:\"sfx-m-dig\",erupt:\"sfx-m-explosion\",spikes:\"sfx-m-rock-throw\",slash:\"sfx-m-cut\",zap:\"sfx-m-thunderbolt\",power:\"sfx-m-stat-up\",charge:\"sfx-m-charge\"};for(const[m,sid]of Object.entries(_map)){const orig=this[m]?.bind(this);this[m]=(...a)=>{if(!_play(sid))orig?.(...a)}}const _origXp=this.xp?.bind(this);this.xp=(c=1)=>{const pitch=Math.min(1.65,0.94+Math.min(c-1,14)*0.042);if(!_play(\"sfx-xp\",{pitch}))_origXp?.(c)};const _origHit=this.hit?.bind(this);this.hit=(eff=1,crit=!1,mega=!1)=>{const sid=eff>1.01||mega?\"sfx-hit-super\":eff<0.99?\"sfx-hit-weak\":\"sfx-hit-normal\";if(!_play(sid,{pitch:crit?1.15:1,volume:mega?1.15:1}))_origHit?.(eff,crit,mega)};const _typeMap={fire:\"sfx-m-ember\",water:\"sfx-m-bubble\",electric:\"sfx-m-thunderbolt\",grass:\"sfx-m-razor-wind\",ice:\"sfx-m-icy-wind\",psychic:\"sfx-m-psybeam\",ghost:\"sfx-m-confuse-ray\",dark:\"sfx-m-faint-attack\",fighting:\"sfx-m-brick-break\",ground:\"sfx-m-dig\",rock:\"sfx-m-rock-throw\",poison:\"sfx-m-toxic\",bug:\"sfx-m-horn-attack\",flying:\"sfx-m-wing-attack\",dragon:\"sfx-m-dragon-rage\",fairy:\"sfx-m-charm\",steel:\"sfx-m-cut\",normal:\"sfx-m-swift\"};const _mvMap={\"ember\":\"sfx-m-ember\",\"incinerate\":\"sfx-m-ember\",\"flame-charge\":\"sfx-m-ember\",\"flamethrower\":\"sfx-m-flamethrower\",\"heat-wave\":\"sfx-m-flamethrower\",\"inferno\":\"sfx-m-flamethrower\",\"overheat\":\"sfx-m-flamethrower\",\"fire-spin\":\"sfx-m-flame-wheel\",\"fire-blast\":\"sfx-m-flame-wheel\",\"flame-wheel\":\"sfx-m-flame-wheel\",\"fire-punch\":\"sfx-m-flame-wheel\",\"sacred-fire\":\"sfx-m-flame-wheel\",\"flare-blitz\":\"sfx-m-flame-wheel\",\"eruption\":\"sfx-m-explosion\",\"bubble\":\"sfx-m-bubble\",\"water-gun\":\"sfx-m-bubble\",\"bubble-beam\":\"sfx-m-bubble\",\"brine\":\"sfx-m-bubble\",\"soak\":\"sfx-m-bubble\",\"octazooka\":\"sfx-m-bubble\",\"clamp\":\"sfx-m-bubble\",\"surf\":\"sfx-m-surf\",\"scald\":\"sfx-m-surf\",\"liquidation\":\"sfx-m-surf\",\"muddy-water\":\"sfx-m-surf\",\"hydro-pump\":\"sfx-m-hydro-pump\",\"whirlpool\":\"sfx-m-hydro-pump\",\"waterfall\":\"sfx-m-waterfall\",\"dive\":\"sfx-m-dive\",\"crabhammer\":\"sfx-m-brick-break\",\"thunderbolt\":\"sfx-m-thunderbolt\",\"thunder-shock\":\"sfx-m-thunderbolt\",\"spark\":\"sfx-m-thunderbolt\",\"discharge\":\"sfx-m-thunderbolt\",\"electro-ball\":\"sfx-m-thunderbolt\",\"nuzzle\":\"sfx-m-thunderbolt\",\"overdrive\":\"sfx-m-thunderbolt\",\"thunderclap\":\"sfx-m-thunderbolt\",\"volt-tackle\":\"sfx-m-thunderbolt\",\"wild-charge\":\"sfx-m-thunderbolt\",\"thunder\":\"sfx-m-thunder\",\"thunder-wave\":\"sfx-m-thunder-wave\",\"electroweb\":\"sfx-m-thunder-wave\",\"charge\":\"sfx-m-charge\",\"vine-whip\":\"sfx-m-razor-wind\",\"razor-leaf\":\"sfx-m-razor-wind\",\"leafage\":\"sfx-m-razor-wind\",\"leaf-blade\":\"sfx-m-cut\",\"trailblaze\":\"sfx-m-razor-wind\",\"energy-ball\":\"sfx-m-razor-wind\",\"seed-bomb\":\"sfx-m-rock-throw\",\"petal-dance\":\"sfx-m-razor-wind\",\"solar-beam\":\"sfx-m-solar-beam\",\"chloroblast\":\"sfx-m-solar-beam\",\"frenzy-plant\":\"sfx-m-solar-beam\",\"absorb\":\"sfx-m-giga-drain\",\"mega-drain\":\"sfx-m-giga-drain\",\"giga-drain\":\"sfx-m-giga-drain\",\"spore\":\"sfx-m-powder\",\"sleep-powder\":\"sfx-m-powder\",\"poison-powder\":\"sfx-m-powder\",\"stun-spore\":\"sfx-m-powder\",\"ice-beam\":\"sfx-m-icy-wind\",\"icy-wind\":\"sfx-m-icy-wind\",\"glaciate\":\"sfx-m-icy-wind\",\"avalanche\":\"sfx-m-icy-wind\",\"ice-shard\":\"sfx-m-icy-wind\",\"ice-punch\":\"sfx-m-icy-wind\",\"freeze-dry\":\"sfx-m-icy-wind\",\"blizzard\":\"sfx-m-blizzard\",\"hail\":\"sfx-m-blizzard\",\"sheer-cold\":\"sfx-m-blizzard\",\"mist\":\"sfx-m-mist\",\"confusion\":\"sfx-m-psybeam\",\"psybeam\":\"sfx-m-psybeam\",\"psychic\":\"sfx-m-psybeam\",\"psyshock\":\"sfx-m-psybeam\",\"psystrike\":\"sfx-m-psybeam\",\"psywave\":\"sfx-m-psybeam\",\"extrasensory\":\"sfx-m-psybeam\",\"future-sight\":\"sfx-m-psybeam\",\"hypnosis\":\"sfx-m-psybeam\",\"synchronoise\":\"sfx-m-psybeam\",\"gravity\":\"sfx-m-psybeam\",\"zen-headbutt\":\"sfx-m-psybeam\",\"barrier\":\"sfx-m-barrier\",\"reflect\":\"sfx-m-barrier\",\"light-screen\":\"sfx-m-barrier\",\"safeguard\":\"sfx-m-barrier\",\"teleport\":\"sfx-m-barrier\",\"shadow-ball\":\"sfx-m-confuse-ray\",\"hex\":\"sfx-m-confuse-ray\",\"night-shade\":\"sfx-m-confuse-ray\",\"poltergeist\":\"sfx-m-confuse-ray\",\"astonish\":\"sfx-m-confuse-ray\",\"nightmare\":\"sfx-m-confuse-ray\",\"confuse-ray\":\"sfx-m-confuse-ray\",\"ominous-wind\":\"sfx-m-confuse-ray\",\"shadow-claw\":\"sfx-m-cut\",\"shadow-sneak\":\"sfx-m-faint-attack\",\"lick\":\"sfx-m-lick\",\"bite\":\"sfx-m-bite\",\"crunch\":\"sfx-m-bite\",\"hyper-fang\":\"sfx-m-bite\",\"faint-attack\":\"sfx-m-faint-attack\",\"pursuit\":\"sfx-m-faint-attack\",\"assurance\":\"sfx-m-faint-attack\",\"payback\":\"sfx-m-faint-attack\",\"punishment\":\"sfx-m-faint-attack\",\"snarl\":\"sfx-m-faint-attack\",\"thief\":\"sfx-m-faint-attack\",\"feint\":\"sfx-m-faint-attack\",\"dark-pulse\":\"sfx-m-confuse-ray\",\"sucker-punch\":\"sfx-m-faint-attack\",\"night-slash\":\"sfx-m-cut\",\"karate-chop\":\"sfx-m-brick-break\",\"cross-chop\":\"sfx-m-brick-break\",\"brick-break\":\"sfx-m-brick-break\",\"dynamic-punch\":\"sfx-m-brick-break\",\"submission\":\"sfx-m-brick-break\",\"superpower\":\"sfx-m-brick-break\",\"counter\":\"sfx-m-brick-break\",\"close-combat\":\"sfx-m-brick-break\",\"focus-blast\":\"sfx-m-hyper-beam\",\"aura-sphere\":\"sfx-m-swift\",\"low-kick\":\"sfx-m-sky-uppercut\",\"sky-uppercut\":\"sfx-m-sky-uppercut\",\"reversal\":\"sfx-m-sky-uppercut\",\"mach-punch\":\"sfx-m-sky-uppercut\",\"high-jump-kick\":\"sfx-m-sky-uppercut\",\"drain-punch\":\"sfx-m-brick-break\",\"rock-throw\":\"sfx-m-rock-throw\",\"rock-slide\":\"sfx-m-rock-throw\",\"rollout\":\"sfx-m-rock-throw\",\"stone-edge\":\"sfx-m-rock-throw\",\"power-gem\":\"sfx-m-swift\",\"spikes\":\"sfx-m-rock-throw\",\"earthquake\":\"sfx-m-earthquake\",\"magnitude\":\"sfx-m-earthquake\",\"bulldoze\":\"sfx-m-earthquake\",\"fissure\":\"sfx-m-earthquake\",\"earth-power\":\"sfx-m-earthquake\",\"dig\":\"sfx-m-dig\",\"sand-tomb\":\"sfx-m-dig\",\"mud-shot\":\"sfx-m-dig\",\"bonemerang\":\"sfx-m-bonemerang\",\"toxic\":\"sfx-m-toxic\",\"acid\":\"sfx-m-toxic\",\"sludge\":\"sfx-m-toxic\",\"sludge-bomb\":\"sfx-m-toxic\",\"venoshock\":\"sfx-m-toxic\",\"belch\":\"sfx-m-toxic\",\"purify\":\"sfx-m-toxic\",\"poison-jab\":\"sfx-m-horn-attack\",\"smog\":\"sfx-m-mist\",\"megahorn\":\"sfx-m-horn-attack\",\"twineedle\":\"sfx-m-horn-attack\",\"lunge\":\"sfx-m-horn-attack\",\"pounce\":\"sfx-m-horn-attack\",\"x-scissor\":\"sfx-m-cut\",\"bug-buzz\":\"sfx-m-supersonic\",\"signal-beam\":\"sfx-m-psybeam\",\"steamroller\":\"sfx-m-headbutt\",\"infestation\":\"sfx-m-string-shot\",\"string-shot\":\"sfx-m-string-shot\",\"wrap\":\"sfx-m-string-shot\",\"bind\":\"sfx-m-string-shot\",\"constrict\":\"sfx-m-string-shot\",\"gust\":\"sfx-m-gust\",\"hurricane\":\"sfx-m-gust\",\"whirlwind\":\"sfx-m-gust\",\"tailwind\":\"sfx-m-gust\",\"air-slash\":\"sfx-m-cut\",\"wing-attack\":\"sfx-m-wing-attack\",\"peck\":\"sfx-m-horn-attack\",\"pluck\":\"sfx-m-wing-attack\",\"acrobatics\":\"sfx-m-wing-attack\",\"aeroblast\":\"sfx-m-wing-attack\",\"fly\":\"sfx-m-wing-attack\",\"bounce\":\"sfx-m-wing-attack\",\"brave-bird\":\"sfx-m-wing-attack\",\"twister\":\"sfx-m-dragon-rage\",\"outrage\":\"sfx-m-dragon-rage\",\"dragon-rage\":\"sfx-m-dragon-rage\",\"dragon-pulse\":\"sfx-m-dragon-rage\",\"dragon-claw\":\"sfx-m-cut\",\"draco-meteor\":\"sfx-m-explosion\",\"cut\":\"sfx-m-cut\",\"slash\":\"sfx-m-cut\",\"guillotine\":\"sfx-m-cut\",\"steel-wing\":\"sfx-m-cut\",\"iron-tail\":\"sfx-m-headbutt\",\"meteor-mash\":\"sfx-m-brick-break\",\"flash-cannon\":\"sfx-m-hyper-beam\",\"scratch\":\"sfx-m-scratch\",\"tackle\":\"sfx-m-headbutt\",\"headbutt\":\"sfx-m-headbutt\",\"quick-attack\":\"sfx-m-headbutt\",\"pound\":\"sfx-m-headbutt\",\"slam\":\"sfx-m-headbutt\",\"stomp\":\"sfx-m-headbutt\",\"thrash\":\"sfx-m-headbutt\",\"flail\":\"sfx-m-headbutt\",\"strength\":\"sfx-m-headbutt\",\"rapid-spin\":\"sfx-m-headbutt\",\"body-slam\":\"sfx-m-headbutt\",\"take-down\":\"sfx-m-headbutt\",\"double-edge\":\"sfx-m-headbutt\",\"extreme-speed\":\"sfx-m-headbutt\",\"giga-impact\":\"sfx-m-explosion\",\"swift\":\"sfx-m-swift\",\"tri-attack\":\"sfx-m-swift\",\"barrage\":\"sfx-m-swift\",\"present\":\"sfx-m-swift\",\"judgment\":\"sfx-m-hyper-beam\",\"hyper-beam\":\"sfx-m-hyper-beam\",\"explosion\":\"sfx-m-explosion\",\"self-destruct\":\"sfx-m-explosion\",\"boomburst\":\"sfx-m-explosion\",\"last-resort\":\"sfx-m-explosion\",\"charm\":\"sfx-m-charm\",\"moonblast\":\"sfx-m-charm\",\"moonlight\":\"sfx-m-charm\",\"wish\":\"sfx-m-charm\",\"dazzling-gleam\":\"sfx-m-charm\",\"play-rough\":\"sfx-m-headbutt\",\"sing\":\"sfx-m-supersonic\",\"round\":\"sfx-m-supersonic\",\"supersonic\":\"sfx-m-supersonic\",\"screech\":\"sfx-m-supersonic\",\"uproar\":\"sfx-m-supersonic\",\"roar\":\"sfx-m-supersonic\",\"snore\":\"sfx-m-supersonic\",\"yawn\":\"sfx-m-supersonic\",\"encore\":\"sfx-m-supersonic\",\"wail\":\"sfx-m-supersonic\",\"metronome\":\"sfx-m-metronome\",\"transform\":\"sfx-m-metronome\",\"disable\":\"sfx-m-metronome\",\"bestow\":\"sfx-m-metronome\",\"covet\":\"sfx-m-metronome\",\"bide\":\"sfx-m-metronome\",\"stockpile\":\"sfx-m-stat-up\",\"block\":\"sfx-m-barrier\",\"glare\":\"sfx-m-confuse-ray\",\"tickle\":\"sfx-m-charm\"};const _origMove=this.move?.bind(this);this.move=(key,phase,opts={})=>{const sid=_mvMap[key];if(sid){if(phase===\"charge\"||phase===\"warn\")return _play(\"sfx-m-charge\",{volume:Math.min(1,(opts?.v??1)*0.85)});return _play(sid,{volume:Math.max(0.5,Math.min(1.15,opts?.v??1))})}return _origMove?Boolean(_origMove(key,phase,opts)):!1};const _origShot=this.shot?.bind(this);this.shot=(tp,v=0.5)=>{if(!_play(_typeMap[tp]||\"sfx-m-swift\",{volume:Math.max(0.55,Math.min(1.15,(v||0.5)*1.35))}))_origShot?.(tp,v)};const _origBeam=this.beam?.bind(this);this.beam=(tp)=>{const bm={ice:\"sfx-m-icy-wind\",grass:\"sfx-m-solar-beam\",psychic:\"sfx-m-psybeam\",water:\"sfx-m-hydro-pump\",electric:\"sfx-m-thunderbolt\",fire:\"sfx-m-flamethrower\"};if(!_play(bm[tp]||\"sfx-m-hyper-beam\"))_origBeam?.(tp)};const _origCone=this.cone?.bind(this);this.cone=(tp,d)=>{const cm={fire:\"sfx-m-flamethrower\",water:\"sfx-m-surf\",ice:\"sfx-m-blizzard\",flying:\"sfx-m-gust\",dragon:\"sfx-m-dragon-rage\",poison:\"sfx-m-toxic\"};if(!_play(cm[tp]||\"sfx-m-flamethrower\"))_origCone?.(tp,d)};const _origBoom=this.boom?.bind(this);this.boom=(s=1)=>{if(!_play(\"sfx-m-explosion\",{volume:Math.max(0.65,Math.min(1.2,0.7+(s||1)*0.28))}))_origBoom?.(s)};const _origNova=this.nova?.bind(this);this.nova=(tp)=>{const nm={fire:\"sfx-m-flamethrower\",water:\"sfx-m-surf\",electric:\"sfx-m-thunderbolt\",ice:\"sfx-m-blizzard\",psychic:\"sfx-m-psybeam\",ghost:\"sfx-m-confuse-ray\",ground:\"sfx-m-earthquake\",dragon:\"sfx-m-dragon-rage\",fairy:\"sfx-m-charm\"};if(!_play(nm[tp]||\"sfx-m-explosion\"))_origNova?.(tp)};setTimeout(()=>{const pre=[\"sfx-click\",\"sfx-hover\",\"sfx-deny\",\"sfx-win-open\",\"sfx-use-item\",\"sfx-hit-normal\",\"sfx-hit-super\",\"sfx-hit-weak\",\"sfx-ko\",\"sfx-xp\",\"sfx-coin\",\"sfx-shiny\",\"sfx-ball-open\",\"sfx-ball-shake\",\"sfx-ball-click\",\"sfx-m-ember\",\"sfx-m-flamethrower\",\"sfx-m-bubble\",\"sfx-m-surf\",\"sfx-m-thunderbolt\",\"sfx-m-razor-wind\",\"sfx-m-icy-wind\",\"sfx-m-psybeam\",\"sfx-m-confuse-ray\",\"sfx-m-bite\",\"sfx-m-brick-break\",\"sfx-m-cut\",\"sfx-m-headbutt\",\"sfx-m-swift\",\"sfx-m-hyper-beam\",\"sfx-m-explosion\",\"sfx-m-rock-throw\",\"sfx-m-earthquake\",\"sfx-level-up\",\"sfx-item-get\",\"sfx-heal\"];const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const defs=_ensureDefs();if(!defs)return;for(const id of pre){const d=defs[id];if(!d||cache.has(id))continue;cache.set(id,\"loading\");fetch(h(d.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b)cache.set(id,b)}).catch(()=>{cache.delete(id)})}},350)}let r=e.createBiquadFilter();r.type=`highshelf`,r.frequency.value=2800"
         }
       ]
     }
