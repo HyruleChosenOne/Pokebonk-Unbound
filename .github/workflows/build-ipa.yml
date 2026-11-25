@@ -1,0 +1,136 @@
+name: Build Experimental iOS IPA
+
+on:
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 'iOS edition to compile'
+        type: choice
+        required: true
+        default: 'both'
+        options:
+          - both
+          - complete
+          - portable
+      source_repo:
+        description: 'Private source repo (owner/name). Leave empty when running inside the private source repo itself.'
+        type: string
+        required: false
+        default: ''
+      upload_to_release:
+        description: 'Upload resulting .ipa files to HyruleChosenOne/Pokebonk-Unbound experimental-apple release (requires RELEASE_TOKEN secret if running from another repo)'
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  build-ios-ipa:
+    name: Build Unsigned iOS IPA (${{ inputs.edition }})
+    runs-on: macos-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout client source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.source_repo != '' && inputs.source_repo || github.repository }}
+          token: ${{ secrets.PRIVATE_SOURCE_TOKEN || github.token }}
+
+      - name: Verify private client sources are present
+        shell: bash
+        run: |
+          if [ ! -f "ios/project.yml" ] || [ ! -f "scripts/build-ios.js" ] || [ ! -f "package.json" ]; then
+            echo "::error::Client source files (ios/project.yml, scripts/build-ios.js, package.json) were not found in this checkout."
+            echo "Because the public HyruleChosenOne/Pokebonk-Unbound repository intentionally excludes private client source code:"
+            echo "  Option A (Recommended): Push the full private workspace (including .github/workflows/build-ipa.yml) to a private GitHub repository and run this workflow there."
+            echo "  Option B: Add a PRIVATE_SOURCE_TOKEN PAT secret with read access to your private source repo and pass owner/private-repo in the source_repo input."
+            exit 1
+          fi
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install production Node dependencies
+        shell: bash
+        run: |
+          npm ci --omit=dev --no-audit --no-fund || npm install --omit=dev --no-audit --no-fund
+
+      - name: Install XcodeGen
+        shell: bash
+        run: |
+          brew list xcodegen >/dev/null 2>&1 || brew install xcodegen
+          xcodegen --version
+          xcodebuild -version
+
+      - name: Cache NodeMobile iOS XCFramework
+        uses: actions/cache@v4
+        with:
+          path: ios/Frameworks/NodeMobile.xcframework
+          key: nodemobile-ios-v18.20.4
+
+      - name: Prepare bundled offline game assets (Complete edition)
+        if: inputs.edition == 'complete' || inputs.edition == 'both'
+        shell: bash
+        run: |
+          if [ ! -f "bundled-build/index.html" ]; then
+            echo "bundled-build/ not found in repo — running npm run bundle:offline..."
+            npm run bundle:offline
+          else
+            echo "Using existing bundled-build/ snapshot."
+          fi
+
+      - name: Build unsigned arm64 iOS IPA(s)
+        shell: bash
+        run: |
+          case "${{ inputs.edition }}" in
+            complete)
+              node scripts/build-ios.js --complete
+              ;;
+            portable)
+              node scripts/build-ios.js --portable
+              ;;
+            both)
+              node scripts/build-ios.js --all
+              ;;
+            *)
+              echo "::error::Unknown edition: ${{ inputs.edition }}"
+              exit 1
+              ;;
+          esac
+
+      - name: Verify IPA package integrity
+        shell: bash
+        run: |
+          ls -lh dist-ios/*.ipa
+          for ipa in dist-ios/*.ipa; do
+            echo "=== Inspecting $ipa ==="
+            entries=$(unzip -Z1 "$ipa")
+            echo "$entries" | grep -q "^Payload/PokeBonkUnbound.app/PokeBonkUnbound$" || { echo "::error::Missing Mach-O executable in $ipa"; exit 1; }
+            echo "$entries" | grep -q "^Payload/PokeBonkUnbound.app/Info.plist$" || { echo "::error::Missing Info.plist in $ipa"; exit 1; }
+            echo "$entries" | grep -q "^Payload/PokeBonkUnbound.app/nodejs-project.zip$" || { echo "::error::Missing nodejs-project.zip in $ipa"; exit 1; }
+            echo "$entries" | grep -q "NodeMobile.framework" || { echo "::error::Missing embedded NodeMobile.framework in $ipa"; exit 1; }
+            if [[ "$ipa" == *"Complete"* ]]; then
+              echo "$entries" | grep -q "^Payload/PokeBonkUnbound.app/bundled-build.zip$" || { echo "::error::Complete IPA missing bundled-build.zip in $ipa"; exit 1; }
+            fi
+            echo "OK: $ipa structure verified."
+          done
+
+      - name: Upload unsigned IPA artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokebonk-unbound-ios-ipa-${{ inputs.edition }}
+          path: dist-ios/*.ipa
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Upload IPA(s) to experimental-apple GitHub release (optional)
+        if: inputs.upload_to_release == true
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN || github.token }}
+        shell: bash
+        run: |
+          gh release upload experimental-apple dist-ios/*.ipa \
+            --repo HyruleChosenOne/Pokebonk-Unbound \
+            --clobber
