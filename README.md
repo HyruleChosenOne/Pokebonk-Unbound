@@ -44,7 +44,7 @@
 - **Streamlined Unbound Settings, Deferred Refresh & Reworked Mod Browser**
   - Clean desktop top toolbar (`Mode | Saves | Unbound Settings`) and streamlined Android 3-panel layout (`Settings | Mods | Versions`) with built-in **Mod Browser** and **Mod Configs** inside the **Mods** panel.
   - Toggling mods or settings displays an unobtrusive **Refresh Required** button so you can make multiple changes and refresh the game once when ready.
-  - Reworked **Mod Browser** with **Hyrule's Collection** pinned as **Essential**, auto-enabled downloads by default, **Installed Mods** grouped at the bottom, **Gameplay** / **Client** Co-op scope badges, **Featured** star highlights & filter (highlighting **Hyrule's Collection** and **Gen 3-9** packs), live **Total Downloads** counters, exact **Mod Size**, full-sized thumbnail previews with click-to-expand lightbox, and fast 1-click installs from `HyruleChosenOne/Pokebonk-Unbound` or any custom GitHub `owner/repo`.
+  - Reworked **Mod Browser** with **Grid** & **List** views, **Sort** controls (Featured, Most Downloaded, Name, Size), a collapsible GitHub **Source** drawer, **Hyrule's Collection** pinned as **Essential** (now with **Unlock All Wardrobe**), auto-enabled downloads by default, **Installed Mods** grouped at the bottom, a sticky **Installed / Mod Browser / Mod Settings** bar on Android, **Gameplay** / **Client** Co-op scope badges, **Featured** star highlights & filter, live **Total Downloads** counters, exact **Mod Size**, full-sized thumbnail previews with click-to-expand lightbox, and fast 1-click installs from `HyruleChosenOne/Pokebonk-Unbound` or any custom GitHub `owner/repo`.
 
 ---
 

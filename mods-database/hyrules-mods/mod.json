@@ -1,7 +1,7 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scope": "client",
   "author": "HyruleChosenOne",
   "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
@@ -453,6 +453,15 @@
               2022,
               2023
             ]
+          },
+          "reload": true
+        },
+        {
+          "id": "unlock-all-wardrobe",
+          "label": "Unlock All Wardrobe (Skins, Looks & Cosmetics)",
+          "type": "profile-mutate",
+          "mutation": {
+            "unlockAllWardrobe": true
           },
           "reload": true
         },

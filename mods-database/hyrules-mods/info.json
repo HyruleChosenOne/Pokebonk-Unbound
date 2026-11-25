@@ -1,7 +1,7 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "HyruleChosenOne",
   "category": "Quality of Life",
   "scope": "client",
@@ -14,7 +14,7 @@
     "Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub",
     "Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining",
     "Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)",
-    "Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, and Trainer Save Utilities)"
+    "Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, Unlock All Wardrobe, and Trainer Save Utilities)"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"

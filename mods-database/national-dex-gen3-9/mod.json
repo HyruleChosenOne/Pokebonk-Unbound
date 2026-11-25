@@ -1,10 +1,9 @@
 {
   "id": "national-dex-gen3-9",
   "name": "National Dex Expansion (Gen 3-9: Hoenn to Paldea)",
-  "version": "1.0.0",
-  "scope": "gameplay",
+  "version": "1.1.0",
   "author": "HyruleChosenOne",
-  "description": "Adds all 7 Gen 3-9 Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom Gen 3-9 attacks, 24 signature Ultimates, 419 playable base families, and 774 species. Pure Pokémon & attacks expansion (zero bundled levels — pair with Gen 3-9 Regions & Levels Pack for regional maps).",
+  "description": "Adds all 7 Gen 3-9 Pokémon generations (#252-#1025: Hoenn, Sinnoh, Unova, Kalos, Alola, Galar & Paldea) with 72 custom moves, 24 signature Ultimates, 419 playable base families, 774 species, full official-color Classic Shiny sprites, and bespoke alternative-palette Shiny sprites.",
   "tags": [
     "gen3",
     "gen4",
@@ -14,9 +13,98 @@
     "gen8",
     "gen9",
     "custom-moves",
+    "dual-shinies",
     "national-dex"
   ],
   "maxDex": 1025,
+  "assetsDir": "assets",
+  "bundlePatches": [
+    {
+      "matchFile": "^assets/cosmetics-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "function (\\w+)\\(e,t\\)\\{return t===`shiny`\\?e:t===`spectral`\\?-e:t===`classic`\\?(\\w+)\\+e:t===`t1`\\?(\\w+)\\[0\\]\\+e:t===`t2`\\?\\3\\[1\\]\\+e:t===`l1`\\?(\\w+)\\[0\\]\\+e:t===`l2`\\?\\4\\[1\\]\\+e:t===`l3`\\?\\4\\[2\\]\\+e:t===`st`\\?(\\w+)\\+e:t===`vg`\\?(\\w+)\\+e:t===`my`\\?(\\w+)\\+e:\\(t===`m1`\\?(\\w+)\\[0\\]:\\8\\[1\\]\\)\\+e\\}function (\\w+)\\(e\\)\\{return!Number\\.isInteger\\(e\\)\\|\\|e===0\\?null:e<0\\?e>-1e3\\?\\{member:-e,look:`spectral`\\}:null:e<1e3\\?\\{member:e,look:`shiny`\\}:e<\\8\\[0\\]\\?\\{member:e-\\2,look:`classic`\\}:e<\\8\\[1\\]\\?\\{member:e-\\8\\[0\\],look:`m1`\\}:e<\\8\\[1\\]\\+1e3\\?\\{member:e-\\8\\[1\\],look:`m2`\\}:e<\\3\\[0\\]\\+1e3\\?\\{member:e-\\3\\[0\\],look:`t1`\\}:e<\\3\\[1\\]\\+1e3\\?\\{member:e-\\3\\[1\\],look:`t2`\\}:e<\\4\\[0\\]\\+1e3\\?\\{member:e-\\4\\[0\\],look:`l1`\\}:e<\\4\\[1\\]\\+1e3\\?\\{member:e-\\4\\[1\\],look:`l2`\\}:e<\\4\\[2\\]\\+1e3\\?\\{member:e-\\4\\[2\\],look:`l3`\\}:e<1e4\\?\\{member:e-\\5,look:`st`\\}:e<11e3\\?\\{member:e-\\6,look:`vg`\\}:e<12e3\\?\\{member:e-\\7,look:`my`\\}:null\\}",
+          "flags": "",
+          "replace": "function $1(e,t){if(e>=1e3){if(t===`spectral`)return-(1e5+e);const b={shiny:1,classic:2,m1:3,m2:4,t1:5,t2:6,l1:7,l2:8,l3:9,st:10,vg:11,my:12}[t]||1;return b*1e5+e}return t===`shiny`?e:t===`spectral`?-e:t===`classic`?$2+e:t===`t1`?$3[0]+e:t===`t2`?$3[1]+e:t===`l1`?$4[0]+e:t===`l2`?$4[1]+e:t===`l3`?$4[2]+e:t===`st`?$5+e:t===`vg`?$6+e:t===`my`?$7+e:(t===`m1`?$8[0]:$8[1])+e}function $9(e){if(!Number.isInteger(e)||e===0)return null;if(e<=-1e5)return{member:-e-1e5,look:`spectral`};if(e>=1e5){const b=Math.floor(e/1e5),m=e%1e5,k=[null,`shiny`,`classic`,`m1`,`m2`,`t1`,`t2`,`l1`,`l2`,`l3`,`st`,`vg`,`my`][b];return k&&m>0?{member:m,look:k}:null}return e<0?e>-1e3?{member:-e,look:`spectral`}:null:e<1e3?{member:e,look:`shiny`}:e<$8[0]?{member:e-$2,look:`classic`}:e<$8[1]?{member:e-$8[0],look:`m1`}:e<$8[1]+1e3?{member:e-$8[1],look:`m2`}:e<$3[0]+1e3?{member:e-$3[0],look:`t1`}:e<$3[1]+1e3?{member:e-$3[1],look:`t2`}:e<$4[0]+1e3?{member:e-$4[0],look:`l1`}:e<$4[1]+1e3?{member:e-$4[1],look:`l2`}:e<$4[2]+1e3?{member:e-$4[2],look:`l3`}:e<1e4?{member:e-$5,look:`st`}:e<11e3?{member:e-$6,look:`vg`}:e<12e3?{member:e-$7,look:`my`}:null}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/dom-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)",
+          "flags": "",
+          "replace": "if(t===`shiny`&&e>=252&&e<=1025){r.onerror=()=>{r.onerror=null,i(),r.style.filter=K(e)},r.src=h(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)"
+        },
+        {
+          "mode": "regex",
+          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?h\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?h\\(`pmd/\\$\\{e\\}\\.png`\\):h\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):h\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
+          "flags": "",
+          "replace": "re=d==null?t===`classic`&&p?.anims?h(`pmd-shiny/${e}.png`):t===`shiny`&&e>=252&&e<=1025&&p?.anims?h(`pmd-alt-shiny/${e}.png`):p?.anims?h(`pmd/${e}.png`):h(p?.fallback??`front/${e}.png`):h(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$1(e):d==null&&t===`shiny`&&e>=252&&e<=1025?``:$2(t,e);"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/relay-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "var (\\w+)=\\(e,t\\)=>t===`classic`\\?(\\w+)\\+e:e,",
+          "flags": "",
+          "replace": "var $1=(e,t)=>t===`classic`?$2+e:t===`shiny`&&e>=252&&e<=1025?4e4+e:e,"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/moves-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "function (\\w+)\\(e,t\\)\\{let n=(\\w+)\\[e\\];return n===void 0\\?t\\+Math\\.min\\(\\.99,(\\w+)\\(e\\)\\):\\(t===5\\?13:t===9\\?11:12\\)\\+Math\\.min\\(\\.99,n\\)\\}",
+          "flags": "",
+          "replace": "function $1(e,t){if(e>=252&&e<=1025)return t===5?1:t===10?3:0;let n=$2[e];return n===void 0?t+Math.min(.99,$3(e)):(t===5?13:t===9?11:12)+Math.min(.99,n)}"
+        },
+        {
+          "mode": "regex",
+          "find": "let o=!i&&e>=3e4,s=!i&&!o&&e>=2e4;this\\.sid=s\\?e-(\\w+):e,",
+          "flags": "",
+          "replace": "let aS=!i&&e>=4e4,o=!i&&!aS&&e>=3e4,s=!i&&!aS&&!o&&e>=2e4;this.sid=aS?e-4e4:s?e-$1:e,"
+        },
+        {
+          "mode": "regex",
+          "find": "\\$\\{o\\?`pmd-forms`:s\\?`pmd-shiny`:`pmd`\\}/\\$\\{this\\.sid\\}\\.png",
+          "flags": "",
+          "replace": "${aS?`pmd-alt-shiny`:o?`pmd-forms`:s?`pmd-shiny`:`pmd`}/${this.sid}.png"
+        },
+        {
+          "mode": "regex",
+          "find": "\\(f&131072\\?(\\w+):0\\)\\+this\\.species\\[r\\]",
+          "flags": "",
+          "replace": "(f&131072?$1:f&2048&&this.species[r]>=252&&this.species[r]<=1025?4e4:0)+this.species[r]"
+        },
+        {
+          "mode": "regex",
+          "find": "\\(this\\.flags\\[t\\]&131072\\?(\\w+):0\\)\\+this\\.species\\[t\\]",
+          "flags": "",
+          "replace": "(this.flags[t]&131072?$1:this.flags[t]&2048&&this.species[t]>=252&&this.species[t]<=1025?4e4:0)+this.species[t]"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/main-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "let s=i\\?t\\.sprites\\.get\\(a\\):t\\.sprites\\.get\\((\\w+)\\(e\\.species,r\\)\\)",
+          "flags": "",
+          "replace": "let s=i?t.sprites.get(a):t.sprites.get($1(e.species,r||(n.flags&$.shiny?`shiny`:null)))"
+        }
+      ]
+    }
+  ],
   "regions": [
     {
       "id": "hoenn",
@@ -120,7 +208,7 @@
   "customMoves": [
     {
       "key": "g3-leaf-blade",
-      "name": "Hoenn Leaf Blade",
+      "name": "Leaf Blade",
       "type": "grass",
       "cls": "physical",
       "power": 90,
@@ -137,7 +225,7 @@
     },
     {
       "key": "g4-wood-hammer",
-      "name": "Sinnoh Wood Hammer",
+      "name": "Wood Hammer",
       "type": "grass",
       "cls": "physical",
       "power": 110,
@@ -151,7 +239,7 @@
     },
     {
       "key": "g7-spirit-leaf",
-      "name": "Alola Trop Kick",
+      "name": "Trop Kick",
       "type": "grass",
       "cls": "physical",
       "power": 75,
@@ -166,7 +254,7 @@
     },
     {
       "key": "g9-flower-trick",
-      "name": "Paldea Flower Trick",
+      "name": "Flower Trick",
       "type": "grass",
       "cls": "physical",
       "power": 85,
@@ -182,7 +270,7 @@
     },
     {
       "key": "g3-blaze-kick",
-      "name": "Hoenn Blaze Kick",
+      "name": "Blaze Kick",
       "type": "fire",
       "cls": "physical",
       "power": 85,
@@ -201,7 +289,7 @@
     },
     {
       "key": "g5-fusion-flare",
-      "name": "Unova Fusion Flare",
+      "name": "Fusion Flare",
       "type": "fire",
       "cls": "special",
       "power": 105,
@@ -219,7 +307,7 @@
     },
     {
       "key": "g8-pyro-ball",
-      "name": "Galar Pyro Ball",
+      "name": "Pyro Ball",
       "type": "fire",
       "cls": "physical",
       "power": 115,
@@ -237,7 +325,7 @@
     },
     {
       "key": "g9-torch-song",
-      "name": "Paldea Torch Song",
+      "name": "Torch Song",
       "type": "fire",
       "cls": "special",
       "power": 85,
@@ -256,7 +344,7 @@
     },
     {
       "key": "g3-muddy-water",
-      "name": "Hoenn Muddy Water",
+      "name": "Muddy Water",
       "type": "water",
       "cls": "special",
       "power": 90,
@@ -272,7 +360,7 @@
     },
     {
       "key": "g6-water-shuriken",
-      "name": "Kalos Water Shuriken",
+      "name": "Water Shuriken",
       "type": "water",
       "cls": "special",
       "power": 65,
@@ -289,7 +377,7 @@
     },
     {
       "key": "g8-snipe-shot",
-      "name": "Galar Snipe Shot",
+      "name": "Snipe Shot",
       "type": "water",
       "cls": "special",
       "power": 85,
@@ -304,7 +392,7 @@
     },
     {
       "key": "g9-aqua-step",
-      "name": "Paldea Aqua Step",
+      "name": "Aqua Step",
       "type": "water",
       "cls": "physical",
       "power": 85,
@@ -321,7 +409,7 @@
     },
     {
       "key": "g4-discharge-arc",
-      "name": "Sinnoh Discharge Arc",
+      "name": "Discharge",
       "type": "electric",
       "cls": "special",
       "power": 85,
@@ -339,7 +427,7 @@
     },
     {
       "key": "g5-fusion-bolt",
-      "name": "Unova Fusion Bolt",
+      "name": "Fusion Bolt",
       "type": "electric",
       "cls": "physical",
       "power": 105,
@@ -357,7 +445,7 @@
     },
     {
       "key": "g9-electro-drift",
-      "name": "Paldea Electro Drift",
+      "name": "Electro Drift",
       "type": "electric",
       "cls": "special",
       "power": 110,
@@ -375,7 +463,7 @@
     },
     {
       "key": "g9-thunderclap",
-      "name": "Ancestral Thunderclap",
+      "name": "Thunderclap",
       "type": "electric",
       "cls": "special",
       "power": 95,
@@ -396,7 +484,7 @@
     },
     {
       "key": "g3-psycho-boost",
-      "name": "Hoenn Psycho Boost",
+      "name": "Psycho Boost",
       "type": "psychic",
       "cls": "special",
       "power": 120,
@@ -411,7 +499,7 @@
     },
     {
       "key": "g4-psycho-cut",
-      "name": "Sinnoh Psycho Cut",
+      "name": "Psycho Cut",
       "type": "psychic",
       "cls": "physical",
       "power": 80,
@@ -429,7 +517,7 @@
     },
     {
       "key": "g7-photon-geyser",
-      "name": "Alola Photon Geyser",
+      "name": "Photon Geyser",
       "type": "psychic",
       "cls": "special",
       "power": 105,
@@ -445,7 +533,7 @@
     },
     {
       "key": "g9-lumina-crash",
-      "name": "Paldea Lumina Crash",
+      "name": "Lumina Crash",
       "type": "psychic",
       "cls": "special",
       "power": 90,
@@ -460,7 +548,7 @@
     },
     {
       "key": "g4-night-slash",
-      "name": "Sinnoh Night Slash",
+      "name": "Night Slash",
       "type": "dark",
       "cls": "physical",
       "power": 80,
@@ -477,7 +565,7 @@
     },
     {
       "key": "g7-darkest-lariat",
-      "name": "Alola Darkest Lariat",
+      "name": "Darkest Lariat",
       "type": "dark",
       "cls": "physical",
       "power": 95,
@@ -493,7 +581,7 @@
     },
     {
       "key": "g8-wicked-blow",
-      "name": "Galar Wicked Blow",
+      "name": "Wicked Blow",
       "type": "dark",
       "cls": "physical",
       "power": 95,
@@ -509,7 +597,7 @@
     },
     {
       "key": "g9-kowtow-cleave",
-      "name": "Paldea Kowtow Cleave",
+      "name": "Kowtow Cleave",
       "type": "dark",
       "cls": "physical",
       "power": 95,
@@ -525,7 +613,7 @@
     },
     {
       "key": "g4-shadow-force",
-      "name": "Sinnoh Shadow Force",
+      "name": "Shadow Force",
       "type": "ghost",
       "cls": "physical",
       "power": 115,
@@ -539,7 +627,7 @@
     },
     {
       "key": "g7-spirit-shackle",
-      "name": "Alola Spirit Shackle",
+      "name": "Spirit Shackle",
       "type": "ghost",
       "cls": "physical",
       "power": 85,
@@ -557,7 +645,7 @@
     },
     {
       "key": "g8-astral-barrage",
-      "name": "Galar Astral Barrage",
+      "name": "Astral Barrage",
       "type": "ghost",
       "cls": "special",
       "power": 115,
@@ -573,7 +661,7 @@
     },
     {
       "key": "g9-bitter-blade",
-      "name": "Paldea Bitter Blade",
+      "name": "Bitter Blade",
       "type": "ghost",
       "cls": "physical",
       "power": 95,
@@ -589,7 +677,7 @@
     },
     {
       "key": "g3-dragon-ascent",
-      "name": "Hoenn Dragon Ascent",
+      "name": "Dragon Ascent",
       "type": "dragon",
       "cls": "physical",
       "power": 120,
@@ -604,7 +692,7 @@
     },
     {
       "key": "g4-spacial-rend",
-      "name": "Sinnoh Spacial Rend",
+      "name": "Spacial Rend",
       "type": "dragon",
       "cls": "special",
       "power": 105,
@@ -620,7 +708,7 @@
     },
     {
       "key": "g8-dragon-darts",
-      "name": "Galar Dragon Darts",
+      "name": "Dragon Darts",
       "type": "dragon",
       "cls": "physical",
       "power": 85,
@@ -636,7 +724,7 @@
     },
     {
       "key": "g9-glaive-rush",
-      "name": "Paldea Glaive Rush",
+      "name": "Glaive Rush",
       "type": "dragon",
       "cls": "physical",
       "power": 115,
@@ -651,7 +739,7 @@
     },
     {
       "key": "g3-meteor-mash",
-      "name": "Hoenn Meteor Mash",
+      "name": "Meteor Mash",
       "type": "steel",
       "cls": "physical",
       "power": 95,
@@ -666,7 +754,7 @@
     },
     {
       "key": "g7-sunsteel-strike",
-      "name": "Alola Sunsteel Strike",
+      "name": "Sunsteel Strike",
       "type": "steel",
       "cls": "physical",
       "power": 105,
@@ -681,7 +769,7 @@
     },
     {
       "key": "g8-behemoth-blade",
-      "name": "Galar Behemoth Blade",
+      "name": "Behemoth Blade",
       "type": "steel",
       "cls": "physical",
       "power": 110,
@@ -697,7 +785,7 @@
     },
     {
       "key": "g9-gigaton-hammer",
-      "name": "Paldea Gigaton Hammer",
+      "name": "Gigaton Hammer",
       "type": "steel",
       "cls": "physical",
       "power": 130,
@@ -714,7 +802,7 @@
     },
     {
       "key": "g3-rock-blast",
-      "name": "Hoenn Rock Blast",
+      "name": "Rock Blast",
       "type": "rock",
       "cls": "physical",
       "power": 75,
@@ -730,7 +818,7 @@
     },
     {
       "key": "g4-power-gem",
-      "name": "Sinnoh Power Gem",
+      "name": "Power Gem",
       "type": "rock",
       "cls": "special",
       "power": 85,
@@ -745,7 +833,7 @@
     },
     {
       "key": "g6-diamond-storm",
-      "name": "Kalos Diamond Storm",
+      "name": "Diamond Storm",
       "type": "rock",
       "cls": "physical",
       "power": 100,
@@ -760,7 +848,7 @@
     },
     {
       "key": "g9-mighty-cleave",
-      "name": "Paldea Mighty Cleave",
+      "name": "Mighty Cleave",
       "type": "rock",
       "cls": "physical",
       "power": 100,
@@ -777,7 +865,7 @@
     },
     {
       "key": "g3-precipice-blades",
-      "name": "Hoenn Precipice Blades",
+      "name": "Precipice Blades",
       "type": "ground",
       "cls": "physical",
       "power": 120,
@@ -792,7 +880,7 @@
     },
     {
       "key": "g4-earth-power",
-      "name": "Sinnoh Earth Power",
+      "name": "Earth Power",
       "type": "ground",
       "cls": "special",
       "power": 90,
@@ -808,7 +896,7 @@
     },
     {
       "key": "g6-thousand-arrows",
-      "name": "Kalos Thousand Arrows",
+      "name": "Thousand Arrows",
       "type": "ground",
       "cls": "physical",
       "power": 95,
@@ -825,7 +913,7 @@
     },
     {
       "key": "g9-headlong-rush",
-      "name": "Paldea Headlong Rush",
+      "name": "Headlong Rush",
       "type": "ground",
       "cls": "physical",
       "power": 115,
@@ -840,7 +928,7 @@
     },
     {
       "key": "g4-aura-sphere",
-      "name": "Sinnoh Aura Sphere",
+      "name": "Aura Sphere",
       "type": "fighting",
       "cls": "special",
       "power": 90,
@@ -856,7 +944,7 @@
     },
     {
       "key": "g4-close-combat",
-      "name": "Sinnoh Close Combat",
+      "name": "Close Combat",
       "type": "fighting",
       "cls": "physical",
       "power": 115,
@@ -872,7 +960,7 @@
     },
     {
       "key": "g5-sacred-sword",
-      "name": "Unova Sacred Sword",
+      "name": "Sacred Sword",
       "type": "fighting",
       "cls": "physical",
       "power": 95,
@@ -890,7 +978,7 @@
     },
     {
       "key": "g9-collision-course",
-      "name": "Paldea Collision Course",
+      "name": "Collision Course",
       "type": "fighting",
       "cls": "physical",
       "power": 115,
@@ -905,7 +993,7 @@
     },
     {
       "key": "g4-x-scissor",
-      "name": "Sinnoh X-Scissor",
+      "name": "X-Scissor",
       "type": "bug",
       "cls": "physical",
       "power": 85,
@@ -923,7 +1011,7 @@
     },
     {
       "key": "g4-bug-buzz",
-      "name": "Sinnoh Bug Buzz",
+      "name": "Bug Buzz",
       "type": "bug",
       "cls": "special",
       "power": 90,
@@ -938,7 +1026,7 @@
     },
     {
       "key": "g7-first-impression",
-      "name": "Alola First Impression",
+      "name": "First Impression",
       "type": "bug",
       "cls": "physical",
       "power": 95,
@@ -954,7 +1042,7 @@
     },
     {
       "key": "g7-pollen-puff",
-      "name": "Alola Pollen Puff",
+      "name": "Pollen Puff",
       "type": "bug",
       "cls": "special",
       "power": 85,
@@ -969,7 +1057,7 @@
     },
     {
       "key": "g4-air-slash",
-      "name": "Sinnoh Air Slash",
+      "name": "Air Slash",
       "type": "flying",
       "cls": "special",
       "power": 80,
@@ -987,7 +1075,7 @@
     },
     {
       "key": "g4-brave-bird",
-      "name": "Sinnoh Brave Bird",
+      "name": "Brave Bird",
       "type": "flying",
       "cls": "physical",
       "power": 115,
@@ -1002,7 +1090,7 @@
     },
     {
       "key": "g5-hurricane-gale",
-      "name": "Unova Hurricane Gale",
+      "name": "Hurricane",
       "type": "flying",
       "cls": "special",
       "power": 105,
@@ -1017,7 +1105,7 @@
     },
     {
       "key": "g6-oblivion-wing",
-      "name": "Kalos Oblivion Wing",
+      "name": "Oblivion Wing",
       "type": "flying",
       "cls": "special",
       "power": 95,
@@ -1033,7 +1121,7 @@
     },
     {
       "key": "g4-ice-shard",
-      "name": "Sinnoh Ice Shard",
+      "name": "Ice Shard",
       "type": "ice",
       "cls": "physical",
       "power": 65,
@@ -1051,7 +1139,7 @@
     },
     {
       "key": "g5-icicle-crash",
-      "name": "Unova Icicle Crash",
+      "name": "Icicle Crash",
       "type": "ice",
       "cls": "physical",
       "power": 90,
@@ -1068,7 +1156,7 @@
     },
     {
       "key": "g6-freeze-dry",
-      "name": "Kalos Freeze-Dry",
+      "name": "Freeze-Dry",
       "type": "ice",
       "cls": "special",
       "power": 85,
@@ -1085,7 +1173,7 @@
     },
     {
       "key": "g9-ice-spinner",
-      "name": "Paldea Ice Spinner",
+      "name": "Ice Spinner",
       "type": "ice",
       "cls": "physical",
       "power": 90,
@@ -1101,7 +1189,7 @@
     },
     {
       "key": "g4-poison-jab",
-      "name": "Sinnoh Poison Jab",
+      "name": "Poison Jab",
       "type": "poison",
       "cls": "physical",
       "power": 85,
@@ -1121,7 +1209,7 @@
     },
     {
       "key": "g4-gunk-shot",
-      "name": "Sinnoh Gunk Shot",
+      "name": "Gunk Shot",
       "type": "poison",
       "cls": "physical",
       "power": 110,
@@ -1140,7 +1228,7 @@
     },
     {
       "key": "g5-sludge-wave",
-      "name": "Unova Sludge Wave",
+      "name": "Sludge Wave",
       "type": "poison",
       "cls": "special",
       "power": 95,
@@ -1159,7 +1247,7 @@
     },
     {
       "key": "g9-mortal-spin",
-      "name": "Paldea Mortal Spin",
+      "name": "Mortal Spin",
       "type": "poison",
       "cls": "physical",
       "power": 75,
@@ -1179,7 +1267,7 @@
     },
     {
       "key": "g6-moonblast",
-      "name": "Kalos Moonblast",
+      "name": "Moonblast",
       "type": "fairy",
       "cls": "special",
       "power": 95,
@@ -1194,7 +1282,7 @@
     },
     {
       "key": "g6-dazzling-gleam",
-      "name": "Kalos Dazzling Gleam",
+      "name": "Dazzling Gleam",
       "type": "fairy",
       "cls": "special",
       "power": 85,
@@ -1209,7 +1297,7 @@
     },
     {
       "key": "g6-play-rough",
-      "name": "Kalos Play Rough",
+      "name": "Play Rough",
       "type": "fairy",
       "cls": "physical",
       "power": 90,
@@ -1225,7 +1313,7 @@
     },
     {
       "key": "g8-spirit-break",
-      "name": "Galar Spirit Break",
+      "name": "Spirit Break",
       "type": "fairy",
       "cls": "physical",
       "power": 85,
@@ -1241,7 +1329,7 @@
     },
     {
       "key": "g3-hyper-voice",
-      "name": "Hoenn Hyper Voice",
+      "name": "Hyper Voice",
       "type": "normal",
       "cls": "special",
       "power": 90,
@@ -1256,7 +1344,7 @@
     },
     {
       "key": "g4-giga-impact",
-      "name": "Sinnoh Giga Impact",
+      "name": "Giga Impact",
       "type": "normal",
       "cls": "physical",
       "power": 120,
@@ -1271,7 +1359,7 @@
     },
     {
       "key": "g6-boomburst",
-      "name": "Kalos Boomburst",
+      "name": "Boomburst",
       "type": "normal",
       "cls": "special",
       "power": 115,
@@ -1286,7 +1374,7 @@
     },
     {
       "key": "g9-tera-starstorm",
-      "name": "Paldea Tera Starstorm",
+      "name": "Tera Starstorm",
       "type": "normal",
       "cls": "special",
       "power": 110,
@@ -8983,7 +9071,7 @@
       "rank": "rare",
       "ultFrom": 25,
       "customUlt": {
-        "name": "Ancestral Thunderclap",
+        "name": "Thunderclap",
         "desc": "Raging Bolt calls down primordial storm-cloud lightning.",
         "type": "electric",
         "cls": "special",
