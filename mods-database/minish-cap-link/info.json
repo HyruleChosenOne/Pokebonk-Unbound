@@ -1,19 +1,17 @@
 {
   "id": "minish-cap-link",
-  "name": "Link (The Minish Cap) — Playable Character, Hyrule & Dark World",
-  "version": "2.0.2",
+  "name": "The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)",
+  "version": "3.0.0",
   "author": "HyruleChosenOne",
   "category": "Characters",
   "scope": "gameplay",
-  "tagline": "Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels!",
-  "description": "Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.",
+  "tagline": "Playable Young Link (OOT cries) & Princess Zelda, 6 Wardrobe skins each, shared exclusive Minish Cap moves + Light Arrows Fusion, and 3D Hyrule Castle & Pyramid of Power maps.",
+  "description": "Complete Legend of Zelda: The Minish Cap expansion featuring both Young Link (with iconic Ocarina of Time battle cries) and Princess Zelda (both unlocked by default) — each with full 8-direction animated sprites, functional Dual Shinies + 4 Wardrobe variant skins (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Royal Sapphire, Sheikah Shadow, Twilight Princess, Triforce of Wisdom), 9 exclusive shared Minish Cap Sword & Item attacks (zero vanilla Pokémon moves), Light Arrows Primary Fusion, custom Ultimates, and 2 unlocked stages with full 3D Hyrule Castle and 3D Pyramid of Power landmarks + looping ALttP SNES soundtracks.",
   "highlights": [
-    "Link & both Zelda levels are 100% unlocked by default the moment you enable the mod",
-    "2 custom Zelda levels with bespoke Nano Banana pixel-art spritework & full PokéBonk-native collision: Hyrule Field (featuring Hyrule Castle POI) and The Dark World (featuring the Pyramid of Power POI)",
-    "Complete Minish Cap Sword & Items moveset (9 custom moves & GPU VFX): Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, and Roc's Cape",
-    "Primary Signature Fusion: Light Arrows (Picori Blade + Hero's Bow) unleashing piercing golden arrows & Triforce radiance — plus his signature Four Sword Hurricane Spin Ultimate",
-    "4 Minish Cap Pokéball items (Gold Kinstone, Pegasus Boots, Mirror Shield, Ocarina of Wind) & 11-language global translation",
-    "Includes authentic A Link to the Past Overworld & Dark World SNES music tracks mapped directly to Hyrule Field & The Dark World (zero audio overlap)"
+    "Playable Young Link (#2010, authentic OOT 3D battle cries) & Princess Zelda (#2024, Sacred Triforce Harp cry) — both unlocked by default",
+    "6 functional Wardrobe skins each: Classic Shiny, Hue Shiny, plus 4 iconic unlocked variants (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Sapphire, Sheikah Shadow, Twilight, Triforce of Wisdom)",
+    "Exclusive shared Hyrule family moveset (9 Minish Cap Sword & Item attacks + Light Arrows Signature Fusion) — zero vanilla PokéBonk attacks",
+    "2 unlocked Zelda stages with true 3D Hyrule Castle & 3D Pyramid of Power landmarks, solid collision, and looping ALttP Overworld & Dark World SNES OSTs"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"

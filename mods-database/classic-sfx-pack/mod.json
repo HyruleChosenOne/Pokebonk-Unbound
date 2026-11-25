@@ -1,7 +1,7 @@
 {
   "id": "classic-sfx-pack",
   "name": "Classic Sound Effects Pack",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "scope": "client",
   "author": "HyruleChosenOne",
   "description": "Replaces menu UI, Poké Ball, hit, Shiny, and 144+ move SFX with authentic Pokémon Emerald sounds and Gen 3 fanfares.",
@@ -21,7 +21,7 @@
       "id": "sfx-level-up",
       "name": "Level Up! (Gen 3)",
       "file": "audio/sfx/sfx-level-up.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.25
@@ -30,7 +30,7 @@
       "id": "sfx-heal",
       "name": "Pokémon Healed (Gen 3)",
       "file": "audio/sfx/sfx-heal.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.4
@@ -39,7 +39,7 @@
       "id": "sfx-caught",
       "name": "Caught a Pokémon! (Gen 3)",
       "file": "audio/sfx/sfx-caught.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.4
@@ -48,7 +48,7 @@
       "id": "sfx-item-get",
       "name": "Obtained an Item! (Gen 3)",
       "file": "audio/sfx/sfx-item-get.ogg",
-      "volume": 0.85,
+      "volume": 0.6,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.25
@@ -57,7 +57,7 @@
       "id": "sfx-key-item",
       "name": "Obtained a Key Item! (Gen 3)",
       "file": "audio/sfx/sfx-key-item.ogg",
-      "volume": 0.85,
+      "volume": 0.6,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.3
@@ -66,7 +66,7 @@
       "id": "sfx-badge-get",
       "name": "Obtained a Badge! (Gen 3)",
       "file": "audio/sfx/sfx-badge-get.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.4
@@ -75,7 +75,7 @@
       "id": "sfx-evolve-done",
       "name": "Pokémon Evolved! (Gen 3)",
       "file": "audio/sfx/sfx-evolve-done.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.5
@@ -84,7 +84,7 @@
       "id": "sfx-evolve",
       "name": "Evolution Start (Gen 3)",
       "file": "audio/sfx/sfx-evolve.ogg",
-      "volume": 0.82,
+      "volume": 0.57,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.5
@@ -93,7 +93,7 @@
       "id": "sfx-victory",
       "name": "Victory! (Gen 3)",
       "file": "audio/sfx/sfx-victory.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.6
@@ -102,7 +102,7 @@
       "id": "sfx-defeat",
       "name": "Lose / Defeat (Gen 3)",
       "file": "audio/sfx/sfx-defeat.ogg",
-      "volume": 0.88,
+      "volume": 0.62,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.5
@@ -111,7 +111,7 @@
       "id": "sfx-jackpot",
       "name": "Jackpot! (Gen 3)",
       "file": "audio/sfx/sfx-jackpot.ogg",
-      "volume": 0.9,
+      "volume": 0.63,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.4
@@ -120,7 +120,7 @@
       "id": "sfx-win-coins",
       "name": "Win! (Gen 3)",
       "file": "audio/sfx/sfx-win-coins.ogg",
-      "volume": 0.85,
+      "volume": 0.6,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.3
@@ -129,7 +129,7 @@
       "id": "sfx-encounter",
       "name": "Trainers' Eyes Meet (Gen 3)",
       "file": "audio/sfx/sfx-encounter.ogg",
-      "volume": 0.82,
+      "volume": 0.57,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.35
@@ -138,7 +138,7 @@
       "id": "sfx-boss-start",
       "name": "Boss Appearance (Gen 3)",
       "file": "audio/sfx/sfx-boss-start.ogg",
-      "volume": 0.92,
+      "volume": 0.64,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.6
@@ -147,7 +147,7 @@
       "id": "sfx-melody",
       "name": "Poké Flute (Gen 3)",
       "file": "audio/sfx/sfx-melody.ogg",
-      "volume": 0.85,
+      "volume": 0.6,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.5
@@ -156,7 +156,7 @@
       "id": "sfx-mystery",
       "name": "Mystery Gift (Gen 3)",
       "file": "audio/sfx/sfx-mystery.ogg",
-      "volume": 0.85,
+      "volume": 0.6,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.4
@@ -165,7 +165,7 @@
       "id": "sfx-click",
       "name": "Menu Select (Emerald SE_SELECT)",
       "file": "audio/sfx/sfx-click.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0.01,
       "cooldown": 0.03
@@ -174,7 +174,7 @@
       "id": "sfx-hover",
       "name": "Menu Cursor (Emerald SE_DEX_SCROLL)",
       "file": "audio/sfx/sfx-hover.ogg",
-      "volume": 0.55,
+      "volume": 0.39,
       "pitch": 1,
       "pitchVar": 0.01,
       "cooldown": 0.035
@@ -183,7 +183,7 @@
       "id": "sfx-deny",
       "name": "Denied / Buzzer (Emerald SE_BOO)",
       "file": "audio/sfx/sfx-deny.ogg",
-      "volume": 0.75,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.14
@@ -192,7 +192,7 @@
       "id": "sfx-win-open",
       "name": "Window / Menu Open (Emerald SE_WIN_OPEN)",
       "file": "audio/sfx/sfx-win-open.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.08
@@ -201,7 +201,7 @@
       "id": "sfx-use-item",
       "name": "Use / Pick Item (Emerald SE_USE_ITEM)",
       "file": "audio/sfx/sfx-use-item.ogg",
-      "volume": 0.78,
+      "volume": 0.55,
       "pitch": 1,
       "pitchVar": 0.02,
       "cooldown": 0.08
@@ -210,7 +210,7 @@
       "id": "sfx-pc-off",
       "name": "Close / Salvage (Emerald SE_PC_OFF)",
       "file": "audio/sfx/sfx-pc-off.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.1
@@ -219,7 +219,7 @@
       "id": "sfx-shop",
       "name": "Shop / Sell (Emerald SE_SHOP)",
       "file": "audio/sfx/sfx-shop.ogg",
-      "volume": 0.8,
+      "volume": 0.56,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.12
@@ -228,7 +228,7 @@
       "id": "sfx-save",
       "name": "Save / Forge (Emerald SE_SAVE)",
       "file": "audio/sfx/sfx-save.ogg",
-      "volume": 0.82,
+      "volume": 0.57,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.25
@@ -237,7 +237,7 @@
       "id": "sfx-slot-tick",
       "name": "Slot Tick (Emerald SE_CLICK)",
       "file": "audio/sfx/sfx-slot-tick.ogg",
-      "volume": 0.62,
+      "volume": 0.43,
       "pitch": 1,
       "pitchVar": 0.02,
       "cooldown": 0.03
@@ -246,7 +246,7 @@
       "id": "sfx-slot-stop",
       "name": "Slot Stop (Emerald SE_SWITCH)",
       "file": "audio/sfx/sfx-slot-stop.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.06
@@ -255,7 +255,7 @@
       "id": "sfx-slot-lever",
       "name": "Slot Lever (Emerald SE_VEND)",
       "file": "audio/sfx/sfx-slot-lever.ogg",
-      "volume": 0.76,
+      "volume": 0.53,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.12
@@ -264,7 +264,7 @@
       "id": "sfx-ping",
       "name": "Alert Ping (Emerald SE_PIN)",
       "file": "audio/sfx/sfx-ping.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.18
@@ -273,7 +273,7 @@
       "id": "sfx-pokenav",
       "name": "PokéNav Call (Emerald SE_POKENAV_CALL)",
       "file": "audio/sfx/sfx-pokenav.ogg",
-      "volume": 0.78,
+      "volume": 0.55,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.25
@@ -282,7 +282,7 @@
       "id": "sfx-coin",
       "name": "Coin Clink (Emerald SE_M_PAY_DAY)",
       "file": "audio/sfx/sfx-coin.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.05
@@ -291,7 +291,7 @@
       "id": "sfx-xp",
       "name": "EXP Gain Pip (Emerald SE_EXP)",
       "file": "audio/sfx/sfx-xp.ogg",
-      "volume": 0.56,
+      "volume": 0.39,
       "pitch": 1,
       "pitchVar": 0.03,
       "cooldown": 0.035
@@ -300,7 +300,7 @@
       "id": "sfx-exp-max",
       "name": "EXP Full Ding (Emerald SE_EXP_MAX)",
       "file": "audio/sfx/sfx-exp-max.ogg",
-      "volume": 0.78,
+      "volume": 0.55,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.15
@@ -309,7 +309,7 @@
       "id": "sfx-shiny",
       "name": "Shiny Sparkle (Emerald SE_SHINY)",
       "file": "audio/sfx/sfx-shiny.ogg",
-      "volume": 0.88,
+      "volume": 0.62,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.25
@@ -318,7 +318,7 @@
       "id": "sfx-ball-throw",
       "name": "Poké Ball Throw (Emerald SE_BALL_THROW)",
       "file": "audio/sfx/sfx-ball-throw.ogg",
-      "volume": 0.76,
+      "volume": 0.53,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.08
@@ -327,7 +327,7 @@
       "id": "sfx-ball-open",
       "name": "Poké Ball Open (Emerald SE_BALL_OPEN)",
       "file": "audio/sfx/sfx-ball-open.ogg",
-      "volume": 0.78,
+      "volume": 0.55,
       "pitch": 1,
       "pitchVar": 0.03,
       "cooldown": 0.08
@@ -336,7 +336,7 @@
       "id": "sfx-ball-shake",
       "name": "Poké Ball Shake (Emerald SE_BALL_BOUNCE_1)",
       "file": "audio/sfx/sfx-ball-shake.ogg",
-      "volume": 0.74,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.08
@@ -345,7 +345,7 @@
       "id": "sfx-ball-click",
       "name": "Poké Ball Click (Emerald SE_RG_BALL_CLICK)",
       "file": "audio/sfx/sfx-ball-click.ogg",
-      "volume": 0.82,
+      "volume": 0.57,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.1
@@ -354,7 +354,7 @@
       "id": "sfx-alarm",
       "name": "Warning Beep (Emerald SE_LOW_HEALTH)",
       "file": "audio/sfx/sfx-alarm.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0,
       "cooldown": 0.35
@@ -363,7 +363,7 @@
       "id": "sfx-hit-normal",
       "name": "Normal Hit (Emerald SE_EFFECTIVE)",
       "file": "audio/sfx/sfx-hit-normal.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.04
@@ -372,7 +372,7 @@
       "id": "sfx-hit-super",
       "name": "Super Effective Hit (Emerald SE_SUPER_EFFECTIVE)",
       "file": "audio/sfx/sfx-hit-super.ogg",
-      "volume": 0.82,
+      "volume": 0.57,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.05
@@ -381,7 +381,7 @@
       "id": "sfx-hit-weak",
       "name": "Not Very Effective Hit (Emerald SE_NOT_EFFECTIVE)",
       "file": "audio/sfx/sfx-hit-weak.ogg",
-      "volume": 0.6,
+      "volume": 0.42,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.04
@@ -390,7 +390,7 @@
       "id": "sfx-ko",
       "name": "Faint / KO (Emerald SE_FAINT)",
       "file": "audio/sfx/sfx-ko.ogg",
-      "volume": 0.74,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0.03,
       "cooldown": 0.07
@@ -399,7 +399,7 @@
       "id": "sfx-hurt",
       "name": "Damage Taken (Emerald SE_BANG)",
       "file": "audio/sfx/sfx-hurt.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.09
@@ -408,7 +408,7 @@
       "id": "sfx-dodge",
       "name": "Quick Dash (Emerald SE_FLEE)",
       "file": "audio/sfx/sfx-dodge.ogg",
-      "volume": 0.62,
+      "volume": 0.43,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -417,7 +417,7 @@
       "id": "sfx-jump",
       "name": "Jump / Ledge Hop (Emerald SE_LEDGE)",
       "file": "audio/sfx/sfx-jump.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.07
@@ -426,7 +426,7 @@
       "id": "sfx-pop",
       "name": "Hop / Pop (Emerald SE_BIKE_HOP)",
       "file": "audio/sfx/sfx-pop.ogg",
-      "volume": 0.6,
+      "volume": 0.42,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.05
@@ -435,7 +435,7 @@
       "id": "sfx-slam",
       "name": "Heavy Slam (Emerald SE_M_STRENGTH)",
       "file": "audio/sfx/sfx-slam.ogg",
-      "volume": 0.76,
+      "volume": 0.53,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.09
@@ -444,7 +444,7 @@
       "id": "sfx-m-ember",
       "name": "Ember (Emerald SE_M_EMBER)",
       "file": "audio/sfx/sfx-m-ember.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.06
@@ -453,7 +453,7 @@
       "id": "sfx-m-flamethrower",
       "name": "Flamethrower (Emerald SE_M_FLAMETHROWER)",
       "file": "audio/sfx/sfx-m-flamethrower.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.14
@@ -462,7 +462,7 @@
       "id": "sfx-m-flame-wheel",
       "name": "Flame Wheel (Emerald SE_M_FLAME_WHEEL)",
       "file": "audio/sfx/sfx-m-flame-wheel.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.08
@@ -471,7 +471,7 @@
       "id": "sfx-m-bubble",
       "name": "Bubble (Emerald SE_M_BUBBLE)",
       "file": "audio/sfx/sfx-m-bubble.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.06
@@ -480,7 +480,7 @@
       "id": "sfx-m-surf",
       "name": "Surf (Emerald SE_M_SURF)",
       "file": "audio/sfx/sfx-m-surf.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.14
@@ -489,7 +489,7 @@
       "id": "sfx-m-hydro-pump",
       "name": "Hydro Pump (Emerald SE_M_HYDRO_PUMP)",
       "file": "audio/sfx/sfx-m-hydro-pump.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.14
@@ -498,7 +498,7 @@
       "id": "sfx-m-waterfall",
       "name": "Waterfall (Emerald SE_M_WATERFALL)",
       "file": "audio/sfx/sfx-m-waterfall.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.12
@@ -507,7 +507,7 @@
       "id": "sfx-m-dive",
       "name": "Dive (Emerald SE_M_DIVE)",
       "file": "audio/sfx/sfx-m-dive.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.1
@@ -516,7 +516,7 @@
       "id": "sfx-m-thunderbolt",
       "name": "Thunderbolt (Emerald SE_M_THUNDERBOLT)",
       "file": "audio/sfx/sfx-m-thunderbolt.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -525,7 +525,7 @@
       "id": "sfx-m-thunder",
       "name": "Thunder (Emerald SE_THUNDER)",
       "file": "audio/sfx/sfx-m-thunder.ogg",
-      "volume": 0.74,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.14
@@ -534,7 +534,7 @@
       "id": "sfx-m-thunder-wave",
       "name": "Thunder Wave (Emerald SE_M_THUNDER_WAVE)",
       "file": "audio/sfx/sfx-m-thunder-wave.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -543,7 +543,7 @@
       "id": "sfx-m-charge",
       "name": "Charge (Emerald SE_M_CHARGE)",
       "file": "audio/sfx/sfx-m-charge.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.14
@@ -552,7 +552,7 @@
       "id": "sfx-m-razor-wind",
       "name": "Razor Leaf / Wind (Emerald SE_M_RAZOR_WIND)",
       "file": "audio/sfx/sfx-m-razor-wind.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.06
@@ -561,7 +561,7 @@
       "id": "sfx-m-solar-beam",
       "name": "Solar Beam (Emerald SE_M_SOLAR_BEAM)",
       "file": "audio/sfx/sfx-m-solar-beam.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0.03,
       "cooldown": 0.16
@@ -570,7 +570,7 @@
       "id": "sfx-m-giga-drain",
       "name": "Giga Drain (Emerald SE_M_GIGA_DRAIN)",
       "file": "audio/sfx/sfx-m-giga-drain.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -579,7 +579,7 @@
       "id": "sfx-m-powder",
       "name": "Spore / Powder (Emerald SE_M_POISON_POWDER)",
       "file": "audio/sfx/sfx-m-powder.ogg",
-      "volume": 0.62,
+      "volume": 0.43,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.08
@@ -588,7 +588,7 @@
       "id": "sfx-m-icy-wind",
       "name": "Icy Wind / Ice Beam (Emerald SE_M_ICY_WIND)",
       "file": "audio/sfx/sfx-m-icy-wind.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -597,7 +597,7 @@
       "id": "sfx-m-blizzard",
       "name": "Blizzard (Emerald SE_M_BLIZZARD)",
       "file": "audio/sfx/sfx-m-blizzard.ogg",
-      "volume": 0.7,
+      "volume": 0.49,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.14
@@ -606,7 +606,7 @@
       "id": "sfx-m-mist",
       "name": "Mist / Haze (Emerald SE_M_MIST)",
       "file": "audio/sfx/sfx-m-mist.ogg",
-      "volume": 0.62,
+      "volume": 0.43,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -615,7 +615,7 @@
       "id": "sfx-m-psybeam",
       "name": "Psybeam / Psychic (Emerald SE_M_PSYBEAM)",
       "file": "audio/sfx/sfx-m-psybeam.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -624,7 +624,7 @@
       "id": "sfx-m-barrier",
       "name": "Barrier / Reflect (Emerald SE_M_BARRIER)",
       "file": "audio/sfx/sfx-m-barrier.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.12
@@ -633,7 +633,7 @@
       "id": "sfx-m-confuse-ray",
       "name": "Confuse Ray / Ghost (Emerald SE_M_CONFUSE_RAY)",
       "file": "audio/sfx/sfx-m-confuse-ray.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -642,7 +642,7 @@
       "id": "sfx-m-lick",
       "name": "Lick (Emerald SE_M_LICK)",
       "file": "audio/sfx/sfx-m-lick.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -651,7 +651,7 @@
       "id": "sfx-m-bite",
       "name": "Bite / Crunch (Emerald SE_M_BITE)",
       "file": "audio/sfx/sfx-m-bite.ogg",
-      "volume": 0.7,
+      "volume": 0.49,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.06
@@ -660,7 +660,7 @@
       "id": "sfx-m-faint-attack",
       "name": "Faint Attack / Dark (Emerald SE_M_FAINT_ATTACK)",
       "file": "audio/sfx/sfx-m-faint-attack.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -669,7 +669,7 @@
       "id": "sfx-m-brick-break",
       "name": "Brick Break / Fighting (Emerald SE_M_BRICK_BREAK)",
       "file": "audio/sfx/sfx-m-brick-break.ogg",
-      "volume": 0.72,
+      "volume": 0.5,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -678,7 +678,7 @@
       "id": "sfx-m-sky-uppercut",
       "name": "Sky Uppercut (Emerald SE_M_SKY_UPPERCUT)",
       "file": "audio/sfx/sfx-m-sky-uppercut.ogg",
-      "volume": 0.7,
+      "volume": 0.49,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -687,7 +687,7 @@
       "id": "sfx-m-cut",
       "name": "Cut / Slash (Emerald SE_M_CUT)",
       "file": "audio/sfx/sfx-m-cut.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.06
@@ -696,7 +696,7 @@
       "id": "sfx-m-scratch",
       "name": "Scratch (Emerald SE_M_SCRATCH)",
       "file": "audio/sfx/sfx-m-scratch.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.08,
       "cooldown": 0.05
@@ -705,7 +705,7 @@
       "id": "sfx-m-headbutt",
       "name": "Headbutt / Tackle (Emerald SE_M_HEADBUTT)",
       "file": "audio/sfx/sfx-m-headbutt.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.06
@@ -714,7 +714,7 @@
       "id": "sfx-m-swift",
       "name": "Swift / Projectile (Emerald SE_M_SWIFT)",
       "file": "audio/sfx/sfx-m-swift.ogg",
-      "volume": 0.64,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.055
@@ -723,7 +723,7 @@
       "id": "sfx-m-hyper-beam",
       "name": "Hyper Beam (Emerald SE_M_HYPER_BEAM)",
       "file": "audio/sfx/sfx-m-hyper-beam.ogg",
-      "volume": 0.74,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.12
@@ -732,7 +732,7 @@
       "id": "sfx-m-explosion",
       "name": "Explosion / Boom (Emerald SE_M_EXPLOSION)",
       "file": "audio/sfx/sfx-m-explosion.ogg",
-      "volume": 0.78,
+      "volume": 0.55,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.1
@@ -741,7 +741,7 @@
       "id": "sfx-m-rock-throw",
       "name": "Rock Throw (Emerald SE_M_ROCK_THROW)",
       "file": "audio/sfx/sfx-m-rock-throw.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -750,7 +750,7 @@
       "id": "sfx-m-earthquake",
       "name": "Earthquake (Emerald SE_M_EARTHQUAKE)",
       "file": "audio/sfx/sfx-m-earthquake.ogg",
-      "volume": 0.74,
+      "volume": 0.52,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.16
@@ -759,7 +759,7 @@
       "id": "sfx-m-dig",
       "name": "Dig (Emerald SE_M_DIG)",
       "file": "audio/sfx/sfx-m-dig.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.08
@@ -768,7 +768,7 @@
       "id": "sfx-m-bonemerang",
       "name": "Bonemerang (Emerald SE_M_BONEMERANG)",
       "file": "audio/sfx/sfx-m-bonemerang.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -777,7 +777,7 @@
       "id": "sfx-m-toxic",
       "name": "Toxic / Poison (Emerald SE_M_TOXIC)",
       "file": "audio/sfx/sfx-m-toxic.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -786,7 +786,7 @@
       "id": "sfx-m-horn-attack",
       "name": "Horn Attack / Bug (Emerald SE_M_HORN_ATTACK)",
       "file": "audio/sfx/sfx-m-horn-attack.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.07,
       "cooldown": 0.06
@@ -795,7 +795,7 @@
       "id": "sfx-m-string-shot",
       "name": "String Shot / Bind (Emerald SE_M_STRING_SHOT)",
       "file": "audio/sfx/sfx-m-string-shot.ogg",
-      "volume": 0.64,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -804,7 +804,7 @@
       "id": "sfx-m-gust",
       "name": "Gust / Hurricane (Emerald SE_M_GUST2)",
       "file": "audio/sfx/sfx-m-gust.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.08
@@ -813,7 +813,7 @@
       "id": "sfx-m-wing-attack",
       "name": "Wing Attack / Flying (Emerald SE_M_WING_ATTACK)",
       "file": "audio/sfx/sfx-m-wing-attack.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.06,
       "cooldown": 0.07
@@ -822,7 +822,7 @@
       "id": "sfx-m-dragon-rage",
       "name": "Dragon Rage / Twister (Emerald SE_M_DRAGON_RAGE)",
       "file": "audio/sfx/sfx-m-dragon-rage.ogg",
-      "volume": 0.7,
+      "volume": 0.49,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.1
@@ -831,7 +831,7 @@
       "id": "sfx-m-charm",
       "name": "Charm / Fairy (Emerald SE_M_CHARM)",
       "file": "audio/sfx/sfx-m-charm.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.08
@@ -840,7 +840,7 @@
       "id": "sfx-m-supersonic",
       "name": "Supersonic / Sound (Emerald SE_M_SUPERSONIC)",
       "file": "audio/sfx/sfx-m-supersonic.ogg",
-      "volume": 0.66,
+      "volume": 0.46,
       "pitch": 1,
       "pitchVar": 0.05,
       "cooldown": 0.1
@@ -849,7 +849,7 @@
       "id": "sfx-m-stat-up",
       "name": "Stat Increase (Emerald SE_M_STAT_INCREASE)",
       "file": "audio/sfx/sfx-m-stat-up.ogg",
-      "volume": 0.68,
+      "volume": 0.48,
       "pitch": 1,
       "pitchVar": 0.03,
       "cooldown": 0.12
@@ -858,7 +858,7 @@
       "id": "sfx-m-metronome",
       "name": "Metronome / Status (Emerald SE_M_METRONOME)",
       "file": "audio/sfx/sfx-m-metronome.ogg",
-      "volume": 0.65,
+      "volume": 0.45,
       "pitch": 1,
       "pitchVar": 0.04,
       "cooldown": 0.08

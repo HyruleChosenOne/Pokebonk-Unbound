@@ -1,1 +1,1216 @@
-{"langs": {"en": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Hyrule Field — Hyrule Castle", "desc": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.", "sanctuary": "Minish Sanctuary Woods", "landmark": "Hyrule Castle"}, "dark_world": {"name": "The Dark World — Pyramid of Power", "desc": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.", "sanctuary": "Golden Land Rift", "landmark": "Pyramid of Power"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Hero of the Minish"}, "moves": {"picori-blade": {"name": "Picori Blade"}, "heros-bow": {"name": "Hero's Bow"}, "gust-jar": {"name": "Gust Jar"}, "magical-boomerang": {"name": "Magical Boomerang"}, "flame-lantern": {"name": "Flame Lantern"}, "cane-of-pacci": {"name": "Cane of Pacci"}, "mole-mitts": {"name": "Mole Mitts"}, "remote-bombs": {"name": "Remote Bombs"}, "rocs-cape": {"name": "Roc's Cape"}}, "items": {"gold-kinstone": {"name": "Gold Kinstone", "desc": "+14% Crit Chance & +15% Luck from fused Picori fortune."}, "pegasus-boots": {"name": "Pegasus Boots", "desc": "+14% Move Speed & +12% Attack Speed — dash like the wind!"}, "mirror-shield": {"name": "Mirror Shield", "desc": "+18 Armor & +14% Max HP — sacred Hylian bulwark."}, "ocarina-of-wind": {"name": "Ocarina of Wind", "desc": "+16% Area & +10% Move Speed — summons Zeffa's tailwind."}}}, "es": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Pradera de Hyrule — Castillo de Hyrule", "desc": "Llanuras esmeralda soleadas con una calzada real sobre el foso hacia el majestuoso Castillo de Hyrule.", "sanctuary": "Bosque Santuario Minish", "landmark": "Castillo de Hyrule"}, "dark_world": {"name": "Mundo Oscuro — Pirámide del Poder", "desc": "Reino crepuscular ocre corrompido con canales violeta que ascienden hacia la Pirámide del Poder.", "sanctuary": "Grieta de la Tierra Dorada", "landmark": "Pirámide del Poder"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Héroe de los Minish"}, "moves": {"picori-blade": {"name": "Espada Minish"}, "heros-bow": {"name": "Arco del Héroe"}, "gust-jar": {"name": "Jarrón Mágico"}, "magical-boomerang": {"name": "Bumerán Mágico"}, "flame-lantern": {"name": "Linterna de Llamas"}, "cane-of-pacci": {"name": "Bastón Revés"}, "mole-mitts": {"name": "Guantes de Topo"}, "remote-bombs": {"name": "Bombas Remotas"}, "rocs-cape": {"name": "Capa de Roc"}}, "items": {"gold-kinstone": {"name": "Piedra de la Suerte Dorada", "desc": "+14% Crítico y +15% Suerte gracias a la fortuna Minish."}, "pegasus-boots": {"name": "Botas de Pegaso", "desc": "+14% Velocidad y +12% Vel. Ataque — corre como el viento."}, "mirror-shield": {"name": "Escudo Espejo", "desc": "+18 Armadura y +14% PS Máx. — baluarte sagrado de Hyrule."}, "ocarina-of-wind": {"name": "Ocarina del Viento", "desc": "+16% Área y +10% Velocidad — invoca los vientos de Hyrule."}}}, "pt": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Campo de Hyrule — Castelo de Hyrule", "desc": "Planícies esmeralda ensolaradas com estrada real atravessando o fosso até o Castelo de Hyrule.", "sanctuary": "Bosque Santuário Minish", "landmark": "Castelo de Hyrule"}, "dark_world": {"name": "Mundo Sombrio — Pirâmide do Poder", "desc": "Reino crepuscular ocre corrompido com canais violeta levando à monumental Pirâmide do Poder.", "sanctuary": "Fenda da Terra Dourada", "landmark": "Pirâmide do Poder"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Herói dos Minish"}, "moves": {"picori-blade": {"name": "Lâmina Picori"}, "heros-bow": {"name": "Arco do Herói"}, "gust-jar": {"name": "Jarro de Vento"}, "magical-boomerang": {"name": "Bumerangue Mágico"}, "flame-lantern": {"name": "Lanterna Flamejante"}, "cane-of-pacci": {"name": "Cajado de Pacci"}, "mole-mitts": {"name": "Luvas de Toupeira"}, "remote-bombs": {"name": "Bombas Remotas"}, "rocs-cape": {"name": "Capa de Roc"}}, "items": {"gold-kinstone": {"name": "Kinstone Dourada", "desc": "+14% Crítico e +15% Sorte pela fortuna Picori."}, "pegasus-boots": {"name": "Botas de Pégaso", "desc": "+14% Velocidade e +12% Vel. Ataque — dispare como o vento!"}, "mirror-shield": {"name": "Escudo Espelho", "desc": "+18 Armadura e +14% HP Máx. — escudo sagrado de Hyrule."}, "ocarina-of-wind": {"name": "Ocarina do Vento", "desc": "+16% Área e +10% Velocidade — invoca ventos favoráveis."}}}, "fr": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Plaine d'Hyrule — Château d'Hyrule", "desc": "Plaines émeraude ensoleillées menant par la route royale au majestueux Château d'Hyrule.", "sanctuary": "Bois Sanctuaire Minish", "landmark": "Château d'Hyrule"}, "dark_world": {"name": "Monde des Ténèbres — Pyramide du Pouvoir", "desc": "Royaume crépusculaire corrompu traversé de canaux violets vers la monumentale Pyramide du Pouvoir.", "sanctuary": "Faille de la Terre d'Or", "landmark": "Pyramide du Pouvoir"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Héros des Minish"}, "moves": {"picori-blade": {"name": "Épée Minish"}, "heros-bow": {"name": "Arc du Héros"}, "gust-jar": {"name": "Pot Magique"}, "magical-boomerang": {"name": "Boomerang Magique"}, "flame-lantern": {"name": "Lanterne"}, "cane-of-pacci": {"name": "Bâton Sauteur"}, "mole-mitts": {"name": "Griffes de Taupe"}, "remote-bombs": {"name": "Bombes à Distance"}, "rocs-cape": {"name": "Cape de Roc"}}, "items": {"gold-kinstone": {"name": "Fragment du Bonheur Or", "desc": "+14% Critiques et +15% Chance grâce à la fortune Minish."}, "pegasus-boots": {"name": "Bottes de Pégase", "desc": "+14% Vitesse et +12% Vitesse d'attaque."}, "mirror-shield": {"name": "Bouclier Miroir", "desc": "+18 Armure et +14% PV max — rempart sacré d'Hyrule."}, "ocarina-of-wind": {"name": "Ocarina du Vent", "desc": "+16% Zone et +10% Vitesse — appelle les vents d'Hyrule."}}}, "de": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Ebene von Hyrule — Schloss Hyrule", "desc": "Sonnige smaragdgrüne Ebenen mit Königsstraße über den Schlossgraben zum Schloss Hyrule.", "sanctuary": "Minish-Heiligtumswald", "landmark": "Schloss Hyrule"}, "dark_world": {"name": "Schattenwelt — Pyramide der Macht", "desc": "Verderbtes ockerfarbenes Zwielichtreich mit violetten Kanälen zur Pyramide der Macht.", "sanctuary": "Riss des Goldenen Landes", "landmark": "Pyramide der Macht"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Held der Minish"}, "moves": {"picori-blade": {"name": "Schwert der Minish"}, "heros-bow": {"name": "Heldenbogen"}, "gust-jar": {"name": "Magischer Krug"}, "magical-boomerang": {"name": "Magischer Bumerang"}, "flame-lantern": {"name": "Lampe"}, "cane-of-pacci": {"name": "Wirbelstab"}, "mole-mitts": {"name": "Maulwurfshandschuhe"}, "remote-bombs": {"name": "Fernzünderbomben"}, "rocs-cape": {"name": "Greifenmantel"}}, "items": {"gold-kinstone": {"name": "Goldenes Glücksfragment", "desc": "+14% Krit-Chance & +15% Glück durch Minish-Glück."}, "pegasus-boots": {"name": "Pegasusstiefel", "desc": "+14% Tempo & +12% Angriffstempo."}, "mirror-shield": {"name": "Spiegelschild", "desc": "+18 Rüstung & +14% Max-KP — heiliger Schild Hyrules."}, "ocarina-of-wind": {"name": "Okarina des Windes", "desc": "+16% Fläche & +10% Tempo — ruft den Wind Hyrules."}}}, "it": {"regions": {"hyrule": "Hyrule"}, "biomes": {"hyrule_field": {"name": "Piana di Hyrule — Castello di Hyrule", "desc": "Pianure smeraldo assolate attraversate dalla strada reale fino al Castello di Hyrule.", "sanctuary": "Bosco Santuario Minish", "landmark": "Castello di Hyrule"}, "dark_world": {"name": "Mondo Oscuro — Piramide del Potere", "desc": "Regno crepuscolare ocra solcato da canali viola verso la monumentale Piramide del Potere.", "sanctuary": "Varco della Terra d'Oro", "landmark": "Piramide del Potere"}}, "pokemon": {"2010": "Link (Minish Cap)"}, "roles": {"2010": "Eroe dei Minish"}, "moves": {"picori-blade": {"name": "Spada Minish"}, "heros-bow": {"name": "Arco dell'Eroe"}, "gust-jar": {"name": "Vaso Magico"}, "magical-boomerang": {"name": "Boomerang Magico"}, "flame-lantern": {"name": "Lanterna"}, "cane-of-pacci": {"name": "Bastone di Pacci"}, "mole-mitts": {"name": "Guanti Talpa"}, "remote-bombs": {"name": "Bombe Telecomandate"}, "rocs-cape": {"name": "Mantello di Roc"}}, "items": {"gold-kinstone": {"name": "Frammento di Gioia Oro", "desc": "+14% Critico e +15% Fortuna dai Minish."}, "pegasus-boots": {"name": "Calzari di Pegaso", "desc": "+14% Velocità e +12% Vel. Attacco."}, "mirror-shield": {"name": "Scudo Specchio", "desc": "+18 Armatura e +14% PS Max — sacro scudo di Hyrule."}, "ocarina-of-wind": {"name": "Ocarina del Vento", "desc": "+16% Area e +10% Velocità — evoca il vento di Hyrule."}}}, "ja": {"regions": {"hyrule": "ハイラル"}, "biomes": {"hyrule_field": {"name": "ハイラル平原・ハイラル城", "desc": "石畳の王道が城堀の橋を越えて壮麗なハイラル城へと続く陽光あふれる緑の平原。", "sanctuary": "ピコルの聖域の森", "landmark": "ハイラル城"}, "dark_world": {"name": "闇の世界・力のピラミッド", "desc": "紫の運河が黄土色の大地を切り裂き、巨大な力のピラミッドがそびえ立つ黄昏の闇の世界。", "sanctuary": "聖地の狭間", "landmark": "力のピラミッド"}}, "pokemon": {"2010": "リンク (ふしぎのぼうし)"}, "roles": {"2010": "ピコルの勇者"}, "moves": {"picori-blade": {"name": "ピコルの剣"}, "heros-bow": {"name": "勇者の弓"}, "gust-jar": {"name": "まほうのツボ"}, "magical-boomerang": {"name": "マジカルブーメラン"}, "flame-lantern": {"name": "カンテラ"}, "cane-of-pacci": {"name": "パッチのつえ"}, "mole-mitts": {"name": "モグラグローブ"}, "remote-bombs": {"name": "リモコンバクダン"}, "rocs-cape": {"name": "ロック鳥のマント"}}, "items": {"gold-kinstone": {"name": "金のカケラ", "desc": "急所率+14%、運+15%。ピコルの幸運が宿るカケラ。"}, "pegasus-boots": {"name": "ペガサスのくつ", "desc": "移動速度+14%、攻撃速度+12%。風のように駆ける！"}, "mirror-shield": {"name": "ミラーシールド", "desc": "防御+18、最大HP+14%。ハイラルの聖なる鏡盾。"}, "ocarina-of-wind": {"name": "風のオカリナ", "desc": "範囲+16%、移動速度+10%。追い風を呼び寄せる。"}}}, "ko": {"regions": {"hyrule": "하이랄"}, "biomes": {"hyrule_field": {"name": "하이랄 평원 — 하이랄 성", "desc": "햇살 가득한 초록 평원 위로 돌다리와 왕도가 웅장한 하이랄 성으로 이어집니다.", "sanctuary": "피콜의 성역 숲", "landmark": "하이랄 성"}, "dark_world": {"name": "어둠의 세계 — 힘의 피라미드", "desc": "보랏빛 수로가 황토빛 황야를 가르고 거대한 힘의 피라미드가 우뚝 솟은 어둠의 세계.", "sanctuary": "황금 대지의 틈새", "landmark": "힘의 피라미드"}}, "pokemon": {"2010": "링크 (이상한 모자)"}, "roles": {"2010": "피콜의 용사"}, "moves": {"picori-blade": {"name": "피콜의 검"}, "heros-bow": {"name": "용사의 활"}, "gust-jar": {"name": "마법 항아리"}, "magical-boomerang": {"name": "매지컬 부메랑"}, "flame-lantern": {"name": "불꽃 랜턴"}, "cane-of-pacci": {"name": "패치의 지팡이"}, "mole-mitts": {"name": "두더지 장갑"}, "remote-bombs": {"name": "리모컨 폭탄"}, "rocs-cape": {"name": "로크새의 망토"}}, "items": {"gold-kinstone": {"name": "황금 행운의 조각", "desc": "치명타율 +14%, 행운 +15% — 피콜의 행운."}, "pegasus-boots": {"name": "페가수스의 신발", "desc": "이동 속도 +14%, 공격 속도 +12%."}, "mirror-shield": {"name": "미러 실드", "desc": "방어 +18, 최대 HP +14% — 하이랄의 성스러운 방패."}, "ocarina-of-wind": {"name": "바람의 오카리나", "desc": "범위 +16%, 이동 속도 +10% — 순풍을 부릅니다."}}}, "ru": {"regions": {"hyrule": "Хайрул"}, "biomes": {"hyrule_field": {"name": "Поле Хайрула — Замок Хайрул", "desc": "Солнечные изумрудные равнины с королевской дорогой через ров прямо к Замку Хайрул.", "sanctuary": "Лес Святилища Минишей", "landmark": "Замок Хайрул"}, "dark_world": {"name": "Тёмный Мир — Пирамида Силы", "desc": "Искажённое сумеречное царство с фиолетовыми каналами у величественной Пирамиды Силы.", "sanctuary": "Разлом Золотой Земли", "landmark": "Пирамида Силы"}}, "pokemon": {"2010": "Линк (Minish Cap)"}, "roles": {"2010": "Герой Минишей"}, "moves": {"picori-blade": {"name": "Клинок Пикори"}, "heros-bow": {"name": "Лук Героя"}, "gust-jar": {"name": "Кувшин Ветра"}, "magical-boomerang": {"name": "Волшебный Бумеранг"}, "flame-lantern": {"name": "Огненный Фонарь"}, "cane-of-pacci": {"name": "Посох Паччи"}, "mole-mitts": {"name": "Кротовые Перчатки"}, "remote-bombs": {"name": "Дистанционные Бомбы"}, "rocs-cape": {"name": "Плащ Рока"}}, "items": {"gold-kinstone": {"name": "Золотой Кинстоун", "desc": "+14% шанса крита и +15% удачи."}, "pegasus-boots": {"name": "Сапоги Пегаса", "desc": "+14% скорости и +12% скорости атаки."}, "mirror-shield": {"name": "Зеркальный Щит", "desc": "+18 брони и +14% макс. ОЗ — священный щит Хайрула."}, "ocarina-of-wind": {"name": "Окарина Ветра", "desc": "+16% области и +10% скорости."}}}, "zh": {"regions": {"hyrule": "海拉鲁"}, "biomes": {"hyrule_field": {"name": "海拉鲁平原 — 海拉鲁城堡", "desc": "阳光明媚的翡翠平原，皇家石道跨过护城河直通宏伟的海拉鲁城堡。", "sanctuary": "皮克罗圣域之森", "landmark": "海拉鲁城堡"}, "dark_world": {"name": "暗之世界 — 力量金字塔", "desc": "被紫光运河割裂的暮色赭金荒原，中央矗立着庄严神秘的力量金字塔。", "sanctuary": "黄金圣地裂隙", "landmark": "力量金字塔"}}, "pokemon": {"2010": "林克（缩小帽）"}, "roles": {"2010": "皮克罗勇者"}, "moves": {"picori-blade": {"name": "皮克罗之剑"}, "heros-bow": {"name": "勇者之弓"}, "gust-jar": {"name": "魔法壶"}, "magical-boomerang": {"name": "魔法回旋镖"}, "flame-lantern": {"name": "火焰提灯"}, "cane-of-pacci": {"name": "翻转之杖"}, "mole-mitts": {"name": "鼹鼠手套"}, "remote-bombs": {"name": "遥控炸弹"}, "rocs-cape": {"name": "大鹏披风"}}, "items": {"gold-kinstone": {"name": "金色幸福碎片", "desc": "暴击率+14%，幸运+15% — 凝聚皮克罗好运。"}, "pegasus-boots": {"name": "天马靴", "desc": "移速+14%，攻速+12% — 疾风冲刺！"}, "mirror-shield": {"name": "镜盾", "desc": "护甲+18，最大生命+14% — 海拉鲁圣洁神盾。"}, "ocarina-of-wind": {"name": "风之陶笛", "desc": "范围+16%，移速+10% — 唤起海拉鲁顺风。"}}}, "zht": {"regions": {"hyrule": "海拉魯"}, "biomes": {"hyrule_field": {"name": "海拉魯平原 — 海拉魯城堡", "desc": "陽光明媚的翡翠平原，皇家石道跨過護城河直通宏偉的海拉魯城堡。", "sanctuary": "皮克羅聖域之森", "landmark": "海拉魯城堡"}, "dark_world": {"name": "暗之世界 — 力量金字塔", "desc": "被紫光運河割裂的暮色赭金荒原，中央矗立著莊嚴神秘的力量金字塔。", "sanctuary": "黃金聖地裂隙", "landmark": "力量金字塔"}}, "pokemon": {"2010": "林克（縮小帽）"}, "roles": {"2010": "皮克羅勇者"}, "moves": {"picori-blade": {"name": "皮克羅之劍"}, "heros-bow": {"name": "勇者之弓"}, "gust-jar": {"name": "魔法壺"}, "magical-boomerang": {"name": "魔法迴旋鏢"}, "flame-lantern": {"name": "火焰提燈"}, "cane-of-pacci": {"name": "翻轉之杖"}, "mole-mitts": {"name": "鼴鼠手套"}, "remote-bombs": {"name": "遙控炸彈"}, "rocs-cape": {"name": "大鵬披風"}}, "items": {"gold-kinstone": {"name": "金色幸福碎片", "desc": "暴擊率+14%，幸運+15% — 凝聚皮克羅好運。"}, "pegasus-boots": {"name": "天馬靴", "desc": "移速+14%，攻速+12% — 疾風衝刺！"}, "mirror-shield": {"name": "鏡盾", "desc": "護甲+18，最大生命+14% — 海拉魯聖潔神盾。"}, "ocarina-of-wind": {"name": "風之陶笛", "desc": "範圍+16%，移速+10% — 喚起海拉魯順風。"}}}}, "strings": {"en": {"Light Arrows": "Light Arrows", "Sacred Triforce Burst": "Sacred Triforce Burst", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Hyrule Field — Hyrule Castle", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.", "Minish Sanctuary Woods": "Minish Sanctuary Woods", "Hyrule Castle": "Hyrule Castle", "The Dark World — Pyramid of Power": "The Dark World — Pyramid of Power", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.", "Golden Land Rift": "Golden Land Rift", "Pyramid of Power": "Pyramid of Power", "Picori Blade": "Picori Blade", "Hero's Bow": "Hero's Bow", "Gust Jar": "Gust Jar", "Magical Boomerang": "Magical Boomerang", "Flame Lantern": "Flame Lantern", "Cane of Pacci": "Cane of Pacci", "Mole Mitts": "Mole Mitts", "Remote Bombs": "Remote Bombs", "Roc's Cape": "Roc's Cape", "Gold Kinstone": "Gold Kinstone", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crit Chance & +15% Luck from fused Picori fortune.", "Pegasus Boots": "Pegasus Boots", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Move Speed & +12% Attack Speed — dash like the wind!", "Mirror Shield": "Mirror Shield", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armor & +14% Max HP — sacred Hylian bulwark.", "Ocarina of Wind": "Ocarina of Wind", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Area & +10% Move Speed — summons Zeffa's tailwind."}, "es": {"Light Arrows": "Flechas de Luz", "Sacred Triforce Burst": "Explosión Sagrada Trifuerza", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Pradera de Hyrule — Castillo de Hyrule", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Llanuras esmeralda soleadas con una calzada real sobre el foso hacia el majestuoso Castillo de Hyrule.", "Minish Sanctuary Woods": "Bosque Santuario Minish", "Hyrule Castle": "Castillo de Hyrule", "The Dark World — Pyramid of Power": "Mundo Oscuro — Pirámide del Poder", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Reino crepuscular ocre corrompido con canales violeta que ascienden hacia la Pirámide del Poder.", "Golden Land Rift": "Grieta de la Tierra Dorada", "Pyramid of Power": "Pirámide del Poder", "Picori Blade": "Espada Minish", "Hero's Bow": "Arco del Héroe", "Gust Jar": "Jarrón Mágico", "Magical Boomerang": "Bumerán Mágico", "Flame Lantern": "Linterna de Llamas", "Cane of Pacci": "Bastón Revés", "Mole Mitts": "Guantes de Topo", "Remote Bombs": "Bombas Remotas", "Roc's Cape": "Capa de Roc", "Gold Kinstone": "Piedra de la Suerte Dorada", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crítico y +15% Suerte gracias a la fortuna Minish.", "Pegasus Boots": "Botas de Pegaso", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocidad y +12% Vel. Ataque — corre como el viento.", "Mirror Shield": "Escudo Espejo", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armadura y +14% PS Máx. — baluarte sagrado de Hyrule.", "Ocarina of Wind": "Ocarina del Viento", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Área y +10% Velocidad — invoca los vientos de Hyrule."}, "pt": {"Light Arrows": "Flechas de Luz", "Sacred Triforce Burst": "Explosão Sagrada da Triforce", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Campo de Hyrule — Castelo de Hyrule", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Planícies esmeralda ensolaradas com estrada real atravessando o fosso até o Castelo de Hyrule.", "Minish Sanctuary Woods": "Bosque Santuário Minish", "Hyrule Castle": "Castelo de Hyrule", "The Dark World — Pyramid of Power": "Mundo Sombrio — Pirâmide do Poder", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Reino crepuscular ocre corrompido com canais violeta levando à monumental Pirâmide do Poder.", "Golden Land Rift": "Fenda da Terra Dourada", "Pyramid of Power": "Pirâmide do Poder", "Picori Blade": "Lâmina Picori", "Hero's Bow": "Arco do Herói", "Gust Jar": "Jarro de Vento", "Magical Boomerang": "Bumerangue Mágico", "Flame Lantern": "Lanterna Flamejante", "Cane of Pacci": "Cajado de Pacci", "Mole Mitts": "Luvas de Toupeira", "Remote Bombs": "Bombas Remotas", "Roc's Cape": "Capa de Roc", "Gold Kinstone": "Kinstone Dourada", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crítico e +15% Sorte pela fortuna Picori.", "Pegasus Boots": "Botas de Pégaso", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocidade e +12% Vel. Ataque — dispare como o vento!", "Mirror Shield": "Escudo Espelho", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armadura e +14% HP Máx. — escudo sagrado de Hyrule.", "Ocarina of Wind": "Ocarina do Vento", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Área e +10% Velocidade — invoca ventos favoráveis."}, "fr": {"Light Arrows": "Flèches de Lumière", "Sacred Triforce Burst": "Éclat Sacré Triforce", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Plaine d'Hyrule — Château d'Hyrule", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Plaines émeraude ensoleillées menant par la route royale au majestueux Château d'Hyrule.", "Minish Sanctuary Woods": "Bois Sanctuaire Minish", "Hyrule Castle": "Château d'Hyrule", "The Dark World — Pyramid of Power": "Monde des Ténèbres — Pyramide du Pouvoir", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Royaume crépusculaire corrompu traversé de canaux violets vers la monumentale Pyramide du Pouvoir.", "Golden Land Rift": "Faille de la Terre d'Or", "Pyramid of Power": "Pyramide du Pouvoir", "Picori Blade": "Épée Minish", "Hero's Bow": "Arc du Héros", "Gust Jar": "Pot Magique", "Magical Boomerang": "Boomerang Magique", "Flame Lantern": "Lanterne", "Cane of Pacci": "Bâton Sauteur", "Mole Mitts": "Griffes de Taupe", "Remote Bombs": "Bombes à Distance", "Roc's Cape": "Cape de Roc", "Gold Kinstone": "Fragment du Bonheur Or", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Critiques et +15% Chance grâce à la fortune Minish.", "Pegasus Boots": "Bottes de Pégase", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Vitesse et +12% Vitesse d'attaque.", "Mirror Shield": "Bouclier Miroir", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armure et +14% PV max — rempart sacré d'Hyrule.", "Ocarina of Wind": "Ocarina du Vent", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Zone et +10% Vitesse — appelle les vents d'Hyrule."}, "de": {"Light Arrows": "Lichtpfeile", "Sacred Triforce Burst": "Heilige Triforce-Explosion", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Ebene von Hyrule — Schloss Hyrule", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Sonnige smaragdgrüne Ebenen mit Königsstraße über den Schlossgraben zum Schloss Hyrule.", "Minish Sanctuary Woods": "Minish-Heiligtumswald", "Hyrule Castle": "Schloss Hyrule", "The Dark World — Pyramid of Power": "Schattenwelt — Pyramide der Macht", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Verderbtes ockerfarbenes Zwielichtreich mit violetten Kanälen zur Pyramide der Macht.", "Golden Land Rift": "Riss des Goldenen Landes", "Pyramid of Power": "Pyramide der Macht", "Picori Blade": "Schwert der Minish", "Hero's Bow": "Heldenbogen", "Gust Jar": "Magischer Krug", "Magical Boomerang": "Magischer Bumerang", "Flame Lantern": "Lampe", "Cane of Pacci": "Wirbelstab", "Mole Mitts": "Maulwurfshandschuhe", "Remote Bombs": "Fernzünderbomben", "Roc's Cape": "Greifenmantel", "Gold Kinstone": "Goldenes Glücksfragment", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Krit-Chance & +15% Glück durch Minish-Glück.", "Pegasus Boots": "Pegasusstiefel", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Tempo & +12% Angriffstempo.", "Mirror Shield": "Spiegelschild", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Rüstung & +14% Max-KP — heiliger Schild Hyrules.", "Ocarina of Wind": "Okarina des Windes", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Fläche & +10% Tempo — ruft den Wind Hyrules."}, "it": {"Light Arrows": "Frecce di Luce", "Sacred Triforce Burst": "Esplosione Sacra Triforza", "Hyrule": "Hyrule", "Hyrule Field — Hyrule Castle": "Piana di Hyrule — Castello di Hyrule", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Pianure smeraldo assolate attraversate dalla strada reale fino al Castello di Hyrule.", "Minish Sanctuary Woods": "Bosco Santuario Minish", "Hyrule Castle": "Castello di Hyrule", "The Dark World — Pyramid of Power": "Mondo Oscuro — Piramide del Potere", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Regno crepuscolare ocra solcato da canali viola verso la monumentale Piramide del Potere.", "Golden Land Rift": "Varco della Terra d'Oro", "Pyramid of Power": "Piramide del Potere", "Picori Blade": "Spada Minish", "Hero's Bow": "Arco dell'Eroe", "Gust Jar": "Vaso Magico", "Magical Boomerang": "Boomerang Magico", "Flame Lantern": "Lanterna", "Cane of Pacci": "Bastone di Pacci", "Mole Mitts": "Guanti Talpa", "Remote Bombs": "Bombe Telecomandate", "Roc's Cape": "Mantello di Roc", "Gold Kinstone": "Frammento di Gioia Oro", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Critico e +15% Fortuna dai Minish.", "Pegasus Boots": "Calzari di Pegaso", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocità e +12% Vel. Attacco.", "Mirror Shield": "Scudo Specchio", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armatura e +14% PS Max — sacro scudo di Hyrule.", "Ocarina of Wind": "Ocarina del Vento", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Area e +10% Velocità — evoca il vento di Hyrule."}, "ja": {"Light Arrows": "光の矢", "Sacred Triforce Burst": "聖なるトライフォース爆発", "Hyrule": "ハイラル", "Hyrule Field — Hyrule Castle": "ハイラル平原・ハイラル城", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "石畳の王道が城堀の橋を越えて壮麗なハイラル城へと続く陽光あふれる緑の平原。", "Minish Sanctuary Woods": "ピコルの聖域の森", "Hyrule Castle": "ハイラル城", "The Dark World — Pyramid of Power": "闇の世界・力のピラミッド", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "紫の運河が黄土色の大地を切り裂き、巨大な力のピラミッドがそびえ立つ黄昏の闇の世界。", "Golden Land Rift": "聖地の狭間", "Pyramid of Power": "力のピラミッド", "Picori Blade": "ピコルの剣", "Hero's Bow": "勇者の弓", "Gust Jar": "まほうのツボ", "Magical Boomerang": "マジカルブーメラン", "Flame Lantern": "カンテラ", "Cane of Pacci": "パッチのつえ", "Mole Mitts": "モグラグローブ", "Remote Bombs": "リモコンバクダン", "Roc's Cape": "ロック鳥のマント", "Gold Kinstone": "金のカケラ", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "急所率+14%、運+15%。ピコルの幸運が宿るカケラ。", "Pegasus Boots": "ペガサスのくつ", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移動速度+14%、攻撃速度+12%。風のように駆ける！", "Mirror Shield": "ミラーシールド", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "防御+18、最大HP+14%。ハイラルの聖なる鏡盾。", "Ocarina of Wind": "風のオカリナ", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "範囲+16%、移動速度+10%。追い風を呼び寄せる。"}, "ko": {"Light Arrows": "빛의 화살", "Sacred Triforce Burst": "신성한 트라이포스 폭발", "Hyrule": "하이랄", "Hyrule Field — Hyrule Castle": "하이랄 평원 — 하이랄 성", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "햇살 가득한 초록 평원 위로 돌다리와 왕도가 웅장한 하이랄 성으로 이어집니다.", "Minish Sanctuary Woods": "피콜의 성역 숲", "Hyrule Castle": "하이랄 성", "The Dark World — Pyramid of Power": "어둠의 세계 — 힘의 피라미드", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "보랏빛 수로가 황토빛 황야를 가르고 거대한 힘의 피라미드가 우뚝 솟은 어둠의 세계.", "Golden Land Rift": "황금 대지의 틈새", "Pyramid of Power": "힘의 피라미드", "Picori Blade": "피콜의 검", "Hero's Bow": "용사의 활", "Gust Jar": "마법 항아리", "Magical Boomerang": "매지컬 부메랑", "Flame Lantern": "불꽃 랜턴", "Cane of Pacci": "패치의 지팡이", "Mole Mitts": "두더지 장갑", "Remote Bombs": "리모컨 폭탄", "Roc's Cape": "로크새의 망토", "Gold Kinstone": "황금 행운의 조각", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "치명타율 +14%, 행운 +15% — 피콜의 행운.", "Pegasus Boots": "페가수스의 신발", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "이동 속도 +14%, 공격 속도 +12%.", "Mirror Shield": "미러 실드", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "방어 +18, 최대 HP +14% — 하이랄의 성스러운 방패.", "Ocarina of Wind": "바람의 오카리나", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "범위 +16%, 이동 속도 +10% — 순풍을 부릅니다."}, "ru": {"Light Arrows": "Световые Стрелы", "Sacred Triforce Burst": "Священный Взрыв Трифорса", "Hyrule": "Хайрул", "Hyrule Field — Hyrule Castle": "Поле Хайрула — Замок Хайрул", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Солнечные изумрудные равнины с королевской дорогой через ров прямо к Замку Хайрул.", "Minish Sanctuary Woods": "Лес Святилища Минишей", "Hyrule Castle": "Замок Хайрул", "The Dark World — Pyramid of Power": "Тёмный Мир — Пирамида Силы", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Искажённое сумеречное царство с фиолетовыми каналами у величественной Пирамиды Силы.", "Golden Land Rift": "Разлом Золотой Земли", "Pyramid of Power": "Пирамида Силы", "Picori Blade": "Клинок Пикори", "Hero's Bow": "Лук Героя", "Gust Jar": "Кувшин Ветра", "Magical Boomerang": "Волшебный Бумеранг", "Flame Lantern": "Огненный Фонарь", "Cane of Pacci": "Посох Паччи", "Mole Mitts": "Кротовые Перчатки", "Remote Bombs": "Дистанционные Бомбы", "Roc's Cape": "Плащ Рока", "Gold Kinstone": "Золотой Кинстоун", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% шанса крита и +15% удачи.", "Pegasus Boots": "Сапоги Пегаса", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% скорости и +12% скорости атаки.", "Mirror Shield": "Зеркальный Щит", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 брони и +14% макс. ОЗ — священный щит Хайрула.", "Ocarina of Wind": "Окарина Ветра", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% области и +10% скорости."}, "zh": {"Light Arrows": "光之箭", "Sacred Triforce Burst": "神圣三角力量爆发", "Hyrule": "海拉鲁", "Hyrule Field — Hyrule Castle": "海拉鲁平原 — 海拉鲁城堡", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "阳光明媚的翡翠平原，皇家石道跨过护城河直通宏伟的海拉鲁城堡。", "Minish Sanctuary Woods": "皮克罗圣域之森", "Hyrule Castle": "海拉鲁城堡", "The Dark World — Pyramid of Power": "暗之世界 — 力量金字塔", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "被紫光运河割裂的暮色赭金荒原，中央矗立着庄严神秘的力量金字塔。", "Golden Land Rift": "黄金圣地裂隙", "Pyramid of Power": "力量金字塔", "Picori Blade": "皮克罗之剑", "Hero's Bow": "勇者之弓", "Gust Jar": "魔法壶", "Magical Boomerang": "魔法回旋镖", "Flame Lantern": "火焰提灯", "Cane of Pacci": "翻转之杖", "Mole Mitts": "鼹鼠手套", "Remote Bombs": "遥控炸弹", "Roc's Cape": "大鹏披风", "Gold Kinstone": "金色幸福碎片", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "暴击率+14%，幸运+15% — 凝聚皮克罗好运。", "Pegasus Boots": "天马靴", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移速+14%，攻速+12% — 疾风冲刺！", "Mirror Shield": "镜盾", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "护甲+18，最大生命+14% — 海拉鲁圣洁神盾。", "Ocarina of Wind": "风之陶笛", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "范围+16%，移速+10% — 唤起海拉鲁顺风。"}, "zht": {"Light Arrows": "光之箭", "Sacred Triforce Burst": "神聖三角力量爆發", "Hyrule": "海拉魯", "Hyrule Field — Hyrule Castle": "海拉魯平原 — 海拉魯城堡", "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "陽光明媚的翡翠平原，皇家石道跨過護城河直通宏偉的海拉魯城堡。", "Minish Sanctuary Woods": "皮克羅聖域之森", "Hyrule Castle": "海拉魯城堡", "The Dark World — Pyramid of Power": "暗之世界 — 力量金字塔", "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "被紫光運河割裂的暮色赭金荒原，中央矗立著莊嚴神秘的力量金字塔。", "Golden Land Rift": "黃金聖地裂隙", "Pyramid of Power": "力量金字塔", "Picori Blade": "皮克羅之劍", "Hero's Bow": "勇者之弓", "Gust Jar": "魔法壺", "Magical Boomerang": "魔法迴旋鏢", "Flame Lantern": "火焰提燈", "Cane of Pacci": "翻轉之杖", "Mole Mitts": "鼴鼠手套", "Remote Bombs": "遙控炸彈", "Roc's Cape": "大鵬披風", "Gold Kinstone": "金色幸福碎片", "+14% Crit Chance & +15% Luck from fused Picori fortune.": "暴擊率+14%，幸運+15% — 凝聚皮克羅好運。", "Pegasus Boots": "天馬靴", "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移速+14%，攻速+12% — 疾風衝刺！", "Mirror Shield": "鏡盾", "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "護甲+18，最大生命+14% — 海拉魯聖潔神盾。", "Ocarina of Wind": "風之陶笛", "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "範圍+16%，移速+10% — 喚起海拉魯順風。"}}}
+{
+  "langs": {
+    "en": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Hyrule Field — Hyrule Castle",
+          "desc": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.",
+          "sanctuary": "Minish Sanctuary Woods",
+          "landmark": "Hyrule Castle"
+        },
+        "dark_world": {
+          "name": "The Dark World — Pyramid of Power",
+          "desc": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.",
+          "sanctuary": "Golden Land Rift",
+          "landmark": "Pyramid of Power"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Princess Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Hero of the Minish",
+        "2024": "Princess of Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Picori Blade"
+        },
+        "heros-bow": {
+          "name": "Hero's Bow"
+        },
+        "gust-jar": {
+          "name": "Gust Jar"
+        },
+        "magical-boomerang": {
+          "name": "Magical Boomerang"
+        },
+        "flame-lantern": {
+          "name": "Flame Lantern"
+        },
+        "cane-of-pacci": {
+          "name": "Cane of Pacci"
+        },
+        "mole-mitts": {
+          "name": "Mole Mitts"
+        },
+        "remote-bombs": {
+          "name": "Remote Bombs"
+        },
+        "rocs-cape": {
+          "name": "Roc's Cape"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Gold Kinstone",
+          "desc": "+14% Crit Chance & +15% Luck from fused Picori fortune."
+        },
+        "pegasus-boots": {
+          "name": "Pegasus Boots",
+          "desc": "+14% Move Speed & +12% Attack Speed — dash like the wind!"
+        },
+        "mirror-shield": {
+          "name": "Mirror Shield",
+          "desc": "+18 Armor & +14% Max HP — sacred Hylian bulwark."
+        },
+        "ocarina-of-wind": {
+          "name": "Ocarina of Wind",
+          "desc": "+16% Area & +10% Move Speed — summons Zeffa's tailwind."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Triforce of Wisdom — Sacred Light Seal",
+          "desc": "Princess Zelda invokes the Triforce of Wisdom to unleash a radiant light seal across the arena."
+        }
+      }
+    },
+    "es": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Pradera de Hyrule — Castillo de Hyrule",
+          "desc": "Llanuras esmeralda soleadas con una calzada real sobre el foso hacia el majestuoso Castillo de Hyrule.",
+          "sanctuary": "Bosque Santuario Minish",
+          "landmark": "Castillo de Hyrule"
+        },
+        "dark_world": {
+          "name": "Mundo Oscuro — Pirámide del Poder",
+          "desc": "Reino crepuscular ocre corrompido con canales violeta que ascienden hacia la Pirámide del Poder.",
+          "sanctuary": "Grieta de la Tierra Dorada",
+          "landmark": "Pirámide del Poder"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Princesa Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Héroe de los Minish",
+        "2024": "Princesa de Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Espada Minish"
+        },
+        "heros-bow": {
+          "name": "Arco del Héroe"
+        },
+        "gust-jar": {
+          "name": "Jarrón Mágico"
+        },
+        "magical-boomerang": {
+          "name": "Bumerán Mágico"
+        },
+        "flame-lantern": {
+          "name": "Linterna de Llamas"
+        },
+        "cane-of-pacci": {
+          "name": "Bastón Revés"
+        },
+        "mole-mitts": {
+          "name": "Guantes de Topo"
+        },
+        "remote-bombs": {
+          "name": "Bombas Remotas"
+        },
+        "rocs-cape": {
+          "name": "Capa de Roc"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Piedra de la Suerte Dorada",
+          "desc": "+14% Crítico y +15% Suerte gracias a la fortuna Minish."
+        },
+        "pegasus-boots": {
+          "name": "Botas de Pegaso",
+          "desc": "+14% Velocidad y +12% Vel. Ataque — corre como el viento."
+        },
+        "mirror-shield": {
+          "name": "Escudo Espejo",
+          "desc": "+18 Armadura y +14% PS Máx. — baluarte sagrado de Hyrule."
+        },
+        "ocarina-of-wind": {
+          "name": "Ocarina del Viento",
+          "desc": "+16% Área y +10% Velocidad — invoca los vientos de Hyrule."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Trifuerza de la Sabiduría — Sello de Luz",
+          "desc": "La Princesa Zelda invoca la Trifuerza de la Sabiduría y libera un sello de luz sagrada."
+        }
+      }
+    },
+    "pt": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Campo de Hyrule — Castelo de Hyrule",
+          "desc": "Planícies esmeralda ensolaradas com estrada real atravessando o fosso até o Castelo de Hyrule.",
+          "sanctuary": "Bosque Santuário Minish",
+          "landmark": "Castelo de Hyrule"
+        },
+        "dark_world": {
+          "name": "Mundo Sombrio — Pirâmide do Poder",
+          "desc": "Reino crepuscular ocre corrompido com canais violeta levando à monumental Pirâmide do Poder.",
+          "sanctuary": "Fenda da Terra Dourada",
+          "landmark": "Pirâmide do Poder"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Princesa Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Herói dos Minish",
+        "2024": "Princesa de Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Lâmina Picori"
+        },
+        "heros-bow": {
+          "name": "Arco do Herói"
+        },
+        "gust-jar": {
+          "name": "Jarro de Vento"
+        },
+        "magical-boomerang": {
+          "name": "Bumerangue Mágico"
+        },
+        "flame-lantern": {
+          "name": "Lanterna Flamejante"
+        },
+        "cane-of-pacci": {
+          "name": "Cajado de Pacci"
+        },
+        "mole-mitts": {
+          "name": "Luvas de Toupeira"
+        },
+        "remote-bombs": {
+          "name": "Bombas Remotas"
+        },
+        "rocs-cape": {
+          "name": "Capa de Roc"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Kinstone Dourada",
+          "desc": "+14% Crítico e +15% Sorte pela fortuna Picori."
+        },
+        "pegasus-boots": {
+          "name": "Botas de Pégaso",
+          "desc": "+14% Velocidade e +12% Vel. Ataque — dispare como o vento!"
+        },
+        "mirror-shield": {
+          "name": "Escudo Espelho",
+          "desc": "+18 Armadura e +14% HP Máx. — escudo sagrado de Hyrule."
+        },
+        "ocarina-of-wind": {
+          "name": "Ocarina do Vento",
+          "desc": "+16% Área e +10% Velocidade — invoca ventos favoráveis."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Triforce da Sabedoria — Selo de Luz",
+          "desc": "A Princesa Zelda invoca a Triforce da Sabedoria para liberar um selo de luz sagrada."
+        }
+      }
+    },
+    "fr": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Plaine d'Hyrule — Château d'Hyrule",
+          "desc": "Plaines émeraude ensoleillées menant par la route royale au majestueux Château d'Hyrule.",
+          "sanctuary": "Bois Sanctuaire Minish",
+          "landmark": "Château d'Hyrule"
+        },
+        "dark_world": {
+          "name": "Monde des Ténèbres — Pyramide du Pouvoir",
+          "desc": "Royaume crépusculaire corrompu traversé de canaux violets vers la monumentale Pyramide du Pouvoir.",
+          "sanctuary": "Faille de la Terre d'Or",
+          "landmark": "Pyramide du Pouvoir"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Princesse Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Héros des Minish",
+        "2024": "Princesse d'Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Épée Minish"
+        },
+        "heros-bow": {
+          "name": "Arc du Héros"
+        },
+        "gust-jar": {
+          "name": "Pot Magique"
+        },
+        "magical-boomerang": {
+          "name": "Boomerang Magique"
+        },
+        "flame-lantern": {
+          "name": "Lanterne"
+        },
+        "cane-of-pacci": {
+          "name": "Bâton Sauteur"
+        },
+        "mole-mitts": {
+          "name": "Griffes de Taupe"
+        },
+        "remote-bombs": {
+          "name": "Bombes à Distance"
+        },
+        "rocs-cape": {
+          "name": "Cape de Roc"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Fragment du Bonheur Or",
+          "desc": "+14% Critiques et +15% Chance grâce à la fortune Minish."
+        },
+        "pegasus-boots": {
+          "name": "Bottes de Pégase",
+          "desc": "+14% Vitesse et +12% Vitesse d'attaque."
+        },
+        "mirror-shield": {
+          "name": "Bouclier Miroir",
+          "desc": "+18 Armure et +14% PV max — rempart sacré d'Hyrule."
+        },
+        "ocarina-of-wind": {
+          "name": "Ocarina du Vent",
+          "desc": "+16% Zone et +10% Vitesse — appelle les vents d'Hyrule."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Triforce de la Sagesse — Sceau de Lumière",
+          "desc": "La Princesse Zelda invoque la Triforce de la Sagesse et libère un sceau de lumière sacrée."
+        }
+      }
+    },
+    "de": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Ebene von Hyrule — Schloss Hyrule",
+          "desc": "Sonnige smaragdgrüne Ebenen mit Königsstraße über den Schlossgraben zum Schloss Hyrule.",
+          "sanctuary": "Minish-Heiligtumswald",
+          "landmark": "Schloss Hyrule"
+        },
+        "dark_world": {
+          "name": "Schattenwelt — Pyramide der Macht",
+          "desc": "Verderbtes ockerfarbenes Zwielichtreich mit violetten Kanälen zur Pyramide der Macht.",
+          "sanctuary": "Riss des Goldenen Landes",
+          "landmark": "Pyramide der Macht"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Prinzessin Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Held der Minish",
+        "2024": "Prinzessin von Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Schwert der Minish"
+        },
+        "heros-bow": {
+          "name": "Heldenbogen"
+        },
+        "gust-jar": {
+          "name": "Magischer Krug"
+        },
+        "magical-boomerang": {
+          "name": "Magischer Bumerang"
+        },
+        "flame-lantern": {
+          "name": "Lampe"
+        },
+        "cane-of-pacci": {
+          "name": "Wirbelstab"
+        },
+        "mole-mitts": {
+          "name": "Maulwurfshandschuhe"
+        },
+        "remote-bombs": {
+          "name": "Fernzünderbomben"
+        },
+        "rocs-cape": {
+          "name": "Greifenmantel"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Goldenes Glücksfragment",
+          "desc": "+14% Krit-Chance & +15% Glück durch Minish-Glück."
+        },
+        "pegasus-boots": {
+          "name": "Pegasusstiefel",
+          "desc": "+14% Tempo & +12% Angriffstempo."
+        },
+        "mirror-shield": {
+          "name": "Spiegelschild",
+          "desc": "+18 Rüstung & +14% Max-KP — heiliger Schild Hyrules."
+        },
+        "ocarina-of-wind": {
+          "name": "Okarina des Windes",
+          "desc": "+16% Fläche & +10% Tempo — ruft den Wind Hyrules."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Triforce der Weisheit — Lichtsiegel",
+          "desc": "Prinzessin Zelda beschwört das Triforce der Weisheit und entfesselt ein heiliges Lichtsiegel."
+        }
+      }
+    },
+    "it": {
+      "regions": {
+        "hyrule": "Hyrule"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Piana di Hyrule — Castello di Hyrule",
+          "desc": "Pianure smeraldo assolate attraversate dalla strada reale fino al Castello di Hyrule.",
+          "sanctuary": "Bosco Santuario Minish",
+          "landmark": "Castello di Hyrule"
+        },
+        "dark_world": {
+          "name": "Mondo Oscuro — Piramide del Potere",
+          "desc": "Regno crepuscolare ocra solcato da canali viola verso la monumentale Piramide del Potere.",
+          "sanctuary": "Varco della Terra d'Oro",
+          "landmark": "Piramide del Potere"
+        }
+      },
+      "pokemon": {
+        "2010": "Link (Minish Cap)",
+        "2024": "Principessa Zelda (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Eroe dei Minish",
+        "2024": "Principessa di Hyrule"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Spada Minish"
+        },
+        "heros-bow": {
+          "name": "Arco dell'Eroe"
+        },
+        "gust-jar": {
+          "name": "Vaso Magico"
+        },
+        "magical-boomerang": {
+          "name": "Boomerang Magico"
+        },
+        "flame-lantern": {
+          "name": "Lanterna"
+        },
+        "cane-of-pacci": {
+          "name": "Bastone di Pacci"
+        },
+        "mole-mitts": {
+          "name": "Guanti Talpa"
+        },
+        "remote-bombs": {
+          "name": "Bombe Telecomandate"
+        },
+        "rocs-cape": {
+          "name": "Mantello di Roc"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Frammento di Gioia Oro",
+          "desc": "+14% Critico e +15% Fortuna dai Minish."
+        },
+        "pegasus-boots": {
+          "name": "Calzari di Pegaso",
+          "desc": "+14% Velocità e +12% Vel. Attacco."
+        },
+        "mirror-shield": {
+          "name": "Scudo Specchio",
+          "desc": "+18 Armatura e +14% PS Max — sacro scudo di Hyrule."
+        },
+        "ocarina-of-wind": {
+          "name": "Ocarina del Vento",
+          "desc": "+16% Area e +10% Velocità — evoca il vento di Hyrule."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Triforza della Saggezza — Sigillo di Luce",
+          "desc": "La Principessa Zelda invoca la Triforza della Saggezza liberando un sigillo di luce sacra."
+        }
+      }
+    },
+    "ja": {
+      "regions": {
+        "hyrule": "ハイラル"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "ハイラル平原・ハイラル城",
+          "desc": "石畳の王道が城堀の橋を越えて壮麗なハイラル城へと続く陽光あふれる緑の平原。",
+          "sanctuary": "ピコルの聖域の森",
+          "landmark": "ハイラル城"
+        },
+        "dark_world": {
+          "name": "闇の世界・力のピラミッド",
+          "desc": "紫の運河が黄土色の大地を切り裂き、巨大な力のピラミッドがそびえ立つ黄昏の闇の世界。",
+          "sanctuary": "聖地の狭間",
+          "landmark": "力のピラミッド"
+        }
+      },
+      "pokemon": {
+        "2010": "リンク (ふしぎのぼうし)",
+        "2024": "ゼルダ姫 (ふしぎのぼうし)"
+      },
+      "roles": {
+        "2010": "ピコルの勇者",
+        "2024": "ハイラルの王女"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "ピコルの剣"
+        },
+        "heros-bow": {
+          "name": "勇者の弓"
+        },
+        "gust-jar": {
+          "name": "まほうのツボ"
+        },
+        "magical-boomerang": {
+          "name": "マジカルブーメラン"
+        },
+        "flame-lantern": {
+          "name": "カンテラ"
+        },
+        "cane-of-pacci": {
+          "name": "パッチのつえ"
+        },
+        "mole-mitts": {
+          "name": "モグラグローブ"
+        },
+        "remote-bombs": {
+          "name": "リモコンバクダン"
+        },
+        "rocs-cape": {
+          "name": "ロック鳥のマント"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "金のカケラ",
+          "desc": "急所率+14%、運+15%。ピコルの幸運が宿るカケラ。"
+        },
+        "pegasus-boots": {
+          "name": "ペガサスのくつ",
+          "desc": "移動速度+14%、攻撃速度+12%。風のように駆ける！"
+        },
+        "mirror-shield": {
+          "name": "ミラーシールド",
+          "desc": "防御+18、最大HP+14%。ハイラルの聖なる鏡盾。"
+        },
+        "ocarina-of-wind": {
+          "name": "風のオカリナ",
+          "desc": "範囲+16%、移動速度+10%。追い風を呼び寄せる。"
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "知恵のトライフォース・聖なる光の封印",
+          "desc": "ゼルダ姫が知恵のトライフォースを呼び出し、聖なる光の封印で周囲の敵を一掃する。"
+        }
+      }
+    },
+    "ko": {
+      "regions": {
+        "hyrule": "하이랄"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "하이랄 평원 — 하이랄 성",
+          "desc": "햇살 가득한 초록 평원 위로 돌다리와 왕도가 웅장한 하이랄 성으로 이어집니다.",
+          "sanctuary": "피콜의 성역 숲",
+          "landmark": "하이랄 성"
+        },
+        "dark_world": {
+          "name": "어둠의 세계 — 힘의 피라미드",
+          "desc": "보랏빛 수로가 황토빛 황야를 가르고 거대한 힘의 피라미드가 우뚝 솟은 어둠의 세계.",
+          "sanctuary": "황금 대지의 틈새",
+          "landmark": "힘의 피라미드"
+        }
+      },
+      "pokemon": {
+        "2010": "링크 (이상한 모자)",
+        "2024": "젤다 공주 (이상한 모자)"
+      },
+      "roles": {
+        "2010": "피콜의 용사",
+        "2024": "하이랄의 공주"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "피콜의 검"
+        },
+        "heros-bow": {
+          "name": "용사의 활"
+        },
+        "gust-jar": {
+          "name": "마법 항아리"
+        },
+        "magical-boomerang": {
+          "name": "매지컬 부메랑"
+        },
+        "flame-lantern": {
+          "name": "불꽃 랜턴"
+        },
+        "cane-of-pacci": {
+          "name": "패치의 지팡이"
+        },
+        "mole-mitts": {
+          "name": "두더지 장갑"
+        },
+        "remote-bombs": {
+          "name": "리모컨 폭탄"
+        },
+        "rocs-cape": {
+          "name": "로크새의 망토"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "황금 행운의 조각",
+          "desc": "치명타율 +14%, 행운 +15% — 피콜의 행운."
+        },
+        "pegasus-boots": {
+          "name": "페가수스의 신발",
+          "desc": "이동 속도 +14%, 공격 속도 +12%."
+        },
+        "mirror-shield": {
+          "name": "미러 실드",
+          "desc": "방어 +18, 최대 HP +14% — 하이랄의 성스러운 방패."
+        },
+        "ocarina-of-wind": {
+          "name": "바람의 오카리나",
+          "desc": "범위 +16%, 이동 속도 +10% — 순풍을 부릅니다."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "지혜의 트라이포스 — 성스러운 빛의 봉인",
+          "desc": "젤다 공주가 지혜의 트라이포스를 발동해 성스러운 빛의 봉인으로 적을 섬멸합니다."
+        }
+      }
+    },
+    "ru": {
+      "regions": {
+        "hyrule": "Хайрул"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "Поле Хайрула — Замок Хайрул",
+          "desc": "Солнечные изумрудные равнины с королевской дорогой через ров прямо к Замку Хайрул.",
+          "sanctuary": "Лес Святилища Минишей",
+          "landmark": "Замок Хайрул"
+        },
+        "dark_world": {
+          "name": "Тёмный Мир — Пирамида Силы",
+          "desc": "Искажённое сумеречное царство с фиолетовыми каналами у величественной Пирамиды Силы.",
+          "sanctuary": "Разлом Золотой Земли",
+          "landmark": "Пирамида Силы"
+        }
+      },
+      "pokemon": {
+        "2010": "Линк (Minish Cap)",
+        "2024": "Принцесса Зельда (Minish Cap)"
+      },
+      "roles": {
+        "2010": "Герой Минишей",
+        "2024": "Принцесса Хайрула"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "Клинок Пикори"
+        },
+        "heros-bow": {
+          "name": "Лук Героя"
+        },
+        "gust-jar": {
+          "name": "Кувшин Ветра"
+        },
+        "magical-boomerang": {
+          "name": "Волшебный Бумеранг"
+        },
+        "flame-lantern": {
+          "name": "Огненный Фонарь"
+        },
+        "cane-of-pacci": {
+          "name": "Посох Паччи"
+        },
+        "mole-mitts": {
+          "name": "Кротовые Перчатки"
+        },
+        "remote-bombs": {
+          "name": "Дистанционные Бомбы"
+        },
+        "rocs-cape": {
+          "name": "Плащ Рока"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "Золотой Кинстоун",
+          "desc": "+14% шанса крита и +15% удачи."
+        },
+        "pegasus-boots": {
+          "name": "Сапоги Пегаса",
+          "desc": "+14% скорости и +12% скорости атаки."
+        },
+        "mirror-shield": {
+          "name": "Зеркальный Щит",
+          "desc": "+18 брони и +14% макс. ОЗ — священный щит Хайрула."
+        },
+        "ocarina-of-wind": {
+          "name": "Окарина Ветра",
+          "desc": "+16% области и +10% скорости."
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "Трайфорс Мудрости — Печать Света",
+          "desc": "Принцесса Зельда призывает Трайфорс Мудрости и обрушивает священную печать света."
+        }
+      }
+    },
+    "zh": {
+      "regions": {
+        "hyrule": "海拉鲁"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "海拉鲁平原 — 海拉鲁城堡",
+          "desc": "阳光明媚的翡翠平原，皇家石道跨过护城河直通宏伟的海拉鲁城堡。",
+          "sanctuary": "皮克罗圣域之森",
+          "landmark": "海拉鲁城堡"
+        },
+        "dark_world": {
+          "name": "暗之世界 — 力量金字塔",
+          "desc": "被紫光运河割裂的暮色赭金荒原，中央矗立着庄严神秘的力量金字塔。",
+          "sanctuary": "黄金圣地裂隙",
+          "landmark": "力量金字塔"
+        }
+      },
+      "pokemon": {
+        "2010": "林克（缩小帽）",
+        "2024": "塞尔达公主 (缩小帽)"
+      },
+      "roles": {
+        "2010": "皮克罗勇者",
+        "2024": "海拉鲁公主"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "皮克罗之剑"
+        },
+        "heros-bow": {
+          "name": "勇者之弓"
+        },
+        "gust-jar": {
+          "name": "魔法壶"
+        },
+        "magical-boomerang": {
+          "name": "魔法回旋镖"
+        },
+        "flame-lantern": {
+          "name": "火焰提灯"
+        },
+        "cane-of-pacci": {
+          "name": "翻转之杖"
+        },
+        "mole-mitts": {
+          "name": "鼹鼠手套"
+        },
+        "remote-bombs": {
+          "name": "遥控炸弹"
+        },
+        "rocs-cape": {
+          "name": "大鹏披风"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "金色幸福碎片",
+          "desc": "暴击率+14%，幸运+15% — 凝聚皮克罗好运。"
+        },
+        "pegasus-boots": {
+          "name": "天马靴",
+          "desc": "移速+14%，攻速+12% — 疾风冲刺！"
+        },
+        "mirror-shield": {
+          "name": "镜盾",
+          "desc": "护甲+18，最大生命+14% — 海拉鲁圣洁神盾。"
+        },
+        "ocarina-of-wind": {
+          "name": "风之陶笛",
+          "desc": "范围+16%，移速+10% — 唤起海拉鲁顺风。"
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "智慧三角力量·圣光封印",
+          "desc": "Princess Zelda invokes the Triforce of Wisdom to unleash a radiant light seal across the arena."
+        }
+      }
+    },
+    "zht": {
+      "regions": {
+        "hyrule": "海拉魯"
+      },
+      "biomes": {
+        "hyrule_field": {
+          "name": "海拉魯平原 — 海拉魯城堡",
+          "desc": "陽光明媚的翡翠平原，皇家石道跨過護城河直通宏偉的海拉魯城堡。",
+          "sanctuary": "皮克羅聖域之森",
+          "landmark": "海拉魯城堡"
+        },
+        "dark_world": {
+          "name": "暗之世界 — 力量金字塔",
+          "desc": "被紫光運河割裂的暮色赭金荒原，中央矗立著莊嚴神秘的力量金字塔。",
+          "sanctuary": "黃金聖地裂隙",
+          "landmark": "力量金字塔"
+        }
+      },
+      "pokemon": {
+        "2010": "林克（縮小帽）",
+        "2024": "薩爾達公主 (縮小帽)"
+      },
+      "roles": {
+        "2010": "皮克羅勇者",
+        "2024": "海拉魯公主"
+      },
+      "moves": {
+        "picori-blade": {
+          "name": "皮克羅之劍"
+        },
+        "heros-bow": {
+          "name": "勇者之弓"
+        },
+        "gust-jar": {
+          "name": "魔法壺"
+        },
+        "magical-boomerang": {
+          "name": "魔法迴旋鏢"
+        },
+        "flame-lantern": {
+          "name": "火焰提燈"
+        },
+        "cane-of-pacci": {
+          "name": "翻轉之杖"
+        },
+        "mole-mitts": {
+          "name": "鼴鼠手套"
+        },
+        "remote-bombs": {
+          "name": "遙控炸彈"
+        },
+        "rocs-cape": {
+          "name": "大鵬披風"
+        }
+      },
+      "items": {
+        "gold-kinstone": {
+          "name": "金色幸福碎片",
+          "desc": "暴擊率+14%，幸運+15% — 凝聚皮克羅好運。"
+        },
+        "pegasus-boots": {
+          "name": "天馬靴",
+          "desc": "移速+14%，攻速+12% — 疾風衝刺！"
+        },
+        "mirror-shield": {
+          "name": "鏡盾",
+          "desc": "護甲+18，最大生命+14% — 海拉魯聖潔神盾。"
+        },
+        "ocarina-of-wind": {
+          "name": "風之陶笛",
+          "desc": "範圍+16%，移速+10% — 喚起海拉魯順風。"
+        }
+      },
+      "ults": {
+        "2024": {
+          "name": "智慧三角力量·聖光封印",
+          "desc": "Princess Zelda invokes the Triforce of Wisdom to unleash a radiant light seal across the arena."
+        }
+      }
+    }
+  },
+  "strings": {
+    "en": {
+      "Light Arrows": "Light Arrows",
+      "Sacred Triforce Burst": "Sacred Triforce Burst",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Hyrule Field — Hyrule Castle",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.",
+      "Minish Sanctuary Woods": "Minish Sanctuary Woods",
+      "Hyrule Castle": "Hyrule Castle",
+      "The Dark World — Pyramid of Power": "The Dark World — Pyramid of Power",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.",
+      "Golden Land Rift": "Golden Land Rift",
+      "Pyramid of Power": "Pyramid of Power",
+      "Picori Blade": "Picori Blade",
+      "Hero's Bow": "Hero's Bow",
+      "Gust Jar": "Gust Jar",
+      "Magical Boomerang": "Magical Boomerang",
+      "Flame Lantern": "Flame Lantern",
+      "Cane of Pacci": "Cane of Pacci",
+      "Mole Mitts": "Mole Mitts",
+      "Remote Bombs": "Remote Bombs",
+      "Roc's Cape": "Roc's Cape",
+      "Gold Kinstone": "Gold Kinstone",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crit Chance & +15% Luck from fused Picori fortune.",
+      "Pegasus Boots": "Pegasus Boots",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Move Speed & +12% Attack Speed — dash like the wind!",
+      "Mirror Shield": "Mirror Shield",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armor & +14% Max HP — sacred Hylian bulwark.",
+      "Ocarina of Wind": "Ocarina of Wind",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Area & +10% Move Speed — summons Zeffa's tailwind."
+    },
+    "es": {
+      "Light Arrows": "Flechas de Luz",
+      "Sacred Triforce Burst": "Explosión Sagrada Trifuerza",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Pradera de Hyrule — Castillo de Hyrule",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Llanuras esmeralda soleadas con una calzada real sobre el foso hacia el majestuoso Castillo de Hyrule.",
+      "Minish Sanctuary Woods": "Bosque Santuario Minish",
+      "Hyrule Castle": "Castillo de Hyrule",
+      "The Dark World — Pyramid of Power": "Mundo Oscuro — Pirámide del Poder",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Reino crepuscular ocre corrompido con canales violeta que ascienden hacia la Pirámide del Poder.",
+      "Golden Land Rift": "Grieta de la Tierra Dorada",
+      "Pyramid of Power": "Pirámide del Poder",
+      "Picori Blade": "Espada Minish",
+      "Hero's Bow": "Arco del Héroe",
+      "Gust Jar": "Jarrón Mágico",
+      "Magical Boomerang": "Bumerán Mágico",
+      "Flame Lantern": "Linterna de Llamas",
+      "Cane of Pacci": "Bastón Revés",
+      "Mole Mitts": "Guantes de Topo",
+      "Remote Bombs": "Bombas Remotas",
+      "Roc's Cape": "Capa de Roc",
+      "Gold Kinstone": "Piedra de la Suerte Dorada",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crítico y +15% Suerte gracias a la fortuna Minish.",
+      "Pegasus Boots": "Botas de Pegaso",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocidad y +12% Vel. Ataque — corre como el viento.",
+      "Mirror Shield": "Escudo Espejo",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armadura y +14% PS Máx. — baluarte sagrado de Hyrule.",
+      "Ocarina of Wind": "Ocarina del Viento",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Área y +10% Velocidad — invoca los vientos de Hyrule."
+    },
+    "pt": {
+      "Light Arrows": "Flechas de Luz",
+      "Sacred Triforce Burst": "Explosão Sagrada da Triforce",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Campo de Hyrule — Castelo de Hyrule",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Planícies esmeralda ensolaradas com estrada real atravessando o fosso até o Castelo de Hyrule.",
+      "Minish Sanctuary Woods": "Bosque Santuário Minish",
+      "Hyrule Castle": "Castelo de Hyrule",
+      "The Dark World — Pyramid of Power": "Mundo Sombrio — Pirâmide do Poder",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Reino crepuscular ocre corrompido com canais violeta levando à monumental Pirâmide do Poder.",
+      "Golden Land Rift": "Fenda da Terra Dourada",
+      "Pyramid of Power": "Pirâmide do Poder",
+      "Picori Blade": "Lâmina Picori",
+      "Hero's Bow": "Arco do Herói",
+      "Gust Jar": "Jarro de Vento",
+      "Magical Boomerang": "Bumerangue Mágico",
+      "Flame Lantern": "Lanterna Flamejante",
+      "Cane of Pacci": "Cajado de Pacci",
+      "Mole Mitts": "Luvas de Toupeira",
+      "Remote Bombs": "Bombas Remotas",
+      "Roc's Cape": "Capa de Roc",
+      "Gold Kinstone": "Kinstone Dourada",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Crítico e +15% Sorte pela fortuna Picori.",
+      "Pegasus Boots": "Botas de Pégaso",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocidade e +12% Vel. Ataque — dispare como o vento!",
+      "Mirror Shield": "Escudo Espelho",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armadura e +14% HP Máx. — escudo sagrado de Hyrule.",
+      "Ocarina of Wind": "Ocarina do Vento",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Área e +10% Velocidade — invoca ventos favoráveis."
+    },
+    "fr": {
+      "Light Arrows": "Flèches de Lumière",
+      "Sacred Triforce Burst": "Éclat Sacré Triforce",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Plaine d'Hyrule — Château d'Hyrule",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Plaines émeraude ensoleillées menant par la route royale au majestueux Château d'Hyrule.",
+      "Minish Sanctuary Woods": "Bois Sanctuaire Minish",
+      "Hyrule Castle": "Château d'Hyrule",
+      "The Dark World — Pyramid of Power": "Monde des Ténèbres — Pyramide du Pouvoir",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Royaume crépusculaire corrompu traversé de canaux violets vers la monumentale Pyramide du Pouvoir.",
+      "Golden Land Rift": "Faille de la Terre d'Or",
+      "Pyramid of Power": "Pyramide du Pouvoir",
+      "Picori Blade": "Épée Minish",
+      "Hero's Bow": "Arc du Héros",
+      "Gust Jar": "Pot Magique",
+      "Magical Boomerang": "Boomerang Magique",
+      "Flame Lantern": "Lanterne",
+      "Cane of Pacci": "Bâton Sauteur",
+      "Mole Mitts": "Griffes de Taupe",
+      "Remote Bombs": "Bombes à Distance",
+      "Roc's Cape": "Cape de Roc",
+      "Gold Kinstone": "Fragment du Bonheur Or",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Critiques et +15% Chance grâce à la fortune Minish.",
+      "Pegasus Boots": "Bottes de Pégase",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Vitesse et +12% Vitesse d'attaque.",
+      "Mirror Shield": "Bouclier Miroir",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armure et +14% PV max — rempart sacré d'Hyrule.",
+      "Ocarina of Wind": "Ocarina du Vent",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Zone et +10% Vitesse — appelle les vents d'Hyrule."
+    },
+    "de": {
+      "Light Arrows": "Lichtpfeile",
+      "Sacred Triforce Burst": "Heilige Triforce-Explosion",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Ebene von Hyrule — Schloss Hyrule",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Sonnige smaragdgrüne Ebenen mit Königsstraße über den Schlossgraben zum Schloss Hyrule.",
+      "Minish Sanctuary Woods": "Minish-Heiligtumswald",
+      "Hyrule Castle": "Schloss Hyrule",
+      "The Dark World — Pyramid of Power": "Schattenwelt — Pyramide der Macht",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Verderbtes ockerfarbenes Zwielichtreich mit violetten Kanälen zur Pyramide der Macht.",
+      "Golden Land Rift": "Riss des Goldenen Landes",
+      "Pyramid of Power": "Pyramide der Macht",
+      "Picori Blade": "Schwert der Minish",
+      "Hero's Bow": "Heldenbogen",
+      "Gust Jar": "Magischer Krug",
+      "Magical Boomerang": "Magischer Bumerang",
+      "Flame Lantern": "Lampe",
+      "Cane of Pacci": "Wirbelstab",
+      "Mole Mitts": "Maulwurfshandschuhe",
+      "Remote Bombs": "Fernzünderbomben",
+      "Roc's Cape": "Greifenmantel",
+      "Gold Kinstone": "Goldenes Glücksfragment",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Krit-Chance & +15% Glück durch Minish-Glück.",
+      "Pegasus Boots": "Pegasusstiefel",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Tempo & +12% Angriffstempo.",
+      "Mirror Shield": "Spiegelschild",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Rüstung & +14% Max-KP — heiliger Schild Hyrules.",
+      "Ocarina of Wind": "Okarina des Windes",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Fläche & +10% Tempo — ruft den Wind Hyrules."
+    },
+    "it": {
+      "Light Arrows": "Frecce di Luce",
+      "Sacred Triforce Burst": "Esplosione Sacra Triforza",
+      "Hyrule": "Hyrule",
+      "Hyrule Field — Hyrule Castle": "Piana di Hyrule — Castello di Hyrule",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Pianure smeraldo assolate attraversate dalla strada reale fino al Castello di Hyrule.",
+      "Minish Sanctuary Woods": "Bosco Santuario Minish",
+      "Hyrule Castle": "Castello di Hyrule",
+      "The Dark World — Pyramid of Power": "Mondo Oscuro — Piramide del Potere",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Regno crepuscolare ocra solcato da canali viola verso la monumentale Piramide del Potere.",
+      "Golden Land Rift": "Varco della Terra d'Oro",
+      "Pyramid of Power": "Piramide del Potere",
+      "Picori Blade": "Spada Minish",
+      "Hero's Bow": "Arco dell'Eroe",
+      "Gust Jar": "Vaso Magico",
+      "Magical Boomerang": "Boomerang Magico",
+      "Flame Lantern": "Lanterna",
+      "Cane of Pacci": "Bastone di Pacci",
+      "Mole Mitts": "Guanti Talpa",
+      "Remote Bombs": "Bombe Telecomandate",
+      "Roc's Cape": "Mantello di Roc",
+      "Gold Kinstone": "Frammento di Gioia Oro",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% Critico e +15% Fortuna dai Minish.",
+      "Pegasus Boots": "Calzari di Pegaso",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% Velocità e +12% Vel. Attacco.",
+      "Mirror Shield": "Scudo Specchio",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 Armatura e +14% PS Max — sacro scudo di Hyrule.",
+      "Ocarina of Wind": "Ocarina del Vento",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% Area e +10% Velocità — evoca il vento di Hyrule."
+    },
+    "ja": {
+      "Light Arrows": "光の矢",
+      "Sacred Triforce Burst": "聖なるトライフォース爆発",
+      "Hyrule": "ハイラル",
+      "Hyrule Field — Hyrule Castle": "ハイラル平原・ハイラル城",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "石畳の王道が城堀の橋を越えて壮麗なハイラル城へと続く陽光あふれる緑の平原。",
+      "Minish Sanctuary Woods": "ピコルの聖域の森",
+      "Hyrule Castle": "ハイラル城",
+      "The Dark World — Pyramid of Power": "闇の世界・力のピラミッド",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "紫の運河が黄土色の大地を切り裂き、巨大な力のピラミッドがそびえ立つ黄昏の闇の世界。",
+      "Golden Land Rift": "聖地の狭間",
+      "Pyramid of Power": "力のピラミッド",
+      "Picori Blade": "ピコルの剣",
+      "Hero's Bow": "勇者の弓",
+      "Gust Jar": "まほうのツボ",
+      "Magical Boomerang": "マジカルブーメラン",
+      "Flame Lantern": "カンテラ",
+      "Cane of Pacci": "パッチのつえ",
+      "Mole Mitts": "モグラグローブ",
+      "Remote Bombs": "リモコンバクダン",
+      "Roc's Cape": "ロック鳥のマント",
+      "Gold Kinstone": "金のカケラ",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "急所率+14%、運+15%。ピコルの幸運が宿るカケラ。",
+      "Pegasus Boots": "ペガサスのくつ",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移動速度+14%、攻撃速度+12%。風のように駆ける！",
+      "Mirror Shield": "ミラーシールド",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "防御+18、最大HP+14%。ハイラルの聖なる鏡盾。",
+      "Ocarina of Wind": "風のオカリナ",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "範囲+16%、移動速度+10%。追い風を呼び寄せる。"
+    },
+    "ko": {
+      "Light Arrows": "빛의 화살",
+      "Sacred Triforce Burst": "신성한 트라이포스 폭발",
+      "Hyrule": "하이랄",
+      "Hyrule Field — Hyrule Castle": "하이랄 평원 — 하이랄 성",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "햇살 가득한 초록 평원 위로 돌다리와 왕도가 웅장한 하이랄 성으로 이어집니다.",
+      "Minish Sanctuary Woods": "피콜의 성역 숲",
+      "Hyrule Castle": "하이랄 성",
+      "The Dark World — Pyramid of Power": "어둠의 세계 — 힘의 피라미드",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "보랏빛 수로가 황토빛 황야를 가르고 거대한 힘의 피라미드가 우뚝 솟은 어둠의 세계.",
+      "Golden Land Rift": "황금 대지의 틈새",
+      "Pyramid of Power": "힘의 피라미드",
+      "Picori Blade": "피콜의 검",
+      "Hero's Bow": "용사의 활",
+      "Gust Jar": "마법 항아리",
+      "Magical Boomerang": "매지컬 부메랑",
+      "Flame Lantern": "불꽃 랜턴",
+      "Cane of Pacci": "패치의 지팡이",
+      "Mole Mitts": "두더지 장갑",
+      "Remote Bombs": "리모컨 폭탄",
+      "Roc's Cape": "로크새의 망토",
+      "Gold Kinstone": "황금 행운의 조각",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "치명타율 +14%, 행운 +15% — 피콜의 행운.",
+      "Pegasus Boots": "페가수스의 신발",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "이동 속도 +14%, 공격 속도 +12%.",
+      "Mirror Shield": "미러 실드",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "방어 +18, 최대 HP +14% — 하이랄의 성스러운 방패.",
+      "Ocarina of Wind": "바람의 오카리나",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "범위 +16%, 이동 속도 +10% — 순풍을 부릅니다."
+    },
+    "ru": {
+      "Light Arrows": "Световые Стрелы",
+      "Sacred Triforce Burst": "Священный Взрыв Трифорса",
+      "Hyrule": "Хайрул",
+      "Hyrule Field — Hyrule Castle": "Поле Хайрула — Замок Хайрул",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "Солнечные изумрудные равнины с королевской дорогой через ров прямо к Замку Хайрул.",
+      "Minish Sanctuary Woods": "Лес Святилища Минишей",
+      "Hyrule Castle": "Замок Хайрул",
+      "The Dark World — Pyramid of Power": "Тёмный Мир — Пирамида Силы",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "Искажённое сумеречное царство с фиолетовыми каналами у величественной Пирамиды Силы.",
+      "Golden Land Rift": "Разлом Золотой Земли",
+      "Pyramid of Power": "Пирамида Силы",
+      "Picori Blade": "Клинок Пикори",
+      "Hero's Bow": "Лук Героя",
+      "Gust Jar": "Кувшин Ветра",
+      "Magical Boomerang": "Волшебный Бумеранг",
+      "Flame Lantern": "Огненный Фонарь",
+      "Cane of Pacci": "Посох Паччи",
+      "Mole Mitts": "Кротовые Перчатки",
+      "Remote Bombs": "Дистанционные Бомбы",
+      "Roc's Cape": "Плащ Рока",
+      "Gold Kinstone": "Золотой Кинстоун",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "+14% шанса крита и +15% удачи.",
+      "Pegasus Boots": "Сапоги Пегаса",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "+14% скорости и +12% скорости атаки.",
+      "Mirror Shield": "Зеркальный Щит",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "+18 брони и +14% макс. ОЗ — священный щит Хайрула.",
+      "Ocarina of Wind": "Окарина Ветра",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "+16% области и +10% скорости."
+    },
+    "zh": {
+      "Light Arrows": "光之箭",
+      "Sacred Triforce Burst": "神圣三角力量爆发",
+      "Hyrule": "海拉鲁",
+      "Hyrule Field — Hyrule Castle": "海拉鲁平原 — 海拉鲁城堡",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "阳光明媚的翡翠平原，皇家石道跨过护城河直通宏伟的海拉鲁城堡。",
+      "Minish Sanctuary Woods": "皮克罗圣域之森",
+      "Hyrule Castle": "海拉鲁城堡",
+      "The Dark World — Pyramid of Power": "暗之世界 — 力量金字塔",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "被紫光运河割裂的暮色赭金荒原，中央矗立着庄严神秘的力量金字塔。",
+      "Golden Land Rift": "黄金圣地裂隙",
+      "Pyramid of Power": "力量金字塔",
+      "Picori Blade": "皮克罗之剑",
+      "Hero's Bow": "勇者之弓",
+      "Gust Jar": "魔法壶",
+      "Magical Boomerang": "魔法回旋镖",
+      "Flame Lantern": "火焰提灯",
+      "Cane of Pacci": "翻转之杖",
+      "Mole Mitts": "鼹鼠手套",
+      "Remote Bombs": "遥控炸弹",
+      "Roc's Cape": "大鹏披风",
+      "Gold Kinstone": "金色幸福碎片",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "暴击率+14%，幸运+15% — 凝聚皮克罗好运。",
+      "Pegasus Boots": "天马靴",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移速+14%，攻速+12% — 疾风冲刺！",
+      "Mirror Shield": "镜盾",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "护甲+18，最大生命+14% — 海拉鲁圣洁神盾。",
+      "Ocarina of Wind": "风之陶笛",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "范围+16%，移速+10% — 唤起海拉鲁顺风。"
+    },
+    "zht": {
+      "Light Arrows": "光之箭",
+      "Sacred Triforce Burst": "神聖三角力量爆發",
+      "Hyrule": "海拉魯",
+      "Hyrule Field — Hyrule Castle": "海拉魯平原 — 海拉魯城堡",
+      "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.": "陽光明媚的翡翠平原，皇家石道跨過護城河直通宏偉的海拉魯城堡。",
+      "Minish Sanctuary Woods": "皮克羅聖域之森",
+      "Hyrule Castle": "海拉魯城堡",
+      "The Dark World — Pyramid of Power": "暗之世界 — 力量金字塔",
+      "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.": "被紫光運河割裂的暮色赭金荒原，中央矗立著莊嚴神秘的力量金字塔。",
+      "Golden Land Rift": "黃金聖地裂隙",
+      "Pyramid of Power": "力量金字塔",
+      "Picori Blade": "皮克羅之劍",
+      "Hero's Bow": "勇者之弓",
+      "Gust Jar": "魔法壺",
+      "Magical Boomerang": "魔法迴旋鏢",
+      "Flame Lantern": "火焰提燈",
+      "Cane of Pacci": "翻轉之杖",
+      "Mole Mitts": "鼴鼠手套",
+      "Remote Bombs": "遙控炸彈",
+      "Roc's Cape": "大鵬披風",
+      "Gold Kinstone": "金色幸福碎片",
+      "+14% Crit Chance & +15% Luck from fused Picori fortune.": "暴擊率+14%，幸運+15% — 凝聚皮克羅好運。",
+      "Pegasus Boots": "天馬靴",
+      "+14% Move Speed & +12% Attack Speed — dash like the wind!": "移速+14%，攻速+12% — 疾風衝刺！",
+      "Mirror Shield": "鏡盾",
+      "+18 Armor & +14% Max HP — sacred Hylian bulwark.": "護甲+18，最大生命+14% — 海拉魯聖潔神盾。",
+      "Ocarina of Wind": "風之陶笛",
+      "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "範圍+16%，移速+10% — 喚起海拉魯順風。"
+    }
+  }
+}

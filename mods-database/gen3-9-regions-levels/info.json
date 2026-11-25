@@ -1,13 +1,13 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "author": "HyruleChosenOne",
   "category": "Levels",
   "scope": "gameplay",
   "featured": true,
-  "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks.",
-  "description": "Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures & thumbnails, and full 11-language global translation.",
+  "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks.",
+  "description": "Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures, real in-game 3D level-select screenshots, and full 11-language global translation.",
   "highlights": [
     "Hoenn: Petalburg Canopy & Mt. Chimney Caldera",
     "Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau",

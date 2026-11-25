@@ -22,12 +22,12 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.1` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 19.13 MB | `v1.2.2` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 24.39 MB | `v1.3.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks. |
 | `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.1` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
-| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.1` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.2` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.14 MB | `v2.0.2` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
+| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.2` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.3` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
 | `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 9.85 MB | `v2.0.1` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
+| `minish-cap-link` | [The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.51 MB | `v3.0.0` | Playable Young Link (OOT cries) & Princess Zelda, 6 Wardrobe skins each, shared exclusive Minish Cap moves + Light Arrows Fusion, and 3D Hyrule Castle & Pyramid of Power maps. |
 
 ---
 
@@ -66,14 +66,14 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `gen3-9-regions-levels`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
-- **Size**: 19.13 MB (102 files)
-- **Version**: `v1.2.2`
+- **Size**: 24.39 MB (102 files)
+- **Version**: `v1.3.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
 - **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
 - **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`, `music`, `i18n`, `custom-terrain`
 
-Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures & thumbnails, and full 11-language global translation.
+Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures, real in-game 3D level-select screenshots, and full 11-language global translation.
 
 **Highlights:**
 - Hoenn: Petalburg Canopy & Mt. Chimney Caldera
@@ -119,7 +119,7 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
 - **Size**: 2.22 MB (97 files)
-- **Version**: `v1.1.1`
+- **Version**: `v1.1.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/classic-sfx-pack/info.json`](mods-database/classic-sfx-pack/info.json)
@@ -143,7 +143,7 @@ Overhauls PokéBonk with 94 authentic Gen 3 sound effects: genuine Pokémon Emer
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
 - **Size**: 83.29 MB (62 files)
-- **Version**: `v1.3.2`
+- **Version**: `v1.3.3`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
@@ -156,32 +156,6 @@ Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, Heart
 - 53 curated FireRed/LeafGreen, HeartGold/SoulSilver, and 8-bit GB Sounds tracks
 - Configurable default Title Screen / Main Menu theme right in Mod Configs
 - Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed
-
-
-<a id="minish-cap-link"></a>
-### Link (The Minish Cap) — Playable Character, Hyrule & Dark World
-
-![Link (The Minish Cap) — Playable Character, Hyrule & Dark World](mods-database/minish-cap-link/preview.png)
-
-- **ID**: `minish-cap-link`
-- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
-- **Category**: Characters
-- **Size**: 5.14 MB (23 files)
-- **Version**: `v2.0.2`
-- **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode (Mod Engine ON)
-- **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
-- **Tags**: `character`, `zelda`, `minish-cap`, `hyrule`, `dark-world`, `levels`, `custom-attacks`, `custom-vfx`, `custom-items`, `fusion`, `i18n`, `music`
-
-Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.
-
-**Highlights:**
-- Link & both Zelda levels are 100% unlocked by default the moment you enable the mod
-- 2 custom Zelda levels with bespoke Nano Banana pixel-art spritework & full PokéBonk-native collision: Hyrule Field (featuring Hyrule Castle POI) and The Dark World (featuring the Pyramid of Power POI)
-- Complete Minish Cap Sword & Items moveset (9 custom moves & GPU VFX): Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, and Roc's Cape
-- Primary Signature Fusion: Light Arrows (Picori Blade + Hero's Bow) unleashing piercing golden arrows & Triforce radiance — plus his signature Four Sword Hurricane Spin Ultimate
-- 4 Minish Cap Pokéball items (Gold Kinstone, Pegasus Boots, Mirror Shield, Ocarina of Wind) & 11-language global translation
-- Includes authentic A Link to the Past Overworld & Dark World SNES music tracks mapped directly to Hyrule Field & The Dark World (zero audio overlap)
 
 
 <a id="custom-characters-pack"></a>
@@ -207,6 +181,30 @@ Polished 18-fighter Non-Dexed Pokémon Pack (#2001-#2023) featuring 13 iconic No
 - Complete 11-language global localization (EN, ES, PT, FR, DE, IT, JA, KO, RU, ZH, ZHT) for all 18 fighters, roles, 37 moves, 18 Ultimates, and 5 items
 - Glitch, Beta & Spin-Off icons: MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon, Pikachu Libre, and Hakogame
 - 5 Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja with 37 attacks & 15 GPU VFX
+
+
+<a id="minish-cap-link"></a>
+### The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)
+
+![The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)](mods-database/minish-cap-link/preview.png)
+
+- **ID**: `minish-cap-link`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
+- **Category**: Characters
+- **Size**: 5.51 MB (46 files)
+- **Version**: `v3.0.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON)
+- **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
+- **Tags**: `character`, `zelda`, `minish-cap`, `hyrule`, `dark-world`, `levels`, `custom-attacks`, `custom-vfx`, `custom-items`, `fusion`, `i18n`, `music`
+
+Complete Legend of Zelda: The Minish Cap expansion featuring both Young Link (with iconic Ocarina of Time battle cries) and Princess Zelda (both unlocked by default) — each with full 8-direction animated sprites, functional Dual Shinies + 4 Wardrobe variant skins (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Royal Sapphire, Sheikah Shadow, Twilight Princess, Triforce of Wisdom), 9 exclusive shared Minish Cap Sword & Item attacks (zero vanilla Pokémon moves), Light Arrows Primary Fusion, custom Ultimates, and 2 unlocked stages with full 3D Hyrule Castle and 3D Pyramid of Power landmarks + looping ALttP SNES soundtracks.
+
+**Highlights:**
+- Playable Young Link (#2010, authentic OOT 3D battle cries) & Princess Zelda (#2024, Sacred Triforce Harp cry) — both unlocked by default
+- 6 functional Wardrobe skins each: Classic Shiny, Hue Shiny, plus 4 iconic unlocked variants (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Sapphire, Sheikah Shadow, Twilight, Triforce of Wisdom)
+- Exclusive shared Hyrule family moveset (9 Minish Cap Sword & Item attacks + Light Arrows Signature Fusion) — zero vanilla PokéBonk attacks
+- 2 unlocked Zelda stages with true 3D Hyrule Castle & 3D Pyramid of Power landmarks, solid collision, and looping ALttP Overworld & Dark World SNES OSTs
 
 ---
 

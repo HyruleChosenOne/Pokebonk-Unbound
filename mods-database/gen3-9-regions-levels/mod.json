@@ -1,7 +1,7 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Adds 14 custom stages across Hoenn to Paldea with unique 3D terrain, textures, and region OSTs.",
@@ -236,13 +236,13 @@
         ]
       ],
       "sky": [
-        1864272,
-        6618008
+        2787552,
+        10411768
       ],
-      "fog": 5896344,
+      "fog": 9426632,
       "fogNear": 52,
       "fogFar": 215,
-      "light": 1.04,
+      "light": 1.08,
       "sun": 16775368,
       "hemiGround": 3832648,
       "ground": [
@@ -251,7 +251,7 @@
         2847792,
         2255664
       ],
-      "path": 12363386,
+      "path": 12887158,
       "cliff": [
         6512712,
         5196856,
@@ -280,37 +280,25 @@
       "landmark": {
         "kind": "moss_shrine",
         "name": "Petalburg Moss Shrine",
-        "color": 5021292,
-        "accent": 10418360,
-        "radius": 6.8,
+        "x": 0,
+        "z": -34,
+        "radius": 9.5,
+        "color": 6060630,
+        "accent": 6615200,
         "glbProps": [
           {
-            "model": "encina_shrine",
-            "dx": 0,
-            "dz": 0,
-            "scale": 1.15,
-            "rot": 0
+            "model": "iris_lantern",
+            "x": -8.2,
+            "z": 6.4,
+            "scale": 1.05,
+            "rotY": 0.3
           },
           {
             "model": "iris_lantern",
-            "dx": -4.2,
-            "dz": 3.4,
-            "scale": 1,
-            "rot": 0.4
-          },
-          {
-            "model": "iris_lantern",
-            "dx": 4.2,
-            "dz": 3.4,
-            "scale": 1,
-            "rot": -0.4
-          },
-          {
-            "model": "encina_log",
-            "dx": -6.2,
-            "dz": -2.4,
-            "scale": 0.9,
-            "rot": 1.1
+            "x": 8.2,
+            "z": 6.4,
+            "scale": 1.05,
+            "rotY": -0.3
           }
         ]
       },
@@ -362,8 +350,8 @@
         ],
         "lip": 3441220,
         "path": [
-          12757628,
-          9073232
+          12887158,
+          10189908
         ],
         "leaf": 2399316,
         "bark": 6180152,
@@ -452,7 +440,8 @@
           "stars": 0.65,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "hoenn_chimney",
@@ -548,13 +537,13 @@
         ]
       ],
       "sky": [
-        5579040,
-        13457976
+        5776420,
+        13920834
       ],
-      "fog": 10045744,
+      "fog": 10374198,
       "fogNear": 42,
       "fogFar": 190,
-      "light": 0.96,
+      "light": 1.05,
       "sun": 16749632,
       "hemiGround": 4923176,
       "ground": [
@@ -563,13 +552,13 @@
         3875368,
         2824480
       ],
-      "path": 9267808,
+      "path": 7226164,
       "cliff": [
         4073512,
         3153440,
         5652024
       ],
-      "water": 0.45,
+      "water": -1,
       "waterColor": 16730624,
       "props": [
         "lavarock",
@@ -589,38 +578,26 @@
       ],
       "landmark": {
         "kind": "volcano_caldera",
-        "name": "Mt. Chimney Magma Cone",
-        "color": 4861996,
+        "name": "Mt. Chimney Magma Caldera",
+        "x": 0,
+        "z": -34,
+        "radius": 11.5,
+        "color": 4863020,
         "accent": 16736792,
-        "radius": 7.5,
         "glbProps": [
           {
             "model": "canela_vent",
-            "dx": -6.4,
-            "dz": 2.2,
-            "scale": 1.25,
-            "rot": 0.2
+            "x": -12.5,
+            "z": 4.5,
+            "scale": 1.15,
+            "rotY": 0.3
           },
           {
             "model": "canela_vent",
-            "dx": 6.4,
-            "dz": -2,
-            "scale": 1.2,
-            "rot": 2.1
-          },
-          {
-            "model": "canela_basalt",
-            "dx": 0.5,
-            "dz": -6.8,
-            "scale": 1.35,
-            "rot": 0.9
-          },
-          {
-            "model": "canela_lavarock",
-            "dx": -4.2,
-            "dz": -5.4,
+            "x": 12.5,
+            "z": -3.5,
             "scale": 1.15,
-            "rot": 1.7
+            "rotY": 2.1
           }
         ]
       },
@@ -673,8 +650,8 @@
         ],
         "lip": 15615524,
         "path": [
-          9201756,
-          6571068
+          7226164,
+          4926756
         ],
         "leaf": 12141096,
         "bark": 4532776,
@@ -762,7 +739,8 @@
           "stars": 0.5,
           "motes": "embers"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "sinnoh_coronet",
@@ -857,13 +835,13 @@
         ]
       ],
       "sky": [
-        2178032,
-        8693992
+        2907848,
+        11326200
       ],
-      "fog": 9482464,
+      "fog": 10404076,
       "fogNear": 46,
       "fogFar": 205,
-      "light": 1.05,
+      "light": 1.08,
       "sun": 16251903,
       "hemiGround": 9743312,
       "ground": [
@@ -872,7 +850,7 @@
         9612520,
         7178400
       ],
-      "path": 10992592,
+      "path": 13819112,
       "cliff": [
         6451856,
         5004144,
@@ -899,46 +877,12 @@
       "landmark": {
         "kind": "spear_pillar",
         "name": "Spear Pillar Columns",
-        "color": 14476532,
-        "accent": 6737151,
-        "radius": 7.5,
-        "glbProps": [
-          {
-            "model": "ruins_column",
-            "dx": -6,
-            "dz": 3.5,
-            "scale": 1.35,
-            "rot": 0
-          },
-          {
-            "model": "ruins_column",
-            "dx": 6,
-            "dz": 3.5,
-            "scale": 1.35,
-            "rot": 0.5
-          },
-          {
-            "model": "summit_pillar",
-            "dx": -6.5,
-            "dz": -3.5,
-            "scale": 1.3,
-            "rot": 0.2
-          },
-          {
-            "model": "summit_pillar",
-            "dx": 6.5,
-            "dz": -3.5,
-            "scale": 1.3,
-            "rot": -0.2
-          },
-          {
-            "model": "plateado_cairn",
-            "dx": 0,
-            "dz": 6.8,
-            "scale": 1.1,
-            "rot": 0
-          }
-        ]
+        "x": 0,
+        "z": -34,
+        "radius": 11.5,
+        "color": 14476526,
+        "accent": 6870271,
+        "glbProps": []
       },
       "sanctuary": {
         "name": "Hall of Origin",
@@ -990,8 +934,8 @@
         ],
         "lip": 14872316,
         "path": [
-          13424358,
-          9346742
+          13819112,
+          11057356
         ],
         "leaf": 4483736,
         "bark": 5659488,
@@ -1079,7 +1023,8 @@
           "stars": 0.95,
           "motes": "snow"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "sinnoh_eterna",
@@ -1177,13 +1122,13 @@
         ]
       ],
       "sky": [
-        1513280,
-        4800648
+        1843278,
+        5526678
       ],
-      "fog": 3487096,
+      "fog": 4146304,
       "fogNear": 38,
       "fogFar": 175,
-      "light": 0.85,
+      "light": 0.94,
       "sun": 12364543,
       "hemiGround": 2241352,
       "ground": [
@@ -1192,14 +1137,14 @@
         2112568,
         1781544
       ],
-      "path": 7368832,
+      "path": 5594220,
       "cliff": [
         4407880,
         3421248,
         5658208
       ],
-      "water": 0.42,
-      "waterColor": 1986138,
+      "water": 0.25,
+      "waterColor": 2249832,
       "props": [
         "tree",
         "deadtree",
@@ -1219,38 +1164,26 @@
       ],
       "landmark": {
         "kind": "old_chateau",
-        "name": "Old Chateau Ruins",
-        "color": 4736098,
-        "accent": 11561215,
-        "radius": 7.2,
+        "name": "Old Chateau Manor",
+        "x": 0,
+        "z": -34,
+        "radius": 11.5,
+        "color": 5395050,
+        "accent": 12087551,
         "glbProps": [
           {
-            "model": "johto_torii",
-            "dx": 0,
-            "dz": 6.5,
-            "scale": 1.15,
-            "rot": 0
+            "model": "iris_lantern",
+            "x": -11.8,
+            "z": 7.5,
+            "scale": 1.05,
+            "rotY": 0
           },
           {
             "model": "iris_lantern",
-            "dx": -4.8,
-            "dz": 5.5,
+            "x": 11.8,
+            "z": 7.5,
             "scale": 1.05,
-            "rot": 0
-          },
-          {
-            "model": "iris_lantern",
-            "dx": 4.8,
-            "dz": 5.5,
-            "scale": 1.05,
-            "rot": 0
-          },
-          {
-            "model": "ilex_lamp",
-            "dx": -6.8,
-            "dz": -1.5,
-            "scale": 1.1,
-            "rot": 0
+            "rotY": 0
           }
         ]
       },
@@ -1304,8 +1237,8 @@
         ],
         "lip": 2771002,
         "path": [
-          7236740,
-          5131364
+          5594220,
+          3883086
         ],
         "leaf": 2507846,
         "bark": 3812672,
@@ -1394,7 +1327,8 @@
           "stars": 0.92,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "unova_relic_desert",
@@ -1491,13 +1425,13 @@
         ]
       ],
       "sky": [
-        11563840,
-        16044680
+        12221506,
+        16177298
       ],
-      "fog": 14726512,
+      "fog": 15122040,
       "fogNear": 48,
       "fogFar": 205,
-      "light": 1.05,
+      "light": 1.1,
       "sun": 16772800,
       "hemiGround": 13739888,
       "ground": [
@@ -1506,7 +1440,7 @@
         12484944,
         10248768
       ],
-      "path": 15849120,
+      "path": 14464108,
       "cliff": [
         10841664,
         8871216,
@@ -1532,45 +1466,40 @@
       ],
       "landmark": {
         "kind": "sand_pyramid",
-        "name": "Relic Castle Pyramid",
-        "color": 14201454,
-        "accent": 16758832,
-        "radius": 8,
+        "name": "Relic Castle Temple",
+        "x": 0,
+        "z": -34,
+        "radius": 11.5,
+        "color": 14200422,
+        "accent": 16758840,
         "glbProps": [
           {
             "model": "ruins_obelisk",
-            "dx": -6.8,
-            "dz": 5.5,
-            "scale": 1.15,
-            "rot": 0.1
+            "x": -12.2,
+            "z": 8.6,
+            "scale": 1.05,
+            "rotY": 0.1
           },
           {
             "model": "ruins_obelisk",
-            "dx": 6.8,
-            "dz": 5.5,
-            "scale": 1.15,
-            "rot": -0.1
+            "x": 12.2,
+            "z": 8.6,
+            "scale": 1.05,
+            "rotY": -0.1
           },
           {
             "model": "ruins_brazier",
-            "dx": -4.2,
-            "dz": 6.8,
-            "scale": 1.05,
-            "rot": 0
+            "x": -6.8,
+            "z": 11,
+            "scale": 1,
+            "rotY": 0
           },
           {
             "model": "ruins_brazier",
-            "dx": 4.2,
-            "dz": 6.8,
-            "scale": 1.05,
-            "rot": 0
-          },
-          {
-            "model": "ruins_statue",
-            "dx": 0,
-            "dz": 8.2,
-            "scale": 0.95,
-            "rot": 0
+            "x": 6.8,
+            "z": 11,
+            "scale": 1,
+            "rotY": 0
           }
         ]
       },
@@ -1624,8 +1553,8 @@
         ],
         "lip": 12750416,
         "path": [
-          15520928,
-          12491368
+          14464108,
+          12094536
         ],
         "leaf": 6458432,
         "bark": 8677184,
@@ -1713,7 +1642,8 @@
           "stars": 0.75,
           "motes": "dust"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "unova_dragonspiral",
@@ -1811,13 +1741,13 @@
         ]
       ],
       "sky": [
-        2957920,
-        9458280
+        3880568,
+        13139564
       ],
-      "fog": 7357792,
+      "fog": 10251368,
       "fogNear": 46,
       "fogFar": 200,
-      "light": 0.94,
+      "light": 1.02,
       "sun": 16760960,
       "hemiGround": 6438720,
       "ground": [
@@ -1826,14 +1756,14 @@
         5718848,
         4207408
       ],
-      "path": 12428152,
+      "path": 12757116,
       "cliff": [
         6444624,
         5129024,
         7892072
       ],
-      "water": 0.4,
-      "waterColor": 2647696,
+      "water": 0.35,
+      "waterColor": 2782884,
       "props": [
         "tree",
         "pine",
@@ -1854,37 +1784,33 @@
       "landmark": {
         "kind": "dragon_tower",
         "name": "Dragonspiral Pagoda",
+        "x": 0,
+        "z": -34,
+        "radius": 11.5,
         "color": 9868950,
-        "accent": 4437503,
-        "radius": 7.4,
+        "accent": 4503807,
         "glbProps": [
           {
             "model": "johto_tower",
-            "dx": 0,
-            "dz": 0,
-            "scale": 1.05,
-            "rot": 0
+            "x": 0,
+            "z": 0,
+            "y": 1.4,
+            "scale": 1,
+            "rotY": 0
           },
           {
             "model": "iris_lantern",
-            "dx": -5.6,
-            "dz": 5.2,
+            "x": -9.8,
+            "z": 8.6,
             "scale": 1.1,
-            "rot": 0
+            "rotY": 0
           },
           {
             "model": "iris_lantern",
-            "dx": 5.6,
-            "dz": 5.2,
+            "x": 9.8,
+            "z": 8.6,
             "scale": 1.1,
-            "rot": 0
-          },
-          {
-            "model": "bell_lamp",
-            "dx": 0,
-            "dz": 7.4,
-            "scale": 1.2,
-            "rot": 0
+            "rotY": 0
           }
         ]
       },
@@ -1937,8 +1863,8 @@
         ],
         "lip": 10122310,
         "path": [
-          12493948,
-          8811096
+          12757116,
+          9993816
         ],
         "leaf": 14183984,
         "bark": 5915440,
@@ -2027,7 +1953,8 @@
           "stars": 0.82,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "kalos_azure_bay",
@@ -2123,13 +2050,13 @@
         ]
       ],
       "sky": [
-        2588896,
-        9624575
+        2524902,
+        10281727
       ],
-      "fog": 9295864,
+      "fog": 9230584,
       "fogNear": 52,
       "fogFar": 220,
-      "light": 1.05,
+      "light": 1.12,
       "sun": 16776928,
       "hemiGround": 13222056,
       "ground": [
@@ -2138,7 +2065,7 @@
         5216400,
         3440544
       ],
-      "path": 15984832,
+      "path": 15127722,
       "cliff": [
         8290432,
         6711408,
@@ -2164,31 +2091,26 @@
       ],
       "landmark": {
         "kind": "sea_arch",
-        "name": "Azure Sea Arch Beacon",
-        "color": 13293282,
-        "accent": 4442367,
-        "radius": 7.4,
+        "name": "Azure Bay Sea Arch & Beacon",
+        "x": 0,
+        "z": -34,
+        "radius": 10,
+        "color": 14078658,
+        "accent": 4775167,
         "glbProps": [
           {
-            "model": "coast_stack",
-            "dx": -7.2,
-            "dz": -2.2,
-            "scale": 1.1,
-            "rot": 0.4
+            "model": "coast_boulder",
+            "x": -12,
+            "z": 4.5,
+            "scale": 1.05,
+            "rotY": 0.8
           },
           {
             "model": "coast_boulder",
-            "dx": 6.8,
-            "dz": 3.4,
-            "scale": 1.2,
-            "rot": 1.3
-          },
-          {
-            "model": "furia_pier",
-            "dx": 0,
-            "dz": 7.2,
-            "scale": 0.9,
-            "rot": 0
+            "x": 12,
+            "z": 4,
+            "scale": 1,
+            "rotY": 2
           }
         ]
       },
@@ -2240,8 +2162,8 @@
         ],
         "lip": 5420720,
         "path": [
-          16050372,
-          12892312
+          15127722,
+          12890246
         ],
         "leaf": 2796920,
         "bark": 7491904,
@@ -2329,7 +2251,8 @@
           "stars": 0.55,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": true
     },
     {
       "id": "kalos_reflection_cave",
@@ -2427,13 +2350,13 @@
         ]
       ],
       "sky": [
-        1181996,
-        3678560
+        1379636,
+        4336244
       ],
-      "fog": 2562136,
+      "fog": 3022688,
       "fogNear": 34,
       "fogFar": 165,
-      "light": 0.88,
+      "light": 0.96,
       "sun": 13939711,
       "hemiGround": 2891608,
       "ground": [
@@ -2442,14 +2365,14 @@
         2694736,
         2037816
       ],
-      "path": 7364264,
+      "path": 5788282,
       "cliff": [
         4337760,
         3220808,
         5718912
       ],
-      "water": 0.45,
-      "waterColor": 5212656,
+      "water": 0.35,
+      "waterColor": 5541106,
       "props": [
         "crystal",
         "crystal",
@@ -2467,45 +2390,26 @@
       ],
       "landmark": {
         "kind": "prism_crystals",
-        "name": "Mirror Prism Cluster",
-        "color": 10079487,
-        "accent": 16750840,
-        "radius": 7,
+        "name": "Mirror Prism Cathedral",
+        "x": 0,
+        "z": -34,
+        "radius": 9.5,
+        "color": 9991423,
+        "accent": 16744648,
         "glbProps": [
           {
             "model": "cave_crystal",
-            "dx": -4.8,
-            "dz": 3.2,
-            "scale": 1.35,
-            "rot": 0.3
+            "x": -10.5,
+            "z": 4.5,
+            "scale": 1.15,
+            "rotY": 0.3
           },
           {
             "model": "cave_crystal",
-            "dx": 4.8,
-            "dz": 3.2,
-            "scale": 1.3,
-            "rot": 2.2
-          },
-          {
-            "model": "ruins_crystals",
-            "dx": 0,
-            "dz": -5.2,
-            "scale": 1.4,
-            "rot": 1.1
-          },
-          {
-            "model": "psy_lamp",
-            "dx": -5.5,
-            "dz": -3.2,
+            "x": 10.5,
+            "z": 4.5,
             "scale": 1.15,
-            "rot": 0
-          },
-          {
-            "model": "psy_lamp",
-            "dx": 5.5,
-            "dz": -3.2,
-            "scale": 1.15,
-            "rot": 0
+            "rotY": 2.2
           }
         ]
       },
@@ -2559,8 +2463,8 @@
         ],
         "lip": 10079487,
         "path": [
-          7627438,
-          5391484
+          5788282,
+          4077660
         ],
         "leaf": 9668351,
         "bark": 4537256,
@@ -2648,7 +2552,8 @@
           "stars": 0.85,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "alola_melemele",
@@ -2745,13 +2650,13 @@
         ]
       ],
       "sky": [
-        2196208,
-        9563135
+        2001140,
+        10022655
       ],
-      "fog": 8509424,
+      "fog": 8707574,
       "fogNear": 52,
       "fogFar": 215,
-      "light": 1.06,
+      "light": 1.12,
       "sun": 16776128,
       "hemiGround": 5478464,
       "ground": [
@@ -2760,14 +2665,14 @@
         3967800,
         3047984
       ],
-      "path": 14533512,
+      "path": 15126680,
       "cliff": [
         8154712,
         6640184,
         9601112
       ],
       "water": 0.48,
-      "waterColor": 1296348,
+      "waterColor": 1362140,
       "props": [
         "palm",
         "tree",
@@ -2787,38 +2692,26 @@
       ],
       "landmark": {
         "kind": "tapu_totem",
-        "name": "Ruins of Conflict Totem",
-        "color": 15644728,
-        "accent": 2550914,
-        "radius": 7,
+        "name": "Ruins of Conflict Temple",
+        "x": 0,
+        "z": -34,
+        "radius": 10,
+        "color": 13149288,
+        "accent": 16763432,
         "glbProps": [
           {
-            "model": "ruins_arch",
-            "dx": 0,
-            "dz": 6.4,
-            "scale": 1.05,
-            "rot": 0
-          },
-          {
-            "model": "ruins_brazier",
-            "dx": -5.2,
-            "dz": 4,
+            "model": "ruins_pots",
+            "x": -10.2,
+            "z": 5.5,
             "scale": 1,
-            "rot": 0
-          },
-          {
-            "model": "ruins_brazier",
-            "dx": 5.2,
-            "dz": 4,
-            "scale": 1,
-            "rot": 0
+            "rotY": 0.5
           },
           {
             "model": "ruins_pots",
-            "dx": -4.2,
-            "dz": -4.4,
-            "scale": 1.1,
-            "rot": 0.5
+            "x": 10.2,
+            "z": 5.5,
+            "scale": 1,
+            "rotY": 1.9
           }
         ]
       },
@@ -2871,8 +2764,8 @@
         ],
         "lip": 3967800,
         "path": [
-          14862988,
-          11704420
+          15126680,
+          13020788
         ],
         "leaf": 2540642,
         "bark": 6965048,
@@ -2961,7 +2854,8 @@
           "stars": 0.65,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": true
     },
     {
       "id": "alola_wela_volcano",
@@ -3059,13 +2953,13 @@
         ]
       ],
       "sky": [
-        4918576,
-        13449248
+        3951516,
+        15504482
       ],
-      "fog": 9186360,
+      "fog": 13928556,
       "fogNear": 42,
       "fogFar": 185,
-      "light": 0.94,
+      "light": 1.08,
       "sun": 16748368,
       "hemiGround": 4658984,
       "ground": [
@@ -3074,14 +2968,14 @@
         3482152,
         2562336
       ],
-      "path": 9984832,
+      "path": 10381904,
       "cliff": [
         3614512,
         2694696,
         5126200
       ],
       "water": 0.45,
-      "waterColor": 16736000,
+      "waterColor": 1483992,
       "props": [
         "lavarock",
         "pillar",
@@ -3100,45 +2994,26 @@
       ],
       "landmark": {
         "kind": "fire_altar",
-        "name": "Wela Crown Fire Altar",
-        "color": 5516328,
-        "accent": 16739106,
-        "radius": 7.2,
+        "name": "Wela Fire Trial Crown Altar",
+        "x": 0,
+        "z": -34,
+        "radius": 10.5,
+        "color": 6439996,
+        "accent": 16734744,
         "glbProps": [
           {
-            "model": "ruins_brazier",
-            "dx": -4.8,
-            "dz": 4.8,
-            "scale": 1.15,
-            "rot": 0
-          },
-          {
-            "model": "ruins_brazier",
-            "dx": 4.8,
-            "dz": 4.8,
-            "scale": 1.15,
-            "rot": 0
-          },
-          {
-            "model": "ruins_brazier",
-            "dx": -4.8,
-            "dz": -4.8,
-            "scale": 1.15,
-            "rot": 0
-          },
-          {
-            "model": "ruins_brazier",
-            "dx": 4.8,
-            "dz": -4.8,
-            "scale": 1.15,
-            "rot": 0
+            "model": "canela_vent",
+            "x": -13,
+            "z": -4.5,
+            "scale": 1.05,
+            "rotY": 0.7
           },
           {
             "model": "canela_vent",
-            "dx": 0,
-            "dz": -7.2,
-            "scale": 1.2,
-            "rot": 0.8
+            "x": 13,
+            "z": -4.5,
+            "scale": 1.05,
+            "rotY": 2.4
           }
         ]
       },
@@ -3191,8 +3066,8 @@
         ],
         "lip": 15615524,
         "path": [
-          10247746,
-          7225394
+          10381904,
+          7752760
         ],
         "leaf": 13457976,
         "bark": 3875368,
@@ -3280,7 +3155,8 @@
           "stars": 0.6,
           "motes": "embers"
         }
-      ]
+      ],
+      "openSea": true
     },
     {
       "id": "galar_wild_area",
@@ -3380,13 +3256,13 @@
         ]
       ],
       "sky": [
-        2117240,
-        7456720
+        2784456,
+        10280168
       ],
-      "fog": 7325632,
+      "fog": 9227992,
       "fogNear": 50,
       "fogFar": 215,
-      "light": 1,
+      "light": 1.08,
       "sun": 16579552,
       "hemiGround": 4691792,
       "ground": [
@@ -3395,14 +3271,14 @@
         3705160,
         2914632
       ],
-      "path": 12168344,
+      "path": 9340534,
       "cliff": [
         6711920,
         5329752,
         8093576
       ],
-      "water": 0.44,
-      "waterColor": 2595784,
+      "water": 0.35,
+      "waterColor": 2661576,
       "props": [
         "tree",
         "pine",
@@ -3422,47 +3298,13 @@
       ],
       "landmark": {
         "kind": "dynamax_den",
-        "name": "Watchtower Dynamax Den",
-        "color": 7106174,
-        "accent": 16723080,
-        "radius": 7.4,
-        "glbProps": [
-          {
-            "model": "ruin_pillar",
-            "dx": -5.4,
-            "dz": 4.5,
-            "scale": 1.15,
-            "rot": 0.3
-          },
-          {
-            "model": "ruin_pillar",
-            "dx": 5.4,
-            "dz": 4.5,
-            "scale": 1.15,
-            "rot": -0.3
-          },
-          {
-            "model": "ruin_pillar",
-            "dx": -5.4,
-            "dz": -4.5,
-            "scale": 1.15,
-            "rot": 1.1
-          },
-          {
-            "model": "ruin_pillar",
-            "dx": 5.4,
-            "dz": -4.5,
-            "scale": 1.15,
-            "rot": -1.1
-          },
-          {
-            "model": "storm_coil",
-            "dx": 0,
-            "dz": -6.8,
-            "scale": 0.85,
-            "rot": 0
-          }
-        ]
+        "name": "Watchtower Ruins & Power Spot",
+        "x": 0,
+        "z": -34,
+        "radius": 10.5,
+        "color": 9211532,
+        "accent": 16723064,
+        "glbProps": []
       },
       "sanctuary": {
         "name": "Slumbering Weald",
@@ -3513,8 +3355,8 @@
         ],
         "lip": 3703364,
         "path": [
-          12365722,
-          8944750
+          9340534,
+          7104088
         ],
         "leaf": 2918472,
         "bark": 6180152,
@@ -3603,7 +3445,8 @@
           "stars": 0.7,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "galar_crown_tundra",
@@ -3700,13 +3543,13 @@
         ]
       ],
       "sky": [
-        1654904,
-        7452144
+        1854088,
+        8701172
       ],
-      "fog": 8632816,
+      "fog": 8962288,
       "fogNear": 44,
       "fogFar": 200,
-      "light": 1.04,
+      "light": 1.06,
       "sun": 15596543,
       "hemiGround": 9483488,
       "ground": [
@@ -3715,14 +3558,14 @@
         8564440,
         6260928
       ],
-      "path": 10536408,
+      "path": 11847388,
       "cliff": [
         5337496,
         4086120,
         7114944
       ],
-      "water": 0.42,
-      "waterColor": 3457248,
+      "water": 0.35,
+      "waterColor": 3719396,
       "props": [
         "snowpine",
         "crystal",
@@ -3741,45 +3584,26 @@
       ],
       "landmark": {
         "kind": "crown_temple",
-        "name": "Crown Shrine Monolith",
-        "color": 8961248,
-        "accent": 15661311,
-        "radius": 7.4,
+        "name": "Crown Shrine Glacial Temple",
+        "x": 0,
+        "z": -34,
+        "radius": 10.5,
+        "color": 10269904,
+        "accent": 8710399,
         "glbProps": [
           {
-            "model": "glacier_spire",
-            "dx": -5.8,
-            "dz": -2.8,
-            "scale": 1.25,
-            "rot": 0.2
-          },
-          {
-            "model": "glacier_spire",
-            "dx": 5.8,
-            "dz": -2.8,
-            "scale": 1.25,
-            "rot": -0.2
-          },
-          {
             "model": "glacier_crystals",
-            "dx": -4.2,
-            "dz": 5.2,
-            "scale": 1.2,
-            "rot": 0.7
-          },
-          {
-            "model": "glacier_crystals",
-            "dx": 4.2,
-            "dz": 5.2,
-            "scale": 1.2,
-            "rot": -0.7
-          },
-          {
-            "model": "frost_lamp",
-            "dx": 0,
-            "dz": 6.8,
+            "x": -10.5,
+            "z": 5.5,
             "scale": 1.05,
-            "rot": 0
+            "rotY": 0.5
+          },
+          {
+            "model": "glacier_crystals",
+            "x": 10.5,
+            "z": 5.5,
+            "scale": 1.05,
+            "rotY": -0.5
           }
         ]
       },
@@ -3832,8 +3656,8 @@
         ],
         "lip": 14217471,
         "path": [
-          10930398,
-          8166580
+          11847388,
+          9348286
         ],
         "leaf": 4288624,
         "bark": 5329752,
@@ -3921,7 +3745,8 @@
           "stars": 0.96,
           "motes": "snow"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "paldea_asado_mesa",
@@ -4022,13 +3847,13 @@
         ]
       ],
       "sky": [
-        10570544,
-        16171632
+        11557944,
+        16173180
       ],
-      "fog": 13932152,
+      "fog": 14459004,
       "fogNear": 48,
       "fogFar": 205,
-      "light": 1.03,
+      "light": 1.1,
       "sun": 16767128,
       "hemiGround": 11103312,
       "ground": [
@@ -4037,7 +3862,7 @@
         9849912,
         7815208
       ],
-      "path": 14792600,
+      "path": 13933160,
       "cliff": [
         8993832,
         7219992,
@@ -4063,38 +3888,26 @@
       ],
       "landmark": {
         "kind": "titan_mesa",
-        "name": "Asado Titan Mesa Arch",
-        "color": 12739138,
-        "accent": 16755264,
-        "radius": 7.5,
+        "name": "Asado Natural Red-Rock Arch",
+        "x": 0,
+        "z": -34,
+        "radius": 10.5,
+        "color": 12871744,
+        "accent": 16757832,
         "glbProps": [
           {
-            "model": "desert_hoodoo",
-            "dx": -7,
-            "dz": 2.2,
-            "scale": 1.25,
-            "rot": 0.3
-          },
-          {
-            "model": "desert_hoodoo",
-            "dx": 7,
-            "dz": -2.2,
-            "scale": 1.2,
-            "rot": 2
-          },
-          {
             "model": "desert_boulder",
-            "dx": -4.2,
-            "dz": 6.2,
-            "scale": 1.15,
-            "rot": 1.1
+            "x": -12.5,
+            "z": 5,
+            "scale": 1.05,
+            "rotY": 1.1
           },
           {
             "model": "desert_rockpile",
-            "dx": 4.8,
-            "dz": 5.8,
-            "scale": 1.2,
-            "rot": 0.5
+            "x": 12.5,
+            "z": 4.5,
+            "scale": 1.05,
+            "rotY": 0.5
           }
         ]
       },
@@ -4147,8 +3960,8 @@
         ],
         "lip": 13927526,
         "path": [
-          14858388,
-          11698788
+          13933160,
+          11564616
         ],
         "leaf": 6977072,
         "bark": 7488568,
@@ -4236,7 +4049,8 @@
           "stars": 0.78,
           "motes": "dust"
         }
-      ]
+      ],
+      "openSea": false
     },
     {
       "id": "paldea_area_zero",
@@ -4244,7 +4058,7 @@
       "desc": "Luminous emerald-and-crystal crater abyss surrounding the iridescent Area Zero Terastal Spire.",
       "mode": "procedural",
       "region": "paldea",
-      "envFrom": "cave",
+      "envFrom": "forest",
       "envDir": "env/paldea_area_zero",
       "thumbnail": "thumbnails/paldea_area_zero.png",
       "thumbnailFrom": "cave",
@@ -4341,13 +4155,13 @@
         ]
       ],
       "sky": [
-        1582664,
-        5736640
+        4493016,
+        11988223
       ],
-      "fog": 4614824,
+      "fog": 10280178,
       "fogNear": 46,
       "fogFar": 210,
-      "light": 1.02,
+      "light": 1.12,
       "sun": 14810111,
       "hemiGround": 4088440,
       "ground": [
@@ -4356,14 +4170,14 @@
         2908258,
         2115664
       ],
-      "path": 11064552,
+      "path": 12899552,
       "cliff": [
         5202064,
         3951472,
         6781352
       ],
-      "water": 0.45,
-      "waterColor": 6009855,
+      "water": 0.35,
+      "waterColor": 6079743,
       "props": [
         "crystal",
         "crystal",
@@ -4383,44 +4197,25 @@
       "landmark": {
         "kind": "terastal_spire",
         "name": "Area Zero Terastal Spire",
-        "color": 7403775,
-        "accent": 16748799,
-        "radius": 7.5,
+        "x": 0,
+        "z": -34,
+        "radius": 10.5,
+        "color": 14477044,
+        "accent": 16751320,
         "glbProps": [
           {
             "model": "glacier_crystals",
-            "dx": -5.2,
-            "dz": 3.6,
-            "scale": 1.35,
-            "rot": 0.2
+            "x": -11.5,
+            "z": 5.2,
+            "scale": 1.1,
+            "rotY": 0.2
           },
           {
             "model": "glacier_crystals",
-            "dx": 5.2,
-            "dz": 3.6,
-            "scale": 1.35,
-            "rot": 2.1
-          },
-          {
-            "model": "cave_crystal",
-            "dx": -4.8,
-            "dz": -4.2,
-            "scale": 1.3,
-            "rot": 1.2
-          },
-          {
-            "model": "cave_crystal",
-            "dx": 4.8,
-            "dz": -4.2,
-            "scale": 1.3,
-            "rot": -1.2
-          },
-          {
-            "model": "psy_spire",
-            "dx": 0,
-            "dz": 6.4,
-            "scale": 1.15,
-            "rot": 0
+            "x": 11.5,
+            "z": 5.2,
+            "scale": 1.1,
+            "rotY": 2.1
           }
         ]
       },
@@ -4474,8 +4269,8 @@
         ],
         "lip": 6750207,
         "path": [
-          11853032,
-          8168120
+          12899552,
+          10269894
         ],
         "leaf": 4450496,
         "bark": 4807280,
@@ -4563,7 +4358,8 @@
           "stars": 0.95,
           "motes": "fireflies"
         }
-      ]
+      ],
+      "openSea": false
     }
   ],
   "toolbarActions": [
@@ -4745,7 +4541,7 @@
         },
         {
           "find": "generateSummit(){",
-          "replace": "_pbGen39Terrain(){const id=this.biome?.id;if(!id||!/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(id))return!1;const rng=new x(this.seed),n1=this.noise,n2=this.noise2,half=this.world/2,P=this.play,N=this.res;let waterY=-99;const set=(gx,gz,h,pm)=>{const k=this.idx(gx,gz);this.heights[k]=h;this.pathMask[k]=C(pm,0,1)};const rim=(wx,wz)=>S(P-5,P+10,Math.max(Math.abs(wx),Math.abs(wz)))*(18+n1.get(wx*.05,wz*.05)*7);const spawnBlend=(wx,wz,h,baseH)=>{const s=S(18,8,Math.hypot(wx,wz));return h*(1-s)+baseH*s};if(id===`hoenn_petalburg`){const glades=[[0,0,22],[P*.42,P*.28,24],[-P*.44,P*.3,23],[P*.08,-P*.46,25]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=3.2+n1.fbm(wx*.013,wz*.013,4)*3.6+Math.sin(wx*.045+n2.get(wx*.02,wz*.02)*2.2)*1.25;let pm=0;for(const[cx,cz,cr]of glades){const d=Math.hypot(wx-cx,wz-cz);const g=S(cr+12,cr-2,d);h=h*(1-g*.72)+2.6*g*.72;pm=Math.max(pm,S(cr*.55,cr*.18,d)*.6)}const tr=Math.abs(wz-Math.sin(wx*.028)*26);const tr2=Math.abs(wx-Math.cos(wz*.026)*24);pm=Math.max(pm,S(7.5,2.5,Math.min(tr,tr2)));h=h*(1-pm*.45)+2.8*pm*.45;h=spawnBlend(wx,wz,h,2.8)+rim(wx,wz);set(gx,gz,h,pm)}waterY=-99}else if(id===`hoenn_chimney`){waterY=0.2;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);let h=3.6;const moat=Math.abs(r-P*.34);const onBridge=Math.min(Math.abs(wx),Math.abs(wz))<8.5;let pm=0;if(r<P*.24){h=3.8+n2.get(wx*.04,wz*.04)*.6;pm=S(P*.22,P*.16,r)*.45}else if(moat<12&&!onBridge){h=-2.4+S(6,12,moat)*4.8}else{const step=Math.floor(C((r-P*.4)/24,0,4));const frac=C((r-P*.4)/24,0,4)-step;h=3.4+(step+S(.3,.7,frac))*2.6+n1.fbm(wx*.018,wz*.018,3)*1.8+Math.sin(ang*5)*1.1}if(onBridge&&r<P*.82){h=Math.max(h,3.5);pm=Math.max(pm,S(9,4.5,Math.min(Math.abs(wx),Math.abs(wz))))}h=spawnBlend(wx,wz,h,3.8)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`sinnoh_coronet`){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const ax=Math.abs(wx),az=Math.abs(wz),hex=Math.max(ax,ax*.5+az*.866);const ring=hex/26;const st=Math.floor(ring),fr=ring-st;let h=2.4+(st+S(.38,.62,fr))*2.5+n1.fbm(wx*.016,wz*.016,3)*1.3;const causeway=Math.min(ax,az);let pm=S(8.5,3.5,causeway);if(causeway<9){h=2.4+Math.min(hex*.065,8.5)}const peaks=S(P*.65,P*.92,hex)*Math.abs(n2.get(wx*.03,wz*.03))*8;h+=peaks;h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`sinnoh_eterna`){waterY=-0.15;const isls=[[0,0,26],[P*.44,P*.38,28],[-P*.46,P*.36,27],[P*.42,-P*.42,26],[-P*.42,-P*.4,27]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=-1.45+n1.fbm(wx*.015,wz*.015,3)*.7;let pm=0;for(const[cx,cz,cr]of isls){const d=Math.hypot(wx-cx,wz-cz)+n2.get(wx*.05,wz*.05)*5;const m=S(cr+8,cr-3,d);h=Math.max(h,-1.45+m*(3.45+n1.get(wx*.03,wz*.03)*.7))}const diag1=Math.abs(wx-wz)*.707,diag2=Math.abs(wx+wz)*.707,cway=Math.min(diag1,diag2);if(cway<7.5){const b=S(7.5,3.2,cway);h=Math.max(h,1.85*b);pm=Math.max(pm,b*.92)}h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`unova_relic_desert`){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const u=wx*.74+wz*.67,v=-wx*.67+wz*.74;const dune=Math.pow(Math.sin(u*.065+n2.get(wx*.015,wz*.015)*1.4)*.5+.5,1.45)*5.2;let h=1.8+dune+Math.cos(v*.025)*1.4+n1.fbm(wx*.014,wz*.014,3)*1.2;const sq=Math.max(Math.abs(wx),Math.abs(wz));const court=S(38,26,sq);h=h*(1-court)+1.6*court;let pm=court*.85;const rd=Math.min(Math.abs(wx),Math.abs(wz));if(sq>=24&&sq<P*.88){const p=S(7,2.8,rd);pm=Math.max(pm,p*.8);h=h*(1-p*.6)+2.2*p*.6}h=spawnBlend(wx,wz,h,1.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`unova_dragonspiral`){waterY=0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const spiralPhase=((r*.105-ang/(Math.PI*2))%1+1)%1;const onRamp=Math.abs(spiralPhase-.5)<.17;let pm=onRamp?S(.17,.06,Math.abs(spiralPhase-.5)):0;const moat=Math.abs(r-28);let h=2.4+C(r/26,0,4.5)*2.1+n1.fbm(wx*.016,wz*.016,3)*1.1;if(moat<7&&!onRamp&&Math.abs(wx)>6){h=-1.6+S(3.5,7,moat)*3.8}if(onRamp){h=2.4+r*.075}if(Math.abs(wx)<7&&r<42){h=Math.max(h,2.6);pm=Math.max(pm,S(7,3,Math.abs(wx)))}h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`kalos_azure_bay`){waterY=0.35;const isls=[[0,0,28],[P*.48,P*.18,26],[-P*.48,P*.22,25],[P*.24,-P*.48,26],[-P*.32,-P*.44,25],[P*.04,P*.52,24]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=-1.6+n2.get(wx*.02,wz*.02)*.35;let pm=0;for(const[cx,cz,cr]of isls){const d=Math.hypot(wx-cx,wz-cz)+n1.get(wx*.04,wz*.04)*6;const m=S(cr+10,cr-4,d);if(m>0){const ih=-1.6+m*(4.2+S(cr*.5,0,d)*2.2);if(ih>h)h=ih;pm=Math.max(pm,S(cr+4,cr-2,d)*(1-S(cr*.65,cr*.35,d))*.85)}}const ring=Math.abs(Math.hypot(wx,wz)-P*.46);const bar=S(8.5,3,ring);h=Math.max(h,-1.6+bar*3.05);pm=Math.max(pm,bar*.9);const spoke=Math.min(Math.abs(wx),Math.abs(wz));const spBar=S(7.5,2.8,spoke)*(Math.hypot(wx,wz)<P*.56?1:0);h=Math.max(h,-1.6+spBar*3.15);pm=Math.max(pm,spBar*.92);h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`kalos_reflection_cave`){waterY=-0.25;const pts=[];for(let k=0;k<18;k++){const a=k/18*Math.PI*2+rng.range(-.2,.2),rad=rng.range(24,P*.78);pts.push([Math.cos(a)*rad,Math.sin(a)*rad,rng.int(0,3)])}for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let d1=1e9,d2=1e9,lv=1;for(const[px,pz,pl]of pts){const d=Math.hypot(wx-px,wz-pz);if(d<d1){d2=d1;d1=d;lv=pl}else if(d<d2){d2=d}}const edge=d2-d1;let h=lv===0?-1.5:1.6+lv*2.4;const crk=S(8,2.5,edge);let pm=crk*.9;if(crk>.25){h=Math.max(h,2.0)}h+=n2.get(wx*.06,wz*.06)*.35;h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`alola_melemele`){waterY=0.28;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const bay=Math.hypot(wx-P*.26,wz-P*.14);const land=S(P*.28,P*.44,bay+n1.get(wx*.03,wz*.03)*9);let h=-1.55+land*(3.8+S(P*.46,P*.85,bay)*4.4)+n2.fbm(wx*.018,wz*.018,3)*1.1;const beach=S(12,2,Math.abs(bay-P*.37));let pm=beach*.95;const trail=S(6.5,2.2,Math.abs(Math.hypot(wx,wz)-P*.52));pm=Math.max(pm,trail*.8);if(bay<P*.24){const islet=S(18,10,bay);h=Math.max(h,-1.55+islet*3.5)}h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`alola_wela_volcano`){waterY=-0.5;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const tier=Math.floor(r/28),tf=r/28-tier;let h=2.6+(tier+S(.35,.65,tf))*2.4+n1.get(wx*.022,wz*.022)*1.2;const spoke=Math.abs(Math.sin(ang*3));const isCrack=r>22&&r<P*.86&&spoke<.085;const onRing=Math.abs(r-P*.32)<7.5||Math.abs(r-P*.62)<7.5;let pm=onRing?S(7.5,2.5,Math.min(Math.abs(r-P*.32),Math.abs(r-P*.62))):0;if(isCrack&&!onRing){h=-1.9}else if(onRing){h=Math.max(h,2.6+tier*2.2)}h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`galar_wild_area`){waterY=-0.1;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const riverX=Math.sin(wz*.026)*38;const rd=Math.abs(wx-riverX);let h=2.4+n1.fbm(wx*.009,wz*.009,4)*3.8+n2.get(wx*.025,wz*.025)*.8;const onBridge=Math.abs(wz)<8||Math.abs(wz-P*.48)<7.5||Math.abs(wz+P*.48)<7.5;let pm=0;if(rd<14&&!onBridge){const dip=S(14,6,rd);h=h*(1-dip)+(-1.6)*dip}if(onBridge){const bw=Math.min(Math.abs(wz),Math.abs(wz-P*.48),Math.abs(wz+P*.48));const b=S(8,3,bw);pm=Math.max(pm,b*.9);if(rd<18)h=Math.max(h,2.1)}pm=Math.max(pm,S(7,2.5,Math.abs(Math.hypot(wx,wz)-P*.45))*.55);h=spawnBlend(wx,wz,h,2.4)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`galar_crown_tundra`){waterY=-0.2;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const fjord=Math.abs(wx-Math.cos(wz*.022)*22);const wall=S(28,56,fjord);let h=1.8+wall*6.8+Math.floor(S(46,P*.85,fjord)*2)*2.6+n1.fbm(wx*.018,wz*.018,3)*1.1;const pool=fjord<15&&Math.sin(wz*.055)>.35&&Math.abs(wz)>20;let pm=0;if(pool){h=-1.6}else{pm=S(9,3,Math.abs(fjord-18))*.85}const ramp=S(8,3,Math.abs(wz));if(ramp>.1){h=h*(1-ramp*.6)+2.2*ramp*.6;pm=Math.max(pm,ramp*.85)}h=spawnBlend(wx,wz,h,2.0)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`paldea_asado_mesa`){waterY=-99;const buttes=[[P*.38,P*.34,34,7.8],[-P*.42,P*.3,32,7.2],[P*.36,-P*.4,36,8.4],[-P*.38,-P*.36,30,6.8]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=1.8+n1.fbm(wx*.012,wz*.012,3)*1.1;let pm=0;for(const[bx,bz,br,bh]of buttes){const d=Math.hypot(wx-bx,wz-bz)+n2.get(wx*.045,wz*.045)*4.5;const m=S(br+4,br-3,d);const step2=S(br*.62+3,br*.62-2,d);h=Math.max(h,1.8+m*(bh*.55)+step2*(bh*.45));const rampAng=Math.atan2(wz-bz,wx-bx);if(Math.abs(rampAng)<.32&&d<br+8&&d>br*.3){const rm=C(1-(d-br*.3)/(br*.7+8),0,1);h=Math.min(h,1.8+rm*bh*.95);pm=Math.max(pm,.75)}}const canyon=Math.min(Math.abs(wx-Math.sin(wz*.025)*18),Math.abs(wz-Math.cos(wx*.025)*18));pm=Math.max(pm,S(8.5,3,canyon)*.9);h=spawnBlend(wx,wz,h,1.8)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`paldea_area_zero`){waterY=-0.8;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const bowl=C((r-22)/(P*.72),0,1);const st=Math.floor(bowl*4),fr=bowl*4-st;let h=1.4+(st+S(.35,.65,fr))*2.9+n1.fbm(wx*.018,wz*.018,3)*.9;const ley=Math.abs(Math.sin(ang*3));let pm=S(.095,.025,ley)*(r<P*.88?1:0);if(pm>.2){h=1.4+bowl*11.2}const pond=Math.abs(r-P*.36)<9&&Math.sin(ang*6)>.45&&pm<.2;if(pond){h=-2.1}h=spawnBlend(wx,wz,h,1.4)+rim(wx,wz);set(gx,gz,h,pm)}}this.blur();this.connectPlateaus();this.reserve(0,0,15);this.finishHeights(waterY,0,0);return!0}generateSummit(){"
+          "replace": "_pbGen39Terrain(){const id=this.biome?.id;if(!id||!/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(id))return!1;const n1=this.noise,n2=this.noise2,half=this.world/2,P=this.play,N=this.res;const lm=this.biome.landmark||{};const lmX=typeof lm.x==='number'?lm.x:0,lmZ=typeof lm.z==='number'?lm.z:-34;let waterY=-99;const set=(gx,gz,h,pm)=>{const k=this.idx(gx,gz);this.heights[k]=h;this.pathMask[k]=C(pm,0,1)};const softRim=(wx,wz,amp=10)=>S(P-6,P+14,Math.max(Math.abs(wx),Math.abs(wz)))*(amp+n1.get(wx*.038,wz*.038)*amp*.35);const islandDrop=(wx,wz,radFrac=.86)=>{const ang=Math.atan2(wz,wx);const coastR=P*(radFrac+n1.get(Math.cos(ang)*1.7,Math.sin(ang)*1.7)*.10+n2.get(Math.cos(ang)*3.5,Math.sin(ang)*3.5)*.045);const d=Math.hypot(wx,wz);return S(coastR-14,coastR+12,d)};const plaza=(wx,wz,h,baseH,pr=15)=>{const s=S(pr+10,pr-2,Math.hypot(wx-lmX,wz-lmZ));return h*(1-s)+baseH*s};const spawnFlat=(wx,wz,h,baseH)=>{const s=S(18,8,Math.hypot(wx,wz));return h*(1-s)+baseH*s};const roadNoise=(wx,wz)=>n2.get(wx*.055,wz*.055)*2.4;if(id==='hoenn_petalburg'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.6+n1.fbm(wx*.011,wz*.011,4)*3.4+n2.get(wx*.026,wz*.026)*.7;const t1=Math.abs(wx-Math.sin(wz*.024)*18+roadNoise(wx,wz));const t2=Math.abs(wz+34-Math.sin(wx*.022)*14+roadNoise(wz,wx));let pm=Math.max(S(6.5,2.0,t1),S(6.5,2.0,t2)*.85);h=h*(1-pm*.4)+2.7*pm*.4;h=plaza(wx,wz,h,2.8,14);pm=Math.max(pm,S(14,7,Math.hypot(wx-lmX,wz-lmZ))*.65);h=spawnFlat(wx,wz,h,2.7)+softRim(wx,wz,7.5);set(gx,gz,h,pm)}}else if(id==='hoenn_chimney'){waterY=0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=3.2+n1.fbm(wx*.014,wz*.014,3)*2.8+n2.get(wx*.032,wz*.032)*.8;const lavaCurve=wz+12-Math.sin(wx*.025)*22+n2.get(wx*.04,wz*.04)*4;const bridge=Math.abs(wx)<9;if(Math.abs(lavaCurve)<8.5&&!bridge&&Math.hypot(wx-lmX,wz-lmZ)>20&&Math.hypot(wx,wz)>15){const d=S(8.5,3.2,Math.abs(lavaCurve));h=h*(1-d)+(-1.6)*d}const trail=Math.abs(wx-Math.sin(wz*.02)*10+roadNoise(wx,wz));let pm=S(7.0,2.4,trail)*.85;if(bridge&&Math.abs(lavaCurve)<12){h=Math.max(h,3.1);pm=Math.max(pm,.9)}h=plaza(wx,wz,h,3.5,16);h=spawnFlat(wx,wz,h,3.3)+softRim(wx,wz,5.5);set(gx,gz,h,pm)}}else if(id==='sinnoh_coronet'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.8+n1.fbm(wx*.012,wz*.012,4)*4.2+n2.get(wx*.03,wz*.03)*.7;const approach=Math.abs(wx-Math.sin(wz*.018)*8+roadNoise(wx,wz));let pm=S(7.0,2.2,approach)*(wz>-56&&wz<60?.85:0);h=plaza(wx,wz,h,3.6,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.8);h=spawnFlat(wx,wz,h,2.8)+softRim(wx,wz,6.5);set(gx,gz,h,pm)}}else if(id==='sinnoh_eterna'){waterY=-0.1;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.6+n1.fbm(wx*.012,wz*.012,4)*3.2+n2.get(wx*.028,wz*.028)*.7;const creek=Math.abs(wx+46-Math.sin(wz*.026)*14+n2.get(wx*.04,wz*.04)*3.5);if(creek<9.5&&Math.hypot(wx-lmX,wz-lmZ)>22){const d=S(9.5,3.5,creek);h=h*(1-d)+(-1.35)*d}const trail=Math.abs(wx-Math.sin(wz*.022)*12+roadNoise(wx,wz));let pm=S(6.2,2.0,trail)*.85;h=plaza(wx,wz,h,3.4,17);pm=Math.max(pm,S(16,8,Math.hypot(wx-lmX,wz-lmZ))*.75);h=spawnFlat(wx,wz,h,2.6)+softRim(wx,wz,12.5);set(gx,gz,h,pm)}}else if(id==='unova_relic_desert'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const dune=Math.sin((wx*.026+wz*.018)+n1.get(wx*.015,wz*.015)*2.0)*1.6;let h=2.4+dune+n1.fbm(wx*.011,wz*.011,3)*2.2;const trail=Math.abs(wx-Math.sin(wz*.02)*10+roadNoise(wx,wz));let pm=S(7.5,2.4,trail)*.78;h=plaza(wx,wz,h,2.2,17);pm=Math.max(pm,S(16,9,Math.hypot(wx-lmX,wz-lmZ))*.82);h=spawnFlat(wx,wz,h,2.2)+softRim(wx,wz,6.5);set(gx,gz,h,pm)}}else if(id==='unova_dragonspiral'){waterY=0.1;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const dl=Math.hypot(wx-lmX,wz-lmZ);let h=2.6+n1.fbm(wx*.011,wz*.011,4)*3.0+n2.get(wx*.025,wz*.025)*.6;const moat=Math.abs(dl-22.5+n2.get(wx*.04,wz*.04)*2.2);const onBridge=Math.abs(wx-lmX)<6.2&&wz>lmZ;let pm=0;if(moat<5.5&&!onBridge){const d=S(5.5,2.0,moat);h=h*(1-d)+(-1.45)*d}if(onBridge&&dl<34){h=Math.max(h,2.8);pm=Math.max(pm,S(6.5,2.2,Math.abs(wx-lmX))*.9)}const outerTrail=Math.abs(wx-Math.sin(wz*.02)*16+roadNoise(wx,wz));if(dl>26)pm=Math.max(pm,S(6.2,2.0,outerTrail)*.72);h=plaza(wx,wz,h,2.9,15);pm=Math.max(pm,S(14,7,dl)*.7);h=spawnFlat(wx,wz,h,2.6)+softRim(wx,wz,9.5);set(gx,gz,h,pm)}}else if(id==='kalos_azure_bay'){waterY=0.35;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const drop=islandDrop(wx,wz,.82);let h=2.3+n1.fbm(wx*.014,wz*.014,3)*2.0+n2.get(wx*.032,wz*.032)*.45;const cove=Math.hypot(wx-44,wz+10)+n1.get(wx*.04,wz*.04)*7;const coveDip=S(26,12,cove);h-=coveDip*3.4;const cove2=Math.hypot(wx+48,wz-24)+n2.get(wx*.04,wz*.04)*6;h-=S(24,10,cove2)*3.2;h=h*(1-drop)+(-4.0)*drop;const trail=Math.abs(wx-Math.sin(wz*.024)*14+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*(1-drop)*.75;h=plaza(wx,wz,h,2.5,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.65);h=spawnFlat(wx,wz,h,2.2);set(gx,gz,h,pm)}}else if(id==='kalos_reflection_cave'){waterY=-0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.2+n1.fbm(wx*.014,wz*.014,3)*2.8+n2.get(wx*.03,wz*.03)*.6;const pool1=Math.hypot(wx+44,wz+20)+n1.get(wx*.05,wz*.05)*5;const pool2=Math.hypot(wx-48,wz-18)+n2.get(wx*.05,wz*.05)*5;if(pool1<19)h-=S(19,9,pool1)*3.6;if(pool2<20)h-=S(20,10,pool2)*3.6;const trail=Math.abs(wx-Math.sin(wz*.022)*14+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*.72;h=plaza(wx,wz,h,2.3,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.7);h=spawnFlat(wx,wz,h,2.2)+softRim(wx,wz,15.0);set(gx,gz,h,pm)}}else if(id==='alola_melemele'){waterY=0.32;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const drop=islandDrop(wx,wz,.85);let h=2.5+n1.fbm(wx*.013,wz*.013,3)*2.6+n2.get(wx*.028,wz*.028)*.55;const lagoon=Math.hypot(wx-46,wz-24)+n1.get(wx*.04,wz*.04)*6;h-=S(24,10,lagoon)*3.6;h=h*(1-drop)+(-4.0)*drop;const beachRim=S(.12,.52,drop)*(1-S(.58,.88,drop));const trail=Math.abs(wx-Math.sin(wz*.022)*14+roadNoise(wx,wz));let pm=Math.max(beachRim*.92,S(6.0,2.0,trail)*(1-drop)*.82);h=plaza(wx,wz,h,2.9,16);pm=Math.max(pm,S(14,7,Math.hypot(wx-lmX,wz-lmZ))*.7);h=spawnFlat(wx,wz,h,2.4);set(gx,gz,h,pm)}}else if(id==='alola_wela_volcano'){waterY=0.3;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const drop=islandDrop(wx,wz,.84);const r=Math.hypot(wx,wz);const dome=S(P*.82,18,r)*3.6;let h=2.2+dome+n1.fbm(wx*.015,wz*.015,3)*2.2+n2.get(wx*.032,wz*.032)*.6;h=h*(1-drop)+(-4.0)*drop;const trail=Math.abs(wx-Math.sin(wz*.022)*12+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*(1-drop)*.82;h=plaza(wx,wz,h,4.4,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.75);h=spawnFlat(wx,wz,h,3.6);set(gx,gz,h,pm)}}else if(id==='galar_wild_area'){waterY=-0.1;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.6+n1.fbm(wx*.010,wz*.010,4)*3.4+n2.get(wx*.024,wz*.024)*.6;const riverX=Math.sin(wz*.022)*24+42;const rd=Math.abs(wx-riverX+n2.get(wx*.04,wz*.04)*3);const ford=Math.abs(wz+6)<9;if(rd<11&&!ford&&Math.hypot(wx-lmX,wz-lmZ)>22){const d=S(11,4,rd);h=h*(1-d)+(-1.4)*d}const trail=Math.abs(wx-Math.sin(wz*.02)*14+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*.82;if(ford&&rd<16)pm=Math.max(pm,.85);h=plaza(wx,wz,h,3.2,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.7);h=spawnFlat(wx,wz,h,2.6)+softRim(wx,wz,8.5);set(gx,gz,h,pm)}}else if(id==='galar_crown_tundra'){waterY=-0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.4+n1.fbm(wx*.012,wz*.012,4)*3.8+n2.get(wx*.028,wz*.028)*.7;const creek=Math.abs(wx-44-Math.cos(wz*.022)*14);if(creek<9.5&&Math.hypot(wx-lmX,wz-lmZ)>22){const d=S(9.5,3.5,creek);h=h*(1-d)+(-1.35)*d}const trail=Math.abs(wx-Math.sin(wz*.02)*10+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*.78;h=plaza(wx,wz,h,3.0,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.75);h=spawnFlat(wx,wz,h,2.4)+softRim(wx,wz,14.5);set(gx,gz,h,pm)}}else if(id==='paldea_asado_mesa'){waterY=-99;const buttes=[[P*.44,P*.38,26,7.0],[-P*.46,P*.34,25,6.5],[P*.44,-P*.44,28,7.4],[-P*.44,-P*.40,24,6.4]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.0+n1.fbm(wx*.012,wz*.012,3)*1.6+Math.sin(wx*.022+wz*.018)*0.9;for(const[bx,bz,br,bh]of buttes){const d=Math.hypot(wx-bx,wz-bz)+n2.get(wx*.04,wz*.04)*4.5;h=Math.max(h,2.0+S(br+5,br-4,d)*bh)}const trail=Math.abs(wx-Math.sin(wz*.02)*14+roadNoise(wx,wz));let pm=S(7.5,2.4,trail)*.82;h=plaza(wx,wz,h,2.1,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.72);h=spawnFlat(wx,wz,h,2.0)+softRim(wx,wz,10.5);set(gx,gz,h,pm)}}else if(id==='paldea_area_zero'){waterY=-0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const r=Math.hypot(wx,wz);const bowl=S(38,P*.96,r)*8.5;let h=2.0+bowl+n1.fbm(wx*.013,wz*.013,3)*2.0+n2.get(wx*.03,wz*.03)*.5;const pool=Math.hypot(wx+40,wz+16)+n1.get(wx*.045,wz*.045)*5;if(pool<18&&Math.hypot(wx-lmX,wz-lmZ)>22){const d=S(18,8,pool);h=h*(1-d)+(-1.4)*d}const trail=Math.abs(wx-Math.sin(wz*.022)*12+roadNoise(wx,wz));let pm=S(6.5,2.2,trail)*.78;h=plaza(wx,wz,h,2.4,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.75);h=spawnFlat(wx,wz,h,2.1)+softRim(wx,wz,14.0);set(gx,gz,h,pm)}}this.blur();this.connectPlateaus();this.reserve(0,0,15);this.reserve(lmX,lmZ,18);this.finishHeights(waterY,0,0);return!0}generateSummit(){"
         },
         {
           "find": "t()!==`es`&&await this.localize();",
@@ -4754,6 +4550,26 @@
         {
           "find": "async localize(){",
           "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+        },
+        {
+          "find": "uOpen:{value:+!!this.island}",
+          "replace": "uOpen:{value:+!!(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')}"
+        },
+        {
+          "find": "let e=this.island?this.world*12:this.world",
+          "replace": "let e=(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')?this.world*12:this.world"
+        },
+        {
+          "find": "t.frustumCulled=!this.island",
+          "replace": "t.frustumCulled=!(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')"
+        },
+        {
+          "find": "const px=lx+Number(gp.x||0),pz=lz+Number(gp.z||0),py=this.height(px,pz)+Number(gp.y||0);obj.position.set(px,py,pz);if(gp.rotY)obj.rotation.y=Number(gp.rotY);",
+          "replace": "const px=lx+Number(gp.x??gp.dx??0),pz=lz+Number(gp.z??gp.dz??0),py=this.height(px,pz)+Number(gp.y??gp.dy??0);obj.position.set(px,py,pz);const ry=Number(gp.rotY??gp.rot??0);if(ry)obj.rotation.y=ry;"
+        },
+        {
+          "find": "case'volcano_caldera':add(new Me(2.8,6.5,6.5,9),mMain,0,3.2,0,2);add(new Me(2.2,2.5,1.2,9),mAcc,0,6.2,0,1);for(let i=0;i<5;i++){let a=i/5*Math.PI*2;add(new fe(1.3,5,6),mMain,Math.cos(a)*5.5,2.5,Math.sin(a)*5.5,1.5)}break;case'spear_pillar':add(new Me(6.8,7.4,.9,12),mTrim,0,.45,0,2.2);for(let i=0;i<6;i++){let a=-Math.PI*.85+i*(Math.PI*.34);add(new Me(.55,.65,i%2?7.5:5.2,8),mMain,Math.cos(a)*5.6,i%2?4.2:3,Math.sin(a)*5.6,1.6)}add(new Ae(1.7,0),mAcc,0,5.2,0,1);break;case'old_chateau':add(new Ke(7.5,6.5,5.5),mMain,0,3.25,0,2);add(new fe(2.4,4.2,4),mTrim,-3.2,8.4,0,1.6);add(new fe(2.4,4.2,4),mTrim,3.2,8.4,0,1.6);add(new Ke(1.4,2.2,.4),mAcc,0,4.2,2.85,1);break;case'sand_pyramid':for(let i=0;i<4;i++){let s=9-i*2;add(new Ke(s,1.7,s),i%2?mTrim:mMain,0,.85+i*1.7,0,2)}add(new Ae(1.3,0),mAcc,0,8.4,0,1);add(new Ke(1.1,5.5,1.1),mMain,-6.2,2.75,4.2,1.6);add(new Ke(1.1,5.5,1.1),mMain,6.2,2.75,4.2,1.6);break;case'dragon_tower':for(let i=0;i<4;i++){let s=6.2-i*1.1;add(new Ke(s,2.4,s),mMain,0,1.2+i*2.4,0,1.8);add(new fe(s*.88,1.1,4),mTrim,0,2.7+i*2.4,0,1.6)}add(new Ae(1.4,0),mAcc,0,11.6,0,1);break;case'sea_arch':add(new Me(1.5,2.1,7.5,8),mMain,-4.6,3.75,0,2);add(new Me(1.5,2.1,7.5,8),mMain,4.6,3.75,0,2);add(new Ke(11.2,1.8,2.6),mTrim,0,7.8,0,2.2);add(new Ae(1.5,0),mAcc,0,10.2,0,1);break;case'prism_crystals':add(new Ae(2.5,0).scale(.75,2.4,.75),mMain,0,5.2,0,1.5);for(let i=0;i<5;i++){let a=i/5*Math.PI*2;add(new Ae(1.5,0).scale(.6,1.9,.6).rotateZ(.28),i%2?mAcc:mMain,Math.cos(a)*3.8,2.6,Math.sin(a)*3.8,1.2)}break;case'tapu_totem':add(new Ke(2.6,8.2,2.4),mMain,0,4.1,0,1.8);add(new Ke(7.4,1.6,1.6),mTrim,0,6.2,0,1.8);add(new Ae(1.5,0),mAcc,0,9.4,0,1);break;case'fire_altar':add(new Me(5.6,6.6,1.6,8),mTrim,0,.8,0,2);add(new Me(1.8,2.4,2.2,8),mMain,0,2.7,0,1.6);add(new Ae(1.8,0),mAcc,0,5.1,0,1);for(let i=0;i<4;i++){let a=i*Math.PI/2+.4;add(new Me(.5,.7,4.2,6),mMain,Math.cos(a)*4.6,2.1,Math.sin(a)*4.6,1.4);add(new Ae(.7,0),mAcc,Math.cos(a)*4.6,4.7,Math.sin(a)*4.6,1)}break;case'dynamax_den':add(new Me(4.5,5.4,1.3,10),mTrim,0,.65,0,2);add(new Me(.65,.85,18,8),mAcc,0,9.5,0,1);for(let i=0;i<4;i++){let a=i*Math.PI/2;add(new Ke(1.6,4.8,1.2),mMain,Math.cos(a)*4.8,2.4,Math.sin(a)*4.8,1.5)}break;case'crown_temple':add(new Ke(7.2,1.2,7.2),mTrim,0,.6,0,2.2);for(let i=0;i<4;i++){let a=i*Math.PI/2+Math.PI/4;add(new Me(.65,.75,6.8,6),mMain,Math.cos(a)*4.4,4,Math.sin(a)*4.4,1.6)}add(new Ae(2,0).scale(.8,1.7,.8),mAcc,0,7.2,0,1);break;case'titan_mesa':add(new Ke(4.2,7.2,4.4),mMain,-4.4,3.6,0,2);add(new Ke(4.2,7.2,4.4),mMain,4.4,3.6,0,2);add(new Ke(13.2,2.4,4.6),mTrim,0,8,0,2.2);add(new Ae(1.4,0),mAcc,0,10.5,0,1);break;case'terastal_spire':add(new Ae(2.6,0).scale(.8,2.7,.8),mAcc,0,6.2,0,1);for(let i=0;i<6;i++){let a=i/6*Math.PI*2;add(new Ae(1.1,0).scale(.6,1.6,.6),mMain,Math.cos(a)*5,3.2+(i%2)*1.6,Math.sin(a)*5,1.2)}break;",
+          "replace": "case'moss_shrine':{const mMoss=rockTex?new Ee({color:new ie(12111012),map:rockTex,gradientMap:Oa}):Aa(7834476,0);const mPathS=pathTex?new Ee({color:new ie(14077876),map:pathTex,gradientMap:Oa}):Aa(12562824,0);const mWood=Aa(7163960,0),mRoofM=Aa(3504968,0),mGem=Aa(6550176,4053344);this.mats.push(mMoss,mPathS,mWood,mRoofM,mGem);add(new Me(8.4,9.2,1.1,16),mPathS,0,.55,0,2.6);add(new Me(6.4,7.0,.9,16),mMoss,0,1.45,0,2.2);add(new Ke(4.8,.7,2.8),mPathS,0,.45,7.8,1.5);add(new Ke(4.2,.7,2.0),mPathS,0,1.05,6.4,1.5);add(new Me(.58,.68,6.6,10),mWood,-3.4,4.8,4.6,1.5);add(new Me(.58,.68,6.6,10),mWood,3.4,4.8,4.6,1.5);add(new Ke(9.2,.9,.95),mRoofM,0,8.2,4.6,1.6);add(new Ke(7.8,.6,.7),mWood,0,6.8,4.6,1.4);add(new Ke(5.6,4.2,4.4),mWood,0,4.0,-1.0,1.8);add(new Ke(2.0,2.8,.5),Aa(2437670,0),0,3.2,1.25,1);add(new fe(4.8,2.6,4).rotateY(Math.PI/4),mRoofM,0,7.2,-1.0,1.8);add(new fe(3.6,1.8,4).rotateY(Math.PI/4),mMoss,0,9.0,-1.0,1.4);add(new Ae(.82,0),mGem,0,3.6,1.55,1);for(const[cx,cz,cr]of[[0,-1,4.2],[-3.4,4.6,1.2],[3.4,4.6,1.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+10});break}case'volcano_caldera':{const mBas=rockTex?new Ee({color:new ie(8221560),map:rockTex,gradientMap:Oa}):Aa(4997448,0);const mRim=pathTex?new Ee({color:new ie(10059624),map:pathTex,gradientMap:Oa}):Aa(6835280,0);const mLava=Aa(16742144,16728576),mGlow=Aa(16763968,16750592),mIron=Aa(3618624,0);this.mats.push(mBas,mRim,mLava,mGlow,mIron);add(new Me(9.5,12.2,3.4,14),mBas,0,1.7,0,2.8);add(new Me(6.8,9.8,3.6,14),mBas,0,4.9,0,2.4);add(new Me(5.6,6.8,1.2,14),mRim,0,7.1,0,2.0);add(new Me(4.9,4.9,.6,14),mLava,0,7.25,0,1);add(new Me(2.8,2.8,.7,12),mGlow,0,7.38,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2+.3;const sx=Math.cos(a)*8.2,sz=Math.sin(a)*8.2,sh=3.8+(i%2)*1.8;add(new fe(2.1,sh,6),mBas,sx,sh/2+1.2,sz,1.5)}add(new Ke(5.4,1.2,5.6),mRim,0,1.1,10.2,1.8);add(new Ke(4.8,.8,3.6),mIron,0,1.9,10.8,1.5);add(new Me(.5,.65,2.6,8),mIron,-2.3,3.1,12.4,1);add(new Ae(.55,0),mGlow,-2.3,4.7,12.4,1);add(new Me(.5,.65,2.6,8),mIron,2.3,3.1,12.4,1);add(new Ae(.55,0),mGlow,2.3,4.7,12.4,1);for(const[cx,cz,cr]of[[0,0,8.8],[-6.5,5,3.2],[6.5,5,3.2],[0,9.5,3.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+10});break}case'spear_pillar':{const mMarb=rockTex?new Ee({color:new ie(15791356),map:rockTex,gradientMap:Oa}):Aa(14804460,0);const mStep=pathTex?new Ee({color:new ie(14476016),map:pathTex,gradientMap:Oa}):Aa(13422804,0);const mDia=Aa(5952511,3654143),mPal=Aa(16748768,14440640),mGoldS=Aa(16766544,12554240);this.mats.push(mMarb,mStep,mDia,mPal,mGoldS);add(new Me(10.8,11.6,1.1,18),mStep,0,.55,0,3.0);add(new Me(8.4,9.0,1.1,18),mMarb,0,1.6,0,2.5);add(new Ke(5.6,.7,3.4),mStep,0,.4,10.6,1.6);add(new Ke(4.8,.7,2.4),mMarb,0,1.15,9.2,1.5);const cols=[[-7.4,1.2,9.2],[-5.8,-4.8,9.4],[-1.8,-7.4,8.6],[1.8,-7.4,9.4],[5.8,-4.8,6.0],[7.4,1.2,9.2],[-6.0,5.2,4.4],[6.0,5.2,7.2]];for(const[cx,cz,ch]of cols){add(new Ke(1.5,.7,1.5),mStep,cx,2.3,cz,1);add(new Me(.58,.68,ch,10),mMarb,cx,2.5+ch/2,cz,1.8);if(ch>7.5)add(new Ke(1.6,.65,1.6),mStep,cx,2.6+ch,cz,1);this.addCollider({x:lx+cx,z:lz+cz,r:1.15,h:ly+12})}add(new Ke(4.8,.85,1.3),mStep,0,11.6,-7.4,1.5);add(new Ke(4.4,1.2,3.4),mStep,0,2.7,-1.0,1.5);add(new Ke(2.6,2.1,2.2),mMarb,0,4.2,-1.0,1.2);add(new Ae(1.15,0).scale(.68,1.7,.68),mDia,-1.05,6.8,-1.0,1);add(new Ae(1.15,0).scale(.68,1.7,.68),mPal,1.05,6.8,-1.0,1);add(new Ae(.55,0),mGoldS,0,8.2,-1.0,1);this.addCollider({x:lx,z:lz-1,r:2.8,h:ly+10});break}case'old_chateau':{const mWallC=rockTex?new Ee({color:new ie(8554648),map:rockTex,gradientMap:Oa}):Aa(5789812,0);const mTrimC=pathTex?new Ee({color:new ie(6908548),map:pathTex,gradientMap:Oa}):Aa(4473944,0);const mRoofC=Aa(2894916,0),mWinC=Aa(13672447,11108351),mDoorC=Aa(2300976,0),mLanC=Aa(16762208,15698944);this.mats.push(mWallC,mTrimC,mRoofC,mWinC,mDoorC,mLanC);add(new Ke(20.5,1.6,12.5),mTrimC,0,.8,0,2.8);add(new Ke(9.2,8.4,9.6),mWallC,0,5.6,0,2.4);add(new fe(7.6,4.8,4).rotateY(Math.PI/4),mRoofC,0,12.1,0,1.8);add(new Ke(3.4,4.2,3.4),mWallC,0,15.0,0,1.4);add(new fe(2.8,4.2,4).rotateY(Math.PI/4),mRoofC,0,19.1,0,1.2);add(new Ke(1.1,1.5,.25),mWinC,0,15.2,1.75,1);for(const sx of[-7.2,7.2]){add(new Ke(5.8,6.6,8.2),mWallC,sx,4.7,-.4,2.0);add(new fe(4.9,3.6,4).rotateY(Math.PI/4),mRoofC,sx,9.7,-.4,1.6);add(new Ke(1.1,1.6,.22),mWinC,sx,6.1,3.75,1);add(new Ke(1.1,1.6,.22),mWinC,sx,3.6,3.75,1);add(new Ke(.9,2.8,.9),mTrimC,sx*1.15,10.6,-2.2,1)}add(new Ke(1.2,1.7,.22),mWinC,-2.4,6.6,4.85,1);add(new Ke(1.2,1.7,.22),mWinC,2.4,6.6,4.85,1);add(new Ke(5.4,1.0,3.2),mTrimC,0,1.1,6.2,1.6);add(new Ke(4.8,.6,2.2),mTrimC,0,.4,8.2,1.4);add(new Ke(2.6,3.8,.5),mDoorC,0,3.4,4.9,1);add(new Ke(1.8,.8,.22),mWinC,0,5.8,4.9,1);add(new Ke(5.2,.7,2.8),mRoofC,0,5.5,6.1,1.4);for(const px of[-2.1,2.1]){add(new Me(.28,.34,3.8,8),mTrimC,px,3.4,7.1,1);add(new Ae(.38,0),mLanC,px*1.35,2.4,8.3,1)}for(const[cx,cz,cr]of[[-7.2,0,4.2],[0,0,5.2],[7.2,0,4.2],[0,5.6,3.0]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+18});break}case'sand_pyramid':{const mSandS=rockTex?new Ee({color:new ie(15254672),map:rockTex,gradientMap:Oa}):Aa(14134124,0);const mTrimS=pathTex?new Ee({color:new ie(13410164),map:pathTex,gradientMap:Oa}):Aa(12488540,0);const mDarkS=Aa(4993572,0),mGoldU=Aa(16763464,14651936);this.mats.push(mSandS,mTrimS,mDarkS,mGoldU);for(let t=0;t<5;t++){const s=18-t*2.7,h=2.0;add(new Ke(s,h,s),t%2?mTrimS:mSandS,0,h/2+t*h,0,Math.max(1.4,2.8-t*.25))}add(new Ke(4.8,10.5,4.2),mSandS,-4.6,5.25,6.8,2.0);add(new Ke(4.8,10.5,4.2),mSandS,4.6,5.25,6.8,2.0);add(new Ke(5.4,1.3,4.6),mTrimS,-4.6,10.8,6.8,1.6);add(new Ke(5.4,1.3,4.6),mTrimS,4.6,10.8,6.8,1.6);add(new Ke(6.4,2.2,3.4),mTrimS,0,7.2,6.8,1.6);add(new Ke(4.2,5.6,1.2),mDarkS,0,3.2,6.6,1);add(new Me(1.15,1.15,.45,12).rotateX(Math.PI/2),mGoldU,0,7.3,8.55,1);for(let st=0;st<4;st++){add(new Ke(5.2,.6,1.6),mTrimS,0,.3+st*.55,9.8-st*.9,1.3)}add(new Ke(4.2,2.6,4.2),mTrimS,0,11.3,0,1.5);add(new fe(2.4,2.6,4),mGoldU,0,13.9,0,1);for(const[cx,cz,cr]of[[-5.5,0,5.2],[5.5,0,5.2],[0,-4.5,5.5],[-4.8,6.8,2.8],[4.8,6.8,2.8]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+14});break}case'dragon_tower':{const mBaseD=rockTex?new Ee({color:new ie(11842736),map:rockTex,gradientMap:Oa}):Aa(8618880,0);const mTopD=pathTex?new Ee({color:new ie(13552324),map:pathTex,gradientMap:Oa}):Aa(11578784,0);this.mats.push(mBaseD,mTopD);add(new Ke(16.5,1.2,16.5),mBaseD,0,.55,0,2.8);add(new Ke(13.6,.8,13.6),mTopD,0,1.4,0,2.4);add(new Ke(5.2,.6,2.8),mTopD,0,.35,9.4,1.6);add(new Ke(4.6,.6,2.2),mTopD,0,.95,8.0,1.5);for(const[cx,cz,cr]of[[-4.5,-4.5,4.2],[4.5,-4.5,4.2],[-4.5,4.5,4.2],[4.5,4.5,4.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+20});break}case'sea_arch':{const mLime=rockTex?new Ee({color:new ie(15393748),map:rockTex,gradientMap:Oa}):Aa(13880760,0);const mSandA=pathTex?new Ee({color:new ie(15721680),map:pathTex,gradientMap:Oa}):Aa(14602424,0);const mBlueK=Aa(3183848,0),mBeac=Aa(8453375,5170431);this.mats.push(mLime,mSandA,mBlueK,mBeac);for(const s of[-1,1]){add(new Me(3.0,3.8,3.6,9),mLime,s*6.4,1.8,0,2.0);add(new Me(2.3,2.9,3.6,9),mLime,s*5.5,5.1,0,1.8);add(new Me(2.0,2.4,2.8,9),mLime,s*4.2,7.8,0,1.6);add(new Ke(3.2,2.2,3.4),mLime,s*2.3,9.5,0,1.6);this.addCollider({x:lx+s*6.2,z:lz,r:3.4,h:ly+10});}add(new Ke(5.4,2.1,3.6),mSandA,0,10.2,0,1.8);add(new Me(1.3,1.6,3.4,10),mSandA,0,12.8,0,1.4);add(new Me(1.45,1.45,.45,10),mBlueK,0,14.6,0,1);add(new Me(.85,.85,1.4,10),mBeac,0,15.5,0,1);add(new fe(1.5,1.9,10),mBlueK,0,17.0,0,1);break}case'prism_crystals':{const mRockK=rockTex?new Ee({color:new ie(6446224),map:rockTex,gradientMap:Oa}):Aa(4405872,0);const mRose=Aa(16748244,14636464),mCyan=Aa(8974591,5817087),mAmeth=Aa(11171583,8409584);this.mats.push(mRockK,mRose,mCyan,mAmeth);add(new Me(7.4,8.6,1.3,8),mRockK,0,.65,0,2.2);add(new Me(5.0,6.2,1.2,8),mRockK,0,1.8,0,1.8);add(new Me(1.05,1.65,8.4,6),mRose,0,6.2,0,1);add(new fe(1.05,3.4,6),mRose,0,12.1,0,1);const shards=[[-2.8,1.8,6.8,.32,-.18,mCyan],[2.9,1.6,7.4,-.28,-.14,mAmeth],[-3.2,-2.2,6.4,.26,.22,mAmeth],[3.1,-2.1,7.0,-.30,.18,mCyan],[0,-3.2,8.2,0,.26,mRose],[-5.0,.2,4.4,.42,.04,mCyan],[5.0,.4,4.8,-.40,.06,mRose],[0,3.2,4.8,0,-.34,mAmeth]];for(const[sx,sz,sh,rz,rx,mat]of shards){add(new Me(.24,.95,sh,6).rotateZ(rz).rotateX(rx),mat,sx,1.6+sh*.46,sz,1)}this.addCollider({x:lx,z:lz,r:5.2,h:ly+14});break}case'tapu_totem':{const mTuff=rockTex?new Ee({color:new ie(13087380),map:rockTex,gradientMap:Oa}):Aa(10718808,0);const mSandM=pathTex?new Ee({color:new ie(14865324),map:pathTex,gradientMap:Oa}):Aa(13482384,0);const mGoldT=Aa(16763952,14652928),mDarkT=Aa(3614248,0),mFlameT=Aa(16746528,15685632);this.mats.push(mTuff,mSandM,mGoldT,mDarkT,mFlameT);add(new Ke(15.0,1.3,12.5),mTuff,0,.65,0,2.5);add(new Ke(11.6,1.1,9.6),mSandM,0,1.8,0,2.2);add(new Ke(5.4,.7,2.8),mSandM,0,.4,7.4,1.5);add(new Ke(4.6,.7,2.2),mSandM,0,1.1,5.8,1.4);for(const sx of[-4.2,4.2]){add(new Ke(2.6,7.6,2.8),mTuff,sx,5.8,-.6,1.8);add(new Ke(3.0,.8,3.2),mDarkT,sx,9.8,-.6,1.4);this.addCollider({x:lx+sx,z:lz-.6,r:2.2,h:ly+12})}add(new Ke(12.2,2.0,3.2),mTuff,0,10.9,-.6,2.0);add(new Ke(9.2,1.2,2.6),mDarkT,0,12.4,-.6,1.6);add(new fe(2.4,3.2,4).rotateY(Math.PI/4),mGoldT,0,14.5,-.6,1);add(new Ke(3.4,.9,.9).rotateZ(.35),mGoldT,-2.8,13.6,.4,1);add(new Ke(3.4,.9,.9).rotateZ(-.35),mGoldT,2.8,13.6,.4,1);add(new Ae(.95,0),mGoldT,0,10.9,1.2,1);for(const[bx,bz]of[[-5.6,4.8],[5.6,4.8]]){add(new Me(.55,.72,2.4,8),mDarkT,bx,3.0,bz,1);add(new Ae(.58,0),mFlameT,bx,4.5,bz,1)}break}case'fire_altar':{const mVolc=rockTex?new Ee({color:new ie(8938576),map:rockTex,gradientMap:Oa}):Aa(5780528,0);const mOchre=pathTex?new Ee({color:new ie(12354904),map:pathTex,gradientMap:Oa}):Aa(9919564,0);const mFire1=Aa(16728608,15671312),mFire2=Aa(16750592,16736256),mFire3=Aa(16771168,16761856);this.mats.push(mVolc,mOchre,mFire1,mFire2,mFire3);add(new Me(9.6,10.8,1.3,12),mVolc,0,.65,0,2.6);add(new Me(7.2,8.2,1.1,12),mOchre,0,1.75,0,2.2);add(new Ke(4.8,.7,2.8),mOchre,0,.4,9.8,1.5);add(new Me(2.8,3.6,2.6,10),mVolc,0,3.5,0,1.8);add(new Me(3.5,2.7,1.2,10),mOchre,0,5.2,0,1.5);add(new fe(2.4,5.2,7),mFire1,0,8.0,0,1);add(new fe(1.7,4.2,7).rotateZ(.18),mFire2,-.8,7.4,.3,1);add(new fe(1.6,4.0,7).rotateZ(-.18),mFire2,.8,7.3,-.2,1);add(new fe(1.1,3.2,6),mFire3,0,7.2,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2+.52;const tx=Math.cos(a)*7.6,tz=Math.sin(a)*7.6;add(new Me(.58,.8,3.8,8),mVolc,tx,3.2,tz,1.4);add(new fe(.78,1.6,6),mFire2,tx,5.8,tz,1);this.addCollider({x:lx+tx,z:lz+tz,r:1.1,h:ly+7})}this.addCollider({x:lx,z:lz,r:4.0,h:ly+10});break}case'dynamax_den':{const mCastle=rockTex?new Ee({color:new ie(12106944),map:rockTex,gradientMap:Oa}):Aa(8685704,0);const mStoneG=pathTex?new Ee({color:new ie(10593700),map:pathTex,gradientMap:Oa}):Aa(7369848,0);const mDyn1=Aa(16724856,15667568),mDyn2=Aa(16750284,16730016);this.mats.push(mCastle,mStoneG,mDyn1,mDyn2);add(new Me(8.8,9.8,1.1,12),mStoneG,0,.55,0,2.6);const wallSegs=[[-6.6,-3.8,9.4],[-2.6,-7.2,10.8],[2.6,-7.2,8.2],[6.6,-3.8,10.2],[-7.2,1.6,7.0],[7.2,1.6,6.4],[-5.0,5.8,5.2],[5.0,5.8,5.6]];for(const[wx,wz,wh]of wallSegs){const ang=Math.atan2(wx,wz);add(new Ke(3.6,wh,1.7).rotateY(ang),mCastle,wx,1.0+wh/2,wz,2.0);if(wh>7.5)add(new Ke(1.2,1.1,1.8).rotateY(ang),mStoneG,wx,1.4+wh,wz,1);this.addCollider({x:lx+wx,z:lz+wz,r:2.1,h:ly+12})}add(new Me(3.8,4.6,1.1,10),mStoneG,0,1.5,0,1.6);add(new Me(2.9,2.9,.5,10),mDyn1,0,2.15,0,1);add(new fe(1.5,6.5,8),mDyn2,0,5.6,0,1);add(new Ae(.75,0).scale(.7,1.4,.7),mDyn1,-1.5,4.8,.8,1);add(new Ae(.7,0).scale(.7,1.3,.7),mDyn2,1.6,6.2,-.6,1);break}case'crown_temple':{const mIceSt=rockTex?new Ee({color:new ie(13953528),map:rockTex,gradientMap:Oa}):Aa(10731216,0);const mFrost=pathTex?new Ee({color:new ie(14807548),map:pathTex,gradientMap:Oa}):Aa(12704224,0);const mGlac=Aa(11531519,7786751),mCrownG=Aa(16767080,14658368);this.mats.push(mIceSt,mFrost,mGlac,mCrownG);add(new Ke(14.5,1.4,13.5),mFrost,0,.7,0,2.6);add(new Ke(11.4,1.0,10.6),mIceSt,0,1.85,0,2.2);add(new Ke(5.2,.7,2.8),mFrost,0,.4,7.8,1.5);for(const sx of[-4.4,4.4]){add(new Ke(2.2,7.4,8.6),mIceSt,sx,5.9,-.5,2.0);add(new Ke(2.6,.8,9.0),mFrost,sx,9.8,-.5,1.6);this.addCollider({x:lx+sx,z:lz-.5,r:2.6,h:ly+12})}add(new Ke(11.0,2.0,9.0),mIceSt,0,10.6,-.5,2.0);add(new fe(7.4,4.4,4).rotateY(Math.PI/4),mFrost,0,13.7,-.5,1.8);add(new Ke(2.6,2.2,2.6),mFrost,0,3.4,-.8,1.4);add(new Ae(1.4,0).scale(.75,1.75,.75),mGlac,0,6.4,-.8,1);add(new Ae(.6,0),mCrownG,0,16.1,-.5,1);this.addCollider({x:lx,z:lz-.8,r:2.2,h:ly+10});break}case'titan_mesa':{const mRedR=rockTex?new Ee({color:new ie(14912372),map:rockTex,gradientMap:Oa}):Aa(12543816,0);const mOchreA=pathTex?new Ee({color:new ie(15772556),map:pathTex,gradientMap:Oa}):Aa(13866596,0);const mSunA=Aa(16764736,14653728);this.mats.push(mRedR,mOchreA,mSunA);for(const s of[-1,1]){add(new Me(3.4,4.4,3.4,8),mRedR,s*7.2,1.7,0,2.0);add(new Me(2.6,3.4,3.4,8),mRedR,s*6.2,4.9,0,1.8);add(new Me(2.1,2.6,3.0,8),mOchreA,s*4.7,7.6,0,1.6);add(new Ke(3.6,2.2,3.4).rotateZ(s*-.24),mRedR,s*2.5,9.4,0,1.6);this.addCollider({x:lx+s*6.8,z:lz,r:3.6,h:ly+10});}add(new Ke(5.6,2.0,3.6),mOchreA,0,10.2,0,1.8);add(new Me(1.1,1.6,1.2,7),mRedR,0,11.8,0,1.2);add(new Ae(.85,0),mSunA,0,13.2,0,1);break}case'terastal_spire':{const mLab=rockTex?new Ee({color:new ie(15659772),map:rockTex,gradientMap:Oa}):Aa(14476524,0);const mTrimZ=pathTex?new Ee({color:new ie(13490428),map:pathTex,gradientMap:Oa}):Aa(11583988,0);const mTeraP=Aa(16758760,15698648),mTeraC=Aa(9501183,6352383),mTeraW=Aa(16448255,13428735);this.mats.push(mLab,mTrimZ,mTeraP,mTeraC,mTeraW);add(new Me(9.4,10.2,1.1,6),mTrimZ,0,.55,0,2.4);add(new Me(7.2,7.8,.9,6),mLab,0,1.5,0,2.0);add(new Me(4.6,5.2,.8,6),mTeraC,0,2.15,0,1);add(new Me(1.15,1.85,8.2,6),mTeraP,0,6.2,0,1);add(new fe(1.15,3.4,6),mTeraW,0,12.0,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2;const px=Math.cos(a)*4.2,pz=Math.sin(a)*4.2,ph=5.2+(i%2)*1.8;const mat=i%2?mTeraC:mTeraP;add(new Me(.24,1.05,ph,6).rotateZ(-Math.cos(a)*.36).rotateX(Math.sin(a)*.36),mat,px,2.2+ph*.44,pz,1);const bx=Math.cos(a)*8.2,bz=Math.sin(a)*8.2;add(new Ke(.9,2.8,.9),mLab,bx,2.4,bz,1);add(new Ae(.45,0),mTeraC,bx,4.1,bz,1)}this.addCollider({x:lx,z:lz,r:5.2,h:ly+14});break}"
         }
       ]
     },

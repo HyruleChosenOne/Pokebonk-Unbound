@@ -1,10 +1,10 @@
 {
   "id": "minish-cap-link",
-  "name": "Link (The Minish Cap) — Playable Character, Hyrule & Dark World",
-  "version": "2.0.2",
+  "name": "The Minish Cap Pack — Link & Princess Zelda + Hyrule & Dark World",
+  "version": "3.0.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Playable Minish Cap Link (unlocked by default) with Sword & Item moveset, Light Arrows Fusion, and Hyrule & Dark World stages.",
+  "description": "Playable Young Link (OOT cries) & Princess Zelda (both unlocked by default), 6 Wardrobe skins each, shared exclusive Minish Cap attacks + Light Arrows Fusion, and 3D Hyrule Castle & Pyramid of Power stages.",
   "tags": [
     "character",
     "zelda",
@@ -167,7 +167,9 @@
       },
       "vfxId": "link-picori-slash",
       "vfxPreset": "slash",
-      "sfxPreset": "slash"
+      "sfxPreset": "slash",
+      "customSfx": "oot-link-atk1",
+      "layerSfx": true
     },
     {
       "key": "heros-bow",
@@ -438,7 +440,6 @@
       "color": "green",
       "start": true,
       "unlock": true,
-      "cryFrom": 251,
       "kit": [
         "picori-blade",
         "heros-bow",
@@ -535,6 +536,129 @@
             ]
           }
         }
+      },
+      "cry": "assets/cries/2010.ogg"
+    },
+    {
+      "id": 2024,
+      "key": "minish-cap-zelda",
+      "name": "Princess Zelda (Minish Cap)",
+      "gen": 99,
+      "types": [
+        "fairy",
+        "psychic"
+      ],
+      "stats": {
+        "hp": 90,
+        "atk": 98,
+        "def": 94,
+        "spa": 128,
+        "spd": 118,
+        "spe": 112
+      },
+      "role": "Princess of Hyrule",
+      "passive": "sniper",
+      "rank": "legendary",
+      "color": "pink",
+      "start": true,
+      "unlock": true,
+      "cry": "assets/cries/2024.ogg",
+      "kit": [
+        "picori-blade",
+        "heros-bow",
+        "gust-jar",
+        "magical-boomerang",
+        "flame-lantern",
+        "cane-of-pacci",
+        "mole-mitts",
+        "remote-bombs",
+        "rocs-cape"
+      ],
+      "overrideLearnset": true,
+      "customUlt": {
+        "name": "Triforce of Wisdom — Sacred Light Seal",
+        "type": "fairy",
+        "cls": "special",
+        "desc": "Princess Zelda raises the Light Force and invokes the Triforce of Wisdom, unleashing a radiant golden-magenta light seal that obliterates surrounding foes.",
+        "tint": 16766720,
+        "radius": 16,
+        "dmgMul": 5.4,
+        "dur": 2,
+        "knock": 9,
+        "vfx": {
+          "ringStyle": "Runes",
+          "secondaryRingStyle": "Ripple",
+          "color2": "#f472b6",
+          "particleShape": "Star",
+          "particleCount": 34
+        }
+      },
+      "flavor": "Princess of Hyrule bearing the sacred Light Force. Shares the full Minish Cap Sword & Items arsenal with Young Link, fusing Picori Blade & Hero's Bow into Light Arrows!",
+      "sprite": "characters/minish-zelda-front.png",
+      "pmdSheet": "characters/minish-zelda-pmd.png",
+      "pmdShinySheet": "characters/minish-zelda-shiny.png",
+      "portrait": "characters/minish-zelda-portrait.png",
+      "icon": "characters/minish-zelda-icon.png",
+      "overrideSprite": true,
+      "spriteMeta": {
+        "w": 256,
+        "h": 1024,
+        "anims": {
+          "walk": {
+            "y": 0,
+            "fw": 32,
+            "fh": 32,
+            "n": 8,
+            "rows": 8,
+            "d": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4
+            ]
+          },
+          "idle": {
+            "y": 256,
+            "fw": 32,
+            "fh": 32,
+            "n": 2,
+            "rows": 8,
+            "d": [
+              18,
+              18
+            ]
+          },
+          "attack": {
+            "y": 512,
+            "fw": 32,
+            "fh": 32,
+            "n": 6,
+            "rows": 8,
+            "d": [
+              3,
+              3,
+              3,
+              4,
+              4,
+              4
+            ]
+          },
+          "hurt": {
+            "y": 768,
+            "fw": 32,
+            "fh": 32,
+            "n": 2,
+            "rows": 8,
+            "d": [
+              8,
+              8
+            ]
+          }
+        }
       }
     }
   ],
@@ -545,7 +669,8 @@
       "type": "profile-mutate",
       "mutation": {
         "unlockSpecies": [
-          2010
+          2010,
+          2024
         ],
         "unlockBiomes": {
           "hyrule_field": 3,
@@ -579,7 +704,7 @@
     {
       "id": "hyrule_field",
       "name": "Hyrule Field — Hyrule Castle",
-      "desc": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.",
+      "desc": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to the 3D Hyrule Castle.",
       "mode": "procedural",
       "region": "hyrule",
       "unlockedByDefault": true,
@@ -719,7 +844,11 @@
       "landmark": {
         "kind": "hyrule_castle",
         "name": "Hyrule Castle",
-        "color": 4359935
+        "x": 0,
+        "z": -52,
+        "radius": 13,
+        "color": 4359935,
+        "accent": 16766720
       },
       "sanctuary": {
         "name": "Minish Sanctuary Woods",
@@ -874,7 +1003,7 @@
     {
       "id": "dark_world",
       "name": "The Dark World — Pyramid of Power",
-      "desc": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.",
+      "desc": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental 3D Pyramid of Power.",
       "mode": "procedural",
       "region": "hyrule",
       "unlockedByDefault": true,
@@ -1014,7 +1143,11 @@
       "landmark": {
         "kind": "pyramid_of_power",
         "name": "Pyramid of Power",
-        "color": 16760576
+        "x": 0,
+        "z": -48,
+        "radius": 14,
+        "color": 13408586,
+        "accent": 11622143
       },
       "sanctuary": {
         "name": "Golden Land Rift",
@@ -1181,7 +1314,7 @@
         },
         {
           "find": "e.landmarks&&this.placeLandmarks(e,n);",
-          "replace": "e.landmarks&&this.placeLandmarks(e,n);if(this.biome?.id===`hyrule_field`||this.biome?.id===`dark_world`){const _isHy=this.biome.id===`hyrule_field`;const _place=(name,x,z,scale,sway,cols,shadow=8)=>{const y=this.height(x,z)-.08;n.push({kind:{name,scale,sway,collider:0,shadow},x,y,z,flip:!1,s:1});for(const[ox,oz,cr]of cols)this.addCollider({x:x+ox,z:z+oz,r:cr,h:y+12});};if(_isHy){_place(`castle`,0,-54,.108,0,[[-10.5,-3,3.8],[-5.5,-3.5,4.2],[0,-3.5,4.5],[5.5,-3.5,4.2],[10.5,-3,3.8],[-10.5,2.2,3.4],[10.5,2.2,3.4]],16);_place(`tower`,-11,-17,.082,0,[[0,0,2.6]],5);_place(`tower`,11,-17,.082,0,[[0,0,2.6]],5);for(const[px,pz]of[[-10,16],[10,16],[-10,36],[10,36]])_place(`pillar`,px,pz,.068,0,[[0,0,1.6]],3);for(const[sx,sz]of[[-44,-14],[46,-12],[-38,42],[42,38]])_place(`stump`,sx,sz,.076,0,[[0,0,2.3]],4);}else{_place(`pyramid`,0,-48,.112,0,[[-11.5,-2,4.2],[-6,-4,4.8],[0,-4.5,5.2],[6,-4,4.8],[11.5,-2,4.2],[-8.5,3,3.6],[8.5,3,3.6]],18);_place(`gargoyle`,-10,-16,.078,0,[[0,0,2.4]],5);_place(`gargoyle`,10,-16,.078,0,[[0,0,2.4]],5);for(const[bx,bz]of[[-11,14],[11,14],[-11,32],[11,32],[-16,-34],[16,-34]])_place(`brazier`,bx,bz,.066,0,[[0,0,1.4]],3);for(const[mx,mz]of[[-36,-44],[36,-44],[-44,-18],[44,-18],[-34,36],[34,36]])_place(`monolith`,mx,mz,.084,0,[[0,0,2.2]],5);}}"
+          "replace": "e.landmarks&&this.placeLandmarks(e,n);if(this.biome?.id===`hyrule_field`||this.biome?.id===`dark_world`){const _isHy=this.biome.id===`hyrule_field`;const _place=(name,x,z,scale,sway,cols,shadow=8)=>{const y=this.height(x,z)-.08;n.push({kind:{name,scale,sway,collider:0,shadow},x,y,z,flip:!1,s:1});for(const[ox,oz,cr]of cols)this.addCollider({x:x+ox,z:z+oz,r:cr,h:y+12});};if(_isHy){_place(`tower`,-11,-17,.082,0,[[0,0,2.6]],5);_place(`tower`,11,-17,.082,0,[[0,0,2.6]],5);for(const[px,pz]of[[-10,16],[10,16],[-10,36],[10,36]])_place(`pillar`,px,pz,.068,0,[[0,0,1.6]],3);for(const[sx,sz]of[[-44,-14],[46,-12],[-38,42],[42,38]])_place(`stump`,sx,sz,.076,0,[[0,0,2.3]],4);}else{_place(`gargoyle`,-10,-16,.078,0,[[0,0,2.4]],5);_place(`gargoyle`,10,-16,.078,0,[[0,0,2.4]],5);for(const[bx,bz]of[[-11,14],[11,14],[-11,32],[11,32],[-16,-34],[16,-34]])_place(`brazier`,bx,bz,.066,0,[[0,0,1.4]],3);for(const[mx,mz]of[[-36,-44],[36,-44],[-44,-18],[44,-18],[-34,36],[34,36]])_place(`monolith`,mx,mz,.084,0,[[0,0,2.2]],5);}}"
         },
         {
           "find": "hr.desert=_r(",
@@ -1194,6 +1327,14 @@
         {
           "find": "async localize(){",
           "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+        },
+        {
+          "find": "let lx=Math.cos(ang)*dist,lz=Math.sin(ang)*dist;if(!this.isFlatOpen(lx,lz)){",
+          "replace": "let lx=typeof lm.x===`number`?lm.x:Math.cos(ang)*dist,lz=typeof lm.z===`number`?lm.z:Math.sin(ang)*dist;if(typeof lm.x!==`number`&&!this.isFlatOpen(lx,lz)){"
+        },
+        {
+          "find": "default:add(new Me(5,5.8,1.2,8),mTrim,0,.6,0,2);for(let i=0;i<4;i++){let a=i*Math.PI/2;add(new Me(.55,.7,5.2,6),mMain,Math.cos(a)*3.8,3.2,Math.sin(a)*3.8,1.6)}add(new Ae(1.5,0),mAcc,0,5.2,0,1)}",
+          "replace": "case`hyrule_castle`:{const mWall=rockTex?new Ee({color:new ie(14472646),map:rockTex,gradientMap:Oa}):Aa(13815230,0);const mStone=rockTex?new Ee({color:new ie(11578016),map:rockTex,gradientMap:Oa}):Aa(11183260,0);const mRoof=Aa(2122668,0);const mRoofHi=Aa(2781660,0);const mGold=Aa(16766720,13605888);const mDoor=Aa(4927262,0);const mBanner=Aa(13245728,0);const mFlame=Aa(16758848,16748544);this.mats.push(mWall,mStone,mRoof,mRoofHi,mGold,mDoor,mBanner,mFlame);add(new Ke(26,1.8,18),mStone,0,.7,0,3);add(new Ke(22,7.2,14),mWall,0,4.8,0,2.8);for(let mx=-9.5;mx<=9.5;mx+=2.7){add(new Ke(1.3,1.4,1.1),mStone,mx,8.9,7.1,1);add(new Ke(1.3,1.4,1.1),mStone,mx,8.9,-7.1,1)}add(new Ke(7.6,8.2,4.4),mWall,0,5.2,7.6,2);add(new Ke(3.6,5.2,.8),mDoor,0,3.4,9.85,1);add(new Ke(4.8,1.1,1.2),mStone,0,6.4,9.85,1);add(new fe(1.15,1.3,3),mGold,-1.05,7.9,9.9,1);add(new fe(1.15,1.3,3),mGold,1.05,7.9,9.9,1);add(new fe(1.15,1.3,3),mGold,0,9.1,9.9,1);add(new Ke(.9,3.8,.2),mBanner,-2.8,5.6,9.9,1);add(new Ke(.9,3.8,.2),mBanner,2.8,5.6,9.9,1);add(new Me(.45,.55,2.2,8),mStone,-4.8,2.2,10.2,1);add(new Ae(.55,0),mFlame,-4.8,3.6,10.2,1);add(new Me(.45,.55,2.2,8),mStone,4.8,2.2,10.2,1);add(new Ae(.55,0),mFlame,4.8,3.6,10.2,1);for(const[tx,tz,th,tr]of[[-10.8,6.8,11.5,2.4],[10.8,6.8,11.5,2.4],[-10.8,-6.8,12.5,2.5],[10.8,-6.8,12.5,2.5],[-4.4,7.6,10.2,1.6],[4.4,7.6,10.2,1.6]]){add(new Me(tr*.92,tr,th,10),mWall,tx,1+th/2,tz,2);add(new Me(tr*1.12,tr*1.04,.8,10),mStone,tx,1+th+.3,tz,1.4);add(new fe(tr*1.32,tr*2.2,10),mRoof,tx,1+th+.7+tr*1.1,tz,1.4);add(new Ae(.45,0),mGold,tx,1+th+.7+tr*2.25,tz,1)}add(new Ke(9.5,11.5,9.5),mWall,0,10.5,-1,2.4);add(new Me(3.6,3.9,8.5,12),mWall,0,18.2,-1,2.2);add(new Me(4.2,3.9,1,12),mStone,0,22.5,-1,1.6);add(new fe(4.8,8.8,12),mRoofHi,0,27.2,-1,1.8);add(new Ae(.95,0),mGold,0,32.1,-1,1);for(const[cx,cz,cr]of[[-10.5,-5,4.2],[0,-5,5.5],[10.5,-5,4.2],[-10.5,4,4.2],[0,4,5.2],[10.5,4,4.2],[-5.5,8,3.2],[5.5,8,3.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+28});break}case`pyramid_of_power`:{const mSand=rockTex?new Ee({color:new ie(13408586),map:rockTex,gradientMap:Oa}):Aa(12751428,0);const mTrimD=pathTex?new Ee({color:new ie(9987138),map:pathTex,gradientMap:Oa}):Aa(9527100,0);const mDark=Aa(3614018,0);const mGlowP=Aa(11622143,9648895);const mGoldP=Aa(16760576,14656000);this.mats.push(mSand,mTrimD,mDark,mGlowP,mGoldP);for(let t=0;t<7;t++){const s=26-t*3.1,h=2.25;add(new Ke(s,h,s),t%2?mTrimD:mSand,0,h/2+t*h,0,Math.max(1.2,3.4-t*.3))}for(let st=0;st<9;st++){const sy=.85+st*1.65,sz=14.6-st*1.45;add(new Ke(5.6,1.7,2.4),mTrimD,0,sy,sz,1.5);add(new Ke(.9,2.1,2.2),mDark,-3.3,sy+.35,sz,1);add(new Ke(.9,2.1,2.2),mDark,3.3,sy+.35,sz,1)}add(new Ke(5.4,4.6,5.4),mDark,0,17.8,0,1.6);add(new Ke(2.6,3.2,.6),mGlowP,0,17.2,2.8,1);add(new fe(2.4,2.8,4),mGoldP,0,21.5,0,1);add(new Ae(1.3,0),mGlowP,0,23.6,0,1);for(const[ox,oz]of[[-14.2,14.2],[14.2,14.2],[-14.2,-14.2],[14.2,-14.2]]){add(new Ke(1.7,6.2,1.7),mDark,ox,3.1,oz,1.4);add(new fe(1.3,2.2,4),mDark,ox,7.3,oz,1);add(new Ae(.72,0),mGlowP,ox,8.9,oz,1);this.addCollider({x:lx+ox,z:lz+oz,r:1.5,h:ly+10})}for(const[cx,cz,cr]of[[-9.5,-9.5,5.2],[9.5,-9.5,5.2],[-9.5,9.5,5.2],[9.5,9.5,5.2],[0,-8,6.5],[0,0,7.5],[0,8,5.8],[-8,0,6],[8,0,6]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+24});break}default:break}"
         }
       ]
     },
@@ -1202,11 +1343,11 @@
       "patches": [
         {
           "find": "\"fu-missingno\":{parts:[],random:!0}}",
-          "replace": "\"fu-missingno\":{parts:[],random:!0},\"fu-2010\":{parts:[$(`arrows`,`barrage`,J(`Light Arrows`)),$(`radiance`,`nova`,J(`Sacred Triforce Burst`))],area:[`arrows`,`radiance`],dur:[`arrows`],count:[{part:`arrows`,per:2,max:8,base:5}],fixed:[J(`Pierces all foes and detonates in sacred golden light.`)]}}"
+          "replace": "\"fu-missingno\":{parts:[],random:!0},\"fu-2010\":{parts:[$(`arrows`,`barrage`,J(`Light Arrows`)),$(`radiance`,`nova`,J(`Sacred Triforce Burst`))],area:[`arrows`,`radiance`],dur:[`arrows`],count:[{part:`arrows`,per:2,max:8,base:5}],fixed:[J(`Pierces all foes and detonates in sacred golden light.`)]},\"fu-2024\":{parts:[$(`arrows`,`barrage`,J(`Light Arrows`)),$(`radiance`,`nova`,J(`Sacred Triforce Burst`))],area:[`arrows`,`radiance`],dur:[`arrows`],count:[{part:`arrows`,per:2,max:8,base:5}],fixed:[J(`Pierces all foes and detonates in sacred golden light.`)]}}"
         },
         {
           "find": ",...Ur],gi=new Map;",
-          "replace": ",...Ur,{repeats:!0,key:`fu-2010`,member:2010,moves:[`picori-blade`,`heros-bow`],kind:`signature`,name:J(`Light Arrows`),desc:J(`Fuses the sacred Picori Blade with the Hero\\'s Bow to unleash piercing golden Light Arrows that cleave through hordes and detonate in blinding Triforce radiance.`),type:`fairy`,type2:`steel`,cls:`physical`,cd:2.8,power:1.35,hits:5.2,range:19,status:`stun`,sfx(e){at(e,.24,440,.08),I(e,1046,.06,.11)},cast(e){let t=e.run,r=t.player.pos;Rt(e,r.x,r.y+1,r.z,.28,3.2,20);t.later(.26,()=>{let p=t.player.pos,ax=e.ax,az=e.az,ba=Math.atan2(az,ax),cnt=5+X(e,2,8),len=18*e.R,cy=p.y+1.1;t.vfx.flash(p.x+ax,cy,p.z+az,16773216,3.8,.22);t.shake(.14);b(t.audio,120,.18);G(t.audio,.08,.95);I(t.audio,1318,.06,.04);for(let k=0;k<cnt;k++){let sp=cnt>1?(k/(cnt-1)-.5)*.62:0,ang=ba+sp,dx=Math.cos(ang),dz=Math.sin(ang);let ex=p.x+dx*len,ez=p.z+dz*len;_(t,p.x+dx*.8,cy,p.z+dz*.8,ex,cy,ez,.85*e.R,16773216,16777180);Q(e,p.x+dx*.8,p.z+dz*.8,ex,ez,1.25*e.R,.58,{status:`stun`,statusChance:.35,knock:2});Ft(e,{x:p.x+dx*.9,y:cy,z:p.z+dz*.9,dx,dz,speed:30,life:.65*e.D,radius:.9*e.R,pierce:99,shape:P.Star,size:1.15,color:16773216,fx:be(`swift`),knock:2.5},.48)}t.later(.22,()=>{let bx=p.x+ax*(len*.72),bz=p.z+az*(len*.72),by=U(t,bx,bz);R(t,bx,by,bz,4.4*e.R,[16773216,16760576],2,.08,F.Runes);K(e,bx,bz,4.4*e.R,1.25,{status:`stun`,statusChance:.75,knock:4});I(t.audio,880,.05),I(t.audio,1318,.06,.05)})})}}],gi=new Map;"
+          "replace": ",...Ur,{repeats:!0,key:`fu-2010`,member:2010,moves:[`picori-blade`,`heros-bow`],kind:`signature`,name:J(`Light Arrows`),desc:J(`Fuses the sacred Picori Blade with the Hero\\'s Bow to unleash piercing golden Light Arrows that cleave through hordes and detonate in blinding Triforce radiance.`),type:`fairy`,type2:`steel`,cls:`physical`,cd:2.8,power:1.35,hits:5.2,range:19,status:`stun`,sfx(e){at(e,.24,440,.08),I(e,1046,.06,.11)},cast(e){let t=e.run,r=t.player.pos;Rt(e,r.x,r.y+1,r.z,.28,3.2,20);t.later(.26,()=>{let p=t.player.pos,ax=e.ax,az=e.az,ba=Math.atan2(az,ax),cnt=5+X(e,2,8),len=18*e.R,cy=p.y+1.1;t.vfx.flash(p.x+ax,cy,p.z+az,16773216,3.8,.22);t.shake(.14);b(t.audio,120,.18);G(t.audio,.08,.95);I(t.audio,1318,.06,.04);for(let k=0;k<cnt;k++){let sp=cnt>1?(k/(cnt-1)-.5)*.62:0,ang=ba+sp,dx=Math.cos(ang),dz=Math.sin(ang);let ex=p.x+dx*len,ez=p.z+dz*len;_(t,p.x+dx*.8,cy,p.z+dz*.8,ex,cy,ez,.85*e.R,16773216,16777180);Q(e,p.x+dx*.8,p.z+dz*.8,ex,ez,1.25*e.R,.58,{status:`stun`,statusChance:.35,knock:2});Ft(e,{x:p.x+dx*.9,y:cy,z:p.z+dz*.9,dx,dz,speed:30,life:.65*e.D,radius:.9*e.R,pierce:99,shape:P.Star,size:1.15,color:16773216,fx:be(`swift`),knock:2.5},.48)}t.later(.22,()=>{let bx=p.x+ax*(len*.72),bz=p.z+az*(len*.72),by=U(t,bx,bz);R(t,bx,by,bz,4.4*e.R,[16773216,16760576],2,.08,F.Runes);K(e,bx,bz,4.4*e.R,1.25,{status:`stun`,statusChance:.75,knock:4});I(t.audio,880,.05),I(t.audio,1318,.06,.05)})})}},{repeats:!0,key:`fu-2024`,member:2024,moves:[`picori-blade`,`heros-bow`],kind:`signature`,name:J(`Light Arrows`),desc:J(`Fuses the sacred Picori Blade with the Hero\\'s Bow to unleash piercing golden Light Arrows that cleave through hordes and detonate in blinding Triforce radiance.`),type:`fairy`,type2:`psychic`,cls:`special`,cd:2.8,power:1.35,hits:5.2,range:19,status:`stun`,sfx(e){at(e,.24,440,.08),I(e,1046,.06,.11)},cast(e){let t=e.run,r=t.player.pos;Rt(e,r.x,r.y+1,r.z,.28,3.2,20);t.later(.26,()=>{let p=t.player.pos,ax=e.ax,az=e.az,ba=Math.atan2(az,ax),cnt=5+X(e,2,8),len=18*e.R,cy=p.y+1.1;t.vfx.flash(p.x+ax,cy,p.z+az,16773216,3.8,.22);t.shake(.14);b(t.audio,120,.18);G(t.audio,.08,.95);I(t.audio,1318,.06,.04);for(let k=0;k<cnt;k++){let sp=cnt>1?(k/(cnt-1)-.5)*.62:0,ang=ba+sp,dx=Math.cos(ang),dz=Math.sin(ang);let ex=p.x+dx*len,ez=p.z+dz*len;_(t,p.x+dx*.8,cy,p.z+dz*.8,ex,cy,ez,.85*e.R,16773216,16777180);Q(e,p.x+dx*.8,p.z+dz*.8,ex,ez,1.25*e.R,.58,{status:`stun`,statusChance:.35,knock:2});Ft(e,{x:p.x+dx*.9,y:cy,z:p.z+dz*.9,dx,dz,speed:30,life:.65*e.D,radius:.9*e.R,pierce:99,shape:P.Star,size:1.15,color:16773216,fx:be(`swift`),knock:2.5},.48)}t.later(.22,()=>{let bx=p.x+ax*(len*.72),bz=p.z+az*(len*.72),by=U(t,bx,bz);R(t,bx,by,bz,4.4*e.R,[16773216,16760576],2,.08,F.Runes);K(e,bx,bz,4.4*e.R,1.25,{status:`stun`,statusChance:.75,knock:4});I(t.audio,880,.05),I(t.audio,1318,.06,.05)})})}}],gi=new Map;"
         }
       ]
     },
@@ -1264,6 +1405,36 @@
           "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr._stopped=!0;_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{e._stopped=!0;let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
         }
       ]
+    },
+    {
+      "matchFile": "^assets/cosmetics-.*\\.js$",
+      "patches": [
+        {
+          "find": "];for(let e of _n)q.set(e.member+`:`+e.n,e);",
+          "replace": ",{member:2010,n:1,style:`tidal`,name:e(`Zora Blue Mail`),pal:F(`#061a3a #1458b8 #46b8ff #e8fbff`),desc:e(`Sapphire-blue Zora armor tunic from Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:2,style:`ember`,name:e(`Goron Red Mail`),pal:F(`#240602 #a62010 #ff6a18 #ffe680`),desc:e(`Flame-forged crimson Goron tunic from Death Mountain.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:3,style:`galaxy`,name:e(`Four Sword Violet`),pal:F(`#14082a #5624a8 #b56eff #f4e8ff`),desc:e(`Violet Four Sword resonance hero tunic.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:4,style:`shadow`,name:e(`Dark Link`),pal:F(`#06050c #1e1b2c #4e486a #ff3358`),desc:e(`Shadowy Dark Link reflection with glowing crimson aura.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:1,style:`holo`,name:e(`Royal Sapphire Gown`),pal:F(`#081b44 #2866d0 #78c8ff #ffffff`),desc:e(`Ceremonial sapphire-and-silver royal gown of Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:2,style:`shadow`,name:e(`Sheikah Shadow`),pal:F(`#080b1c #243066 #5c76d4 #ff4a6e`),desc:e(`Stealthy Sheikah-inspired midnight indigo regalia.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:3,style:`gothic`,name:e(`Twilight Princess`),pal:F(`#120620 #4d1c7a #a662f0 #ffe896`),desc:e(`Regal Twilight amethyst & gilded sovereign gown.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:4,style:`aurora`,name:e(`Triforce of Wisdom`),pal:F(`#2a1c04 #b8860b #ffe04a #ffffff`),desc:e(`Radiant golden Light Force goddess aura.`),rule:{kind:`add`,goal:1,v:()=>0}}];for(let e of _n)q.set(e.member+`:`+e.n,e);"
+        },
+        {
+          "find": "function No(e,t,n,r){switch(n){",
+          "replace": "function No(e,t,n,r){if((t===2010||t===2024)&&(n===`shiny`||n===`classic`||n===`m1`||n===`m2`||n===`t1`||n===`t2`))return!0;switch(n){"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/buildshare-.*\\.js$",
+      "patches": [
+        {
+          "find": "function Ur(e,t,n,r){n=Hr(e,n);let i=new Set,o=[];t?.kit.forEach((e,t)=>{let n=a.movesByKey.get(e)?.id;n!=null&&b(n)&&(i.add(n),o.push({id:n,level:Math.max(1,ze[t])}))});",
+          "replace": "function Ur(e,t,n,r){n=Hr(e,n);let i=new Set,o=[];t?.kit.forEach((e,idx)=>{let n=a.movesByKey.get(e)?.id;n!=null&&b(n)&&(i.add(n),o.push({id:n,level:Math.max(1,ze[idx]??Math.min(8,idx+1))}))});if(e===2010||e===2024)return{kit:o,line:[],shared:[],any:null,roster:t};"
+        },
+        {
+          "find": "function bo(e){let t=e.player,n=e.banished,r=t.roster,i=t.$17m9an4(),o=[];r?.kit.forEach((e,r)=>{let s=a.movesByKey.get(e)?.id;s!=null&&!i.has(s)&&!n.has(`m`+s)&&t.level>=ze[r]&&o.push(s)});",
+          "replace": "function bo(e){let t=e.player,n=e.banished,r=t.roster,i=t.$17m9an4(),o=[];const _isZ=(t.speciesId===2010||t.speciesId===2024);r?.kit.forEach((e,idx)=>{let s=a.movesByKey.get(e)?.id;const reqLv=_isZ?(idx===0?0:idx):(ze[idx]??Math.min(8,idx+1));s!=null&&!i.has(s)&&!n.has(`m`+s)&&t.level>=reqLv&&o.push(s)});if(_isZ)return{kit:o,line:[],shared:new Map};"
+        },
+        {
+          "find": "return i<0?1:Math.max(1,ze[i])",
+          "replace": "return i<0?1:Math.max(1,ze[i]??Math.min(8,i+1))"
+        }
+      ]
     }
   ],
   "customMusic": [
@@ -1286,6 +1457,35 @@
       "loop": 2,
       "volume": 0.88,
       "weight": 1
+    }
+  ],
+  "customSfx": [
+    {
+      "id": "oot-link-atk1",
+      "name": "Young Link Shout 1 (OOT)",
+      "file": "audio/sfx/oot-link-atk1.ogg",
+      "volume": 0.42,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.32
+    },
+    {
+      "id": "oot-link-atk2",
+      "name": "Young Link Shout 2 (OOT)",
+      "file": "audio/sfx/oot-link-atk2.ogg",
+      "volume": 0.42,
+      "pitch": 1,
+      "pitchVar": 0.06,
+      "cooldown": 0.35
+    },
+    {
+      "id": "oot-link-spin",
+      "name": "Young Link Spin Cry (OOT)",
+      "file": "audio/sfx/oot-link-spin.ogg",
+      "volume": 0.62,
+      "pitch": 1,
+      "pitchVar": 0.02,
+      "cooldown": 0.5
     }
   ]
 }

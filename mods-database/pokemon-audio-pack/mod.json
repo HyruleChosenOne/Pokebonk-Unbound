@@ -1,7 +1,7 @@
 {
   "id": "pokemon-audio-pack",
   "name": "Gen 1&2 Soundtrack",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "scope": "client",
   "author": "HyruleChosenOne",
   "description": "Replaces menu, event, battle, and boss music with 53 looping FRLG, HGSS, and GB Sounds tracks.",
@@ -131,6 +131,15 @@
         {
           "find": "stopTrack(){this.trackWant=null;let e=this.track;if(this.track=null,!e||!this.ctx)return;let t=this.ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+.6),e.src.stop(t+.65),e.src.onended=()=>e.gain.disconnect()}",
           "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr._stopped=!0;_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{e._stopped=!0;let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/main-.*\\.js$",
+      "patches": [
+        {
+          "find": ";let o=this.mode===`mutation`?",
+          "replace": ";if(this.mode===`tower`||this.biome?.id===`graveyard`)this.music=`frlg-lavender-town`;let o=this.mode===`mutation`?"
         }
       ]
     }
