@@ -1212,5 +1212,421 @@
       "Ocarina of Wind": "風之陶笛",
       "+16% Area & +10% Move Speed — summons Zeffa's tailwind.": "範圍+16%，移速+10% — 喚起海拉魯順風。"
     }
+  },
+  "moves": {
+    "light-force-orb": {
+      "en": {
+        "name": "Light Force Orb",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "es": {
+        "name": "Orbe Fuerza de Luz",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "pt": {
+        "name": "Orbe Força da Luz",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "fr": {
+        "name": "Orbe Force de Lumière",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "de": {
+        "name": "Lichtkraft-Orb",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "it": {
+        "name": "Sfera Forza Luce",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "ja": {
+        "name": "フォースのひかり",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "ko": {
+        "name": "포스의 빛",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "ru": {
+        "name": "Сфера Силы Света",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "zh": {
+        "name": "光之力宝珠",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      },
+      "zht": {
+        "name": "光之力寶珠",
+        "flavor": "Channels the Minish Cap Light Force into rapid radiant orbs that pierce enemies. Fuses with Sacred Light Bow into Light Arrows!"
+      }
+    },
+    "sacred-bow": {
+      "en": {
+        "name": "Sacred Light Bow",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "es": {
+        "name": "Arco de Luz Sagrada",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "pt": {
+        "name": "Arco da Luz Sagrada",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "fr": {
+        "name": "Arc de Lumière Sacrée",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "de": {
+        "name": "Heiliger Lichtbogen",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "it": {
+        "name": "Arco di Luce Sacra",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "ja": {
+        "name": "せいなるひかりのゆみ",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "ko": {
+        "name": "신성한 빛의 활",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "ru": {
+        "name": "Священный Лук Света",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "zh": {
+        "name": "圣光之弓",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      },
+      "zht": {
+        "name": "聖光之弓",
+        "flavor": "Draws Zelda's radiant royal bow to fire golden shafts of sacred light. Fuses with Light Force Orb into Light Arrows!"
+      }
+    },
+    "dins-fire": {
+      "en": {
+        "name": "Din's Fire",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "es": {
+        "name": "Fuego de Din",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "pt": {
+        "name": "Fogo de Din",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "fr": {
+        "name": "Feu de Din",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "de": {
+        "name": "Dins Feuerinferno",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "it": {
+        "name": "Fuoco di Din",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "ja": {
+        "name": "ディンのほのお",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "ko": {
+        "name": "딘의 불꽃",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "ru": {
+        "name": "Огонь Дин",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "zh": {
+        "name": "迪恩之火",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      },
+      "zht": {
+        "name": "迪恩之火",
+        "flavor": "Invokes Goddess Din's crimson flame in an expanding solar shockwave that sears and ignites surrounding foes."
+      }
+    },
+    "nayrus-love": {
+      "en": {
+        "name": "Nayru's Love",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "es": {
+        "name": "Amor de Nayru",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "pt": {
+        "name": "Amor de Nayru",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "fr": {
+        "name": "Amour de Nayru",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "de": {
+        "name": "Nayrus Umarmung",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "it": {
+        "name": "Amore di Nayru",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "ja": {
+        "name": "ネールのあい",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "ko": {
+        "name": "넬의 사랑",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "ru": {
+        "name": "Любовь Найру",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "zh": {
+        "name": "娜茹之爱",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      },
+      "zht": {
+        "name": "娜茹之愛",
+        "flavor": "Surrounds Zelda in spinning crystalline Triforce prisms of Wisdom that shred and repel approaching hordes."
+      }
+    },
+    "farores-wind": {
+      "en": {
+        "name": "Farore's Wind",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "es": {
+        "name": "Viento de Farore",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "pt": {
+        "name": "Vento de Farore",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "fr": {
+        "name": "Vent de Farore",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "de": {
+        "name": "Farores Donnersturm",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "it": {
+        "name": "Vento di Farore",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "ja": {
+        "name": "フロルのかぜ",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "ko": {
+        "name": "파로레의 바람",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "ru": {
+        "name": "Ветер Фароре",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "zh": {
+        "name": "法罗尔之风",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      },
+      "zht": {
+        "name": "法羅爾之風",
+        "flavor": "Summons Goddess Farore's emerald tempests in twin sweeping wind waves that launch enemies backward."
+      }
+    },
+    "phantom-slash": {
+      "en": {
+        "name": "Phantom Knight",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "es": {
+        "name": "Caballero Espectral",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "pt": {
+        "name": "Cavaleiro Espectral",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "fr": {
+        "name": "Chevalier Spectral",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "de": {
+        "name": "Phantomritter",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "it": {
+        "name": "Cavaliere Spettrale",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "ja": {
+        "name": "ファントムぎり",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "ko": {
+        "name": "팬텀 나이트",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "ru": {
+        "name": "Рыцарь-Фантом",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "zh": {
+        "name": "幻影骑士斩",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      },
+      "zht": {
+        "name": "幻影騎士斬",
+        "flavor": "Calls forth an armored Hyrule Phantom Knight to unleash mighty twin greatsword arcs across the battlefield."
+      }
+    },
+    "triforce-beam": {
+      "en": {
+        "name": "Triforce Ray",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "es": {
+        "name": "Rayo de la Trifuerza",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "pt": {
+        "name": "Raio da Triforce",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "fr": {
+        "name": "Rayon de la Triforce",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "de": {
+        "name": "Triforce-Strahl",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "it": {
+        "name": "Raggio Triforza",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "ja": {
+        "name": "トライフォースこうせん",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "ko": {
+        "name": "트라이포스 광선",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "ru": {
+        "name": "Луч Трифорса",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "zh": {
+        "name": "三角力量射线",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      },
+      "zht": {
+        "name": "三角力量射線",
+        "flavor": "Focuses the Triforce of Wisdom into a searing beam of golden-rose radiance that pierces straight through enemy ranks."
+      }
+    },
+    "lullaby-chime": {
+      "en": {
+        "name": "Zelda's Lullaby",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "es": {
+        "name": "Nana de Zelda",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "pt": {
+        "name": "Canção de Zelda",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "fr": {
+        "name": "Berceuse de Zelda",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "de": {
+        "name": "Zeldas Wiegenlied",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "it": {
+        "name": "Ninna Nanna di Zelda",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "ja": {
+        "name": "ゼルダのこもりうた",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "ko": {
+        "name": "젤다의 자장가",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "ru": {
+        "name": "Колыбельная Зельды",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "zh": {
+        "name": "塞尔达摇篮曲",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      },
+      "zht": {
+        "name": "薩爾達搖籃曲",
+        "flavor": "Resonates the royal melody of Hyrule in expanding ethereal rings that stun and scatter nearby enemies."
+      }
+    },
+    "goddess-judgment": {
+      "en": {
+        "name": "Goddess's Judgment",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "es": {
+        "name": "Juicio de las Diosas",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "pt": {
+        "name": "Julgamento das Deusas",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "fr": {
+        "name": "Jugement des Déesses",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "de": {
+        "name": "Urteil der Göttinnen",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "it": {
+        "name": "Giudizio delle Dee",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "ja": {
+        "name": "めがみのさばき",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "ko": {
+        "name": "여신의 심판",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "ru": {
+        "name": "Суд Богинь",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "zh": {
+        "name": "女神的裁决",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      },
+      "zht": {
+        "name": "女神的裁決",
+        "flavor": "Calls down blazing pillars of sacred Golden Goddess light from the heavens to obliterate enemy clusters."
+      }
+    }
   }
 }

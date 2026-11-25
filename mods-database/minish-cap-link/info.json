@@ -1,17 +1,17 @@
 {
   "id": "minish-cap-link",
-  "name": "The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)",
-  "version": "3.0.0",
+  "name": "The Minish Cap Showcase Pack (Test Mod — Link & Zelda)",
+  "version": "3.0.1",
   "author": "HyruleChosenOne",
   "category": "Characters",
   "scope": "gameplay",
-  "tagline": "Playable Young Link (OOT cries) & Princess Zelda, 6 Wardrobe skins each, shared exclusive Minish Cap moves + Light Arrows Fusion, and 3D Hyrule Castle & Pyramid of Power maps.",
-  "description": "Complete Legend of Zelda: The Minish Cap expansion featuring both Young Link (with iconic Ocarina of Time battle cries) and Princess Zelda (both unlocked by default) — each with full 8-direction animated sprites, functional Dual Shinies + 4 Wardrobe variant skins (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Royal Sapphire, Sheikah Shadow, Twilight Princess, Triforce of Wisdom), 9 exclusive shared Minish Cap Sword & Item attacks (zero vanilla Pokémon moves), Light Arrows Primary Fusion, custom Ultimates, and 2 unlocked stages with full 3D Hyrule Castle and 3D Pyramid of Power landmarks + looping ALttP SNES soundtracks.",
+  "tagline": "Test & showcase mod demonstrating PokéBonk Unbound modding capabilities: custom fighters, movesets, VFX, SFX/cries, Wardrobe skins, and 3D stages.",
+  "description": "Note: This is a test/showcase mod built to demonstrate PokéBonk Unbound's modding capabilities rather than a polished standalone release. It showcases custom playable characters (Young Link with OOT cries & Princess Zelda with Wind Waker HD voice SFX, both unlocked by default), 6 Wardrobe skins each, dedicated exclusive movesets for both characters (9 Minish Cap sword/item moves for Link + 9 custom Triforce & Goddess magic moves for Zelda, zero vanilla PokéBonk moves), Light Arrows Signature Fusion, custom Ultimates, and 2 unlocked 3D stages (Hyrule Castle & Pyramid of Power) with looping ALttP SNES OSTs.",
   "highlights": [
-    "Playable Young Link (#2010, authentic OOT 3D battle cries) & Princess Zelda (#2024, Sacred Triforce Harp cry) — both unlocked by default",
-    "6 functional Wardrobe skins each: Classic Shiny, Hue Shiny, plus 4 iconic unlocked variants (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Sapphire, Sheikah Shadow, Twilight, Triforce of Wisdom)",
-    "Exclusive shared Hyrule family moveset (9 Minish Cap Sword & Item attacks + Light Arrows Signature Fusion) — zero vanilla PokéBonk attacks",
-    "2 unlocked Zelda stages with true 3D Hyrule Castle & 3D Pyramid of Power landmarks, solid collision, and looping ALttP Overworld & Dark World SNES OSTs"
+    "Test/showcase mod demonstrating custom characters, movesets, VFX, SFX, Wardrobe skins, fusions, and 3D landmarks",
+    "Playable Young Link (#2010, OOT 3D cries) & Princess Zelda (#2024, Wind Waker HD voice SFX) — both unlocked by default",
+    "Separate exclusive movesets: 9 Minish Cap Sword/Item moves for Link + 9 Goddess & Triforce Magic moves for Zelda (zero vanilla moves)",
+    "6 Wardrobe skins each + Light Arrows Fusion + 3D Hyrule Castle & Pyramid of Power stages with looping ALttP OSTs"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"

@@ -22,12 +22,12 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.1` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 24.39 MB | `v1.3.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.1` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 24.55 MB | `v1.3.1` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 65.64 MB | `v1.2.2` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
 | `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.2` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
 | `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.3` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
 | `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 9.85 MB | `v2.0.1` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
-| `minish-cap-link` | [The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.51 MB | `v3.0.0` | Playable Young Link (OOT cries) & Princess Zelda, 6 Wardrobe skins each, shared exclusive Minish Cap moves + Light Arrows Fusion, and 3D Hyrule Castle & Pyramid of Power maps. |
+| `minish-cap-link` | [The Minish Cap Showcase Pack (Test Mod — Link & Zelda)](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.55 MB | `v3.0.1` | Test & showcase mod demonstrating PokéBonk Unbound modding capabilities: custom fighters, movesets, VFX, SFX/cries, Wardrobe skins, and 3D stages. |
 
 ---
 
@@ -66,14 +66,14 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `gen3-9-regions-levels`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
-- **Size**: 24.39 MB (102 files)
-- **Version**: `v1.3.0`
+- **Size**: 24.55 MB (102 files)
+- **Version**: `v1.3.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
 - **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
 - **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`, `music`, `i18n`, `custom-terrain`
 
-Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures, real in-game 3D level-select screenshots, and full 11-language global translation.
+Adds 14 custom stages across Hoenn to Paldea with distinct 3D topographies, landmarks, harmonized textures, and region OSTs.
 
 **Highlights:**
 - Hoenn: Petalburg Canopy & Mt. Chimney Caldera
@@ -93,8 +93,8 @@ Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinn
 - **ID**: `national-dex-gen3-9`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters (**Featured**)
-- **Size**: 54.54 MB (3141 files)
-- **Version**: `v1.2.1`
+- **Size**: 65.64 MB (3175 files)
+- **Version**: `v1.2.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/national-dex-gen3-9/info.json`](mods-database/national-dex-gen3-9/info.json)
@@ -184,27 +184,27 @@ Polished 18-fighter Non-Dexed Pokémon Pack (#2001-#2023) featuring 13 iconic No
 
 
 <a id="minish-cap-link"></a>
-### The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)
+### The Minish Cap Showcase Pack (Test Mod — Link & Zelda)
 
-![The Minish Cap Pack (Link & Zelda + 3D Hyrule & Dark World)](mods-database/minish-cap-link/preview.png)
+![The Minish Cap Showcase Pack (Test Mod — Link & Zelda)](mods-database/minish-cap-link/preview.png)
 
 - **ID**: `minish-cap-link`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
-- **Size**: 5.51 MB (46 files)
-- **Version**: `v3.0.0`
+- **Size**: 5.55 MB (55 files)
+- **Version**: `v3.0.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
 - **Tags**: `character`, `zelda`, `minish-cap`, `hyrule`, `dark-world`, `levels`, `custom-attacks`, `custom-vfx`, `custom-items`, `fusion`, `i18n`, `music`
 
-Complete Legend of Zelda: The Minish Cap expansion featuring both Young Link (with iconic Ocarina of Time battle cries) and Princess Zelda (both unlocked by default) — each with full 8-direction animated sprites, functional Dual Shinies + 4 Wardrobe variant skins (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Royal Sapphire, Sheikah Shadow, Twilight Princess, Triforce of Wisdom), 9 exclusive shared Minish Cap Sword & Item attacks (zero vanilla Pokémon moves), Light Arrows Primary Fusion, custom Ultimates, and 2 unlocked stages with full 3D Hyrule Castle and 3D Pyramid of Power landmarks + looping ALttP SNES soundtracks.
+Note: This is a test/showcase mod built to demonstrate PokéBonk Unbound's modding capabilities rather than a polished standalone release. It showcases custom playable characters (Young Link with OOT cries & Princess Zelda with Wind Waker HD voice SFX, both unlocked by default), 6 Wardrobe skins each, dedicated exclusive movesets for both characters (9 Minish Cap sword/item moves for Link + 9 custom Triforce & Goddess magic moves for Zelda, zero vanilla PokéBonk moves), Light Arrows Signature Fusion, custom Ultimates, and 2 unlocked 3D stages (Hyrule Castle & Pyramid of Power) with looping ALttP SNES OSTs.
 
 **Highlights:**
-- Playable Young Link (#2010, authentic OOT 3D battle cries) & Princess Zelda (#2024, Sacred Triforce Harp cry) — both unlocked by default
-- 6 functional Wardrobe skins each: Classic Shiny, Hue Shiny, plus 4 iconic unlocked variants (Zora Blue, Goron Red, Four Sword Violet, Dark Link; Sapphire, Sheikah Shadow, Twilight, Triforce of Wisdom)
-- Exclusive shared Hyrule family moveset (9 Minish Cap Sword & Item attacks + Light Arrows Signature Fusion) — zero vanilla PokéBonk attacks
-- 2 unlocked Zelda stages with true 3D Hyrule Castle & 3D Pyramid of Power landmarks, solid collision, and looping ALttP Overworld & Dark World SNES OSTs
+- Test/showcase mod demonstrating custom characters, movesets, VFX, SFX, Wardrobe skins, fusions, and 3D landmarks
+- Playable Young Link (#2010, OOT 3D cries) & Princess Zelda (#2024, Wind Waker HD voice SFX) — both unlocked by default
+- Separate exclusive movesets: 9 Minish Cap Sword/Item moves for Link + 9 Goddess & Triforce Magic moves for Zelda (zero vanilla moves)
+- 6 Wardrobe skins each + Light Arrows Fusion + 3D Hyrule Castle & Pyramid of Power stages with looping ALttP OSTs
 
 ---
 
