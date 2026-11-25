@@ -1,7 +1,7 @@
 # Experimental: Apple Support (macOS & iOS Sideload)
 
 > **Experimental & Untested Notice**
-> The Apple builds are **experimental** because the developer does not currently own macOS or iOS hardware to test them firsthand. Feedback, crash logs, and compatibility reports from macOS and iOS testers are warmly welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
+> The Apple builds are **experimental** because the developer does not currently own macOS or iOS hardware to test them firsthand. Feedback, crash logs (`Documents/unbound-data/ios-node.log` on iOS), and compatibility reports from macOS and iOS testers are warmly welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
 
 All experimental Apple packages live under the dedicated **[Experimental: Apple (macOS & iOS Sideload)](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** pre-release tab so stable Windows, Linux / SteamOS, and Android auto-updaters are never affected.
 
@@ -22,45 +22,54 @@ Download the **Complete Edition** (recommended — includes the `v0.10.31` offli
 Because the experimental macOS builds are **unsigned / un-notarized**, macOS Gatekeeper may display *"PokeBonk Unbound is damaged and can't be opened"* or *"cannot be verified"* until quarantine is cleared and a local ad-hoc signature is applied:
 
 1. Extract the `.zip` archive.
-2. **Option A (1-Click Helper)**: Right-click **`First-Time-Setup-macOS.command`** -> **Open**. It clears macOS quarantine, runs local ad-hoc signing (`codesign --force --deep --sign -`), and launches the app automatically.
+2. **Option A (1-Click Helper — Recommended)**: Right-click **`First-Time-Setup-macOS.command`** -> **Open**. It clears macOS quarantine, applies an inside-out local ad-hoc code signature to nested frameworks, helpers, and the `.app`, and launches PokéBonk Unbound automatically.
 3. **Option B (Terminal)**:
    ```bash
    xattr -cr "PokeBonk Unbound.app"
-   codesign --force --deep --sign - "PokeBonk Unbound.app"
-   open "PokeBonk Unbound.app"
+   ./First-Time-Setup-macOS.command
    ```
 4. Once launched successfully, you can drag `PokeBonk Unbound.app` into `/Applications`.
 
 ### macOS Shortcuts & Data Storage
 
 - `Cmd+,` — Open **Unbound Settings**
-- `F1` — Show / hide the in-window toolbar
 - `Ctrl+Cmd+F` — Toggle fullscreen
 - `Cmd+R` — Reload game
+- `Cmd+Q` — Quit (use the native macOS top menu bar to switch Online / Offline Mode)
 - **Saves, Profiles, Mods & Offline Build Data**: `~/Library/Application Support/pokebonk-unbound/`
-- **Optional Side-by-Side Mods**: Placing a `mods/` folder right beside `PokeBonk Unbound.app` is also detected automatically.
+- **Optional Side-by-Side Mods**: Placing a `mods/` folder right beside `PokeBonk Unbound.app` is also detected automatically (after clearing quarantine / moving out of Gatekeeper App Translocation).
 
 ---
 
-## iOS / iPadOS (`.ipa` Sideloading — Experimental)
+## iOS / iPadOS (Unsigned `.ipa` Sideloading — Experimental)
 
-### Current Status
+### Downloads (v1.0.5 — Unsigned `arm64` `.ipa`)
 
-The native iOS client (`UIKit` + `WKWebView` + embedded `NodeMobile.xcframework` running the same local engine and **Unbound Settings** UI as Android, with isolated Online/Offline sessions, auto-hiding floating **Unbound** button, native `.json` save export/import, and `.zip` mod import via the iOS Files picker) is prepared and staged in the project, but compiling the final ARM64 `.ipa` Mach-O binary requires **macOS + Xcode**.
+Download from the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab:
 
-Because the developer does not have a Mac available to compile and test `.ipa` binaries directly yet:
-- Once compiled on macOS, unsigned sideloadable `.ipa` files (`PokeBonk-Unbound-Complete-1.0.5.ipa` & `PokeBonk-Unbound-Portable-1.0.5.ipa`) will be posted directly under the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab.
+- **Complete Edition (Recommended — includes `v0.10.31` offline build)**: **[PokeBonk-Unbound-Complete-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Complete-1.0.5.ipa)**
+- **Portable Edition ("Nothing Included" — downloads offline build on demand)**: **[PokeBonk-Unbound-Portable-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Portable-1.0.5.ipa)**
 
-### How to Sideload the `.ipa` (Once Published)
+### Automated CI Builds
 
-The iOS `.ipa` is distributed unsigned for sideloading on iOS 15.0+ / iPadOS 15.0+ (no App Store distribution):
+Because PokéBonk Unbound is a fangame distributed **unsigned** for sideloading (no App Store distribution) and the developer does not have local Apple hardware, compilation and packaging are automated via GitHub Actions `macos-latest` runners ([build-ipa.yml](../.github/workflows/build-ipa.yml)):
+
+1. Verifies the existing **macOS** port packs cleanly, passes inside-out `codesign --verify --deep --strict`, and loads `app.asar` on macOS.
+2. Runs an **iOS Simulator** compile/link smoke check against `NodeMobile.xcframework`.
+3. Compiles the **unsigned `arm64` iOS `.app`** with `xcodebuild` (`CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO`), validates `Info.plist` (`plutil -lint`) and `arm64` Mach-O slices (`lipo -info`), and packages `PokeBonk-Unbound-Complete-<ver>.ipa` & `PokeBonk-Unbound-Portable-<ver>.ipa` as downloadable workflow artifacts (and optionally uploads them to the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release).
+
+### How to Sideload the Unsigned `.ipa`
+
+Targets **iOS 15.0+ / iPadOS 15.0+** (Portrait & Landscape supported on both iPhone and iPad):
 
 - **AltStore / SideStore**: Open the `.ipa` in AltStore or SideStore on your iPhone/iPad (refresh every 7 days on free Apple IDs; SideStore supports on-device Wi-Fi refresh).
 - **Sideloadly (Windows / macOS)**: Connect your iPhone/iPad via USB, drag the `.ipa` into Sideloadly, enter your Apple ID, and click **Start**.
-- **TrollStore (Supported iOS Versions)**: Share the `.ipa` directly to TrollStore for permanent installation without 7-day refreshes.
+- **TrollStore (Supported iOS 15.0–17.0 Devices)**: Share the `.ipa` directly to TrollStore for permanent installation without 7-day refreshes.
 
-### iOS Features & Data Storage
+### iOS Features, Data Storage & Known Platform Caveats
 
-- **Isolated Online & Offline Modes**: Online Mode runs `https://pokebonk.com/` cleanly in a vanilla `WKWebView`; Offline Mode serves PokéBonk from the embedded local server on `127.0.0.1` with full Mod Browser, Curated Modpacks, P2P Co-op, and Offline Modding Engine support.
-- **Files App Access**: `UIFileSharingEnabled` is enabled so your `unbound-data/` folder (saves, profiles, mods) is accessible right inside the iOS **Files** app under **On My iPhone / iPad -> PokéBonk Unbound**.
-- **Import Mod (`.zip`) & Save Export/Import**: Uses the native iOS Document Picker so you can import `.zip` mods and `.json` saves directly from iCloud Drive or On My iPhone.
+- **Isolated Online & Offline Modes**: Online Mode runs `https://pokebonk.com/` cleanly in a vanilla `WKWebView` (using dedicated isolated persistent `WKWebsiteDataStore` containers on iOS 17+); Offline Mode serves PokéBonk from the embedded local Node.js 18 server (`--jitless`) on `127.0.0.1`.
+- **Files App Access & Diagnostics**: `UIFileSharingEnabled` is enabled so your `unbound-data/` folder (saves, profiles, mods, and `ios-node.log` runtime diagnostics) is accessible right inside the iOS **Files** app under **On My iPhone / iPad -> PokéBonk Unbound**.
+- **Import Mod (`.zip`) & Save Export/Import**: Uses the native iOS Document Picker (with streaming `.zip` upload to stay within iOS Jetsam RAM limits).
+- **Known iOS `< 18.4` `.ogg` Audio Limitation**: Base PokéBonk background music (`.mp3`) works on all supported iOS versions, while Pokémon cries and `.ogg` audio mods rely on WebKit's native Ogg Vorbis/Opus decoder added in **iOS 18.4** (on iOS 15.0–18.3, `.ogg` cries and `.ogg` mod tracks will be silent).
+- **Known P2P Co-op LAN Discovery Limitation**: Direct `IP:Port` TCP/WebSocket Co-op works over LAN/VPN/port-forwarding, but automatic UDP broadcast "Local Lobbies" discovery (`255.255.255.255:41284`) requires Apple's restricted multicast entitlement unavailable to free sideloading profiles — enter the Host's `IP:Port` directly to join on iOS.

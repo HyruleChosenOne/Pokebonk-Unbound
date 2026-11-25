@@ -30,7 +30,7 @@ All builds ship clean with **no pre-installed mods** — install official mods, 
 | --- | --- | --- |
 | **macOS — Apple Silicon (`M1–M4`)** | **[Download PokeBonk-Unbound-Complete-1.0.5-mac-arm64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Complete-1.0.5-mac-arm64.zip)** | Unsigned `.app` bundle + `First-Time-Setup-macOS.command` helper. |
 | **macOS — Intel (`x64`)** | **[Download PokeBonk-Unbound-Complete-1.0.5-mac-x64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Complete-1.0.5-mac-x64.zip)** | Unsigned `.app` bundle for Intel Macs + `First-Time-Setup-macOS.command`. |
-| **iOS / iPadOS (`.ipa` Sideload)** | **[View Experimental: Apple Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** | Sideloadable via AltStore / SideStore / Sideloadly / TrollStore — requires macOS/Xcode compilation (see [Apple guide](docs/APPLE_EXPERIMENTAL.md)). |
+| **iOS / iPadOS (`.ipa` Sideload)** | **[Download PokeBonk-Unbound-Complete-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Complete-1.0.5.ipa)** | Unsigned `arm64` `.ipa` (iOS 15.0+) for AltStore / SideStore / Sideloadly / TrollStore (see [Apple guide](docs/APPLE_EXPERIMENTAL.md)). |
 
 ---
 
@@ -190,6 +190,7 @@ Most players should download the **[Complete Edition](#download-v105--complete-e
 | **Android (7.0–17+ Universal)** | [PokeBonk-Unbound-Portable-1.0.5.apk](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.0.5/PokeBonk-Unbound-Portable-1.0.5.apk) | Lightweight universal 16 KB-aligned APK; downloads Offline build on demand. |
 | **macOS — Apple Silicon (Experimental)** | [PokeBonk-Unbound-Portable-1.0.5-mac-arm64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Portable-1.0.5-mac-arm64.zip) | Experimental unsigned Apple Silicon shell; downloads Offline build on demand. |
 | **macOS — Intel (Experimental)** | [PokeBonk-Unbound-Portable-1.0.5-mac-x64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Portable-1.0.5-mac-x64.zip) | Experimental unsigned Intel Mac shell; downloads Offline build on demand. |
+| **iOS / iPadOS (Experimental)** | [PokeBonk-Unbound-Portable-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Portable-1.0.5.ipa) | Experimental unsigned `arm64` `.ipa` shell (iOS 15.0+); downloads Offline build on demand. |
 
 ---
 
