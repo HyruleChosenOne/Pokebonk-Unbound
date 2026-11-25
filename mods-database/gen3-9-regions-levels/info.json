@@ -1,13 +1,13 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "HyruleChosenOne",
   "category": "Levels",
   "scope": "gameplay",
   "featured": true,
-  "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks.",
-  "description": "Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features its own terrain relief, color palette, weather pool, sanctuary arena, regional encounters, and a dedicated 3D centerpiece landmark. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).",
+  "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks.",
+  "description": "Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features custom PokéBonk-style pixel-art terrain, cliff, path, and prop textures, bespoke Map Picker artwork, accurate biome lighting and weather pools, sanctuary arenas, regional encounters, and textured 3D centerpiece landmarks with authentic props. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).",
   "highlights": [
     "Hoenn: Petalburg Canopy & Mt. Chimney Caldera",
     "Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau",

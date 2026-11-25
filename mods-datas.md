@@ -10,53 +10,26 @@ Each mod directory inside `mods-database/<mod-id>/` includes a `mod.json` manife
 
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 1.03 MB | `v1.0.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea — 2 unique maps per region with 3D landmarks. |
-| `hyrules-mods` | [Hyrule's Mods (QoL & Cheats Collection)](#hyrules-mods) | Client (Optional) | **Featured** | Quality of Life | 1.08 MB | `v1.0.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 1.08 MB | `v1.0.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
-| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 5.66 MB | `v1.1.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.12 MB | `v1.1.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds) plus 6 iconic SFX added alongside every vanilla song. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 1.18 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
+| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.0.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 2.22 MB | `v1.1.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 1.43 MB | `v1.0.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, 72 custom attacks, and 24 signature Ultimates. |
+| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 5.91 MB | `v1.3.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.17 MB | `v1.1.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds) plus 6 iconic SFX added alongside every vanilla song. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 1.55 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
 
 ---
 
 ## Mod Details
 
-<a id="gen3-9-regions-levels"></a>
-### Gen 3-9 Regions & Levels Pack (14 Unique Maps) *(Featured)*
-
-![Gen 3-9 Regions & Levels Pack (14 Unique Maps)](mods-database/gen3-9-regions-levels/preview.png)
-
-- **ID**: `gen3-9-regions-levels`
-- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
-- **Category**: Levels (**Featured**)
-- **Size**: 1.03 MB (3 files)
-- **Version**: `v1.0.0`
-- **Author**: HyruleChosenOne
-- **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
-- **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
-- **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`
-
-Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features its own terrain relief, color palette, weather pool, sanctuary arena, regional encounters, and a dedicated 3D centerpiece landmark. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).
-
-**Highlights:**
-- Hoenn: Petalburg Canopy & Mt. Chimney Caldera
-- Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau
-- Unova: Desert Resort Relic Castle & Dragonspiral Tower
-- Kalos: Azure Bay Sea Arch & Reflection Cave Prisms
-- Alola: Melemele Tapu Ruins & Wela Volcano Fire Altar
-- Galar: Galar Wild Area Dynamax Den & Crown Tundra Temple
-- Paldea: Asado Desert Titan Mesa & Area Zero Terastal Spire
-
-
 <a id="hyrules-mods"></a>
-### Hyrule's Mods (QoL & Cheats Collection) *(Featured)*
+### Hyrule's Collection (QoL & Cheats) *(Essential · Pinned)*
 
-![Hyrule's Mods (QoL & Cheats Collection)](mods-database/hyrules-mods/preview.png)
+![Hyrule's Collection (QoL & Cheats)](mods-database/hyrules-mods/preview.png)
 
 - **ID**: `hyrules-mods`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Quality of Life (**Featured**)
-- **Size**: 1.08 MB (3 files)
+- **Size**: 1.23 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -72,6 +45,33 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, and Trainer Save Utilities)
 
 
+<a id="gen3-9-regions-levels"></a>
+### Gen 3-9 Regions & Levels Pack (14 Unique Maps) *(Featured)*
+
+![Gen 3-9 Regions & Levels Pack (14 Unique Maps)](mods-database/gen3-9-regions-levels/preview.png)
+
+- **ID**: `gen3-9-regions-levels`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
+- **Category**: Levels (**Featured**)
+- **Size**: 2.22 MB (87 files)
+- **Version**: `v1.1.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
+- **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
+- **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`
+
+Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features custom PokéBonk-style pixel-art terrain, cliff, path, and prop textures, bespoke Map Picker artwork, accurate biome lighting and weather pools, sanctuary arenas, regional encounters, and textured 3D centerpiece landmarks with authentic props. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).
+
+**Highlights:**
+- Hoenn: Petalburg Canopy & Mt. Chimney Caldera
+- Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau
+- Unova: Desert Resort Relic Castle & Dragonspiral Tower
+- Kalos: Azure Bay Sea Arch & Reflection Cave Prisms
+- Alola: Melemele Tapu Ruins & Wela Volcano Fire Altar
+- Galar: Galar Wild Area Dynamax Den & Crown Tundra Temple
+- Paldea: Asado Desert Titan Mesa & Area Zero Terastal Spire
+
+
 <a id="national-dex-gen3-9"></a>
 ### National Dex Expansion (Gen 3-9: Hoenn to Paldea) *(Featured)*
 
@@ -80,7 +80,7 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `national-dex-gen3-9`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters (**Featured**)
-- **Size**: 1.08 MB (3 files)
+- **Size**: 1.43 MB (3 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -105,8 +105,8 @@ Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sin
 - **ID**: `custom-characters-pack`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
-- **Size**: 5.66 MB (87 files)
-- **Version**: `v1.1.0`
+- **Size**: 5.91 MB (87 files)
+- **Version**: `v1.3.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
@@ -130,7 +130,7 @@ Expands the core Custom region (#2000-#9999) with 18 fully animated playable fig
 - **ID**: `pokemon-audio-pack`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
-- **Size**: 64.12 MB (52 files)
+- **Size**: 64.17 MB (52 files)
 - **Version**: `v1.1.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -155,7 +155,7 @@ Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curate
 - **ID**: `minish-cap-link`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
-- **Size**: 1.18 MB (8 files)
+- **Size**: 1.55 MB (8 files)
 - **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
@@ -177,6 +177,6 @@ Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully a
 
 1. Open **Unbound Settings** from the top toolbar (Desktop) or floating **Unbound** button (Android).
 2. Switch to the **Mod Browser** tab.
-3. Click **Install** on any mod you want, then enable the **Offline Mod Engine** and toggle the mod on in **Installed Mods**.
+3. Click **Install** on any mod you want — downloaded mods are automatically enabled by default in Offline Mode.
 
 Want to create or publish your own mod? See [docs/MODDING.md](docs/MODDING.md).

@@ -1,10 +1,10 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 2 distinct playable maps each (14 levels total), featuring unique terrain profiles, weather, sanctuaries, and 3D centerpiece landmarks. Works standalone or paired with National Dex Gen 3-9.",
+  "description": "Standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 2 distinct playable maps each (14 levels total), featuring custom pixel-art biome textures, bespoke map previews, themed prop atlases, validated sanctuaries, and 3D landmarks.",
   "tags": [
     "levels",
     "regions",
@@ -16,32 +16,6 @@
     "gen7",
     "gen8",
     "gen9"
-  ],
-  "toolbarActions": [
-    {
-      "id": "unlock-all-gen39-levels",
-      "label": "Unlock All 14 Gen 3-9 Levels (Master Tier)",
-      "type": "profile-mutate",
-      "mutation": {
-        "unlockBiomes": {
-          "hoenn_petalburg": 3,
-          "hoenn_chimney": 3,
-          "sinnoh_coronet": 3,
-          "sinnoh_eterna": 3,
-          "unova_relic_desert": 3,
-          "unova_dragonspiral": 3,
-          "kalos_azure_bay": 3,
-          "kalos_reflection_cave": 3,
-          "alola_melemele": 3,
-          "alola_wela_volcano": 3,
-          "galar_wild_area": 3,
-          "galar_crown_tundra": 3,
-          "paldea_asado_mesa": 3,
-          "paldea_area_zero": 3
-        }
-      },
-      "reload": true
-    }
   ],
   "regions": [
     {
@@ -168,10 +142,12 @@
     {
       "id": "hoenn_petalburg",
       "name": "Petalburg Woods (Hoenn)",
-      "desc": "Mossy emerald woodland with sunken giant oaks, sunlit groves, and an ancient Moss Shrine centerpiece.",
+      "desc": "Mossy emerald woodland with ancient giant oaks, sunlit groves, and a carved Petalburg Moss Shrine centerpiece.",
       "mode": "procedural",
       "region": "hoenn",
       "envFrom": "forest",
+      "envDir": "env/hoenn_petalburg",
+      "thumbnail": "thumbnails/hoenn_petalburg.png",
       "thumbnailFrom": "forest",
       "size": 360,
       "types": [
@@ -257,29 +233,29 @@
         ]
       ],
       "sky": [
-        1864320,
-        6618264
+        1864272,
+        6618008
       ],
-      "fog": 5896312,
-      "fogNear": 50,
+      "fog": 5896344,
+      "fogNear": 52,
       "fogFar": 215,
-      "light": 1.02,
-      "sun": 16775864,
+      "light": 1.04,
+      "sun": 16775368,
       "hemiGround": 3832648,
       "ground": [
         3964992,
-        5282368,
+        5282128,
         2847792,
         2255664
       ],
-      "path": 12363898,
+      "path": 12363386,
       "cliff": [
-        6512472,
-        5196872,
-        7894384
+        6512712,
+        5196856,
+        7894624
       ],
       "water": 0,
-      "waterColor": 2201552,
+      "waterColor": 2201568,
       "props": [
         "tree",
         "tree",
@@ -301,30 +277,60 @@
       "landmark": {
         "kind": "moss_shrine",
         "name": "Petalburg Moss Shrine",
-        "color": 3403130,
-        "accent": 14737632,
-        "radius": 6.5
+        "color": 5021292,
+        "accent": 10418360,
+        "radius": 6.8,
+        "glbProps": [
+          {
+            "model": "encina_shrine",
+            "dx": 0,
+            "dz": 0,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "iris_lantern",
+            "dx": -4.2,
+            "dz": 3.4,
+            "scale": 1,
+            "rot": 0.4
+          },
+          {
+            "model": "iris_lantern",
+            "dx": 4.2,
+            "dz": 3.4,
+            "scale": 1,
+            "rot": -0.4
+          },
+          {
+            "model": "encina_log",
+            "dx": -6.2,
+            "dz": -2.4,
+            "scale": 0.9,
+            "rot": 1.1
+          }
+        ]
       },
       "sanctuary": {
         "name": "Sky Pillar Canopy",
-        "arena": "forest",
+        "arena": "ilex",
         "heart": "Emerald Jade Altar",
         "pack": "ilextime",
         "legendaries": [
           384
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "ilex_altar",
+        "portal": "ilex_portal",
         "color": 3403130,
         "sky": [
           1124656,
-          5566640
+          5566448
         ],
-        "fog": 2577232,
+        "fog": 2577200,
         "fogNear": 34,
         "fogFar": 125,
-        "light": 0.95,
-        "sun": 13631440,
+        "light": 0.96,
+        "sun": 14674144,
         "hemiGround": 1456176,
         "music": {
           "root": 62,
@@ -342,24 +348,24 @@
       "tex": {
         "top": [
           3964992,
-          5282368,
-          2847792
+          5416534,
+          2713650
         ],
         "detail": "moss",
         "side": [
-          6512472,
-          7894384,
-          4407880
+          6185548,
+          7896676,
+          4080180
         ],
-        "lip": 2847792,
+        "lip": 3441220,
         "path": [
-          12363898,
-          8616304
+          12757628,
+          9073232
         ],
-        "leaf": 2198584,
-        "bark": 6180408,
-        "rock": 7237994,
-        "accent": 3403130,
+        "leaf": 2399316,
+        "bark": 6180152,
+        "rock": 7238236,
+        "accent": 5697684,
         "deco": [
           0,
           1,
@@ -374,10 +380,12 @@
     {
       "id": "hoenn_chimney",
       "name": "Mt. Chimney Caldera (Hoenn)",
-      "desc": "Scorching volcanic rim crowned by steaming basalt vents, ash storms, and a smoking Magma Caldera landmark.",
+      "desc": "Scorching volcanic rim crowned by steaming basalt vents, ash storms, and a glowing Magma Caldera landmark.",
       "mode": "procedural",
       "region": "hoenn",
       "envFrom": "canela",
+      "envDir": "env/hoenn_chimney",
+      "thumbnail": "thumbnails/hoenn_chimney.png",
       "thumbnailFrom": "canela",
       "size": 350,
       "types": [
@@ -464,28 +472,28 @@
       ],
       "sky": [
         5579040,
-        13457464
+        13457976
       ],
-      "fog": 10045504,
+      "fog": 10045744,
       "fogNear": 42,
       "fogFar": 190,
       "light": 0.96,
-      "sun": 16750144,
-      "hemiGround": 4923432,
+      "sun": 16749632,
+      "hemiGround": 4923176,
       "ground": [
-        5189936,
-        6502456,
-        3875624,
-        2824736
+        5189680,
+        6502712,
+        3875368,
+        2824480
       ],
-      "path": 9268064,
+      "path": 9267808,
       "cliff": [
         4073512,
         3153440,
-        5652040
+        5652024
       ],
       "water": 0.35,
-      "waterColor": 16734208,
+      "waterColor": 16733440,
       "props": [
         "lavarock",
         "rock",
@@ -505,9 +513,39 @@
       "landmark": {
         "kind": "volcano_caldera",
         "name": "Mt. Chimney Magma Cone",
-        "color": 16734208,
-        "accent": 3022120,
-        "radius": 7.5
+        "color": 4861996,
+        "accent": 16736792,
+        "radius": 7.5,
+        "glbProps": [
+          {
+            "model": "canela_vent",
+            "dx": -6.4,
+            "dz": 2.2,
+            "scale": 1.25,
+            "rot": 0.2
+          },
+          {
+            "model": "canela_vent",
+            "dx": 6.4,
+            "dz": -2,
+            "scale": 1.2,
+            "rot": 2.1
+          },
+          {
+            "model": "canela_basalt",
+            "dx": 0.5,
+            "dz": -6.8,
+            "scale": 1.35,
+            "rot": 0.9
+          },
+          {
+            "model": "canela_lavarock",
+            "dx": -4.2,
+            "dz": -5.4,
+            "scale": 1.15,
+            "rot": 1.7
+          }
+        ]
       },
       "sanctuary": {
         "name": "Red Orb Crater",
@@ -517,9 +555,9 @@
         "legendaries": [
           383
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 16734208,
+        "shrine": "crater_altar",
+        "portal": "crater_portal",
+        "color": 16733440,
         "sky": [
           3936016,
           9842720
@@ -528,7 +566,7 @@
         "fogNear": 32,
         "fogFar": 120,
         "light": 0.95,
-        "sun": 16746560,
+        "sun": 16746048,
         "hemiGround": 3674136,
         "music": {
           "root": 57,
@@ -546,25 +584,25 @@
       },
       "tex": {
         "top": [
-          5189936,
-          6502456,
-          3875624
+          4993068,
+          6569012,
+          3547168
         ],
         "detail": "sand",
         "side": [
-          4073512,
-          5652040,
-          2693920
+          3941926,
+          5650996,
+          2496536
         ],
-        "lip": 15615780,
+        "lip": 15615524,
         "path": [
-          9268064,
-          6505544
+          9201756,
+          6571068
         ],
-        "leaf": 12141352,
+        "leaf": 12141096,
         "bark": 4532776,
         "rock": 5059640,
-        "accent": 16734208,
+        "accent": 16734744,
         "deco": [
           0,
           1,
@@ -578,10 +616,12 @@
     {
       "id": "sinnoh_coronet",
       "name": "Mt. Coronet Spear Pillar (Sinnoh)",
-      "desc": "Snow-swept summit rising above the clouds around the ruined marble columns of Spear Pillar.",
+      "desc": "Snow-swept summit above the clouds crowned by the ancient fluted marble columns of Spear Pillar.",
       "mode": "procedural",
       "region": "sinnoh",
       "envFrom": "plateado",
+      "envDir": "env/sinnoh_coronet",
+      "thumbnail": "thumbnails/sinnoh_coronet.png",
       "thumbnailFrom": "plateado",
       "size": 370,
       "types": [
@@ -666,29 +706,29 @@
         ]
       ],
       "sky": [
-        2177904,
-        8694248
+        2178032,
+        8693992
       ],
-      "fog": 9481952,
+      "fog": 9482464,
       "fogNear": 46,
       "fogFar": 205,
       "light": 1.05,
-      "sun": 16252415,
-      "hemiGround": 9743056,
+      "sun": 16251903,
+      "hemiGround": 9743312,
       "ground": [
         12505576,
-        14215928,
-        9612744,
+        14215416,
+        9612520,
         7178400
       ],
-      "path": 10992336,
+      "path": 10992592,
       "cliff": [
-        6451840,
+        6451856,
         5004144,
         8096416
       ],
       "water": 0,
-      "waterColor": 3440512,
+      "waterColor": 3440544,
       "props": [
         "snowpine",
         "crystal",
@@ -708,13 +748,50 @@
       "landmark": {
         "kind": "spear_pillar",
         "name": "Spear Pillar Columns",
-        "color": 14737632,
+        "color": 14476532,
         "accent": 6737151,
-        "radius": 7.5
+        "radius": 7.5,
+        "glbProps": [
+          {
+            "model": "ruins_column",
+            "dx": -6,
+            "dz": 3.5,
+            "scale": 1.35,
+            "rot": 0
+          },
+          {
+            "model": "ruins_column",
+            "dx": 6,
+            "dz": 3.5,
+            "scale": 1.35,
+            "rot": 0.5
+          },
+          {
+            "model": "summit_pillar",
+            "dx": -6.5,
+            "dz": -3.5,
+            "scale": 1.3,
+            "rot": 0.2
+          },
+          {
+            "model": "summit_pillar",
+            "dx": 6.5,
+            "dz": -3.5,
+            "scale": 1.3,
+            "rot": -0.2
+          },
+          {
+            "model": "plateado_cairn",
+            "dx": 0,
+            "dz": 6.8,
+            "scale": 1.1,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Hall of Origin",
-        "arena": "summit",
+        "arena": "glacier",
         "heart": "Azure Flute Pedestal",
         "pack": "silversummit",
         "legendaries": [
@@ -722,19 +799,19 @@
           484,
           493
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "frost_altar",
+        "portal": "frost_portal",
         "color": 6737151,
         "sky": [
           1714768,
-          6322384
+          6322576
         ],
-        "fog": 4086960,
+        "fog": 4086896,
         "fogNear": 34,
         "fogFar": 130,
         "light": 1,
-        "sun": 14807807,
-        "hemiGround": 3162720,
+        "sun": 14808319,
+        "hemiGround": 3162464,
         "music": {
           "root": 60,
           "scale": [
@@ -750,22 +827,22 @@
       },
       "tex": {
         "top": [
-          12505576,
-          14215928,
-          9612744
+          12769006,
+          14872316,
+          9480396
         ],
         "detail": "snow",
         "side": [
-          6451840,
-          8096416,
-          4214368
+          6189198,
+          8031400,
+          4214376
         ],
-        "lip": 14215928,
+        "lip": 14872316,
         "path": [
-          10992336,
-          8689328
+          13424358,
+          9346742
         ],
-        "leaf": 4483944,
+        "leaf": 4483736,
         "bark": 5659488,
         "rock": 7701904,
         "accent": 6737151,
@@ -782,10 +859,12 @@
     {
       "id": "sinnoh_eterna",
       "name": "Eterna Twilight Woods (Sinnoh)",
-      "desc": "Misty dusk-lit forest and ancient marsh surrounding the haunted stone facade of the Old Chateau.",
+      "desc": "Misty dusk-lit woodland and lantern-lined forest trail surrounding the haunted Old Chateau Ruins.",
       "mode": "procedural",
       "region": "sinnoh",
       "envFrom": "encina",
+      "envDir": "env/sinnoh_eterna",
+      "thumbnail": "thumbnails/sinnoh_eterna.png",
       "thumbnailFrom": "encina",
       "size": 350,
       "types": [
@@ -876,7 +955,7 @@
         1513280,
         4800648
       ],
-      "fog": 3487320,
+      "fog": 3487096,
       "fogNear": 38,
       "fogFar": 175,
       "light": 0.85,
@@ -884,7 +963,7 @@
       "hemiGround": 2241352,
       "ground": [
         2771512,
-        3758920,
+        3759176,
         2112568,
         1781544
       ],
@@ -916,13 +995,43 @@
       "landmark": {
         "kind": "old_chateau",
         "name": "Old Chateau Ruins",
-        "color": 4405848,
-        "accent": 11032055,
-        "radius": 7
+        "color": 4736098,
+        "accent": 11561215,
+        "radius": 7.2,
+        "glbProps": [
+          {
+            "model": "johto_torii",
+            "dx": 0,
+            "dz": 6.5,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "iris_lantern",
+            "dx": -4.8,
+            "dz": 5.5,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "iris_lantern",
+            "dx": 4.8,
+            "dz": 5.5,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "ilex_lamp",
+            "dx": -6.8,
+            "dz": -1.5,
+            "scale": 1.1,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Distortion Hollow",
-        "arena": "ilex",
+        "arena": "forest",
         "heart": "Griseous Rift",
         "pack": "sanctum",
         "legendaries": [
@@ -958,25 +1067,25 @@
       },
       "tex": {
         "top": [
-          2771512,
-          3758920,
-          2112568
+          2771002,
+          3956300,
+          1979952
         ],
         "detail": "moss",
         "side": [
-          4407880,
-          5658208,
-          2894904
+          4341842,
+          5789294,
+          2762808
         ],
-        "lip": 2112568,
+        "lip": 2771002,
         "path": [
-          7368832,
-          5460832
+          7236740,
+          5131364
         ],
-        "leaf": 2376512,
+        "leaf": 2507846,
         "bark": 3812672,
-        "rock": 5460832,
-        "accent": 11032055,
+        "rock": 5526640,
+        "accent": 11561215,
         "deco": [
           0,
           1,
@@ -991,10 +1100,12 @@
     {
       "id": "unova_relic_desert",
       "name": "Relic Desert Resort (Unova)",
-      "desc": "Golden shifting sands punctuated by sandstone hoodoos, sunken obelisks, and the stepped Relic Castle Pyramid.",
+      "desc": "Golden wind-rippled sands dotted with sunken obelisks, braziers, and the stepped Relic Castle Pyramid.",
       "mode": "procedural",
       "region": "unova",
       "envFrom": "desert",
+      "envDir": "env/unova_relic_desert",
+      "thumbnail": "thumbnails/unova_relic_desert.png",
       "thumbnailFrom": "desert",
       "size": 370,
       "types": [
@@ -1081,29 +1192,29 @@
         ]
       ],
       "sky": [
-        11564352,
-        16044936
+        11563840,
+        16044680
       ],
-      "fog": 14726768,
+      "fog": 14726512,
       "fogNear": 48,
       "fogFar": 205,
       "light": 1.05,
-      "sun": 16771776,
-      "hemiGround": 13739632,
+      "sun": 16772800,
+      "hemiGround": 13739888,
       "ground": [
-        14397040,
-        15451776,
-        12485200,
+        14397296,
+        15451264,
+        12484944,
         10248768
       ],
-      "path": 15848368,
+      "path": 15849120,
       "cliff": [
         10841664,
-        8870960,
-        12484424
+        8871216,
+        12484168
       ],
       "water": 0,
-      "waterColor": 3440512,
+      "waterColor": 3440544,
       "props": [
         "cactus",
         "pillar",
@@ -1123,9 +1234,46 @@
       "landmark": {
         "kind": "sand_pyramid",
         "name": "Relic Castle Pyramid",
-        "color": 14266734,
+        "color": 14201454,
         "accent": 16758832,
-        "radius": 8
+        "radius": 8,
+        "glbProps": [
+          {
+            "model": "ruins_obelisk",
+            "dx": -6.8,
+            "dz": 5.5,
+            "scale": 1.15,
+            "rot": 0.1
+          },
+          {
+            "model": "ruins_obelisk",
+            "dx": 6.8,
+            "dz": 5.5,
+            "scale": 1.15,
+            "rot": -0.1
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": -4.2,
+            "dz": 6.8,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": 4.2,
+            "dz": 6.8,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "ruins_statue",
+            "dx": 0,
+            "dz": 8.2,
+            "scale": 0.95,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Relic Sanctum Chamber",
@@ -1136,19 +1284,19 @@
           643,
           645
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "crater_altar",
+        "portal": "crater_portal",
         "color": 16758832,
         "sky": [
-          7618864,
-          13408584
+          7618608,
+          13408104
         ],
         "fog": 10316608,
         "fogNear": 34,
         "fogFar": 125,
         "light": 0.98,
-        "sun": 16765312,
-        "hemiGround": 7621416,
+        "sun": 16766336,
+        "hemiGround": 7621160,
         "music": {
           "root": 60,
           "scale": [
@@ -1165,24 +1313,24 @@
       },
       "tex": {
         "top": [
-          14397040,
-          15451776,
-          12485200
+          14463596,
+          15649928,
+          12093004
         ],
         "detail": "sand",
         "side": [
-          10841664,
-          12484424,
-          7886384
+          10907712,
+          12749394,
+          7884846
         ],
-        "lip": 12485200,
+        "lip": 12750416,
         "path": [
-          15848368,
-          12818784
+          15520928,
+          12491368
         ],
         "leaf": 6458432,
-        "bark": 8677440,
-        "rock": 11239760,
+        "bark": 8677184,
+        "rock": 11239504,
         "accent": 16758832,
         "deco": [
           0,
@@ -1201,6 +1349,8 @@
       "mode": "procedural",
       "region": "unova",
       "envFrom": "iris",
+      "envDir": "env/unova_dragonspiral",
+      "thumbnail": "thumbnails/unova_dragonspiral.png",
       "thumbnailFrom": "iris",
       "size": 360,
       "types": [
@@ -1289,24 +1439,24 @@
       ],
       "sky": [
         2957920,
-        9458344
+        9458280
       ],
-      "fog": 7357856,
+      "fog": 7357792,
       "fogNear": 46,
       "fogFar": 200,
       "light": 0.94,
-      "sun": 16760448,
-      "hemiGround": 6438464,
+      "sun": 16760960,
+      "hemiGround": 6438720,
       "ground": [
         7688776,
-        9461056,
+        9460800,
         5718848,
         4207408
       ],
       "path": 12428152,
       "cliff": [
         6444624,
-        5129280,
+        5129024,
         7892072
       ],
       "water": 0.3,
@@ -1332,21 +1482,51 @@
         "kind": "dragon_tower",
         "name": "Dragonspiral Pagoda",
         "color": 9868950,
-        "accent": 4437247,
-        "radius": 7
+        "accent": 4437503,
+        "radius": 7.4,
+        "glbProps": [
+          {
+            "model": "johto_tower",
+            "dx": 0,
+            "dz": 0,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "iris_lantern",
+            "dx": -5.6,
+            "dz": 5.2,
+            "scale": 1.1,
+            "rot": 0
+          },
+          {
+            "model": "iris_lantern",
+            "dx": 5.6,
+            "dz": 5.2,
+            "scale": 1.1,
+            "rot": 0
+          },
+          {
+            "model": "bell_lamp",
+            "dx": 0,
+            "dz": 7.4,
+            "scale": 1.2,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Dragonspiral Apex",
-        "arena": "bell",
+        "arena": "ilex",
         "heart": "Dark & Light Stone",
         "pack": "tintower",
         "legendaries": [
           644,
           646
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 4437247,
+        "shrine": "ilex_altar",
+        "portal": "ilex_portal",
+        "color": 4437503,
         "sky": [
           1513280,
           4541064
@@ -1372,25 +1552,25 @@
       },
       "tex": {
         "top": [
-          7688776,
-          9461056,
-          5718848
+          7757380,
+          10122310,
+          5522484
         ],
         "detail": "grass",
         "side": [
           6444624,
-          7892072,
-          4340032
+          8023656,
+          4340278
         ],
-        "lip": 9461056,
+        "lip": 10122310,
         "path": [
-          12428152,
-          8943984
+          12493948,
+          8811096
         ],
-        "leaf": 14184752,
+        "leaf": 14183984,
         "bark": 5915440,
         "rock": 7235688,
-        "accent": 4437247,
+        "accent": 4437503,
         "deco": [
           0,
           1,
@@ -1405,10 +1585,12 @@
     {
       "id": "kalos_azure_bay",
       "name": "Azure Bay Coast (Kalos)",
-      "desc": "Sunlit turquoise shoreline with tide pools, coral shoals, and a towering Twin Sea Arch & Beacon landmark.",
+      "desc": "Sunlit turquoise shoreline with tide pools, limestone sea stacks, and a towering Azure Sea Arch Beacon.",
       "mode": "procedural",
       "region": "kalos",
       "envFrom": "coast",
+      "envDir": "env/kalos_azure_bay",
+      "thumbnail": "thumbnails/kalos_azure_bay.png",
       "thumbnailFrom": "coast",
       "size": 360,
       "types": [
@@ -1494,26 +1676,26 @@
         ]
       ],
       "sky": [
-        2588640,
-        9624831
+        2588896,
+        9624575
       ],
       "fog": 9295864,
       "fogNear": 52,
       "fogFar": 220,
       "light": 1.05,
-      "sun": 16776400,
-      "hemiGround": 13222568,
+      "sun": 16776928,
+      "hemiGround": 13222056,
       "ground": [
         14866096,
-        15590848,
-        5216144,
-        3440512
+        15590080,
+        5216400,
+        3440544
       ],
-      "path": 15984320,
+      "path": 15984832,
       "cliff": [
         8290432,
         6711408,
-        9935256
+        9935512
       ],
       "water": 0.45,
       "waterColor": 1945552,
@@ -1536,9 +1718,32 @@
       "landmark": {
         "kind": "sea_arch",
         "name": "Azure Sea Arch Beacon",
-        "color": 13292762,
+        "color": 13293282,
         "accent": 4442367,
-        "radius": 7.2
+        "radius": 7.4,
+        "glbProps": [
+          {
+            "model": "coast_stack",
+            "dx": -7.2,
+            "dz": -2.2,
+            "scale": 1.1,
+            "rot": 0.4
+          },
+          {
+            "model": "coast_boulder",
+            "dx": 6.8,
+            "dz": 3.4,
+            "scale": 1.2,
+            "rot": 1.3
+          },
+          {
+            "model": "furia_pier",
+            "dx": 0,
+            "dz": 7.2,
+            "scale": 0.9,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Sea Spirit Den",
@@ -1548,18 +1753,18 @@
         "legendaries": [
           716
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "storm_altar",
+        "portal": "storm_portal",
         "color": 4442367,
         "sky": [
-          1786520,
+          1786456,
           6398975
         ],
-        "fog": 4357304,
+        "fog": 4357528,
         "fogNear": 34,
         "fogFar": 130,
         "light": 0.98,
-        "sun": 14807807,
+        "sun": 14808319,
         "hemiGround": 2254448,
         "music": {
           "root": 65,
@@ -1576,24 +1781,24 @@
       },
       "tex": {
         "top": [
-          14866096,
-          15590848,
-          5216144
+          15129268,
+          15919304,
+          7256240
         ],
         "detail": "sand",
         "side": [
-          8290432,
-          9935256,
-          5658720
+          8293526,
+          10135730,
+          5661806
         ],
-        "lip": 5216144,
+        "lip": 5420720,
         "path": [
-          15984320,
-          12826768
+          16050372,
+          12892312
         ],
-        "leaf": 2796872,
+        "leaf": 2796920,
         "bark": 7491904,
-        "rock": 8684688,
+        "rock": 8684944,
         "accent": 4442367,
         "deco": [
           0,
@@ -1612,6 +1817,8 @@
       "mode": "procedural",
       "region": "kalos",
       "envFrom": "cave",
+      "envDir": "env/kalos_reflection_cave",
+      "thumbnail": "thumbnails/kalos_reflection_cave.png",
       "thumbnailFrom": "cave",
       "size": 340,
       "types": [
@@ -1706,10 +1913,10 @@
       "fogNear": 34,
       "fogFar": 165,
       "light": 0.88,
-      "sun": 13939455,
-      "hemiGround": 2891352,
+      "sun": 13939711,
+      "hemiGround": 2891608,
       "ground": [
-        3484776,
+        3484520,
         4602232,
         2694736,
         2037816
@@ -1717,8 +1924,8 @@
       "path": 7364264,
       "cliff": [
         4337760,
-        3221064,
-        5718928
+        3220808,
+        5718912
       ],
       "water": 0.25,
       "waterColor": 5539312,
@@ -1741,8 +1948,45 @@
         "kind": "prism_crystals",
         "name": "Mirror Prism Cluster",
         "color": 10079487,
-        "accent": 16751320,
-        "radius": 6.8
+        "accent": 16750840,
+        "radius": 7,
+        "glbProps": [
+          {
+            "model": "cave_crystal",
+            "dx": -4.8,
+            "dz": 3.2,
+            "scale": 1.35,
+            "rot": 0.3
+          },
+          {
+            "model": "cave_crystal",
+            "dx": 4.8,
+            "dz": 3.2,
+            "scale": 1.3,
+            "rot": 2.2
+          },
+          {
+            "model": "ruins_crystals",
+            "dx": 0,
+            "dz": -5.2,
+            "scale": 1.4,
+            "rot": 1.1
+          },
+          {
+            "model": "psy_lamp",
+            "dx": -5.5,
+            "dz": -3.2,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "psy_lamp",
+            "dx": 5.5,
+            "dz": -3.2,
+            "scale": 1.15,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Terminus Aura Core",
@@ -1753,9 +1997,9 @@
           718,
           717
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 16751320,
+        "shrine": "psy_altar",
+        "portal": "psy_portal",
+        "color": 16750840,
         "sky": [
           1050668,
           3282016
@@ -1782,25 +2026,25 @@
       },
       "tex": {
         "top": [
-          3484776,
-          4602232,
-          2694736
+          3550314,
+          4865156,
+          2498124
         ],
         "detail": "moss",
         "side": [
-          4337760,
-          5718928,
-          2563648
+          4337762,
+          6047368,
+          2629186
         ],
         "lip": 10079487,
         "path": [
-          7364264,
-          5260408
+          7627438,
+          5391484
         ],
         "leaf": 9668351,
-        "bark": 4537192,
-        "rock": 5851768,
-        "accent": 16751320,
+        "bark": 4537256,
+        "rock": 5852024,
+        "accent": 16750840,
         "deco": [
           0,
           1,
@@ -1814,10 +2058,12 @@
     {
       "id": "alola_melemele",
       "name": "Melemele Tropical Shore (Alola)",
-      "desc": "Sun-drenched island savanna and hibiscus meadows centered on the golden Ruins of Conflict Totem.",
+      "desc": "Sun-drenched tropical island meadows and hibiscus shores centered on the golden Ruins of Conflict Totem.",
       "mode": "procedural",
       "region": "alola",
-      "envFrom": "safari",
+      "envFrom": "coast",
+      "envDir": "env/alola_melemele",
+      "thumbnail": "thumbnails/alola_melemele.png",
       "thumbnailFrom": "coast",
       "size": 360,
       "types": [
@@ -1904,26 +2150,26 @@
         ]
       ],
       "sky": [
-        2195952,
-        9562879
+        2196208,
+        9563135
       ],
       "fog": 8509424,
       "fogNear": 52,
       "fogFar": 215,
       "light": 1.06,
-      "sun": 16775360,
+      "sun": 16776128,
       "hemiGround": 5478464,
       "ground": [
         5547072,
         7256136,
-        3968056,
+        3967800,
         3047984
       ],
       "path": 14533512,
       "cliff": [
-        8154968,
+        8154712,
         6640184,
-        9601368
+        9601112
       ],
       "water": 0.4,
       "waterColor": 1626864,
@@ -1947,9 +2193,39 @@
       "landmark": {
         "kind": "tapu_totem",
         "name": "Ruins of Conflict Totem",
-        "color": 16760576,
-        "accent": 2534498,
-        "radius": 6.8
+        "color": 15644728,
+        "accent": 2550914,
+        "radius": 7,
+        "glbProps": [
+          {
+            "model": "ruins_arch",
+            "dx": 0,
+            "dz": 6.4,
+            "scale": 1.05,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": -5.2,
+            "dz": 4,
+            "scale": 1,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": 5.2,
+            "dz": 4,
+            "scale": 1,
+            "rot": 0
+          },
+          {
+            "model": "ruins_pots",
+            "dx": -4.2,
+            "dz": -4.4,
+            "scale": 1.1,
+            "rot": 0.5
+          }
+        ]
       },
       "sanctuary": {
         "name": "Altar of the Sunne",
@@ -1960,19 +2236,19 @@
           785,
           791
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 16760576,
+        "shrine": "storm_altar",
+        "portal": "storm_portal",
+        "color": 16760832,
         "sky": [
           10113584,
-          16565616
+          16566128
         ],
-        "fog": 12945752,
+        "fog": 12945496,
         "fogNear": 34,
         "fogFar": 130,
         "light": 1.05,
-        "sun": 16773552,
-        "hemiGround": 7690296,
+        "sun": 16774320,
+        "hemiGround": 7690040,
         "music": {
           "root": 67,
           "scale": [
@@ -1988,25 +2264,25 @@
       },
       "tex": {
         "top": [
-          5547072,
-          7256136,
-          3968056
+          5547588,
+          7388752,
+          3834934
         ],
         "detail": "grass",
         "side": [
-          8154968,
-          9601368,
-          5260080
+          8154712,
+          9733222,
+          5260340
         ],
-        "lip": 3968056,
+        "lip": 3967800,
         "path": [
-          14533512,
-          11309168
+          14862988,
+          11704420
         ],
-        "leaf": 2534498,
+        "leaf": 2540642,
         "bark": 6965048,
-        "rock": 8025448,
-        "accent": 16760576,
+        "rock": 8025192,
+        "accent": 16760864,
         "deco": [
           0,
           1,
@@ -2021,10 +2297,12 @@
     {
       "id": "alola_wela_volcano",
       "name": "Wela Volcano Park (Alola)",
-      "desc": "Obsidian volcanic slopes and glowing ember plains crowned by the ritual Wela Fire Altar.",
+      "desc": "Obsidian volcanic slopes and blazing ember plains crowned by the ritual Wela Fire Trial Altar.",
       "mode": "procedural",
       "region": "alola",
-      "envFrom": "volcano",
+      "envFrom": "canela",
+      "envDir": "env/alola_wela_volcano",
+      "thumbnail": "thumbnails/alola_wela_volcano.png",
       "thumbnailFrom": "canela",
       "size": 350,
       "types": [
@@ -2112,29 +2390,29 @@
         ]
       ],
       "sky": [
-        4918832,
-        13449008
+        4918576,
+        13449248
       ],
-      "fog": 9186616,
+      "fog": 9186360,
       "fogNear": 42,
       "fogFar": 185,
       "light": 0.94,
-      "sun": 16748880,
+      "sun": 16748368,
       "hemiGround": 4658984,
       "ground": [
         4663352,
         5912888,
-        3482408,
+        3482152,
         2562336
       ],
-      "path": 9985088,
+      "path": 9984832,
       "cliff": [
         3614512,
         2694696,
-        5126456
+        5126200
       ],
       "water": 0.3,
-      "waterColor": 16738816,
+      "waterColor": 16738048,
       "props": [
         "lavarock",
         "pillar",
@@ -2154,9 +2432,46 @@
       "landmark": {
         "kind": "fire_altar",
         "name": "Wela Crown Fire Altar",
-        "color": 15615780,
-        "accent": 2497064,
-        "radius": 7
+        "color": 5516328,
+        "accent": 16739106,
+        "radius": 7.2,
+        "glbProps": [
+          {
+            "model": "ruins_brazier",
+            "dx": -4.8,
+            "dz": 4.8,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": 4.8,
+            "dz": 4.8,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": -4.8,
+            "dz": -4.8,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "ruins_brazier",
+            "dx": 4.8,
+            "dz": -4.8,
+            "scale": 1.15,
+            "rot": 0
+          },
+          {
+            "model": "canela_vent",
+            "dx": 0,
+            "dz": -7.2,
+            "scale": 1.2,
+            "rot": 0.8
+          }
+        ]
       },
       "sanctuary": {
         "name": "Altar of the Moone",
@@ -2167,12 +2482,12 @@
           792,
           800
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "crater_altar",
+        "portal": "crater_portal",
         "color": 12154111,
         "sky": [
           1707584,
-          5776504
+          5776472
         ],
         "fog": 3282016,
         "fogNear": 32,
@@ -2195,25 +2510,25 @@
       },
       "tex": {
         "top": [
-          4663352,
-          5912888,
-          3482408
+          4465708,
+          6042164,
+          2889760
         ],
         "detail": "sand",
         "side": [
-          3614512,
-          5126456,
-          2234656
+          3548204,
+          5256760,
+          2233884
         ],
-        "lip": 15615780,
+        "lip": 15615524,
         "path": [
-          9985088,
-          6963264
+          10247746,
+          7225394
         ],
-        "leaf": 13457464,
-        "bark": 3875624,
-        "rock": 4798784,
-        "accent": 15615780,
+        "leaf": 13457976,
+        "bark": 3875368,
+        "rock": 4798528,
+        "accent": 16734754,
         "deco": [
           0,
           1,
@@ -2227,10 +2542,12 @@
     {
       "id": "galar_wild_area",
       "name": "Galar Wild Area (Galar)",
-      "desc": "Windswept emerald moorland punctuated by weathered stone ruins and a glowing magenta Dynamax Raid Den.",
+      "desc": "Windswept emerald highland moorland punctuated by Watchtower ruins and a glowing magenta Dynamax Raid Den.",
       "mode": "procedural",
       "region": "galar",
-      "envFrom": "wilds",
+      "envFrom": "forest",
+      "envDir": "env/galar_wild_area",
+      "thumbnail": "thumbnails/galar_wild_area.png",
       "thumbnailFrom": "forest",
       "size": 380,
       "types": [
@@ -2321,28 +2638,28 @@
       ],
       "sky": [
         2117240,
-        7456976
+        7456720
       ],
-      "fog": 7325648,
+      "fog": 7325632,
       "fogNear": 50,
       "fogFar": 215,
       "light": 1,
-      "sun": 16578784,
+      "sun": 16579552,
       "hemiGround": 4691792,
       "ground": [
         4955984,
         6208352,
-        3705416,
-        2914872
+        3705160,
+        2914632
       ],
       "path": 12168344,
       "cliff": [
         6711920,
-        5330008,
+        5329752,
         8093576
       ],
       "water": 0.35,
-      "waterColor": 2266264,
+      "waterColor": 2266280,
       "props": [
         "tree",
         "pine",
@@ -2363,9 +2680,46 @@
       "landmark": {
         "kind": "dynamax_den",
         "name": "Watchtower Dynamax Den",
-        "color": 15089352,
-        "accent": 7500402,
-        "radius": 7.2
+        "color": 7106174,
+        "accent": 16723080,
+        "radius": 7.4,
+        "glbProps": [
+          {
+            "model": "ruin_pillar",
+            "dx": -5.4,
+            "dz": 4.5,
+            "scale": 1.15,
+            "rot": 0.3
+          },
+          {
+            "model": "ruin_pillar",
+            "dx": 5.4,
+            "dz": 4.5,
+            "scale": 1.15,
+            "rot": -0.3
+          },
+          {
+            "model": "ruin_pillar",
+            "dx": -5.4,
+            "dz": -4.5,
+            "scale": 1.15,
+            "rot": 1.1
+          },
+          {
+            "model": "ruin_pillar",
+            "dx": 5.4,
+            "dz": -4.5,
+            "scale": 1.15,
+            "rot": -1.1
+          },
+          {
+            "model": "storm_coil",
+            "dx": 0,
+            "dz": -6.8,
+            "scale": 0.85,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Slumbering Weald",
@@ -2376,9 +2730,9 @@
           888,
           890
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 15089352,
+        "shrine": "rage_altar",
+        "portal": "rage_portal",
+        "color": 15088776,
         "sky": [
           2037848,
           6306456
@@ -2387,7 +2741,7 @@
         "fogNear": 34,
         "fogFar": 125,
         "light": 0.92,
-        "sun": 15641855,
+        "sun": 15642879,
         "hemiGround": 2236992,
         "music": {
           "root": 62,
@@ -2404,25 +2758,25 @@
       },
       "tex": {
         "top": [
-          4955984,
-          6208352,
-          3705416
+          4889168,
+          6468708,
+          3570242
         ],
         "detail": "grass",
         "side": [
-          6711920,
-          8093576,
-          4474184
+          6711924,
+          8290956,
+          4474962
         ],
-        "lip": 3705416,
+        "lip": 3703364,
         "path": [
-          12168344,
-          8684688
+          12365722,
+          8944750
         ],
-        "leaf": 2852928,
-        "bark": 6180408,
-        "rock": 7435128,
-        "accent": 15089352,
+        "leaf": 2918472,
+        "bark": 6180152,
+        "rock": 7435384,
+        "accent": 16723080,
         "deco": [
           0,
           1,
@@ -2437,10 +2791,12 @@
     {
       "id": "galar_crown_tundra",
       "name": "Crown Tundra Glacier (Galar)",
-      "desc": "Frozen sapphire plains beneath frosted pines and the ancient Crowned Temple Ice Monolith.",
+      "desc": "Frozen sapphire snowfields beneath frosted pines and the ancient Crown Shrine Ice Monolith.",
       "mode": "procedural",
       "region": "galar",
       "envFrom": "glacier",
+      "envDir": "env/galar_crown_tundra",
+      "thumbnail": "thumbnails/galar_crown_tundra.png",
       "thumbnailFrom": "glacier",
       "size": 360,
       "types": [
@@ -2535,17 +2891,17 @@
       "fogFar": 200,
       "light": 1.04,
       "sun": 15596543,
-      "hemiGround": 9483232,
+      "hemiGround": 9483488,
       "ground": [
-        11852784,
-        13889023,
-        8564184,
-        6260672
+        11853040,
+        13889279,
+        8564440,
+        6260928
       ],
       "path": 10536408,
       "cliff": [
         5337496,
-        4086184,
+        4086120,
         7114944
       ],
       "water": 0.35,
@@ -2569,9 +2925,46 @@
       "landmark": {
         "kind": "crown_temple",
         "name": "Crown Shrine Monolith",
-        "color": 9752820,
-        "accent": 15726847,
-        "radius": 7.2
+        "color": 8961248,
+        "accent": 15661311,
+        "radius": 7.4,
+        "glbProps": [
+          {
+            "model": "glacier_spire",
+            "dx": -5.8,
+            "dz": -2.8,
+            "scale": 1.25,
+            "rot": 0.2
+          },
+          {
+            "model": "glacier_spire",
+            "dx": 5.8,
+            "dz": -2.8,
+            "scale": 1.25,
+            "rot": -0.2
+          },
+          {
+            "model": "glacier_crystals",
+            "dx": -4.2,
+            "dz": 5.2,
+            "scale": 1.2,
+            "rot": 0.7
+          },
+          {
+            "model": "glacier_crystals",
+            "dx": 4.2,
+            "dz": 5.2,
+            "scale": 1.2,
+            "rot": -0.7
+          },
+          {
+            "model": "frost_lamp",
+            "dx": 0,
+            "dz": 6.8,
+            "scale": 1.05,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Crown Shrine Sanctum",
@@ -2582,19 +2975,19 @@
           889,
           898
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "frost_altar",
+        "portal": "frost_portal",
         "color": 9752820,
         "sky": [
           1323120,
-          5013968
+          5014224
         ],
         "fog": 3233448,
         "fogNear": 32,
         "fogFar": 125,
         "light": 0.98,
-        "sun": 14807807,
-        "hemiGround": 2838648,
+        "sun": 14808319,
+        "hemiGround": 2838680,
         "music": {
           "root": 65,
           "scale": [
@@ -2610,25 +3003,25 @@
       },
       "tex": {
         "top": [
-          11852784,
-          13889023,
-          8564184
+          11852530,
+          14217471,
+          8301270
         ],
         "detail": "snow",
         "side": [
-          5337496,
-          7114944,
-          3494520
+          5271704,
+          7114942,
+          3427952
         ],
-        "lip": 13889023,
+        "lip": 14217471,
         "path": [
-          10536408,
-          7967936
+          10930398,
+          8166580
         ],
-        "leaf": 4288688,
-        "bark": 5330008,
+        "leaf": 4288624,
+        "bark": 5329752,
         "rock": 7114944,
-        "accent": 9752820,
+        "accent": 8706303,
         "deco": [
           0,
           1,
@@ -2642,11 +3035,13 @@
     {
       "id": "paldea_asado_mesa",
       "name": "Asado Titan Mesa (Paldea)",
-      "desc": "Sunbaked red-terracotta canyon highlands carved with wind arches and the towering Titan Mesa Arch.",
+      "desc": "Sunbaked red-terracotta canyon highlands carved with sandstone hoodoos and the towering Titan Mesa Arch.",
       "mode": "procedural",
       "region": "paldea",
-      "envFrom": "furia",
-      "thumbnailFrom": "furia",
+      "envFrom": "desert",
+      "envDir": "env/paldea_asado_mesa",
+      "thumbnail": "thumbnails/paldea_asado_mesa.png",
+      "thumbnailFrom": "desert",
       "size": 370,
       "types": [
         "ground",
@@ -2737,28 +3132,28 @@
       ],
       "sky": [
         10570544,
-        16171888
+        16171632
       ],
       "fog": 13932152,
       "fogNear": 48,
       "fogFar": 205,
       "light": 1.03,
-      "sun": 16766104,
-      "hemiGround": 11103568,
+      "sun": 16767128,
+      "hemiGround": 11103312,
       "ground": [
         12086360,
         13468520,
-        9850168,
+        9849912,
         7815208
       ],
-      "path": 14792856,
+      "path": 14792600,
       "cliff": [
-        8994104,
-        7220264,
-        10704200
+        8993832,
+        7219992,
+        10703928
       ],
       "water": 0,
-      "waterColor": 3440512,
+      "waterColor": 3440544,
       "props": [
         "cactus",
         "rock",
@@ -2778,9 +3173,39 @@
       "landmark": {
         "kind": "titan_mesa",
         "name": "Asado Titan Mesa Arch",
-        "color": 13395520,
+        "color": 12739138,
         "accent": 16755264,
-        "radius": 7.5
+        "radius": 7.5,
+        "glbProps": [
+          {
+            "model": "desert_hoodoo",
+            "dx": -7,
+            "dz": 2.2,
+            "scale": 1.25,
+            "rot": 0.3
+          },
+          {
+            "model": "desert_hoodoo",
+            "dx": 7,
+            "dz": -2.2,
+            "scale": 1.2,
+            "rot": 2
+          },
+          {
+            "model": "desert_boulder",
+            "dx": -4.2,
+            "dz": 6.2,
+            "scale": 1.15,
+            "rot": 1.1
+          },
+          {
+            "model": "desert_rockpile",
+            "dx": 4.8,
+            "dz": 5.8,
+            "scale": 1.2,
+            "rot": 0.5
+          }
+        ]
       },
       "sanctuary": {
         "name": "Firescourge Shrine",
@@ -2791,19 +3216,19 @@
           1007,
           1004
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
+        "shrine": "crater_altar",
+        "portal": "crater_portal",
         "color": 16755264,
         "sky": [
           6234416,
-          12811360
+          12811104
         ],
-        "fog": 8928824,
+        "fog": 8928568,
         "fogNear": 34,
         "fogFar": 125,
         "light": 0.98,
-        "sun": 16757600,
-        "hemiGround": 6434088,
+        "sun": 16758624,
+        "hemiGround": 6433832,
         "music": {
           "root": 62,
           "scale": [
@@ -2819,24 +3244,24 @@
       },
       "tex": {
         "top": [
-          12086360,
-          13468520,
-          9850168
+          12216914,
+          13927526,
+          9718326
         ],
         "detail": "sand",
         "side": [
-          8994104,
-          10704200,
-          6235944
+          9190956,
+          11032124,
+          6170652
         ],
-        "lip": 13468520,
+        "lip": 13927526,
         "path": [
-          14792856,
-          11761248
+          14858388,
+          11698788
         ],
         "leaf": 6977072,
         "bark": 7488568,
-        "rock": 9850168,
+        "rock": 9849912,
         "accent": 16755264,
         "deco": [
           0,
@@ -2851,11 +3276,13 @@
     {
       "id": "paldea_area_zero",
       "name": "Area Zero Great Crater (Paldea)",
-      "desc": "Luminous abyss of swirling mist and floating crystals surrounding the iridescent Terastal Spire.",
+      "desc": "Luminous emerald-and-crystal crater abyss surrounding the iridescent Area Zero Terastal Spire.",
       "mode": "procedural",
       "region": "paldea",
-      "envFrom": "newisland",
-      "thumbnailFrom": "newisland",
+      "envFrom": "cave",
+      "envDir": "env/paldea_area_zero",
+      "thumbnail": "thumbnails/paldea_area_zero.png",
+      "thumbnailFrom": "cave",
       "size": 380,
       "types": [
         "dragon",
@@ -2950,25 +3377,25 @@
       ],
       "sky": [
         1582664,
-        5736384
+        5736640
       ],
       "fog": 4614824,
       "fogNear": 46,
       "fogFar": 210,
-      "light": 1,
-      "sun": 14809087,
+      "light": 1.02,
+      "sun": 14810111,
       "hemiGround": 4088440,
       "ground": [
-        4614792,
-        6195128,
-        3494520,
-        2506840
+        3964280,
+        5678236,
+        2908258,
+        2115664
       ],
-      "path": 10995688,
+      "path": 11064552,
       "cliff": [
         5202064,
-        3951744,
-        6781112
+        3951472,
+        6781352
       ],
       "water": 0.35,
       "waterColor": 3466984,
@@ -2991,9 +3418,46 @@
       "landmark": {
         "kind": "terastal_spire",
         "name": "Area Zero Terastal Spire",
-        "color": 6750207,
-        "accent": 16748543,
-        "radius": 7.5
+        "color": 7403775,
+        "accent": 16748799,
+        "radius": 7.5,
+        "glbProps": [
+          {
+            "model": "glacier_crystals",
+            "dx": -5.2,
+            "dz": 3.6,
+            "scale": 1.35,
+            "rot": 0.2
+          },
+          {
+            "model": "glacier_crystals",
+            "dx": 5.2,
+            "dz": 3.6,
+            "scale": 1.35,
+            "rot": 2.1
+          },
+          {
+            "model": "cave_crystal",
+            "dx": -4.8,
+            "dz": -4.2,
+            "scale": 1.3,
+            "rot": 1.2
+          },
+          {
+            "model": "cave_crystal",
+            "dx": 4.8,
+            "dz": -4.2,
+            "scale": 1.3,
+            "rot": -1.2
+          },
+          {
+            "model": "psy_spire",
+            "dx": 0,
+            "dz": 6.4,
+            "scale": 1.15,
+            "rot": 0
+          }
+        ]
       },
       "sanctuary": {
         "name": "Zero Lab Underdepths",
@@ -3004,14 +3468,14 @@
           1008,
           1024
         ],
-        "shrine": "shrine",
-        "portal": "sanct_portal",
-        "color": 6750207,
+        "shrine": "psy_altar",
+        "portal": "psy_portal",
+        "color": 6815743,
         "sky": [
           1120328,
-          4149920
+          4149664
         ],
-        "fog": 2771096,
+        "fog": 2770824,
         "fogNear": 30,
         "fogFar": 125,
         "light": 0.96,
@@ -3033,24 +3497,24 @@
       },
       "tex": {
         "top": [
-          4614792,
-          6195128,
-          3494520
+          3964280,
+          5678236,
+          2776160
         ],
         "detail": "moss",
         "side": [
-          5202064,
-          6781112,
-          3294560
+          5137556,
+          7111348,
+          3293800
         ],
         "lip": 6750207,
         "path": [
-          10995688,
-          7902672
+          11853032,
+          8168120
         ],
-        "leaf": 4450512,
-        "bark": 4807024,
-        "rock": 6385568,
+        "leaf": 4450496,
+        "bark": 4807280,
+        "rock": 6385296,
         "accent": 6750207,
         "deco": [
           0,
@@ -3061,6 +3525,32 @@
           5
         ]
       }
+    }
+  ],
+  "toolbarActions": [
+    {
+      "id": "unlock-all-gen39-levels",
+      "label": "Unlock All 14 Gen 3-9 Levels (Master Tier)",
+      "type": "profile-mutate",
+      "mutation": {
+        "unlockBiomes": {
+          "hoenn_petalburg": 3,
+          "hoenn_chimney": 3,
+          "sinnoh_coronet": 3,
+          "sinnoh_eterna": 3,
+          "unova_relic_desert": 3,
+          "unova_dragonspiral": 3,
+          "kalos_azure_bay": 3,
+          "kalos_reflection_cave": 3,
+          "alola_melemele": 3,
+          "alola_wela_volcano": 3,
+          "galar_wild_area": 3,
+          "galar_crown_tundra": 3,
+          "paldea_asado_mesa": 3,
+          "paldea_area_zero": 3
+        }
+      },
+      "reload": true
     }
   ]
 }
