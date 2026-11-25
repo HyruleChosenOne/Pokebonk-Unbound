@@ -1,0 +1,77 @@
+{
+  "id": "classic-sfx-pack",
+  "name": "Classic Sound Effects Pack",
+  "version": "1.0.0",
+  "scope": "client",
+  "author": "HyruleChosenOne",
+  "description": "Replaces PokéBonk menu UI clicks, milestone fanfares (Level Up, Caught, Evolved, Healed, Item & Badge Get, Victory, Defeat, Jackpot, Boss Intro, Poké Flute), and combat/elemental attack impacts with authentic FireRed & LeafGreen soundtrack fanfares and classic GBA chiptune sound effects.",
+  "tags": [
+    "audio",
+    "sfx",
+    "sound-effects",
+    "frlg",
+    "gen1",
+    "gen3",
+    "classic",
+    "menus",
+    "attacks"
+  ],
+  "customSfx": [
+    { "id": "sfx-level-up", "name": "Level Up! (FRLG)", "file": "audio/sfx/sfx-level-up.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
+    { "id": "sfx-heal", "name": "Pokémon Healed (FRLG)", "file": "audio/sfx/sfx-heal.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
+    { "id": "sfx-caught", "name": "Caught a Pokémon! (FRLG)", "file": "audio/sfx/sfx-caught.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
+    { "id": "sfx-item-get", "name": "Obtained an Item! (FRLG)", "file": "audio/sfx/sfx-item-get.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
+    { "id": "sfx-key-item", "name": "Obtained a Key Item! (FRLG)", "file": "audio/sfx/sfx-key-item.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.3 },
+    { "id": "sfx-badge-get", "name": "Obtained a Badge! (FRLG)", "file": "audio/sfx/sfx-badge-get.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
+    { "id": "sfx-evolve-done", "name": "Congratulations! Your Pokémon Evolved! (FRLG)", "file": "audio/sfx/sfx-evolve-done.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
+    { "id": "sfx-evolve", "name": "Evolution Start (FRLG)", "file": "audio/sfx/sfx-evolve.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
+    { "id": "sfx-victory", "name": "Victory! (FRLG)", "file": "audio/sfx/sfx-victory.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.6 },
+    { "id": "sfx-defeat", "name": "Lose / Defeat (FRLG)", "file": "audio/sfx/sfx-defeat.ogg", "volume": 0.88, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
+    { "id": "sfx-jackpot", "name": "Jackpot! (FRLG)", "file": "audio/sfx/sfx-jackpot.ogg", "volume": 0.9, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
+    { "id": "sfx-win-coins", "name": "Win! (FRLG)", "file": "audio/sfx/sfx-win-coins.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.3 },
+    { "id": "sfx-deny", "name": "Move Deleted / Deny (FRLG)", "file": "audio/sfx/sfx-deny.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0, "cooldown": 0.25 },
+    { "id": "sfx-encounter", "name": "Trainers' Eyes Meet (FRLG)", "file": "audio/sfx/sfx-encounter.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0, "cooldown": 0.35 },
+    { "id": "sfx-boss-start", "name": "Boss Appearance (FRLG)", "file": "audio/sfx/sfx-boss-start.ogg", "volume": 0.92, "pitch": 1, "pitchVar": 0, "cooldown": 0.6 },
+    { "id": "sfx-melody", "name": "Poké Flute (FRLG)", "file": "audio/sfx/sfx-melody.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.5 },
+    { "id": "sfx-mystery", "name": "Mystery Gift (FRLG)", "file": "audio/sfx/sfx-mystery.ogg", "volume": 0.85, "pitch": 1, "pitchVar": 0, "cooldown": 0.4 },
+    { "id": "sfx-click", "name": "Menu Confirm (Classic GBA)", "file": "audio/sfx/sfx-click.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.02, "cooldown": 0.03 },
+    { "id": "sfx-hover", "name": "Menu Cursor (Classic GBA)", "file": "audio/sfx/sfx-hover.ogg", "volume": 0.45, "pitch": 1, "pitchVar": 0.02, "cooldown": 0.035 },
+    { "id": "sfx-coin", "name": "Coin Get (Classic GBA)", "file": "audio/sfx/sfx-coin.ogg", "volume": 0.6, "pitch": 1, "pitchVar": 0.03, "cooldown": 0.05 },
+    { "id": "sfx-xp", "name": "EXP Pip (Classic GBA)", "file": "audio/sfx/sfx-xp.ogg", "volume": 0.48, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.035 },
+    { "id": "sfx-ping", "name": "Alert Chime (Classic GBA)", "file": "audio/sfx/sfx-ping.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0, "cooldown": 0.2 },
+    { "id": "sfx-ball-open", "name": "Poké Ball Open (Classic GBA)", "file": "audio/sfx/sfx-ball-open.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.08 },
+    { "id": "sfx-ball-shake", "name": "Poké Ball Shake (Classic GBA)", "file": "audio/sfx/sfx-ball-shake.ogg", "volume": 0.68, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.08 },
+    { "id": "sfx-ball-click", "name": "Poké Ball Lock (Classic GBA)", "file": "audio/sfx/sfx-ball-click.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0, "cooldown": 0.1 },
+    { "id": "sfx-hit-normal", "name": "Normal Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-normal.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.035 },
+    { "id": "sfx-hit-super", "name": "Super Effective Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-super.ogg", "volume": 0.82, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.045 },
+    { "id": "sfx-hit-weak", "name": "Not Very Effective Hit (Classic GBA)", "file": "audio/sfx/sfx-hit-weak.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.04 },
+    { "id": "sfx-ko", "name": "Faint / KO (Classic GBA)", "file": "audio/sfx/sfx-ko.ogg", "volume": 0.74, "pitch": 1, "pitchVar": 0.04, "cooldown": 0.06 },
+    { "id": "sfx-hurt", "name": "Damage Taken (Classic GBA)", "file": "audio/sfx/sfx-hurt.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.08 },
+    { "id": "sfx-dodge", "name": "Quick Dash (Classic GBA)", "file": "audio/sfx/sfx-dodge.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.07 },
+    { "id": "sfx-jump", "name": "Jump / Bounce (Classic GBA)", "file": "audio/sfx/sfx-jump.ogg", "volume": 0.58, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.07 },
+    { "id": "sfx-slam", "name": "Heavy Slam (Classic GBA)", "file": "audio/sfx/sfx-slam.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.09 },
+    { "id": "sfx-atk-fire", "name": "Fire Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-fire.ogg", "volume": 0.62, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
+    { "id": "sfx-atk-water", "name": "Water Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-water.ogg", "volume": 0.62, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
+    { "id": "sfx-atk-electric", "name": "Electric Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-electric.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
+    { "id": "sfx-atk-grass", "name": "Grass Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-grass.ogg", "volume": 0.6, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.055 },
+    { "id": "sfx-atk-ice", "name": "Ice Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-ice.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.06 },
+    { "id": "sfx-atk-psychic", "name": "Psychic Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-psychic.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.065 },
+    { "id": "sfx-atk-ghost", "name": "Ghost / Dark Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-ghost.ogg", "volume": 0.64, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.065 },
+    { "id": "sfx-atk-slash", "name": "Slash Attack (Classic GBA)", "file": "audio/sfx/sfx-atk-slash.ogg", "volume": 0.66, "pitch": 1, "pitchVar": 0.08, "cooldown": 0.05 },
+    { "id": "sfx-atk-beam", "name": "Hyper Beam (Classic GBA)", "file": "audio/sfx/sfx-atk-beam.ogg", "volume": 0.72, "pitch": 1, "pitchVar": 0.05, "cooldown": 0.12 },
+    { "id": "sfx-atk-boom", "name": "Explosion / Nova (Classic GBA)", "file": "audio/sfx/sfx-atk-boom.ogg", "volume": 0.78, "pitch": 1, "pitchVar": 0.06, "cooldown": 0.08 },
+    { "id": "sfx-atk-power", "name": "Stat Boost (Classic GBA)", "file": "audio/sfx/sfx-atk-power.ogg", "volume": 0.65, "pitch": 1, "pitchVar": 0.03, "cooldown": 0.12 },
+    { "id": "sfx-atk-shot", "name": "Projectile Shot (Classic GBA)", "file": "audio/sfx/sfx-atk-shot.ogg", "volume": 0.56, "pitch": 1, "pitchVar": 0.09, "cooldown": 0.05 }
+  ],
+  "bundlePatches": [
+    {
+      "matchFile": "^assets/dom-.*\\.js$",
+      "patches": [
+        {
+          "find": "let r=e.createBiquadFilter();r.type=`highshelf`,r.frequency.value=2800",
+          "replace": "if(!this._pbClassicSfxWired){this._pbClassicSfxWired=!0;const _fanfares=new Set([`sfx-level-up`,`sfx-heal`,`sfx-caught`,`sfx-item-get`,`sfx-key-item`,`sfx-badge-get`,`sfx-evolve`,`sfx-evolve-done`,`sfx-victory`,`sfx-defeat`,`sfx-jackpot`,`sfx-win-coins`,`sfx-encounter`,`sfx-boss-start`,`sfx-melody`]);const _ensureDefs=()=>{if(!this._customSfxDefs)this.playCustomSfx?.(`__pb_init__`);return this._customSfxDefs};const _play=(id,opts={})=>{if(!this.ctx)return!0;const defs=_ensureDefs();const def=defs&&defs[id];if(!def)return!1;const now=performance.now();const lm=this._customSfxLast||(this._customSfxLast=new Map());if(def.cooldown>0&&now-(lm.get(id)||0)<def.cooldown*1e3)return!0;lm.set(id,now);const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const buf=cache.get(id);const startBuf=(b)=>{if(!b||!this.ctx||this.ctx.state===`closed`)return;if(_fanfares.has(id)&&this._pbCurFanfare){try{this._pbCurFanfare.stop()}catch{}this._pbCurFanfare=null}const src=this.ctx.createBufferSource();src.buffer=b;const pv=opts.pitchVar??def.pitchVar??0;const bp=opts.pitch??def.pitch??1;src.playbackRate.value=Math.max(0.25,Math.min(4,bp+(pv?(Math.random()*2-1)*pv:0)));const g=this.ctx.createGain();g.gain.value=Math.max(0.01,Math.min(3,(opts.volume??1)*(def.volume??1)));src.connect(g);g.connect(this.sfxBus||this.master);if(_fanfares.has(id)){this._pbCurFanfare=src;src.onended=()=>{if(this._pbCurFanfare===src)this._pbCurFanfare=null}}src.start()};if(buf&&buf!==`loading`&&buf!==`missing`){startBuf(buf);return!0}if(!buf){cache.set(id,`loading`);fetch(h(def.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b){cache.set(id,b);startBuf(b)}else cache.set(id,`missing`)}).catch(()=>{cache.set(id,`missing`)})}return!0};const _map={click:`sfx-click`,hover:`sfx-hover`,deny:`sfx-deny`,levelUp:`sfx-level-up`,heal:`sfx-heal`,caught:`sfx-caught`,evolve:`sfx-evolve`,evolveDone:`sfx-evolve-done`,victory:`sfx-victory`,defeat:`sfx-defeat`,slotCurse:`sfx-defeat`,jackpot:`sfx-jackpot`,slotCoins:`sfx-jackpot`,bonkGet:`sfx-item-get`,chest:`sfx-item-get`,gearLoot:`sfx-item-get`,gearPick:`sfx-item-get`,bonkDrop:`sfx-key-item`,reveal:`sfx-key-item`,shiny:`sfx-badge-get`,streakMilestone:`sfx-badge-get`,extractDone:`sfx-badge-get`,encounter:`sfx-encounter`,alarm:`sfx-encounter`,bossStart:`sfx-boss-start`,melody:`sfx-melody`,matchFound:`sfx-win-coins`,overtake:`sfx-win-coins`,coin:`sfx-coin`,chat:`sfx-ping`,ping:`sfx-ping`,ballOpen:`sfx-ball-open`,ballShake:`sfx-ball-shake`,ballClick:`sfx-ball-click`,ko:`sfx-ko`,hurt:`sfx-hurt`,dodge:`sfx-dodge`,whoosh:`sfx-dodge`,glide:`sfx-dodge`,jump:`sfx-jump`,bounce:`sfx-jump`,roll:`sfx-jump`,slam:`sfx-slam`,land:`sfx-slam`,dive:`sfx-slam`,dig:`sfx-slam`,erupt:`sfx-slam`,spikes:`sfx-slam`,slash:`sfx-atk-slash`,zap:`sfx-atk-electric`,power:`sfx-atk-power`};for(const[m,sid]of Object.entries(_map)){const orig=this[m]?.bind(this);this[m]=(...a)=>{if(!_play(sid))orig?.(...a)}}const _origXp=this.xp?.bind(this);this.xp=(c=1)=>{const pitch=Math.min(1.65,0.92+Math.min(c-1,14)*0.045);if(!_play(`sfx-xp`,{pitch}))_origXp?.(c)};const _origHit=this.hit?.bind(this);this.hit=(eff=1,crit=!1,mega=!1)=>{const sid=eff>1.01||mega?`sfx-hit-super`:eff<0.99?`sfx-hit-weak`:`sfx-hit-normal`;if(!_play(sid,{pitch:crit?1.16:1,volume:mega?1.15:1}))_origHit?.(eff,crit,mega)};const _origShot=this.shot?.bind(this);this.shot=(tp,v=0.5)=>{const em={fire:`sfx-atk-fire`,water:`sfx-atk-water`,electric:`sfx-atk-electric`,grass:`sfx-atk-grass`,ice:`sfx-atk-ice`,psychic:`sfx-atk-psychic`,ghost:`sfx-atk-ghost`,dark:`sfx-atk-ghost`};if(!_play(em[tp]||`sfx-atk-shot`,{volume:Math.max(0.55,Math.min(1.15,(v||0.5)*1.4))}))_origShot?.(tp,v)};const _origBeam=this.beam?.bind(this);this.beam=(tp)=>{if(!_play(tp===`ice`?`sfx-atk-ice`:`sfx-atk-beam`))_origBeam?.(tp)};const _origCone=this.cone?.bind(this);this.cone=(tp,d)=>{if(!_play(tp===`fire`?`sfx-atk-fire`:`sfx-atk-water`))_origCone?.(tp,d)};const _origBoom=this.boom?.bind(this);this.boom=(s=1)=>{if(!_play(`sfx-atk-boom`,{volume:Math.max(0.65,Math.min(1.2,0.7+(s||1)*0.3))}))_origBoom?.(s)};const _origNova=this.nova?.bind(this);this.nova=(tp)=>{const em={fire:`sfx-atk-fire`,water:`sfx-atk-water`,electric:`sfx-atk-electric`,ice:`sfx-atk-ice`,psychic:`sfx-atk-psychic`,ghost:`sfx-atk-ghost`};if(!_play(em[tp]||`sfx-atk-boom`))_origNova?.(tp)};setTimeout(()=>{const pre=[`sfx-click`,`sfx-hover`,`sfx-hit-normal`,`sfx-hit-super`,`sfx-hit-weak`,`sfx-ko`,`sfx-xp`,`sfx-coin`,`sfx-atk-fire`,`sfx-atk-water`,`sfx-atk-electric`,`sfx-atk-grass`,`sfx-atk-ice`,`sfx-atk-psychic`,`sfx-atk-ghost`,`sfx-atk-slash`,`sfx-atk-beam`,`sfx-atk-boom`,`sfx-atk-shot`,`sfx-level-up`,`sfx-item-get`,`sfx-heal`];const cache=this._customSfxBufs||(this._customSfxBufs=new Map());const defs=_ensureDefs();if(!defs)return;for(const id of pre){const d=defs[id];if(!d||cache.has(id))continue;cache.set(id,`loading`);fetch(h(d.url)).then(r=>r.ok?r.arrayBuffer():Promise.reject()).then(ab=>this.ctx&&this.ctx.decodeAudioData(ab)).then(b=>{if(b)cache.set(id,b)}).catch(()=>{cache.delete(id)})}},350)}let r=e.createBiquadFilter();r.type=`highshelf`,r.frequency.value=2800"
+        }
+      ]
+    }
+  ]
+}

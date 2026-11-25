@@ -33,13 +33,13 @@
   "color": "blue",
   "flavor": "Through Battle Bond, Greninja forms a giant Water Shuriken on its back and moves faster than the eye can follow.",
   "spriteMeta": {
-    "w": 320,
-    "h": 3280,
+    "w": 256,
+    "h": 2624,
     "anims": {
       "walk": {
         "y": 0,
-        "fw": 80,
-        "fh": 80,
+        "fw": 64,
+        "fh": 64,
         "n": 4,
         "rows": 8,
         "d": [
@@ -50,9 +50,9 @@
         ]
       },
       "idle": {
-        "y": 640,
-        "fw": 80,
-        "fh": 80,
+        "y": 512,
+        "fw": 64,
+        "fh": 64,
         "n": 4,
         "rows": 8,
         "d": [
@@ -63,9 +63,9 @@
         ]
       },
       "attack": {
-        "y": 1280,
-        "fw": 80,
-        "fh": 80,
+        "y": 1024,
+        "fw": 64,
+        "fh": 64,
         "n": 4,
         "rows": 8,
         "d": [
@@ -76,9 +76,9 @@
         ]
       },
       "hurt": {
-        "y": 1920,
-        "fw": 80,
-        "fh": 80,
+        "y": 1536,
+        "fw": 64,
+        "fh": 64,
         "n": 2,
         "rows": 8,
         "d": [
@@ -87,9 +87,9 @@
         ]
       },
       "faint": {
-        "y": 2560,
-        "fw": 80,
-        "fh": 80,
+        "y": 2048,
+        "fw": 64,
+        "fh": 64,
         "n": 2,
         "rows": 1,
         "d": [
@@ -98,9 +98,9 @@
         ]
       },
       "charge": {
-        "y": 2640,
-        "fw": 80,
-        "fh": 80,
+        "y": 2112,
+        "fw": 64,
+        "fh": 64,
         "n": 4,
         "rows": 8,
         "d": [

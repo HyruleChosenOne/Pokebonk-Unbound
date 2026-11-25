@@ -1,19 +1,18 @@
 {
   "id": "pokemon-audio-pack",
   "name": "Gen 1&2 Soundtrack",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "HyruleChosenOne",
   "category": "Audio",
   "scope": "client",
-  "tagline": "43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds), Title Screen & Main Menu song replacement, plus 6 iconic SFX.",
-  "description": "Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Replaces the Title Screen & Main Menu song automatically (configurable in Unbound Settings -> Mod Configs), registers 10 menu themes, 20 battle/route/dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX stings — while keeping every vanilla PokéBonk track selectable.",
+  "featured": false,
+  "tagline": "53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events.",
+  "description": "Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (53 tracks total). Covers every single PokéBonk song including Main Menu, Halloween / Lavender Tower Night (Lavender Town FRLG), Johto Ecruteak Sunset (Bell Tower HGSS), Dynamax Sky (Sinjoh Ruins HGSS), Mewtwo Strikes Back Boss Rush (Battle! Mewtwo FRLG), all 5 In-Game battle themes, dungeons, and legendary/champion bosses. Pairs seamlessly with Classic Sound Effects via the Classic Gen 1&2 Audio Collection Modpack.",
   "highlights": [
-    "Replaces the Title Screen & Main Menu song automatically with FRLG Title Screen (customizable to HGSS Title, Random, or any Kanto/Johto town theme in Mod Configs)",
-    "10 selectable main menu themes: Title Screen (FRLG & HGSS), Pallet Town, New Bark Town, National Park, Route 1, Route 29, Goldenrod, Ecruteak & Cerulean City",
-    "20 in-game battle & dungeon themes: Wild, Trainer, Gym Leader, Rival, Team Rocket, Rocket Hideout, Silph Co., Victory Road, Pokémon Tower, Battle Tower & GB Sounds classics",
-    "13 legendary & champion boss themes: Mewtwo, Legendary Birds, Deoxys, Champion Blue/Lance/Red, Ho-Oh, Lugia, Raikou, Entei, Suicune, Frontier Brain & Super-Ancient",
-    "6 short iconic SFX clips (Level Up, Item Get, Heal, Caught, Badge Get & Evolution) routed through PokéBonk's native SFX slider",
-    "100% additive — every vanilla PokéBonk song remains selectable and intact"
+    "Covers EVERY PokéBonk song & seasonal event: Main Menu, Lavender Tower Night, Johto Sunset, Dynamax Sky, Mewtwo Boss Rush, all 5 In-Game slots, and Bosses",
+    "53 curated FireRed/LeafGreen, HeartGold/SoulSilver, and 8-bit GB Sounds tracks",
+    "Configurable default Title Screen / Main Menu theme right in Mod Configs",
+    "Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"

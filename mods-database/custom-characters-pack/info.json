@@ -1,18 +1,18 @@
 {
   "id": "custom-characters-pack",
-  "name": "Custom & Non-Dexed Pokémon Pack (18 Fighters)",
-  "version": "1.1.0",
+  "name": "Non-Dexed Pokémon Pack (18 Fighters)",
+  "version": "2.0.0",
   "author": "HyruleChosenOne",
   "category": "Characters",
   "scope": "gameplay",
-  "tagline": "18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more.",
-  "description": "Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.",
+  "tagline": "18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation.",
+  "description": "Polished 18-fighter Non-Dexed Pokémon Pack (#2001-#2023) featuring 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Matches the full Gen 3-9 expansion standard with 100% animated multi-frame sprites (0 static sprites), Dual Shinies (Classic Shiny + bespoke Alt-Palette Shiny) for every fighter, 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and complete 11-language global localization.",
   "highlights": [
-    "Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)",
-    "Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)",
-    "Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja",
-    "37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items",
-    "Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)"
+    "18 fully animated Non-Dexed fighters (0 static sprites, including upgraded Mega Mewtwo X & Ash-Greninja animated sheets)",
+    "Dual Shinies (Classic Shiny + bespoke Alt-Palette Shiny) for every single fighter including DMG-Green & Cyber-Violet MissingNo.",
+    "Complete 11-language global localization (EN, ES, PT, FR, DE, IT, JA, KO, RU, ZH, ZHT) for all 18 fighters, roles, 37 moves, 18 Ultimates, and 5 items",
+    "Glitch, Beta & Spin-Off icons: MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon, Pikachu Libre, and Hakogame",
+    "5 Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja with 37 attacks & 15 GPU VFX"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"

@@ -13,6 +13,7 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | Pack ID | Name | Included Mods | Scope | Summary |
 | --- | --- | --- | --- | --- |
 | `gen3-9-complete-expansion` | **Gen 3-9 Complete Expansion** | `national-dex-gen3-9` + `gen3-9-regions-levels` | **Gameplay** | Gen 3-9 Characters + Gen 3-9 Stages bundled together in 1 click. |
+| `classic-gen1-2-audio-collection` | **Classic Gen 1&2 Audio Collection** | `pokemon-audio-pack` + `classic-sfx-pack` | Client | Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (45 FRLG/GBA SFX) bundled together. |
 
 ---
 
@@ -20,12 +21,13 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.1.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 2.22 MB | `v1.1.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
-| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 49.23 MB | `v1.1.0` | Expands the playable Pokédex to #1025 with 419 Gen 3-9 families, Dual Shinies (Classic + Alt Palette), 72 clean-named attacks, and 24 Ultimates. |
-| `custom-characters-pack` | [Custom & Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 5.91 MB | `v1.3.0` | 18 playable Non-Dexed, Glitch, Beta, Spin-Off, and Mega/Primal Pokémon including MissingNo., Shadow Lugia, Primal Dialga, Bad Egg, Substitute Doll, Beta Arceus, and more. |
-| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 64.17 MB | `v1.2.0` | 43 classic Kanto & Johto music tracks (FRLG, HGSS & GB Sounds), Title Screen & Main Menu song replacement, plus 6 iconic SFX. |
-| `minish-cap-link` | [Link (The Minish Cap) — Playable Character & Custom Attacks](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 1.55 MB | `v1.0.0` | Playable Link from The Minish Cap with 8-direction sprites, 5 custom attacks, dedicated custom VFX, and Four Sword Ultimate. |
+| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.0` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 17.64 MB | `v1.2.0` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom pixel-art biome textures, thumbnails, and 3D landmarks. |
+| `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 54.54 MB | `v1.2.0` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
+| `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 1.44 MB | `v1.0.0` | Authentic FireRed/LeafGreen menu fanfares, GBA UI clicks, and classic elemental attack sound effects. |
+| `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 73.85 MB | `v1.3.0` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
+| `minish-cap-link` | [Link (The Minish Cap) — Playable Character, Hyrule & Dark World](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.53 MB | `v2.0.0` | Playable Link (unlocked by default!) with 9 Minish Cap items & sword moves, Light Arrows Primary Fusion, Four Sword Ultimate, plus Hyrule Castle & Dark World Pyramid levels! |
+| `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 8.72 MB | `v2.0.0` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
 
 ---
 
@@ -40,19 +42,20 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Quality of Life (**Featured**)
 - **Size**: 1.23 MB (3 files)
-- **Version**: `v1.1.0`
+- **Version**: `v1.2.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/hyrules-mods/info.json`](mods-database/hyrules-mods/info.json)
 - **Tags**: `qol`, `collection`, `enabler`, `events`, `p2p`, `themes`, `cheats`, `unlocks`
 
-All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.
+All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub, unlocks direct IP:Port P2P Co-op multiplayer with Local Lobbies browser, adds live 3D main menu diorama and music selectors, and provides reworked Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities.
 
 **Highlights:**
 - Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub
-- Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining
+- Direct IP:Port Peer-to-Peer Co-op multiplayer with UDP Local Lobbies browser & 1-click Mod Sync
 - Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)
-- Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, Unlock All Wardrobe, and Trainer Save Utilities)
+- Solo Combat Cheats: Run Speed 1x/1.5x/2x/3x, God Mode, Overdrive, Turbo XP (5x), Super Magnet & Luck, Instant Ultimate, Unlock All Difficulties
+- Full Unlocks: Unlock All (Full Profile Customization), Unlock All Clan & Rank Rewards, Unlock All Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests
 
 
 <a id="gen3-9-regions-levels"></a>
@@ -63,14 +66,14 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `gen3-9-regions-levels`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
-- **Size**: 2.22 MB (87 files)
-- **Version**: `v1.1.0`
+- **Size**: 17.64 MB (102 files)
+- **Version**: `v1.2.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
 - **Info File**: [`mods-database/gen3-9-regions-levels/info.json`](mods-database/gen3-9-regions-levels/info.json)
-- **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`
+- **Tags**: `levels`, `regions`, `maps`, `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`, `music`, `i18n`, `custom-terrain`
 
-Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's Map Picker with 2 distinct maps each (14 levels total). Every map features custom PokéBonk-style pixel-art terrain, cliff, path, and prop textures, bespoke Map Picker artwork, accurate biome lighting and weather pools, sanctuary arenas, regional encounters, and textured 3D centerpiece landmarks with authentic props. Works completely standalone with vanilla Kanto/Johto Pokémon or paired with National Dex Expansion (Gen 3-9).
+Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures & thumbnails, and full 11-language global translation.
 
 **Highlights:**
 - Hoenn: Petalburg Canopy & Mt. Chimney Caldera
@@ -90,46 +93,45 @@ Standalone regional levels expansion adding all 7 Gen 3-9 regions to PokéBonk's
 - **ID**: `national-dex-gen3-9`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters (**Featured**)
-- **Size**: 49.23 MB (3099 files)
-- **Version**: `v1.1.0`
+- **Size**: 54.54 MB (3141 files)
+- **Version**: `v1.2.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/national-dex-gen3-9/info.json`](mods-database/national-dex-gen3-9/info.json)
-- **Tags**: `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`, `custom-moves`, `dual-shinies`, `national-dex`
+- **Tags**: `gen3`, `gen4`, `gen5`, `gen6`, `gen7`, `gen8`, `gen9`, `custom-moves`, `dual-shinies`, `national-dex`, `i18n`
 
-Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea (#252-#1025). Adds 419 playable base evolution families, 774 species with animated sprites, official shiny palettes mapped to Classic Shiny plus bespoke alternative-palette Shiny sprites for every single Gen 3-9 Pokémon, 72 custom Gen 3-9 attacks across all 18 types with clean attack names, and 24 custom signature Ultimates. Pure Pokémon and attacks pack with zero bundled levels; pair with Gen 3-9 Regions & Levels Pack for regional maps.
+Complete Gen 3 through Gen 9 character and moveset expansion covering Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea (#252-#1025). Adds 419 playable base evolution families, 774 species with 100% animated multi-frame sprites (including upgraded Copperajah and all Gen 7-9 species with zero static sheets), Dual Shinies (official Classic Shiny + custom alternative-palette Shiny), 72 custom Gen 3-9 attacks across all 18 types, 24 custom signature Ultimates, and full 11-language global localization (EN, ES, PT, FR, DE, IT, JA, KO, RU, ZH, ZHT).
 
 **Highlights:**
-- Expands the Pokédex cap from #251 to #1025 across all 7 Gen 3-9 regions (419 playable families, 774 species)
+- Expands the Pokédex cap from #251 to #1025 across all 7 Gen 3-9 regions (419 playable families, 774 fully animated species — 0 static sprites)
+- Full 11-language global localization for all 774 Pokémon names, 72 custom moves, 24 Ultimates, roles, and regions
 - Dual Shinies for all 774 Gen 3-9 Pokémon: official shiny colors as Classic Shiny + custom alternative-palette sprites as Shiny
-- 72 custom Gen 3-9 attacks across all 18 types with clean canonical attack names rendered via PokéBonk's native GPU VFX engine
+- 72 custom Gen 3-9 attacks across all 18 types rendered via PokéBonk native GPU VFX engine
 - 24 custom Ultimates (Rayquaza, Lucario, Garchomp, Greninja, Zacian, Koraidon, Miraidon, Raging Bolt, Terapagos, and more)
-- Characters start locked by default for progression, with per-generation unlock tools in Unbound Settings
 
 
-<a id="custom-characters-pack"></a>
-### Custom & Non-Dexed Pokémon Pack (18 Fighters)
+<a id="classic-sfx-pack"></a>
+### Classic Sound Effects Pack
 
-![Custom & Non-Dexed Pokémon Pack (18 Fighters)](mods-database/custom-characters-pack/preview.png)
+![Classic Sound Effects Pack](mods-database/classic-sfx-pack/preview.png)
 
-- **ID**: `custom-characters-pack`
-- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
-- **Category**: Characters
-- **Size**: 5.91 MB (87 files)
-- **Version**: `v1.3.0`
+- **ID**: `classic-sfx-pack`
+- **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
+- **Category**: Audio
+- **Size**: 1.44 MB (48 files)
+- **Version**: `v1.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
-- **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
-- **Tags**: `custom-characters`, `non-dexed`, `missingno`, `shadow-lugia`, `primal-dialga`, `beta-pokemon`, `custom-attacks`, `custom-vfx`, `custom-items`, `forms`
+- **Info File**: [`mods-database/classic-sfx-pack/info.json`](mods-database/classic-sfx-pack/info.json)
+- **Tags**: `audio`, `sfx`, `sound-effects`, `frlg`, `gen1`, `gen3`, `classic`, `menus`, `attacks`
 
-Expands the core Custom region (#2000-#9999) with 18 fully animated playable fighters: 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo. with animated Gen 1 glitch sprites and DMG-Green Shiny, Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Every fighter includes 8-direction animations, portraits, signature custom attacks with Core Custom VFX, and custom Ultimates.
+Transforms PokéBonk's soundscape with 45 classic sound effects: 17 authentic FireRed & LeafGreen soundtrack fanfares and jingles (Level Up!, Pokémon Healed, Caught a Pokémon!, Obtained an Item/Key Item/Badge, Evolution, Victory, Defeat, Jackpot, Move Deleted, Trainers' Eyes Meet, Boss Appearance, Poké Flute, Mystery Gift) paired with 28 crisp GBA-era menu UI clicks, Poké Ball sounds, effectiveness hit crunches, and elemental combat attack SFX.
 
 **Highlights:**
-- Glitch & Oddity icons: MissingNo. (#2011, with custom animated glitch sheet & DMG-Green Shiny), Substitute Doll (#2012), and Bad Egg (#2013)
-- Spin-Off & Unreleased legends: Shadow Lugia XD001 (#2014), Primal Dialga (#2015), Shadow Mewtwo (#2016), Eternal Flower Floette (#2017), Ultra Necrozma (#2018), Beta Arceus (#2019), Purple Kecleon (#2020), Mikon (#2021), Pikachu Libre (#2022), and Hakogame (#2023)
-- Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja
-- 37 signature custom attacks, 15 custom GPU VFX presets, 18 custom Ultimates, and 5 custom Pokéball pickup items
-- Drop-in ./characters/ folder support — runs natively via the Core Modding API (no separate enabler mod required)
+- 17 authentic FireRed & LeafGreen fanfares sourced from archive.org/download/pkmn-frlg-soundtrack
+- Classic GBA menu confirm, cursor tick, EXP pip, coin chime, and Poké Ball capture SFX
+- Full combat & elemental attack overhaul (Normal / Super Effective / Weak hits, KO, Fire, Water, Electric, Grass, Ice, Psychic, Ghost, Slash, Beam, Boom)
+- Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed
 
 
 <a id="pokemon-audio-pack"></a>
@@ -140,47 +142,71 @@ Expands the core Custom region (#2000-#9999) with 18 fully animated playable fig
 - **ID**: `pokemon-audio-pack`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Audio
-- **Size**: 64.17 MB (52 files)
-- **Version**: `v1.2.0`
+- **Size**: 73.85 MB (62 files)
+- **Version**: `v1.3.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/pokemon-audio-pack/info.json`](mods-database/pokemon-audio-pack/info.json)
-- **Tags**: `audio`, `music`, `sfx`, `gen1`, `gen2`, `kanto`, `johto`, `frlg`, `hgss`, `soundtrack`
+- **Tags**: `audio`, `music`, `gen1`, `gen2`, `kanto`, `johto`, `frlg`, `hgss`, `events`, `soundtrack`
 
-Expanded additive Gen 1 & Gen 2 Pokémon soundtrack and sound effects mod curated from FireRed/LeafGreen, HeartGold/SoulSilver, and authentic 8-bit GB Sounds archives. Replaces the Title Screen & Main Menu song automatically (configurable in Unbound Settings -> Mod Configs), registers 10 menu themes, 20 battle/route/dungeon themes, 13 legendary & champion boss themes, and 6 classic SFX stings — while keeping every vanilla PokéBonk track selectable.
+Complete Gen 1 & Gen 2 Pokémon soundtrack curated from FireRed/LeafGreen, HeartGold/SoulSilver, and GB Sounds (53 tracks total). Covers every single PokéBonk song including Main Menu, Halloween / Lavender Tower Night (Lavender Town FRLG), Johto Ecruteak Sunset (Bell Tower HGSS), Dynamax Sky (Sinjoh Ruins HGSS), Mewtwo Strikes Back Boss Rush (Battle! Mewtwo FRLG), all 5 In-Game battle themes, dungeons, and legendary/champion bosses. Pairs seamlessly with Classic Sound Effects via the Classic Gen 1&2 Audio Collection Modpack.
 
 **Highlights:**
-- Replaces the Title Screen & Main Menu song automatically with FRLG Title Screen (customizable to HGSS Title, Random, or any Kanto/Johto town theme in Mod Configs)
-- 10 selectable main menu themes: Title Screen (FRLG & HGSS), Pallet Town, New Bark Town, National Park, Route 1, Route 29, Goldenrod, Ecruteak & Cerulean City
-- 20 in-game battle & dungeon themes: Wild, Trainer, Gym Leader, Rival, Team Rocket, Rocket Hideout, Silph Co., Victory Road, Pokémon Tower, Battle Tower & GB Sounds classics
-- 13 legendary & champion boss themes: Mewtwo, Legendary Birds, Deoxys, Champion Blue/Lance/Red, Ho-Oh, Lugia, Raikou, Entei, Suicune, Frontier Brain & Super-Ancient
-- 6 short iconic SFX clips (Level Up, Item Get, Heal, Caught, Badge Get & Evolution) routed through PokéBonk's native SFX slider
-- 100% additive — every vanilla PokéBonk song remains selectable and intact
+- Covers EVERY PokéBonk song & seasonal event: Main Menu, Lavender Tower Night, Johto Sunset, Dynamax Sky, Mewtwo Boss Rush, all 5 In-Game slots, and Bosses
+- 53 curated FireRed/LeafGreen, HeartGold/SoulSilver, and 8-bit GB Sounds tracks
+- Configurable default Title Screen / Main Menu theme right in Mod Configs
+- Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed
 
 
 <a id="minish-cap-link"></a>
-### Link (The Minish Cap) — Playable Character & Custom Attacks
+### Link (The Minish Cap) — Playable Character, Hyrule & Dark World
 
-![Link (The Minish Cap) — Playable Character & Custom Attacks](mods-database/minish-cap-link/preview.png)
+![Link (The Minish Cap) — Playable Character, Hyrule & Dark World](mods-database/minish-cap-link/preview.png)
 
 - **ID**: `minish-cap-link`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Characters
-- **Size**: 1.55 MB (8 files)
-- **Version**: `v1.0.0`
+- **Size**: 5.53 MB (23 files)
+- **Version**: `v2.0.0`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/minish-cap-link/info.json`](mods-database/minish-cap-link/info.json)
-- **Tags**: `character`, `zelda`, `minish-cap`, `custom-attacks`, `custom-vfx`, `custom-items`
+- **Tags**: `character`, `zelda`, `minish-cap`, `hyrule`, `dark-world`, `levels`, `custom-attacks`, `custom-vfx`, `custom-items`, `fusion`, `i18n`, `music`
 
-Brings Link from The Legend of Zelda: The Minish Cap into PokéBonk as a fully animated playable fighter in the Custom region (#2010). Features complete 8-direction walk, idle, attack, and hurt spritesheets, a Four Sword Red shiny variant, 5 signature Minish Cap custom attacks built with the Core Custom VFX engine, a custom Four Sword Hurricane Spin Ultimate, and 2 Hyrule Pokéball pickup items.
+Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.
 
 **Highlights:**
-- Full 8-direction GBA-style animated spritesheet plus Four Sword Red shiny variant
-- 5 custom attacks: Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and Flame Lantern
-- 5 custom GPU VFX presets showcasing dual-color slash arcs, returning crescents, gale waves, magic beams, and flame rings
-- Custom Ultimate: Four Sword Hurricane Spin with rune/petal shockwaves and slash bursts
-- 2 custom Pokéball items: Gold Kinstone and Pegasus Boots
+- Link & both Zelda levels are 100% unlocked by default the moment you enable the mod
+- 2 custom Zelda levels with bespoke Nano Banana pixel-art spritework & full PokéBonk-native collision: Hyrule Field (featuring Hyrule Castle POI) and The Dark World (featuring the Pyramid of Power POI)
+- Complete Minish Cap Sword & Items moveset (9 custom moves & GPU VFX): Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, and Roc's Cape
+- Primary Signature Fusion: Light Arrows (Picori Blade + Hero's Bow) unleashing piercing golden arrows & Triforce radiance — plus his signature Four Sword Hurricane Spin Ultimate
+- 4 Minish Cap Pokéball items (Gold Kinstone, Pegasus Boots, Mirror Shield, Ocarina of Wind) & 11-language global translation
+- Includes authentic A Link to the Past Overworld & Dark World SNES music tracks mapped directly to Hyrule Field & The Dark World (zero audio overlap)
+
+
+<a id="custom-characters-pack"></a>
+### Non-Dexed Pokémon Pack (18 Fighters)
+
+![Non-Dexed Pokémon Pack (18 Fighters)](mods-database/custom-characters-pack/preview.png)
+
+- **ID**: `custom-characters-pack`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
+- **Category**: Characters
+- **Size**: 8.72 MB (157 files)
+- **Version**: `v2.0.0`
+- **Author**: HyruleChosenOne
+- **Requirements**: Offline Mode (Mod Engine ON)
+- **Info File**: [`mods-database/custom-characters-pack/info.json`](mods-database/custom-characters-pack/info.json)
+- **Tags**: `custom-characters`, `non-dexed`, `missingno`, `shadow-lugia`, `primal-dialga`, `beta-pokemon`, `custom-attacks`, `custom-vfx`, `custom-items`, `forms`, `dual-shinies`, `i18n`
+
+Polished 18-fighter Non-Dexed Pokémon Pack (#2001-#2023) featuring 13 iconic Non-Dexed, Glitch, Beta, and Spin-Off legends (MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon Beta Vulpix, Pikachu Libre, and Hakogame Beta Turtle) plus 5 Special Forms (Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja). Matches the full Gen 3-9 expansion standard with 100% animated multi-frame sprites (0 static sprites), Dual Shinies (Classic Shiny + bespoke Alt-Palette Shiny) for every fighter, 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and complete 11-language global localization.
+
+**Highlights:**
+- 18 fully animated Non-Dexed fighters (0 static sprites, including upgraded Mega Mewtwo X & Ash-Greninja animated sheets)
+- Dual Shinies (Classic Shiny + bespoke Alt-Palette Shiny) for every single fighter including DMG-Green & Cyber-Violet MissingNo.
+- Complete 11-language global localization (EN, ES, PT, FR, DE, IT, JA, KO, RU, ZH, ZHT) for all 18 fighters, roles, 37 moves, 18 Ultimates, and 5 items
+- Glitch, Beta & Spin-Off icons: MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon, Pikachu Libre, and Hakogame
+- 5 Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja with 37 attacks & 15 GPU VFX
 
 ---
 

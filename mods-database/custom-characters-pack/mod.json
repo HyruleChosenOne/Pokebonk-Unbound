@@ -1,10 +1,10 @@
 {
   "id": "custom-characters-pack",
-  "name": "Custom & Non-Dexed Pokémon Pack (18 Fighters)",
-  "version": "1.3.0",
+  "name": "Non-Dexed Pokémon Pack (18 Fighters)",
+  "version": "2.0.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "18 playable Custom & Non-Dexed Pokémon in the Custom region: MissingNo. (with DMG-Green Glitch Shiny), Substitute Doll, Bad Egg, Shadow Lugia (XD001), Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon (Beta Vulpix), Pikachu Libre, Hakogame (Beta Turtle), Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja — with 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and drop-in ./characters/ support.",
+  "description": "Polished 18-fighter Non-Dexed Pokémon expansion featuring MissingNo. (with DMG-Green Classic & Neon Cyber Alt Shiny), Substitute Doll, Bad Egg, Shadow Lugia (XD001), Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon (Beta Vulpix), Pikachu Libre, Hakogame (Beta Turtle), Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja — all with 100% animated multi-frame sprites, Dual Shinies (Classic + Alt Palette), 37 custom attacks, 15 custom VFX presets, 18 custom Ultimates, 5 custom items, and full 11-language global translation.",
   "tags": [
     "custom-characters",
     "non-dexed",
@@ -15,7 +15,9 @@
     "custom-attacks",
     "custom-vfx",
     "custom-items",
-    "forms"
+    "forms",
+    "dual-shinies",
+    "i18n"
   ],
   "charactersDir": "characters",
   "customItems": [
@@ -142,7 +144,7 @@
   "regions": [
     {
       "id": "custom",
-      "name": "Custom",
+      "name": "Non-Dexed",
       "gen": 99,
       "dex": [
         2000,
@@ -1106,6 +1108,123 @@
       "hitShape": "PixSplash",
       "hitColor": "#b0e0ff",
       "hitCount": 7
+    }
+  ],
+  "bundlePatches": [
+    {
+      "matchFile": "^assets/cosmetics-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "function (\\w+)\\(e,t\\)\\{return t===`shiny`\\?e:t===`spectral`\\?-e:t===`classic`\\?(\\w+)\\+e:t===`t1`\\?(\\w+)\\[0\\]\\+e:t===`t2`\\?\\3\\[1\\]\\+e:t===`l1`\\?(\\w+)\\[0\\]\\+e:t===`l2`\\?\\4\\[1\\]\\+e:t===`l3`\\?\\4\\[2\\]\\+e:t===`st`\\?(\\w+)\\+e:t===`vg`\\?(\\w+)\\+e:t===`my`\\?(\\w+)\\+e:\\(t===`m1`\\?(\\w+)\\[0\\]:\\8\\[1\\]\\)\\+e\\}function (\\w+)\\(e\\)\\{return!Number\\.isInteger\\(e\\)\\|\\|e===0\\?null:e<0\\?e>-1e3\\?\\{member:-e,look:`spectral`\\}:null:e<1e3\\?\\{member:e,look:`shiny`\\}:e<\\8\\[0\\]\\?\\{member:e-\\2,look:`classic`\\}:e<\\8\\[1\\]\\?\\{member:e-\\8\\[0\\],look:`m1`\\}:e<\\8\\[1\\]\\+1e3\\?\\{member:e-\\8\\[1\\],look:`m2`\\}:e<\\3\\[0\\]\\+1e3\\?\\{member:e-\\3\\[0\\],look:`t1`\\}:e<\\3\\[1\\]\\+1e3\\?\\{member:e-\\3\\[1\\],look:`t2`\\}:e<\\4\\[0\\]\\+1e3\\?\\{member:e-\\4\\[0\\],look:`l1`\\}:e<\\4\\[1\\]\\+1e3\\?\\{member:e-\\4\\[1\\],look:`l2`\\}:e<\\4\\[2\\]\\+1e3\\?\\{member:e-\\4\\[2\\],look:`l3`\\}:e<1e4\\?\\{member:e-\\5,look:`st`\\}:e<11e3\\?\\{member:e-\\6,look:`vg`\\}:e<12e3\\?\\{member:e-\\7,look:`my`\\}:null\\}",
+          "flags": "",
+          "replace": "function $1(e,t){if(e>=1e3){if(t===`spectral`)return-(1e5+e);const b={shiny:1,classic:2,m1:3,m2:4,t1:5,t2:6,l1:7,l2:8,l3:9,st:10,vg:11,my:12}[t]||1;return b*1e5+e}return t===`shiny`?e:t===`spectral`?-e:t===`classic`?$2+e:t===`t1`?$3[0]+e:t===`t2`?$3[1]+e:t===`l1`?$4[0]+e:t===`l2`?$4[1]+e:t===`l3`?$4[2]+e:t===`st`?$5+e:t===`vg`?$6+e:t===`my`?$7+e:(t===`m1`?$8[0]:$8[1])+e}function $9(e){if(!Number.isInteger(e)||e===0)return null;if(e<=-1e5)return{member:-e-1e5,look:`spectral`};if(e>=1e5){const b=Math.floor(e/1e5),m=e%1e5,k=[null,`shiny`,`classic`,`m1`,`m2`,`t1`,`t2`,`l1`,`l2`,`l3`,`st`,`vg`,`my`][b];return k&&m>0?{member:m,look:k}:null}return e<0?e>-1e3?{member:-e,look:`spectral`}:null:e<1e3?{member:e,look:`shiny`}:e<$8[0]?{member:e-$2,look:`classic`}:e<$8[1]?{member:e-$8[0],look:`m1`}:e<$8[1]+1e3?{member:e-$8[1],look:`m2`}:e<$3[0]+1e3?{member:e-$3[0],look:`t1`}:e<$3[1]+1e3?{member:e-$3[1],look:`t2`}:e<$4[0]+1e3?{member:e-$4[0],look:`l1`}:e<$4[1]+1e3?{member:e-$4[1],look:`l2`}:e<$4[2]+1e3?{member:e-$4[2],look:`l3`}:e<1e4?{member:e-$5,look:`st`}:e<11e3?{member:e-$6,look:`vg`}:e<12e3?{member:e-$7,look:`my`}:null}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/dom-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)",
+          "flags": "",
+          "replace": "if(t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))){r.onerror=()=>{r.onerror=null,i(),r.style.filter=K(e)},r.src=h(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)"
+        },
+        {
+          "mode": "regex",
+          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?h\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?h\\(`pmd/\\$\\{e\\}\\.png`\\):h\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):h\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
+          "flags": "",
+          "replace": "re=d==null?t===`classic`&&p?.anims?h(`pmd-shiny/${e}.png`):t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))&&p?.anims?h(`pmd-alt-shiny/${e}.png`):p?.anims?h(`pmd/${e}.png`):h(p?.fallback??`front/${e}.png`):h(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$1(e):d==null&&t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))?``:$2(t,e);"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/relay-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "var (\\w+)=\\(e,t\\)=>t===`classic`\\?(\\w+)\\+e:e,",
+          "flags": "",
+          "replace": "var $1=(e,t)=>t===`classic`?$2+e:t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))?4e4+e:e,"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/moves-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "function (\\w+)\\(e,t\\)\\{let n=(\\w+)\\[e\\];return n===void 0\\?t\\+Math\\.min\\(\\.99,(\\w+)\\(e\\)\\):\\(t===5\\?13:t===9\\?11:12\\)\\+Math\\.min\\(\\.99,n\\)\\}",
+          "flags": "",
+          "replace": "function $1(e,t){if((window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023)))return t===5?1:t===10?3:0;let n=$2[e];return n===void 0?t+Math.min(.99,$3(e)):(t===5?13:t===9?11:12)+Math.min(.99,n)}"
+        },
+        {
+          "mode": "regex",
+          "find": "let o=!i&&e>=3e4,s=!i&&!o&&e>=2e4;this\\.sid=s\\?e-(\\w+):e,",
+          "flags": "",
+          "replace": "let aS=!i&&e>=4e4,o=!i&&!aS&&e>=3e4,s=!i&&!aS&&!o&&e>=2e4;this.sid=aS?e-4e4:s?e-$1:e,"
+        },
+        {
+          "mode": "regex",
+          "find": "\\$\\{o\\?`pmd-forms`:s\\?`pmd-shiny`:`pmd`\\}/\\$\\{this\\.sid\\}\\.png",
+          "flags": "",
+          "replace": "${aS?`pmd-alt-shiny`:o?`pmd-forms`:s?`pmd-shiny`:`pmd`}/${this.sid}.png"
+        },
+        {
+          "mode": "regex",
+          "find": "\\(f&131072\\?(\\w+):0\\)\\+this\\.species\\[r\\]",
+          "flags": "",
+          "replace": "(f&131072?$1:f&2048&&(window.__pbHasAltShiny?window.__pbHasAltShiny(this.species[r]):(this.species[r]>=2001&&this.species[r]<=2023))?4e4:0)+this.species[r]"
+        },
+        {
+          "mode": "regex",
+          "find": "\\(this\\.flags\\[t\\]&131072\\?(\\w+):0\\)\\+this\\.species\\[t\\]",
+          "flags": "",
+          "replace": "(this.flags[t]&131072?$1:this.flags[t]&2048&&(window.__pbHasAltShiny?window.__pbHasAltShiny(this.species[t]):(this.species[t]>=2001&&this.species[t]<=2023))?4e4:0)+this.species[t]"
+        },
+        {
+          "find": "t()!==`es`&&await this.localize();",
+          "replace": "t()!==`es`&&await this.localize();await this._pbLocalizeMods?.();"
+        },
+        {
+          "find": "async localize(){",
+          "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/main-.*\\.js$",
+      "patches": [
+        {
+          "mode": "regex",
+          "find": "let s=i\\?t\\.sprites\\.get\\(a\\):t\\.sprites\\.get\\((\\w+)\\(e\\.species,r\\)\\)",
+          "flags": "",
+          "replace": "let s=i?t.sprites.get(a):t.sprites.get($1(e.species,r||(n.flags&$.shiny?`shiny`:null)))"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/i18n-.*\\.js$",
+      "patches": [
+        {
+          "find": "export{t as a,",
+          "replace": "(window.__pbAltShinyRanges??=[]).push([2001,2023]);window.__pbHasAltShiny=(id)=>(window.__pbAltShinyRanges||[]).some(([a,b])=>id>=a&&id<=b);(window.__pbI18nUrls??=[]).push(`assets/i18n-nondexed.json`);export{t as a,"
+        },
+        {
+          "find": "function l(e,t){r=e,i=t,d=null}",
+          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign(i,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[r]){Object.assign(i,data.strings[r]);d=null}};function l(e,t){r=e,i=t,d=null;_pbMergeModTr(e)}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/assets-.*\\.js$",
+      "patches": [
+        {
+          "find": "a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],",
+          "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
+        }
+      ]
     }
   ]
 }

@@ -13,9 +13,9 @@ All experimental Apple packages live under the dedicated **[Experimental: Apple 
 
 Download the **Complete Edition** (recommended — includes the `v0.10.31` offline game build ready to play, with zero pre-installed mods) from the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab:
 
-- **Apple Silicon (`M1 / M2 / M3 / M4`)**: `PokeBonk-Unbound-Complete-1.0.4-mac-arm64.zip`
-- **Intel Mac (`x64`)**: `PokeBonk-Unbound-Complete-1.0.4-mac-x64.zip`
-- **Optional Portable ("Nothing Included")**: `PokeBonk-Unbound-Portable-1.0.4-mac-arm64.zip` / `...-mac-x64.zip`
+- **Apple Silicon (`M1 / M2 / M3 / M4`)**: `PokeBonk-Unbound-Complete-1.0.5-mac-arm64.zip`
+- **Intel Mac (`x64`)**: `PokeBonk-Unbound-Complete-1.0.5-mac-x64.zip`
+- **Optional Portable ("Nothing Included")**: `PokeBonk-Unbound-Portable-1.0.5-mac-arm64.zip` / `...-mac-x64.zip`
 
 ### First-Time Launch (Unsigned App)
 
@@ -49,7 +49,7 @@ Because the experimental macOS builds are **unsigned / un-notarized**, macOS Gat
 The native iOS client (`UIKit` + `WKWebView` + embedded `NodeMobile.xcframework` running the same local engine and **Unbound Settings** UI as Android, with isolated Online/Offline sessions, auto-hiding floating **Unbound** button, native `.json` save export/import, and `.zip` mod import via the iOS Files picker) is prepared and staged in the project, but compiling the final ARM64 `.ipa` Mach-O binary requires **macOS + Xcode**.
 
 Because the developer does not have a Mac available to compile and test `.ipa` binaries directly yet:
-- Once compiled on macOS, unsigned sideloadable `.ipa` files (`PokeBonk-Unbound-Complete-1.0.4.ipa` & `PokeBonk-Unbound-Portable-1.0.4.ipa`) will be posted directly under the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab.
+- Once compiled on macOS, unsigned sideloadable `.ipa` files (`PokeBonk-Unbound-Complete-1.0.5.ipa` & `PokeBonk-Unbound-Portable-1.0.5.ipa`) will be posted directly under the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab.
 
 ### How to Sideload the `.ipa` (Once Published)
 

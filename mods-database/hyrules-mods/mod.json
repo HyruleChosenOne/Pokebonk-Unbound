@@ -1,10 +1,10 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scope": "client",
   "author": "HyruleChosenOne",
-  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Events Enabler (Choose-Mode Hub, preserving wallpaper and music), P2P Multiplayer (IP:Port), Main Menu Background & Music selector, Run Speed, Unlock All Difficulties, God Mode, Overdrive, Clean Menu, and Trainer Unlocks. Keep OFF for 1:1 Vanilla Offline Mode.",
+  "description": "Offline Quality-of-Life, Enablers & Trainer Cheats collection by HyruleChosenOne: Events Enabler (Choose-Mode Hub), P2P Multiplayer (IP:Port + Local Lobbies), Main Menu Background & Music selector, Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities. Keep OFF for 1:1 Vanilla Offline Mode.",
   "tags": [
     "qol",
     "collection",
@@ -247,6 +247,14 @@
           "live": true
         },
         {
+          "id": "spd-3",
+          "label": "Run Speed: 3x (Hyper)",
+          "type": "hyrule-set",
+          "key": "runSpeed",
+          "value": 3,
+          "live": true
+        },
+        {
           "type": "separator"
         },
         {
@@ -283,6 +291,27 @@
           "label": "Overdrive (5x Damage & Speed, Solo)",
           "type": "hyrule-toggle",
           "feature": "overdrive",
+          "live": true
+        },
+        {
+          "id": "cheat-turboxp",
+          "label": "Turbo XP (5x XP & Fast Evolutions, Solo)",
+          "type": "hyrule-toggle",
+          "feature": "turboXp",
+          "live": true
+        },
+        {
+          "id": "cheat-supermagnet",
+          "label": "Super Magnet & Luck (3x Pickup Range, Solo)",
+          "type": "hyrule-toggle",
+          "feature": "superMagnet",
+          "live": true
+        },
+        {
+          "id": "cheat-instantult",
+          "label": "Instant Ultimate & Haste (Solo)",
+          "type": "hyrule-toggle",
+          "feature": "instantUlt",
           "live": true
         },
         {
@@ -457,11 +486,47 @@
           "reload": true
         },
         {
+          "id": "unlock-all-profile-customization",
+          "label": "Unlock All (Full Profile Customization)",
+          "type": "profile-mutate",
+          "mutation": {
+            "unlockAllProfileCustomization": true
+          },
+          "reload": true
+        },
+        {
+          "id": "unlock-all-clan-rewards",
+          "label": "Unlock All Clan & Rank Rewards",
+          "type": "profile-mutate",
+          "mutation": {
+            "unlockAllClanRewards": true
+          },
+          "reload": true
+        },
+        {
           "id": "unlock-all-wardrobe",
           "label": "Unlock All Wardrobe (Skins, Looks & Cosmetics)",
           "type": "profile-mutate",
           "mutation": {
             "unlockAllWardrobe": true
+          },
+          "reload": true
+        },
+        {
+          "id": "max-all-friendship",
+          "label": "Max Friendship (Lv. 20 + All Friendship Titles)",
+          "type": "profile-mutate",
+          "mutation": {
+            "maxAllFriendship": true
+          },
+          "reload": true
+        },
+        {
+          "id": "complete-all-quests",
+          "label": "Complete All Quests & Achievement Titles",
+          "type": "profile-mutate",
+          "mutation": {
+            "completeAllQuests": true
           },
           "reload": true
         },

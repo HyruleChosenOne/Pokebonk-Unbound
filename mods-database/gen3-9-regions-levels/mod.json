@@ -1,10 +1,10 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 2 distinct playable maps each (14 levels total), featuring custom pixel-art biome textures, bespoke map previews, themed prop atlases, validated sanctuaries, and 3D landmarks.",
+  "description": "Polished standalone custom levels pack adding all 7 Gen 3-9 regions (Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, Paldea) with 14 radically distinct 3D terrain architectures (lava moats, volcanic fissures, spiral citadels, island archipelagos, faceted crystal caverns, wind dunes, red-clay buttes, inverted Area Zero crater), 14 official region-matched OST songs (1 per level, zero audio overlap), bespoke pixel-art biome textures & thumbnails, and full 11-language global translation.",
   "tags": [
     "levels",
     "regions",
@@ -15,7 +15,10 @@
     "gen6",
     "gen7",
     "gen8",
-    "gen9"
+    "gen9",
+    "music",
+    "i18n",
+    "custom-terrain"
   ],
   "regions": [
     {
@@ -264,7 +267,7 @@
         "mushroom",
         "rock"
       ],
-      "propDensity": 1.05,
+      "propDensity": 1.08,
       "relief": {
         "levels": 4,
         "massifs": 2
@@ -375,7 +378,81 @@
           5,
           6
         ]
-      }
+      },
+      "musicTrack": "gen39-hoenn_petalburg",
+      "morning": {
+        "motes": "pollen"
+      },
+      "zones": [
+        {
+          "name": "Petalburg Sunlit Canopy",
+          "sky": [
+            2127696,
+            7406444
+          ],
+          "fog": 6423416,
+          "fogNear": 54,
+          "fogFar": 220,
+          "light": 1.08,
+          "sun": 16775888,
+          "hemiGround": 3964992,
+          "sunDir": [
+            0.64,
+            0.76,
+            0.14
+          ],
+          "sunH": 0.4,
+          "tint": [
+            0.96,
+            1.05,
+            0.94
+          ],
+          "clouds": [
+            1,
+            1.02,
+            0.94
+          ],
+          "cover": 0.08,
+          "glow": 7208856,
+          "glowK": 0.42,
+          "stars": 0,
+          "motes": "leaves"
+        },
+        {
+          "name": "Petalburg Firefly Hollow",
+          "sky": [
+            1254188,
+            3696480
+          ],
+          "fog": 2577200,
+          "fogNear": 44,
+          "fogFar": 185,
+          "light": 0.84,
+          "sun": 10418360,
+          "hemiGround": 1720608,
+          "sunDir": [
+            0.7,
+            0.58,
+            -0.18
+          ],
+          "sunH": 0.14,
+          "tint": [
+            0.88,
+            1.04,
+            0.92
+          ],
+          "clouds": [
+            0.78,
+            0.94,
+            0.86
+          ],
+          "cover": 0.1,
+          "glow": 8978288,
+          "glowK": 0.72,
+          "stars": 0.65,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "hoenn_chimney",
@@ -492,15 +569,15 @@
         3153440,
         5652024
       ],
-      "water": 0.35,
-      "waterColor": 16733440,
+      "water": 0.45,
+      "waterColor": 16730624,
       "props": [
         "lavarock",
         "rock",
         "deadtree",
         "pillar"
       ],
-      "propDensity": 0.9,
+      "propDensity": 0.88,
       "relief": {
         "levels": 5,
         "massifs": 3
@@ -611,7 +688,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-hoenn_chimney",
+      "morning": {
+        "motes": "embers"
+      },
+      "zones": [
+        {
+          "name": "Chimney Ash Rim",
+          "sky": [
+            6296856,
+            14637360
+          ],
+          "fog": 11224624,
+          "fogNear": 40,
+          "fogFar": 185,
+          "light": 1.02,
+          "sun": 16746048,
+          "hemiGround": 5444384,
+          "sunDir": [
+            0.68,
+            0.7,
+            0.18
+          ],
+          "sunH": 0.32,
+          "tint": [
+            1.08,
+            0.94,
+            0.86
+          ],
+          "clouds": [
+            1.06,
+            0.84,
+            0.74
+          ],
+          "cover": 0.12,
+          "glow": 16736792,
+          "glowK": 0.55,
+          "stars": 0,
+          "motes": "embers"
+        },
+        {
+          "name": "Caldera Magma Surge",
+          "sky": [
+            2754576,
+            8659224
+          ],
+          "fog": 6166808,
+          "fogNear": 34,
+          "fogFar": 160,
+          "light": 0.86,
+          "sun": 16724736,
+          "hemiGround": 3804176,
+          "sunDir": [
+            0.76,
+            0.48,
+            -0.15
+          ],
+          "sunH": 0.08,
+          "tint": [
+            1.12,
+            0.84,
+            0.78
+          ],
+          "clouds": [
+            0.95,
+            0.62,
+            0.54
+          ],
+          "cover": 0.14,
+          "glow": 16724736,
+          "glowK": 0.82,
+          "stars": 0.5,
+          "motes": "embers"
+        }
+      ]
     },
     {
       "id": "sinnoh_coronet",
@@ -735,7 +886,7 @@
         "pillar",
         "rock"
       ],
-      "propDensity": 0.92,
+      "propDensity": 0.85,
       "relief": {
         "levels": 5,
         "massifs": 3
@@ -854,7 +1005,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-sinnoh_coronet",
+      "morning": {
+        "motes": "snow"
+      },
+      "zones": [
+        {
+          "name": "Coronet High Ridge",
+          "sky": [
+            2439792,
+            9547256
+          ],
+          "fog": 10336752,
+          "fogNear": 48,
+          "fogFar": 210,
+          "light": 1.08,
+          "sun": 16251903,
+          "hemiGround": 9743312,
+          "sunDir": [
+            0.62,
+            0.74,
+            0.2
+          ],
+          "sunH": 0.38,
+          "tint": [
+            0.96,
+            1,
+            1.08
+          ],
+          "clouds": [
+            0.98,
+            1,
+            1.06
+          ],
+          "cover": 0.1,
+          "glow": 8957439,
+          "glowK": 0.42,
+          "stars": 0.1,
+          "motes": "snow"
+        },
+        {
+          "name": "Spear Pillar Starlight",
+          "sky": [
+            988212,
+            3424352
+          ],
+          "fog": 2768464,
+          "fogNear": 40,
+          "fogFar": 175,
+          "light": 0.84,
+          "sun": 10405375,
+          "hemiGround": 3161440,
+          "sunDir": [
+            0.72,
+            0.56,
+            -0.22
+          ],
+          "sunH": 0.1,
+          "tint": [
+            0.88,
+            0.94,
+            1.12
+          ],
+          "clouds": [
+            0.8,
+            0.88,
+            1.08
+          ],
+          "cover": 0.06,
+          "glow": 6737151,
+          "glowK": 0.78,
+          "stars": 0.95,
+          "motes": "snow"
+        }
+      ]
     },
     {
       "id": "sinnoh_eterna",
@@ -973,8 +1198,8 @@
         3421248,
         5658208
       ],
-      "water": 0.4,
-      "waterColor": 2636640,
+      "water": 0.42,
+      "waterColor": 1986138,
       "props": [
         "tree",
         "deadtree",
@@ -982,7 +1207,7 @@
         "bush",
         "grave"
       ],
-      "propDensity": 1,
+      "propDensity": 0.96,
       "relief": {
         "levels": 3,
         "massifs": 2
@@ -1095,7 +1320,81 @@
           5,
           6
         ]
-      }
+      },
+      "musicTrack": "gen39-sinnoh_eterna",
+      "morning": {
+        "motes": "fireflies"
+      },
+      "zones": [
+        {
+          "name": "Eterna Mist Mire",
+          "sky": [
+            1714252,
+            4677748
+          ],
+          "fog": 3691108,
+          "fogNear": 38,
+          "fogFar": 168,
+          "light": 0.9,
+          "sun": 13227992,
+          "hemiGround": 2241336,
+          "sunDir": [
+            0.6,
+            0.66,
+            0.12
+          ],
+          "sunH": 0.24,
+          "tint": [
+            0.92,
+            0.96,
+            1.06
+          ],
+          "clouds": [
+            0.84,
+            0.88,
+            0.98
+          ],
+          "cover": 0.16,
+          "glow": 9600511,
+          "glowK": 0.56,
+          "stars": 0.35,
+          "motes": "fireflies"
+        },
+        {
+          "name": "Old Chateau Midnight",
+          "sky": [
+            790056,
+            2368848
+          ],
+          "fog": 1711924,
+          "fogNear": 32,
+          "fogFar": 145,
+          "light": 0.76,
+          "sun": 10200319,
+          "hemiGround": 1383728,
+          "sunDir": [
+            0.72,
+            0.5,
+            -0.2
+          ],
+          "sunH": 0.06,
+          "tint": [
+            0.88,
+            0.86,
+            1.12
+          ],
+          "clouds": [
+            0.76,
+            0.74,
+            0.98
+          ],
+          "cover": 0.12,
+          "glow": 11703039,
+          "glowK": 0.84,
+          "stars": 0.92,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "unova_relic_desert",
@@ -1221,7 +1520,7 @@
         "rock",
         "deadtree"
       ],
-      "propDensity": 0.85,
+      "propDensity": 0.82,
       "relief": {
         "levels": 4,
         "massifs": 2
@@ -1340,7 +1639,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-unova_relic_desert",
+      "morning": {
+        "motes": "dust"
+      },
+      "zones": [
+        {
+          "name": "Relic Sunlit Dunes",
+          "sky": [
+            4157144,
+            15714448
+          ],
+          "fog": 14859396,
+          "fogNear": 48,
+          "fogFar": 205,
+          "light": 1.12,
+          "sun": 16771760,
+          "hemiGround": 11109968,
+          "sunDir": [
+            0.66,
+            0.78,
+            0.1
+          ],
+          "sunH": 0.44,
+          "tint": [
+            1.08,
+            1,
+            0.88
+          ],
+          "clouds": [
+            1.06,
+            0.98,
+            0.84
+          ],
+          "cover": 0.04,
+          "glow": 16760400,
+          "glowK": 0.38,
+          "stars": 0,
+          "motes": "dust"
+        },
+        {
+          "name": "Desert Amber Dusk",
+          "sky": [
+            3609664,
+            11819312
+          ],
+          "fog": 9127216,
+          "fogNear": 42,
+          "fogFar": 180,
+          "light": 0.9,
+          "sun": 16748352,
+          "hemiGround": 6306336,
+          "sunDir": [
+            0.78,
+            0.5,
+            -0.16
+          ],
+          "sunH": 0.12,
+          "tint": [
+            1.1,
+            0.9,
+            0.82
+          ],
+          "clouds": [
+            1.02,
+            0.8,
+            0.72
+          ],
+          "cover": 0.05,
+          "glow": 16752704,
+          "glowK": 0.7,
+          "stars": 0.75,
+          "motes": "dust"
+        }
+      ]
     },
     {
       "id": "unova_dragonspiral",
@@ -1459,8 +1832,8 @@
         5129024,
         7892072
       ],
-      "water": 0.3,
-      "waterColor": 2639744,
+      "water": 0.4,
+      "waterColor": 2647696,
       "props": [
         "tree",
         "pine",
@@ -1468,7 +1841,7 @@
         "rock",
         "bush"
       ],
-      "propDensity": 0.95,
+      "propDensity": 0.94,
       "relief": {
         "levels": 5,
         "massifs": 2
@@ -1580,7 +1953,81 @@
           5,
           6
         ]
-      }
+      },
+      "musicTrack": "gen39-unova_dragonspiral",
+      "morning": {
+        "motes": "leaves"
+      },
+      "zones": [
+        {
+          "name": "Dragonspiral Autumn Terrace",
+          "sky": [
+            3424888,
+            12166280
+          ],
+          "fog": 10718848,
+          "fogNear": 46,
+          "fogFar": 200,
+          "light": 1.02,
+          "sun": 16768680,
+          "hemiGround": 5718848,
+          "sunDir": [
+            0.64,
+            0.72,
+            0.16
+          ],
+          "sunH": 0.34,
+          "tint": [
+            1.04,
+            0.98,
+            0.92
+          ],
+          "clouds": [
+            1.02,
+            0.96,
+            0.9
+          ],
+          "cover": 0.09,
+          "glow": 15844367,
+          "glowK": 0.46,
+          "stars": 0,
+          "motes": "leaves"
+        },
+        {
+          "name": "Dragonspiral Storm Vigil",
+          "sky": [
+            1317948,
+            4345456
+          ],
+          "fog": 3291736,
+          "fogNear": 38,
+          "fogFar": 170,
+          "light": 0.84,
+          "sun": 10995455,
+          "hemiGround": 2238288,
+          "sunDir": [
+            0.74,
+            0.58,
+            -0.2
+          ],
+          "sunH": 0.12,
+          "tint": [
+            0.92,
+            0.96,
+            1.08
+          ],
+          "clouds": [
+            0.84,
+            0.88,
+            1.02
+          ],
+          "cover": 0.11,
+          "glow": 7135743,
+          "glowK": 0.76,
+          "stars": 0.82,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "kalos_azure_bay",
@@ -1697,15 +2144,15 @@
         6711408,
         9935512
       ],
-      "water": 0.45,
-      "waterColor": 1945552,
+      "water": 0.5,
+      "waterColor": 1489128,
       "props": [
         "palm",
         "coral",
         "rock",
         "bush"
       ],
-      "propDensity": 0.88,
+      "propDensity": 0.86,
       "relief": {
         "levels": 3,
         "massifs": 2
@@ -1808,7 +2255,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-kalos_azure_bay",
+      "morning": {
+        "motes": "pollen"
+      },
+      "zones": [
+        {
+          "name": "Azure Bay High Noon",
+          "sky": [
+            1797616,
+            8706303
+          ],
+          "fog": 8047359,
+          "fogNear": 56,
+          "fogFar": 235,
+          "light": 1.12,
+          "sun": 16776152,
+          "hemiGround": 5542296,
+          "sunDir": [
+            0.64,
+            0.8,
+            0.14
+          ],
+          "sunH": 0.48,
+          "tint": [
+            0.98,
+            1.03,
+            1.06
+          ],
+          "clouds": [
+            1.02,
+            1.04,
+            1.06
+          ],
+          "cover": 0.06,
+          "glow": 6616319,
+          "glowK": 0.35,
+          "stars": 0,
+          "motes": "pollen"
+        },
+        {
+          "name": "Kalos Rose Sunset",
+          "sky": [
+            4138608,
+            15295632
+          ],
+          "fog": 12742792,
+          "fogNear": 46,
+          "fogFar": 195,
+          "light": 0.92,
+          "sun": 16750240,
+          "hemiGround": 6437744,
+          "sunDir": [
+            0.8,
+            0.46,
+            -0.18
+          ],
+          "sunH": 0.12,
+          "tint": [
+            1.08,
+            0.92,
+            1.02
+          ],
+          "clouds": [
+            1.08,
+            0.86,
+            0.96
+          ],
+          "cover": 0.08,
+          "glow": 16744360,
+          "glowK": 0.72,
+          "stars": 0.55,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "kalos_reflection_cave",
@@ -1927,15 +2448,15 @@
         3220808,
         5718912
       ],
-      "water": 0.25,
-      "waterColor": 5539312,
+      "water": 0.45,
+      "waterColor": 5212656,
       "props": [
         "crystal",
         "crystal",
         "pillar",
         "rock"
       ],
-      "propDensity": 0.95,
+      "propDensity": 0.9,
       "relief": {
         "levels": 4,
         "massifs": 2
@@ -2053,7 +2574,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-kalos_reflection_cave",
+      "morning": {
+        "motes": "fireflies"
+      },
+      "zones": [
+        {
+          "name": "Reflection Prism Cavern",
+          "sky": [
+            1378112,
+            3678328
+          ],
+          "fog": 2759280,
+          "fogNear": 34,
+          "fogFar": 155,
+          "light": 0.92,
+          "sun": 12961791,
+          "hemiGround": 2497368,
+          "sunDir": [
+            0.6,
+            0.7,
+            0.16
+          ],
+          "sunH": 0.25,
+          "tint": [
+            0.98,
+            0.92,
+            1.14
+          ],
+          "clouds": [
+            0.92,
+            0.86,
+            1.12
+          ],
+          "cover": 0.04,
+          "glow": 11565823,
+          "glowK": 0.72,
+          "stars": 0.4,
+          "motes": "fireflies"
+        },
+        {
+          "name": "Mirror Crystal Depths",
+          "sky": [
+            787496,
+            2232412
+          ],
+          "fog": 1707840,
+          "fogNear": 30,
+          "fogFar": 140,
+          "light": 0.82,
+          "sun": 9817343,
+          "hemiGround": 1773632,
+          "sunDir": [
+            0.7,
+            0.6,
+            -0.18
+          ],
+          "sunH": 0.1,
+          "tint": [
+            0.9,
+            0.98,
+            1.16
+          ],
+          "clouds": [
+            0.82,
+            0.94,
+            1.14
+          ],
+          "cover": 0.02,
+          "glow": 6029311,
+          "glowK": 0.86,
+          "stars": 0.85,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "alola_melemele",
@@ -2171,8 +2766,8 @@
         6640184,
         9601112
       ],
-      "water": 0.4,
-      "waterColor": 1626864,
+      "water": 0.48,
+      "waterColor": 1296348,
       "props": [
         "palm",
         "tree",
@@ -2292,7 +2887,81 @@
           5,
           6
         ]
-      }
+      },
+      "musicTrack": "gen39-alola_melemele",
+      "morning": {
+        "motes": "pollen"
+      },
+      "zones": [
+        {
+          "name": "Melemele Tropical Sun",
+          "sky": [
+            1609712,
+            7464703
+          ],
+          "fog": 7334399,
+          "fogNear": 54,
+          "fogFar": 225,
+          "light": 1.14,
+          "sun": 16775352,
+          "hemiGround": 4954728,
+          "sunDir": [
+            0.64,
+            0.82,
+            0.14
+          ],
+          "sunH": 0.5,
+          "tint": [
+            1.04,
+            1.04,
+            0.96
+          ],
+          "clouds": [
+            1.04,
+            1.04,
+            0.98
+          ],
+          "cover": 0.06,
+          "glow": 16768640,
+          "glowK": 0.36,
+          "stars": 0,
+          "motes": "pollen"
+        },
+        {
+          "name": "Alola Golden Luau Dusk",
+          "sky": [
+            4989024,
+            16546664
+          ],
+          "fog": 14515808,
+          "fogNear": 44,
+          "fogFar": 190,
+          "light": 0.94,
+          "sun": 16748112,
+          "hemiGround": 7221312,
+          "sunDir": [
+            0.82,
+            0.44,
+            -0.16
+          ],
+          "sunH": 0.1,
+          "tint": [
+            1.12,
+            0.94,
+            0.86
+          ],
+          "clouds": [
+            1.1,
+            0.88,
+            0.78
+          ],
+          "cover": 0.07,
+          "glow": 16750144,
+          "glowK": 0.76,
+          "stars": 0.65,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "alola_wela_volcano",
@@ -2411,8 +3080,8 @@
         2694696,
         5126200
       ],
-      "water": 0.3,
-      "waterColor": 16738048,
+      "water": 0.45,
+      "waterColor": 16736000,
       "props": [
         "lavarock",
         "pillar",
@@ -2537,7 +3206,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-alola_wela_volcano",
+      "morning": {
+        "motes": "embers"
+      },
+      "zones": [
+        {
+          "name": "Wela Fire Trial Terraces",
+          "sky": [
+            6234912,
+            15295040
+          ],
+          "fog": 12542016,
+          "fogNear": 42,
+          "fogFar": 185,
+          "light": 1.04,
+          "sun": 16750656,
+          "hemiGround": 6427936,
+          "sunDir": [
+            0.68,
+            0.74,
+            0.18
+          ],
+          "sunH": 0.36,
+          "tint": [
+            1.1,
+            0.94,
+            0.84
+          ],
+          "clouds": [
+            1.08,
+            0.88,
+            0.76
+          ],
+          "cover": 0.1,
+          "glow": 16744224,
+          "glowK": 0.56,
+          "stars": 0,
+          "motes": "embers"
+        },
+        {
+          "name": "Wela Torchlight Summit",
+          "sky": [
+            2951968,
+            9184800
+          ],
+          "fog": 6495520,
+          "fogNear": 34,
+          "fogFar": 160,
+          "light": 0.86,
+          "sun": 16730656,
+          "hemiGround": 3937048,
+          "sunDir": [
+            0.76,
+            0.5,
+            -0.14
+          ],
+          "sunH": 0.08,
+          "tint": [
+            1.14,
+            0.86,
+            0.76
+          ],
+          "clouds": [
+            0.98,
+            0.68,
+            0.56
+          ],
+          "cover": 0.12,
+          "glow": 16730624,
+          "glowK": 0.84,
+          "stars": 0.6,
+          "motes": "embers"
+        }
+      ]
     },
     {
       "id": "galar_wild_area",
@@ -2658,8 +3401,8 @@
         5329752,
         8093576
       ],
-      "water": 0.35,
-      "waterColor": 2266280,
+      "water": 0.44,
+      "waterColor": 2595784,
       "props": [
         "tree",
         "pine",
@@ -2667,7 +3410,7 @@
         "pillar",
         "bush"
       ],
-      "propDensity": 0.9,
+      "propDensity": 0.86,
       "relief": {
         "levels": 4,
         "massifs": 2
@@ -2786,7 +3529,81 @@
           5,
           6
         ]
-      }
+      },
+      "musicTrack": "gen39-galar_wild_area",
+      "morning": {
+        "motes": "pollen"
+      },
+      "zones": [
+        {
+          "name": "Wild Area Rolling Moors",
+          "sky": [
+            2711256,
+            8698864
+          ],
+          "fog": 8042480,
+          "fogNear": 52,
+          "fogFar": 225,
+          "light": 1.06,
+          "sun": 16578784,
+          "hemiGround": 4619600,
+          "sunDir": [
+            0.64,
+            0.74,
+            0.18
+          ],
+          "sunH": 0.38,
+          "tint": [
+            0.98,
+            1.04,
+            0.98
+          ],
+          "clouds": [
+            0.98,
+            1,
+            1.02
+          ],
+          "cover": 0.14,
+          "glow": 16734360,
+          "glowK": 0.42,
+          "stars": 0,
+          "motes": "pollen"
+        },
+        {
+          "name": "Dynamax Beam Storm",
+          "sky": [
+            2559568,
+            7089520
+          ],
+          "fog": 5316208,
+          "fogNear": 40,
+          "fogFar": 180,
+          "light": 0.88,
+          "sun": 16740560,
+          "hemiGround": 3218520,
+          "sunDir": [
+            0.74,
+            0.58,
+            -0.16
+          ],
+          "sunH": 0.14,
+          "tint": [
+            1.08,
+            0.88,
+            1.08
+          ],
+          "clouds": [
+            1.04,
+            0.78,
+            1.04
+          ],
+          "cover": 0.18,
+          "glow": 16724888,
+          "glowK": 0.82,
+          "stars": 0.7,
+          "motes": "fireflies"
+        }
+      ]
     },
     {
       "id": "galar_crown_tundra",
@@ -2904,15 +3721,15 @@
         4086120,
         7114944
       ],
-      "water": 0.35,
-      "waterColor": 3449080,
+      "water": 0.42,
+      "waterColor": 3457248,
       "props": [
         "snowpine",
         "crystal",
         "pillar",
         "rock"
       ],
-      "propDensity": 0.9,
+      "propDensity": 0.88,
       "relief": {
         "levels": 4,
         "massifs": 2
@@ -3030,7 +3847,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-galar_crown_tundra",
+      "morning": {
+        "motes": "snow"
+      },
+      "zones": [
+        {
+          "name": "Crown Tundra Frost Fjord",
+          "sky": [
+            2247344,
+            8374768
+          ],
+          "fog": 9490936,
+          "fogNear": 46,
+          "fogFar": 205,
+          "light": 1.06,
+          "sun": 15858943,
+          "hemiGround": 8432344,
+          "sunDir": [
+            0.6,
+            0.72,
+            0.2
+          ],
+          "sunH": 0.34,
+          "tint": [
+            0.94,
+            1.02,
+            1.08
+          ],
+          "clouds": [
+            0.94,
+            1.02,
+            1.08
+          ],
+          "cover": 0.12,
+          "glow": 5697791,
+          "glowK": 0.46,
+          "stars": 0.15,
+          "motes": "snow"
+        },
+        {
+          "name": "Crown Aurora Borealis",
+          "sky": [
+            860736,
+            2507392
+          ],
+          "fog": 1984360,
+          "fogNear": 38,
+          "fogFar": 175,
+          "light": 0.84,
+          "sun": 6946784,
+          "hemiGround": 1852504,
+          "sunDir": [
+            0.72,
+            0.56,
+            -0.22
+          ],
+          "sunH": 0.1,
+          "tint": [
+            0.84,
+            1.08,
+            1.06
+          ],
+          "clouds": [
+            0.74,
+            1.06,
+            1.02
+          ],
+          "cover": 0.08,
+          "glow": 3473352,
+          "glowK": 0.84,
+          "stars": 0.96,
+          "motes": "snow"
+        }
+      ]
     },
     {
       "id": "paldea_asado_mesa",
@@ -3160,7 +4051,7 @@
         "pillar",
         "deadtree"
       ],
-      "propDensity": 0.85,
+      "propDensity": 0.82,
       "relief": {
         "levels": 5,
         "massifs": 3
@@ -3271,7 +4162,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-paldea_asado_mesa",
+      "morning": {
+        "motes": "dust"
+      },
+      "zones": [
+        {
+          "name": "Asado Red-Clay Canyon",
+          "sky": [
+            5394888,
+            15511936
+          ],
+          "fog": 14193520,
+          "fogNear": 50,
+          "fogFar": 210,
+          "light": 1.1,
+          "sun": 16768672,
+          "hemiGround": 9786440,
+          "sunDir": [
+            0.68,
+            0.76,
+            0.14
+          ],
+          "sunH": 0.42,
+          "tint": [
+            1.1,
+            0.96,
+            0.86
+          ],
+          "clouds": [
+            1.08,
+            0.94,
+            0.84
+          ],
+          "cover": 0.05,
+          "glow": 16748624,
+          "glowK": 0.42,
+          "stars": 0,
+          "motes": "dust"
+        },
+        {
+          "name": "Paldea Vermilion Sundown",
+          "sky": [
+            3937864,
+            11815760
+          ],
+          "fog": 8799048,
+          "fogNear": 42,
+          "fogFar": 185,
+          "light": 0.9,
+          "sun": 16738368,
+          "hemiGround": 5714224,
+          "sunDir": [
+            0.8,
+            0.46,
+            -0.18
+          ],
+          "sunH": 0.1,
+          "tint": [
+            1.14,
+            0.88,
+            0.82
+          ],
+          "clouds": [
+            1.06,
+            0.78,
+            0.74
+          ],
+          "cover": 0.06,
+          "glow": 16736320,
+          "glowK": 0.76,
+          "stars": 0.78,
+          "motes": "dust"
+        }
+      ]
     },
     {
       "id": "paldea_area_zero",
@@ -3397,8 +4362,8 @@
         3951472,
         6781352
       ],
-      "water": 0.35,
-      "waterColor": 3466984,
+      "water": 0.45,
+      "waterColor": 6009855,
       "props": [
         "crystal",
         "crystal",
@@ -3406,7 +4371,7 @@
         "pine",
         "rock"
       ],
-      "propDensity": 0.92,
+      "propDensity": 0.88,
       "relief": {
         "levels": 5,
         "massifs": 2
@@ -3524,7 +4489,81 @@
           4,
           5
         ]
-      }
+      },
+      "musicTrack": "gen39-paldea_area_zero",
+      "morning": {
+        "motes": "fireflies"
+      },
+      "zones": [
+        {
+          "name": "Area Zero Terastal Basin",
+          "sky": [
+            1710424,
+            5919448
+          ],
+          "fog": 4738248,
+          "fogNear": 42,
+          "fogFar": 195,
+          "light": 1.02,
+          "sun": 14411775,
+          "hemiGround": 3682448,
+          "sunDir": [
+            0.62,
+            0.76,
+            0.16
+          ],
+          "sunH": 0.38,
+          "tint": [
+            0.98,
+            0.98,
+            1.12
+          ],
+          "clouds": [
+            0.96,
+            0.96,
+            1.12
+          ],
+          "cover": 0.08,
+          "glow": 9612543,
+          "glowK": 0.68,
+          "stars": 0.35,
+          "motes": "fireflies"
+        },
+        {
+          "name": "Zero Lab Paradox Abyss",
+          "sky": [
+            854328,
+            2823808
+          ],
+          "fog": 2168168,
+          "fogNear": 34,
+          "fogFar": 165,
+          "light": 0.86,
+          "sun": 10997759,
+          "hemiGround": 2038120,
+          "sunDir": [
+            0.7,
+            0.62,
+            -0.18
+          ],
+          "sunH": 0.14,
+          "tint": [
+            0.94,
+            0.96,
+            1.18
+          ],
+          "clouds": [
+            0.88,
+            0.94,
+            1.16
+          ],
+          "cover": 0.05,
+          "glow": 12028671,
+          "glowK": 0.88,
+          "stars": 0.95,
+          "motes": "fireflies"
+        }
+      ]
     }
   ],
   "toolbarActions": [
@@ -3551,6 +4590,219 @@
         }
       },
       "reload": true
+    }
+  ],
+  "customMusic": [
+    {
+      "id": "gen39-hoenn_petalburg",
+      "name": "Petalburg Woods (RSE)",
+      "desc": "Hoenn Petalburg Woods forest theme",
+      "file": "audio/music/gen39-hoenn_petalburg.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-hoenn_chimney",
+      "name": "Mt. Chimney (RSE)",
+      "desc": "Hoenn Mt. Chimney volcanic caldera theme",
+      "file": "audio/music/gen39-hoenn_chimney.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-sinnoh_coronet",
+      "name": "Mt. Coronet (DPPt)",
+      "desc": "Sinnoh Mt. Coronet Spear Pillar summit theme",
+      "file": "audio/music/gen39-sinnoh_coronet.ogg",
+      "pool": "custom",
+      "loop": 2.5,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-sinnoh_eterna",
+      "name": "Eterna Forest (DPPt)",
+      "desc": "Sinnoh Eterna Twilight Woods theme",
+      "file": "audio/music/gen39-sinnoh_eterna.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-unova_relic_desert",
+      "name": "Relic Castle (BW)",
+      "desc": "Unova Relic Desert Resort ruins theme",
+      "file": "audio/music/gen39-unova_relic_desert.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-unova_dragonspiral",
+      "name": "Dragonspiral Tower (BW)",
+      "desc": "Unova Dragonspiral Tower spire theme",
+      "file": "audio/music/gen39-unova_dragonspiral.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-kalos_azure_bay",
+      "name": "Route 8 / Muraille Coast (XY)",
+      "desc": "Kalos Azure Bay coastal adventure theme",
+      "file": "audio/music/gen39-kalos_azure_bay.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-kalos_reflection_cave",
+      "name": "Glittering / Reflection Cave (XY)",
+      "desc": "Kalos Reflection Crystal Cave theme",
+      "file": "audio/music/gen39-kalos_reflection_cave.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-alola_melemele",
+      "name": "Route 1 / Melemele Island (SM)",
+      "desc": "Alola Melemele Tropical Shore theme",
+      "file": "audio/music/gen39-alola_melemele.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-alola_wela_volcano",
+      "name": "Battle! Totem Pokémon / Wela Volcano (SM)",
+      "desc": "Alola Wela Volcano Park trial theme",
+      "file": "audio/music/gen39-alola_wela_volcano.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-galar_wild_area",
+      "name": "Wild Area (SwSh)",
+      "desc": "Galar Wild Area open highlands theme",
+      "file": "audio/music/gen39-galar_wild_area.ogg",
+      "pool": "custom",
+      "loop": 2.5,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-galar_crown_tundra",
+      "name": "Crown Tundra (SwSh)",
+      "desc": "Galar Crown Tundra glacier theme",
+      "file": "audio/music/gen39-galar_crown_tundra.ogg",
+      "pool": "custom",
+      "loop": 2.5,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-paldea_asado_mesa",
+      "name": "Asado Desert (SV)",
+      "desc": "Paldea Asado Titan Mesa desert theme",
+      "file": "audio/music/gen39-paldea_asado_mesa.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.86,
+      "weight": 1
+    },
+    {
+      "id": "gen39-paldea_area_zero",
+      "name": "Tera Raid / Area Zero (SV)",
+      "desc": "Paldea Area Zero Great Crater crystal theme",
+      "file": "audio/music/gen39-paldea_area_zero.ogg",
+      "pool": "custom",
+      "loop": 2.5,
+      "volume": 0.86,
+      "weight": 1
+    }
+  ],
+  "assetsDir": "assets",
+  "bundlePatches": [
+    {
+      "matchFile": "^assets/moves-.*\\.js$",
+      "patches": [
+        {
+          "find": "if(this.biome.shape===`summit`){this.generateSummit();return}",
+          "replace": "if(this.biome.shape===`summit`){this.generateSummit();return}if(this._pbGen39Terrain?.())return;"
+        },
+        {
+          "find": "generateSummit(){",
+          "replace": "_pbGen39Terrain(){const id=this.biome?.id;if(!id||!/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(id))return!1;const rng=new x(this.seed),n1=this.noise,n2=this.noise2,half=this.world/2,P=this.play,N=this.res;let waterY=-99;const set=(gx,gz,h,pm)=>{const k=this.idx(gx,gz);this.heights[k]=h;this.pathMask[k]=C(pm,0,1)};const rim=(wx,wz)=>S(P-5,P+10,Math.max(Math.abs(wx),Math.abs(wz)))*(18+n1.get(wx*.05,wz*.05)*7);const spawnBlend=(wx,wz,h,baseH)=>{const s=S(18,8,Math.hypot(wx,wz));return h*(1-s)+baseH*s};if(id===`hoenn_petalburg`){const glades=[[0,0,22],[P*.42,P*.28,24],[-P*.44,P*.3,23],[P*.08,-P*.46,25]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=3.2+n1.fbm(wx*.013,wz*.013,4)*3.6+Math.sin(wx*.045+n2.get(wx*.02,wz*.02)*2.2)*1.25;let pm=0;for(const[cx,cz,cr]of glades){const d=Math.hypot(wx-cx,wz-cz);const g=S(cr+12,cr-2,d);h=h*(1-g*.72)+2.6*g*.72;pm=Math.max(pm,S(cr*.55,cr*.18,d)*.6)}const tr=Math.abs(wz-Math.sin(wx*.028)*26);const tr2=Math.abs(wx-Math.cos(wz*.026)*24);pm=Math.max(pm,S(7.5,2.5,Math.min(tr,tr2)));h=h*(1-pm*.45)+2.8*pm*.45;h=spawnBlend(wx,wz,h,2.8)+rim(wx,wz);set(gx,gz,h,pm)}waterY=-99}else if(id===`hoenn_chimney`){waterY=0.2;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);let h=3.6;const moat=Math.abs(r-P*.34);const onBridge=Math.min(Math.abs(wx),Math.abs(wz))<8.5;let pm=0;if(r<P*.24){h=3.8+n2.get(wx*.04,wz*.04)*.6;pm=S(P*.22,P*.16,r)*.45}else if(moat<12&&!onBridge){h=-2.4+S(6,12,moat)*4.8}else{const step=Math.floor(C((r-P*.4)/24,0,4));const frac=C((r-P*.4)/24,0,4)-step;h=3.4+(step+S(.3,.7,frac))*2.6+n1.fbm(wx*.018,wz*.018,3)*1.8+Math.sin(ang*5)*1.1}if(onBridge&&r<P*.82){h=Math.max(h,3.5);pm=Math.max(pm,S(9,4.5,Math.min(Math.abs(wx),Math.abs(wz))))}h=spawnBlend(wx,wz,h,3.8)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`sinnoh_coronet`){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const ax=Math.abs(wx),az=Math.abs(wz),hex=Math.max(ax,ax*.5+az*.866);const ring=hex/26;const st=Math.floor(ring),fr=ring-st;let h=2.4+(st+S(.38,.62,fr))*2.5+n1.fbm(wx*.016,wz*.016,3)*1.3;const causeway=Math.min(ax,az);let pm=S(8.5,3.5,causeway);if(causeway<9){h=2.4+Math.min(hex*.065,8.5)}const peaks=S(P*.65,P*.92,hex)*Math.abs(n2.get(wx*.03,wz*.03))*8;h+=peaks;h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`sinnoh_eterna`){waterY=-0.15;const isls=[[0,0,26],[P*.44,P*.38,28],[-P*.46,P*.36,27],[P*.42,-P*.42,26],[-P*.42,-P*.4,27]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=-1.45+n1.fbm(wx*.015,wz*.015,3)*.7;let pm=0;for(const[cx,cz,cr]of isls){const d=Math.hypot(wx-cx,wz-cz)+n2.get(wx*.05,wz*.05)*5;const m=S(cr+8,cr-3,d);h=Math.max(h,-1.45+m*(3.45+n1.get(wx*.03,wz*.03)*.7))}const diag1=Math.abs(wx-wz)*.707,diag2=Math.abs(wx+wz)*.707,cway=Math.min(diag1,diag2);if(cway<7.5){const b=S(7.5,3.2,cway);h=Math.max(h,1.85*b);pm=Math.max(pm,b*.92)}h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`unova_relic_desert`){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const u=wx*.74+wz*.67,v=-wx*.67+wz*.74;const dune=Math.pow(Math.sin(u*.065+n2.get(wx*.015,wz*.015)*1.4)*.5+.5,1.45)*5.2;let h=1.8+dune+Math.cos(v*.025)*1.4+n1.fbm(wx*.014,wz*.014,3)*1.2;const sq=Math.max(Math.abs(wx),Math.abs(wz));const court=S(38,26,sq);h=h*(1-court)+1.6*court;let pm=court*.85;const rd=Math.min(Math.abs(wx),Math.abs(wz));if(sq>=24&&sq<P*.88){const p=S(7,2.8,rd);pm=Math.max(pm,p*.8);h=h*(1-p*.6)+2.2*p*.6}h=spawnBlend(wx,wz,h,1.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`unova_dragonspiral`){waterY=0.15;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const spiralPhase=((r*.105-ang/(Math.PI*2))%1+1)%1;const onRamp=Math.abs(spiralPhase-.5)<.17;let pm=onRamp?S(.17,.06,Math.abs(spiralPhase-.5)):0;const moat=Math.abs(r-28);let h=2.4+C(r/26,0,4.5)*2.1+n1.fbm(wx*.016,wz*.016,3)*1.1;if(moat<7&&!onRamp&&Math.abs(wx)>6){h=-1.6+S(3.5,7,moat)*3.8}if(onRamp){h=2.4+r*.075}if(Math.abs(wx)<7&&r<42){h=Math.max(h,2.6);pm=Math.max(pm,S(7,3,Math.abs(wx)))}h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`kalos_azure_bay`){waterY=0.35;const isls=[[0,0,28],[P*.48,P*.18,26],[-P*.48,P*.22,25],[P*.24,-P*.48,26],[-P*.32,-P*.44,25],[P*.04,P*.52,24]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=-1.6+n2.get(wx*.02,wz*.02)*.35;let pm=0;for(const[cx,cz,cr]of isls){const d=Math.hypot(wx-cx,wz-cz)+n1.get(wx*.04,wz*.04)*6;const m=S(cr+10,cr-4,d);if(m>0){const ih=-1.6+m*(4.2+S(cr*.5,0,d)*2.2);if(ih>h)h=ih;pm=Math.max(pm,S(cr+4,cr-2,d)*(1-S(cr*.65,cr*.35,d))*.85)}}const ring=Math.abs(Math.hypot(wx,wz)-P*.46);const bar=S(8.5,3,ring);h=Math.max(h,-1.6+bar*3.05);pm=Math.max(pm,bar*.9);const spoke=Math.min(Math.abs(wx),Math.abs(wz));const spBar=S(7.5,2.8,spoke)*(Math.hypot(wx,wz)<P*.56?1:0);h=Math.max(h,-1.6+spBar*3.15);pm=Math.max(pm,spBar*.92);h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`kalos_reflection_cave`){waterY=-0.25;const pts=[];for(let k=0;k<18;k++){const a=k/18*Math.PI*2+rng.range(-.2,.2),rad=rng.range(24,P*.78);pts.push([Math.cos(a)*rad,Math.sin(a)*rad,rng.int(0,3)])}for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let d1=1e9,d2=1e9,lv=1;for(const[px,pz,pl]of pts){const d=Math.hypot(wx-px,wz-pz);if(d<d1){d2=d1;d1=d;lv=pl}else if(d<d2){d2=d}}const edge=d2-d1;let h=lv===0?-1.5:1.6+lv*2.4;const crk=S(8,2.5,edge);let pm=crk*.9;if(crk>.25){h=Math.max(h,2.0)}h+=n2.get(wx*.06,wz*.06)*.35;h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`alola_melemele`){waterY=0.28;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const bay=Math.hypot(wx-P*.26,wz-P*.14);const land=S(P*.28,P*.44,bay+n1.get(wx*.03,wz*.03)*9);let h=-1.55+land*(3.8+S(P*.46,P*.85,bay)*4.4)+n2.fbm(wx*.018,wz*.018,3)*1.1;const beach=S(12,2,Math.abs(bay-P*.37));let pm=beach*.95;const trail=S(6.5,2.2,Math.abs(Math.hypot(wx,wz)-P*.52));pm=Math.max(pm,trail*.8);if(bay<P*.24){const islet=S(18,10,bay);h=Math.max(h,-1.55+islet*3.5)}h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`alola_wela_volcano`){waterY=-0.5;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const tier=Math.floor(r/28),tf=r/28-tier;let h=2.6+(tier+S(.35,.65,tf))*2.4+n1.get(wx*.022,wz*.022)*1.2;const spoke=Math.abs(Math.sin(ang*3));const isCrack=r>22&&r<P*.86&&spoke<.085;const onRing=Math.abs(r-P*.32)<7.5||Math.abs(r-P*.62)<7.5;let pm=onRing?S(7.5,2.5,Math.min(Math.abs(r-P*.32),Math.abs(r-P*.62))):0;if(isCrack&&!onRing){h=-1.9}else if(onRing){h=Math.max(h,2.6+tier*2.2)}h=spawnBlend(wx,wz,h,2.6)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`galar_wild_area`){waterY=-0.1;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const riverX=Math.sin(wz*.026)*38;const rd=Math.abs(wx-riverX);let h=2.4+n1.fbm(wx*.009,wz*.009,4)*3.8+n2.get(wx*.025,wz*.025)*.8;const onBridge=Math.abs(wz)<8||Math.abs(wz-P*.48)<7.5||Math.abs(wz+P*.48)<7.5;let pm=0;if(rd<14&&!onBridge){const dip=S(14,6,rd);h=h*(1-dip)+(-1.6)*dip}if(onBridge){const bw=Math.min(Math.abs(wz),Math.abs(wz-P*.48),Math.abs(wz+P*.48));const b=S(8,3,bw);pm=Math.max(pm,b*.9);if(rd<18)h=Math.max(h,2.1)}pm=Math.max(pm,S(7,2.5,Math.abs(Math.hypot(wx,wz)-P*.45))*.55);h=spawnBlend(wx,wz,h,2.4)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`galar_crown_tundra`){waterY=-0.2;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const fjord=Math.abs(wx-Math.cos(wz*.022)*22);const wall=S(28,56,fjord);let h=1.8+wall*6.8+Math.floor(S(46,P*.85,fjord)*2)*2.6+n1.fbm(wx*.018,wz*.018,3)*1.1;const pool=fjord<15&&Math.sin(wz*.055)>.35&&Math.abs(wz)>20;let pm=0;if(pool){h=-1.6}else{pm=S(9,3,Math.abs(fjord-18))*.85}const ramp=S(8,3,Math.abs(wz));if(ramp>.1){h=h*(1-ramp*.6)+2.2*ramp*.6;pm=Math.max(pm,ramp*.85)}h=spawnBlend(wx,wz,h,2.0)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`paldea_asado_mesa`){waterY=-99;const buttes=[[P*.38,P*.34,34,7.8],[-P*.42,P*.3,32,7.2],[P*.36,-P*.4,36,8.4],[-P*.38,-P*.36,30,6.8]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=1.8+n1.fbm(wx*.012,wz*.012,3)*1.1;let pm=0;for(const[bx,bz,br,bh]of buttes){const d=Math.hypot(wx-bx,wz-bz)+n2.get(wx*.045,wz*.045)*4.5;const m=S(br+4,br-3,d);const step2=S(br*.62+3,br*.62-2,d);h=Math.max(h,1.8+m*(bh*.55)+step2*(bh*.45));const rampAng=Math.atan2(wz-bz,wx-bx);if(Math.abs(rampAng)<.32&&d<br+8&&d>br*.3){const rm=C(1-(d-br*.3)/(br*.7+8),0,1);h=Math.min(h,1.8+rm*bh*.95);pm=Math.max(pm,.75)}}const canyon=Math.min(Math.abs(wx-Math.sin(wz*.025)*18),Math.abs(wz-Math.cos(wx*.025)*18));pm=Math.max(pm,S(8.5,3,canyon)*.9);h=spawnBlend(wx,wz,h,1.8)+rim(wx,wz);set(gx,gz,h,pm)}}else if(id===`paldea_area_zero`){waterY=-0.8;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half,r=Math.hypot(wx,wz),ang=Math.atan2(wz,wx);const bowl=C((r-22)/(P*.72),0,1);const st=Math.floor(bowl*4),fr=bowl*4-st;let h=1.4+(st+S(.35,.65,fr))*2.9+n1.fbm(wx*.018,wz*.018,3)*.9;const ley=Math.abs(Math.sin(ang*3));let pm=S(.095,.025,ley)*(r<P*.88?1:0);if(pm>.2){h=1.4+bowl*11.2}const pond=Math.abs(r-P*.36)<9&&Math.sin(ang*6)>.45&&pm<.2;if(pond){h=-2.1}h=spawnBlend(wx,wz,h,1.4)+rim(wx,wz);set(gx,gz,h,pm)}}this.blur();this.connectPlateaus();this.reserve(0,0,15);this.finishHeights(waterY,0,0);return!0}generateSummit(){"
+        },
+        {
+          "find": "t()!==`es`&&await this.localize();",
+          "replace": "t()!==`es`&&await this.localize();await this._pbLocalizeMods?.();"
+        },
+        {
+          "find": "async localize(){",
+          "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/dom-.*\\.js$",
+      "patches": [
+        {
+          "find": "playSong(e,t,n,r){if(!this.ctx)return;this.stopTrack();",
+          "replace": "playSong(e,t,n,r){if(!this.ctx)return;this._pbTrackGen=(this._pbTrackGen||0)+1;this.stopTrack();"
+        },
+        {
+          "find": "this.stopSeq(),this.stopTrack(),this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,",
+          "replace": "this.stopSeq(),this.stopTrack();const _pbGen=(this._pbTrackGen=(this._pbTrackGen||0)+1);this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,"
+        },
+        {
+          "find": "if(!i||this.ctx!==i||this.trackWant!==e||this.track)return;let o=i.createBufferSource();",
+          "replace": "if(!i||this.ctx!==i||this.trackWant!==e||this.track||_pbGen!==this._pbTrackGen||this.musicOn)return;this.stopSeq();if(this._pbLiveTracks){for(const _ot of this._pbLiveTracks){try{_ot.gain.gain.cancelScheduledValues(i.currentTime);_ot.gain.gain.setValueAtTime(0,i.currentTime);_ot.src.stop();_ot.gain.disconnect()}catch{}}this._pbLiveTracks.clear()}let o=i.createBufferSource();"
+        },
+        {
+          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration}",
+          "replace": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration};(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track)"
+        },
+        {
+          "find": "stopTrack(){this.trackWant=null;let e=this.track;if(this.track=null,!e||!this.ctx)return;let t=this.ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+.6),e.src.stop(t+.65),e.src.onended=()=>e.gain.disconnect()}",
+          "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/i18n-.*\\.js$",
+      "patches": [
+        {
+          "find": "export{t as a,",
+          "replace": "(window.__pbI18nUrls??=[]).push(`assets/i18n-gen3-9-levels.json`);export{t as a,"
+        },
+        {
+          "find": "function l(e,t){r=e,i=t,d=null}",
+          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign(i,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[r]){Object.assign(i,data.strings[r]);d=null}};function l(e,t){r=e,i=t,d=null;_pbMergeModTr(e)}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/assets-.*\\.js$",
+      "patches": [
+        {
+          "find": "a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],",
+          "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
+        }
+      ]
     }
   ]
 }

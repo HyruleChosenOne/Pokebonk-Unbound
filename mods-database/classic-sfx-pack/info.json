@@ -1,0 +1,19 @@
+{
+  "id": "classic-sfx-pack",
+  "name": "Classic Sound Effects Pack",
+  "version": "1.0.0",
+  "author": "HyruleChosenOne",
+  "category": "Audio",
+  "scope": "client",
+  "featured": false,
+  "tagline": "Authentic FireRed/LeafGreen menu fanfares, GBA UI clicks, and classic elemental attack sound effects.",
+  "description": "Transforms PokéBonk's soundscape with 45 classic sound effects: 17 authentic FireRed & LeafGreen soundtrack fanfares and jingles (Level Up!, Pokémon Healed, Caught a Pokémon!, Obtained an Item/Key Item/Badge, Evolution, Victory, Defeat, Jackpot, Move Deleted, Trainers' Eyes Meet, Boss Appearance, Poké Flute, Mystery Gift) paired with 28 crisp GBA-era menu UI clicks, Poké Ball sounds, effectiveness hit crunches, and elemental combat attack SFX.",
+  "highlights": [
+    "17 authentic FireRed & LeafGreen fanfares sourced from archive.org/download/pkmn-frlg-soundtrack",
+    "Classic GBA menu confirm, cursor tick, EXP pip, coin chime, and Poké Ball capture SFX",
+    "Full combat & elemental attack overhaul (Normal / Super Effective / Weak hits, KO, Fire, Water, Electric, Grass, Ice, Psychic, Ghost, Slash, Beam, Boom)",
+    "Client-side audio mod: safe to use in P2P Co-op even if teammates don't have it installed"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode (Mod Engine ON)"
+}

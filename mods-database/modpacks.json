@@ -10,7 +10,7 @@
       "featured": true,
       "badge": "Modpack",
       "tagline": "Gen 3-9 Characters + Gen 3-9 Stages bundled together in 1 click.",
-      "description": "Installs and enables both National Dex Gen 3-9 (Hoenn through Paldea playable Pokemon, 72 signature moves, classic & alternate shiny variants) and Gen 3-9 Regions & Levels Pack (14 custom stages across 7 regions with bespoke pixel-art environments and 3D landmarks) together.",
+      "description": "Installs and enables both National Dex Gen 3-9 (Hoenn through Paldea playable Pokemon with full PMD animations, 11-language translations, 72 signature moves, classic & alternate shiny variants) and Gen 3-9 Regions & Levels Pack (14 custom stages across 7 regions with unique 3D terrain geometry, bespoke pixel-art textures, 14 official region-matched stage soundtracks, and 3D landmarks) together.",
       "mods": [
         "national-dex-gen3-9",
         "gen3-9-regions-levels"
@@ -22,6 +22,32 @@
         "characters",
         "stages",
         "levels"
+      ]
+    },
+    {
+      "id": "classic-gen1-2-audio-collection",
+      "name": "Classic Gen 1&2 Audio Collection",
+      "author": "HyruleChosenOne",
+      "category": "Modpacks",
+      "scope": "client",
+      "featured": true,
+      "badge": "Modpack",
+      "tagline": "Gen 1&2 Soundtrack (53 FRLG/HGSS tracks covering all events) + Classic Sound Effects (45 FRLG/GBA SFX) bundled together.",
+      "description": "Complete classic Pokemon audio overhaul combining Gen 1&2 Soundtrack (covering every PokéBonk menu, seasonal event, battle, dungeon, and boss theme from FireRed/LeafGreen & HeartGold/SoulSilver) with Classic Sound Effects (authentic FRLG menu/milestone fanfares and GBA elemental combat attack SFX). 100% Client-side and Co-op safe.",
+      "mods": [
+        "pokemon-audio-pack",
+        "classic-sfx-pack"
+      ],
+      "tags": [
+        "modpack",
+        "collection",
+        "audio",
+        "music",
+        "sfx",
+        "frlg",
+        "hgss",
+        "gen1",
+        "gen2"
       ]
     }
   ]

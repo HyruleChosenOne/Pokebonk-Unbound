@@ -1,17 +1,23 @@
 {
   "id": "minish-cap-link",
-  "name": "Link (The Minish Cap) — Playable Character & Custom Attacks",
-  "version": "1.0.0",
+  "name": "Link (The Minish Cap) — Playable Character, Hyrule & Dark World",
+  "version": "2.0.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Playable Link from The Legend of Zelda: The Minish Cap with full 8-direction animated sprites, Four Sword Red shiny variant, 5 custom Minish Cap attacks with dedicated custom VFX (Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, Flame Lantern), Four Sword Hurricane Spin Ultimate, and 2 custom Hyrule Pokéball pickup items.",
+  "description": "Playable Link from The Legend of Zelda: The Minish Cap (unlocked by default!) with full 8-direction animated sprites, Four Sword Red shiny variant, 9 authentic Minish Cap Sword & Item attacks (Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, Roc's Cape), Light Arrows Primary Signature Fusion, Four Sword Hurricane Spin Ultimate, 4 Minish Cap Pokéball items, and 2 unlocked Zelda levels — Hyrule Field (Hyrule Castle POI) and The Dark World (Pyramid of Power POI) — built with custom Nano Banana pixel-art spritework & full PokéBonk-native collision.",
   "tags": [
     "character",
     "zelda",
     "minish-cap",
+    "hyrule",
+    "dark-world",
+    "levels",
     "custom-attacks",
     "custom-vfx",
-    "custom-items"
+    "custom-items",
+    "fusion",
+    "i18n",
+    "music"
   ],
   "customVfx": [
     {
@@ -25,6 +31,20 @@
       "strikeSparks": 9,
       "hitShape": "Twinkle",
       "hitColor": "#ffe866",
+      "hitCount": 7
+    },
+    {
+      "id": "link-heros-bow",
+      "preset": "swift",
+      "shape": "Star",
+      "color": "#ffe866",
+      "color2": "#ffffff",
+      "size": 1.15,
+      "trailShape": "Spark",
+      "trailColor": "#ffe866",
+      "trailRate": 0.85,
+      "hitShape": "Twinkle",
+      "hitColor": "#fff299",
       "hitCount": 7
     },
     {
@@ -83,6 +103,48 @@
       "hitShape": "PixFlame",
       "hitColor": "#ffeb77",
       "hitCount": 8
+    },
+    {
+      "id": "link-mole-mitts",
+      "preset": "rock-slide",
+      "shape": "Rock",
+      "color": "#d99b4e",
+      "color2": "#8b5a2b",
+      "size": 1.35,
+      "strikeArc": true,
+      "strikeSparks": 10,
+      "hitShape": "Rock",
+      "hitColor": "#f4c97a",
+      "hitCount": 9
+    },
+    {
+      "id": "link-remote-bombs",
+      "preset": "fire-blast",
+      "shape": "PixFlame",
+      "color": "#38bdf8",
+      "color2": "#fde047",
+      "size": 1.45,
+      "ringStyle": "Ripple",
+      "ringColor": "#38bdf8",
+      "boomRing": true,
+      "boomCount": 18,
+      "hitShape": "Star",
+      "hitColor": "#fde047",
+      "hitCount": 10
+    },
+    {
+      "id": "link-rocs-cape",
+      "preset": "air-slash",
+      "shape": "Crescent",
+      "color": "#fde68a",
+      "color2": "#93c5fd",
+      "size": 1.4,
+      "trailShape": "Swirl",
+      "trailColor": "#e0f2fe",
+      "trailRate": 0.75,
+      "hitShape": "PixWave",
+      "hitColor": "#fde68a",
+      "hitCount": 8
     }
   ],
   "customMoves": [
@@ -95,7 +157,7 @@
       "accuracy": 100,
       "pp": 25,
       "crit": 1,
-      "flavor": "Link strikes swiftly with the sacred Picori Blade in twin emerald-gold sword arcs.",
+      "flavor": "Link strikes swiftly with the sacred Picori Blade in twin emerald-gold sword arcs. Fuses with Hero's Bow into Light Arrows.",
       "archetype": "strike",
       "params": {
         "count": 2,
@@ -106,6 +168,49 @@
       "vfxId": "link-picori-slash",
       "vfxPreset": "slash",
       "sfxPreset": "slash"
+    },
+    {
+      "key": "heros-bow",
+      "name": "Hero's Bow",
+      "type": "fairy",
+      "cls": "physical",
+      "power": 76,
+      "accuracy": 100,
+      "pp": 25,
+      "crit": 1,
+      "flavor": "Fires swift silver-tipped arrows from Link's Minish Cap Bow. Fuses with Picori Blade into Light Arrows!",
+      "archetype": "projectile",
+      "params": {
+        "count": 2,
+        "spread": 0.14,
+        "dmgMul": 1.12,
+        "speedMul": 1.35,
+        "pierce": 3,
+        "cdMul": 0.85
+      },
+      "vfxId": "link-heros-bow",
+      "vfxPreset": "swift",
+      "sfxPreset": "quick-attack"
+    },
+    {
+      "key": "gust-jar",
+      "name": "Gust Jar",
+      "type": "flying",
+      "cls": "special",
+      "power": 84,
+      "accuracy": 100,
+      "pp": 15,
+      "flavor": "Unleashes a roaring compressed gale from the Gust Jar that blasts crowds backward.",
+      "archetype": "wave",
+      "params": {
+        "count": 2,
+        "dmgMul": 1.15,
+        "areaMul": 1.25,
+        "pierce": 5
+      },
+      "vfxId": "link-gust-gale",
+      "vfxPreset": "gust",
+      "sfxPreset": "gust"
     },
     {
       "key": "magical-boomerang",
@@ -131,24 +236,27 @@
       "sfxPreset": "quick-attack"
     },
     {
-      "key": "gust-jar",
-      "name": "Gust Jar",
-      "type": "flying",
+      "key": "flame-lantern",
+      "name": "Flame Lantern",
+      "type": "fire",
       "cls": "special",
-      "power": 84,
+      "power": 88,
       "accuracy": 100,
       "pp": 15,
-      "flavor": "Unleashes a roaring compressed gale from the Gust Jar that blasts crowds backward.",
-      "archetype": "wave",
+      "ailment": "burn",
+      "ailmentChance": 35,
+      "flavor": "Swings the Flame Lantern to unleash a searing ring of embers that ignites surrounding foes.",
+      "archetype": "nova",
       "params": {
-        "count": 2,
-        "dmgMul": 1.15,
-        "areaMul": 1.25,
-        "pierce": 5
+        "pulses": 2,
+        "dmgMul": 1.2,
+        "areaMul": 1.15,
+        "status": "burn",
+        "statusChance": 0.4
       },
-      "vfxId": "link-gust-gale",
-      "vfxPreset": "gust",
-      "sfxPreset": "gust"
+      "vfxId": "link-flame-lantern",
+      "vfxPreset": "flamethrower",
+      "sfxPreset": "ember"
     },
     {
       "key": "cane-of-pacci",
@@ -171,27 +279,65 @@
       "sfxPreset": "psybeam"
     },
     {
-      "key": "flame-lantern",
-      "name": "Flame Lantern",
+      "key": "mole-mitts",
+      "name": "Mole Mitts",
+      "type": "ground",
+      "cls": "physical",
+      "power": 86,
+      "accuracy": 100,
+      "pp": 20,
+      "flavor": "Tears through earth with Minish Mole Mitts, hurling seismic rock slashes at nearby hordes.",
+      "archetype": "strike",
+      "params": {
+        "count": 2,
+        "dmgMul": 1.18,
+        "areaMul": 1.25,
+        "knock": 5
+      },
+      "vfxId": "link-mole-mitts",
+      "vfxPreset": "rock-slide",
+      "sfxPreset": "rock-throw"
+    },
+    {
+      "key": "remote-bombs",
+      "name": "Remote Bombs",
       "type": "fire",
       "cls": "special",
-      "power": 88,
+      "power": 98,
       "accuracy": 100,
       "pp": 15,
-      "ailment": "burn",
-      "ailmentChance": 35,
-      "flavor": "Swings the Flame Lantern to unleash a searing ring of embers that ignites surrounding foes.",
+      "flavor": "Tosses Minish Cap Remote Bombs that detonate in high-impact azure-gold blast waves.",
       "archetype": "nova",
       "params": {
         "pulses": 2,
-        "dmgMul": 1.2,
-        "areaMul": 1.15,
-        "status": "burn",
-        "statusChance": 0.4
+        "dmgMul": 1.28,
+        "areaMul": 1.3,
+        "knock": 6
       },
-      "vfxId": "link-flame-lantern",
-      "vfxPreset": "flamethrower",
+      "vfxId": "link-remote-bombs",
+      "vfxPreset": "fire-blast",
       "sfxPreset": "ember"
+    },
+    {
+      "key": "rocs-cape",
+      "name": "Roc's Cape",
+      "type": "flying",
+      "cls": "physical",
+      "power": 82,
+      "accuracy": 100,
+      "pp": 20,
+      "flavor": "Soars on golden Roc's Cape air currents and sends razor wind waves crashing outward.",
+      "archetype": "wave",
+      "params": {
+        "count": 2,
+        "dmgMul": 1.16,
+        "areaMul": 1.25,
+        "pierce": 4,
+        "cdMul": 0.9
+      },
+      "vfxId": "link-rocs-cape",
+      "vfxPreset": "air-slash",
+      "sfxPreset": "gust"
     }
   ],
   "customItems": [
@@ -230,6 +376,42 @@
           "mul": 1.12
         }
       ]
+    },
+    {
+      "key": "mirror-shield",
+      "name": "Mirror Shield",
+      "desc": "+18 Armor & +14% Max HP — sacred Hylian bulwark.",
+      "icon": "items/metal-coat.png",
+      "rarity": 3,
+      "max": 2,
+      "mods": [
+        {
+          "stat": "armor",
+          "add": 18
+        },
+        {
+          "stat": "maxHp",
+          "mul": 1.14
+        }
+      ]
+    },
+    {
+      "key": "ocarina-of-wind",
+      "name": "Ocarina of Wind",
+      "desc": "+16% Area & +10% Move Speed — summons Zeffa's tailwind.",
+      "icon": "items/choice-scarf.png",
+      "rarity": 2,
+      "max": 2,
+      "mods": [
+        {
+          "stat": "area",
+          "mul": 1.16
+        },
+        {
+          "stat": "moveSpeed",
+          "mul": 1.1
+        }
+      ]
     }
   ],
   "characters": [
@@ -255,14 +437,18 @@
       "rank": "legendary",
       "color": "green",
       "start": true,
-      "unlock": false,
+      "unlock": true,
       "cryFrom": 251,
       "kit": [
         "picori-blade",
-        "magical-boomerang",
+        "heros-bow",
         "gust-jar",
+        "magical-boomerang",
+        "flame-lantern",
         "cane-of-pacci",
-        "flame-lantern"
+        "mole-mitts",
+        "remote-bombs",
+        "rocs-cape"
       ],
       "overrideLearnset": true,
       "customUlt": {
@@ -283,7 +469,7 @@
           "particleCount": 30
         }
       },
-      "flavor": "Chosen Hero of Hyrule accompanied by Ezlo the Minish Cap. Wields the Picori Blade, Magical Boomerang, Gust Jar, Cane of Pacci, and the legendary Four Sword.",
+      "flavor": "Chosen Hero of Hyrule accompanied by Ezlo the Minish Cap. Wields the Picori Blade, Hero's Bow, Gust Jar, Magical Boomerang, Flame Lantern, Cane of Pacci, Mole Mitts, Remote Bombs, and Roc's Cape — fusing Sword & Bow into Light Arrows!",
       "sprite": "characters/minish-link-front.png",
       "pmdSheet": "characters/minish-link-pmd.png",
       "pmdShinySheet": "characters/minish-link-shiny.png",
@@ -363,6 +549,706 @@
         ]
       },
       "reload": true
+    }
+  ],
+  "assetsDir": "assets",
+  "regions": [
+    {
+      "id": "hyrule",
+      "name": "Hyrule",
+      "gen": 98,
+      "dex": [
+        2010,
+        2010
+      ],
+      "maps": [
+        "hyrule_field",
+        "dark_world"
+      ],
+      "slots": 0,
+      "emblem": 2010,
+      "c": "#22c55e",
+      "c2": "#facc15"
+    }
+  ],
+  "customLevels": [
+    {
+      "id": "hyrule_field",
+      "name": "Hyrule Field — Hyrule Castle",
+      "desc": "Sunlit emerald plains of Hyrule with a cobblestone royal highway crossing the Castle Moat to Hyrule Castle.",
+      "mode": "procedural",
+      "region": "hyrule",
+      "unlockedByDefault": true,
+      "unlock": "Unlocked",
+      "envFrom": "forest",
+      "envDir": "env/hyrule_field",
+      "thumbnail": "thumbnails/hyrule_field.png",
+      "thumbnailFrom": "forest",
+      "size": 360,
+      "types": [
+        "grass",
+        "steel",
+        "fairy"
+      ],
+      "late": [
+        "dragon",
+        "fighting"
+      ],
+      "residents": [
+        1,
+        43,
+        69,
+        10,
+        16,
+        19,
+        25,
+        35,
+        39,
+        58,
+        123,
+        152,
+        161,
+        175,
+        183
+      ],
+      "specials": [
+        123,
+        127,
+        212,
+        214
+      ],
+      "bosses": [
+        123,
+        212,
+        214
+      ],
+      "legendaries": [
+        251,
+        244,
+        151
+      ],
+      "guardians": [
+        [
+          123,
+          214
+        ],
+        [
+          106,
+          212
+        ],
+        [
+          149,
+          248
+        ]
+      ],
+      "totems": [
+        [
+          1,
+          43,
+          69
+        ],
+        [
+          35,
+          175,
+          183
+        ],
+        [
+          58,
+          123,
+          214
+        ]
+      ],
+      "summoners": [
+        [
+          212,
+          214
+        ],
+        [
+          149,
+          251
+        ]
+      ],
+      "sky": [
+        2522096,
+        8642047
+      ],
+      "fog": 8968191,
+      "fogNear": 56,
+      "fogFar": 230,
+      "light": 1.1,
+      "sun": 16775888,
+      "hemiGround": 4364868,
+      "ground": [
+        4895304,
+        5817426,
+        4096064,
+        3440180
+      ],
+      "path": 14861456,
+      "cliff": [
+        10261120,
+        9208434,
+        11050634
+      ],
+      "water": 0.45,
+      "waterColor": 2017512,
+      "props": [
+        "tree",
+        "pine",
+        "bush",
+        "flower",
+        "pillar"
+      ],
+      "propDensity": 0.92,
+      "relief": {
+        "levels": 4,
+        "massifs": 2
+      },
+      "weather": [
+        "clear",
+        "sun",
+        "rain"
+      ],
+      "morning": {
+        "motes": "pollen"
+      },
+      "landmark": {
+        "kind": "hyrule_castle",
+        "name": "Hyrule Castle",
+        "color": 4359935
+      },
+      "sanctuary": {
+        "name": "Minish Sanctuary Woods",
+        "arena": "forest",
+        "heart": "Heart of Hyrule",
+        "pack": "sanctum",
+        "legendaries": [
+          251,
+          151
+        ],
+        "shrine": "shrine",
+        "portal": "sanct_portal",
+        "color": 5046144,
+        "sky": [
+          2127696,
+          8642047
+        ],
+        "fog": 6423416,
+        "fogNear": 36,
+        "fogFar": 125,
+        "light": 1,
+        "sun": 16775888,
+        "hemiGround": 3633984,
+        "music": {
+          "root": 60,
+          "scale": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ],
+          "bpm": 114,
+          "mood": "bright"
+        }
+      },
+      "zones": [
+        {
+          "name": "Hyrule Castle High Noon",
+          "sky": [
+            2192368,
+            8642047
+          ],
+          "fog": 8507391,
+          "fogNear": 56,
+          "fogFar": 230,
+          "light": 1.12,
+          "sun": 16775888,
+          "hemiGround": 4364868,
+          "sunDir": [
+            0.64,
+            0.78,
+            0.14
+          ],
+          "sunH": 0.44,
+          "tint": [
+            1,
+            1.04,
+            0.98
+          ],
+          "clouds": [
+            1.02,
+            1.04,
+            1.02
+          ],
+          "cover": 0.08,
+          "glow": 16771680,
+          "glowK": 0.36,
+          "stars": 0,
+          "motes": "pollen"
+        },
+        {
+          "name": "Hyrule Golden Twilight",
+          "sky": [
+            3937888,
+            15295056
+          ],
+          "fog": 13530480,
+          "fogNear": 46,
+          "fogFar": 195,
+          "light": 0.92,
+          "sun": 16752704,
+          "hemiGround": 5976128,
+          "sunDir": [
+            0.8,
+            0.46,
+            -0.18
+          ],
+          "sunH": 0.12,
+          "tint": [
+            1.08,
+            0.94,
+            0.88
+          ],
+          "clouds": [
+            1.06,
+            0.86,
+            0.78
+          ],
+          "cover": 0.1,
+          "glow": 16756800,
+          "glowK": 0.7,
+          "stars": 0.55,
+          "motes": "fireflies"
+        }
+      ],
+      "tex": {
+        "top": [
+          4895304,
+          5817426,
+          4096064
+        ],
+        "detail": "grass",
+        "side": [
+          10261120,
+          9208434,
+          11050634
+        ],
+        "lip": 4895304,
+        "path": [
+          14861456,
+          9993304
+        ],
+        "leaf": 3440180,
+        "bark": 7358004,
+        "rock": 10261120,
+        "accent": 16766720,
+        "deco": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "music": {
+        "root": 60,
+        "scale": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ],
+        "bpm": 116,
+        "mood": "bright"
+      },
+      "musicTrack": "alttp-overworld"
+    },
+    {
+      "id": "dark_world",
+      "name": "The Dark World — Pyramid of Power",
+      "desc": "Corrupted golden-ochre twilight realm cut by violet canals rising toward the monumental Pyramid of Power.",
+      "mode": "procedural",
+      "region": "hyrule",
+      "unlockedByDefault": true,
+      "unlock": "Unlocked",
+      "envFrom": "desert",
+      "envDir": "env/dark_world",
+      "thumbnail": "thumbnails/dark_world.png",
+      "thumbnailFrom": "desert",
+      "size": 360,
+      "types": [
+        "dark",
+        "ghost",
+        "ground"
+      ],
+      "late": [
+        "fire",
+        "psychic"
+      ],
+      "residents": [
+        92,
+        93,
+        41,
+        42,
+        104,
+        105,
+        197,
+        198,
+        200,
+        215,
+        228,
+        229,
+        246,
+        247,
+        109
+      ],
+      "specials": [
+        94,
+        229,
+        197,
+        248
+      ],
+      "bosses": [
+        94,
+        229,
+        248
+      ],
+      "legendaries": [
+        150,
+        249,
+        250
+      ],
+      "guardians": [
+        [
+          94,
+          197
+        ],
+        [
+          229,
+          215
+        ],
+        [
+          248,
+          150
+        ]
+      ],
+      "totems": [
+        [
+          92,
+          198,
+          200
+        ],
+        [
+          104,
+          228,
+          215
+        ],
+        [
+          93,
+          229,
+          247
+        ]
+      ],
+      "summoners": [
+        [
+          94,
+          229
+        ],
+        [
+          248,
+          150
+        ]
+      ],
+      "sky": [
+        2494540,
+        8659280
+      ],
+      "fog": 5907548,
+      "fogNear": 40,
+      "fogFar": 182,
+      "light": 0.9,
+      "sun": 16750160,
+      "hemiGround": 7094836,
+      "ground": [
+        11041850,
+        10120754,
+        11962948,
+        8409644
+      ],
+      "path": 7362176,
+      "cliff": [
+        7096406,
+        6044238,
+        8148554
+      ],
+      "water": 0.46,
+      "waterColor": 8141549,
+      "props": [
+        "deadtree",
+        "obelisk",
+        "gargoyle",
+        "crystal",
+        "brazier"
+      ],
+      "propDensity": 0.88,
+      "relief": {
+        "levels": 4,
+        "massifs": 3
+      },
+      "weather": [
+        "clear",
+        "sand",
+        "storm"
+      ],
+      "morning": {
+        "motes": "embers"
+      },
+      "landmark": {
+        "kind": "pyramid_of_power",
+        "name": "Pyramid of Power",
+        "color": 16760576
+      },
+      "sanctuary": {
+        "name": "Golden Land Rift",
+        "arena": "ruins",
+        "heart": "Triforce of Power",
+        "pack": "sanctum",
+        "legendaries": [
+          150,
+          249
+        ],
+        "shrine": "shrine",
+        "portal": "sanct_portal",
+        "color": 14515808,
+        "sky": [
+          1969730,
+          5773680
+        ],
+        "fog": 4397676,
+        "fogNear": 34,
+        "fogFar": 120,
+        "light": 0.86,
+        "sun": 16758848,
+        "hemiGround": 4990512,
+        "music": {
+          "root": 55,
+          "scale": [
+            0,
+            2,
+            3,
+            7,
+            8
+          ],
+          "bpm": 112,
+          "mood": "tense"
+        }
+      },
+      "zones": [
+        {
+          "name": "Dark World Crimson Dusk",
+          "sky": [
+            2494540,
+            8659280
+          ],
+          "fog": 5907548,
+          "fogNear": 40,
+          "fogFar": 182,
+          "light": 0.92,
+          "sun": 16750160,
+          "hemiGround": 7094836,
+          "sunDir": [
+            0.7,
+            0.62,
+            0.16
+          ],
+          "sunH": 0.26,
+          "tint": [
+            1.08,
+            0.92,
+            1.04
+          ],
+          "clouds": [
+            0.96,
+            0.72,
+            0.92
+          ],
+          "cover": 0.18,
+          "glow": 16754256,
+          "glowK": 0.62,
+          "stars": 0.35,
+          "motes": "embers"
+        },
+        {
+          "name": "Pyramid Blood Eclipse",
+          "sky": [
+            1181236,
+            4069464
+          ],
+          "fog": 2953288,
+          "fogNear": 34,
+          "fogFar": 156,
+          "light": 0.8,
+          "sun": 15810128,
+          "hemiGround": 3939392,
+          "sunDir": [
+            0.76,
+            0.48,
+            -0.2
+          ],
+          "sunH": 0.08,
+          "tint": [
+            1.1,
+            0.84,
+            1.12
+          ],
+          "clouds": [
+            0.84,
+            0.56,
+            0.86
+          ],
+          "cover": 0.22,
+          "glow": 14494975,
+          "glowK": 0.86,
+          "stars": 0.92,
+          "motes": "fireflies"
+        }
+      ],
+      "tex": {
+        "top": [
+          11041850,
+          10120754,
+          11962948
+        ],
+        "detail": "sand",
+        "side": [
+          7096406,
+          6044238,
+          8148554
+        ],
+        "lip": 11041850,
+        "path": [
+          7362176,
+          3810892
+        ],
+        "leaf": 5913734,
+        "bark": 5913672,
+        "rock": 7096406,
+        "accent": 16760576,
+        "deco": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "music": {
+        "root": 55,
+        "scale": [
+          0,
+          2,
+          3,
+          7,
+          8
+        ],
+        "bpm": 114,
+        "mood": "tense"
+      },
+      "musicTrack": "alttp-dark-world"
+    }
+  ],
+  "bundlePatches": [
+    {
+      "matchFile": "^assets/moves-.*\\.js$",
+      "patches": [
+        {
+          "find": "if(this.biome.shape===`summit`){this.generateSummit();return}",
+          "replace": "if(this.biome.shape===`summit`){this.generateSummit();return}if(this._pbLinkTerrain?.())return;"
+        },
+        {
+          "find": "generateSummit(){",
+          "replace": "_pbLinkTerrain(){const id=this.biome?.id;if(id!==`hyrule_field`&&id!==`dark_world`)return!1;const n1=this.noise,n2=this.noise2,half=this.world/2,P=this.play,N=this.res;const set=(gx,gz,h,pm)=>{const k=this.idx(gx,gz);this.heights[k]=h;this.pathMask[k]=C(pm,0,1)};const rim=(wx,wz)=>S(P-5,P+10,Math.max(Math.abs(wx),Math.abs(wz)))*(18+n1.get(wx*.05,wz*.05)*7);const spawnBlend=(wx,wz,h,baseH)=>{const s=S(18,8,Math.hypot(wx,wz));return h*(1-s)+baseH*s};let waterY=0.22;if(id===`hyrule_field`){waterY=0.22;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.4+n1.fbm(wx*.011,wz*.011,4)*3.2+n2.get(wx*.024,wz*.024)*.7;let pm=0;const cDist=Math.hypot(wx,wz+48);if(cDist<34){const plat=S(34,26,cDist);h=h*(1-plat)+4.4*plat;pm=Math.max(pm,S(27,18,cDist)*.82)}const moat=Math.abs(cDist-37);const onBridge=Math.abs(wx)<9&&wz>-32&&wz<4;if(moat<7.5&&!onBridge){const d=S(7.5,2.5,moat);h=h*(1-d)+(-1.6)*d}const road=Math.abs(wx);if(wz>-46&&wz<P*.82&&road<9){const p=S(9,3.5,road);pm=Math.max(pm,p*.95);if(wz>-34&&wz<-6)h=Math.max(h,2.55);else h=h*(1-p*.55)+2.55*p*.55}const eRoad=Math.abs(wz-10);if(Math.abs(wx)<P*.78&&eRoad<7){const p=S(7,2.8,eRoad);pm=Math.max(pm,p*.8);h=h*(1-p*.45)+2.4*p*.45}h=spawnBlend(wx,wz,h,2.4)+rim(wx,wz);set(gx,gz,h,pm)}}else{waterY=0.18;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.2+n1.fbm(wx*.014,wz*.014,4)*3.6+Math.abs(n2.get(wx*.025,wz*.025))*1.4;let pm=0;const pDist=Math.max(Math.abs(wx),Math.abs(wz+44));if(pDist<34){const step1=S(34,27,pDist),step2=S(24,18,pDist);h=h*(1-step1)+(3.6+step2*1.6)*step1;pm=Math.max(pm,step1*.78)}const canalL=Math.abs(wx+26+Math.sin(wz*.04)*8),canalR=Math.abs(wx-26-Math.sin(wz*.04)*8);const onCauseway=Math.abs(wz-6)<8.5||Math.abs(wx)<10;const cMin=Math.min(canalL,canalR);if(cMin<7.5&&!onCauseway&&pDist>28){const dip=S(7.5,2.4,cMin);h=h*(1-dip)+(-1.6)*dip}if(Math.abs(wx)<9.5&&wz>-42&&wz<P*.82){const p=S(9.5,3.5,Math.abs(wx));pm=Math.max(pm,p*.92);h=h*(1-p*.55)+2.4*p*.55}if(Math.abs(wz-6)<8&&Math.abs(wx)<P*.78){const p=S(8,3,Math.abs(wz-6));pm=Math.max(pm,p*.85);h=Math.max(h,2.2)}h=spawnBlend(wx,wz,h,2.2)+rim(wx,wz);set(gx,gz,h,pm)}}this.blur();this.connectPlateaus();this.reserve(0,0,16);if(id===`hyrule_field`)this.reserve(0,-50,24),this.reserve(0,-20,12);else this.reserve(0,-46,25),this.reserve(0,-18,12);this.finishHeights(waterY,0,0);return!0}generateSummit(){"
+        },
+        {
+          "find": "e.landmarks&&this.placeLandmarks(e,n);",
+          "replace": "e.landmarks&&this.placeLandmarks(e,n);if(this.biome?.id===`hyrule_field`||this.biome?.id===`dark_world`){const _isHy=this.biome.id===`hyrule_field`;const _place=(name,x,z,scale,sway,cols,shadow=8)=>{const y=this.height(x,z)-.08;n.push({kind:{name,scale,sway,collider:0,shadow},x,y,z,flip:!1,s:1});for(const[ox,oz,cr]of cols)this.addCollider({x:x+ox,z:z+oz,r:cr,h:y+12});};if(_isHy){_place(`castle`,0,-54,.108,0,[[-10.5,-3,3.8],[-5.5,-3.5,4.2],[0,-3.5,4.5],[5.5,-3.5,4.2],[10.5,-3,3.8],[-10.5,2.2,3.4],[10.5,2.2,3.4]],16);_place(`tower`,-11,-17,.082,0,[[0,0,2.6]],5);_place(`tower`,11,-17,.082,0,[[0,0,2.6]],5);for(const[px,pz]of[[-10,16],[10,16],[-10,36],[10,36]])_place(`pillar`,px,pz,.068,0,[[0,0,1.6]],3);for(const[sx,sz]of[[-44,-14],[46,-12],[-38,42],[42,38]])_place(`stump`,sx,sz,.076,0,[[0,0,2.3]],4);}else{_place(`pyramid`,0,-48,.112,0,[[-11.5,-2,4.2],[-6,-4,4.8],[0,-4.5,5.2],[6,-4,4.8],[11.5,-2,4.2],[-8.5,3,3.6],[8.5,3,3.6]],18);_place(`gargoyle`,-10,-16,.078,0,[[0,0,2.4]],5);_place(`gargoyle`,10,-16,.078,0,[[0,0,2.4]],5);for(const[bx,bz]of[[-11,14],[11,14],[-11,32],[11,32],[-16,-34],[16,-34]])_place(`brazier`,bx,bz,.066,0,[[0,0,1.4]],3);for(const[mx,mz]of[[-36,-44],[36,-44],[-44,-18],[44,-18],[-34,36],[34,36]])_place(`monolith`,mx,mz,.084,0,[[0,0,2.2]],5);}}"
+        },
+        {
+          "find": "hr.desert=_r(",
+          "replace": "hr.hyrule_field=gr({tree:.072,big:.056,small:.046,sway:.05,treeCollider:1.1,still:[`tree4`,`big0`,`big1`,`big4`,`small3`]}),hr.dark_world=gr({tree:.078,big:.062,small:.048,sway:.03,treeCollider:1.2,still:[`tree1`,`tree3`,`tree4`,`tree5`,`big0`,`big1`,`big2`,`big3`,`big4`,`small1`,`small2`,`small3`,`small5`,`small6`]}),hr.desert=_r("
+        },
+        {
+          "find": "t()!==`es`&&await this.localize();",
+          "replace": "t()!==`es`&&await this.localize();await this._pbLocalizeMods?.();"
+        },
+        {
+          "find": "async localize(){",
+          "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/machine-.*\\.js$",
+      "patches": [
+        {
+          "find": "\"fu-missingno\":{parts:[],random:!0}}",
+          "replace": "\"fu-missingno\":{parts:[],random:!0},\"fu-2010\":{parts:[$(`arrows`,`barrage`,J(`Light Arrows`)),$(`radiance`,`nova`,J(`Sacred Triforce Burst`))],area:[`arrows`,`radiance`],dur:[`arrows`],count:[{part:`arrows`,per:2,max:8,base:5}],fixed:[J(`Pierces all foes and detonates in sacred golden light.`)]}}"
+        },
+        {
+          "find": ",...Ur],gi=new Map;",
+          "replace": ",...Ur,{repeats:!0,key:`fu-2010`,member:2010,moves:[`picori-blade`,`heros-bow`],kind:`signature`,name:J(`Light Arrows`),desc:J(`Fuses the sacred Picori Blade with the Hero\\'s Bow to unleash piercing golden Light Arrows that cleave through hordes and detonate in blinding Triforce radiance.`),type:`fairy`,type2:`steel`,cls:`physical`,cd:2.8,power:1.35,hits:5.2,range:19,status:`stun`,sfx(e){at(e,.24,440,.08),I(e,1046,.06,.11)},cast(e){let t=e.run,r=t.player.pos;Rt(e,r.x,r.y+1,r.z,.28,3.2,20);t.later(.26,()=>{let p=t.player.pos,ax=e.ax,az=e.az,ba=Math.atan2(az,ax),cnt=5+X(e,2,8),len=18*e.R,cy=p.y+1.1;t.vfx.flash(p.x+ax,cy,p.z+az,16773216,3.8,.22);t.shake(.14);b(t.audio,120,.18);G(t.audio,.08,.95);I(t.audio,1318,.06,.04);for(let k=0;k<cnt;k++){let sp=cnt>1?(k/(cnt-1)-.5)*.62:0,ang=ba+sp,dx=Math.cos(ang),dz=Math.sin(ang);let ex=p.x+dx*len,ez=p.z+dz*len;_(t,p.x+dx*.8,cy,p.z+dz*.8,ex,cy,ez,.85*e.R,16773216,16777180);Q(e,p.x+dx*.8,p.z+dz*.8,ex,ez,1.25*e.R,.58,{status:`stun`,statusChance:.35,knock:2});Ft(e,{x:p.x+dx*.9,y:cy,z:p.z+dz*.9,dx,dz,speed:30,life:.65*e.D,radius:.9*e.R,pierce:99,shape:P.Star,size:1.15,color:16773216,fx:be(`swift`),knock:2.5},.48)}t.later(.22,()=>{let bx=p.x+ax*(len*.72),bz=p.z+az*(len*.72),by=U(t,bx,bz);R(t,bx,by,bz,4.4*e.R,[16773216,16760576],2,.08,F.Runes);K(e,bx,bz,4.4*e.R,1.25,{status:`stun`,statusChance:.75,knock:4});I(t.audio,880,.05),I(t.audio,1318,.06,.05)})})}}],gi=new Map;"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/i18n-.*\\.js$",
+      "patches": [
+        {
+          "find": "export{t as a,",
+          "replace": "(window.__pbI18nUrls??=[]).push(`assets/i18n-minish-link.json`);export{t as a,"
+        },
+        {
+          "find": "function l(e,t){r=e,i=t,d=null}",
+          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign(i,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[r]){Object.assign(i,data.strings[r]);d=null}};function l(e,t){r=e,i=t,d=null;_pbMergeModTr(e)}"
+        }
+      ]
+    },
+    {
+      "matchFile": "^assets/assets-.*\\.js$",
+      "patches": [
+        {
+          "find": "a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],",
+          "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
+        }
+      ]
+    }
+  ],
+  "customMusic": [
+    {
+      "id": "alttp-overworld",
+      "name": "Overworld (A Link to the Past)",
+      "desc": "Classic SNES Hyrule Field Overworld theme",
+      "file": "audio/music/alttp-overworld.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.88,
+      "weight": 1
+    },
+    {
+      "id": "alttp-dark-world",
+      "name": "Dark World (A Link to the Past)",
+      "desc": "Classic SNES Dark World Overworld theme",
+      "file": "audio/music/alttp-dark-world.ogg",
+      "pool": "custom",
+      "loop": 2,
+      "volume": 0.88,
+      "weight": 1
     }
   ]
 }

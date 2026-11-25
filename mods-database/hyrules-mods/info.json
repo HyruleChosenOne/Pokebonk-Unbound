@@ -1,20 +1,21 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "HyruleChosenOne",
   "category": "Quality of Life",
   "scope": "client",
   "pinned": true,
   "essential": true,
   "featured": true,
-  "tagline": "Offline Mode events hub, live main menu customization, P2P multiplayer, and optional solo cheats.",
-  "description": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub without altering your wallpaper or music, unlocks direct IP:Port P2P Co-op multiplayer, and adds live 3D main menu diorama and music selectors alongside optional solo speed/combat cheats and save utilities.",
+  "tagline": "Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks.",
+  "description": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub, unlocks direct IP:Port P2P Co-op multiplayer with Local Lobbies browser, adds live 3D main menu diorama and music selectors, and provides reworked Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities.",
   "highlights": [
     "Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub",
-    "Direct IP:Port Peer-to-Peer Co-op multiplayer hosting and joining",
+    "Direct IP:Port Peer-to-Peer Co-op multiplayer with UDP Local Lobbies browser & 1-click Mod Sync",
     "Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)",
-    "Optional solo Offline cheats (Run Speed 1x/1.5x/2x, God Mode, Overdrive, Unlock All Difficulties, Unlock All Wardrobe, and Trainer Save Utilities)"
+    "Solo Combat Cheats: Run Speed 1x/1.5x/2x/3x, God Mode, Overdrive, Turbo XP (5x), Super Magnet & Luck, Instant Ultimate, Unlock All Difficulties",
+    "Full Unlocks: Unlock All (Full Profile Customization), Unlock All Clan & Rank Rewards, Unlock All Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests"
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)"
