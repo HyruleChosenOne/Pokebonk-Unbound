@@ -1,9 +1,10 @@
-# Experimental: Apple Support (macOS & iOS Sideload)
+# Apple Support (iOS / iPadOS Sideload & Experimental macOS)
 
-> **Experimental & Untested Notice**
-> The Apple builds are **experimental** because the developer does not currently own macOS or iOS hardware to test them firsthand. Feedback, crash logs (`Documents/unbound-data/ios-node.log` on iOS), and compatibility reports from macOS and iOS testers are warmly welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
-
-All experimental Apple packages live under the dedicated **[Experimental: Apple (macOS & iOS Sideload)](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** pre-release tab so stable Windows, Linux / SteamOS, and Android auto-updaters are never affected.
+> **Status Notice**
+> - **iOS / iPadOS (`.ipa` Sideload)**: Verified working on real iPad Pro hardware and promoted to the main **[v1.0.5 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.0.5)**.
+> - **macOS (`.zip`)**: Still **experimental / untested** on real Mac hardware and hosted under the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** pre-release tab.
+>
+> Feedback, crash logs (`Documents/unbound-data/ios-node.log` on iOS), and compatibility reports are warmly welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
 
 ---
 
@@ -41,14 +42,14 @@ Because the experimental macOS builds are **unsigned / un-notarized**, macOS Gat
 
 ---
 
-## iOS / iPadOS (Unsigned `.ipa` Sideloading — Experimental)
+## iOS / iPadOS (Unsigned `.ipa` Sideloading)
 
 ### Downloads (v1.0.5 — Unsigned `arm64` `.ipa`)
 
-Download from the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab:
+Download directly from the **[v1.0.5 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.0.5)** (verified on iPad Pro):
 
-- **Complete Edition (Recommended — includes `v0.10.31` offline build)**: **[PokeBonk-Unbound-Complete-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Complete-1.0.5.ipa)**
-- **Portable Edition ("Nothing Included" — downloads offline build on demand)**: **[PokeBonk-Unbound-Portable-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-apple/PokeBonk-Unbound-Portable-1.0.5.ipa)**
+- **Complete Edition (Recommended — includes `v0.10.31` offline build)**: **[PokeBonk-Unbound-Complete-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.0.5/PokeBonk-Unbound-Complete-1.0.5.ipa)**
+- **Portable Edition ("Nothing Included" — downloads offline build on demand)**: **[PokeBonk-Unbound-Portable-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.0.5/PokeBonk-Unbound-Portable-1.0.5.ipa)**
 
 ### Automated CI Builds
 
