@@ -7,8 +7,8 @@ Everything below is part of the core Modding API and works out of the box whenev
 - **Custom Unplayable Enemies** (`customEnemies` / `enemiesDir`) with strict opt-in spawning (never playable, never shiny, never catchable, never leaking into vanilla maps)
 - **Custom Attacks** (`customMoves` / `movesDir`) and **Custom GPU Visual Effects (VFX)** (`customVfx` / `vfxDir`, inline move `vfx`, and `customUlt.vfx`)
 - **Custom Pokéball Pickup Items** (`customItems` / `itemsDir`)
-- **Custom Levels & 3D `.glb` Stages** (`customLevels` / `levelsDir`)
-- **Custom Map Mechanics** (`customMechanics` / `mechanicsDir` and `customLevels[].mechanics`): bounce mushrooms/pads, jackpot/slot machines, Meowth-style shops, dojo challenges, Unown-style blessing pillars, warps, hazards, and script-driven interactables
+- **Custom Levels, Procedural Terrain & 3D `.glb` Stages** (`customLevels` / `levelsDir`): vanilla-like terrain co-existing with layered `proceduralGen`, `prefabScatters`, and 3D `.glb` arenas
+- **Custom Map Mechanics & Prefabs** (`customPrefabs` / `prefabsDir`, `customMechanics` / `mechanicsDir`, `customLevels[].mechanics`): bounce pads, jackpot machines, shops, dojos, blessing pillars, portals, hazards, and script-driven interactables with `.glb`/`.gltf` models, 2D billboard sprites, custom textures, and composite `parts`
 - **Additive Custom Music & SFX** (`customMusic` / `musicDir`, `customSfx` / `sfxDir`)
 - **Custom Treasure Wheels** (`customTreasures` / `treasuresDir`)
 - **Custom Mod Config UI Modules** (`configModule`), declarative `settings`, `toolbarActions`, `regions`, `assetsDir`, `assetAliases`, `dataPatches`, `bundlePatches`, `profilePatch`, `scripts`, and `styles`
@@ -27,8 +27,8 @@ All mod toggles, config panels, and mod actions live inside **Unbound Settings**
 6. [Custom Enemies (Unplayable & Opt-In Only)](#6-custom-enemies-unplayable--opt-in-only)
 7. [Custom Attacks & Custom GPU VFX](#7-custom-attacks--custom-gpu-vfx)
 8. [Custom Pokéball Items](#8-custom-pokéball-items)
-9. [Custom Levels & 3D Stages](#9-custom-levels--3d-stages)
-10. [Custom Map Mechanics](#10-custom-map-mechanics)
+9. [Custom Levels, Procedural Generation & 3D Stages](#9-custom-levels-procedural-generation--3d-stages)
+10. [Custom Map Mechanics & Prefabs](#10-custom-map-mechanics--prefabs)
 11. [Additive Custom Music & SFX](#11-additive-custom-music--sfx)
 12. [Custom Treasures](#12-custom-treasures)
 13. [Custom Mod Config Modules, Declarative Settings & Actions](#13-custom-mod-config-modules-declarative-settings--actions)
@@ -121,8 +121,10 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `vfxDir` | `string` | Relative directory containing `.json` VFX preset files. |
 | `customItems` | `object[]` | Inline custom Pokéball pickup item definitions. |
 | `itemsDir` | `string` | Relative directory containing `.json` item files. |
-| `customLevels` | `object[]` | Inline procedural or 3D `.glb` custom stage definitions. |
+| `customLevels` | `object[]` | Inline procedural (`proceduralGen`, `prefabScatters`) or 3D `.glb` custom stage definitions. |
 | `levelsDir` | `string` | Relative directory containing `.json` level files. |
+| `customPrefabs` | `object[]` | Reusable 3D/2D prefab assets (`.glb`/`.gltf`, billboard sprites, textures, composite `parts`) shared by map mechanics and `prefabScatters`. |
+| `prefabsDir` | `string` | Relative directory containing `.json` prefab files. |
 | `customMechanics` | `object[]` | Inline custom map mechanics (`bounce`, `jackpot`, `shop`, `dojo`, `pillar`, `portal`, `hazard`, `custom`). Strictly opt-in per biome. |
 | `mechanicsDir` | `string` | Relative directory containing `.json` map mechanic files. |
 | `customMusic` | `object[]` | Additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
@@ -529,77 +531,153 @@ Custom items (`customItems` / `itemsDir`) enter PokéBonk's in-run Pokéball pic
 
 ---
 
-## 9. Custom Levels & 3D Stages
+## 9. Custom Levels, Procedural Generation & 3D Stages
 
-Add playable stages via `"customLevels"` or `"levelsDir"` in `mod.json`. Both procedural terrain stages and full 3D `.glb` mesh stages (with automatic slope-based collision baking) are supported.
+Add playable stages via `"customLevels"` or `"levelsDir"` in `mod.json`. Vanilla-like terrain, enhanced procedural generation (`proceduralGen`), and 3D `.glb` mesh stages (with automatic slope-based collision baking) all co-exist cleanly.
+
+### Level Fields
 
 | Field | Default | Description |
 | --- | --- | --- |
 | `id` | required | Unique biome ID (`a-z0-9_`). |
 | `name` / `desc` | required | Stage title and description in Map Picker. |
-| `region` | `"custom"` | Target region tab ID (`kanto`, `johto`, `hoenn`, `custom`, or any custom region declared in `regions`). |
-| `mode` | `"procedural"` | `"procedural"` (heightmap terrain) or `"model"` (loads `.glb` specified by `model` and bakes collision automatically). |
+| `region` | `"custom"` | Target region tab ID (`kanto`, `johto`, `hoenn`, `custom`, or a custom `regions` ID). |
+| `mode` | `"procedural"` | `"procedural"` (heightmap terrain) or `"model"` (loads `.glb` from `model` and bakes collision). |
 | `model` / `modelScale` / `modelOffset` / `maxSlope` / `hideBaseTerrain` / `walkableRadius` | model mode | Configures a `.glb` arena mesh. Served at `/assets/models/custom_<id>.glb`. |
 | `envDir` / `envFrom` | `"forest"` | Custom terrain textures directory (`ground.png`, `cliff.png`, `path.png`, `props.png`, `props.json`) or vanilla biome fallback. |
 | `thumbnail` / `thumbnailFrom` | `envFrom` | Map Picker preview image (`.png`/`.webp`) or vanilla fallback. |
-| `size`, `sky`, `fog`, `fogNear`, `fogFar`, `light`, `sun`, `hemiGround`, `ground`, `path`, `cliff`, `water`, `waterColor`, `props`, `propDensity`, `relief`, `weather`, `zones`, `sanctuary`, `tex`, `openSea` | defaults | Visual palette, lighting, weather, day/twilight zones, and terrain generation parameters. |
-| `residents`, `specials`, `bosses`, `legendaries`, `guardians`, `totems`, `summoners` | defaults | Enemy pools (accepts vanilla IDs, custom playable IDs, or Custom Enemy keys/IDs). |
+| `size`, `sky`, `fog`, `fogNear`, `fogFar`, `light`, `sun`, `hemiGround`, `ground`, `path`, `cliff`, `water`, `waterColor`, `props`, `propDensity`, `relief`, `weather`, `zones`, `sanctuary`, `tex`, `openSea`, `shape` | defaults | Visual palette, lighting, weather, day/twilight zones, and vanilla terrain parameters. |
+| `proceduralGen` (alias `terrainGen`) | `null` | Optional enhanced procedural generator config (see below). Omit to keep pure vanilla PokéBonk generation. |
+| `prefabScatters` | `[]` | Scatters reusable `customPrefabs` across walkable terrain (see below). |
+| `residents`, `specials`, `bosses`, `legendaries`, `guardians`, `totems`, `summoners` | defaults | Enemy pools (vanilla IDs, custom playable IDs, or Custom Enemy keys/IDs). |
 | `customEnemies` | `[]` | Explicit Custom Enemy spawn bindings scoped to this level. |
 | `mechanics` | `[]` | Custom Map Mechanics scoped directly to this level (see Section 10). |
-| `landmark` | `null` | Built-in procedural landmark (`hyrule_castle`, `pyramid_of_power`, `moss_shrine`, `volcano_caldera`, `spear_pillar`, `old_chateau`, `sand_pyramid`, `dragon_tower`, `sea_arch`, `prism_crystals`, `tapu_totem`, `fire_altar`, `dynamax_den`, `crown_temple`, `titan_mesa`, `terastal_spire`) plus optional `glbProps: [{ model, dx, dy, dz, scale, rotY }]`. |
-| `musicTrack` / `bossMusicTrack` | `null` | Custom music track IDs from `customMusic` to play on this stage and during its boss fights. |
+| `landmark` | `null` | Built-in landmark (`hyrule_castle`, `pyramid_of_power`, `moss_shrine`, `volcano_caldera`, `spear_pillar`, `old_chateau`, `sand_pyramid`, `dragon_tower`, `sea_arch`, `prism_crystals`, `tapu_totem`, `fire_altar`, `dynamax_den`, `crown_temple`, `titan_mesa`, `terastal_spire`) plus optional `glbProps: [{ model, dx, dy, dz, scale, rotY }]`. |
+| `musicTrack` / `bossMusicTrack` | `null` | Custom music track IDs from `customMusic`. |
 | `unlockedByDefault` | `true` | Automatically unlocks the level in offline profiles when enabled. |
+
+### Enhanced Procedural Terrain (`proceduralGen`)
+
+Vanilla generation stays untouched whenever `proceduralGen` is omitted. When provided, `base` chooses whether to layer features on top of a vanilla generator or build terrain from scratch:
+
+| Field | Values / Subfields | Description |
+| --- | --- | --- |
+| `base` | `"vanilla"` (default), `"island"`, `"cave"`, `"ancient"`, `"valley"`, `"lake"`, `"summit"`, `"wilds"`, `"custom"` | Runs the selected PokéBonk generator first and overlays `proceduralGen` on top, or generates purely from `proceduralGen` when `"custom"`. |
+| `preset` | `"archipelago"`, `"canyon"`, `"caldera"`, `"terraces"`, `"arena_rings"`, `"mesa"`, `"twin_peaks"`, `"river_basin"` | Optional macro elevation silhouette. |
+| `presetBlend` | `0`-`1` (default `0.85` if `preset` set, `1` for `base: "custom"`) | Mix ratio between the underlying vanilla heightmap and the `preset` / `noise` pass. |
+| `noise` | `{ scale, octaves, amplitude, ridgeWeight, terraceSteps, terraceSharpness, warpStrength, warpScale, heightOffset }` | Multi-octave fBm + ridged noise, domain warping, and terraced steps. |
+| `plateaus` | `{ count, minRadius, maxRadius, height, rampCount, flatTop }` | Raises flat-topped plateaus with walkable ramps and painted path access. |
+| `craters` | `{ count, minRadius, maxRadius, depth, rimHeight }` | Carves circular basins with raised crater rims. |
+| `rivers` | `{ count, width, depth, meander, paintPath }` | Carves meandering riverbeds across the map (optionally painting riverside trails). |
+| `paths` | `{ radialCount, ringRadius, width, flatten }` | Paints and gently flattens radial spokes and/or a concentric road ring. |
+| `border` | `"cliffs"`, `"ocean"`, `"wall"` | Map perimeter shape (defaults to `"cliffs"` when `base: "custom"`). |
+| `spawnClearingRadius` | `number` (default `14`) | Flattens a safe elevated clearing around `(0, 0)` above `waterLevel`. |
+| `smoothing` | `0`-`4` (default `1` for `"custom"`, `0` otherwise) | Gaussian heightmap smoothing passes. |
+| `waterLevel` | `number` | Enables water plane and sets water height. |
+| `generatorHook` | `string` | Name of a custom JS heightmap callback registered via `window.pokebonkTerrainGen.register(id, fn)`. |
+
+Script hook signature (`window.pokebonkTerrainGen`):
+```js
+window.pokebonkTerrainGen?.register('spiral-ridge', ({ heights, pathMask, res, world, cell, idx, noise, rng, play }) => {
+  const half = world / 2;
+  for (let gz = 0; gz <= res; gz++) {
+    for (let gx = 0; gx <= res; gx++) {
+      const x = gx * cell - half, z = gz * cell - half;
+      const r = Math.hypot(x, z), a = Math.atan2(z, x);
+      heights[idx(gx, gz)] += Math.sin(r * 0.12 - a * 2) * 1.4;
+    }
+  }
+});
+```
+
+### Scattering Custom Prefabs (`prefabScatters`)
+
+Place decorative or solid `customPrefabs` across walkable, above-water terrain:
+
+```json
+"prefabScatters": [
+  { "prefabId": "rune_obelisk", "count": 12, "minDist": 18, "maxDist": 115, "scaleRange": [0.85, 1.35], "randomRotY": true, "colliderRadius": 1.1 }
+]
+```
 
 ---
 
-## 10. Custom Map Mechanics
+## 10. Custom Map Mechanics & Prefabs
 
-Custom Map Mechanics (`customMechanics`, `mechanicsDir`, or `customLevels[].mechanics`) let mods place interactive world objects directly on maps — matching vanilla PokéBonk features like bouncy mushrooms, jackpot slot machines, Meowth's shop, the Karate Dojo, and Unown power pillars.
+Custom Map Mechanics (`customMechanics`, `mechanicsDir`, or `customLevels[].mechanics`) place interactive world objects directly on maps — matching vanilla PokéBonk features like bouncy mushrooms, jackpot slot machines, Meowth's shop, the Karate Dojo, and Unown power pillars.
 
-Like Custom Enemies, **Custom Map Mechanics are strictly opt-in per biome**: a mechanic will never spawn on vanilla maps unless you explicitly list those biome IDs in `"biomes": ["forest", ...]` or declare it inside a custom level's `"mechanics"` array.
+Like Custom Enemies, **Custom Map Mechanics are strictly opt-in per biome**: a mechanic will never spawn on vanilla maps unless you list those biome IDs in `"biomes": ["forest", ...]` or declare it inside a custom level's `"mechanics"` array.
 
 ### Supported Mechanic Kinds
 
 | `kind` | Vanilla Equivalent | Behavior |
 | --- | --- | --- |
-| `"bounce"` (alias `"shroom"`) | Bouncy Mushroom | Auto-launches the player in a parabolic arc when touched (`bounceDistance`, `bounceHeight`, `bounceDuration`, `cooldown`). |
-| `"jackpot"` (aliases `"slot"`, `"slots"`) | Slot Machine | Costs `cost` Pokédollars (scaling by `costScale` per spin) and rolls weighted `outcomes` (gold, free Super Ball chest, heal, XP, stat buff, or ambush). |
-| `"shop"` | Meowth Shop | Opens an interactive in-run shop modal with custom `stock` entries (`heal`, `chest`, `stat`, `xp`, `candy`) and purchase limits. |
-| `"dojo"` | Karate Dojo | Spawns a tracked challenger wave (`waveCount`, `waveEliteCount`, `waveSpecies` — works with Custom Enemies too!) and awards `reward` when cleared. |
-| `"pillar"` (alias `"altar"`) | Unown / Blessing Pillar | Stand inside `radius` for `chargeTime` seconds to fill the pillar, triggering VFX and granting `buffs`, `healPct`, `grantGold`, `grantXp`, `grantUlt`, and/or `spawnChest`. |
-| `"portal"` | Map Teleporter | Warps the player to a safe map spot with brief invulnerability frames and VFX (`cooldown`). |
-| `"hazard"` | Periodic Trap / Geyser | Pulses every `pulseInterval` seconds, dealing `damage` to nearby enemies (and optionally the player if `hitsPlayer: true`). |
-| `"custom"` | Script-Driven | Triggers a custom JS handler registered via `window.pokebonkMapMechanics.registerHandler(id, { onInteract, onTick, getLabel })`. |
+| `"bounce"` (alias `"shroom"`) | Bouncy Mushroom | Auto-launches the player in a parabolic arc on touch (`bounceDistance`, `bounceHeight`, `bounceDuration`, `cooldown`). |
+| `"jackpot"` (aliases `"slot"`, `"slots"`) | Slot Machine | Costs `cost` Pokédollars (scaling by `costScale` per spin) and rolls weighted `outcomes` (gold, Super Ball chest, heal, XP, buffs, or ambush). |
+| `"shop"` | Meowth Shop | Opens an in-run shop modal with custom `stock` entries (`heal`, `chest`, `stat`, `xp`, `candy`) and purchase limits. |
+| `"dojo"` | Karate Dojo | Spawns a tracked challenger wave (`waveCount`, `waveEliteCount`, `waveSpecies` — supports Custom Enemies) and awards `reward` on clear. |
+| `"pillar"` (alias `"altar"`) | Unown / Blessing Pillar | Stand inside `radius` for `chargeTime` seconds to trigger VFX and grant `buffs`, `healPct`, `grantGold`, `grantXp`, `grantUlt`, and/or `spawnChest`. |
+| `"portal"` | Map Teleporter | Warps the player to a safe spot with brief invulnerability frames (`cooldown`). |
+| `"hazard"` | Periodic Trap / Geyser | Pulses every `pulseInterval` seconds, dealing `damage` to nearby enemies (and the player if `hitsPlayer: true`). |
+| `"custom"` | Script-Driven | Runs a JS handler registered via `window.pokebonkMapMechanics.registerHandler(id, { onInteract, onTick, getLabel })`. |
 
-### Visuals & 3D Models
+### Reusable Custom Prefabs & Assets (`customPrefabs` / `prefabsDir`)
 
-Every mechanic picks its 3D representation in this order:
-1. **`model` / `model3d`**: Relative path to a custom `.glb` inside your mod folder (served at `/assets/models/custom_mech_<id>.glb`).
-2. **`vanillaModel`**: Any built-in PokéBonk interactable model (`bounceshroom`, `slots`, `dojo`, `power`, `altar`, `shrine`, `challenge`, `porygon`, `fossil`, `totem`, `billpc`, `portal`, `chest`, `freechest`, `cursed`, `greed`, `ruins_crystals`, `goldrock`, `nest`, `cage`). If omitted, each `kind` defaults to its matching vanilla model (`bounce` -> `bounceshroom`, `jackpot` -> `slots`, `dojo` -> `dojo`, `pillar` -> `power`, `portal` -> `portal`, `shop` -> `billpc`).
-3. **Procedural fallback**: Set `"procedural": true` (or if no model exists) to build a glowing tinted 3D pedestal + floating crystal tinted with `color` and `accentColor`.
+Define reusable visuals once in `"customPrefabs"` (or `"prefabsDir"`) and reference them from any mechanic via `"prefabId": "<id>"` or from any level's `"prefabScatters"`. You can also pass an inline `"prefab": { ... }` or set visual fields (`model`, `sprite`, `texture`, `icon`, `parts`) directly on a mechanic.
+
+```json
+"customPrefabs": [
+  {
+    "id": "rune_obelisk",
+    "name": "Rune Obelisk",
+    "scale": 1.2,
+    "height": 3.8,
+    "colliderRadius": 1.1,
+    "parts": [
+      { "shape": "cylinder", "size": [1.0, 1.2, 0.6], "pos": [0, 0.3, 0], "color": "#475569", "texture": "assets/stone.png" },
+      { "shape": "crystal", "size": [0.75], "pos": [0, 2.2, 0], "color": "#a855f7", "emissive": "#7e22ce", "spin": 1.4, "bob": 0.22 }
+    ]
+  },
+  {
+    "id": "trader_stand",
+    "sprite": "assets/trader.png",
+    "spriteSize": 2.8,
+    "spriteBob": 0.12,
+    "icon": "assets/trader-icon.png"
+  }
+]
+```
+
+| Prefab / Visual Field | Served Path | Description |
+| --- | --- | --- |
+| `model` / `model3d` | `/assets/models/custom_prefab_<id>.glb` (or `custom_mech_<id>.glb`) | Custom 3D `.glb` or `.gltf` mesh loaded through PokéBonk's toon shader pipeline. |
+| `sprite` / `billboard` | `/assets/mechanics/<id>.png` (or `/assets/prefabs/<id>.png`) | 2D billboard sprite (`spriteSize` world height, `spriteBob` vertical bobbing). |
+| `texture` | `/assets/mechanics/tex/<id>.png` (or `/assets/prefabs/tex/<id>.png`) | Custom texture applied to procedural pedestal or primitive shapes. |
+| `icon` | `/assets/mechanics/icons/<id>.png` | Optional custom icon asset for mechanic UI/HUD scripts. |
+| `vanillaModel` | built-in | Built-in model (`bounceshroom`, `slots`, `dojo`, `power`, `altar`, `shrine`, `challenge`, `porygon`, `fossil`, `totem`, `billpc`, `portal`, `chest`, `freechest`, `cursed`, `greed`, `ruins_crystals`, `goldrock`, `nest`, `cage`). Auto-picked by `kind` when no custom visual or `procedural: true` is set. |
+| `parts` | composite | Array of sub-elements: primitive `shape` (`box`, `cylinder`, `cone`, `crystal`/`icosahedron`, `sphere`), sub-`model`, `vanillaModel`, or `sprite`, each with `size`, `pos` `[x,y,z]`, `rot` `[x,y,z]`, `scale`, `color`, `emissive`, `texture`, `spin`, and `bob`. |
+| `scale` / `height` / `offsetY` / `rotY` / `colliderRadius` | numeric | Scale, floating label height, vertical offset, yaw rotation, and solid collision radius (`0` = pass-through). |
 
 ### Mechanic Definition Fields
 
 | Field | Default | Description |
 | --- | --- | --- |
 | `id` | required | Unique mechanic ID (`a-z0-9_-`). |
-| `kind` | `"custom"` | One of `bounce`, `jackpot`, `shop`, `dojo`, `pillar`, `portal`, `hazard`, `custom`. |
-| `name` / `desc` | required | Floating world label and `[E]` interaction prompt description. |
-| `biomes` | required (unless inside level `mechanics`) | Explicit list of biome IDs where this mechanic can spawn. Wildcards (`"*"`, `"all"`) are rejected. |
-| `count` | `1` (`3` for `bounce`) | Instances spawned per stage (`1`-`12`). |
-| `positions` | `null` | Optional fixed coordinates `[{ "x": 18, "z": -12 }]`; falls back to safe non-overlapping map spots between `minDist` and `maxDist`. |
-| `radius` | `3.2` (`5.2` pillar, `1.8` bounce) | Interaction or trigger radius in world units. |
-| `cooldown` | `0` (`14` bounce, `18` portal) | Seconds before reuse. |
-| `reusable` | varies by kind | Whether the interactable stays active after use. |
+| `kind` | `"custom"` | `bounce`, `jackpot`, `shop`, `dojo`, `pillar`, `portal`, `hazard`, or `custom`. |
+| `name` / `desc` | required | Floating world label and `[E]` prompt description. |
+| `biomes` | required (unless inside level `mechanics`) | Explicit biome IDs where this mechanic spawns. Wildcards (`"*"`, `"all"`) are rejected. |
+| `prefabId` / `prefab` | `null` | References a `customPrefabs` ID or declares an inline prefab object. |
+| `count` | `1` (`3` for `bounce`) | Instances per stage (`1`-`12`). |
+| `positions` | `null` | Optional fixed `[{ "x": 18, "z": -12 }]` coordinates; otherwise picks safe spots between `minDist` and `maxDist`. |
+| `radius` | `3.2` (`5.2` pillar, `1.8` bounce) | Interaction or trigger radius. |
+| `cooldown` / `reusable` | varies by kind | Seconds before reuse and whether the node remains usable after activation. |
 | `cost` / `costScale` | `0` (`25` jackpot) / `1.25` | Pokédollar cost and per-use multiplier. |
-| `color` / `accentColor` | varies | Hex string or RGB int for VFX rings, bursts, beacon beams, and banners. |
-| `beacon` | `true` for pillar/dojo/portal | Spawns a vertical light pillar beacon above the interactable. |
-| `modelScale` / `modelHeight` | `1.15` / `3.4` | 3D mesh scale and floating world label height. |
-| `customSfx` | `null` | Custom SFX ID from `customSfx` played on trigger. |
-| `buffs` (alias `mods`) | `[]` | Array of `{ "stat": "damage", "mul": 1.15 }` or `{ "stat": "critChance", "add": 0.1 }` modifiers applied to `run.tempMods`. |
-| `healPct` / `grantGold` / `grantXp` / `grantUlt` / `spawnChest` | `0` / `false` | Direct rewards granted on activation or pillar charge completion. |
-| `outcomes` | built-in jackpot table | Custom weighted array for `jackpot`: `[{ "weight": 20, "type": "gold", "label": "+80 ₽", "gold": 80, "chest": false, "healPct": 0, "buffs": [] }]` (`type: "ambush"` spawns an ambush wave). |
-| `stock` | built-in shop table | Custom shop entries for `shop`: `[{ "id": "atk", "label": "Power Charm", "desc": "+15% Damage", "cost": 40, "limit": 2, "effect": "stat", "stat": "damage", "mul": 1.15 }]` (`effect`: `heal`, `chest`, `stat`, `xp`, `candy`). |
+| `color` / `accentColor` / `beacon` | varies | Hex/RGB VFX colors and optional vertical light beacon. |
+| `customSfx` | `null` | Custom SFX ID from `customSfx` played on activation. |
+| `buffs` (alias `mods`) | `[]` | Array of `{ "stat": "damage", "mul": 1.15 }` or `{ "stat": "critChance", "add": 0.1 }` applied to `run.tempMods`. |
+| `healPct` / `grantGold` / `grantXp` / `grantUlt` / `spawnChest` | `0` / `false` | Direct rewards granted on activation or pillar completion. |
+| `outcomes` | built-in table | Weighted array for `jackpot`: `[{ "weight": 20, "type": "gold", "label": "+80 ₽", "gold": 80, "chest": false, "healPct": 0, "buffs": [] }]` (`type: "ambush"` spawns enemies). |
+| `stock` | built-in table | Shop items for `shop`: `[{ "id": "atk", "label": "Power Charm", "desc": "+15% Damage", "cost": 40, "limit": 2, "effect": "stat", "stat": "damage", "mul": 1.15 }]` (`effect`: `heal`, `chest`, `stat`, `xp`, `candy`). |
 | `waveCount` / `waveEliteCount` / `waveSpecies` / `reward` | `10` / `2` / biome pool / `{ chest: true, gold: 45 }` | Dojo challenge wave settings and clear reward. |
 | `pulseInterval` / `damage` / `status` / `hitsPlayer` | `6` / `35` / `null` / `false` | Hazard pulse timing and damage settings. |
 
@@ -612,21 +690,19 @@ window.pokebonkMapMechanics?.registerHandler('my-shrine', {
   getLabel(node, run) {
     return node.used ? 'Shrine Depleted' : 'Ancient Shrine · Spend 15 HP for +20% Damage';
   },
-  onTick(node, run, dt, distToPlayer) {
-    // Optional per-frame logic
-  },
+  onTick(node, run, dt, distToPlayer) {},
   onInteract(node, run) {
     node.used = true;
     run.player.hp = Math.max(1, run.player.hp - 15);
     run.tempMods.push({ stat: 'damage', mul: 1.2 });
     run.player.recompute();
     run.ui?.banner?.('Blood Pact', '+20% Damage for this run!', '#ef4444');
-    return true; // return true to override default behavior
+    return true;
   }
 });
 ```
 
-Inspect active mechanics at runtime via `GET /local-api/mod-api/mechanics` or `await window.pokebonkModAPI.getMechanics()`.
+Inspect active prefabs and mechanics at runtime via `GET /local-api/mod-api/mechanics` or `await window.pokebonkModAPI.getMechanics()`.
 
 ---
 
@@ -917,11 +993,11 @@ Scripts listed in `"scripts"` run in Offline Mode with `window.pokebonkModAPI`:
 - `window.pokebonkModAPI.getEnemies()` -> `GET /local-api/mod-api/enemies`
 - `window.pokebonkModAPI.getMoves()` -> `GET /local-api/mod-api/moves`
 - `window.pokebonkModAPI.getVfx()` -> `GET /local-api/mod-api/vfx`
-- `window.pokebonkModAPI.getMechanics()` -> `GET /local-api/mod-api/mechanics`
+- `window.pokebonkModAPI.getMechanics()` -> `GET /local-api/mod-api/mechanics` (includes active `prefabs` and `mechanics`)
 - `window.pokebonkModAPI.getAudio()` -> `GET /local-api/mod-api/audio`
 - `window.pokebonkModAPI.mutateProfile(mutation)` -> `POST /local-api/mod-api/mutate` (Offline Mode + Mods ON only)
 - `window.pokebonkModAPI.fetchPokeApi(path)` / `getPokeApiSpriteUrl(id, shiny)` / `reloadGame()`
-- Read-only enabled mod list is also available at `GET /local-api/mods`.
+- Runtime hooks: `window.pokebonkMapMechanics`, `window.pokebonkTerrainGen`, `window.pokebonkVfx`, `window.pokebonkAudio`, and read-only `GET /local-api/mods`.
 
 ### Asset Overrides & Aliases
 
@@ -1231,9 +1307,9 @@ mods/
 
 ---
 
-### Example 3: Custom Stage with Vanilla-Style Map Mechanics
+### Example 3: Procedural Custom Stage with Prefabs & Map Mechanics
 
-Adds a playable stage (`emerald_sanctum`) populated with a bounce mushroom, a custom jackpot machine, a wandering merchant shop, a dojo challenge, and an Unown-style rune blessing pillar.
+Adds a custom stage (`emerald_sanctum`) combining enhanced procedural terrain (`proceduralGen` + `prefabScatters`), reusable `customPrefabs`, and vanilla-style map mechanics.
 
 `mods/emerald-sanctum/mod.json`:
 
@@ -1246,17 +1322,43 @@ Adds a playable stage (`emerald_sanctum`) populated with a bounce mushroom, a cu
   "category": "Levels",
   "scope": "gameplay",
   "gameVersions": ["0.10.36"],
-  "description": "Custom forest-ruins stage showcasing bounce pads, jackpot machines, shops, dojo challenges, and blessing pillars.",
+  "description": "Procedural terraced stage with custom prefabs, bounce pads, jackpot machines, shops, dojos, and blessing pillars.",
+  "customPrefabs": [
+    {
+      "id": "emerald_obelisk",
+      "name": "Emerald Obelisk",
+      "scale": 1.15,
+      "colliderRadius": 1.0,
+      "parts": [
+        { "shape": "cylinder", "size": [0.95, 1.15, 0.55], "pos": [0, 0.28, 0], "color": "#475569" },
+        { "shape": "crystal", "size": [0.7], "pos": [0, 2.0, 0], "color": "#22c55e", "emissive": "#15803d", "spin": 1.2, "bob": 0.2 }
+      ]
+    }
+  ],
   "customLevels": [
     {
       "id": "emerald_sanctum",
       "name": "Emerald Sanctum",
-      "desc": "Overgrown shrines filled with bounce pads, treasure wheels, and ancient trials.",
+      "desc": "Terraced river sanctum filled with bounce pads, treasure wheels, and ancient trials.",
       "region": "custom",
       "envFrom": "forest",
       "thumbnailFrom": "forest",
       "size": 340,
       "landmark": { "kind": "moss_shrine", "radius": 9 },
+      "proceduralGen": {
+        "base": "vanilla",
+        "preset": "river_basin",
+        "presetBlend": 0.65,
+        "noise": { "scale": 0.014, "octaves": 4, "amplitude": 11, "terraceSteps": 4 },
+        "plateaus": { "count": 3, "minRadius": 16, "maxRadius": 28, "height": 6, "rampCount": 2 },
+        "rivers": { "count": 1, "width": 7, "depth": 3.8, "meander": 18, "paintPath": true },
+        "paths": { "radialCount": 4, "ringRadius": 54, "width": 5 },
+        "spawnClearingRadius": 16,
+        "waterLevel": -0.8
+      },
+      "prefabScatters": [
+        { "prefabId": "emerald_obelisk", "count": 10, "minDist": 20, "maxDist": 115, "scaleRange": [0.85, 1.25] }
+      ],
       "mechanics": [
         {
           "id": "emerald-shroom",
@@ -1307,6 +1409,7 @@ Adds a playable stage (`emerald_sanctum`) populated with a bounce mushroom, a cu
         {
           "id": "emerald-pillar",
           "kind": "pillar",
+          "prefabId": "emerald_obelisk",
           "name": "Rune Blessing Pillar",
           "desc": "+15% Attack Speed & full Ult charge!",
           "count": 2,
