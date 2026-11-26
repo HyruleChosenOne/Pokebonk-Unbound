@@ -1,37 +1,80 @@
 # PokéBonk Unbound — Modding Documentation
 
-PokéBonk Unbound includes an offline-only mod engine located in `./mods/`. Mods never execute or inject in Online Mode and never touch online accounts or online save files.
+PokéBonk Unbound runs an offline-only mod engine out of `./mods/`. Mods never load or inject in Online Mode, and they never touch online accounts or online save files.
 
-**Core Modding API features** built directly into the mod engine (always available whenever the Offline Mod Engine is enabled, without requiring any extra enabler mod):
-- **Custom Attacks** (`customMoves` / `movesDir`)
-- **Custom Visual Effects (VFX)** (`customVfx` / `vfxDir`, inline move `vfx`, and `customUlt.vfx`)
-- **Additive Custom Music & SFX** (`customMusic` / `musicDir` & `customSfx` / `sfxDir`)
+Everything below is part of the core Modding API and works out of the box whenever the Offline Mod Engine is enabled (no helper or enabler mod required):
+- **Custom Playable Characters** (`characters` / `charactersDir`), including **Playable 3D `.glb`/`.gltf` Models** and **Custom Wardrobe / Dual Shiny** sheets & portraits
+- **Custom Unplayable Enemies** (`customEnemies` / `enemiesDir`) with strict opt-in spawning (never playable, never shiny, never catchable, never leaking into vanilla maps)
+- **Custom Attacks** (`customMoves` / `movesDir`) and **Custom GPU Visual Effects (VFX)** (`customVfx` / `vfxDir`, inline move `vfx`, and `customUlt.vfx`)
 - **Custom Pokéball Pickup Items** (`customItems` / `itemsDir`)
-- **Custom Characters, Regions, Assets, Data Patches, Bundle Patches, Scripts & CSS**
+- **Custom Levels & 3D `.glb` Stages** (`customLevels` / `levelsDir`)
+- **Custom Map Mechanics** (`customMechanics` / `mechanicsDir` and `customLevels[].mechanics`): bounce mushrooms/pads, jackpot/slot machines, Meowth-style shops, dojo challenges, Unown-style blessing pillars, warps, hazards, and script-driven interactables
+- **Additive Custom Music & SFX** (`customMusic` / `musicDir`, `customSfx` / `sfxDir`)
+- **Custom Treasure Wheels** (`customTreasures` / `treasuresDir`)
+- **Custom Mod Config UI Modules** (`configModule`), declarative `settings`, `toolbarActions`, `regions`, `assetsDir`, `assetAliases`, `dataPatches`, `bundlePatches`, `profilePatch`, `scripts`, and `styles`
 
-All mod toggles, configuration, and per-mod actions are managed inside **Unbound Settings**. Non-cheat Offline build mod settings can also be pre-configured from **Unbound Settings** while in Online Mode, while Online Mode itself stays 100% vanilla and all gameplay-altering cheats remain locked until Offline Mode.
+All mod toggles, config panels, and mod actions live inside **Unbound Settings**. Non-cheat Offline mod preferences can also be adjusted from **Unbound Settings** while you are in Online Mode; Online Mode itself stays 100% vanilla and gameplay-altering cheats stay locked until you switch to Offline Mode.
 
 ---
 
-## 1. Folder Structure
+## Table of Contents
 
-The mod engine scans:
+1. [Folder Structure & Discovery](#1-folder-structure--discovery)
+2. [`mod.json` Manifest Reference](#2-modjson-manifest-reference)
+3. [Custom Playable Characters](#3-custom-playable-characters)
+4. [Playable 3D Character Models (`.glb` / `.gltf`)](#4-playable-3d-character-models-glb--gltf)
+5. [Custom Wardrobe Skins & Dual Shiny](#5-custom-wardrobe-skins--dual-shiny)
+6. [Custom Enemies (Unplayable & Opt-In Only)](#6-custom-enemies-unplayable--opt-in-only)
+7. [Custom Attacks & Custom GPU VFX](#7-custom-attacks--custom-gpu-vfx)
+8. [Custom Pokéball Items](#8-custom-pokéball-items)
+9. [Custom Levels & 3D Stages](#9-custom-levels--3d-stages)
+10. [Custom Map Mechanics](#10-custom-map-mechanics)
+11. [Additive Custom Music & SFX](#11-additive-custom-music--sfx)
+12. [Custom Treasures](#12-custom-treasures)
+13. [Custom Mod Config Modules, Declarative Settings & Actions](#13-custom-mod-config-modules-declarative-settings--actions)
+14. [Scripts, Styles, Assets, Patches & Compatibility](#14-scripts-styles-assets-patches--compatibility)
+15. [Mod Showcase (`info.json`), Experimental Mods & GitHub Mod Browser](#15-mod-showcase-infojson-experimental-mods--github-mod-browser)
+16. [Complete Example Mods](#16-complete-example-mods)
+
+---
+
+## 1. Folder Structure & Discovery
+
+The mod engine scans these directories in order:
 1. `%APPDATA%\pokebonk-unbound\mods` (or `<POKEBONK_UNBOUND_DATA_DIR>/mods`)
 2. `./mods/` beside the executable (if present)
 
-Each structured mod is a directory containing a `mod.json` manifest:
+Each structured mod is a folder containing a `mod.json` file:
 
 ```text
 mods/
   my-mod-id/
     mod.json
+    info.json
+    preview.png
+    config/
+      panel.js
+      panel.css
     characters/
       hero.json
       hero-pmd.png
       hero-shiny.png
+      hero-alt-shiny.png
       hero-front.png
       hero-portrait.png
+      hero-portrait-shiny.png
       hero-icon.png
+    models/
+      hero.glb
+      spring-pad.glb
+    enemies/
+      slime.json
+      slime-pmd.png
+    levels/
+      ruins.json
+      ruins.glb
+    mechanics/
+      shrine.json
     audio/
       music/
         my-theme.ogg
@@ -42,7 +85,7 @@ mods/
     script.js
 ```
 
-Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.json`, `.png`, `.ogg`, `.glb`) are also detected and toggleable individually.
+Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.json`, `.png`, `.ogg`, `.glb`) are also picked up and can be toggled on or off individually.
 
 ---
 
@@ -50,47 +93,69 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `id` | `string` | Unique mod identifier (defaults to folder name). |
+| `id` | `string` | Unique mod identifier (defaults to the folder name). |
 | `name` | `string` | Display name shown in menus and Unbound Settings. |
 | `version` | `string` | Semver version string (e.g. `"1.0.0"`). |
 | `author` | `string` | Author name. |
 | `description` | `string` | Short summary of what the mod adds. |
+| `category` | `string` | Category label (`Characters`, `Levels`, `Audio`, `Gameplay`, `Quality of Life`, etc.). |
+| `scope` | `"gameplay" \| "client"` | Co-op parity scope. Auto-detected if omitted (`gameplay` mods must match version across all Co-op peers; `client` mods like audio/UI can differ freely). |
+| `experimental` | `boolean` | When `true`, the mod is isolated strictly to the **Experimental** tab in the Mod Browser (never shown in All/Featured/category tabs). |
 | `tags` | `string[]` | Searchable tags for the Mod Browser. |
-| `maxDex` | `number` | Raises the Pokédex cap (vanilla is `251`, max standard is `1025`). |
-| `regions` | `object[]` | Adds selectable region tabs in Character Select and Pokédex. |
-| `characters` | `object[]` | Inline custom character definitions. |
+| `gameVersions` | `string[]` | Tested PokéBonk build versions (e.g. `["0.10.31", "0.10.36"]`). |
+| `minGameVersion` / `maxGameVersion` | `string` | Optional inclusive game version range. |
+| `minClientVersion` / `maxClientVersion` | `string` | Optional PokéBonk Unbound client version range. |
+| `maxDex` | `number` | Raises the Pokédex cap (vanilla is `251`, max standard National Dex is `1025`). |
+| `regions` | `object[]` | Adds selectable region tabs in Character Select, Map Picker, and Pokédex. |
+| `characters` | `object[]` | Inline custom playable character definitions. |
 | `charactersDir` | `string` | Relative directory containing `.json` character files (e.g. `"characters"`). |
-| `customMoves` | `object[]` | Core API: inline custom attack definitions. |
-| `movesDir` | `string` | Core API: relative directory containing `.json` attack files. |
-| `customVfx` | `object[]` | Core API: reusable declarative GPU visual effect presets. |
-| `vfxDir` | `string` | Core API: relative directory containing `.json` VFX preset files. |
+| `customWardrobe` / `customSkins` | `object[]` | Inline custom wardrobe skins for vanilla or custom characters. |
+| `wardrobeDir` | `string` | Relative directory containing `.json` wardrobe skin files. |
+| `customEnemies` | `object[]` | Inline unplayable custom enemy definitions (IDs `5000`-`8999`). |
+| `enemiesDir` | `string` | Relative directory containing `.json` enemy files or `<subFolder>/enemy.json`. |
+| `enemySpawns` | `object[]` | Explicit opt-in spawn rules binding custom enemies to specific biome IDs. |
+| `enableCustomEnemies` | `(string \| number \| object)[]` | Activates `optInBiomes` declared on custom enemies by key/ID (or overrides biomes per entry). |
+| `customMoves` | `object[]` | Inline custom attack definitions. |
+| `movesDir` | `string` | Relative directory containing `.json` attack files. |
+| `customVfx` | `object[]` | Reusable declarative GPU visual effect presets. |
+| `vfxDir` | `string` | Relative directory containing `.json` VFX preset files. |
 | `customItems` | `object[]` | Inline custom Pokéball pickup item definitions. |
 | `itemsDir` | `string` | Relative directory containing `.json` item files. |
-| `customMusic` | `object[]` | Core API: additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
-| `musicDir` | `string` | Core API: relative directory of custom music `.json` descriptors or drop-in audio files. |
-| `customSfx` | `object[]` | Core API: additive custom SFX clips routed through the native SFX bus. |
-| `sfxDir` | `string` | Core API: relative directory of custom SFX `.json` descriptors or drop-in audio files. |
-| `settings` | `object[]` | Declarative mod settings (`toggle` / `select`) rendered automatically in **Unbound Settings -> Mod Settings** when the mod is enabled. |
-| `toolbarActions` | `object[]` | Action buttons displayed inside **Unbound Settings -> Installed Mods** and **Mod Settings**. |
+| `customLevels` | `object[]` | Inline procedural or 3D `.glb` custom stage definitions. |
+| `levelsDir` | `string` | Relative directory containing `.json` level files. |
+| `customMechanics` | `object[]` | Inline custom map mechanics (`bounce`, `jackpot`, `shop`, `dojo`, `pillar`, `portal`, `hazard`, `custom`). Strictly opt-in per biome. |
+| `mechanicsDir` | `string` | Relative directory containing `.json` map mechanic files. |
+| `customMusic` | `object[]` | Additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
+| `musicDir` | `string` | Relative directory of custom music `.json` descriptors or drop-in audio files. |
+| `customSfx` | `object[]` | Additive custom SFX clips routed through the native SFX bus. |
+| `sfxDir` | `string` | Relative directory of custom SFX `.json` descriptors or drop-in audio files. |
+| `customTreasures` | `object[]` | Inline custom Treasure roulette wheels. |
+| `treasuresDir` | `string` | Relative directory containing `.json` treasure wheel files. |
+| `configModule` | `object` | Custom UI module `{ script, style, title, subtitle }` mounted inside **Unbound Settings -> Mods Config** when the mod is enabled. |
+| `configPanel` | `string` | Shorthand for `{ "script": "<path>" }`. |
+| `configSections` | `object[]` | Optional grouped section metadata for declarative settings. |
+| `settings` | `object[]` | Declarative mod settings (`toggle` / `select`) rendered automatically in **Unbound Settings -> Mods Config**. |
+| `toolbarActions` | `object[]` | Action buttons displayed inside **Unbound Settings -> Manage Mods** and **Mods Config**. |
 | `styles` | `string[]` | Relative CSS files injected into the game document. |
 | `scripts` | `string[]` | Relative JS files executed in Offline Mode with `window.pokebonkModAPI`. |
 | `assetsDir` | `string` | Directory whose files override matching game asset paths. |
 | `assetAliases` | `object` | Map of `fromPath -> toPath` aliases (supports trailing `/` prefixes). |
 | `dataPatches` | `string[]` | Relative JSON files patching `data/pokemon.json` stats or fields. |
-| `bundlePatches` | `object[]` | Targeted exact or regex text replacements applied in memory to JS/CSS chunks. |
+| `bundlePatches` | `object[]` | Targeted exact or regex replacements applied in memory to served JS/CSS chunks. |
 | `profilePatch` | `string` | Relative JSON file granting non-destructive species or biome unlocks. |
-| `enableAllEvents` | `boolean` | Enables the seasonal events hub if true. |
+| `enableAllEvents` | `boolean` | Enables the seasonal events hub if `true`. |
 
 ---
 
-## 3. Custom Characters
+## 3. Custom Playable Characters
 
 ### ID Ranges
 
-- **`252`–`1025`**: Official National Dex species. Loaded whenever the owning mod is enabled.
-- **`2000`–`9999`**: Non-dexed / custom characters. Automatically placed in the **Custom** region tab whenever the Offline Mod Engine is ON — built directly into the core Modding API with no separate enabler mod required.
+- **`252`-`1025`**: Official National Dex species. Loaded whenever the owning mod is enabled.
+- **`2000`-`4999` and `9000`-`9999`**: Non-dexed / custom playable characters. Automatically placed under the **Custom** region tab whenever the Offline Mod Engine is ON.
+- **`5000`-`8999`**: Reserved strictly for **unplayable Custom Enemies** (see Section 6). Do not assign playable character IDs inside `5000`-`8999`.
 
-Characters start **locked by default** (`"unlock": false`) for standard progression. Set `"unlock": true` to unlock automatically, or provide a `toolbarActions` unlock button.
+Characters start **locked by default** (`"unlock": false`) to preserve progression. Set `"unlock": true` to unlock them immediately, or add an unlock button under `toolbarActions`.
 
 ### Example Character Definition
 
@@ -154,17 +219,193 @@ Characters start **locked by default** (`"unlock": false`) for standard progress
 - **Animated 8-direction PMD sheet (`pmdSheet` + `spriteMeta`)**:
   - Animation keys must be lowercase: `walk`, `idle`, `attack`, `hurt`.
   - Each animation specifies `y` (pixel Y offset in the sheet), `fw`/`fh` (frame width/height), `n` (frame count), `rows` (`8` directions: S, SE, E, NE, N, NW, W, SW), and `d` (array of frame durations in ticks).
-  - Legacy `dirs` and `dur` keys are automatically normalized to `rows` and `d`.
+  - Legacy `dirs` and `dur` keys are normalized automatically to `rows` and `d`.
 - **Single-image fallback**: Omit `spriteMeta` and provide only `sprite` (a single PNG) or `pokeApiId` (an official PokéAPI sprite ID, optionally with `"pokeApiShiny": true`).
-- **Portraits & Icons**: `portrait` is a 40x40 PNG; `icon` should have a transparent background so locked silhouettes render cleanly.
+- **Portraits & Icons**: `portrait` is a 40x40 PNG; `icon` should use a transparent background so locked silhouettes render cleanly.
 - **Audio & Ultimates**: Use `cry` (custom `.ogg`) or `cryFrom` (existing Pokédex ID). Use `customUlt` for a custom GPU shockwave Ultimate or `ultFrom` to inherit an existing Pokémon's Ultimate.
 - **Quick Drop-In**: Place standalone character `.json` + `.png` files inside `./mods/custom-characters-pack/characters/` without creating a new mod folder.
 
 ---
 
-## 4. Custom Attacks & Custom Visual Effects (Core API)
+## 4. Playable 3D Character Models (`.glb` / `.gltf`)
 
-Custom attacks (`customMoves` / `movesDir`) and custom visual effects (`customVfx` / `vfxDir` or inline `vfx`) are first-class **Core Modding API** features active whenever the Offline Mod Engine is enabled. They run directly on PokéBonk's native GPU particle/beam/ring VFX and WebAudio SFX engine with no external texture files required.
+Playable characters can render as real 3D meshes in-run instead of 2D billboard sprites. Add `model3d` (or `model`) to any character definition in `characters` or `charactersDir`:
+
+```json
+{
+  "id": 2120,
+  "key": "voxel-knight",
+  "name": "Voxel Knight",
+  "types": ["steel", "fighting"],
+  "unlock": true,
+  "portrait": "characters/knight-portrait.png",
+  "icon": "characters/knight-icon.png",
+  "sprite": "characters/knight-front.png",
+  "model3d": "models/voxel-knight.glb",
+  "modelScale": 1.15,
+  "modelOffsetY": 0.0,
+  "modelYawOffset": 0,
+  "modelShadow": true,
+  "modelAnimations": {
+    "idle": "Idle",
+    "walk": "Run",
+    "attack": "Slash",
+    "hurt": "Hit"
+  }
+}
+```
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `model3d` / `model` | `null` | Relative path inside the mod folder to a `.glb` or `.gltf` file. Served at `/assets/models/custom_char_<id>.glb`. |
+| `modelScale` | `1.0` | Height multiplier after auto-normalizing the mesh to PokéBonk's hero height (~1.85 world units). Clamped to `0.15`-`8.0`. |
+| `modelOffsetY` | `0` | Vertical ground offset in world units after aligning the mesh bounding box bottom to `y = 0`. |
+| `modelYawOffset` | `0` | Facing rotation offset in radians (adjust if your exported model faces `+X` or `-Z` instead of `+Z`). |
+| `modelShadow` | `true` | Enables shadow casting and receiving on child meshes. |
+| `modelAnimations` | `null` | Optional clip name map (`idle`, `walk`, `attack`, `hurt`). If omitted, embedded glTF clips matching those keywords are bound automatically. |
+
+How rendering works in-game:
+- The engine loads the model through PokéBonk's toon shader pipeline, aligns the bottom of the bounding box to ground height, and skips the 2D billboard once the mesh is ready.
+- While the `.glb` finishes loading on the first frame (and inside 2D menus like Character Select), `portrait`, `icon`, and `sprite` are used, so always provide at least a portrait and fallback sprite.
+- If the `.glb` has no embedded skeletal animations, the engine drives smooth procedural walk bobbing, facing yaw, squash-and-stretch, attack forward tilt, invulnerability flicker, and faint tipping automatically.
+- Temporary transformations (Mega/Dynamax forms) cleanly defer to the form visual and restore the 3D mesh afterward.
+
+---
+
+## 5. Custom Wardrobe Skins & Dual Shiny
+
+Mods can add custom Wardrobe looks, custom shader palettes, full replacement sprite sheets per skin, and **two distinct shiny variants** (primary `shiny` + secondary `classic` / alt-shiny) for both custom characters and vanilla Pokémon.
+
+### Dual Shiny Fields (on any character)
+
+| Field | Served Path | Description |
+| --- | --- | --- |
+| `pmdShinySheet` (alias `shinySheet`) | `/assets/pmd-shiny/<id>.png` | Custom animated PMD sheet used for the primary `shiny` look. |
+| `portraitShiny` (alias `shinyPortrait`) | `/assets/portraits-shiny/<id>.png` | Custom 40x40 portrait for the primary `shiny` look. |
+| `pmdAltShinySheet` (aliases `altShinySheet`, `classicSheet`) | `/assets/pmd-alt-shiny/<id>.png` | Second distinct shiny PMD sheet used when `classic` (Classic Shiny) is equipped. |
+| `portraitAltShiny` (aliases `altShinyPortrait`, `classicPortrait`) | `/assets/portraits-alt-shiny/<id>.png` | Custom 40x40 portrait for the second shiny look. |
+| `hasAltShiny` | `boolean` | Automatically `true` whenever `pmdAltShinySheet` or `portraitAltShiny` is set. |
+| `unlockSkins` | `boolean \| string[]` | Set `true` to unlock `shiny`, `classic`, and `m1`/`m2`/`t1`/`t2` immediately, or pass specific look keys like `["shiny", "classic", "m1"]`. |
+
+### Wardrobe Entries (`character.wardrobe` or top-level `customWardrobe` / `wardrobeDir`)
+
+Attach skins inline on a character via `"wardrobe": [...]` (or `"skins": [...]`), or target any species (including vanilla IDs `1`-`251`) at the root of `mod.json` via `"customWardrobe": [...]` / `"wardrobeDir": "wardrobe"`:
+
+```json
+"customWardrobe": [
+  {
+    "member": 25,
+    "slot": "m1",
+    "name": "Cyber Pikachu",
+    "style": "circuit",
+    "pal": "#06111e #0e3a5c #38bdf8 #e0f2fe",
+    "desc": "Neon circuit wardrobe variant for Pikachu.",
+    "unlocked": true
+  },
+  {
+    "member": 2050,
+    "slot": "m2",
+    "name": "Shadow Tunic",
+    "style": "shadow",
+    "pal": "#0b0714 #2c1654 #a855f7 #f5d0fe",
+    "desc": "Full replacement sprite sheet and portrait.",
+    "unlocked": true,
+    "sheet": "characters/my-hero-shadow-pmd.png",
+    "portrait": "characters/my-hero-shadow-portrait.png"
+  }
+]
+```
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `member` (aliases `speciesId`, `characterId`) | `number` | Target species ID (not required when declared inside a character's `wardrobe` array). Cannot target unplayable enemy IDs `5000`-`8999`. |
+| `slot` / `n` | `"m1" \| "m2" \| "t1" \| "t2"` or `1`-`4` | Wardrobe slot (`m1`=`1`, `m2`=`2`, `t1`=`3`, `t2`=`4`). |
+| `name` | `string` | Skin display name shown in Wardrobe. |
+| `style` | `string` | Any built-in shader style (`metal`, `crystal`, `holo`, `galaxy`, `shadow`, `neon`, `stone`, `aurora`, `gb`, `magma`, `ember`, `verdant`, `tidal`, `psionic`, `spectre`, `storm`, `geode`, `candy`, `frost`, `gothic`, `circuit`, `toxic`, `ukiyo`, `glitch`, `calavera`, `synth`). |
+| `pal` | `string` | Space-separated 4-color hex ramp (darkest to brightest). |
+| `desc` | `string` | Description shown in the Wardrobe detail panel. |
+| `unlocked` | `boolean` | Defaults to `true` for custom skins so players can equip them right away. Set `false` to gate behind progression/scripts. |
+| `sheet` (alias `pmdSheet`) | `string` | Optional full replacement PMD sheet PNG. Served at `/assets/pmd-custom-skin/<member>-<slot>.png`. |
+| `portrait` | `string` | Optional replacement 40x40 portrait PNG. Served at `/assets/portraits-custom-skin/<member>-<slot>.png`. |
+
+At runtime, `GET /local-api/mod-api/wardrobe` (or `await window.pokebonkModAPI.getWardrobe()`) lists every active custom wardrobe skin.
+
+---
+
+## 6. Custom Enemies (Unplayable & Opt-In Only)
+
+Custom Enemies let mods add hostile mobs, elites, guardians, totems, summoners, and bosses without polluting the playable character roster or vanilla maps.
+
+### Hard Engine Guarantees
+
+Every enemy defined under `customEnemies` / `enemiesDir` is assigned an ID in **`5000`-`8999`** (explicit or auto-allocated) and is enforced across the server, save layer, and game chunks:
+- **Completely unplayable**: stripped from `this.pokemon`, Character Select, Starter Picker, League, and active team.
+- **Never shiny**: `Shiny` (`2048`) and `Classic` (`131072`) flags are stripped on spawn; `shinyBoss`, `spawnShiny`, `spawnClassic`, and `classicPool` reject them unconditionally.
+- **Never catchable & never logged in Pokédex**: `Capture` (`128`) flag is stripped; `interceptBoss`, `takeOver`, `spawnEncounter`, and `markSeen` reject `5000`-`8999` and any `enemyOnly` species. Profile patching also scrubs `5000`-`8999` from `unlocked`, `league`, `seen`, `shinies`, `classics`, and `team`.
+- **Never spawns randomly in normal maps**: simply defining an enemy in `customEnemies` registers its stats and sprites, **not** its spawns. It will only appear in a biome when explicitly opted in by:
+  1. A Custom Level (`customLevels[].customEnemies` or referencing its key/ID in `residents`, `bosses`, `legendaries`, `guardians`, `totems`, `summoners`), OR
+  2. An active mod's `"enemySpawns"` or `"enableCustomEnemies"` manifest field, OR
+  3. An active Modpack's spawn activation (`modpack-enemy-spawns.json`).
+  - Wildcards like `"*"` or `"all"` are explicitly rejected.
+
+### Defining Custom Enemies
+
+```json
+"customEnemies": [
+  {
+    "id": 5001,
+    "key": "dark-keese",
+    "name": "Dark Keese",
+    "types": ["dark", "flying"],
+    "stats": { "hp": 55, "atk": 72, "def": 45, "spa": 60, "spd": 50, "spe": 95 },
+    "role": "mob",
+    "stages": [1, 2, 3],
+    "spawnWeight": 2,
+    "exclusive": false,
+    "optInBiomes": ["dark_world"],
+    "sprite": "enemies/dark-keese-front.png",
+    "pmdSheet": "enemies/dark-keese-pmd.png",
+    "cryFrom": 41,
+    "spriteMeta": {
+      "w": 128,
+      "h": 512,
+      "anims": {
+        "walk": { "y": 0, "fw": 32, "fh": 32, "n": 4, "rows": 8, "d": [5, 5, 5, 5] },
+        "idle": { "y": 256, "fw": 32, "fh": 32, "n": 2, "rows": 8, "d": [12, 12] }
+      }
+    }
+  }
+]
+```
+
+### Opting Enemies Into Specific Biomes
+
+```json
+"enemySpawns": [
+  {
+    "enemy": "dark-keese",
+    "biomes": ["cave", "dark_world"],
+    "role": "mob",
+    "stages": [1, 2, 3],
+    "weight": 3,
+    "exclusive": false
+  }
+],
+"enableCustomEnemies": [
+  "dark-keese",
+  { "enemy": 5002, "biomes": ["dark_world"], "role": "boss" }
+]
+```
+
+- Valid `role` values: `"mob"` (default), `"resident"`, `"boss"`, `"legendary"`, `"guardian"`, `"totem"`, `"summoner"`.
+- Set `"exclusive": true` on a mob binding if that biome should spawn **only** your custom enemy pool instead of mixing with vanilla residents.
+- Query active custom enemies and biome spawn bindings at runtime via `GET /local-api/mod-api/enemies` or `await window.pokebonkModAPI.getEnemies()`.
+
+---
+
+## 7. Custom Attacks & Custom GPU VFX
+
+Custom attacks (`customMoves` / `movesDir`) and custom VFX (`customVfx` / `vfxDir` or inline `vfx`) run directly on PokéBonk's native GPU particle/beam/ring renderer and WebAudio SFX engine with no external texture files required.
 
 ### Valid Archetypes
 
@@ -179,7 +420,7 @@ Aliases are normalized automatically: `slash`/`cleave` -> `strike`, `burst`/`bla
 Any custom move can tune gameplay behavior via `params`:
 - `count` (projectile/strike count), `spread` (radians between projectiles), `pulses` (nova/burst pulse count)
 - `dmgMul`, `cdMul` / `cd`, `areaMul` / `r`, `speedMul` / `speed`, `durMul` / `dur`, `pierce`
-- `status` (`"burn"`, `"freeze"`, `"paralysis"`, `"poison"`, `"stun"`, `"root"`, `"wet"`, `"charm"`), `statusChance` (`0`–`1`)
+- `status` (`"burn"`, `"freeze"`, `"paralysis"`, `"poison"`, `"stun"`, `"root"`, `"wet"`, `"charm"`), `statusChance` (`0`-`1`)
 
 ### Declarative Custom Visual Effects (`customVfx` / inline `vfx`)
 
@@ -226,11 +467,11 @@ Define reusable VFX presets in `"customVfx"` (or `"vfxDir"`) and link them to mo
 | Field | Type | Description |
 | --- | --- | --- |
 | `id` | `string` | Preset identifier (when declared in `customVfx` / `vfxDir`). |
-| `preset` | `string` | Optional vanilla `QT` move key to inherit base behavior from (e.g. `slash`, `razor-leaf`, `gust`, `psybeam`, `flamethrower`, `thunderbolt`, `shadow-ball`, `dragon-claw`). |
-| `shape` | `string` | Native GPU particle shape from `O.*` (e.g. `Soft`, `Star`, `Spark`, `Ring`, `Leaf`, `Flame`, `Bubble`, `Flake`, `Bolt`, `Rock`, `Swirl`, `Crescent`, `Cross`, `Feather`, `Twinkle`, `Shard`, `Wisp`, `Gem`, `PixSlash`, `PixFlame`, `PixBolt`, `PixWave`, `PixTornado`, `PixLeaf`, `PixStar`, `PixSparkle`, `PixGem`). |
+| `preset` | `string` | Optional vanilla move key to inherit base behavior from (e.g. `slash`, `razor-leaf`, `gust`, `psybeam`, `flamethrower`, `thunderbolt`, `shadow-ball`, `dragon-claw`). |
+| `shape` | `string` | Native GPU particle shape from `O.*` (`Soft`, `Star`, `Spark`, `Ring`, `Leaf`, `Flame`, `Bubble`, `Flake`, `Bolt`, `Rock`, `Swirl`, `Crescent`, `Cross`, `Feather`, `Twinkle`, `Shard`, `Wisp`, `Gem`, `PixSlash`, `PixFlame`, `PixBolt`, `PixWave`, `PixTornado`, `PixLeaf`, `PixStar`, `PixSparkle`, `PixGem`). |
 | `color` / `color2` | `string \| number` | Primary and secondary accent colors as hex strings (`"#4aff80"`) or 24-bit RGB integers (`4915072`). |
-| `size` / `glow` | `number` | Particle scale multiplier and additive glow intensity (`0`–`1`). |
-| `trailShape` / `trailColor` / `trailSize` / `trailRate` | mixed | Projectile trail particles (`trailRate`: `0`–`1`). |
+| `size` / `glow` | `number` | Particle scale multiplier and additive glow intensity (`0`-`1`). |
+| `trailShape` / `trailColor` / `trailSize` / `trailRate` | mixed | Projectile trail particles (`trailRate`: `0`-`1`). |
 | `hitShape` / `hitColor` / `hitCount` / `hitSize` / `hitSpeed` | mixed | Impact burst flash and particles. |
 | `strikeArc` / `strikeSparks` | `boolean \| number` | Dual-color slash arc ribbons and spark burst for `strike` moves. |
 | `beamWidth` / `beamCoreColor` | `number \| string` | Custom dual-layer beam width multiplier and inner core color for `beam` moves. |
@@ -260,14 +501,13 @@ Any character's `customUlt` can customize its shockwave rings and particle burst
 }
 ```
 
-- At runtime, `window.pokebonkVfx` lists available `shapes`, `rings`, and active custom `presets`, and `GET /local-api/mod-api/moves` / `GET /local-api/mod-api/vfx` return active definitions.
-- Reference any attack's `key` inside any character's `kit` array.
+At runtime, `window.pokebonkVfx` lists available `shapes`, `rings`, and active custom `presets`, and `GET /local-api/mod-api/moves` / `GET /local-api/mod-api/vfx` return active definitions. Reference any attack's `key` inside any character's `kit` array.
 
 ---
 
-## 5. Custom Pokéball Items (`customItems` / `itemsDir`)
+## 8. Custom Pokéball Items
 
-Custom items enter PokéBonk's in-run Pokéball item pickup pool and reuse vanilla item icons (`items/<name>.png`).
+Custom items (`customItems` / `itemsDir`) enter PokéBonk's in-run Pokéball pickup pool and reuse vanilla item icons (`items/<name>.png`) or overridden icons via `assetsDir`.
 
 ```json
 {
@@ -285,17 +525,118 @@ Custom items enter PokéBonk's in-run Pokéball item pickup pool and reuse vanil
 ```
 
 - `rarity`: `0` (Common), `1` (Uncommon), `2` (Rare), `3` (Epic).
-- `mods`: Array of stat modifiers using either `add` (flat addition) or `mul` (multiplier). Common stats: `damage`, `moveSpeed`, `attackSpeed`, `critChance`, `critDamage`, `luck`, `maxHp`, `armor`, `area`, `pickup`, `xp`, `evasion`.
+- `mods`: Array of stat modifiers using `add` (flat addition) or `mul` (multiplier). Common stats: `damage`, `moveSpeed`, `attackSpeed`, `critChance`, `critDamage`, `luck`, `maxHp`, `armor`, `area`, `pickup`, `xp`, `evasion`.
 
 ---
 
-## 6. Custom Audio (Additive Music & SFX)
+## 9. Custom Levels & 3D Stages
 
-PokéBonk Unbound supports adding new music tracks and sound effects **without replacing any vanilla songs or SFX**. Supported audio formats: `.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, and `.flac`.
+Add playable stages via `"customLevels"` or `"levelsDir"` in `mod.json`. Both procedural terrain stages and full 3D `.glb` mesh stages (with automatic slope-based collision baking) are supported.
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `id` | required | Unique biome ID (`a-z0-9_`). |
+| `name` / `desc` | required | Stage title and description in Map Picker. |
+| `region` | `"custom"` | Target region tab ID (`kanto`, `johto`, `hoenn`, `custom`, or any custom region declared in `regions`). |
+| `mode` | `"procedural"` | `"procedural"` (heightmap terrain) or `"model"` (loads `.glb` specified by `model` and bakes collision automatically). |
+| `model` / `modelScale` / `modelOffset` / `maxSlope` / `hideBaseTerrain` / `walkableRadius` | model mode | Configures a `.glb` arena mesh. Served at `/assets/models/custom_<id>.glb`. |
+| `envDir` / `envFrom` | `"forest"` | Custom terrain textures directory (`ground.png`, `cliff.png`, `path.png`, `props.png`, `props.json`) or vanilla biome fallback. |
+| `thumbnail` / `thumbnailFrom` | `envFrom` | Map Picker preview image (`.png`/`.webp`) or vanilla fallback. |
+| `size`, `sky`, `fog`, `fogNear`, `fogFar`, `light`, `sun`, `hemiGround`, `ground`, `path`, `cliff`, `water`, `waterColor`, `props`, `propDensity`, `relief`, `weather`, `zones`, `sanctuary`, `tex`, `openSea` | defaults | Visual palette, lighting, weather, day/twilight zones, and terrain generation parameters. |
+| `residents`, `specials`, `bosses`, `legendaries`, `guardians`, `totems`, `summoners` | defaults | Enemy pools (accepts vanilla IDs, custom playable IDs, or Custom Enemy keys/IDs). |
+| `customEnemies` | `[]` | Explicit Custom Enemy spawn bindings scoped to this level. |
+| `mechanics` | `[]` | Custom Map Mechanics scoped directly to this level (see Section 10). |
+| `landmark` | `null` | Built-in procedural landmark (`hyrule_castle`, `pyramid_of_power`, `moss_shrine`, `volcano_caldera`, `spear_pillar`, `old_chateau`, `sand_pyramid`, `dragon_tower`, `sea_arch`, `prism_crystals`, `tapu_totem`, `fire_altar`, `dynamax_den`, `crown_temple`, `titan_mesa`, `terastal_spire`) plus optional `glbProps: [{ model, dx, dy, dz, scale, rotY }]`. |
+| `musicTrack` / `bossMusicTrack` | `null` | Custom music track IDs from `customMusic` to play on this stage and during its boss fights. |
+| `unlockedByDefault` | `true` | Automatically unlocks the level in offline profiles when enabled. |
+
+---
+
+## 10. Custom Map Mechanics
+
+Custom Map Mechanics (`customMechanics`, `mechanicsDir`, or `customLevels[].mechanics`) let mods place interactive world objects directly on maps — matching vanilla PokéBonk features like bouncy mushrooms, jackpot slot machines, Meowth's shop, the Karate Dojo, and Unown power pillars.
+
+Like Custom Enemies, **Custom Map Mechanics are strictly opt-in per biome**: a mechanic will never spawn on vanilla maps unless you explicitly list those biome IDs in `"biomes": ["forest", ...]` or declare it inside a custom level's `"mechanics"` array.
+
+### Supported Mechanic Kinds
+
+| `kind` | Vanilla Equivalent | Behavior |
+| --- | --- | --- |
+| `"bounce"` (alias `"shroom"`) | Bouncy Mushroom | Auto-launches the player in a parabolic arc when touched (`bounceDistance`, `bounceHeight`, `bounceDuration`, `cooldown`). |
+| `"jackpot"` (aliases `"slot"`, `"slots"`) | Slot Machine | Costs `cost` Pokédollars (scaling by `costScale` per spin) and rolls weighted `outcomes` (gold, free Super Ball chest, heal, XP, stat buff, or ambush). |
+| `"shop"` | Meowth Shop | Opens an interactive in-run shop modal with custom `stock` entries (`heal`, `chest`, `stat`, `xp`, `candy`) and purchase limits. |
+| `"dojo"` | Karate Dojo | Spawns a tracked challenger wave (`waveCount`, `waveEliteCount`, `waveSpecies` — works with Custom Enemies too!) and awards `reward` when cleared. |
+| `"pillar"` (alias `"altar"`) | Unown / Blessing Pillar | Stand inside `radius` for `chargeTime` seconds to fill the pillar, triggering VFX and granting `buffs`, `healPct`, `grantGold`, `grantXp`, `grantUlt`, and/or `spawnChest`. |
+| `"portal"` | Map Teleporter | Warps the player to a safe map spot with brief invulnerability frames and VFX (`cooldown`). |
+| `"hazard"` | Periodic Trap / Geyser | Pulses every `pulseInterval` seconds, dealing `damage` to nearby enemies (and optionally the player if `hitsPlayer: true`). |
+| `"custom"` | Script-Driven | Triggers a custom JS handler registered via `window.pokebonkMapMechanics.registerHandler(id, { onInteract, onTick, getLabel })`. |
+
+### Visuals & 3D Models
+
+Every mechanic picks its 3D representation in this order:
+1. **`model` / `model3d`**: Relative path to a custom `.glb` inside your mod folder (served at `/assets/models/custom_mech_<id>.glb`).
+2. **`vanillaModel`**: Any built-in PokéBonk interactable model (`bounceshroom`, `slots`, `dojo`, `power`, `altar`, `shrine`, `challenge`, `porygon`, `fossil`, `totem`, `billpc`, `portal`, `chest`, `freechest`, `cursed`, `greed`, `ruins_crystals`, `goldrock`, `nest`, `cage`). If omitted, each `kind` defaults to its matching vanilla model (`bounce` -> `bounceshroom`, `jackpot` -> `slots`, `dojo` -> `dojo`, `pillar` -> `power`, `portal` -> `portal`, `shop` -> `billpc`).
+3. **Procedural fallback**: Set `"procedural": true` (or if no model exists) to build a glowing tinted 3D pedestal + floating crystal tinted with `color` and `accentColor`.
+
+### Mechanic Definition Fields
+
+| Field | Default | Description |
+| --- | --- | --- |
+| `id` | required | Unique mechanic ID (`a-z0-9_-`). |
+| `kind` | `"custom"` | One of `bounce`, `jackpot`, `shop`, `dojo`, `pillar`, `portal`, `hazard`, `custom`. |
+| `name` / `desc` | required | Floating world label and `[E]` interaction prompt description. |
+| `biomes` | required (unless inside level `mechanics`) | Explicit list of biome IDs where this mechanic can spawn. Wildcards (`"*"`, `"all"`) are rejected. |
+| `count` | `1` (`3` for `bounce`) | Instances spawned per stage (`1`-`12`). |
+| `positions` | `null` | Optional fixed coordinates `[{ "x": 18, "z": -12 }]`; falls back to safe non-overlapping map spots between `minDist` and `maxDist`. |
+| `radius` | `3.2` (`5.2` pillar, `1.8` bounce) | Interaction or trigger radius in world units. |
+| `cooldown` | `0` (`14` bounce, `18` portal) | Seconds before reuse. |
+| `reusable` | varies by kind | Whether the interactable stays active after use. |
+| `cost` / `costScale` | `0` (`25` jackpot) / `1.25` | Pokédollar cost and per-use multiplier. |
+| `color` / `accentColor` | varies | Hex string or RGB int for VFX rings, bursts, beacon beams, and banners. |
+| `beacon` | `true` for pillar/dojo/portal | Spawns a vertical light pillar beacon above the interactable. |
+| `modelScale` / `modelHeight` | `1.15` / `3.4` | 3D mesh scale and floating world label height. |
+| `customSfx` | `null` | Custom SFX ID from `customSfx` played on trigger. |
+| `buffs` (alias `mods`) | `[]` | Array of `{ "stat": "damage", "mul": 1.15 }` or `{ "stat": "critChance", "add": 0.1 }` modifiers applied to `run.tempMods`. |
+| `healPct` / `grantGold` / `grantXp` / `grantUlt` / `spawnChest` | `0` / `false` | Direct rewards granted on activation or pillar charge completion. |
+| `outcomes` | built-in jackpot table | Custom weighted array for `jackpot`: `[{ "weight": 20, "type": "gold", "label": "+80 ₽", "gold": 80, "chest": false, "healPct": 0, "buffs": [] }]` (`type: "ambush"` spawns an ambush wave). |
+| `stock` | built-in shop table | Custom shop entries for `shop`: `[{ "id": "atk", "label": "Power Charm", "desc": "+15% Damage", "cost": 40, "limit": 2, "effect": "stat", "stat": "damage", "mul": 1.15 }]` (`effect`: `heal`, `chest`, `stat`, `xp`, `candy`). |
+| `waveCount` / `waveEliteCount` / `waveSpecies` / `reward` | `10` / `2` / biome pool / `{ chest: true, gold: 45 }` | Dojo challenge wave settings and clear reward. |
+| `pulseInterval` / `damage` / `status` / `hitsPlayer` | `6` / `35` / `null` / `false` | Hazard pulse timing and damage settings. |
+
+### Script Hook (`window.pokebonkMapMechanics`)
+
+From any mod script listed in `"scripts"`:
+
+```js
+window.pokebonkMapMechanics?.registerHandler('my-shrine', {
+  getLabel(node, run) {
+    return node.used ? 'Shrine Depleted' : 'Ancient Shrine · Spend 15 HP for +20% Damage';
+  },
+  onTick(node, run, dt, distToPlayer) {
+    // Optional per-frame logic
+  },
+  onInteract(node, run) {
+    node.used = true;
+    run.player.hp = Math.max(1, run.player.hp - 15);
+    run.tempMods.push({ stat: 'damage', mul: 1.2 });
+    run.player.recompute();
+    run.ui?.banner?.('Blood Pact', '+20% Damage for this run!', '#ef4444');
+    return true; // return true to override default behavior
+  }
+});
+```
+
+Inspect active mechanics at runtime via `GET /local-api/mod-api/mechanics` or `await window.pokebonkModAPI.getMechanics()`.
+
+---
+
+## 11. Additive Custom Music & SFX
+
+PokéBonk Unbound adds new music tracks and sound effects **without replacing vanilla tracks or SFX**. Supported formats: `.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, and `.flac`.
 
 ### Custom Music (`customMusic` / `musicDir`)
 
-Custom music tracks are registered additively alongside vanilla tracks. Built-in vanilla IDs (`menu`, `halloween-menu`, `johto-menu`, `dynamax-menu`, `ingame1`–`ingame5`, `boss`) are protected automatically; if a mod uses a colliding ID, it is namespaced as `<mod-id>-<id>`.
+Built-in vanilla IDs (`menu`, `halloween-menu`, `johto-menu`, `dynamax-menu`, `ingame1`-`ingame5`, `boss`) are protected automatically; if a mod reuses a vanilla ID, it is namespaced as `<mod-id>-<id>`.
 
 ```json
 "customMusic": [
@@ -327,16 +668,16 @@ Custom music tracks are registered additively alongside vanilla tracks. Built-in
 | `name` | `id` | Display name in **Settings -> Audio -> Main Menu Music** and Unbound Settings. |
 | `desc` | pool summary | Short subtitle shown in the in-game music list. |
 | `file` | required | Relative path to the audio file inside the mod folder. |
-| `pool` | `"custom"` | `"ingame"` adds the track to the random in-game BGM playlist alongside `ingame1`–`ingame5`; `"boss"` adds it to the boss music pool alongside `boss`; `"menu"` / `"custom"` make it selectable in Settings and playable via scripts. |
-| `loop` | `0` | Loop start point in seconds (skips intro when repeating). |
-| `volume` | `1.0` | Relative volume multiplier (`0.05`–`2.5`). |
-| `weight` | `1` | Selection weight (`1`–`10`) when `pool` is `"ingame"` or `"boss"`. |
+| `pool` | `"custom"` | `"ingame"` joins `ingame1`-`ingame5`; `"boss"` joins the boss pool; `"menu"` / `"custom"` stay selectable in Settings and playable via scripts. |
+| `loop` | `0` | Loop start point in seconds (skips intro when looping). |
+| `volume` | `1.0` | Relative volume multiplier (`0.05`-`2.5`). |
+| `weight` | `1` | Selection weight (`1`-`10`) when `pool` is `"ingame"` or `"boss"`. |
 
-- **Zero-JSON drop-in**: Any audio file placed inside `musicDir` is auto-registered with `pool: "ingame"`.
+Any audio file dropped directly inside `musicDir` with no JSON descriptor is auto-registered with `pool: "ingame"`.
 
 ### Custom SFX (`customSfx` / `sfxDir`)
 
-Custom SFX clips decode once via Web Audio API and play through PokéBonk's native `sfxBus`, automatically respecting the in-game Master and SFX volume sliders without replacing vanilla sounds.
+Custom SFX clips decode once via Web Audio API and play through PokéBonk's native `sfxBus`, respecting Master and SFX volume sliders automatically.
 
 ```json
 "customSfx": [
@@ -355,16 +696,16 @@ Custom SFX clips decode once via Web Audio API and play through PokéBonk's nati
 | --- | --- | --- |
 | `id` | filename stem | Unique SFX ID. Served at `/assets/sfx/custom/<id>.<ext>`. |
 | `file` | required | Relative path to the audio file inside the mod folder. |
-| `volume` | `1.0` | Gain multiplier (`0.05`–`3.0`). |
-| `pitch` | `1.0` | Base playback rate (`0.25`–`4.0`). |
-| `pitchVar` | `0.05` | Random pitch jitter (`0`–`0.5`) to keep repeated hits organic. |
-| `cooldown` | `0.03` | Minimum seconds between plays (`0`–`2.0`). |
+| `volume` | `1.0` | Gain multiplier (`0.05`-`3.0`). |
+| `pitch` | `1.0` | Base playback rate (`0.25`-`4.0`). |
+| `pitchVar` | `0.05` | Random pitch jitter (`0`-`0.5`) to avoid repetitive hits sounding robotic. |
+| `cooldown` | `0.03` | Minimum seconds between plays (`0`-`2.0`). |
 
-### Binding Custom SFX to Attacks & Ultimates
+### Binding Custom SFX to Attacks, Ultimates & Scripts
 
 - **On `customMoves`**: Set `"customSfx": "picori-slash"`, `"customImpactSfx": "hit-id"`, or `"customChargeSfx": "charge-id"` (or point directly to an audio file with `"sfx": "audio/sfx/slash.ogg"`, `"impactSfx"`, `"chargeSfx"`). Add `"layerSfx": true` to play both the custom sample and the vanilla `sfxPreset` together.
 - **On `customUlt`**: Set `"customSfx": "ult-id"` inside a character's `customUlt` object.
-- **Runtime Audio SDK (`window.pokebonkAudio`)**: Custom mod scripts can trigger audio directly at any time:
+- **Runtime Audio SDK (`window.pokebonkAudio`)**:
   - `window.pokebonkAudio.playMusic(id, offsetSec)`
   - `window.pokebonkAudio.stopMusic()`
   - `window.pokebonkAudio.playSfx(id, { volume, pitch, pitchVar })`
@@ -373,9 +714,9 @@ Custom SFX clips decode once via Web Audio API and play through PokéBonk's nati
 
 ---
 
-## 6b. Custom Treasures (`customTreasures` / `treasuresDir`)
+## 12. Custom Treasures
 
-Add custom Treasure wheels to PokéBonk's **Treasures** roulette using the exact same progression, odds, pity, titles, animated frames, profile backgrounds (title cards), bag items, and mastery skins (`t1` / `t2`) as vanilla Series 1 & Series 2 wheels.
+Add custom Treasure wheels (`customTreasures` / `treasuresDir`) to PokéBonk's **Treasures** roulette using the same progression, odds, pity, titles, animated frames, profile banners, bag items, and mastery skins (`t1` / `t2`) as vanilla Series 1 & Series 2 wheels.
 
 ```json
 "customTreasures": [
@@ -416,20 +757,85 @@ Add custom Treasure wheels to PokéBonk's **Treasures** roulette using the exact
 ]
 ```
 
-- **Custom Series & Collapsible Tabs**: Assign `"series": 3` (or higher) with `"seriesName"` and `"seriesSub"` to create a new collapsible group in the Treasures sidebar alongside Series 2 (Season 4) and Series 1 (Kanto).
-- **Mastery Skins & Shaders**: `look1Style` and `grandLookStyle` accept any built-in PokéBonk look shader (`metal`, `crystal`, `holo`, `galaxy`, `shadow`, `neon`, `stone`, `aurora`, `gb`, `magma`, `ember`, `verdant`, `tidal`, `psionic`, `spectre`, `storm`, `geode`, `candy`, `frost`, `gothic`, `circuit`, `toxic`, `ukiyo`, `glitch`, `calavera`, `synth`) paired with a 4-color hex palette (`look1Pal`, `grandLookPal`).
-- **Optional Art Fallbacks**: Omit `stageBgImage`, `bannerImage`, `frame1Image`, or `grandFrameImage` to automatically reuse a matching vanilla theme (`stageBgFrom`, `bannerFrom`, `frameFrom`, `frameFx`).
-- **Offline Spin Backend**: Custom wheels are automatically registered on `POST /api/treasures/spin` and persist won prizes, titles, frames, banners, items, and mastery looks in the active offline savefile.
+- **Custom Series & Collapsible Tabs**: Assign `"series": 3` (or higher) with `"seriesName"` and `"seriesSub"` to add a collapsible group in the Treasures sidebar.
+- **Mastery Skins & Shaders**: `look1Style` and `grandLookStyle` accept any built-in look shader (`metal`, `crystal`, `holo`, `galaxy`, `shadow`, `neon`, `stone`, `aurora`, `gb`, `magma`, `ember`, `verdant`, `tidal`, `psionic`, `spectre`, `storm`, `geode`, `candy`, `frost`, `gothic`, `circuit`, `toxic`, `ukiyo`, `glitch`, `calavera`, `synth`) paired with a 4-color hex palette (`look1Pal`, `grandLookPal`).
+- **Art Fallbacks**: Omit `stageBgImage`, `bannerImage`, `frame1Image`, or `grandFrameImage` to reuse a vanilla theme (`stageBgFrom`, `bannerFrom`, `frameFrom`, `frameFx`).
+- **Offline Spin Backend**: Custom wheels register automatically on `POST /api/treasures/spin` and persist won prizes in the active offline profile.
 
 ---
 
-## 7. Dynamic Mod Settings (`settings`) & Mod Actions (`toolbarActions`)
+## 13. Custom Mod Config Modules, Declarative Settings & Actions
 
-Whenever a mod is enabled, **Unbound Settings -> Mod Settings** (on Desktop and Android) dynamically renders a configuration card for that mod using its `settings` schema, `toolbarActions`, and additive audio metadata.
+Mods have two ways to expose configuration inside **Unbound Settings -> Mods Config** (across both Desktop and Android):
 
-### Declarative Mod Settings (`settings`)
+### A. Custom Mod Config Modules (`configModule`)
 
-Add a `"settings"` array to `mod.json` to expose persistent per-mod toggles and dropdowns (saved automatically in `<modsDir>/mod-settings.json` and readable in Offline Mode):
+Instead of relying only on a flat list of toggles, a mod can ship its own UI module — with tabs, sliders, live previews, search bars, or custom layouts — inside its own folder. Core settings never hardcode mod-specific panels; any enabled mod declaring `configModule` is mounted dynamically by the Unbound Settings host.
+
+In `mod.json`:
+
+```json
+"configModule": {
+  "script": "config/panel.js",
+  "style": "config/panel.css",
+  "title": "My Mod Studio",
+  "subtitle": "Configure gameplay rules, presets, and audio"
+}
+```
+
+(You can also use `"configPanel": "config/panel.js"` if you do not need a separate stylesheet.)
+
+Files under `configModule` are served strictly from inside your mod folder at `/local-api/mods/<modId>/config-asset/<relPath>` (path traversal outside the mod directory is blocked).
+
+Your `config/panel.js` registers a renderer on `window.PokebonkModConfigModules[modId]` (or exports a `mount(ctx)` function if loaded as an ES module):
+
+```js
+(function () {
+  window.PokebonkModConfigModules = window.PokebonkModConfigModules || {};
+  window.PokebonkModConfigModules['my-mod-id'] = {
+    mount(ctx) {
+      const { container, mod, api, isOffline, toast, refresh } = ctx;
+      const values = mod.settingsValues || {};
+      container.innerHTML = `
+        <div class="my-cfg-wrap">
+          <label class="my-cfg-row">
+            <span>Enable Hardcore Wave Scaling</span>
+            <input type="checkbox" id="my-hc-toggle" ${values.hardcore ? 'checked' : ''} ${!isOffline ? 'disabled' : ''} />
+          </label>
+          <button type="button" class="btn secondary" id="my-reset-btn">Reset Defaults</button>
+        </div>
+      `;
+      container.querySelector('#my-hc-toggle').addEventListener('change', async (ev) => {
+        try {
+          await api.updateModSettings(mod.id, { hardcore: ev.target.checked });
+          toast('Saved setting.');
+        } catch (err) {
+          toast(err.message, true);
+          ev.target.checked = !ev.target.checked;
+        }
+      });
+      container.querySelector('#my-reset-btn').addEventListener('click', async () => {
+        await api.updateModSettings(mod.id, { hardcore: false });
+        toast('Defaults restored.');
+        await refresh();
+      });
+    }
+  };
+})();
+```
+
+`ctx` passed to `mount(ctx)` provides:
+- `container`: DOM element where the module mounts its UI
+- `mod`: full mod descriptor (`id`, `name`, `version`, `settingsSchema`, `settingsValues`, `actions`, `capabilities`, etc.)
+- `state`: current Unbound Settings state (`mode`, `mods`, `customMusic`, `hyruleConfig`, `offlineVersion`, etc.)
+- `isOffline`: boolean (`true` only when client is in Offline Mode)
+- `api`: host actions (`updateModSettings(modId, patch)`, `runModAction(modId, actionId)`, `updateHyruleConfig(patch)`, `mutateProfile(mutation)`, `reloadGame()`, `openBrowser(focusModId)`)
+- `toast(message, isError)`: shows a notification in Unbound Settings
+- `refresh()`: re-fetches current state and re-renders if needed
+
+### B. Declarative Mod Settings (`settings`)
+
+For simpler mods, add a `"settings"` array to `mod.json`. Values save automatically to `<modsDir>/mod-settings.json`:
 
 ```json
 "settings": [
@@ -456,14 +862,12 @@ Add a `"settings"` array to `mod.json` to expose persistent per-mod toggles and 
 ]
 ```
 
-- Supported `type` values: `"toggle"` (boolean switch) and `"select"` (dropdown list of strings or `{ "value", "label" }` objects).
-- Set `"cheat": true` on any gameplay-altering setting — the engine automatically locks that control while in Online Mode so only non-cheat preferences can be pre-configured online.
+- Supported `type` values: `"toggle"` (boolean switch) and `"select"` (dropdown of strings or `{ "value", "label" }` objects).
+- Set `"cheat": true` on gameplay-altering settings so the engine locks them automatically while in Online Mode.
 
-### Mod Actions (`toolbarActions`)
+### C. Mod Actions (`toolbarActions`)
 
-Mods can also declare action buttons that appear inside the mod's card in **Unbound Settings -> Installed Mods** and **Mod Settings** when the mod is enabled. Non-cheat actions (such as opening a mod subfolder) work in any mode; profile-mutating unlock/cheat actions remain locked until Offline Mode.
-
-Supported item shapes:
+Action buttons appear inside the mod's card in **Unbound Settings -> Manage Mods** and **Mods Config** when enabled. Non-cheat actions (like opening a mod subfolder) work in any mode; profile-mutating actions stay locked until Offline Mode.
 
 ```json
 "toolbarActions": [
@@ -488,7 +892,7 @@ Supported item shapes:
 ]
 ```
 
-### Supported `profile-mutate` Keys
+#### Supported `profile-mutate` Keys
 
 - `addStardust` (`number`) / `addBonk` (`number`)
 - `unlockSpecies` (`number[]`) / `unlockSpeciesRange` (`[fromId, toId]`) with optional `rangeIncludeLeague` (`boolean`) and `researchLevel` (`number`)
@@ -502,26 +906,31 @@ Supported item shapes:
 
 ---
 
-## 8. Scripts, Styles, Assets & Patches
+## 14. Scripts, Styles, Assets, Patches & Compatibility
 
 ### Runtime Mod SDK (`scripts`)
 
-Scripts listed in `"scripts"` execute in Offline Mode with access to `window.pokebonkModAPI`:
-- `GET /local-api/mod-api/profile` — active offline profile (with non-destructive mod patches)
-- `GET /local-api/mod-api/characters` — active custom characters, regions, and `maxDex`
-- `GET /local-api/mod-api/moves` — active custom attacks
-- `GET /local-api/mod-api/vfx` — active custom VFX presets
-- `GET /local-api/mod-api/audio` — active additive custom music and SFX catalog
-- `POST /local-api/mod-api/mutate` — apply a profile mutation (Offline Mode + Mods ON only)
+Scripts listed in `"scripts"` run in Offline Mode with `window.pokebonkModAPI`:
+- `window.pokebonkModAPI.getProfile()` -> `GET /local-api/mod-api/profile`
+- `window.pokebonkModAPI.getCharacters()` -> `GET /local-api/mod-api/characters` (includes `has3dModel`, `modelUrl`, `hasAltShiny`, `wardrobeCount`)
+- `window.pokebonkModAPI.getWardrobe()` -> `GET /local-api/mod-api/wardrobe`
+- `window.pokebonkModAPI.getEnemies()` -> `GET /local-api/mod-api/enemies`
+- `window.pokebonkModAPI.getMoves()` -> `GET /local-api/mod-api/moves`
+- `window.pokebonkModAPI.getVfx()` -> `GET /local-api/mod-api/vfx`
+- `window.pokebonkModAPI.getMechanics()` -> `GET /local-api/mod-api/mechanics`
+- `window.pokebonkModAPI.getAudio()` -> `GET /local-api/mod-api/audio`
+- `window.pokebonkModAPI.mutateProfile(mutation)` -> `POST /local-api/mod-api/mutate` (Offline Mode + Mods ON only)
+- `window.pokebonkModAPI.fetchPokeApi(path)` / `getPokeApiSpriteUrl(id, shiny)` / `reloadGame()`
+- Read-only enabled mod list is also available at `GET /local-api/mods`.
 
 ### Asset Overrides & Aliases
 
-- `assetsDir`: Files matching a game asset path (e.g. `assets/ui/maps/forest.webp` or `ui/maps/forest.webp`) replace the vanilla file in Offline Mode.
-- `assetAliases`: Redirects an asset path or folder prefix to another game asset path (useful for reusing vanilla biome environment packs or cries).
+- `assetsDir`: Files matching a game asset path (e.g. `assets/ui/maps/forest.webp` or `ui/maps/forest.webp`) override the vanilla file in Offline Mode.
+- `assetAliases`: Redirects an asset path or folder prefix to another game asset path (handy for sharing vanilla biome texture packs or cries).
 
 ### Bundle Patches (`bundlePatches`)
 
-Apply in-memory replacements to served JS/CSS chunks without modifying files on disk:
+Apply in-memory replacements to served JS/CSS chunks without modifying cached game files on disk:
 
 ```json
 "bundlePatches": [
@@ -535,15 +944,24 @@ Apply in-memory replacements to served JS/CSS chunks without modifying files on 
 ]
 ```
 
+**Tip for surviving PokéBonk updates:** Minified local variable names (like `t`, `n`, `it`, `$O`) change between PokéBonk builds. Prefer declarative Modding API fields (`characters`, `customEnemies`, `customMoves`, `customLevels`, `customMechanics`, `customWardrobe`, `customMusic`, `customSfx`) over `bundlePatches` whenever possible. If you must write a `bundlePatches` regex, match identifier names with `[\w$]+` rather than hardcoded 1-2 letter names, and read language from `localStorage.getItem('pokebonk.lang') || document.documentElement.lang || 'en'` instead of calling minified helpers.
+
+### Co-op Scope & Auto-Updating Across Game Patches
+
+- **Co-op Parity (`scope`)**: Mods adding characters, enemies, attacks, levels, mechanics, items, data patches, or gameplay bundle patches default to `"scope": "gameplay"` (Host and joining peers must enable matching versions). Cosmetic/audio/UI mods default to `"scope": "client"` and can differ freely in Co-op.
+- **Automatic Mod Updates & Adaptation on Build Patch**: When a player downloads or patches their offline PokéBonk build to a newer version, PokéBonk Unbound checks installed mods automatically:
+  - If a newer compatible version exists in the Mod Browser catalog, it backs up the previous copy and updates the installed mod automatically.
+  - If an installed declarative mod already passes chunk compatibility checks against the new build, the client records the new game version in `autoAdaptedGameVersions` so players are not blocked by stale version metadata.
+
 ---
 
-## 9. Mod Showcase File (`info.json`) & GitHub Mod Browser
+## 15. Mod Showcase (`info.json`), Experimental Mods & GitHub Mod Browser
 
-Unbound Settings' **Mod Browser** reads from `HyruleChosenOne/Pokebonk-Unbound` (`mods-database/` on `main`) by default and supports any public GitHub `owner/repo`.
+Unbound Settings' **Mod Browser** reads from `HyruleChosenOne/Pokebonk-Unbound` (`mods-database/` on `main`) by default and works with any public GitHub `owner/repo`.
 
 ### Mod Info Showcase File (`info.json`)
 
-Every mod folder can include an `info.json` alongside `mod.json` to showcase its description, highlights, category, requirements, and banner image in both the in-app **Mod Browser** and `mods-datas.md`:
+Include an `info.json` next to `mod.json` so your mod renders with its banner image, highlights, category, and requirements in both the in-app **Mod Browser** and `mods-datas.md`:
 
 ```json
 {
@@ -552,10 +970,11 @@ Every mod folder can include an `info.json` alongside `mod.json` to showcase its
   "version": "1.0.0",
   "author": "AuthorName",
   "category": "Characters",
+  "experimental": false,
   "tagline": "Short summary shown on the Mod Browser card.",
   "description": "Full showcase description shown when expanding Details in the Mod Browser.",
   "highlights": [
-    "Playable fighter with 8-direction animations",
+    "Playable fighter with 3D model and dual shiny",
     "Custom attacks and GPU VFX presets"
   ],
   "image": "preview.png",
@@ -563,11 +982,12 @@ Every mod folder can include an `info.json` alongside `mod.json` to showcase its
 }
 ```
 
-- **`image`**: Relative path inside the mod folder (e.g. `"preview.png"`, recommended `16:9` aspect ratio such as `640x360` or `960x540`) or an external `https://` image URL. If the image file is not added yet, the Mod Browser automatically renders a clean placeholder banner.
+- **`image`**: Relative path inside the mod folder (e.g. `"preview.png"`, recommended `16:9` ratio such as `640x360` or `960x540`) or an `https://` URL. If omitted, the Mod Browser renders a placeholder banner.
+- **`experimental`**: Set `"experimental": true` in both `mod.json` and `info.json` for unfinished, prototype, or work-in-progress mods. Experimental mods appear **only** inside the Mod Browser's **Experimental** tab and are hidden from All, Featured, Characters, Levels, Audio, Quality of Life, Community, and Modpacks.
 
 ### Option A: Curated `mods-database/mods-index.json` (Recommended)
 
-Add a `mods-database/mods-index.json` file (generated automatically via `node scripts/sync-mods-database.js`) listing each mod's metadata, `info.json` showcase fields, preview image path, folder path, and explicit file list:
+Generate `mods-database/mods-index.json` via `node scripts/sync-mods-database.js`:
 
 ```json
 {
@@ -579,6 +999,7 @@ Add a `mods-database/mods-index.json` file (generated automatically via `node sc
       "version": "1.0.0",
       "author": "AuthorName",
       "category": "Characters",
+      "experimental": false,
       "tagline": "Short summary.",
       "fullDescription": "Full showcase description.",
       "highlights": ["Feature 1", "Feature 2"],
@@ -594,7 +1015,7 @@ Add a `mods-database/mods-index.json` file (generated automatically via `node sc
 
 ### Option B: Automatic Folder Discovery
 
-Place each mod in its own folder under `mods-database/` or `mods/` containing `mod.json` (and optionally `info.json` + `preview.png`):
+Place each mod in its own folder under `mods-database/` or `mods/` with `mod.json` (and optionally `info.json` + `preview.png`):
 
 ```text
 repo/
@@ -607,4 +1028,440 @@ repo/
         ...
 ```
 
-The Mod Browser scans the repository via GitHub's API, reads `mod.json` and `info.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the user clicks **Install**.
+The Mod Browser scans the repository through GitHub's API, reads `mod.json` and `info.json`, and downloads all files recursively into `<dataRoot>/mods/<id>/` when the player clicks **Install**.
+
+---
+
+## 16. Complete Example Mods
+
+Every example below is self-contained. Create the folder inside `./mods/`, drop in the referenced PNG/GLB/OGG assets, enable the mod in **Unbound Settings -> Manage Mods**, and reload Offline Mode.
+
+### Example 1: Playable 3D Fighter with Dual Shiny, Wardrobe Skin, Attack & VFX
+
+```text
+mods/
+  chronos-knight/
+    mod.json
+    info.json
+    preview.png
+    models/
+      chronos-knight.glb
+    characters/
+      knight-front.png
+      knight-portrait.png
+      knight-portrait-shiny.png
+      knight-portrait-alt.png
+      knight-icon.png
+      knight-pmd.png
+      knight-pmd-shiny.png
+      knight-pmd-alt-shiny.png
+      knight-void-pmd.png
+      knight-void-portrait.png
+```
+
+`mods/chronos-knight/mod.json`:
+
+```json
+{
+  "id": "chronos-knight",
+  "name": "Chronos Knight",
+  "version": "1.0.0",
+  "author": "YourName",
+  "category": "Characters",
+  "scope": "gameplay",
+  "gameVersions": ["0.10.36"],
+  "description": "Adds Chronos Knight with a 3D .glb model, dual shinies, a Void wardrobe skin, and a custom slash attack.",
+  "tags": ["character", "3d-model", "wardrobe", "vfx"],
+  "customVfx": [
+    {
+      "id": "chrono-arc",
+      "preset": "slash",
+      "shape": "PixSlash",
+      "color": "#38bdf8",
+      "color2": "#fde047",
+      "size": 1.3,
+      "strikeArc": true,
+      "strikeSparks": 10,
+      "hitShape": "Twinkle",
+      "hitColor": "#fde047",
+      "hitCount": 8
+    }
+  ],
+  "customMoves": [
+    {
+      "key": "chrono-cleave",
+      "name": "Chrono Cleave",
+      "type": "steel",
+      "cls": "physical",
+      "power": 82,
+      "accuracy": 100,
+      "pp": 20,
+      "crit": 1,
+      "flavor": "Splits space with twin temporal blades.",
+      "archetype": "strike",
+      "params": { "count": 2, "dmgMul": 1.15, "areaMul": 1.25, "cdMul": 0.88 },
+      "vfxId": "chrono-arc",
+      "sfxPreset": "slash"
+    }
+  ],
+  "characters": [
+    {
+      "id": 2401,
+      "key": "chronos-knight",
+      "name": "Chronos Knight",
+      "gen": 99,
+      "types": ["steel", "psychic"],
+      "stats": { "hp": 92, "atk": 114, "def": 95, "spa": 90, "spd": 88, "spe": 112 },
+      "role": "Temporal Striker",
+      "passive": "sniper",
+      "rank": "legendary",
+      "color": "blue",
+      "start": true,
+      "unlock": true,
+      "unlockSkins": true,
+      "cryFrom": 150,
+      "kit": ["chrono-cleave", "quick-attack", "psybeam", "hyper-beam"],
+      "overrideLearnset": true,
+      "model3d": "models/chronos-knight.glb",
+      "modelScale": 1.1,
+      "modelOffsetY": 0,
+      "modelYawOffset": 0,
+      "sprite": "characters/knight-front.png",
+      "pmdSheet": "characters/knight-pmd.png",
+      "pmdShinySheet": "characters/knight-pmd-shiny.png",
+      "pmdAltShinySheet": "characters/knight-pmd-alt-shiny.png",
+      "portrait": "characters/knight-portrait.png",
+      "portraitShiny": "characters/knight-portrait-shiny.png",
+      "portraitAltShiny": "characters/knight-portrait-alt.png",
+      "icon": "characters/knight-icon.png",
+      "wardrobe": [
+        {
+          "slot": "m1",
+          "name": "Void Armor",
+          "style": "shadow",
+          "pal": "#0b0714 #2c1654 #a855f7 #f5d0fe",
+          "desc": "Forged between timelines.",
+          "unlocked": true,
+          "sheet": "characters/knight-void-pmd.png",
+          "portrait": "characters/knight-void-portrait.png"
+        }
+      ],
+      "customUlt": {
+        "name": "Time Shatter",
+        "type": "psychic",
+        "cls": "physical",
+        "desc": "Unleashes twin temporal rings that freeze nearby foes.",
+        "tint": 3718648,
+        "radius": 15,
+        "dmgMul": 5.0,
+        "dur": 1.8,
+        "knock": 8,
+        "status": "freeze",
+        "vfx": {
+          "ringStyle": "Runes",
+          "secondaryRingStyle": "Ripple",
+          "color2": "#fde047",
+          "particleShape": "PixSlash",
+          "particleCount": 28
+        }
+      }
+    }
+  ]
+}
+```
+
+---
+
+### Example 2: Unplayable Custom Enemy Pack (Opt-In Spawning Only)
+
+Defines two enemies (`5101`, `5102`). They can never be played, caught, rolled as shiny, or seen in Pokédex, and they only spawn in `"cave"` because `"enemySpawns"` explicitly opts them in.
+
+```text
+mods/
+  cavern-monsters/
+    mod.json
+    enemies/
+      crystal-slime.png
+      obsidian-golem.png
+```
+
+`mods/cavern-monsters/mod.json`:
+
+```json
+{
+  "id": "cavern-monsters",
+  "name": "Cavern Monsters",
+  "version": "1.0.0",
+  "author": "YourName",
+  "category": "Gameplay",
+  "scope": "gameplay",
+  "gameVersions": ["0.10.36"],
+  "description": "Adds two unplayable custom enemies that opt into Cerulean Cave.",
+  "customEnemies": [
+    {
+      "id": 5101,
+      "key": "crystal-slime",
+      "name": "Crystal Slime",
+      "types": ["rock", "fairy"],
+      "stats": { "hp": 62, "atk": 58, "def": 70, "spa": 55, "spd": 65, "spe": 52 },
+      "role": "mob",
+      "stages": [1, 2, 3],
+      "spawnWeight": 2,
+      "sprite": "enemies/crystal-slime.png",
+      "cryFrom": 88
+    },
+    {
+      "id": 5102,
+      "key": "obsidian-golem",
+      "name": "Obsidian Golem",
+      "types": ["rock", "dark"],
+      "stats": { "hp": 140, "atk": 120, "def": 135, "spa": 65, "spd": 90, "spe": 45 },
+      "role": "boss",
+      "stages": [2, 3],
+      "sprite": "enemies/obsidian-golem.png",
+      "cryFrom": 76
+    }
+  ],
+  "enemySpawns": [
+    { "enemy": "crystal-slime", "biomes": ["cave"], "role": "mob", "stages": [1, 2, 3], "weight": 2 },
+    { "enemy": "obsidian-golem", "biomes": ["cave"], "role": "boss", "stages": [2, 3] }
+  ]
+}
+```
+
+---
+
+### Example 3: Custom Stage with Vanilla-Style Map Mechanics
+
+Adds a playable stage (`emerald_sanctum`) populated with a bounce mushroom, a custom jackpot machine, a wandering merchant shop, a dojo challenge, and an Unown-style rune blessing pillar.
+
+`mods/emerald-sanctum/mod.json`:
+
+```json
+{
+  "id": "emerald-sanctum",
+  "name": "Emerald Sanctum",
+  "version": "1.0.0",
+  "author": "YourName",
+  "category": "Levels",
+  "scope": "gameplay",
+  "gameVersions": ["0.10.36"],
+  "description": "Custom forest-ruins stage showcasing bounce pads, jackpot machines, shops, dojo challenges, and blessing pillars.",
+  "customLevels": [
+    {
+      "id": "emerald_sanctum",
+      "name": "Emerald Sanctum",
+      "desc": "Overgrown shrines filled with bounce pads, treasure wheels, and ancient trials.",
+      "region": "custom",
+      "envFrom": "forest",
+      "thumbnailFrom": "forest",
+      "size": 340,
+      "landmark": { "kind": "moss_shrine", "radius": 9 },
+      "mechanics": [
+        {
+          "id": "emerald-shroom",
+          "kind": "bounce",
+          "name": "Emerald Bounce Pad",
+          "count": 4,
+          "bounceDistance": 30,
+          "cooldown": 10,
+          "color": "#22c55e"
+        },
+        {
+          "id": "emerald-jackpot",
+          "kind": "jackpot",
+          "name": "Sanctum Slot Machine",
+          "count": 1,
+          "cost": 20,
+          "costScale": 1.2,
+          "color": "#facc15",
+          "outcomes": [
+            { "weight": 20, "type": "jackpot", "label": "JACKPOT! +180 ₽ & Super Ball", "gold": 180, "chest": true },
+            { "weight": 35, "type": "gold", "label": "Emerald Coins! +65 ₽", "gold": 65 },
+            { "weight": 25, "type": "heal", "label": "Forest Recovery! +60% HP", "healPct": 0.6 },
+            { "weight": 20, "type": "buff", "label": "Swift Wind! +15% Move Speed", "buffs": [{ "stat": "moveSpeed", "mul": 1.15 }] }
+          ]
+        },
+        {
+          "id": "sanctum-trader",
+          "kind": "shop",
+          "name": "Sanctum Trader",
+          "count": 1,
+          "color": "#38bdf8",
+          "stock": [
+            { "id": "herb", "label": "Revival Herb", "desc": "Restore 75% Max HP", "cost": 20, "limit": 3, "effect": "heal", "amount": 0.75 },
+            { "id": "superball", "label": "Free Super Ball", "desc": "Spawns a Super Ball beside you", "cost": 35, "limit": 2, "effect": "chest" },
+            { "id": "blade", "label": "Emerald Charm", "desc": "+18% Damage for this run", "cost": 45, "limit": 2, "effect": "stat", "stat": "damage", "mul": 1.18 }
+          ]
+        },
+        {
+          "id": "sanctum-dojo",
+          "kind": "dojo",
+          "name": "Sanctum Trial Dojo",
+          "count": 1,
+          "waveCount": 12,
+          "waveEliteCount": 3,
+          "color": "#f97316",
+          "reward": { "chest": true, "gold": 80, "xp": 120 }
+        },
+        {
+          "id": "emerald-pillar",
+          "kind": "pillar",
+          "name": "Rune Blessing Pillar",
+          "desc": "+15% Attack Speed & full Ult charge!",
+          "count": 2,
+          "radius": 5.5,
+          "chargeTime": 4.5,
+          "color": "#a855f7",
+          "grantUlt": true,
+          "buffs": [{ "stat": "attackSpeed", "mul": 1.15 }]
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### Example 4: Additive Music & SFX Pack
+
+```text
+mods/
+  retro-soundpack/
+    mod.json
+    audio/
+      music/
+        title-retro.ogg
+        route-battle.ogg
+        rival-boss.ogg
+      sfx/
+        crit-chime.ogg
+```
+
+`mods/retro-soundpack/mod.json`:
+
+```json
+{
+  "id": "retro-soundpack",
+  "name": "Retro Soundpack",
+  "version": "1.0.0",
+  "author": "YourName",
+  "category": "Audio",
+  "scope": "client",
+  "gameVersions": ["0.10.36"],
+  "description": "Adds retro menu, battle, and boss tracks alongside vanilla music.",
+  "customMusic": [
+    { "id": "retro-title", "name": "Retro Title", "file": "audio/music/title-retro.ogg", "pool": "menu", "loop": 3.5, "volume": 0.95 },
+    { "id": "retro-route", "name": "Retro Route", "file": "audio/music/route-battle.ogg", "pool": "ingame", "loop": 8.0, "volume": 0.9, "weight": 2 },
+    { "id": "retro-boss", "name": "Retro Boss", "file": "audio/music/rival-boss.ogg", "pool": "boss", "loop": 2.4, "volume": 1.0, "weight": 2 }
+  ],
+  "customSfx": [
+    { "id": "retro-crit", "file": "audio/sfx/crit-chime.ogg", "volume": 0.9, "pitchVar": 0.05 }
+  ],
+  "settings": [
+    {
+      "key": "replaceMenuMusic",
+      "label": "Use Retro Title as Default Menu Music",
+      "desc": "Automatically plays Retro Title unless you pick another song in-game.",
+      "type": "toggle",
+      "default": true,
+      "cheat": false
+    }
+  ],
+  "defaultMenuMusic": "retro-title"
+}
+```
+
+---
+
+### Example 5: Mod with a Custom Config UI Module (`configModule`)
+
+```text
+mods/
+  challenge-rules/
+    mod.json
+    script.js
+    config/
+      panel.js
+      panel.css
+```
+
+`mods/challenge-rules/mod.json`:
+
+```json
+{
+  "id": "challenge-rules",
+  "name": "Challenge Rules",
+  "version": "1.0.0",
+  "author": "YourName",
+  "category": "Gameplay",
+  "scope": "gameplay",
+  "gameVersions": ["0.10.36"],
+  "description": "Custom difficulty modifiers configured through a dedicated UI module.",
+  "scripts": ["script.js"],
+  "configModule": {
+    "script": "config/panel.js",
+    "style": "config/panel.css",
+    "title": "Challenge Rules",
+    "subtitle": "Adjust custom run rules and presets"
+  },
+  "settings": [
+    { "key": "enemyHpMul", "type": "select", "default": "1.0", "cheat": true },
+    { "key": "noHealing", "type": "toggle", "default": false, "cheat": true }
+  ]
+}
+```
+
+`mods/challenge-rules/config/panel.js`:
+
+```js
+(function () {
+  window.PokebonkModConfigModules = window.PokebonkModConfigModules || {};
+  window.PokebonkModConfigModules['challenge-rules'] = {
+    mount(ctx) {
+      const { container, mod, api, isOffline, toast } = ctx;
+      const cfg = mod.settingsValues || {};
+      container.innerHTML = `
+        <div class="cr-panel">
+          <div class="cr-row">
+            <div>
+              <strong>Enemy HP Multiplier</strong>
+              <p>Scales enemy health in Offline runs.</p>
+            </div>
+            <select id="cr-hp" ${!isOffline ? 'disabled' : ''}>
+              <option value="1.0" ${cfg.enemyHpMul === '1.0' ? 'selected' : ''}>1.0x (Standard)</option>
+              <option value="1.5" ${cfg.enemyHpMul === '1.5' ? 'selected' : ''}>1.5x (Hard)</option>
+              <option value="2.0" ${cfg.enemyHpMul === '2.0' ? 'selected' : ''}>2.0x (Brutal)</option>
+            </select>
+          </div>
+          <label class="cr-row">
+            <div>
+              <strong>Disable Healing Drops</strong>
+              <p>Removes passive recovery pickups during runs.</p>
+            </div>
+            <input type="checkbox" id="cr-noheal" ${cfg.noHealing ? 'checked' : ''} ${!isOffline ? 'disabled' : ''} />
+          </label>
+        </div>
+      `;
+      container.querySelector('#cr-hp').addEventListener('change', async (ev) => {
+        try {
+          await api.updateModSettings(mod.id, { enemyHpMul: ev.target.value });
+          toast('Enemy HP multiplier updated.');
+        } catch (err) {
+          toast(err.message, true);
+        }
+      });
+      container.querySelector('#cr-noheal').addEventListener('change', async (ev) => {
+        try {
+          await api.updateModSettings(mod.id, { noHealing: ev.target.checked });
+          toast('Challenge rule updated.');
+        } catch (err) {
+          toast(err.message, true);
+          ev.target.checked = !ev.target.checked;
+        }
+      });
+    }
+  };
+})();
+```
