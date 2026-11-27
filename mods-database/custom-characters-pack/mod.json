@@ -133,12 +133,6 @@
       "id": "unlock-all-custom-pack",
       "label": "Unlock All 18 Non-Dexed Pokémon",
       "type": "unlock-mod-characters"
-    },
-    {
-      "id": "open-custom-chars-dir",
-      "label": "Open Characters Folder",
-      "type": "open-mod-subdir",
-      "subdir": "characters"
     }
   ],
   "regions": [
@@ -1235,10 +1229,11 @@
   ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36"
+    "0.10.36",
+    "0.10.38"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.36",
+  "maxGameVersion": "0.10.38",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {

@@ -1,10 +1,10 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "scope": "gameplay",
   "author": "HyruleChosenOne",
-  "description": "Adds 14 custom stages across Hoenn to Paldea with distinct 3D topographies, landmarks, harmonized textures, and region OSTs.",
+  "description": "14 region-faithful procedural levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea using the updated Modding API with unique topographies, landmarks, decorative regional scenery, custom textures, and official region OSTs.",
   "tags": [
     "levels",
     "regions",
@@ -145,7 +145,7 @@
     {
       "id": "hoenn_petalburg",
       "name": "Petalburg Woods (Hoenn)",
-      "desc": "Mossy emerald woodland with ancient giant oaks, sunlit groves, and a carved Petalburg Moss Shrine centerpiece.",
+      "desc": "Mossy emerald Hoenn woodland with sunlit trails, ancient giant trunks, mossy clearings, and the Petalburg Moss Shrine.",
       "mode": "procedural",
       "region": "hoenn",
       "envFrom": "forest",
@@ -257,7 +257,7 @@
         5196856,
         7894624
       ],
-      "water": 0,
+      "water": null,
       "waterColor": 2201568,
       "props": [
         "tree",
@@ -441,12 +441,156 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "woodland_glades",
+        "noise": {
+          "scale": 0.011,
+          "octaves": 4,
+          "amplitude": 3.4,
+          "warpStrength": 6,
+          "warpScale": 0.016,
+          "heightOffset": 0.2
+        },
+        "pools": [
+          {
+            "x": 38,
+            "z": 10,
+            "radius": 22,
+            "depth": 1.7,
+            "wobble": 5.5
+          }
+        ],
+        "trails": [
+          {
+            "from": [
+              0,
+              58
+            ],
+            "to": "spawn",
+            "width": 6.2,
+            "wobble": 2.5,
+            "flatten": 0.4,
+            "height": 2.8
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.4,
+            "wobble": 2.4,
+            "flatten": 0.42,
+            "height": 3.2
+          },
+          {
+            "from": "spawn",
+            "to": [
+              54,
+              -18
+            ],
+            "width": 5.4,
+            "wobble": 2.8,
+            "flatten": 0.35,
+            "height": 2.8
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 15,
+          "blendRadius": 11,
+          "height": 3.6,
+          "paintPath": true,
+          "reserveRadius": 18
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.7,
+        "border": "cliffs",
+        "borderHeight": 9.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": null
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "petalburg_moss_rock",
+          "count": 10,
+          "minDist": 22,
+          "maxDist": 138,
+          "scaleRange": [
+            0.85,
+            1.3
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "encina_trunk",
+          "count": 10,
+          "minDist": 24,
+          "maxDist": 145,
+          "scaleRange": [
+            0.85,
+            1.25
+          ],
+          "colliderRadius": 1.6
+        },
+        {
+          "vanillaModel": "encina_log",
+          "count": 8,
+          "minDist": 26,
+          "maxDist": 140,
+          "scaleRange": [
+            0.9,
+            1.2
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "encina_shrine",
+          "anchor": "landmark",
+          "ringRadius": 24,
+          "ringSpread": 4,
+          "count": 3,
+          "scaleRange": [
+            0.85,
+            1.05
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "iris_lantern",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": -7.5,
+              "z": 10.5,
+              "scale": 1,
+              "rotY": 0.2
+            },
+            {
+              "x": 7.5,
+              "z": 10.5,
+              "scale": 1,
+              "rotY": -0.2
+            },
+            {
+              "x": -12,
+              "z": 19,
+              "scale": 0.95,
+              "rotY": 0.4
+            },
+            {
+              "x": 12,
+              "z": 19,
+              "scale": 0.95,
+              "rotY": -0.4
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "hoenn_chimney",
       "name": "Mt. Chimney Caldera (Hoenn)",
-      "desc": "Scorching volcanic rim crowned by steaming basalt vents, ash storms, and a glowing Magma Caldera landmark.",
+      "desc": "Smoking Hoenn volcanic caldera encircled by a molten magma moat, basalt bridges, cable pylons, and steaming ash cliffs.",
       "mode": "procedural",
       "region": "hoenn",
       "envFrom": "canela",
@@ -740,12 +884,162 @@
           "motes": "embers"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "caldera",
+        "noise": {
+          "scale": 0.014,
+          "octaves": 4,
+          "amplitude": 3.6,
+          "ridgeWeight": 0.42,
+          "heightOffset": 0.3
+        },
+        "moat": {
+          "anchor": "landmark",
+          "radius": 34,
+          "width": 10.5,
+          "floor": -1.8,
+          "wobble": 2.8,
+          "bridges": [
+            {
+              "angle": 135,
+              "width": 7.5,
+              "height": 3.4
+            },
+            {
+              "angle": 225,
+              "width": 7,
+              "height": 3.4
+            },
+            {
+              "angle": 35,
+              "width": 6.8,
+              "height": 3.4
+            }
+          ]
+        },
+        "craters": {
+          "count": 4,
+          "minRadius": 11,
+          "maxRadius": 20,
+          "depth": 2.8,
+          "rimHeight": 1.9
+        },
+        "trails": [
+          {
+            "from": [
+              -44,
+              46
+            ],
+            "to": "spawn",
+            "width": 6.8,
+            "wobble": 2.2,
+            "flatten": 0.4,
+            "height": 3.2
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 7,
+            "wobble": 1.8,
+            "flatten": 0.45,
+            "height": 4.4
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 10,
+          "height": 5.8,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 3.2,
+        "border": "cliffs",
+        "borderHeight": 12.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.25,
+        "lava": true
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "chimney_cable_pylon",
+          "fixedPositions": [
+            {
+              "x": -34,
+              "z": 36,
+              "scale": 1.05,
+              "rotY": 0.78
+            },
+            {
+              "x": -16,
+              "z": 18,
+              "scale": 1,
+              "rotY": 0.78
+            },
+            {
+              "x": 48,
+              "z": 22,
+              "scale": 1.05,
+              "rotY": -0.5
+            }
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "canela_vent",
+          "count": 11,
+          "minDist": 20,
+          "maxDist": 136,
+          "scaleRange": [
+            0.9,
+            1.35
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "canela_basalt",
+          "count": 14,
+          "minDist": 22,
+          "maxDist": 140,
+          "scaleRange": [
+            0.85,
+            1.4
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "canela_lavarock",
+          "nearWater": true,
+          "count": 10,
+          "minDist": 18,
+          "maxDist": 130,
+          "scaleRange": [
+            0.8,
+            1.25
+          ],
+          "colliderRadius": 1
+        },
+        {
+          "vanillaModel": "crater_spire",
+          "minHeight": 5,
+          "count": 7,
+          "minDist": 42,
+          "maxDist": 144,
+          "scaleRange": [
+            0.95,
+            1.35
+          ],
+          "colliderRadius": 1.4
+        }
+      ]
     },
     {
       "id": "sinnoh_coronet",
       "name": "Mt. Coronet Spear Pillar (Sinnoh)",
-      "desc": "Snow-swept summit above the clouds crowned by the ancient fluted marble columns of Spear Pillar.",
+      "desc": "High-altitude Sinnoh snow summit ascending along a fluted marble pilgrimage causeway to the ancient Spear Pillar acropolis.",
       "mode": "procedural",
       "region": "sinnoh",
       "envFrom": "plateado",
@@ -856,7 +1150,7 @@
         5004144,
         8096416
       ],
-      "water": 0,
+      "water": null,
       "waterColor": 3440544,
       "props": [
         "snowpine",
@@ -1024,12 +1318,150 @@
           "motes": "snow"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "alpine_ridge",
+        "noise": {
+          "scale": 0.013,
+          "octaves": 4,
+          "amplitude": 4.2,
+          "ridgeWeight": 0.55,
+          "terraceSteps": 5,
+          "terraceSharpness": 0.55,
+          "heightOffset": 0.2
+        },
+        "trails": [
+          {
+            "from": [
+              0,
+              74
+            ],
+            "to": "spawn",
+            "width": 7.6,
+            "wobble": 1.2,
+            "flatten": 0.5,
+            "height": 3.4
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 8.2,
+            "wobble": 1,
+            "flatten": 0.52,
+            "height": 6
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 18,
+          "blendRadius": 12,
+          "height": 8.4,
+          "paintPath": true,
+          "reserveRadius": 20
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 3.4,
+        "border": "cliffs",
+        "borderHeight": 16.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": null
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "sinnoh_fluted_column",
+          "fixedPositions": [
+            {
+              "x": -10.5,
+              "z": -12,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": 10.5,
+              "z": -12,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": -10.5,
+              "z": -26,
+              "scale": 1.1,
+              "rotY": 0
+            },
+            {
+              "x": 10.5,
+              "z": -26,
+              "scale": 1.1,
+              "rotY": 0
+            },
+            {
+              "x": -10.5,
+              "z": 16,
+              "scale": 0.95,
+              "rotY": 0
+            },
+            {
+              "x": 10.5,
+              "z": 16,
+              "scale": 0.95,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.95
+        },
+        {
+          "vanillaModel": "summit_pillar",
+          "anchor": "landmark",
+          "ringRadius": 24,
+          "ringSpread": 3.5,
+          "count": 8,
+          "scaleRange": [
+            0.95,
+            1.25
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "plateado_cairn",
+          "count": 10,
+          "minDist": 22,
+          "maxDist": 145,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 0.9
+        },
+        {
+          "vanillaModel": "summit_boulder",
+          "count": 12,
+          "minDist": 26,
+          "maxDist": 148,
+          "scaleRange": [
+            0.9,
+            1.35
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "ruin_pillar",
+          "minHeight": 4.5,
+          "count": 8,
+          "minDist": 30,
+          "maxDist": 142,
+          "scaleRange": [
+            0.85,
+            1.2
+          ],
+          "colliderRadius": 1
+        }
+      ]
     },
     {
       "id": "sinnoh_eterna",
       "name": "Eterna Twilight Woods (Sinnoh)",
-      "desc": "Misty dusk-lit woodland and lantern-lined forest trail surrounding the haunted Old Chateau Ruins.",
+      "desc": "Misty dusk Sinnoh woodland split by a dark mossy forest creek and lantern-lined iron gates ascending to the Old Chateau.",
       "mode": "procedural",
       "region": "sinnoh",
       "envFrom": "encina",
@@ -1328,12 +1760,178 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "river_basin",
+        "noise": {
+          "scale": 0.012,
+          "octaves": 4,
+          "amplitude": 3.4,
+          "warpStrength": 5,
+          "warpScale": 0.018,
+          "heightOffset": 0.1
+        },
+        "rivers": {
+          "count": 1,
+          "width": 8.5,
+          "depth": 4.2,
+          "meander": 17,
+          "angle": 1.52,
+          "phase": 0.6,
+          "offset": -30,
+          "paintPath": true,
+          "fords": [
+            {
+              "x": 32,
+              "z": 8,
+              "radius": 11,
+              "height": 2.4
+            },
+            {
+              "x": 26,
+              "z": -44,
+              "radius": 10,
+              "height": 2.5
+            }
+          ]
+        },
+        "pools": [
+          {
+            "x": -46,
+            "z": 36,
+            "radius": 15,
+            "depth": 3,
+            "wobble": 4.5
+          },
+          {
+            "x": 56,
+            "z": 42,
+            "radius": 13,
+            "depth": 2.8,
+            "wobble": 4
+          }
+        ],
+        "trails": [
+          {
+            "from": [
+              54,
+              10
+            ],
+            "to": "spawn",
+            "width": 6.2,
+            "wobble": 2.2,
+            "flatten": 0.42,
+            "height": 2.5
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.6,
+            "wobble": 2,
+            "flatten": 0.44,
+            "height": 4
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 17.5,
+          "blendRadius": 12,
+          "height": 5.8,
+          "paintPath": true,
+          "reserveRadius": 20
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.5,
+        "border": "cliffs",
+        "borderHeight": 13,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": -0.05
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "eterna_chateau_lantern",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": -8.5,
+              "z": 14.5,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": 8.5,
+              "z": 14.5,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": -14.5,
+              "z": 22,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": 14.5,
+              "z": 22,
+              "scale": 1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.55
+        },
+        {
+          "prefabId": "eterna_chateau_lantern",
+          "count": 8,
+          "minDist": 22,
+          "maxDist": 125,
+          "scaleRange": [
+            0.9,
+            1.1
+          ],
+          "colliderRadius": 0.5
+        },
+        {
+          "vanillaModel": "ilex_lamp",
+          "count": 10,
+          "minDist": 20,
+          "maxDist": 132,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.6
+        },
+        {
+          "vanillaModel": "ilex_pillar",
+          "count": 8,
+          "minDist": 28,
+          "maxDist": 136,
+          "scaleRange": [
+            0.9,
+            1.2
+          ],
+          "colliderRadius": 1
+        },
+        {
+          "vanillaModel": "ruins_arch",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": 0,
+              "z": 19.5,
+              "scale": 1.1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0
+        }
+      ]
     },
     {
       "id": "unova_relic_desert",
       "name": "Relic Desert Resort (Unova)",
-      "desc": "Golden wind-rippled sands dotted with sunken obelisks, braziers, and the stepped Relic Castle Pyramid.",
+      "desc": "Wind-sculpted Unova desert dunes sweeping around the sunken sandstone courtyard of Relic Castle, obelisks, and guardian statues.",
       "mode": "procedural",
       "region": "unova",
       "envFrom": "desert",
@@ -1446,7 +2044,7 @@
         8871216,
         12484168
       ],
-      "water": 0,
+      "water": null,
       "waterColor": 3440544,
       "props": [
         "cactus",
@@ -1643,12 +2241,148 @@
           "motes": "dust"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "dunes",
+        "noise": {
+          "scale": 0.01,
+          "octaves": 3,
+          "amplitude": 2.4,
+          "warpStrength": 7,
+          "warpScale": 0.015,
+          "heightOffset": 0.1
+        },
+        "trails": [
+          {
+            "from": [
+              -58,
+              36
+            ],
+            "to": "spawn",
+            "width": 7.4,
+            "wobble": 2.6,
+            "flatten": 0.35,
+            "height": 2.5
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 8,
+            "wobble": 2,
+            "flatten": 0.42,
+            "height": 2.1
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 18.5,
+          "blendRadius": 13,
+          "height": 1.6,
+          "paintPath": true,
+          "reserveRadius": 20
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.6,
+        "border": "cliffs",
+        "borderHeight": 9,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": null
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "relic_guardian_pillar",
+          "anchor": "landmark",
+          "ringRadius": 23,
+          "ringSpread": 2,
+          "count": 6,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "ruins_obelisk",
+          "count": 9,
+          "minDist": 26,
+          "maxDist": 145,
+          "scaleRange": [
+            0.9,
+            1.3
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "ruins_obelisk_broken",
+          "count": 10,
+          "minDist": 22,
+          "maxDist": 148,
+          "scaleRange": [
+            0.9,
+            1.35
+          ],
+          "colliderRadius": 1
+        },
+        {
+          "vanillaModel": "ruins_brazier",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": -9.5,
+              "z": 14.5,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": 9.5,
+              "z": 14.5,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": -16.5,
+              "z": 4,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": 16.5,
+              "z": 4,
+              "scale": 1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.7
+        },
+        {
+          "vanillaModel": "ruins_statue",
+          "count": 6,
+          "minDist": 32,
+          "maxDist": 140,
+          "scaleRange": [
+            0.9,
+            1.15
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "desert_skull",
+          "count": 7,
+          "minDist": 28,
+          "maxDist": 145,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 0.9
+        }
+      ]
     },
     {
       "id": "unova_dragonspiral",
       "name": "Dragonspiral Tower (Unova)",
-      "desc": "Autumn-gold highland cliffside anchored by the ancient multi-tiered Dragonspiral Pagoda Tower.",
+      "desc": "Northern Unova autumn highlands with a grand ascending spiral approach, stone bridges, and a tranquil moat surrounding Dragonspiral Tower.",
       "mode": "procedural",
       "region": "unova",
       "envFrom": "iris",
@@ -1954,12 +2688,145 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "terraces",
+        "noise": {
+          "scale": 0.011,
+          "octaves": 4,
+          "amplitude": 3,
+          "heightOffset": 0.8
+        },
+        "moat": {
+          "anchor": "landmark",
+          "radius": 32,
+          "width": 11.5,
+          "floor": -1.8,
+          "wobble": 2.2,
+          "bridges": [
+            {
+              "angle": 90,
+              "width": 7.4,
+              "height": 3.1
+            },
+            {
+              "angle": 180,
+              "width": 6.8,
+              "height": 3
+            },
+            {
+              "angle": 0,
+              "width": 6.6,
+              "height": 3
+            }
+          ]
+        },
+        "spiralRamp": {
+          "anchor": "landmark",
+          "startRadius": 84,
+          "endRadius": 48,
+          "width": 6.8,
+          "startHeight": 2.8,
+          "endHeight": 5.6,
+          "paintPath": true
+        },
+        "trails": [
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 7,
+            "wobble": 1.2,
+            "flatten": 0.48,
+            "height": 3.4
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 17,
+          "blendRadius": 10,
+          "height": 4.8,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.8,
+        "border": "cliffs",
+        "borderHeight": 11.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.25
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "dragonspiral_beacon_pillar",
+          "anchor": "landmark",
+          "ringRadius": 21,
+          "ringSpread": 1.5,
+          "count": 6,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.95
+        },
+        {
+          "vanillaModel": "johto_torii",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": 0,
+              "z": 22.5,
+              "scale": 1.15,
+              "rotY": 0
+            },
+            {
+              "x": 0,
+              "z": 44.5,
+              "scale": 1.1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0
+        },
+        {
+          "vanillaModel": "tower_column",
+          "count": 10,
+          "minDist": 26,
+          "maxDist": 142,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 1
+        },
+        {
+          "vanillaModel": "iris_lantern",
+          "count": 12,
+          "minDist": 20,
+          "maxDist": 135,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.55
+        },
+        {
+          "vanillaModel": "tower_pots",
+          "count": 8,
+          "minDist": 24,
+          "maxDist": 130,
+          "scaleRange": [
+            0.95,
+            1.2
+          ],
+          "colliderRadius": 0.7
+        }
+      ]
     },
     {
       "id": "kalos_azure_bay",
       "name": "Azure Bay Coast (Kalos)",
-      "desc": "Sunlit turquoise shoreline with tide pools, limestone sea stacks, and a towering Azure Sea Arch Beacon.",
+      "desc": "Sunlit Kalos turquoise bay with a crescent white-sand cove, coastal limestone headland, offshore tidal islet sandbar, and Azure Sea Arch.",
       "mode": "procedural",
       "region": "kalos",
       "envFrom": "coast",
@@ -2252,12 +3119,167 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": true
+      "openSea": true,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "coastal_bay",
+        "noise": {
+          "scale": 0.014,
+          "octaves": 3,
+          "amplitude": 2.2,
+          "heightOffset": 0.2
+        },
+        "islandShape": {
+          "offsetX": 6,
+          "offsetZ": -4,
+          "rx": 130,
+          "rz": 120,
+          "wobble": 0.11,
+          "dropDepth": -4.2,
+          "beachWidth": 0.92,
+          "lagoon": {
+            "x": -34,
+            "z": 24,
+            "radius": 34,
+            "depth": 4.1
+          },
+          "islets": [
+            {
+              "x": -60,
+              "z": -40,
+              "rx": 26,
+              "rz": 22,
+              "height": 2.8,
+              "wobble": 0.12,
+              "sandbar": {
+                "toX": -24,
+                "toZ": -14,
+                "width": 9.5,
+                "height": 1.5
+              }
+            }
+          ]
+        },
+        "trails": [
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.4,
+            "wobble": 2,
+            "flatten": 0.36,
+            "height": 3
+          },
+          {
+            "from": "spawn",
+            "to": [
+              -58,
+              -38
+            ],
+            "width": 5.6,
+            "wobble": 2.2,
+            "flatten": 0.3,
+            "height": 1.8
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 15.5,
+          "blendRadius": 10,
+          "height": 4.5,
+          "paintPath": true,
+          "reserveRadius": 18
+        },
+        "spawnClearingRadius": 14,
+        "spawnHeight": 2.3,
+        "border": "ocean",
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.38
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "kalos_coastal_lamp",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": -10,
+              "z": 10,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": 10,
+              "z": 10,
+              "scale": 1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.5
+        },
+        {
+          "prefabId": "kalos_coastal_lamp",
+          "count": 7,
+          "minDist": 22,
+          "maxDist": 105,
+          "scaleRange": [
+            0.9,
+            1.1
+          ],
+          "colliderRadius": 0.5
+        },
+        {
+          "vanillaModel": "coast_stack",
+          "nearWater": true,
+          "count": 10,
+          "minDist": 26,
+          "maxDist": 132,
+          "scaleRange": [
+            0.85,
+            1.35
+          ],
+          "colliderRadius": 1.4
+        },
+        {
+          "vanillaModel": "coast_boulder",
+          "nearWater": true,
+          "count": 12,
+          "minDist": 20,
+          "maxDist": 128,
+          "scaleRange": [
+            0.85,
+            1.3
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "furia_boat",
+          "nearWater": true,
+          "count": 4,
+          "minDist": 32,
+          "maxDist": 118,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "furia_pier",
+          "fixedPositions": [
+            {
+              "x": -24,
+              "z": 30,
+              "scale": 1.05,
+              "rotY": 2.4
+            }
+          ],
+          "colliderRadius": 0
+        }
+      ]
     },
     {
       "id": "kalos_reflection_cave",
       "name": "Reflection Crystal Cave (Kalos)",
-      "desc": "Prismatic subterranean grotto lit by giant mirror crystal clusters and glowing Aura fissures.",
+      "desc": "Enclosed Kalos crystal cavern with geometric mirror-crystal terraces, iridescent amethyst pools, and glowing mirrored crystal walls.",
       "mode": "procedural",
       "region": "kalos",
       "envFrom": "cave",
@@ -2553,12 +3575,144 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "crystal_cavern",
+        "interior": true,
+        "wallHeight": 19,
+        "noise": {
+          "scale": 0.015,
+          "octaves": 3,
+          "amplitude": 3,
+          "ridgeWeight": 0.35,
+          "terraceSteps": 4,
+          "terraceSharpness": 0.8,
+          "heightOffset": 0.2
+        },
+        "pools": [
+          {
+            "x": -36,
+            "z": -20,
+            "radius": 22,
+            "depth": 3.9,
+            "wobble": 4.8
+          },
+          {
+            "x": 20,
+            "z": 30,
+            "radius": 21,
+            "depth": 3.9,
+            "wobble": 4.6
+          },
+          {
+            "x": -26,
+            "z": 44,
+            "radius": 15,
+            "depth": 3.3,
+            "wobble": 3.8
+          }
+        ],
+        "trails": [
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.4,
+            "wobble": 1.8,
+            "flatten": 0.4,
+            "height": 2.9
+          },
+          {
+            "from": [
+              -46,
+              36
+            ],
+            "to": "spawn",
+            "width": 6,
+            "wobble": 2,
+            "flatten": 0.38,
+            "height": 2.4
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 15.5,
+          "blendRadius": 10,
+          "height": 3.8,
+          "paintPath": true,
+          "reserveRadius": 18
+        },
+        "spawnClearingRadius": 14,
+        "spawnHeight": 2.3,
+        "border": "cliffs",
+        "borderHeight": 17.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.08
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "kalos_mirror_slab",
+          "anchor": "landmark",
+          "ringRadius": 19,
+          "ringSpread": 2.2,
+          "count": 6,
+          "scaleRange": [
+            0.95,
+            1.2
+          ],
+          "colliderRadius": 1.15
+        },
+        {
+          "prefabId": "kalos_mirror_slab",
+          "count": 8,
+          "minDist": 28,
+          "maxDist": 122,
+          "scaleRange": [
+            0.85,
+            1.25
+          ],
+          "colliderRadius": 1.15
+        },
+        {
+          "vanillaModel": "cave_crystal",
+          "count": 16,
+          "minDist": 18,
+          "maxDist": 126,
+          "scaleRange": [
+            0.9,
+            1.45
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "cave_column",
+          "minHeight": 3.5,
+          "count": 10,
+          "minDist": 34,
+          "maxDist": 130,
+          "scaleRange": [
+            0.9,
+            1.3
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "psy_lamp",
+          "count": 8,
+          "minDist": 22,
+          "maxDist": 118,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.6
+        }
+      ]
     },
     {
       "id": "alola_melemele",
       "name": "Melemele Tropical Shore (Alola)",
-      "desc": "Sun-drenched tropical island meadows and hibiscus shores centered on the golden Ruins of Conflict Totem.",
+      "desc": "Sun-drenched Alolan tropical island cove with golden palm beaches, turquoise lagoon, tiki torches, and the Ruins of Conflict.",
       "mode": "procedural",
       "region": "alola",
       "envFrom": "coast",
@@ -2855,12 +4009,164 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": true
+      "openSea": true,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "archipelago",
+        "presetBlend": 0.32,
+        "noise": {
+          "scale": 0.013,
+          "octaves": 3,
+          "amplitude": 2.8,
+          "heightOffset": 1.6
+        },
+        "islandShape": {
+          "offsetX": -4,
+          "offsetZ": 2,
+          "rx": 142,
+          "rz": 124,
+          "wobble": 0.11,
+          "dropDepth": -4.2,
+          "beachWidth": 0.96,
+          "lagoon": {
+            "x": 38,
+            "z": 22,
+            "radius": 32,
+            "depth": 4
+          }
+        },
+        "trails": [
+          {
+            "from": [
+              20,
+              50
+            ],
+            "to": "spawn",
+            "width": 6.4,
+            "wobble": 2.4,
+            "flatten": 0.35,
+            "height": 2.4
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.6,
+            "wobble": 2,
+            "flatten": 0.4,
+            "height": 3.8
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16,
+          "blendRadius": 11,
+          "height": 5.2,
+          "paintPath": true,
+          "reserveRadius": 18
+        },
+        "spawnClearingRadius": 14,
+        "spawnHeight": 2.4,
+        "border": "ocean",
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.36
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "alola_tiki_torch",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": -9.5,
+              "z": 10.5,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": 9.5,
+              "z": 10.5,
+              "scale": 1.05,
+              "rotY": 0
+            },
+            {
+              "x": -14,
+              "z": 2,
+              "scale": 1,
+              "rotY": 0
+            },
+            {
+              "x": 14,
+              "z": 2,
+              "scale": 1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.55
+        },
+        {
+          "prefabId": "alola_tiki_torch",
+          "count": 10,
+          "minDist": 20,
+          "maxDist": 118,
+          "scaleRange": [
+            0.9,
+            1.15
+          ],
+          "colliderRadius": 0.55
+        },
+        {
+          "vanillaModel": "ruins_pots",
+          "count": 10,
+          "minDist": 20,
+          "maxDist": 116,
+          "scaleRange": [
+            0.95,
+            1.25
+          ],
+          "colliderRadius": 0.7
+        },
+        {
+          "vanillaModel": "ruins_arch",
+          "anchor": "landmark",
+          "fixedPositions": [
+            {
+              "x": 0,
+              "z": 17.5,
+              "scale": 1.1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0
+        },
+        {
+          "vanillaModel": "coast_boulder",
+          "nearWater": true,
+          "count": 10,
+          "minDist": 24,
+          "maxDist": 126,
+          "scaleRange": [
+            0.85,
+            1.3
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "safari_boat",
+          "nearWater": true,
+          "count": 3,
+          "minDist": 34,
+          "maxDist": 120,
+          "scaleRange": [
+            0.95,
+            1.1
+          ],
+          "colliderRadius": 1.2
+        }
+      ]
     },
     {
       "id": "alola_wela_volcano",
       "name": "Wela Volcano Park (Alola)",
-      "desc": "Obsidian volcanic slopes and blazing ember plains crowned by the ritual Wela Fire Trial Altar.",
+      "desc": "Akala Island volcanic cone with a winding spiral Fire Trial ascent, radial obsidian fissures, flaming braziers, and the Wela Crown Altar.",
       "mode": "procedural",
       "region": "alola",
       "envFrom": "canela",
@@ -3156,12 +4462,131 @@
           "motes": "embers"
         }
       ],
-      "openSea": true
+      "openSea": true,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "volcanic_cone",
+        "noise": {
+          "scale": 0.015,
+          "octaves": 3,
+          "amplitude": 2.4,
+          "ridgeWeight": 0.35,
+          "heightOffset": 0.2
+        },
+        "islandShape": {
+          "offsetX": 0,
+          "offsetZ": 0,
+          "rx": 132,
+          "rz": 132,
+          "wobble": 0.09,
+          "dropDepth": -4.2,
+          "beachWidth": 0.65
+        },
+        "fissures": {
+          "anchor": "landmark",
+          "count": 5,
+          "startRadius": 22,
+          "endRadius": 96,
+          "width": 4.2,
+          "depth": 2.4,
+          "angleOffset": 0.45
+        },
+        "spiralRamp": {
+          "anchor": "landmark",
+          "startRadius": 68,
+          "endRadius": 24,
+          "width": 6.4,
+          "startHeight": 3,
+          "endHeight": 8.2,
+          "paintPath": true
+        },
+        "trails": [
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 6.8,
+            "wobble": 1.8,
+            "flatten": 0.45,
+            "height": 6
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 11,
+          "height": 8.4,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 14,
+        "spawnHeight": 4.2,
+        "border": "ocean",
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.32
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "wela_trial_brazier",
+          "anchor": "landmark",
+          "ringRadius": 18,
+          "ringSpread": 1.2,
+          "count": 6,
+          "scaleRange": [
+            0.95,
+            1.1
+          ],
+          "colliderRadius": 0.85
+        },
+        {
+          "prefabId": "wela_trial_brazier",
+          "count": 8,
+          "minDist": 26,
+          "maxDist": 104,
+          "scaleRange": [
+            0.9,
+            1.15
+          ],
+          "colliderRadius": 0.85
+        },
+        {
+          "vanillaModel": "canela_vent",
+          "count": 10,
+          "minDist": 22,
+          "maxDist": 112,
+          "scaleRange": [
+            0.85,
+            1.3
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "canela_basalt",
+          "count": 12,
+          "minDist": 24,
+          "maxDist": 116,
+          "scaleRange": [
+            0.85,
+            1.35
+          ],
+          "colliderRadius": 1.15
+        },
+        {
+          "vanillaModel": "ruins_brazier",
+          "count": 6,
+          "minDist": 28,
+          "maxDist": 98,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.7
+        }
+      ]
     },
     {
       "id": "galar_wild_area",
       "name": "Galar Wild Area (Galar)",
-      "desc": "Windswept emerald highland moorland punctuated by Watchtower ruins and a glowing magenta Dynamax Raid Den.",
+      "desc": "Expansive rolling Galar highland moors split by a meandering river and stone crossings, dotted with standing stone circles and Power Spot dens.",
       "mode": "procedural",
       "region": "galar",
       "envFrom": "forest",
@@ -3446,12 +4871,141 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "river_basin",
+        "noise": {
+          "scale": 0.009,
+          "octaves": 4,
+          "amplitude": 4.6,
+          "warpStrength": 5,
+          "warpScale": 0.014,
+          "heightOffset": 0.2
+        },
+        "rivers": {
+          "count": 1,
+          "width": 11.5,
+          "depth": 4.4,
+          "meander": 24,
+          "angle": 1.72,
+          "phase": 0.2,
+          "offset": -24,
+          "paintPath": true,
+          "fords": [
+            {
+              "x": 26,
+              "z": 12,
+              "radius": 12,
+              "height": 2.3
+            },
+            {
+              "x": 18,
+              "z": -42,
+              "radius": 11.5,
+              "height": 2.4
+            }
+          ]
+        },
+        "trails": [
+          {
+            "from": [
+              68,
+              12
+            ],
+            "to": "spawn",
+            "width": 7,
+            "wobble": 2.2,
+            "flatten": 0.4,
+            "height": 2.6
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 7,
+            "wobble": 2,
+            "flatten": 0.42,
+            "height": 3.6
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 11,
+          "height": 4.8,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.6,
+        "border": "cliffs",
+        "borderHeight": 9.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.14
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "galar_standing_stone",
+          "anchor": "spawn",
+          "ringRadius": 54,
+          "ringSpread": 6,
+          "count": 8,
+          "scaleRange": [
+            0.95,
+            1.3
+          ],
+          "colliderRadius": 1.05
+        },
+        {
+          "prefabId": "galar_power_spot_den",
+          "count": 7,
+          "minDist": 30,
+          "maxDist": 148,
+          "scaleRange": [
+            0.9,
+            1.15
+          ],
+          "colliderRadius": 1.6
+        },
+        {
+          "vanillaModel": "ruin_pillar",
+          "count": 10,
+          "minDist": 24,
+          "maxDist": 152,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 1
+        },
+        {
+          "vanillaModel": "ruins_arch",
+          "count": 5,
+          "minDist": 38,
+          "maxDist": 146,
+          "scaleRange": [
+            0.95,
+            1.2
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "rage_lamp",
+          "count": 8,
+          "minDist": 22,
+          "maxDist": 138,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.55
+        }
+      ]
     },
     {
       "id": "galar_crown_tundra",
       "name": "Crown Tundra Glacier (Galar)",
-      "desc": "Frozen sapphire snowfields beneath frosted pines and the ancient Crown Shrine Ice Monolith.",
+      "desc": "Frozen Galar alpine tundra carved by a glistening frozen ice fjord, snow-buried ruin arches, frost lanterns, and the Crown Shrine.",
       "mode": "procedural",
       "region": "galar",
       "envFrom": "glacier",
@@ -3746,12 +5300,141 @@
           "motes": "snow"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "glacial_fjord",
+        "noise": {
+          "scale": 0.012,
+          "octaves": 4,
+          "amplitude": 3.6,
+          "ridgeWeight": 0.4,
+          "heightOffset": 0.2
+        },
+        "rivers": {
+          "count": 1,
+          "width": 10.5,
+          "depth": 4.5,
+          "meander": 11,
+          "angle": 1.88,
+          "phase": 0.3,
+          "offset": 22,
+          "paintPath": true,
+          "fords": [
+            {
+              "x": -24,
+              "z": -12,
+              "radius": 11.5,
+              "height": 2.6
+            },
+            {
+              "x": -10,
+              "z": 36,
+              "radius": 11,
+              "height": 2.5
+            }
+          ]
+        },
+        "trails": [
+          {
+            "from": [
+              -54,
+              -10
+            ],
+            "to": "spawn",
+            "width": 6.6,
+            "wobble": 2,
+            "flatten": 0.4,
+            "height": 2.8
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 7,
+            "wobble": 1.8,
+            "flatten": 0.45,
+            "height": 4.8
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 12,
+          "height": 7,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.8,
+        "border": "cliffs",
+        "borderHeight": 15.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.08,
+        "frozenWater": true
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "crown_ice_monolith",
+          "anchor": "landmark",
+          "ringRadius": 22,
+          "ringSpread": 3,
+          "count": 6,
+          "scaleRange": [
+            0.95,
+            1.2
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "glacier_spire",
+          "count": 10,
+          "minDist": 26,
+          "maxDist": 146,
+          "scaleRange": [
+            0.9,
+            1.35
+          ],
+          "colliderRadius": 1.3
+        },
+        {
+          "vanillaModel": "glacier_crystals",
+          "count": 12,
+          "minDist": 20,
+          "maxDist": 142,
+          "scaleRange": [
+            0.85,
+            1.3
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "frost_lamp",
+          "count": 10,
+          "minDist": 20,
+          "maxDist": 132,
+          "scaleRange": [
+            0.95,
+            1.15
+          ],
+          "colliderRadius": 0.55
+        },
+        {
+          "vanillaModel": "frost_pillar",
+          "count": 8,
+          "minDist": 28,
+          "maxDist": 144,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 1
+        }
+      ]
     },
     {
       "id": "paldea_asado_mesa",
       "name": "Asado Titan Mesa (Paldea)",
-      "desc": "Sunbaked red-terracotta canyon highlands carved with sandstone hoodoos and the towering Titan Mesa Arch.",
+      "desc": "Sunbaked Paldean red-terracotta badlands defined by sheer flat-topped stratified mesas, dry canyon arroyos, hoodoos, and the Titan Arch.",
       "mode": "procedural",
       "region": "paldea",
       "envFrom": "desert",
@@ -3868,7 +5551,7 @@
         7219992,
         10703928
       ],
-      "water": 0,
+      "water": null,
       "waterColor": 3440544,
       "props": [
         "cactus",
@@ -4050,12 +5733,166 @@
           "motes": "dust"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "mesa",
+        "presetBlend": 0.25,
+        "noise": {
+          "scale": 0.011,
+          "octaves": 3,
+          "amplitude": 1.6,
+          "heightOffset": 0.6
+        },
+        "mesas": [
+          {
+            "x": 56,
+            "z": -46,
+            "rx": 32,
+            "rz": 26,
+            "height": 9.2,
+            "tiers": 2
+          },
+          {
+            "x": 62,
+            "z": 36,
+            "rx": 28,
+            "rz": 32,
+            "height": 8.4,
+            "tiers": 2
+          },
+          {
+            "x": -64,
+            "z": 28,
+            "rx": 30,
+            "rz": 26,
+            "height": 8.8,
+            "tiers": 2
+          },
+          {
+            "x": -68,
+            "z": -66,
+            "rx": 26,
+            "rz": 24,
+            "height": 9.6,
+            "tiers": 3
+          },
+          {
+            "x": 14,
+            "z": -78,
+            "rx": 28,
+            "rz": 19,
+            "height": 7.8,
+            "tiers": 2
+          },
+          {
+            "x": -10,
+            "z": 74,
+            "rx": 30,
+            "rz": 20,
+            "height": 7.6,
+            "tiers": 2
+          }
+        ],
+        "trails": [
+          {
+            "from": [
+              26,
+              56
+            ],
+            "to": "spawn",
+            "width": 7.8,
+            "wobble": 2.2,
+            "flatten": 0.42,
+            "height": 2.2
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 8,
+            "wobble": 2,
+            "flatten": 0.42,
+            "height": 2.4
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 11,
+          "height": 2.5,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.2,
+        "border": "cliffs",
+        "borderHeight": 12.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": null
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "asado_strata_spire",
+          "count": 11,
+          "minDist": 24,
+          "maxDist": 146,
+          "scaleRange": [
+            0.85,
+            1.35
+          ],
+          "colliderRadius": 1.15
+        },
+        {
+          "vanillaModel": "desert_hoodoo",
+          "count": 12,
+          "minDist": 22,
+          "maxDist": 150,
+          "scaleRange": [
+            0.9,
+            1.4
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "desert_rockpile",
+          "count": 12,
+          "minDist": 20,
+          "maxDist": 146,
+          "scaleRange": [
+            0.9,
+            1.3
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "desert_boulder",
+          "count": 10,
+          "minDist": 26,
+          "maxDist": 148,
+          "scaleRange": [
+            0.85,
+            1.35
+          ],
+          "colliderRadius": 1.25
+        },
+        {
+          "vanillaModel": "ruins_hoodoo",
+          "minHeight": 5,
+          "count": 6,
+          "minDist": 38,
+          "maxDist": 150,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 1.2
+        }
+      ]
     },
     {
       "id": "paldea_area_zero",
       "name": "Area Zero Great Crater (Paldea)",
-      "desc": "Luminous emerald-and-crystal crater abyss surrounding the iridescent Area Zero Terastal Spire.",
+      "desc": "Colossal inverted Paldean Great Crater plunging across verdant crystal tiers toward Zero Lab beacons, crystal springs, and the Terastal Spire.",
       "mode": "procedural",
       "region": "paldea",
       "envFrom": "forest",
@@ -4359,7 +6196,172 @@
           "motes": "fireflies"
         }
       ],
-      "openSea": false
+      "openSea": false,
+      "proceduralGen": {
+        "base": "custom",
+        "preset": "great_crater",
+        "noise": {
+          "scale": 0.013,
+          "octaves": 3,
+          "amplitude": 2,
+          "heightOffset": 0.1
+        },
+        "pools": [
+          {
+            "x": -32,
+            "z": -26,
+            "radius": 16.5,
+            "depth": 3.5,
+            "wobble": 4.2
+          },
+          {
+            "x": 32,
+            "z": -22,
+            "radius": 16.5,
+            "depth": 3.5,
+            "wobble": 4.2
+          },
+          {
+            "x": -42,
+            "z": 24,
+            "radius": 14,
+            "depth": 3.2,
+            "wobble": 3.8
+          },
+          {
+            "x": 42,
+            "z": 26,
+            "radius": 14,
+            "depth": 3.2,
+            "wobble": 3.8
+          }
+        ],
+        "paths": {
+          "radialCount": 4,
+          "ringRadius": 58,
+          "width": 5.6,
+          "flatten": false
+        },
+        "trails": [
+          {
+            "from": [
+              0,
+              62
+            ],
+            "to": "spawn",
+            "width": 6.8,
+            "wobble": 1.8,
+            "flatten": 0.4,
+            "height": 2.2
+          },
+          {
+            "from": "spawn",
+            "to": "landmark",
+            "width": 7,
+            "wobble": 1.5,
+            "flatten": 0.45,
+            "height": 2.1
+          }
+        ],
+        "landmarkClearing": {
+          "radius": 16.5,
+          "blendRadius": 11,
+          "height": 2,
+          "paintPath": true,
+          "reserveRadius": 19
+        },
+        "spawnClearingRadius": 15,
+        "spawnHeight": 2.1,
+        "border": "cliffs",
+        "borderHeight": 15.5,
+        "smoothing": 1,
+        "connectPlateaus": true,
+        "waterLevel": 0.1
+      },
+      "prefabScatters": [
+        {
+          "prefabId": "area_zero_research_beacon",
+          "anchor": "landmark",
+          "ringRadius": 24,
+          "ringSpread": 2,
+          "count": 4,
+          "scaleRange": [
+            1,
+            1.1
+          ],
+          "colliderRadius": 0.9
+        },
+        {
+          "prefabId": "area_zero_research_beacon",
+          "fixedPositions": [
+            {
+              "x": -56,
+              "z": 8,
+              "scale": 1.05,
+              "rotY": 0.5
+            },
+            {
+              "x": 56,
+              "z": 8,
+              "scale": 1.05,
+              "rotY": -0.5
+            },
+            {
+              "x": 0,
+              "z": 62,
+              "scale": 1.1,
+              "rotY": 0
+            }
+          ],
+          "colliderRadius": 0.9
+        },
+        {
+          "prefabId": "terastal_crystal_vein",
+          "count": 14,
+          "minDist": 20,
+          "maxDist": 148,
+          "scaleRange": [
+            0.85,
+            1.35
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "glacier_crystals",
+          "count": 12,
+          "minDist": 22,
+          "maxDist": 146,
+          "scaleRange": [
+            0.9,
+            1.35
+          ],
+          "colliderRadius": 1.1
+        },
+        {
+          "vanillaModel": "psy_spire",
+          "minHeight": 4.5,
+          "count": 8,
+          "minDist": 44,
+          "maxDist": 152,
+          "scaleRange": [
+            0.9,
+            1.3
+          ],
+          "colliderRadius": 1.2
+        },
+        {
+          "vanillaModel": "crater_pillar",
+          "minHeight": 5.5,
+          "count": 8,
+          "minDist": 52,
+          "maxDist": 154,
+          "scaleRange": [
+            0.9,
+            1.25
+          ],
+          "colliderRadius": 1.1
+        }
+      ]
     }
   ],
   "toolbarActions": [
@@ -4531,113 +6533,14 @@
     }
   ],
   "assetsDir": "assets",
-  "bundlePatches": [
-    {
-      "matchFile": "^assets/moves-.*\\.js$",
-      "patches": [
-        {
-          "find": "if(this.biome.shape===`summit`){this.generateSummit();return}",
-          "replace": "if(this.biome.shape===`summit`){this.generateSummit();return}if(this._pbGen39Terrain?.())return;"
-        },
-        {
-          "find": "generateSummit(){",
-          "replace": "_pbBuildGen39Landmark(envPack){try{const id=this.biome?.id;if(!id||!/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(id)||this.arena||this._customLandmarkBuilt)return;const lm=this.biome?.landmark;if(!lm)return;this._customLandmarkBuilt=!0;const lx=typeof lm.x==='number'?lm.x:0,lz=typeof lm.z==='number'?lm.z:-34;const ly=this.height(lx,lz);this.reserve?.(lx,lz,Number(lm.radius||9)+8);const rockTex=envPack?.cliff||this.terrainMat?.uniforms?.tRock?.value||null,pathTex=envPack?.path||this.terrainMat?.uniforms?.tPath?.value||null;const add=(geo,mat,dx,dy,dz,uv=1.5)=>{try{if(geo.attributes?.uv&&uv!==1)ja(geo,uv)}catch{}const im=new ce(geo,mat,1);const mx=new xe();mx.makeTranslation(lx+dx,ly+dy,lz+dz);im.setMatrixAt(0,mx);im.instanceMatrix.needsUpdate=!0;this.group.add(im)};switch(lm.kind){case'moss_shrine':{const mMoss=rockTex?new Ee({color:new ie(12111012),map:rockTex,gradientMap:Oa}):Aa(7834476,0);const mPathS=pathTex?new Ee({color:new ie(14077876),map:pathTex,gradientMap:Oa}):Aa(12562824,0);const mWood=Aa(7163960,0),mRoofM=Aa(3504968,0),mGem=Aa(6550176,4053344);this.mats.push(mMoss,mPathS,mWood,mRoofM,mGem);add(new Me(8.4,9.2,1.1,16),mPathS,0,.55,0,2.6);add(new Me(6.4,7.0,.9,16),mMoss,0,1.45,0,2.2);add(new Ke(4.8,.7,2.8),mPathS,0,.45,7.8,1.5);add(new Ke(4.2,.7,2.0),mPathS,0,1.05,6.4,1.5);add(new Me(.58,.68,6.6,10),mWood,-3.4,4.8,4.6,1.5);add(new Me(.58,.68,6.6,10),mWood,3.4,4.8,4.6,1.5);add(new Ke(9.2,.9,.95),mRoofM,0,8.2,4.6,1.6);add(new Ke(7.8,.6,.7),mWood,0,6.8,4.6,1.4);add(new Ke(5.6,4.2,4.4),mWood,0,4.0,-1.0,1.8);add(new Ke(2.0,2.8,.5),Aa(2437670,0),0,3.2,1.25,1);add(new fe(4.8,2.6,4).rotateY(Math.PI/4),mRoofM,0,7.2,-1.0,1.8);add(new fe(3.6,1.8,4).rotateY(Math.PI/4),mMoss,0,9.0,-1.0,1.4);add(new Ae(.82,0),mGem,0,3.6,1.55,1);for(const[cx,cz,cr]of[[0,-1,4.2],[-3.4,4.6,1.2],[3.4,4.6,1.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+10});break}case'volcano_caldera':{const mBas=rockTex?new Ee({color:new ie(8221560),map:rockTex,gradientMap:Oa}):Aa(4997448,0);const mRim=pathTex?new Ee({color:new ie(10059624),map:pathTex,gradientMap:Oa}):Aa(6835280,0);const mLava=Aa(16742144,16728576),mGlow=Aa(16763968,16750592),mIron=Aa(3618624,0);this.mats.push(mBas,mRim,mLava,mGlow,mIron);add(new Me(9.5,12.2,3.4,14),mBas,0,1.7,0,2.8);add(new Me(6.8,9.8,3.6,14),mBas,0,4.9,0,2.4);add(new Me(5.6,6.8,1.2,14),mRim,0,7.1,0,2.0);add(new Me(4.9,4.9,.6,14),mLava,0,7.25,0,1);add(new Me(2.8,2.8,.7,12),mGlow,0,7.38,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2+.3;const sx=Math.cos(a)*8.2,sz=Math.sin(a)*8.2,sh=3.8+(i%2)*1.8;add(new fe(2.1,sh,6),mBas,sx,sh/2+1.2,sz,1.5)}add(new Ke(5.4,1.2,5.6),mRim,0,1.1,10.2,1.8);add(new Ke(4.8,.8,3.6),mIron,0,1.9,10.8,1.5);add(new Me(.5,.65,2.6,8),mIron,-2.3,3.1,12.4,1);add(new Ae(.55,0),mGlow,-2.3,4.7,12.4,1);add(new Me(.5,.65,2.6,8),mIron,2.3,3.1,12.4,1);add(new Ae(.55,0),mGlow,2.3,4.7,12.4,1);for(const[cx,cz,cr]of[[0,0,8.8],[-6.5,5,3.2],[6.5,5,3.2],[0,9.5,3.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+10});break}case'spear_pillar':{const mMarb=rockTex?new Ee({color:new ie(15791356),map:rockTex,gradientMap:Oa}):Aa(14804460,0);const mStep=pathTex?new Ee({color:new ie(14476016),map:pathTex,gradientMap:Oa}):Aa(13422804,0);const mDia=Aa(5952511,3654143),mPal=Aa(16748768,14440640),mGoldS=Aa(16766544,12554240);this.mats.push(mMarb,mStep,mDia,mPal,mGoldS);add(new Me(10.8,11.6,1.1,18),mStep,0,.55,0,3.0);add(new Me(8.4,9.0,1.1,18),mMarb,0,1.6,0,2.5);add(new Ke(5.6,.7,3.4),mStep,0,.4,10.6,1.6);add(new Ke(4.8,.7,2.4),mMarb,0,1.15,9.2,1.5);const cols=[[-7.4,1.2,9.2],[-5.8,-4.8,9.4],[-1.8,-7.4,8.6],[1.8,-7.4,9.4],[5.8,-4.8,6.0],[7.4,1.2,9.2],[-6.0,5.2,4.4],[6.0,5.2,7.2]];for(const[cx,cz,ch]of cols){add(new Ke(1.5,.7,1.5),mStep,cx,2.3,cz,1);add(new Me(.58,.68,ch,10),mMarb,cx,2.5+ch/2,cz,1.8);if(ch>7.5)add(new Ke(1.6,.65,1.6),mStep,cx,2.6+ch,cz,1);this.addCollider({x:lx+cx,z:lz+cz,r:1.15,h:ly+12})}add(new Ke(4.8,.85,1.3),mStep,0,11.6,-7.4,1.5);add(new Ke(4.4,1.2,3.4),mStep,0,2.7,-1.0,1.5);add(new Ke(2.6,2.1,2.2),mMarb,0,4.2,-1.0,1.2);add(new Ae(1.15,0).scale(.68,1.7,.68),mDia,-1.05,6.8,-1.0,1);add(new Ae(1.15,0).scale(.68,1.7,.68),mPal,1.05,6.8,-1.0,1);add(new Ae(.55,0),mGoldS,0,8.2,-1.0,1);this.addCollider({x:lx,z:lz-1,r:2.8,h:ly+10});break}case'old_chateau':{const mWallC=rockTex?new Ee({color:new ie(8554648),map:rockTex,gradientMap:Oa}):Aa(5789812,0);const mTrimC=pathTex?new Ee({color:new ie(6908548),map:pathTex,gradientMap:Oa}):Aa(4473944,0);const mRoofC=Aa(2894916,0),mWinC=Aa(13672447,11108351),mDoorC=Aa(2300976,0),mLanC=Aa(16762208,15698944);this.mats.push(mWallC,mTrimC,mRoofC,mWinC,mDoorC,mLanC);add(new Ke(20.5,1.6,12.5),mTrimC,0,.8,0,2.8);add(new Ke(9.2,8.4,9.6),mWallC,0,5.6,0,2.4);add(new fe(7.6,4.8,4).rotateY(Math.PI/4),mRoofC,0,12.1,0,1.8);add(new Ke(3.4,4.2,3.4),mWallC,0,15.0,0,1.4);add(new fe(2.8,4.2,4).rotateY(Math.PI/4),mRoofC,0,19.1,0,1.2);add(new Ke(1.1,1.5,.25),mWinC,0,15.2,1.75,1);for(const sx of[-7.2,7.2]){add(new Ke(5.8,6.6,8.2),mWallC,sx,4.7,-.4,2.0);add(new fe(4.9,3.6,4).rotateY(Math.PI/4),mRoofC,sx,9.7,-.4,1.6);add(new Ke(1.1,1.6,.22),mWinC,sx,6.1,3.75,1);add(new Ke(1.1,1.6,.22),mWinC,sx,3.6,3.75,1);add(new Ke(.9,2.8,.9),mTrimC,sx*1.15,10.6,-2.2,1)}add(new Ke(1.2,1.7,.22),mWinC,-2.4,6.6,4.85,1);add(new Ke(1.2,1.7,.22),mWinC,2.4,6.6,4.85,1);add(new Ke(5.4,1.0,3.2),mTrimC,0,1.1,6.2,1.6);add(new Ke(4.8,.6,2.2),mTrimC,0,.4,8.2,1.4);add(new Ke(2.6,3.8,.5),mDoorC,0,3.4,4.9,1);add(new Ke(1.8,.8,.22),mWinC,0,5.8,4.9,1);add(new Ke(5.2,.7,2.8),mRoofC,0,5.5,6.1,1.4);for(const px of[-2.1,2.1]){add(new Me(.28,.34,3.8,8),mTrimC,px,3.4,7.1,1);add(new Ae(.38,0),mLanC,px*1.35,2.4,8.3,1)}for(const[cx,cz,cr]of[[-7.2,0,4.2],[0,0,5.2],[7.2,0,4.2],[0,5.6,3.0]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+18});break}case'sand_pyramid':{const mSandS=rockTex?new Ee({color:new ie(15254672),map:rockTex,gradientMap:Oa}):Aa(14134124,0);const mTrimS=pathTex?new Ee({color:new ie(13410164),map:pathTex,gradientMap:Oa}):Aa(12488540,0);const mDarkS=Aa(4993572,0),mGoldU=Aa(16763464,14651936);this.mats.push(mSandS,mTrimS,mDarkS,mGoldU);for(let t=0;t<5;t++){const s=18-t*2.7,h=2.0;add(new Ke(s,h,s),t%2?mTrimS:mSandS,0,h/2+t*h,0,Math.max(1.4,2.8-t*.25))}add(new Ke(4.8,10.5,4.2),mSandS,-4.6,5.25,6.8,2.0);add(new Ke(4.8,10.5,4.2),mSandS,4.6,5.25,6.8,2.0);add(new Ke(5.4,1.3,4.6),mTrimS,-4.6,10.8,6.8,1.6);add(new Ke(5.4,1.3,4.6),mTrimS,4.6,10.8,6.8,1.6);add(new Ke(6.4,2.2,3.4),mTrimS,0,7.2,6.8,1.6);add(new Ke(4.2,5.6,1.2),mDarkS,0,3.2,6.6,1);add(new Me(1.15,1.15,.45,12).rotateX(Math.PI/2),mGoldU,0,7.3,8.55,1);for(let st=0;st<4;st++){add(new Ke(5.2,.6,1.6),mTrimS,0,.3+st*.55,9.8-st*.9,1.3)}add(new Ke(4.2,2.6,4.2),mTrimS,0,11.3,0,1.5);add(new fe(2.4,2.6,4),mGoldU,0,13.9,0,1);for(const[cx,cz,cr]of[[-5.5,0,5.2],[5.5,0,5.2],[0,-4.5,5.5],[-4.8,6.8,2.8],[4.8,6.8,2.8]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+14});break}case'dragon_tower':{const mBaseD=rockTex?new Ee({color:new ie(11842736),map:rockTex,gradientMap:Oa}):Aa(8618880,0);const mTopD=pathTex?new Ee({color:new ie(13552324),map:pathTex,gradientMap:Oa}):Aa(11578784,0);this.mats.push(mBaseD,mTopD);add(new Ke(16.5,1.2,16.5),mBaseD,0,.55,0,2.8);add(new Ke(13.6,.8,13.6),mTopD,0,1.4,0,2.4);add(new Ke(5.2,.6,2.8),mTopD,0,.35,9.4,1.6);add(new Ke(4.6,.6,2.2),mTopD,0,.95,8.0,1.5);for(const[cx,cz,cr]of[[-4.5,-4.5,4.2],[4.5,-4.5,4.2],[-4.5,4.5,4.2],[4.5,4.5,4.2]])this.addCollider({x:lx+cx,z:lz+cz,r:cr,h:ly+20});break}case'sea_arch':{const mLime=rockTex?new Ee({color:new ie(15393748),map:rockTex,gradientMap:Oa}):Aa(13880760,0);const mSandA=pathTex?new Ee({color:new ie(15721680),map:pathTex,gradientMap:Oa}):Aa(14602424,0);const mBlueK=Aa(3183848,0),mBeac=Aa(8453375,5170431);this.mats.push(mLime,mSandA,mBlueK,mBeac);for(const s of[-1,1]){add(new Me(3.0,3.8,3.6,9),mLime,s*6.4,1.8,0,2.0);add(new Me(2.3,2.9,3.6,9),mLime,s*5.5,5.1,0,1.8);add(new Me(2.0,2.4,2.8,9),mLime,s*4.2,7.8,0,1.6);add(new Ke(3.2,2.2,3.4),mLime,s*2.3,9.5,0,1.6);this.addCollider({x:lx+s*6.2,z:lz,r:3.4,h:ly+10});}add(new Ke(5.4,2.1,3.6),mSandA,0,10.2,0,1.8);add(new Me(1.3,1.6,3.4,10),mSandA,0,12.8,0,1.4);add(new Me(1.45,1.45,.45,10),mBlueK,0,14.6,0,1);add(new Me(.85,.85,1.4,10),mBeac,0,15.5,0,1);add(new fe(1.5,1.9,10),mBlueK,0,17.0,0,1);break}case'prism_crystals':{const mRockK=rockTex?new Ee({color:new ie(6446224),map:rockTex,gradientMap:Oa}):Aa(4405872,0);const mRose=Aa(16748244,14636464),mCyan=Aa(8974591,5817087),mAmeth=Aa(11171583,8409584);this.mats.push(mRockK,mRose,mCyan,mAmeth);add(new Me(7.4,8.6,1.3,8),mRockK,0,.65,0,2.2);add(new Me(5.0,6.2,1.2,8),mRockK,0,1.8,0,1.8);add(new Me(1.05,1.65,8.4,6),mRose,0,6.2,0,1);add(new fe(1.05,3.4,6),mRose,0,12.1,0,1);const shards=[[-2.8,1.8,6.8,.32,-.18,mCyan],[2.9,1.6,7.4,-.28,-.14,mAmeth],[-3.2,-2.2,6.4,.26,.22,mAmeth],[3.1,-2.1,7.0,-.30,.18,mCyan],[0,-3.2,8.2,0,.26,mRose],[-5.0,.2,4.4,.42,.04,mCyan],[5.0,.4,4.8,-.40,.06,mRose],[0,3.2,4.8,0,-.34,mAmeth]];for(const[sx,sz,sh,rz,rx,mat]of shards){add(new Me(.24,.95,sh,6).rotateZ(rz).rotateX(rx),mat,sx,1.6+sh*.46,sz,1)}this.addCollider({x:lx,z:lz,r:5.2,h:ly+14});break}case'tapu_totem':{const mTuff=rockTex?new Ee({color:new ie(13087380),map:rockTex,gradientMap:Oa}):Aa(10718808,0);const mSandM=pathTex?new Ee({color:new ie(14865324),map:pathTex,gradientMap:Oa}):Aa(13482384,0);const mGoldT=Aa(16763952,14652928),mDarkT=Aa(3614248,0),mFlameT=Aa(16746528,15685632);this.mats.push(mTuff,mSandM,mGoldT,mDarkT,mFlameT);add(new Ke(15.0,1.3,12.5),mTuff,0,.65,0,2.5);add(new Ke(11.6,1.1,9.6),mSandM,0,1.8,0,2.2);add(new Ke(5.4,.7,2.8),mSandM,0,.4,7.4,1.5);add(new Ke(4.6,.7,2.2),mSandM,0,1.1,5.8,1.4);for(const sx of[-4.2,4.2]){add(new Ke(2.6,7.6,2.8),mTuff,sx,5.8,-.6,1.8);add(new Ke(3.0,.8,3.2),mDarkT,sx,9.8,-.6,1.4);this.addCollider({x:lx+sx,z:lz-.6,r:2.2,h:ly+12})}add(new Ke(12.2,2.0,3.2),mTuff,0,10.9,-.6,2.0);add(new Ke(9.2,1.2,2.6),mDarkT,0,12.4,-.6,1.6);add(new fe(2.4,3.2,4).rotateY(Math.PI/4),mGoldT,0,14.5,-.6,1);add(new Ke(3.4,.9,.9).rotateZ(.35),mGoldT,-2.8,13.6,.4,1);add(new Ke(3.4,.9,.9).rotateZ(-.35),mGoldT,2.8,13.6,.4,1);add(new Ae(.95,0),mGoldT,0,10.9,1.2,1);for(const[bx,bz]of[[-5.6,4.8],[5.6,4.8]]){add(new Me(.55,.72,2.4,8),mDarkT,bx,3.0,bz,1);add(new Ae(.58,0),mFlameT,bx,4.5,bz,1)}break}case'fire_altar':{const mVolc=rockTex?new Ee({color:new ie(8938576),map:rockTex,gradientMap:Oa}):Aa(5780528,0);const mOchre=pathTex?new Ee({color:new ie(12354904),map:pathTex,gradientMap:Oa}):Aa(9919564,0);const mFire1=Aa(16728608,15671312),mFire2=Aa(16750592,16736256),mFire3=Aa(16771168,16761856);this.mats.push(mVolc,mOchre,mFire1,mFire2,mFire3);add(new Me(9.6,10.8,1.3,12),mVolc,0,.65,0,2.6);add(new Me(7.2,8.2,1.1,12),mOchre,0,1.75,0,2.2);add(new Ke(4.8,.7,2.8),mOchre,0,.4,9.8,1.5);add(new Me(2.8,3.6,2.6,10),mVolc,0,3.5,0,1.8);add(new Me(3.5,2.7,1.2,10),mOchre,0,5.2,0,1.5);add(new fe(2.4,5.2,7),mFire1,0,8.0,0,1);add(new fe(1.7,4.2,7).rotateZ(.18),mFire2,-.8,7.4,.3,1);add(new fe(1.6,4.0,7).rotateZ(-.18),mFire2,.8,7.3,-.2,1);add(new fe(1.1,3.2,6),mFire3,0,7.2,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2+.52;const tx=Math.cos(a)*7.6,tz=Math.sin(a)*7.6;add(new Me(.58,.8,3.8,8),mVolc,tx,3.2,tz,1.4);add(new fe(.78,1.6,6),mFire2,tx,5.8,tz,1);this.addCollider({x:lx+tx,z:lz+tz,r:1.1,h:ly+7})}this.addCollider({x:lx,z:lz,r:4.0,h:ly+10});break}case'dynamax_den':{const mCastle=rockTex?new Ee({color:new ie(12106944),map:rockTex,gradientMap:Oa}):Aa(8685704,0);const mStoneG=pathTex?new Ee({color:new ie(10593700),map:pathTex,gradientMap:Oa}):Aa(7369848,0);const mDyn1=Aa(16724856,15667568),mDyn2=Aa(16750284,16730016);this.mats.push(mCastle,mStoneG,mDyn1,mDyn2);add(new Me(8.8,9.8,1.1,12),mStoneG,0,.55,0,2.6);const wallSegs=[[-6.6,-3.8,9.4],[-2.6,-7.2,10.8],[2.6,-7.2,8.2],[6.6,-3.8,10.2],[-7.2,1.6,7.0],[7.2,1.6,6.4],[-5.0,5.8,5.2],[5.0,5.8,5.6]];for(const[wx,wz,wh]of wallSegs){const ang=Math.atan2(wx,wz);add(new Ke(3.6,wh,1.7).rotateY(ang),mCastle,wx,1.0+wh/2,wz,2.0);if(wh>7.5)add(new Ke(1.2,1.1,1.8).rotateY(ang),mStoneG,wx,1.4+wh,wz,1);this.addCollider({x:lx+wx,z:lz+wz,r:2.1,h:ly+12})}add(new Me(3.8,4.6,1.1,10),mStoneG,0,1.5,0,1.6);add(new Me(2.9,2.9,.5,10),mDyn1,0,2.15,0,1);add(new fe(1.5,6.5,8),mDyn2,0,5.6,0,1);add(new Ae(.75,0).scale(.7,1.4,.7),mDyn1,-1.5,4.8,.8,1);add(new Ae(.7,0).scale(.7,1.3,.7),mDyn2,1.6,6.2,-.6,1);break}case'crown_temple':{const mIceSt=rockTex?new Ee({color:new ie(13953528),map:rockTex,gradientMap:Oa}):Aa(10731216,0);const mFrost=pathTex?new Ee({color:new ie(14807548),map:pathTex,gradientMap:Oa}):Aa(12704224,0);const mGlac=Aa(11531519,7786751),mCrownG=Aa(16767080,14658368);this.mats.push(mIceSt,mFrost,mGlac,mCrownG);add(new Ke(14.5,1.4,13.5),mFrost,0,.7,0,2.6);add(new Ke(11.4,1.0,10.6),mIceSt,0,1.85,0,2.2);add(new Ke(5.2,.7,2.8),mFrost,0,.4,7.8,1.5);for(const sx of[-4.4,4.4]){add(new Ke(2.2,7.4,8.6),mIceSt,sx,5.9,-.5,2.0);add(new Ke(2.6,.8,9.0),mFrost,sx,9.8,-.5,1.6);this.addCollider({x:lx+sx,z:lz-.5,r:2.6,h:ly+12})}add(new Ke(11.0,2.0,9.0),mIceSt,0,10.6,-.5,2.0);add(new fe(7.4,4.4,4).rotateY(Math.PI/4),mFrost,0,13.7,-.5,1.8);add(new Ke(2.6,2.2,2.6),mFrost,0,3.4,-.8,1.4);add(new Ae(1.4,0).scale(.75,1.75,.75),mGlac,0,6.4,-.8,1);add(new Ae(.6,0),mCrownG,0,16.1,-.5,1);this.addCollider({x:lx,z:lz-.8,r:2.2,h:ly+10});break}case'titan_mesa':{const mRedR=rockTex?new Ee({color:new ie(14912372),map:rockTex,gradientMap:Oa}):Aa(12543816,0);const mOchreA=pathTex?new Ee({color:new ie(15772556),map:pathTex,gradientMap:Oa}):Aa(13866596,0);const mSunA=Aa(16764736,14653728);this.mats.push(mRedR,mOchreA,mSunA);for(const s of[-1,1]){add(new Me(3.4,4.4,3.4,8),mRedR,s*7.2,1.7,0,2.0);add(new Me(2.6,3.4,3.4,8),mRedR,s*6.2,4.9,0,1.8);add(new Me(2.1,2.6,3.0,8),mOchreA,s*4.7,7.6,0,1.6);add(new Ke(3.6,2.2,3.4).rotateZ(s*-.24),mRedR,s*2.5,9.4,0,1.6);this.addCollider({x:lx+s*6.8,z:lz,r:3.6,h:ly+10});}add(new Ke(5.6,2.0,3.6),mOchreA,0,10.2,0,1.8);add(new Me(1.1,1.6,1.2,7),mRedR,0,11.8,0,1.2);add(new Ae(.85,0),mSunA,0,13.2,0,1);break}case'terastal_spire':{const mLab=rockTex?new Ee({color:new ie(15659772),map:rockTex,gradientMap:Oa}):Aa(14476524,0);const mTrimZ=pathTex?new Ee({color:new ie(13490428),map:pathTex,gradientMap:Oa}):Aa(11583988,0);const mTeraP=Aa(16758760,15698648),mTeraC=Aa(9501183,6352383),mTeraW=Aa(16448255,13428735);this.mats.push(mLab,mTrimZ,mTeraP,mTeraC,mTeraW);add(new Me(9.4,10.2,1.1,6),mTrimZ,0,.55,0,2.4);add(new Me(7.2,7.8,.9,6),mLab,0,1.5,0,2.0);add(new Me(4.6,5.2,.8,6),mTeraC,0,2.15,0,1);add(new Me(1.15,1.85,8.2,6),mTeraP,0,6.2,0,1);add(new fe(1.15,3.4,6),mTeraW,0,12.0,0,1);for(let i=0;i<6;i++){const a=i/6*Math.PI*2;const px=Math.cos(a)*4.2,pz=Math.sin(a)*4.2,ph=5.2+(i%2)*1.8;const mat=i%2?mTeraC:mTeraP;add(new Me(.24,1.05,ph,6).rotateZ(-Math.cos(a)*.36).rotateX(Math.sin(a)*.36),mat,px,2.2+ph*.44,pz,1);const bx=Math.cos(a)*8.2,bz=Math.sin(a)*8.2;add(new Ke(.9,2.8,.9),mLab,bx,2.4,bz,1);add(new Ae(.45,0),mTeraC,bx,4.1,bz,1)}this.addCollider({x:lx,z:lz,r:5.2,h:ly+14});break}default:break}if(Array.isArray(lm.glbProps)&&lm.glbProps.length&&typeof Mr==='function'){for(const gp of lm.glbProps){if(!gp||!gp.model)continue;Mr(String(gp.model)).then(obj=>{if(!obj||this.disposed)return;const px=lx+Number(gp.x??gp.dx??0),pz=lz+Number(gp.z??gp.dz??0),py=this.height(px,pz)+Number(gp.y??gp.dy??0);obj.position.set(px,py,pz);const ry=Number(gp.rotY??gp.rot??0);if(ry)obj.rotation.y=ry;const sc=Number(gp.scale||1);if(sc!==1)obj.scale.setScalar(sc);this.group.add(obj)}).catch(()=>{})}}}catch(err){console.warn('[Gen39Landmark]',err)}}_pbGen39Terrain(){const id=this.biome?.id;if(!id||!/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(id))return!1;const n1=this.noise,n2=this.noise2,half=this.world/2,P=this.play,N=this.res;const lm=this.biome.landmark||{};const lmX=typeof lm.x==='number'?lm.x:0,lmZ=typeof lm.z==='number'?lm.z:-34;let waterY=-99;const set=(gx,gz,h,pm)=>{const k=this.idx(gx,gz);this.heights[k]=h;this.pathMask[k]=C(pm,0,1)};const softRim=(wx,wz,amp=10)=>S(P-8,P+14,Math.max(Math.abs(wx),Math.abs(wz)))*(amp+n1.get(wx*.036,wz*.036)*amp*.32);const ovalDrop=(wx,wz,rx,rz,wob=.09)=>{const ang=Math.atan2(wz,wx);const rad=1+n1.get(Math.cos(ang)*1.7,Math.sin(ang)*1.7)*wob+n2.get(Math.cos(ang)*3.3,Math.sin(ang)*3.3)*(wob*.48);const d=Math.hypot(wx/(rx*rad),wz/(rz*rad));return S(.80,1.06,d)};const plaza=(wx,wz,h,baseH,pr=15)=>{const s=S(pr+11,pr-2,Math.hypot(wx-lmX,wz-lmZ));return h*(1-s)+baseH*s};const spawnFlat=(wx,wz,h,baseH)=>{const s=S(18,8,Math.hypot(wx,wz));return h*(1-s)+baseH*s};const segDist=(px,pz,ax,az,bx,bz)=>{const dx=bx-ax,dz=bz-az,l2=dx*dx+dz*dz||1;const t=C(((px-ax)*dx+(pz-az)*dz)/l2,0,1);return Math.hypot(px-(ax+t*dx),pz-(az+t*dz))};const rN=(wx,wz)=>n2.get(wx*.052,wz*.052)*2.4;if(id==='hoenn_petalburg'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.7+n1.fbm(wx*.011,wz*.011,4)*3.1+n2.get(wx*.026,wz*.026)*.65;const hollow=Math.hypot((wx-38)*.85,wz-8)+n1.get(wx*.04,wz*.04)*6;h-=S(34,12,hollow)*1.9;const nwRidge=S(48,18,Math.hypot(wx+48,wz+48))*3.2;const seKnoll=S(42,14,Math.hypot(wx-50,wz-48))*3.4;h+=nwRidge+seKnoll;const p1=segDist(wx+rN(wx,wz),wz,0,46,0,0);const p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);const p3=segDist(wx,wz+rN(wz,wx),0,0,44,-14);let pm=Math.max(S(6.0,2.0,p1),S(6.0,2.0,p2),S(5.2,1.8,p3)*.75);h=h*(1-pm*.38)+2.9*pm*.38;h=plaza(wx,wz,h,3.6,14);pm=Math.max(pm,S(14,7,Math.hypot(wx-lmX,wz-lmZ))*.68);h=spawnFlat(wx,wz,h,2.7)+softRim(wx,wz,8.5);set(gx,gz,h,pm)}}else if(id==='hoenn_chimney'){waterY=0.2;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const slopeNE=S(-55,65,wx*.62-wz*.78)*4.4;let h=2.4+slopeNE+n1.fbm(wx*.014,wz*.014,3)*2.5+n2.get(wx*.032,wz*.032)*.75;const lavaBand=(wx*.68+wz*.73)+16-Math.sin((wx-wz)*.022)*14+n2.get(wx*.04,wz*.04)*4;const b1=Math.hypot(wx-8,wz+14)<11,b2=Math.hypot(wx+30,wz-18)<10;if(Math.abs(lavaBand)<9.5&&!b1&&!b2&&Math.hypot(wx-lmX,wz-lmZ)>20&&Math.hypot(wx,wz)>14){const d=S(9.5,3.4,Math.abs(lavaBand));h=h*(1-d)+(-1.8)*d}const p1=segDist(wx+rN(wx,wz),wz,-36,38,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.8,2.2,p1),S(6.8,2.2,p2))*.85;if((b1||b2)&&Math.abs(lavaBand)<13){h=Math.max(h,3.4);pm=Math.max(pm,.9)}h=plaza(wx,wz,h,5.6,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.65);h=spawnFlat(wx,wz,h,3.2)+softRim(wx,wz,7.5);set(gx,gz,h,pm)}}else if(id==='sinnoh_coronet'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const ascent=S(48,-46,wz)*5.6;const spine=S(54,14,Math.abs(wx))*2.6*S(30,-25,wz);const flankDip=S(18,52,Math.abs(wx))*(1-S(60,95,Math.abs(wx)))*2.4;let h=2.2+ascent+spine-flankDip+n1.fbm(wx*.013,wz*.013,4)*3.0+n2.get(wx*.028,wz*.028)*.6;const road=Math.abs(wx-Math.sin(wz*.028)*9+rN(wx,wz)*.7);let pm=S(7.4,2.4,road)*(wz>-58&&wz<62?.88:0);h=h*(1-pm*.35)+(2.4+ascent*.95)*pm*.35;h=plaza(wx,wz,h,7.8,17);pm=Math.max(pm,S(16,8,Math.hypot(wx-lmX,wz-lmZ))*.82);h=spawnFlat(wx,wz,h,3.4)+softRim(wx,wz,15.5);set(gx,gz,h,pm)}}else if(id==='sinnoh_eterna'){waterY=-0.05;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const hillW=S(68,18,Math.hypot(wx+34,wz+26))*3.4;let h=2.3+hillW+n1.fbm(wx*.012,wz*.012,4)*2.8+n2.get(wx*.028,wz*.028)*.65;const creek=Math.abs(wx-32-Math.sin(wz*.028)*16+n2.get(wx*.04,wz*.04)*3.5);const bridge=Math.abs(wz-6)<9;if(creek<9.5&&!bridge&&Math.hypot(wx-lmX,wz-lmZ)>24){const d=S(9.5,3.2,creek);h=h*(1-d)+(-1.4)*d}const p1=segDist(wx+rN(wx,wz),wz,46,10,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.0,2.0,p1),S(6.4,2.0,p2))*.85;if(bridge&&creek<13){h=Math.max(h,2.4);pm=Math.max(pm,.9)}h=plaza(wx,wz,h,5.6,17);pm=Math.max(pm,S(16,8,Math.hypot(wx-lmX,wz-lmZ))*.76);h=spawnFlat(wx,wz,h,2.5)+softRim(wx,wz,12.5);set(gx,gz,h,pm)}}else if(id==='unova_relic_desert'){waterY=-99;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const dunePhase=(wx*.028-wz*.022)+n1.get(wx*.014,wz*.014)*2.2;const dune=Math.sin(dunePhase)*2.1+Math.sin(dunePhase*2+.6)*.65;const westBluff=S(-12,-68,wx)*4.2;const sandBowl=S(48,18,Math.hypot(wx-lmX,wz-lmZ))*1.8;let h=2.9+dune+westBluff-sandBowl+n1.fbm(wx*.010,wz*.010,3)*1.6;const p1=segDist(wx+rN(wx,wz),wz,-48,32,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(7.5,2.4,p1),S(7.8,2.4,p2))*.76;h=plaza(wx,wz,h,1.8,17);pm=Math.max(pm,S(17,9,Math.hypot(wx-lmX,wz-lmZ))*.84);h=spawnFlat(wx,wz,h,2.5)+softRim(wx,wz,8.0);set(gx,gz,h,pm)}}else if(id==='unova_dragonspiral'){waterY=0.25;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const dl=Math.hypot(wx-lmX,wz-lmZ);const outerHills=S(46,92,dl)*3.8;let h=2.5+outerHills+n1.fbm(wx*.011,wz*.011,4)*2.6+n2.get(wx*.025,wz*.025)*.55;const lakeRing=Math.abs(dl-31+n2.get(wx*.038,wz*.038)*2.5);const southBridge=Math.abs(wx-lmX)<7.2&&wz>lmZ&&wz<lmZ+54;const westBridge=Math.abs(wz-lmZ)<6.4&&wx<lmX&&wx>lmX-54;let pm=0;if(lakeRing<11.5&&!southBridge&&!westBridge&&Math.hypot(wx,wz)>13){const d=S(11.5,4.2,lakeRing);h=h*(1-d)+(-1.75)*d}if(southBridge){h=Math.max(h,3.1);pm=Math.max(pm,S(7.2,2.4,Math.abs(wx-lmX))*.92)}if(westBridge){h=Math.max(h,3.0);pm=Math.max(pm,S(6.4,2.2,Math.abs(wz-lmZ))*.88)}h=plaza(wx,wz,h,4.6,16);pm=Math.max(pm,S(15,8,dl)*.76);h=spawnFlat(wx,wz,h,2.7)+softRim(wx,wz,10.5);set(gx,gz,h,pm)}}else if(id==='kalos_azure_bay'){waterY=0.38;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const mainDrop=ovalDrop(wx-6,wz+4,P*.78,P*.72,.11);const islet=1-ovalDrop(wx+58,wz+38,24,20,.12);const drop=Math.min(mainDrop,1-islet*.92);const headCliff=S(46,16,Math.hypot(wx-lmX,wz-lmZ))*2.6;let h=2.2+headCliff+n1.fbm(wx*.014,wz*.014,3)*1.8+n2.get(wx*.03,wz*.03)*.45;const bay=Math.hypot((wx+34)*.95,wz-24)+n1.get(wx*.038,wz*.038)*7;h-=S(34,14,bay)*4.2;h=h*(1-drop)+(-4.2)*drop;const beach=S(.14,.52,drop)*(1-S(.58,.90,drop));const p1=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ),p2=segDist(wx,wz+rN(wz,wx),0,0,-52,-34);let pm=Math.max(beach*.85,S(6.2,2.0,p1)*(1-drop)*.78,S(5.2,1.8,p2)*(1-drop)*.68);h=plaza(wx,wz,h,4.2,15);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.66);h=spawnFlat(wx,wz,h,2.2);set(gx,gz,h,pm)}}else if(id==='kalos_reflection_cave'){waterY=0.05;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const r=Math.hypot(wx,wz);const shelf1=S(42,56,r)*2.8,shelf2=S(68,84,r)*3.4;let h=2.1+shelf1+shelf2+n1.fbm(wx*.015,wz*.015,3)*2.0+n2.get(wx*.032,wz*.032)*.55;const pA=Math.hypot(wx+34,wz+18)+n1.get(wx*.045,wz*.045)*5;const pB=Math.hypot(wx-18,wz-28)+n1.get(wx*.045,wz*.045)*5;const chan=segDist(wx,wz,-34,-18,18,28);if(pA<22)h-=S(22,10,pA)*3.8;if(pB<21)h-=S(21,10,pB)*3.8;if(chan<8&&Math.hypot(wx,wz)>13&&Math.hypot(wx-lmX,wz-lmZ)>18)h-=S(8,3,chan)*3.2;const path1=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ),path2=segDist(wx,wz+rN(wz,wx),-44,36,0,0);let pm=Math.max(S(6.4,2.0,path1),S(6.0,2.0,path2))*.74;h=plaza(wx,wz,h,3.6,15);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.72);h=spawnFlat(wx,wz,h,2.2)+softRim(wx,wz,17.5);set(gx,gz,h,pm)}}else if(id==='alola_melemele'){waterY=0.35;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const drop=ovalDrop(wx+4,wz-2,P*.86,P*.74,.11);const bluffW=S(62,18,Math.hypot(wx-lmX,wz-lmZ))*3.1;let h=2.3+bluffW+n1.fbm(wx*.013,wz*.013,3)*2.2+n2.get(wx*.028,wz*.028)*.5;const lagoon=Math.hypot((wx-36)*.9,wz-20)+n1.get(wx*.038,wz*.038)*6;h-=S(30,12,lagoon)*4.0;h=h*(1-drop)+(-4.2)*drop;const beach=S(.10,.50,drop)*(1-S(.56,.88,drop));const p1=segDist(wx+rN(wx,wz),wz,18,46,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(beach*.94,S(6.2,2.0,p1)*(1-drop)*.80,S(6.2,2.0,p2)*(1-drop)*.82);h=plaza(wx,wz,h,5.0,15);pm=Math.max(pm,S(14,7,Math.hypot(wx-lmX,wz-lmZ))*.72);h=spawnFlat(wx,wz,h,2.4);set(gx,gz,h,pm)}}else if(id==='alola_wela_volcano'){waterY=0.32;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const drop=ovalDrop(wx,wz,P*.82,P*.82,.09);const rPeak=Math.hypot(wx-lmX,wz-lmZ);const cone=S(P*.85,12,rPeak)*6.6;const stepTerrace=Math.sin(rPeak*.11)*.45*(1-drop);let h=1.8+cone+stepTerrace+n1.fbm(wx*.015,wz*.015,3)*1.9+n2.get(wx*.032,wz*.032)*.55;h=h*(1-drop)+(-4.2)*drop;const ang=Math.atan2(wz-lmZ,wx-lmX);const spiralR=26+((ang+Math.PI)/(Math.PI*2))*32;const spiral=Math.abs(rPeak-spiralR);const direct=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.0,2.0,spiral)*(1-drop)*.68,S(6.8,2.2,direct)*(1-drop)*.85);h=plaza(wx,wz,h,8.2,16);pm=Math.max(pm,S(15,8,rPeak)*.78);h=spawnFlat(wx,wz,h,4.2);set(gx,gz,h,pm)}}else if(id==='galar_wild_area'){waterY=0.12;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const hills=n1.fbm(wx*.009,wz*.009,4)*4.0+S(-10,-70,wx)*2.6+S(45,90,wx)*2.2;let h=2.4+hills+n2.get(wx*.022,wz*.022)*.55;const riverX=24+Math.sin(wz*.020)*26-wz*.18;const rd=Math.abs(wx-riverX+n2.get(wx*.038,wz*.038)*3.2);const ford1=Math.abs(wz-12)<9.5,ford2=Math.abs(wz+42)<9.5;if(rd<12.5&&!ford1&&!ford2&&Math.hypot(wx-lmX,wz-lmZ)>24&&Math.hypot(wx,wz)>15){const d=S(12.5,4.2,rd);h=h*(1-d)+(-1.6)*d}const p1=segDist(wx+rN(wx,wz),wz,62,12,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.8,2.2,p1),S(6.8,2.2,p2))*.82;if((ford1||ford2)&&rd<16){h=Math.max(h,2.3);pm=Math.max(pm,.88)}h=plaza(wx,wz,h,4.6,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.72);h=spawnFlat(wx,wz,h,2.6)+softRim(wx,wz,8.5);set(gx,gz,h,pm)}}else if(id==='galar_crown_tundra'){waterY=0.05;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const neShelf=S(-20,45,wx*.65-wz*.76)*4.8;const swBluff=S(54,18,Math.hypot(wx+56,wz-44))*4.5;let h=2.2+neShelf+swBluff+n1.fbm(wx*.012,wz*.012,4)*3.1+n2.get(wx*.028,wz*.028)*.6;const fjord=Math.abs(wx+24-wz*.32+Math.sin(wz*.026)*10);const iceBridge=Math.abs(wz+12)<9.5;if(fjord<10.5&&!iceBridge&&Math.hypot(wx-lmX,wz-lmZ)>24&&Math.hypot(wx,wz)>14){const d=S(10.5,3.6,fjord);h=h*(1-d)+(-1.65)*d}const p1=segDist(wx+rN(wx,wz),wz,-48,-8,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.5,2.2,p1),S(6.8,2.2,p2))*.80;if(iceBridge&&fjord<14){h=Math.max(h,2.5);pm=Math.max(pm,.86)}h=plaza(wx,wz,h,6.8,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.76);h=spawnFlat(wx,wz,h,2.8)+softRim(wx,wz,15.0);set(gx,gz,h,pm)}}else if(id==='paldea_asado_mesa'){waterY=-99;const mesas=[[54,-46,32,26,9.2],[60,34,28,32,8.4],[-62,28,30,26,8.8],[-66,-68,26,24,9.6],[12,-76,26,18,7.8]];for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;let h=2.0+n1.fbm(wx*.011,wz*.011,3)*1.3+n2.get(wx*.026,wz*.026)*.35;for(const[mx,mz,rx,rz,mh]of mesas){const d=Math.hypot((wx-mx)/rx,(wz-mz)/rz)+n2.get(wx*.045,wz*.045)*.16;const step1=S(1.18,.88,d)*.55,step2=S(.82,.58,d)*.45;h=Math.max(h,2.0+(step1+step2)*mh)}const p1=segDist(wx+rN(wx,wz),wz,24,54,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(7.8,2.4,p1),S(7.8,2.4,p2))*.82;h=plaza(wx,wz,h,2.5,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.74);h=spawnFlat(wx,wz,h,2.1)+softRim(wx,wz,11.5);set(gx,gz,h,pm)}}else if(id==='paldea_area_zero'){waterY=0.08;for(let gz=0;gz<=N;gz++)for(let gx=0;gx<=N;gx++){const wx=gx*this.cell-half,wz=gz*this.cell-half;const r=Math.hypot(wx,wz+10);const tier1=S(38,54,r)*3.8,tier2=S(66,86,r)*5.4,tier3=S(92,P*1.04,r)*7.2;let h=1.9+tier1+tier2+tier3+n1.fbm(wx*.013,wz*.013,3)*1.8+n2.get(wx*.03,wz*.03)*.45;const sp1=Math.hypot(wx+30,wz+26)+n1.get(wx*.045,wz*.045)*4.5;const sp2=Math.hypot(wx-30,wz+22)+n1.get(wx*.045,wz*.045)*4.5;if(sp1<16&&Math.hypot(wx-lmX,wz-lmZ)>18)h-=S(16,7,sp1)*3.4;if(sp2<16&&Math.hypot(wx-lmX,wz-lmZ)>18)h-=S(16,7,sp2)*3.4;const p1=segDist(wx+rN(wx,wz),wz,0,58,0,0),p2=segDist(wx+rN(wx,wz),wz,0,0,lmX,lmZ);let pm=Math.max(S(6.6,2.2,p1),S(6.8,2.2,p2))*.78;h=plaza(wx,wz,h,2.0,16);pm=Math.max(pm,S(15,8,Math.hypot(wx-lmX,wz-lmZ))*.76);h=spawnFlat(wx,wz,h,2.1)+softRim(wx,wz,14.5);set(gx,gz,h,pm)}}this.blur();this.connectPlateaus();this.reserve(0,0,15);this.reserve(lmX,lmZ,18);this.finishHeights(waterY,0,0);return!0}generateSummit(){"
-        },
-        {
-          "find": "(\\w+)\\(\\)!==`es`&&await this\\.localize\\(\\);",
-          "replace": "$1()!==`es`&&await this.localize();await this._pbLocalizeMods?.();",
-          "mode": "regex",
-          "flags": ""
-        },
-        {
-          "find": "async localize(){",
-          "replace": "async _pbLocalizeMods(){try{const lang=(()=>{try{return localStorage.getItem(`pokebonk.lang`)}catch{return null}})()||document.documentElement.lang||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
-        },
-        {
-          "find": "uOpen:{value:+!!this.island}",
-          "replace": "uOpen:{value:+!!(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')}"
-        },
-        {
-          "find": "let e=this.island?this.world*12:this.world",
-          "replace": "let e=(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')?this.world*12:this.world"
-        },
-        {
-          "find": "t.frustumCulled=!this.island",
-          "replace": "t.frustumCulled=!(this.island||this.biome?.openSea||this.biome?.id==='kalos_azure_bay'||this.biome?.id==='alola_melemele'||this.biome?.id==='alola_wela_volcano')"
-        },
-        {
-          "find": "let r=this.terrainMat.uniforms;",
-          "replace": "if(this.biome?.id&&/^(hoenn|sinnoh|unova|kalos|alola|galar|paldea)_/.test(this.biome.id))this._pbBuildGen39Landmark?.(n);let r=this.terrainMat.uniforms;"
-        }
-      ]
-    },
-    {
-      "matchFile": "^assets/dom-.*\\.js$",
-      "patches": [
-        {
-          "find": "playSong(e,t,n,r){if(!this.ctx)return;this.stopTrack();",
-          "replace": "playSong(e,t,n,r){if(!this.ctx)return;this._pbTrackGen=(this._pbTrackGen||0)+1;this.stopTrack();"
-        },
-        {
-          "find": "this.stopSeq(),this.stopTrack(),this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,",
-          "replace": "this.stopSeq(),this.stopTrack();const _pbGen=(this._pbTrackGen=(this._pbTrackGen||0)+1);this.trackWant=e,this.trackOffset=t,this.trackLoading=!0,"
-        },
-        {
-          "find": "if(!i||this.ctx!==i||this.trackWant!==e||this.track)return;let o=i.createBufferSource();",
-          "replace": "if(!i||this.ctx!==i||this.trackWant!==e||this.track||_pbGen!==this._pbTrackGen||this.musicOn)return;this.stopSeq();if(this._pbLiveTracks){for(const _ot of this._pbLiveTracks){try{_ot._stopped=!0;_ot.gain.gain.cancelScheduledValues(i.currentTime);_ot.gain.gain.setValueAtTime(0,i.currentTime);_ot.src.stop();_ot.gain.disconnect()}catch{}}this._pbLiveTracks.clear()}let o=i.createBufferSource();"
-        },
-        {
-          "find": "o.loop=!0,o.loopStart=c,o.loopEnd=a.duration;",
-          "replace": "let _pbLe=a.duration;try{const _ch=a.getChannelData(0),_sr=a.sampleRate;let _ei=a.length-1;while(_ei>_sr*(c+1)&&Math.abs(_ch[_ei])<0.008)_ei-=64;_pbLe=Math.max(c+1,Math.min(a.duration-0.025,_ei/_sr))}catch{_pbLe=Math.max(c+0.5,a.duration-0.025)}o.loop=!0,o.loopStart=c,o.loopEnd=_pbLe;"
-        },
-        {
-          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration};(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track)",
-          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
-        },
-        {
-          "find": "this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:a.duration}",
-          "replace": "(this.track={name:e,src:o,gain:l,t0:u,off:d>0?d:0,loopEnd:typeof _pbLe===`number`?_pbLe:a.duration,_stopped:!1},(this._pbLiveTracks||(this._pbLiveTracks=new Set())).add(this.track),((_pbTr)=>{o.onended=()=>{try{l.disconnect()}catch{}this._pbLiveTracks?.delete(_pbTr);if(!_pbTr._stopped&&this.track===_pbTr&&this.trackWant===e&&_pbGen===this._pbTrackGen&&!this.musicOn){this.track=null;this.trackWant=null;this.playTrack(e,c)}}})(this.track))"
-        },
-        {
-          "find": "stopTrack(){this.trackWant=null;let e=this.track;if(this.track=null,!e||!this.ctx)return;let t=this.ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+.6),e.src.stop(t+.65),e.src.onended=()=>e.gain.disconnect()}",
-          "replace": "stopTrack(){this._pbTrackGen=(this._pbTrackGen||0)+1;this.trackWant=null;let e=this.track;this.track=null;const _ctx=this.ctx;if(this._pbLiveTracks&&_ctx){const _now=_ctx.currentTime;for(const _tr of this._pbLiveTracks){try{_tr._stopped=!0;_tr.gain.gain.cancelScheduledValues(_now);_tr.gain.gain.setValueAtTime(_tr.gain.gain.value,_now);_tr.gain.gain.linearRampToValueAtTime(0,_now+0.05);_tr.src.stop(_now+0.06);_tr.src.onended=()=>{try{_tr.gain.disconnect()}catch{}}}catch{}}this._pbLiveTracks.clear()}if(!e||!_ctx)return;try{e._stopped=!0;let t=_ctx.currentTime,n=e.gain.gain;n.cancelScheduledValues(t),n.setValueAtTime(n.value,t),n.linearRampToValueAtTime(0,t+0.05),e.src.stop(t+0.06),e.src.onended=()=>{try{e.gain.disconnect()}catch{}}}catch{}}"
-        }
-      ]
-    },
-    {
-      "matchFile": "^assets/i18n-.*\\.js$",
-      "patches": [
-        {
-          "find": "export\\{(\\w+) as a,",
-          "replace": "(window.__pbI18nUrls??=[]).push(`assets/i18n-gen3-9-levels.json`);export{$1 as a,",
-          "mode": "regex",
-          "flags": ""
-        },
-        {
-          "find": "function (\\w+)\\(e,t\\)\\{(\\w+)=e,(\\w+)=t,(\\w+)=null\\}",
-          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign($3,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[$2]){Object.assign($3,data.strings[$2]);$4=null}};function $1(e,t){$2=e,$3=t,$4=null;_pbMergeModTr(e)}",
-          "mode": "regex",
-          "flags": ""
-        }
-      ]
-    },
-    {
-      "matchFile": "^assets/assets-.*\\.js$",
-      "patches": [
-        {
-          "find": "a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],",
-          "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
-        }
-      ]
-    }
-  ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36"
+    "0.10.36",
+    "0.10.38"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.36",
-  "minClientVersion": "1.0.5",
+  "maxGameVersion": "0.10.38",
+  "minClientVersion": "1.1.1",
   "preservedVersions": [
     {
       "version": "1.3.1",
@@ -4651,6 +6554,950 @@
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels-v1.3.1.zip",
       "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels.zip",
       "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
+    }
+  ],
+  "localesDir": "locales",
+  "customPrefabs": [
+    {
+      "id": "petalburg_moss_rock",
+      "name": "Petalburg Moss Boulder",
+      "scale": 1,
+      "height": 2.8,
+      "colliderRadius": 1.25,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.3,
+            1.5,
+            1.1
+          ],
+          "pos": [
+            0,
+            0.55,
+            0
+          ],
+          "color": "#5c6b58"
+        },
+        {
+          "shape": "icosahedron",
+          "size": [
+            1.05
+          ],
+          "pos": [
+            0,
+            1.45,
+            0
+          ],
+          "color": "#3b8c52"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.42
+          ],
+          "pos": [
+            0.35,
+            2.2,
+            0.15
+          ],
+          "color": "#6ee7b7",
+          "emissive": "#34d399"
+        }
+      ]
+    },
+    {
+      "id": "chimney_cable_pylon",
+      "name": "Mt. Chimney Cable Pylon",
+      "scale": 1,
+      "height": 7.4,
+      "colliderRadius": 1.35,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            2.2,
+            1.2,
+            2.2
+          ],
+          "pos": [
+            0,
+            0.6,
+            0
+          ],
+          "color": "#4b4542"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.42,
+            0.62,
+            5.4
+          ],
+          "pos": [
+            0,
+            3.8,
+            0
+          ],
+          "color": "#374151"
+        },
+        {
+          "shape": "box",
+          "size": [
+            4.2,
+            0.45,
+            0.55
+          ],
+          "pos": [
+            0,
+            6.2,
+            0
+          ],
+          "color": "#64748b"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.35
+          ],
+          "pos": [
+            0,
+            6.85,
+            0
+          ],
+          "color": "#fb923c",
+          "emissive": "#ea580c"
+        }
+      ]
+    },
+    {
+      "id": "sinnoh_fluted_column",
+      "name": "Spear Pillar Ruined Column",
+      "scale": 1,
+      "height": 6.4,
+      "colliderRadius": 0.95,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            1.8,
+            0.65,
+            1.8
+          ],
+          "pos": [
+            0,
+            0.32,
+            0
+          ],
+          "color": "#cbd5e1"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.58,
+            0.68,
+            5.2
+          ],
+          "pos": [
+            0,
+            3.2,
+            0
+          ],
+          "color": "#e2e8f0"
+        },
+        {
+          "shape": "box",
+          "size": [
+            1.75,
+            0.55,
+            1.75
+          ],
+          "pos": [
+            0,
+            5.95,
+            0
+          ],
+          "color": "#cbd5e1"
+        }
+      ]
+    },
+    {
+      "id": "eterna_chateau_lantern",
+      "name": "Old Chateau Iron Lantern",
+      "scale": 1,
+      "height": 4.2,
+      "colliderRadius": 0.55,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            0.95,
+            0.9,
+            0.95
+          ],
+          "pos": [
+            0,
+            0.45,
+            0
+          ],
+          "color": "#3f3f4e"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.16,
+            0.22,
+            2.7
+          ],
+          "pos": [
+            0,
+            2.2,
+            0
+          ],
+          "color": "#272736"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.42
+          ],
+          "pos": [
+            0,
+            3.75,
+            0
+          ],
+          "color": "#c084fc",
+          "emissive": "#9333ea"
+        }
+      ]
+    },
+    {
+      "id": "relic_guardian_pillar",
+      "name": "Relic Desert Guardian Pillar",
+      "scale": 1,
+      "height": 4.6,
+      "colliderRadius": 1.1,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            2,
+            0.9,
+            2
+          ],
+          "pos": [
+            0,
+            0.45,
+            0
+          ],
+          "color": "#b48a5a"
+        },
+        {
+          "shape": "box",
+          "size": [
+            1.45,
+            2.6,
+            1.45
+          ],
+          "pos": [
+            0,
+            2.2,
+            0
+          ],
+          "color": "#d4a76a"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            1.1,
+            1.35,
+            4
+          ],
+          "pos": [
+            0,
+            4.15,
+            0
+          ],
+          "rot": [
+            0,
+            0.785,
+            0
+          ],
+          "color": "#9a6e3e"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.35
+          ],
+          "pos": [
+            0,
+            2.6,
+            0.76
+          ],
+          "color": "#fbbf24",
+          "emissive": "#d97706"
+        }
+      ]
+    },
+    {
+      "id": "dragonspiral_beacon_pillar",
+      "name": "Dragonspiral Ancient Pillar",
+      "scale": 1,
+      "height": 5.5,
+      "colliderRadius": 0.95,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            1.85,
+            0.85,
+            1.85
+          ],
+          "pos": [
+            0,
+            0.42,
+            0
+          ],
+          "color": "#6b655c"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.55,
+            0.72,
+            3.6
+          ],
+          "pos": [
+            0,
+            2.6,
+            0
+          ],
+          "color": "#9c9284"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            1.35,
+            1,
+            4
+          ],
+          "pos": [
+            0,
+            4.85,
+            0
+          ],
+          "rot": [
+            0,
+            0.785,
+            0
+          ],
+          "color": "#475569"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.36
+          ],
+          "pos": [
+            0,
+            5.55,
+            0
+          ],
+          "color": "#38bdf8",
+          "emissive": "#0284c7"
+        }
+      ]
+    },
+    {
+      "id": "kalos_coastal_lamp",
+      "name": "Azure Bay Promenade Lamp",
+      "scale": 1,
+      "height": 4.4,
+      "colliderRadius": 0.5,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.52,
+            0.68,
+            0.9
+          ],
+          "pos": [
+            0,
+            0.45,
+            0
+          ],
+          "color": "#e2d9c5"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.16,
+            0.22,
+            2.8
+          ],
+          "pos": [
+            0,
+            2.3,
+            0
+          ],
+          "color": "#1e3a5f"
+        },
+        {
+          "shape": "sphere",
+          "size": [
+            0.42
+          ],
+          "pos": [
+            0,
+            3.9,
+            0
+          ],
+          "color": "#7dd3fc",
+          "emissive": "#38bdf8"
+        }
+      ]
+    },
+    {
+      "id": "kalos_mirror_slab",
+      "name": "Reflection Mirror Crystal",
+      "scale": 1,
+      "height": 5.8,
+      "colliderRadius": 1.2,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.1,
+            1.45,
+            0.9
+          ],
+          "pos": [
+            0,
+            0.45,
+            0
+          ],
+          "color": "#3b3352"
+        },
+        {
+          "shape": "box",
+          "size": [
+            2.4,
+            4.4,
+            0.42
+          ],
+          "pos": [
+            0,
+            3,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            0.08
+          ],
+          "color": "#e879f9",
+          "emissive": "#a855f7"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.85
+          ],
+          "pos": [
+            -0.95,
+            1.8,
+            0.35
+          ],
+          "rot": [
+            0.2,
+            0,
+            0.35
+          ],
+          "color": "#67e8f9",
+          "emissive": "#22d3ee"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.75
+          ],
+          "pos": [
+            0.95,
+            1.6,
+            -0.3
+          ],
+          "rot": [
+            -0.15,
+            0,
+            -0.32
+          ],
+          "color": "#c084fc",
+          "emissive": "#9333ea"
+        }
+      ]
+    },
+    {
+      "id": "alola_tiki_torch",
+      "name": "Melemele Trial Tiki Torch",
+      "scale": 1,
+      "height": 3.8,
+      "colliderRadius": 0.55,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.34,
+            0.44,
+            2.8
+          ],
+          "pos": [
+            0,
+            1.4,
+            0
+          ],
+          "color": "#7c4a26"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.75,
+            0.65,
+            0.75
+          ],
+          "pos": [
+            0,
+            2.55,
+            0
+          ],
+          "color": "#d97706"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            0.48,
+            1.05,
+            6
+          ],
+          "pos": [
+            0,
+            3.4,
+            0
+          ],
+          "color": "#fb923c",
+          "emissive": "#f97316"
+        }
+      ]
+    },
+    {
+      "id": "wela_trial_brazier",
+      "name": "Wela Fire Trial Brazier",
+      "scale": 1,
+      "height": 4,
+      "colliderRadius": 0.85,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.75,
+            1.05,
+            1.8
+          ],
+          "pos": [
+            0,
+            0.9,
+            0
+          ],
+          "color": "#452b24"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            1.1,
+            0.72,
+            0.65
+          ],
+          "pos": [
+            0,
+            2.1,
+            0
+          ],
+          "color": "#9a3412"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            0.72,
+            1.65,
+            6
+          ],
+          "pos": [
+            0,
+            3.15,
+            0
+          ],
+          "color": "#fbbf24",
+          "emissive": "#ea580c"
+        }
+      ]
+    },
+    {
+      "id": "galar_standing_stone",
+      "name": "Galar Standing Monolith",
+      "scale": 1,
+      "height": 5.2,
+      "colliderRadius": 1.05,
+      "parts": [
+        {
+          "shape": "box",
+          "size": [
+            1.4,
+            4.6,
+            0.85
+          ],
+          "pos": [
+            0,
+            2.3,
+            0
+          ],
+          "rot": [
+            0.04,
+            0,
+            0.05
+          ],
+          "color": "#64748b"
+        },
+        {
+          "shape": "box",
+          "size": [
+            1.1,
+            1.2,
+            0.75
+          ],
+          "pos": [
+            0,
+            4.7,
+            0
+          ],
+          "rot": [
+            0,
+            0,
+            -0.06
+          ],
+          "color": "#7c8a9b"
+        }
+      ]
+    },
+    {
+      "id": "galar_power_spot_den",
+      "name": "Wild Area Power Spot Den",
+      "scale": 1,
+      "height": 2.2,
+      "colliderRadius": 1.6,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.85,
+            2.25,
+            0.65
+          ],
+          "pos": [
+            0,
+            0.32,
+            0
+          ],
+          "color": "#57534e"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            1.25,
+            1.25,
+            0.35
+          ],
+          "pos": [
+            0,
+            0.72,
+            0
+          ],
+          "color": "#ec4899",
+          "emissive": "#db2777"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.55
+          ],
+          "pos": [
+            -0.8,
+            1.15,
+            0.5
+          ],
+          "rot": [
+            0.2,
+            0,
+            0.3
+          ],
+          "color": "#f472b6",
+          "emissive": "#ec4899"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.5
+          ],
+          "pos": [
+            0.85,
+            1.05,
+            -0.45
+          ],
+          "rot": [
+            -0.2,
+            0,
+            -0.25
+          ],
+          "color": "#f472b6",
+          "emissive": "#db2777"
+        }
+      ]
+    },
+    {
+      "id": "crown_ice_monolith",
+      "name": "Crown Tundra Ice Monolith",
+      "scale": 1,
+      "height": 5.8,
+      "colliderRadius": 1.1,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.1,
+            1.4,
+            1.2
+          ],
+          "pos": [
+            0,
+            0.6,
+            0
+          ],
+          "color": "#94a3b8"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            0.95,
+            4.4,
+            6
+          ],
+          "pos": [
+            0,
+            3.4,
+            0
+          ],
+          "color": "#7dd3fc",
+          "emissive": "#38bdf8"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.52
+          ],
+          "pos": [
+            0.72,
+            1.85,
+            0.42
+          ],
+          "rot": [
+            0.15,
+            0,
+            -0.35
+          ],
+          "color": "#bae6fd",
+          "emissive": "#60a5fa"
+        }
+      ]
+    },
+    {
+      "id": "asado_strata_spire",
+      "name": "Asado Red-Rock Hoodoo",
+      "scale": 1,
+      "height": 5.4,
+      "colliderRadius": 1.15,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.1,
+            1.55,
+            1.7
+          ],
+          "pos": [
+            0,
+            0.85,
+            0
+          ],
+          "color": "#b45309"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.75,
+            1.05,
+            1.9
+          ],
+          "pos": [
+            0,
+            2.65,
+            0
+          ],
+          "color": "#c2410c"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            1.45,
+            0.85,
+            1.25
+          ],
+          "pos": [
+            0,
+            4.2,
+            0
+          ],
+          "color": "#d97706"
+        }
+      ]
+    },
+    {
+      "id": "area_zero_research_beacon",
+      "name": "Zero Lab Research Beacon",
+      "scale": 1,
+      "height": 5,
+      "colliderRadius": 0.9,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            1.15,
+            1.35,
+            0.7
+          ],
+          "pos": [
+            0,
+            0.35,
+            0
+          ],
+          "color": "#cbd5e1"
+        },
+        {
+          "shape": "box",
+          "size": [
+            0.85,
+            3.2,
+            0.85
+          ],
+          "pos": [
+            0,
+            2.25,
+            0
+          ],
+          "color": "#f8fafc"
+        },
+        {
+          "shape": "crystal",
+          "size": [
+            0.68
+          ],
+          "pos": [
+            0,
+            4.35,
+            0
+          ],
+          "color": "#67e8f9",
+          "emissive": "#22d3ee"
+        }
+      ]
+    },
+    {
+      "id": "terastal_crystal_vein",
+      "name": "Terastal Crystal Cluster",
+      "scale": 1,
+      "height": 4.8,
+      "colliderRadius": 1.25,
+      "parts": [
+        {
+          "shape": "cylinder",
+          "size": [
+            0.65,
+            0.95,
+            3.6
+          ],
+          "pos": [
+            0,
+            1.8,
+            0
+          ],
+          "color": "#a5f3fc",
+          "emissive": "#38bdf8"
+        },
+        {
+          "shape": "cone",
+          "size": [
+            0.65,
+            1.5,
+            6
+          ],
+          "pos": [
+            0,
+            4.3,
+            0
+          ],
+          "color": "#f0abfc",
+          "emissive": "#e879f9"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.36,
+            0.58,
+            2.6
+          ],
+          "pos": [
+            -0.85,
+            1.25,
+            0.4
+          ],
+          "rot": [
+            0.22,
+            0,
+            0.36
+          ],
+          "color": "#f5d0fe",
+          "emissive": "#d946ef"
+        },
+        {
+          "shape": "cylinder",
+          "size": [
+            0.34,
+            0.54,
+            2.4
+          ],
+          "pos": [
+            0.82,
+            1.15,
+            -0.35
+          ],
+          "rot": [
+            -0.2,
+            0,
+            -0.34
+          ],
+          "color": "#bae6fd",
+          "emissive": "#06b6d4"
+        }
+      ]
     }
   ]
 }

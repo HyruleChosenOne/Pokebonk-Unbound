@@ -576,17 +576,27 @@ Vanilla generation stays untouched whenever `proceduralGen` is omitted. When pro
 | Field | Values / Subfields | Description |
 | --- | --- | --- |
 | `base` | `"vanilla"` (default), `"island"`, `"cave"`, `"ancient"`, `"valley"`, `"lake"`, `"summit"`, `"wilds"`, `"custom"` | Runs the selected PokéBonk generator first and overlays `proceduralGen` on top, or generates purely from `proceduralGen` when `"custom"`. |
-| `preset` | `"archipelago"`, `"canyon"`, `"caldera"`, `"terraces"`, `"arena_rings"`, `"mesa"`, `"twin_peaks"`, `"river_basin"` | Optional macro elevation silhouette. |
+| `preset` | `"archipelago"`, `"canyon"`, `"caldera"`, `"terraces"`, `"arena_rings"`, `"mesa"`, `"twin_peaks"`, `"river_basin"`, `"dunes"`, `"volcanic_cone"`, `"great_crater"`, `"alpine_ridge"`, `"coastal_bay"`, `"glacial_fjord"`, `"crystal_cavern"`, `"woodland_glades"` | Optional macro elevation silhouette. |
 | `presetBlend` | `0`-`1` (default `0.85` if `preset` set, `1` for `base: "custom"`) | Mix ratio between the underlying vanilla heightmap and the `preset` / `noise` pass. |
 | `noise` | `{ scale, octaves, amplitude, ridgeWeight, terraceSteps, terraceSharpness, warpStrength, warpScale, heightOffset }` | Multi-octave fBm + ridged noise, domain warping, and terraced steps. |
+| `mesas` | `[{ x, z, rx, rz, height, tiers }]` | Raises stratified flat-topped sandstone mesas / monument buttes with stepped cliff tiers. |
 | `plateaus` | `{ count, minRadius, maxRadius, height, rampCount, flatTop }` | Raises flat-topped plateaus with walkable ramps and painted path access. |
 | `craters` | `{ count, minRadius, maxRadius, depth, rimHeight }` | Carves circular basins with raised crater rims. |
-| `rivers` | `{ count, width, depth, meander, paintPath }` | Carves meandering riverbeds across the map (optionally painting riverside trails). |
+| `rivers` | `{ count, width, depth, meander, angle, phase, offset, paintPath, fords: [{ x, z, radius, height }] }` | Carves meandering riverbeds across the map with optional flat ford/bridge crossings and riverside trails. |
+| `moat` | `{ anchor, x, z, radius, width, depth, floor, wobble, bridges: [{ angle, width, height }] }` | Carves a water or lava moat ring around a landmark or point, spanned by walkable bridges. |
+| `pools` | `[{ x, z, radius, depth, rimHeight, wobble }]` | Carves organic sunken pools, crystal springs, or fumarole hollows (automatically preserves spawn and landmark clearings). |
+| `fissures` | `{ anchor, x, z, count, startRadius, endRadius, width, depth, angleOffset }` | Carves radial volcanic/crystal/ice fissures outward from a landmark or center. |
+| `spiralRamp` | `{ anchor, x, z, startRadius, endRadius, width, startHeight, endHeight, paintPath }` | Sculpts a winding ascending spiral ramp around a peak or tower. |
+| `islandShape` | `{ rx, rz, offsetX, offsetZ, wobble, dropDepth, beachWidth, lagoon: { x, z, radius, depth }, islets: [{ x, z, rx, rz, height, sandbar: { toX, toZ, width, height } }] }` | Shapes organic island/bay coastlines with painted beaches, lagoons, offshore islets, and walkable sandbars. |
 | `paths` | `{ radialCount, ringRadius, width, flatten }` | Paints and gently flattens radial spokes and/or a concentric road ring. |
-| `border` | `"cliffs"`, `"ocean"`, `"wall"` | Map perimeter shape (defaults to `"cliffs"` when `base: "custom"`). |
-| `spawnClearingRadius` | `number` (default `14`) | Flattens a safe elevated clearing around `(0, 0)` above `waterLevel`. |
+| `trails` | `[{ from, to, width, wobble, flatten, height }]` | Paints and grades winding scenic trails (`from`/`to` accept `[x, z]`, `"spawn"`, or `"landmark"`). |
+| `border` / `borderHeight` | `"cliffs"`, `"ocean"`, `"wall"` / `number` | Map perimeter shape and cliff rim height (defaults to `"cliffs"` when `base: "custom"`). |
+| `interior` / `wallHeight` | `boolean` / `number` (default `16`) | Raises steep enclosed cavern or dungeon perimeter walls. |
+| `landmarkClearing` | `{ radius, blendRadius, height, paintPath, reserveRadius }` | Sculpts a flat ceremonial terrace beneath `biome.landmark` and reserves prop space. |
+| `spawnClearingRadius` / `spawnHeight` | `number` (default `14`) / `number` | Flattens a safe elevated clearing around `(0, 0)` above `waterLevel`. |
+| `connectPlateaus` | `boolean` | Runs PokéBonk's native ramp connector so stepped cliffs, craters, and mesas remain smoothly traversable. |
 | `smoothing` | `0`-`4` (default `1` for `"custom"`, `0` otherwise) | Gaussian heightmap smoothing passes. |
-| `waterLevel` | `number` | Enables water plane and sets water height. |
+| `waterLevel` / `lava` / `frozenWater` | `number \| null` / `boolean` / `boolean` | Sets water plane height (`null` disables water); `lava: true` enables the molten lava shader; `frozenWater: true` enables the frozen glacial ice shader. |
 | `generatorHook` | `string` | Name of a custom JS heightmap callback registered via `window.pokebonkTerrainGen.register(id, fn)`. |
 
 Script hook signature (`window.pokebonkTerrainGen`):
@@ -605,13 +615,17 @@ window.pokebonkTerrainGen?.register('spiral-ridge', ({ heights, pathMask, res, w
 
 ### Scattering Custom Prefabs (`prefabScatters`)
 
-Place decorative or solid `customPrefabs` across walkable, above-water terrain:
+Place purely decorative or solid `customPrefabs` (or built-in `vanillaModel` `.glb` assets) across walkable, above-water terrain:
 
 ```json
 "prefabScatters": [
-  { "prefabId": "rune_obelisk", "count": 12, "minDist": 18, "maxDist": 115, "scaleRange": [0.85, 1.35], "randomRotY": true, "colliderRadius": 1.1 }
+  { "prefabId": "rune_obelisk", "count": 12, "minDist": 18, "maxDist": 115, "scaleRange": [0.85, 1.35], "randomRotY": true, "colliderRadius": 1.1 },
+  { "vanillaModel": "ruins_brazier", "anchor": "landmark", "ringRadius": 14, "ringSpread": 1.5, "count": 6, "scaleRange": [0.95, 1.1] },
+  { "vanillaModel": "coast_stack", "nearWater": true, "count": 8, "minDist": 28, "maxDist": 135, "scaleRange": [0.9, 1.4], "colliderRadius": 1.4 }
 ]
 ```
+
+Supported optional fields: `prefabId` or `vanillaModel`, `count` (`1`-`48`), `anchor` (`"spawn"` or `"landmark"`), `minDist` / `maxDist`, `ringRadius` / `ringSpread`, `minHeight` / `maxHeight`, `nearWater`, `fixedPositions` (`[{ x, z, y, scale, rotY }]`), `scaleRange`, `randomRotY`, `colliderRadius`, and `ignoreReserved`.
 
 ---
 

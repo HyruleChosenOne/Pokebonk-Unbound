@@ -1,24 +1,34 @@
 {
   "id": "hyrules-mods",
   "name": "Hyrule's Collection (QoL & Cheats)",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "author": "HyruleChosenOne",
   "category": "Quality of Life",
   "scope": "client",
   "pinned": true,
   "essential": true,
   "featured": true,
-  "tagline": "Offline Mode events hub, live main menu customization, P2P multiplayer, experimental Co-op Expeditions, solo cheats, and full profile unlocks.",
-  "description": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub, unlocks direct IP:Port P2P Co-op multiplayer with Local Lobbies browser and an experimental Co-op Expeditions (2-4P) mode integrated into Co-op menus, adds live 3D main menu diorama and music selectors, and provides reworked Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities.",
+  "tagline": "Offline Mode events hub, selectable Daily Mutations, P2P multiplayer, Experimental Co-op Expeditions, live menu themes, solo cheats, and full profile unlocks.",
+  "description": "All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Past seasonal events and selectable Daily Mutations (Solo & Co-op) are enabled by default, alongside direct IP:Port P2P Co-op with Experimental Co-op Expeditions (2-4P), live 3D main menu wallpaper and music selectors, Solo Combat Cheats (auto-disabled in Co-op/Online) with Upgrade Rarity / Boost Luck, Free Rerolls, Always Crit, Rapid Cooldowns, and Shiny Magnet, plus full profile unlocks.",
   "highlights": [
-    "Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub",
-    "Direct IP:Port Peer-to-Peer Co-op multiplayer with UDP Local Lobbies browser & 1-click Mod Sync",
-    "Experimental Co-op Expeditions (2-4P) toggle adding Expedition mode directly to Co-op menus with synced Expedition Base transitions for all players",
+    "Past seasonal events & selectable Daily Mutations active by default (click any mutation icon in Solo or Co-op)",
+    "Direct IP:Port Peer-to-Peer Co-op with UDP Local Lobbies, centered Mod Sync popup, and Experimental Co-op Expeditions (2-4P)",
     "Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)",
-    "Solo Combat Cheats: Run Speed 1x/1.5x/2x/3x, God Mode, Overdrive, Turbo XP (5x), Super Magnet & Luck, Instant Ultimate, Unlock All Difficulties",
-    "Full Unlocks: Unlock All (Full Profile Customization), Unlock All Clan & Rank Rewards, Unlock All Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests"
+    "Solo Combat Cheats (auto-disabled in Co-op/Online): Run Speed 1x-3x, Upgrade Rarity / Boost Luck, God Mode, Overdrive, Turbo XP, Super Magnet, Instant Ultimate, Free Rerolls, Always Crit, Rapid Cooldowns, Shiny Magnet",
+    "Full Unlocks: Profile Customization, Clan & Rank Rewards, Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests"
   ],
   "changelog": [
+    {
+      "version": "1.3.3",
+      "date": "2026-11-26",
+      "changes": [
+        "Updated for PokéBonk v0.10.38.",
+        "Made Past Seasonal Events and Experimental Co-op Expeditions always ON by default (removed redundant toggles; labeled Co-op Expeditions with yellow EXPERIMENTAL badges in Co-op menus).",
+        "Added clickable Daily Mutation icon selection in both Solo and Co-op Mutation lobbies.",
+        "Auto-disables all live cheats when joining/hosting Co-op or switching to Online Mode, and added Upgrade Rarity / Boost Luck (Off / Boost Luck / Epic+ Only / Legendary Only), Free Rerolls, Always Crit, Rapid Cooldowns, and Shiny Magnet solo cheats.",
+        "Moved Co-op Mod Mismatch sync prompt into a centered modal popup, aligned Co-op Expedition enemy/XP scaling with normal Co-op, and enforced full squad ready-check + client launch guards."
+      ]
+    },
     {
       "version": "1.3.2",
       "date": "2026-11-26",
@@ -64,10 +74,11 @@
   "requirements": "Offline Mode (Mod Engine ON)",
   "gameVersions": [
     "0.10.31",
-    "0.10.36"
+    "0.10.36",
+    "0.10.38"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.36",
+  "maxGameVersion": "0.10.38",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {

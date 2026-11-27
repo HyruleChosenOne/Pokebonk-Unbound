@@ -1,10 +1,10 @@
 # Apple Support (iOS / iPadOS Sideload & Experimental macOS)
 
 > **Status Notice**
-> - **iOS / iPadOS (`.ipa` Sideload)**: Verified working on real iPad Pro hardware and promoted to the main **[v1.0.5 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.0.5)**.
+> - **iOS / iPadOS (`.ipa` Sideload)**: Verified working on real iPad Pro hardware and included in the main **[v1.1.1 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.1.1)** (with Portable under **[Experimental: Portable](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-portable)**).
 > - **macOS (`.zip`)**: Still **experimental / untested** on real Mac hardware and hosted under the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** pre-release tab.
 >
-> Feedback, crash logs (`Documents/unbound-data/ios-node.log` on iOS), and compatibility reports are warmly welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
+> Feedback, crash logs (`Documents/PokéBonk Unbound` / `ios-node.log`), and compatibility reports are welcomed via [GitHub Issues](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues).
 
 ---
 
@@ -12,11 +12,11 @@
 
 ### Downloads
 
-Download the **Complete Edition** (recommended — includes the `v0.10.31` offline game build ready to play, with zero pre-installed mods) from the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab:
+Download the **Complete Edition** (recommended — includes the `v0.10.38` offline game build ready to play, with zero pre-installed mods) from the **[Experimental: Apple](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-apple)** release tab:
 
-- **Apple Silicon (`M1 / M2 / M3 / M4`)**: `PokeBonk-Unbound-Complete-1.0.5-mac-arm64.zip`
-- **Intel Mac (`x64`)**: `PokeBonk-Unbound-Complete-1.0.5-mac-x64.zip`
-- **Optional Portable ("Nothing Included")**: `PokeBonk-Unbound-Portable-1.0.5-mac-arm64.zip` / `...-mac-x64.zip`
+- **Apple Silicon (`M1 / M2 / M3 / M4`)**: `PokeBonk-Unbound-Complete-1.1.1-mac-arm64.zip`
+- **Intel Mac (`x64`)**: `PokeBonk-Unbound-Complete-1.1.1-mac-x64.zip`
+- **Experimental Portable ("Nothing Included")**: `PokeBonk-Unbound-Portable-1.1.1-mac-arm64.zip` / `...-mac-x64.zip`
 
 ### First-Time Launch (Unsigned App)
 
@@ -44,12 +44,12 @@ Because the experimental macOS builds are **unsigned / un-notarized**, macOS Gat
 
 ## iOS / iPadOS (Unsigned `.ipa` Sideloading)
 
-### Downloads (v1.0.5 — Unsigned `arm64` `.ipa`)
+### Downloads (v1.1.1 — Unsigned `arm64` `.ipa`)
 
-Download directly from the **[v1.0.5 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.0.5)** (verified on iPad Pro):
+Download directly from the **[v1.1.1 Release](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/v1.1.1)** (Complete) or **[Experimental: Portable](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/tag/experimental-portable)** (Portable):
 
-- **Complete Edition (Recommended — includes `v0.10.31` offline build)**: **[PokeBonk-Unbound-Complete-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.0.5/PokeBonk-Unbound-Complete-1.0.5.ipa)**
-- **Portable Edition ("Nothing Included" — downloads offline build on demand)**: **[PokeBonk-Unbound-Portable-1.0.5.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.0.5/PokeBonk-Unbound-Portable-1.0.5.ipa)**
+- **Complete Edition (Recommended — includes `v0.10.38` offline build)**: **[PokeBonk-Unbound-Complete-1.1.1.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.1/PokeBonk-Unbound-Complete-1.1.1.ipa)**
+- **Experimental Portable Edition ("Nothing Included" — downloads offline build on demand)**: **[PokeBonk-Unbound-Portable-1.1.1.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/experimental-portable/PokeBonk-Unbound-Portable-1.1.1.ipa)**
 
 ### Automated CI Builds
 
