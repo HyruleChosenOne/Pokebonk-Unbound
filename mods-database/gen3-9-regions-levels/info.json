@@ -1,13 +1,13 @@
 {
   "id": "gen3-9-regions-levels",
   "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-  "version": "1.4.0",
+  "version": "1.3.1",
   "author": "HyruleChosenOne",
   "category": "Levels",
   "scope": "gameplay",
   "featured": true,
-  "tagline": "14 region-faithful procedural stages across Hoenn to Paldea with unique terrain profiles, decorative regional map features, custom textures, and 3D landmarks.",
-  "description": "14 region-faithful procedural levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea using the updated Modding API with unique topographies, landmarks, decorative regional scenery, custom textures, and official region OSTs.",
+  "tagline": "14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks.",
+  "description": "Adds 14 custom stages across Hoenn to Paldea with distinct 3D topographies, landmarks, harmonized textures, and region OSTs.",
   "highlights": [
     "Hoenn: Petalburg Canopy & Mt. Chimney Caldera",
     "Sinnoh: Mt. Coronet Spear Pillar & Eterna Forest Chateau",
@@ -20,15 +20,6 @@
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)",
   "changelog": [
-    {
-      "version": "1.4.0",
-      "date": "2026-11-26",
-      "changes": [
-        "Rebuilt all 14 stages using the updated declarative procedural terrain API (proceduralGen, customPrefabs, prefabScatters, and localesDir) with zero legacy bundle patches.",
-        "Distinct region-faithful topography for every stage: Petalburg glades, Mt. Chimney molten lava moat caldera, Mt. Coronet alpine ridge, Eterna twilight river bog, Relic Desert parallel dunes, Dragonspiral moated spiral ascent, Azure Bay crescent cove & islet sandbar, Reflection Cave enclosed crystal interior, Melemele tropical lagoon, Wela Volcano spiral fissures, Galar Wild Area river moors, Crown Tundra frozen ice fjord, Asado stratified red mesas, and Area Zero 3-tier inverted crater.",
-        "Added purely decorative regional map scenery and landmarks (cable pylons, fluted columns, chateau iron lanterns, standing stones, Power Spot rock dens, Zero Lab beacons, and more) with no custom gameplay mechanics."
-      ]
-    },
     {
       "version": "1.3.1",
       "date": "2026-04-20",
@@ -62,15 +53,14 @@
     "custom-terrain"
   ],
   "verified": true,
-  "summary": "All 7 Gen 3-9 regions and 14 unique maps rebuilt on the updated procedural terrain API with faithful regional landforms, decorative map features, 14 stage OSTs, custom textures, and 11-language localization.",
+  "summary": "All 7 Gen 3-9 regions & 14 maps with unique 3D terrain architectures, 14 official stage OSTs, custom pixel-art textures, and 11-language localization.",
   "gameVersions": [
     "0.10.31",
-    "0.10.36",
-    "0.10.38"
+    "0.10.36"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.38",
-  "minClientVersion": "1.1.1",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
   "preservedVersions": [
     {
       "version": "1.3.1",

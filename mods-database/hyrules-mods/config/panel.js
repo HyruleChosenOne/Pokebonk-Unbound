@@ -89,6 +89,7 @@
       const render = () => {
         const nonCheatDis = !configured;
         const cheatDis = !isOffline || !configured;
+        const disEv = Array.isArray(cfg.disabledEvents) ? cfg.disabledEvents : [];
         const spd = Number(cfg.runSpeed || 1);
 
         let paneHtml = '';
@@ -98,9 +99,52 @@
               <div class="hy-row">
                 <div class="hy-row-meta">
                   <div class="hy-row-name">P2P Co-op (IP:Port Multiplayer)</div>
-                  <div class="hy-row-sub">Direct Peer-to-Peer hosting, LAN lobby discovery &amp; invite codes. Past seasonal events and selectable Daily Mutations are active by default.</div>
+                  <div class="hy-row-sub">Direct Peer-to-Peer hosting, LAN lobby discovery &amp; invite codes.</div>
                 </div>
                 <label class="switch"><input type="checkbox" data-hy-toggle="p2pMultiplayer" data-hy-reload="1" ${cfg.p2pMultiplayer ? 'checked' : ''} ${nonCheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
+              </div>
+              <div class="hy-row hy-row-exp">
+                <div class="hy-row-meta">
+                  <div class="hy-row-name">Co-op Expeditions (2-4P) <span class="badge experimental">Experimental</span></div>
+                  <div class="hy-row-sub">Adds Expedition mode to Co-op menus. Selecting it switches all players into the full synced Co-op Expedition Base with all vanilla solo loadout &amp; map settings.</div>
+                </div>
+                <label class="switch"><input type="checkbox" data-hy-toggle="coopExpeditions" data-hy-reload="1" ${cfg.coopExpeditions ? 'checked' : ''} ${nonCheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
+              </div>
+              ${cfg.coopExpeditions ? `
+              <div class="hy-sub-group">
+                <div class="hy-row">
+                  <div class="hy-row-meta">
+                    <div class="hy-row-name">Allow Solo Host Launch (1-4P)</div>
+                    <div class="hy-row-sub">Let the host launch a Co-op Expedition room solo for warmup or testing.</div>
+                  </div>
+                  <label class="switch"><input type="checkbox" data-hy-toggle="coopExpeditionsAllowSolo" data-hy-live="1" ${cfg.coopExpeditionsAllowSolo ? 'checked' : ''} ${nonCheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
+                </div>
+                <div class="hy-row">
+                  <div class="hy-row-meta">
+                    <div class="hy-row-name">Require Equipped Gear to Ready</div>
+                    <div class="hy-row-sub">When OFF (default), squad members can ready up even with zero risked gear equipped.</div>
+                  </div>
+                  <label class="switch"><input type="checkbox" data-hy-toggle="coopExpeditionsRequireGear" data-hy-live="1" ${cfg.coopExpeditionsRequireGear ? 'checked' : ''} ${nonCheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
+                </div>
+                <div class="hy-row">
+                  <div class="hy-row-meta">
+                    <div class="hy-row-name">Squad Extraction Regroup Bonus</div>
+                    <div class="hy-row-sub">Extra seconds added to Pidgeot / Jeep / Boat extraction windows for squad regrouping.</div>
+                  </div>
+                  <select class="field hy-inline-select" data-hy-select="coopExpeditionsGraceSec" data-hy-num="1" ${nonCheatDis ? 'disabled' : ''}>
+                    <option value="0" ${Number(cfg.coopExpeditionsGraceSec ?? 30) === 0 ? 'selected' : ''}>Vanilla (+0s)</option>
+                    <option value="30" ${Number(cfg.coopExpeditionsGraceSec ?? 30) === 30 ? 'selected' : ''}>Squad (+30s)</option>
+                    <option value="60" ${Number(cfg.coopExpeditionsGraceSec ?? 30) === 60 ? 'selected' : ''}>Extended (+60s)</option>
+                  </select>
+                </div>
+              </div>
+              ` : ''}
+              <div class="hy-row">
+                <div class="hy-row-meta">
+                  <div class="hy-row-name">Events Enabler (Choose-Mode Hub)</div>
+                  <div class="hy-row-sub">Restores seasonal events offline without overriding theme or music.</div>
+                </div>
+                <label class="switch"><input type="checkbox" data-hy-toggle="eventsEnabler" data-hy-reload="1" ${cfg.eventsEnabler ? 'checked' : ''} ${nonCheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
               </div>
               <div class="hy-row">
                 <div class="hy-row-meta">
@@ -134,10 +178,25 @@
                   </select>
                 </div>
               </div>
+              <div class="hy-field-box">
+                <div class="hy-events-bar">
+                  <span class="hy-row-name">Seasonal Events Hub</span>
+                  <button type="button" class="btn sm ghost" data-hy-ev-restore="1" ${nonCheatDis || !cfg.eventsEnabler ? 'disabled' : ''}>Restore All</button>
+                </div>
+                <div class="row" style="gap:8px; margin-top:4px;">
+                  <label class="hy-chip-toggle">
+                    <input type="checkbox" data-hy-ev="halloween26" ${!disEv.includes('halloween26') ? 'checked' : ''} ${nonCheatDis || !cfg.eventsEnabler ? 'disabled' : ''} />
+                    <span>Lavender Tower Night</span>
+                  </label>
+                  <label class="hy-chip-toggle">
+                    <input type="checkbox" data-hy-ev="rush26" ${!disEv.includes('rush26') ? 'checked' : ''} ${nonCheatDis || !cfg.eventsEnabler ? 'disabled' : ''} />
+                    <span>Mewtwo Strikes Back</span>
+                  </label>
+                </div>
+              </div>
             </div>
           `;
         } else if (activeTab === 'cheats') {
-          const rf = String(cfg.rarityFilter || 'off');
           const cheatsOn = !!(
             cfg.cheatsEnabled ||
             spd !== 1 ||
@@ -145,20 +204,15 @@
             cfg.overdrive ||
             cfg.turboXp ||
             cfg.superMagnet ||
-            cfg.instantUlt ||
-            (rf && rf !== 'off') ||
-            cfg.freeRerolls ||
-            cfg.alwaysCrit ||
-            cfg.noCooldowns ||
-            cfg.shinyBoost
+            cfg.instantUlt
           );
           paneHtml = `
             <div class="hy-pane">
-              ${!isOffline ? '<div class="hy-lock-note">Switch to Offline Mode to toggle solo combat cheats. Live cheats automatically switch OFF when joining Online or Co-op lobbies.</div>' : '<div class="hy-lock-note" style="color:#bfdbfe;background:rgba(59,130,246,0.12);border-color:rgba(59,130,246,0.3);">Solo Offline only — all active live cheats are automatically turned OFF whenever you host/join Co-op or switch to Online Mode.</div>'}
+              ${!isOffline ? '<div class="hy-lock-note">Switch to Offline Mode to toggle solo combat cheats (auto-disabled in Co-op).</div>' : ''}
               <div class="hy-row hy-row-cheats-master">
                 <div class="hy-row-meta">
                   <div class="hy-row-name">Enable Solo Cheats (Pause Menu Access)</div>
-                  <div class="hy-row-sub">Adds an inline Live Cheats drawer to the in-game Pause Menu during solo runs. No UI while playing.</div>
+                  <div class="hy-row-sub">Adds an inline Live Cheats drawer to the in-game Pause Menu during solo runs. No HUD while playing.</div>
                 </div>
                 <label class="switch"><input type="checkbox" data-hy-toggle="cheatsEnabled" data-hy-live="1" ${cheatsOn ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
               </div>
@@ -169,20 +223,6 @@
                 </div>
                 <div class="seg">
                   ${[1, 1.5, 2, 3].map((v) => `<button type="button" data-hy-speed="${v}" class="${spd === v ? 'active' : ''}" ${cheatDis ? 'disabled' : ''}>${v}x</button>`).join('')}
-                </div>
-              </div>
-              <div class="hy-row hy-row-rarity">
-                <div class="hy-row-meta">
-                  <div class="hy-row-name">Upgrade Rarity / Boost Luck</div>
-                  <div class="hy-row-sub">Boost Luck massively raises rare upgrade odds, or force Epic+ / Legendary upgrades &amp; relics only.</div>
-                </div>
-                <div class="seg hy-rarity-seg">
-                  ${[
-                    ['off', 'Off'],
-                    ['boost', 'Boost Luck'],
-                    ['epic_plus', 'Epic+ Only'],
-                    ['legendary', 'Legendary']
-                  ].map(([v, lbl]) => `<button type="button" data-hy-rarity="${v}" class="${rf === v ? 'active' : ''}" ${cheatDis ? 'disabled' : ''}>${lbl}</button>`).join('')}
                 </div>
               </div>
               <div class="hy-grid-2">
@@ -205,22 +245,6 @@
                 <div class="hy-row">
                   <div class="hy-row-meta"><div class="hy-row-name">Instant Ultimate</div><div class="hy-row-sub">100% Ult &amp; +75% Haste</div></div>
                   <label class="switch"><input type="checkbox" data-hy-toggle="instantUlt" data-hy-live="1" ${cfg.instantUlt ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
-                </div>
-                <div class="hy-row">
-                  <div class="hy-row-meta"><div class="hy-row-name">Free Rerolls</div><div class="hy-row-sub">Unlimited reroll, banish &amp; skip</div></div>
-                  <label class="switch"><input type="checkbox" data-hy-toggle="freeRerolls" data-hy-live="1" ${cfg.freeRerolls ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
-                </div>
-                <div class="hy-row">
-                  <div class="hy-row-meta"><div class="hy-row-name">Always Crit</div><div class="hy-row-sub">100% Crit rate + bonus crit dmg</div></div>
-                  <label class="switch"><input type="checkbox" data-hy-toggle="alwaysCrit" data-hy-live="1" ${cfg.alwaysCrit ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
-                </div>
-                <div class="hy-row">
-                  <div class="hy-row-meta"><div class="hy-row-name">Rapid Cooldowns</div><div class="hy-row-sub">2.5x attack speed &amp; +200% haste</div></div>
-                  <label class="switch"><input type="checkbox" data-hy-toggle="noCooldowns" data-hy-live="1" ${cfg.noCooldowns ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
-                </div>
-                <div class="hy-row">
-                  <div class="hy-row-meta"><div class="hy-row-name">Shiny Magnet</div><div class="hy-row-sub">Massively boosts wild Shiny odds</div></div>
-                  <label class="switch"><input type="checkbox" data-hy-toggle="shinyBoost" data-hy-live="1" ${cfg.shinyBoost ? 'checked' : ''} ${cheatDis ? 'disabled' : ''} /><span class="slider"></span></label>
                 </div>
                 <div class="hy-row">
                   <div class="hy-row-meta"><div class="hy-row-name">All Difficulties</div><div class="hy-row-sub">Unlock Hard to Master</div></div>
@@ -335,13 +359,19 @@
           };
         });
 
-        container.querySelectorAll('[data-hy-rarity]').forEach((btn) => {
-          btn.onclick = () => {
-            const val = String(btn.dataset.hyRarity || 'off');
-            const names = { off: 'Off', boost: 'Boost Luck', epic_plus: 'Epic+ Only', legendary: 'Legendary Only' };
-            updateCfg({ rarityFilter: val }, { live: true }, `Upgrade Rarity: ${names[val] || val}`);
+        container.querySelectorAll('[data-hy-ev]').forEach((chk) => {
+          chk.onchange = () => {
+            const id = chk.dataset.hyEv;
+            const cur = Array.isArray(cfg.disabledEvents) ? [...cfg.disabledEvents] : [];
+            const next = chk.checked ? cur.filter((x) => x !== id) : [...new Set([...cur, id])];
+            updateCfg({ disabledEvents: next }, { reload: true }, `${chk.checked ? 'Enabled' : 'Disabled'} seasonal event`);
           };
         });
+
+        const restoreBtn = container.querySelector('[data-hy-ev-restore]');
+        if (restoreBtn) {
+          restoreBtn.onclick = () => updateCfg({ disabledEvents: [] }, { reload: true }, 'Restored all seasonal events');
+        }
 
         const MUTATIONS = {
           allProfile: [{ unlockAllProfileCustomization: true }, 'Unlocked all Profile Customization!'],

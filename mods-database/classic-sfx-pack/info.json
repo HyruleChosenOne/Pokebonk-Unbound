@@ -1,15 +1,15 @@
 {
   "id": "classic-sfx-pack",
   "name": "Classic Sound Effects Pack",
-  "version": "1.1.3",
+  "version": "1.1.2",
   "author": "HyruleChosenOne",
   "category": "Audio",
   "scope": "client",
   "featured": false,
-  "tagline": "Authentic Pokémon Emerald menu UI, hover cursor, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares.",
-  "description": "Overhauls PokéBonk with 94 authentic Gen 3 sound effects: genuine Pokémon Emerald menu & UI sounds (SE_SELECT confirm, cursor hover scroll, denied buzzer, Poké Mart shop, save, PokéNav, EXP bar pip, Shiny sparkle, Poké Ball throw/open/shake/click), Emerald battle effectiveness hits & Faint KO, 47 authentic Emerald move & attack sounds wired directly into PokéBonk's move dispatcher (Ember, Flamethrower, Surf, Hydro Pump, Thunderbolt, Razor Leaf, Solar Beam, Ice Beam, Blizzard, Psybeam, Shadow Ball, Bite, Brick Break, Earthquake, Hyper Beam, Explosion, and more), plus 16 Gen 3 milestone fanfares.",
+  "tagline": "Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares.",
+  "description": "Overhauls PokéBonk with 94 authentic Gen 3 sound effects: genuine Pokémon Emerald menu & UI sounds (SE_SELECT confirm, cursor scroll, denied buzzer, Poké Mart shop, save, PokéNav, EXP bar pip, Shiny sparkle, Poké Ball throw/open/shake/click), Emerald battle effectiveness hits & Faint KO, 47 authentic Emerald move & attack sounds wired directly into PokéBonk's move dispatcher (Ember, Flamethrower, Surf, Hydro Pump, Thunderbolt, Razor Leaf, Solar Beam, Ice Beam, Blizzard, Psybeam, Shadow Ball, Bite, Brick Break, Earthquake, Hyper Beam, Explosion, and more), plus 16 Gen 3 milestone fanfares.",
   "highlights": [
-    "Authentic Pokémon Emerald menu & UI SFX (SE_SELECT confirm, menu button hover cursor, denied buzzer, item use, shop, save, PokéNav, Shiny sparkle, Poké Ball capture)",
+    "Authentic Pokémon Emerald menu & UI SFX (SE_SELECT confirm, cursor scroll, denied buzzer, item use, shop, save, PokéNav, Shiny sparkle, Poké Ball capture)",
     "47 authentic Pokémon Emerald move & elemental attack SFX hooked directly into PokéBonk's per-move audio engine across all 144+ moves & all 18 types",
     "Genuine Emerald effectiveness hits (Normal / Super Effective / Not Very Effective), Faint KO, ledge hop, and flee dash",
     "16 classic Gen 3 milestone fanfares (Level Up!, Healed, Caught!, Evolved!, Victory, Defeat, Jackpot, Boss Intro) — 100% Client-side & Co-op safe"
@@ -17,15 +17,6 @@
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON)",
   "changelog": [
-    {
-      "version": "1.1.3",
-      "date": "2026-11-26",
-      "changes": [
-        "Fixed audio URL resolution bug that caused silent SFX playback on v0.10.36/v0.10.38.",
-        "Added automatic Pokémon Emerald Cursor SFX playback when hovering over menu buttons.",
-        "Updated for PokéBonk v0.10.38."
-      ]
-    },
     {
       "version": "1.1.2",
       "date": "2026-04-20",
@@ -43,11 +34,10 @@
   ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36",
-    "0.10.38"
+    "0.10.36"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.38",
+  "maxGameVersion": "0.10.36",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {

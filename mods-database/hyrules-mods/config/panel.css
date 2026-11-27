@@ -175,25 +175,8 @@
 }
 
 .hy-row-exp {
-  border-color: rgba(250, 204, 21, 0.48);
-  background: linear-gradient(135deg, rgba(250, 204, 21, 0.14), rgba(16, 185, 129, 0.08));
-}
-
-.badge.experimental-yellow {
-  background: rgba(250, 204, 21, 0.24);
-  border: 1px solid #facc15;
-  color: #fef08a;
-  font-weight: 800;
-  letter-spacing: 0.45px;
-  text-transform: uppercase;
-}
-
-.hy-row-rarity {
-  flex-wrap: wrap;
-}
-
-.hy-rarity-seg {
-  flex-wrap: wrap;
+  border-color: rgba(249, 115, 22, 0.34);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(249, 115, 22, 0.08));
 }
 
 .hy-row-cheats-master {

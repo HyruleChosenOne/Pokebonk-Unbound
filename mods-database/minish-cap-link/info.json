@@ -36,11 +36,10 @@
   ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36",
-    "0.10.38"
+    "0.10.36"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.38",
+  "maxGameVersion": "0.10.36",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {
