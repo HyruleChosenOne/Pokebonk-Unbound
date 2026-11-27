@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "repository": "HyruleChosenOne/Pokebonk-Unbound",
   "releaseTag": "mods-database",
-  "updatedAt": "2026-11-27T15:57:28.590Z",
+  "updatedAt": "2026-11-27T16:19:35.404Z",
   "modpacks": [
     {
       "id": "gen3-9-complete-expansion",
@@ -58,7 +58,7 @@
     {
       "id": "hyrules-mods",
       "name": "Hyrule's Collection (QoL & Cheats)",
-      "version": "1.3.2",
+      "version": "1.3.3",
       "author": "HyruleChosenOne",
       "category": "Quality of Life",
       "scope": "client",
@@ -78,6 +78,17 @@
         "Full Unlocks: Unlock All (Full Profile Customization), Unlock All Clan & Rank Rewards, Unlock All Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests"
       ],
       "changelog": [
+        {
+          "version": "1.3.3",
+          "date": "2026-11-26",
+          "changes": [
+            "Updated for PokéBonk v0.10.38.",
+            "Made Past Seasonal Events and Experimental Co-op Expeditions always ON by default (removed redundant toggles; labeled Co-op Expeditions with yellow EXPERIMENTAL badges in Co-op menus).",
+            "Added clickable Daily Mutation icon selection in both Solo and Co-op Mutation lobbies.",
+            "Auto-disables all live cheats when joining/hosting Co-op or switching to Online Mode, and added Upgrade Rarity / Boost Luck (Off / Boost Luck / Epic+ Only / Legendary Only), Free Rerolls, Always Crit, Rapid Cooldowns, and Shiny Magnet solo cheats.",
+            "Moved Co-op Mod Mismatch sync prompt into a centered modal popup, aligned Co-op Expedition enemy/XP scaling with normal Co-op, and enforced full squad ready-check + client launch guards."
+          ]
+        },
         {
           "version": "1.3.2",
           "date": "2026-11-26",
@@ -132,10 +143,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -155,9 +167,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 1320821,
+      "sizeBytes": 1320607,
       "sizeFormatted": "1.26 MB",
-      "archiveSizeBytes": 1283147,
+      "archiveSizeBytes": 1284161,
       "fileCount": 5,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/hyrules-mods.zip",
       "path": "mods-database/hyrules-mods",
@@ -172,7 +184,7 @@
     {
       "id": "gen3-9-regions-levels",
       "name": "Gen 3-9 Regions & Levels Pack (14 Unique Maps)",
-      "version": "1.3.1",
+      "version": "1.4.0",
       "author": "HyruleChosenOne",
       "category": "Levels",
       "scope": "gameplay",
@@ -193,6 +205,15 @@
         "Paldea: Asado Desert Titan Mesa & Area Zero Terastal Spire"
       ],
       "changelog": [
+        {
+          "version": "1.4.0",
+          "date": "2026-11-26",
+          "changes": [
+            "Rebuilt all 14 stages using the updated declarative procedural terrain API (proceduralGen, customPrefabs, prefabScatters, and localesDir) with zero legacy bundle patches.",
+            "Distinct region-faithful topography for every stage: Petalburg glades, Mt. Chimney molten lava moat caldera, Mt. Coronet alpine ridge, Eterna twilight river bog, Relic Desert parallel dunes, Dragonspiral moated spiral ascent, Azure Bay crescent cove & islet sandbar, Reflection Cave enclosed crystal interior, Melemele tropical lagoon, Wela Volcano spiral fissures, Galar Wild Area river moors, Crown Tundra frozen ice fjord, Asado stratified red mesas, and Area Zero 3-tier inverted crater.",
+            "Added purely decorative regional map scenery and landmarks (cable pylons, fluted columns, chateau iron lanterns, standing stones, Power Spot rock dens, Zero Lab beacons, and more) with no custom gameplay mechanics."
+          ]
+        },
         {
           "version": "1.3.1",
           "date": "2026-04-20",
@@ -228,11 +249,12 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
-      "minClientVersion": "1.0.5",
+      "maxGameVersion": "0.10.38",
+      "minClientVersion": "1.1.1",
       "preservedVersions": [
         {
           "version": "1.3.1",
@@ -251,10 +273,10 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 25748559,
-      "sizeFormatted": "24.56 MB",
-      "archiveSizeBytes": 25443553,
-      "fileCount": 102,
+      "sizeBytes": 25882322,
+      "sizeFormatted": "24.68 MB",
+      "archiveSizeBytes": 25458969,
+      "fileCount": 113,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels.zip",
       "path": "mods-database/gen3-9-regions-levels",
       "files": [
@@ -344,6 +366,17 @@
         "env/unova_relic_desert/ground.png",
         "env/unova_relic_desert/path.png",
         "info.json",
+        "locales/de.json",
+        "locales/en.json",
+        "locales/es.json",
+        "locales/fr.json",
+        "locales/it.json",
+        "locales/ja.json",
+        "locales/ko.json",
+        "locales/pt.json",
+        "locales/ru.json",
+        "locales/zh.json",
+        "locales/zht.json",
         "mod.json",
         "preview.png",
         "thumbnails/alola_melemele.png",
@@ -418,10 +451,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -441,9 +475,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 68825744,
+      "sizeBytes": 68825774,
       "sizeFormatted": "65.64 MB",
-      "archiveSizeBytes": 62100922,
+      "archiveSizeBytes": 62472847,
       "fileCount": 3175,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/national-dex-gen3-9.zip",
       "path": "mods-database/national-dex-gen3-9",
@@ -456,7 +490,7 @@
     {
       "id": "classic-sfx-pack",
       "name": "Classic Sound Effects Pack",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "author": "HyruleChosenOne",
       "category": "Audio",
       "scope": "client",
@@ -474,6 +508,15 @@
         "16 classic Gen 3 milestone fanfares (Level Up!, Healed, Caught!, Evolved!, Victory, Defeat, Jackpot, Boss Intro) — 100% Client-side & Co-op safe"
       ],
       "changelog": [
+        {
+          "version": "1.1.3",
+          "date": "2026-11-26",
+          "changes": [
+            "Fixed audio URL resolution bug that caused silent SFX playback on v0.10.36/v0.10.38.",
+            "Added automatic Pokémon Emerald Cursor SFX playback when hovering over menu buttons.",
+            "Updated for PokéBonk v0.10.38."
+          ]
+        },
         {
           "version": "1.1.2",
           "date": "2026-04-20",
@@ -503,10 +546,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -526,9 +570,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 2328642,
+      "sizeBytes": 2330187,
       "sizeFormatted": "2.22 MB",
-      "archiveSizeBytes": 2133786,
+      "archiveSizeBytes": 2138011,
       "fileCount": 97,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/classic-sfx-pack.zip",
       "path": "mods-database/classic-sfx-pack",
@@ -684,10 +728,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -707,9 +752,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 87338924,
+      "sizeBytes": 87336933,
       "sizeFormatted": "83.29 MB",
-      "archiveSizeBytes": 86261695,
+      "archiveSizeBytes": 86145166,
       "fileCount": 62,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/pokemon-audio-pack.zip",
       "path": "mods-database/pokemon-audio-pack",
@@ -834,10 +879,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -857,9 +903,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 10329345,
+      "sizeBytes": 10329222,
       "sizeFormatted": "9.85 MB",
-      "archiveSizeBytes": 9067976,
+      "archiveSizeBytes": 9126022,
       "fileCount": 157,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack.zip",
       "path": "mods-database/custom-characters-pack",
@@ -1069,17 +1115,18 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 73324557,
+      "sizeBytes": 73324573,
       "sizeFormatted": "69.93 MB",
-      "archiveSizeBytes": 67851196,
+      "archiveSizeBytes": 63567236,
       "fileCount": 1545,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/isaac-rebirth-modpack.zip",
       "path": "mods-database/isaac-rebirth-modpack",
@@ -1144,10 +1191,11 @@
       ],
       "gameVersions": [
         "0.10.31",
-        "0.10.36"
+        "0.10.36",
+        "0.10.38"
       ],
       "minGameVersion": "0.10.31",
-      "maxGameVersion": "0.10.36",
+      "maxGameVersion": "0.10.38",
       "minClientVersion": "1.0.5",
       "preservedVersions": [
         {
@@ -1167,9 +1215,9 @@
       "infoFile": "info.json",
       "image": "preview.png",
       "hasImage": true,
-      "sizeBytes": 5824235,
+      "sizeBytes": 5824265,
       "sizeFormatted": "5.55 MB",
-      "archiveSizeBytes": 5632088,
+      "archiveSizeBytes": 5628908,
       "fileCount": 55,
       "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link.zip",
       "path": "mods-database/minish-cap-link",

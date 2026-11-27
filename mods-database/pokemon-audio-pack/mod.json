@@ -6,84 +6,6 @@
   "author": "HyruleChosenOne",
   "description": "Replaces menu, event, battle, and boss music with 53 looping FRLG, HGSS, and GB Sounds tracks.",
   "defaultMenuMusic": "frlg-title",
-  "settings": [
-    {
-      "key": "replaceMenuMusic",
-      "type": "toggle",
-      "label": "Replace Title Screen & Main Menu Song",
-      "desc": "Play your chosen Gen 1 & 2 track on the Title Screen and Main Menu.",
-      "default": true
-    },
-    {
-      "key": "menuTrack",
-      "type": "select",
-      "label": "Title Screen & Main Menu Theme",
-      "desc": "Default Title Screen and Main Menu theme.",
-      "default": "frlg-title",
-      "options": [
-        {
-          "value": "frlg-title",
-          "label": "Title Screen (FireRed / LeafGreen)"
-        },
-        {
-          "value": "hgss-title",
-          "label": "Title Screen (HeartGold / SoulSilver)"
-        },
-        {
-          "value": "random",
-          "label": "Random Gen 1 & Gen 2 Menu Theme"
-        },
-        {
-          "value": "frlg-pallet-town",
-          "label": "Pallet Town (FRLG)"
-        },
-        {
-          "value": "hgss-new-bark",
-          "label": "New Bark Town (HGSS)"
-        },
-        {
-          "value": "hgss-bell-tower",
-          "label": "Bell Tower / Ecruteak Sunset (HGSS)"
-        },
-        {
-          "value": "hgss-national-park",
-          "label": "National Park (HGSS)"
-        },
-        {
-          "value": "frlg-lavender-town",
-          "label": "Lavender Town (FRLG)"
-        },
-        {
-          "value": "hgss-sinjoh-ruins",
-          "label": "Sinjoh Ruins (HGSS)"
-        },
-        {
-          "value": "frlg-sevii-islands",
-          "label": "Sevii Islands (FRLG)"
-        },
-        {
-          "value": "frlg-route-1",
-          "label": "Route 1 (FRLG)"
-        },
-        {
-          "value": "hgss-route-29",
-          "label": "Route 29 (HGSS)"
-        },
-        {
-          "value": "hgss-goldenrod",
-          "label": "Goldenrod City (HGSS)"
-        },
-        {
-          "value": "hgss-ecruteak",
-          "label": "Ecruteak City (HGSS)"
-        },
-        {
-          "value": "frlg-cerulean",
-          "label": "Cerulean City (FRLG)"
-        }
-      ]
-    }
-  ],
   "tags": [
     "audio",
     "music",
@@ -734,10 +656,11 @@
   ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36"
+    "0.10.36",
+    "0.10.38"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.36",
+  "maxGameVersion": "0.10.38",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {

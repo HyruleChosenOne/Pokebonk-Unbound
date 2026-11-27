@@ -9217,10 +9217,11 @@
   ],
   "gameVersions": [
     "0.10.31",
-    "0.10.36"
+    "0.10.36",
+    "0.10.38"
   ],
   "minGameVersion": "0.10.31",
-  "maxGameVersion": "0.10.36",
+  "maxGameVersion": "0.10.38",
   "minClientVersion": "1.0.5",
   "preservedVersions": [
     {
