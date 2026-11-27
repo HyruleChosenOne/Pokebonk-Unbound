@@ -16,7 +16,7 @@ All builds ship with **no pre-installed mods**. Install official mods, **Modpack
 
 | Platform | Direct Download (Recommended) | Details |
 | --- | --- | --- |
-| **Windows (x64)** | **[Download PokeBonk-Unbound-Complete-1.1.0-win-x64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Complete-1.1.0-win-x64.zip)** | Extract and run `PokéBonk Unbound.exe`. Online and Offline Mode ready out of the box. |
+| **Windows (x64)** | **[Download PokeBonk-Unbound-Complete-1.1.0.exe](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Complete-1.1.0.exe)** | Single `.exe`, no install. Online and Offline Mode ready out of the box. |
 | **Linux / SteamOS (x64)** | **[Download PokeBonk-Unbound-Complete-1.1.0-linux-x64.tar.gz](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Complete-1.1.0-linux-x64.tar.gz)** | Extract and run `./Pokebonk-Unbound.sh` (or add to Steam on Steam Deck for `1280x800` Gaming Mode). Includes `./install-desktop-shortcut.sh`. |
 | **Android (7.0–17+ Universal)** | **[Download PokeBonk-Unbound-Complete-1.1.0.apk](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Complete-1.1.0.apk)** | Universal 16 KB-aligned APK (`arm64-v8a`, `armeabi-v7a`, `x86_64`) with a floating **Unbound** button and mobile **Unbound Settings**. |
 | **iOS / iPadOS (15.0+ Sideload)** | **[Download PokeBonk-Unbound-Complete-1.1.0.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Complete-1.1.0.ipa)** | Unsigned `arm64` `.ipa` tested on iPad Pro. Install via AltStore, SideStore, Sideloadly, or TrollStore (see [iOS Sideloading Guide](docs/APPLE_EXPERIMENTAL.md#ios--ipados-unsigned-ipa-sideloading)). |
@@ -194,7 +194,7 @@ Most players should download the **[Complete Edition](#download-v110--complete-e
 
 | Platform | Optional Portable Download | Notes |
 | --- | --- | --- |
-| **Windows (x64)** | [PokeBonk-Unbound-Portable-1.1.0-win-x64.zip](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Portable-1.1.0-win-x64.zip) | Lightweight archive + Online Mode; downloads Offline build on first switch. |
+| **Windows (x64)** | [PokeBonk-Unbound-Portable-1.1.0.exe](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Portable-1.1.0.exe) | Single `.exe` + Online Mode; downloads Offline build on first switch. |
 | **Linux / SteamOS (x64)** | [PokeBonk-Unbound-Portable-1.1.0-linux-x64.tar.gz](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Portable-1.1.0-linux-x64.tar.gz) | Lightweight Linux/SteamOS archive; downloads Offline build on demand. |
 | **Android (7.0–17+ Universal)** | [PokeBonk-Unbound-Portable-1.1.0.apk](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Portable-1.1.0.apk) | Lightweight universal 16 KB-aligned APK; downloads Offline build on demand. |
 | **iOS / iPadOS (15.0+ Sideload)** | [PokeBonk-Unbound-Portable-1.1.0.ipa](https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/v1.1.0/PokeBonk-Unbound-Portable-1.1.0.ipa) | Lightweight unsigned `arm64` `.ipa` shell; downloads Offline build on demand. |
