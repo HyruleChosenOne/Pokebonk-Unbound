@@ -1,0 +1,225 @@
+.hy-mod-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hy-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hy-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hy-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.hy-sub {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--muted, #94a3b8);
+}
+
+.hy-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+  background: #0f0c1f;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 11px;
+  padding: 3px;
+}
+
+.hy-tab {
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 8px;
+  background: transparent;
+  color: var(--muted, #94a3b8);
+  font: 700 12px inherit;
+  cursor: pointer;
+  transition: background 0.14s ease, color 0.14s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hy-tab:hover {
+  color: #fff;
+}
+
+.hy-tab.active {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.42), rgba(255, 91, 105, 0.28));
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+}
+
+.hy-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.hy-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.hy-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.hy-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 11px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.032);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hy-row-meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.hy-row-name {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.hy-row-sub {
+  font-size: 11.5px;
+  color: var(--muted, #94a3b8);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+.hy-field-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 9px 11px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.032);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hy-sec-lbl {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  margin-top: 2px;
+}
+
+.hy-events-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hy-chip-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  font: 600 12px inherit;
+  cursor: pointer;
+}
+
+.hy-chip-toggle input {
+  accent-color: #10b981;
+  margin: 0;
+}
+
+.hy-unlock-btn {
+  width: 100%;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 9px;
+  font-size: 12px;
+}
+
+.hy-lock-note {
+  font-size: 11.5px;
+  color: #fde68a;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.32);
+  border-radius: 9px;
+  padding: 7px 10px;
+}
+
+.hy-row-exp {
+  border-color: rgba(249, 115, 22, 0.34);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(249, 115, 22, 0.08));
+}
+
+.hy-row-cheats-master {
+  border-color: rgba(245, 158, 11, 0.38);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(139, 92, 246, 0.08));
+}
+
+.hy-embedded {
+  gap: 10px;
+}
+
+.hy-row-exp .hy-row-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.hy-sub-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-left: 14px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(52, 211, 153, 0.42);
+}
+
+.hy-inline-select {
+  width: auto;
+  min-width: 138px;
+  padding: 5px 9px;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .hy-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .hy-grid-2,
+  .hy-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .hy-grid-3.hy-compact-mobile {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

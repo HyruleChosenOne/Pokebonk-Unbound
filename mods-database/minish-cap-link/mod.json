@@ -2,6 +2,7 @@
   "id": "minish-cap-link",
   "name": "The Minish Cap Showcase Pack — Link & Zelda (Test Mod)",
   "version": "3.0.1",
+  "experimental": true,
   "scope": "gameplay",
   "author": "HyruleChosenOne",
   "description": "Official test/showcase mod demonstrating PokéBonk Unbound modding capabilities (not meant as a polished game): custom 8-dir fighters (Link & Zelda), separate custom movesets, VFX, cries/SFX, Wardrobe skins, Light Arrows Fusion, and 3D Hyrule/Dark World stages.",
@@ -1655,16 +1656,20 @@
           "replace": "e.landmarks&&this.placeLandmarks(e,n);if(this.biome?.id===`hyrule_field`||this.biome?.id===`dark_world`){const _isHy=this.biome.id===`hyrule_field`;const _place=(name,x,z,scale,sway,cols,shadow=8)=>{const y=this.height(x,z)-.08;n.push({kind:{name,scale,sway,collider:0,shadow},x,y,z,flip:!1,s:1});for(const[ox,oz,cr]of cols)this.addCollider({x:x+ox,z:z+oz,r:cr,h:y+12});};if(_isHy){_place(`tower`,-11,-17,.082,0,[[0,0,2.6]],5);_place(`tower`,11,-17,.082,0,[[0,0,2.6]],5);for(const[px,pz]of[[-10,16],[10,16],[-10,36],[10,36]])_place(`pillar`,px,pz,.068,0,[[0,0,1.6]],3);for(const[sx,sz]of[[-44,-14],[46,-12],[-38,42],[42,38]])_place(`stump`,sx,sz,.076,0,[[0,0,2.3]],4);}else{_place(`gargoyle`,-10,-16,.078,0,[[0,0,2.4]],5);_place(`gargoyle`,10,-16,.078,0,[[0,0,2.4]],5);for(const[bx,bz]of[[-11,14],[11,14],[-11,32],[11,32],[-16,-34],[16,-34]])_place(`brazier`,bx,bz,.066,0,[[0,0,1.4]],3);for(const[mx,mz]of[[-36,-44],[36,-44],[-44,-18],[44,-18],[-34,36],[34,36]])_place(`monolith`,mx,mz,.084,0,[[0,0,2.2]],5);}}"
         },
         {
-          "find": "hr.desert=_r(",
-          "replace": "hr.hyrule_field=gr({tree:.072,big:.056,small:.046,sway:.05,treeCollider:1.1,still:[`tree4`,`big0`,`big1`,`big4`,`small3`]}),hr.dark_world=gr({tree:.078,big:.062,small:.048,sway:.03,treeCollider:1.2,still:[`tree1`,`tree3`,`tree4`,`tree5`,`big0`,`big1`,`big2`,`big3`,`big4`,`small1`,`small2`,`small3`,`small5`,`small6`]}),hr.desert=_r("
+          "find": "(\\w+)\\.desert=(\\w+)\\((\\w+)\\(",
+          "replace": "$1.hyrule_field=$3({tree:.072,big:.056,small:.046,sway:.05,treeCollider:1.1,still:[`tree4`,`big0`,`big1`,`big4`,`small3`]}),$1.dark_world=$3({tree:.078,big:.062,small:.048,sway:.03,treeCollider:1.2,still:[`tree1`,`tree3`,`tree4`,`tree5`,`big0`,`big1`,`big2`,`big3`,`big4`,`small1`,`small2`,`small3`,`small5`,`small6`]}),$1.desert=$2($3(",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "t()!==`es`&&await this.localize();",
-          "replace": "t()!==`es`&&await this.localize();await this._pbLocalizeMods?.();"
+          "find": "(\\w+)\\(\\)!==`es`&&await this\\.localize\\(\\);",
+          "replace": "$1()!==`es`&&await this.localize();await this._pbLocalizeMods?.();",
+          "mode": "regex",
+          "flags": ""
         },
         {
           "find": "async localize(){",
-          "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+          "replace": "async _pbLocalizeMods(){try{const lang=(()=>{try{return localStorage.getItem(`pokebonk.lang`)}catch{return null}})()||document.documentElement.lang||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
         },
         {
           "find": "let r=this.terrainMat.uniforms;",
@@ -1719,12 +1724,16 @@
       "matchFile": "^assets/i18n-.*\\.js$",
       "patches": [
         {
-          "find": "export{t as a,",
-          "replace": "(window.__pbAltShinyRanges??=[]).push([2010,2024]);window.__pbHasAltShiny=(id)=>(window.__pbAltShinyRanges||[]).some(([a,b])=>id>=a&&id<=b);(window.__pbI18nUrls??=[]).push(`assets/i18n-minish-link.json`);export{t as a,"
+          "find": "export\\{(\\w+) as a,",
+          "replace": "(window.__pbAltShinyRanges??=[]).push([2010,2024]);window.__pbHasAltShiny=(id)=>(window.__pbAltShinyRanges||[]).some(([a,b])=>id>=a&&id<=b);(window.__pbI18nUrls??=[]).push(`assets/i18n-minish-link.json`);export{$1 as a,",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "function l(e,t){r=e,i=t,d=null}",
-          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign(i,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[r]){Object.assign(i,data.strings[r]);d=null}};function l(e,t){r=e,i=t,d=null;_pbMergeModTr(e)}"
+          "find": "function (\\w+)\\(e,t\\)\\{(\\w+)=e,(\\w+)=t,(\\w+)=null\\}",
+          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign($3,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[$2]){Object.assign($3,data.strings[$2]);$4=null}};function $1(e,t){$2=e,$3=t,$4=null;_pbMergeModTr(e)}",
+          "mode": "regex",
+          "flags": ""
         }
       ]
     },
@@ -1770,28 +1779,32 @@
         },
         {
           "mode": "regex",
-          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)",
+          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)r\\.onerror=\\(\\)\\=>\\{r\\.onerror=null,i\\(\\),r\\.style\\.filter=(\\w+)\\(e\\)\\},r\\.src=(\\w+)\\(`portraits-shiny/\\$\\{e\\}\\.png`\\)",
           "flags": "",
-          "replace": "if(t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))){r.onerror=()=>{r.onerror=null,i(),r.style.filter=K(e)},r.src=h(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)"
+          "replace": "if(t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))){r.onerror=()=>{r.onerror=null,i(),r.style.filter=$3(e)},r.src=$4(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)r.onerror=()=>{r.onerror=null,i(),r.style.filter=$3(e)},r.src=$4(`portraits-shiny/${e}.png`)"
         },
         {
           "mode": "regex",
-          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?h\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?h\\(`pmd/\\$\\{e\\}\\.png`\\):h\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):h\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
+          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?(\\w+)\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?\\1\\(`pmd/\\$\\{e\\}\\.png`\\):\\1\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):\\1\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
           "flags": "",
-          "replace": "re=d==null?t===`classic`&&p?.anims?h(`pmd-shiny/${e}.png`):t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))&&p?.anims?h(`pmd-alt-shiny/${e}.png`):p?.anims?h(`pmd/${e}.png`):h(p?.fallback??`front/${e}.png`):h(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$1(e):d==null&&t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))?``:$2(t,e);"
+          "replace": "re=d==null?t===`classic`&&p?.anims?$1(`pmd-shiny/${e}.png`):t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))&&p?.anims?$1(`pmd-alt-shiny/${e}.png`):p?.anims?$1(`pmd/${e}.png`):$1(p?.fallback??`front/${e}.png`):$1(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$2(e):d==null&&t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e===2010||e===2024))?``:$3(t,e);"
         }
       ]
     },
     {
-      "matchFile": "^assets/cosmetics-.*\\.js$",
+      "matchFile": "^assets/(?:cosmetics|assets)-.*\\.js$",
       "patches": [
         {
-          "find": "];for(let e of _n)q.set(e.member+`:`+e.n,e);",
-          "replace": ",{member:2010,n:1,style:`crystal`,name:e(`Zora Blue Mail`),pal:F(`#061a3a #1458b8 #46b8ff #e8fbff`),desc:e(`Sapphire-blue Zora armor tunic from Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:2,style:`metal`,name:e(`Goron Red Mail`),pal:F(`#240602 #a62010 #ff6a18 #ffe680`),desc:e(`Flame-forged crimson Goron tunic from Death Mountain.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:3,style:`galaxy`,name:e(`Four Sword Violet`),pal:F(`#14082a #5624a8 #b56eff #f4e8ff`),desc:e(`Violet Four Sword resonance hero tunic.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:4,style:`shadow`,name:e(`Dark Link`),pal:F(`#06050c #1e1b2c #4e486a #ff3358`),desc:e(`Shadowy Dark Link reflection with glowing crimson aura.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:1,style:`holo`,name:e(`Royal Sapphire Gown`),pal:F(`#081b44 #2866d0 #78c8ff #ffffff`),desc:e(`Ceremonial sapphire-and-silver royal gown of Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:2,style:`shadow`,name:e(`Sheikah Shadow`),pal:F(`#080b1c #243066 #5c76d4 #ff4a6e`),desc:e(`Stealthy Sheikah-inspired midnight indigo regalia.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:3,style:`galaxy`,name:e(`Twilight Princess`),pal:F(`#120620 #4d1c7a #a662f0 #ffe896`),desc:e(`Regal Twilight amethyst & gilded sovereign gown.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:4,style:`aurora`,name:e(`Triforce of Wisdom`),pal:F(`#2a1c04 #b8860b #ffe04a #ffffff`),desc:e(`Radiant golden Light Force goddess aura.`),rule:{kind:`add`,goal:1,v:()=>0}}];for(let e of _n)q.set(e.member+`:`+e.n,e);"
+          "find": "(pal:(\\w+)\\(`[^`]+`\\),desc:e\\(`[^`]+`\\),rule:\\{kind:`add`,goal:1,v:\\(\\)\\=>0\\}\\})\\];for\\(let e of (\\w+)\\)(\\w+)\\.set\\(e\\.member\\+`:`\\+e\\.n,e\\);",
+          "replace": "$1,{member:2010,n:1,style:`crystal`,name:e(`Zora Blue Mail`),pal:$2(`#061a3a #1458b8 #46b8ff #e8fbff`),desc:e(`Sapphire-blue Zora armor tunic from Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:2,style:`metal`,name:e(`Goron Red Mail`),pal:$2(`#240602 #a62010 #ff6a18 #ffe680`),desc:e(`Flame-forged crimson Goron tunic from Death Mountain.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:3,style:`galaxy`,name:e(`Four Sword Violet`),pal:$2(`#14082a #5624a8 #b56eff #f4e8ff`),desc:e(`Violet Four Sword resonance hero tunic.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2010,n:4,style:`shadow`,name:e(`Dark Link`),pal:$2(`#06050c #1e1b2c #4e486a #ff3358`),desc:e(`Shadowy Dark Link reflection with glowing crimson aura.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:1,style:`holo`,name:e(`Royal Sapphire Gown`),pal:$2(`#081b44 #2866d0 #78c8ff #ffffff`),desc:e(`Ceremonial sapphire-and-silver royal gown of Hyrule.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:2,style:`shadow`,name:e(`Sheikah Shadow`),pal:$2(`#080b1c #243066 #5c76d4 #ff4a6e`),desc:e(`Stealthy Sheikah-inspired midnight indigo regalia.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:3,style:`galaxy`,name:e(`Twilight Princess`),pal:$2(`#120620 #4d1c7a #a662f0 #ffe896`),desc:e(`Regal Twilight amethyst & gilded sovereign gown.`),rule:{kind:`add`,goal:1,v:()=>0}},{member:2024,n:4,style:`aurora`,name:e(`Triforce of Wisdom`),pal:$2(`#2a1c04 #b8860b #ffe04a #ffffff`),desc:e(`Radiant golden Light Force goddess aura.`),rule:{kind:`add`,goal:1,v:()=>0}}];for(let e of $3)$4.set(e.member+`:`+e.n,e);",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "function No(e,t,n,r){switch(n){",
-          "replace": "function No(e,t,n,r){if((t===2010||t===2024)&&(n===`shiny`||n===`classic`||n===`m1`||n===`m2`||n===`t1`||n===`t2`))return!0;switch(n){"
+          "find": "function (\\w+)\\(e,t,n,(\\w+)\\)\\{switch\\(n\\)\\{",
+          "replace": "function $1(e,t,n,$2){if((t===2010||t===2024)&&(n===`shiny`||n===`classic`||n===`m1`||n===`m2`||n===`t1`||n===`t2`))return!0;switch(n){",
+          "mode": "regex",
+          "flags": ""
         },
         {
           "mode": "regex",
@@ -1805,21 +1818,27 @@
       "matchFile": "^assets/buildshare-.*\\.js$",
       "patches": [
         {
-          "find": "function Ur(e,t,n,r){n=Hr(e,n);let i=new Set,o=[];t?.kit.forEach((e,t)=>{let n=a.movesByKey.get(e)?.id;n!=null&&b(n)&&(i.add(n),o.push({id:n,level:Math.max(1,ze[t])}))});",
-          "replace": "function Ur(e,t,n,r){n=Hr(e,n);let i=new Set,o=[];t?.kit.forEach((e,idx)=>{let n=a.movesByKey.get(e)?.id;n!=null&&b(n)&&(i.add(n),o.push({id:n,level:Math.max(1,ze[idx]??Math.min(8,idx+1))}))});if(e===2010||e===2024)return{kit:o,line:[],shared:[],any:null,roster:t};"
+          "find": "function (\\w+)\\(e,t,n,r\\)\\{n=([\\w$]+)\\(e,n\\);let (\\w+)=new Set,(\\w+)=\\[\\];t\\?\\.kit\\.forEach\\(\\(e,t\\)=>\\{let n=(\\w+)\\.movesByKey\\.get\\(e\\)\\?\\.id;n!=null&&(\\w+)\\(n\\)&&\\(\\3\\.add\\(n\\),\\4\\.push\\(\\{id:n,level:Math\\.max\\(1,(\\w+)\\[t\\]\\)\\}\\)\\)\\}\\);",
+          "replace": "function $1(e,t,n,r){n=$2(e,n);let $3=new Set,$4=[];t?.kit.forEach((e,idx)=>{let n=$5.movesByKey.get(e)?.id;n!=null&&$6(n)&&($3.add(n),$4.push({id:n,level:Math.max(1,$7[idx]??Math.min(8,idx+1))}))});if(e===2010||e===2024)return{kit:$4,line:[],shared:[],any:null,roster:t};",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "function bo(e){let t=e.player,n=e.banished,r=t.roster,i=t.$17m9an4(),o=[];r?.kit.forEach((e,r)=>{let s=a.movesByKey.get(e)?.id;s!=null&&!i.has(s)&&!n.has(`m`+s)&&t.level>=ze[r]&&o.push(s)});",
-          "replace": "function bo(e){let t=e.player,n=e.banished,r=t.roster,i=t.$17m9an4(),o=[];const _isZ=(t.speciesId===2010||t.speciesId===2024);r?.kit.forEach((e,idx)=>{let s=a.movesByKey.get(e)?.id;const reqLv=_isZ?(idx===0?0:idx):(ze[idx]??Math.min(8,idx+1));s!=null&&!i.has(s)&&!n.has(`m`+s)&&t.level>=reqLv&&o.push(s)});if(_isZ)return{kit:o,line:[],shared:new Map};"
+          "find": "function (\\w+)\\(e\\)\\{let t=e\\.player,n=e\\.banished,r=t\\.roster,(\\w+)=t\\.([\\w$]+)\\(\\),(\\w+)=\\[\\];r\\?\\.kit\\.forEach\\(\\(e,r\\)=>\\{let s=(\\w+)\\.movesByKey\\.get\\(e\\)\\?\\.id;s!=null&&!\\2\\.has\\(s\\)&&!n\\.has\\(`m`\\+s\\)&&t\\.level>=(\\w+)\\[r\\]&&\\4\\.push\\(s\\)\\}\\);",
+          "replace": "function $1(e){let t=e.player,n=e.banished,r=t.roster,$2=t.$3(),$4=[];const _isZ=(t.speciesId===2010||t.speciesId===2024);r?.kit.forEach((e,idx)=>{let s=$5.movesByKey.get(e)?.id;const reqLv=_isZ?(idx===0?0:idx):($6[idx]??Math.min(8,idx+1));s!=null&&!$2.has(s)&&!n.has(`m`+s)&&t.level>=reqLv&&$4.push(s)});if(_isZ)return{kit:$4,line:[],shared:new Map};",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "return i<0?1:Math.max(1,ze[i])",
-          "replace": "return i<0?1:Math.max(1,ze[i]??Math.min(8,i+1))"
+          "find": "return (\\w+)<0\\?1:Math\\.max\\(1,(\\w+)\\[\\1\\]\\)",
+          "replace": "return $1<0?1:Math.max(1,$2[$1]??Math.min(8,$1+1))",
+          "mode": "regex",
+          "flags": ""
         }
       ]
     },
     {
-      "matchFile": "^assets/relay-.*\\.js$",
+      "matchFile": "^assets/(?:relay|moves)-.*\\.js$",
       "patches": [
         {
           "mode": "regex",
@@ -1845,9 +1864,9 @@
       "patches": [
         {
           "mode": "regex",
-          "find": "V\\(`Nv\\. \\{n\\}`,\\{n:cn\\[t\\]\\}\\)",
+          "find": "V\\(`Nv\\. \\{n\\}`,\\{n:(\\w+)\\[t\\]\\}\\)",
           "flags": "g",
-          "replace": "V(`Nv. {n}`,{n:cn[t]??Math.min(8,t+1)})"
+          "replace": "V(`Nv. {n}`,{n:$1[t]??Math.min(8,t+1)})"
         }
       ]
     }
@@ -1955,6 +1974,28 @@
       "pitch": 1,
       "pitchVar": 0.02,
       "cooldown": 0.55
+    }
+  ],
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "3.0.1",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link-v3.0.1.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
     }
   ]
 }

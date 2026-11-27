@@ -2,6 +2,7 @@
   "id": "minish-cap-link",
   "name": "The Minish Cap Showcase Pack (Test Mod — Link & Zelda)",
   "version": "3.0.1",
+  "experimental": true,
   "author": "HyruleChosenOne",
   "category": "Characters",
   "scope": "gameplay",
@@ -14,5 +15,45 @@
     "6 Wardrobe skins each + Light Arrows Fusion + 3D Hyrule Castle & Pyramid of Power stages with looping ALttP OSTs"
   ],
   "image": "preview.png",
-  "requirements": "Offline Mode (Mod Engine ON)"
+  "requirements": "Offline Mode (Mod Engine ON)",
+  "changelog": [
+    {
+      "version": "3.0.1",
+      "date": "2026-04-20",
+      "changes": [
+        "Moved showcase test mod into the Experimental tab in the Mod Browser.",
+        "Fixed localization helper and GPU VFX table hook compatibility on PokéBonk v0.10.36."
+      ]
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-04-03",
+      "changes": [
+        "Added playable Princess Zelda (#2024) with Wind Waker HD voice SFX, 9 Goddess & Triforce Magic moves, Light Arrows Fusion, and 6 Wardrobe skins.",
+        "Added Hyrule Castle and Pyramid of Power 3D stages with looping ALttP SNES OSTs."
+      ]
+    }
+  ],
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "3.0.1",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link-v3.0.1.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/minish-cap-link.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
+    }
+  ]
 }

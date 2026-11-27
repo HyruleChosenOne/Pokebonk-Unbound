@@ -21,8 +21,8 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 
 | Mod ID | Name | Co-op Scope | Featured | Category | Size | Version | Summary |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.23 MB | `v1.2.1` | Offline Mode events hub, live main menu customization, P2P multiplayer, solo cheats, and full profile unlocks. |
-| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 24.55 MB | `v1.3.1` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks. |
+| `hyrules-mods` | [Hyrule's Collection (QoL & Cheats)](#hyrules-mods) | Client (Optional) | **Essential** (Pinned) | Quality of Life | 1.26 MB | `v1.3.2` | Offline Mode events hub, live main menu customization, P2P multiplayer, experimental Co-op Expeditions, solo cheats, and full profile unlocks. |
+| `gen3-9-regions-levels` | [Gen 3-9 Regions & Levels Pack (14 Unique Maps)](#gen3-9-regions-levels) | **Gameplay** (Parity Required) | **Featured** | Levels | 24.56 MB | `v1.3.1` | 14 playable levels across Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea with custom biome textures, real in-game 3D level screenshots, and 3D landmarks. |
 | `national-dex-gen3-9` | [National Dex Expansion (Gen 3-9: Hoenn to Paldea)](#national-dex-gen3-9) | **Gameplay** (Parity Required) | **Featured** | Characters | 65.64 MB | `v1.2.2` | Expands the playable Pokédex to #1025 with 774 fully animated Pokémon (0 static sprites), Dual Shinies, 72 attacks, 24 Ultimates & 11-language translation. |
 | `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.2` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
 | `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.3` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
@@ -41,18 +41,19 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 - **ID**: `hyrules-mods`
 - **Co-op Scope**: Client-side (optional in Co-op; safe to differ between players)
 - **Category**: Quality of Life (**Featured**)
-- **Size**: 1.23 MB (3 files)
-- **Version**: `v1.2.1`
+- **Size**: 1.26 MB (5 files)
+- **Version**: `v1.3.2`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON)
 - **Info File**: [`mods-database/hyrules-mods/info.json`](mods-database/hyrules-mods/info.json)
 - **Tags**: `qol`, `collection`, `enabler`, `events`, `p2p`, `themes`, `cheats`, `unlocks`
 
-All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub, unlocks direct IP:Port P2P Co-op multiplayer with Local Lobbies browser, adds live 3D main menu diorama and music selectors, and provides reworked Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities.
+All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection by HyruleChosenOne. Restores past seasonal events in a dedicated Choose-Mode hub, unlocks direct IP:Port P2P Co-op multiplayer with Local Lobbies browser and an experimental Co-op Expeditions (2-4P) mode integrated into Co-op menus, adds live 3D main menu diorama and music selectors, and provides reworked Solo Combat Cheats (Run Speed 1x-3x, God Mode, Overdrive, Turbo XP, Super Magnet & Luck, Instant Ultimate), Unlock All Clan & Rank Rewards, Unlock All (Full Profile Customization), Max Friendship, Complete Quests, and Trainer Save Utilities.
 
 **Highlights:**
 - Events Enabler restoring Lavender Tower Night and Mewtwo Strikes Back in a dedicated hub
 - Direct IP:Port Peer-to-Peer Co-op multiplayer with UDP Local Lobbies browser & 1-click Mod Sync
+- Experimental Co-op Expeditions (2-4P) toggle adding Expedition mode directly to Co-op menus with synced Expedition Base transitions for all players
 - Live 3D Main Menu Wallpaper and Music selector (supports additive custom music)
 - Solo Combat Cheats: Run Speed 1x/1.5x/2x/3x, God Mode, Overdrive, Turbo XP (5x), Super Magnet & Luck, Instant Ultimate, Unlock All Difficulties
 - Full Unlocks: Unlock All (Full Profile Customization), Unlock All Clan & Rank Rewards, Unlock All Wardrobe & Shinies, Max Friendship (Lv. 20), Complete All Quests
@@ -66,7 +67,7 @@ All-in-one Offline Mode Quality-of-Life, Enablers, and Trainer Cheats collection
 - **ID**: `gen3-9-regions-levels`
 - **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
 - **Category**: Levels (**Featured**)
-- **Size**: 24.55 MB (102 files)
+- **Size**: 24.56 MB (102 files)
 - **Version**: `v1.3.1`
 - **Author**: HyruleChosenOne
 - **Requirements**: Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)
@@ -210,12 +211,12 @@ Note: This is a test/showcase mod built to demonstrate PokéBonk Unbound's moddi
 
 ## Installing Mods
 
-1. Open **Unbound Settings** from the Offline Main Menu (**Unbound Settings** button, or press `F1` for the top toolbar on Desktop; floating **Unbound** button on Android).
+1. Open **Unbound Settings** from the Offline Main Menu (**Unbound Menu** button, Pause Menu on Desktop Modded, or `F1` top toolbar; floating **Unbound** button on Android/iOS).
 2. Switch to the **Mod Browser** tab.
 3. Click **Install** on any official or approved community mod — downloaded mods are automatically enabled in Offline Mode.
 
 ## Community Mods (`community-mods/`)
 
-No approved community mods yet — submit yours for manual review via the **[Community Mod Submission Form](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues/new?template=submit-community-mod.yml)** or see [`community-mods/README.md`](community-mods/README.md)!
+No approved community mods yet — submit yours for manual review via the **[Community Mod Submission Form](https://github.com/HyruleChosenOne/Pokebonk-Unbound/issues/new?template=submit-community-mod.yml)** or see [`community-mods/README.md`](community-mods/README.md).
 
 Want to create or publish your own mod? See [docs/MODDING.md](docs/MODDING.md).

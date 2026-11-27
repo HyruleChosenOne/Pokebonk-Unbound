@@ -16,5 +16,46 @@
     "24 custom Ultimates (Rayquaza, Lucario, Garchomp, Greninja, Zacian, Koraidon, Miraidon, Raging Bolt, Terapagos, and more)"
   ],
   "image": "preview.png",
-  "requirements": "Offline Mode (Mod Engine ON)"
+  "requirements": "Offline Mode (Mod Engine ON)",
+  "changelog": [
+    {
+      "version": "1.2.2",
+      "date": "2026-04-20",
+      "changes": [
+        "Fixed localization helper compatibility on PokéBonk v0.10.36.",
+        "Upgraded all 774 Gen 3-9 species (including Copperajah & Gen 7-9) to 100% animated multi-frame sprites with Dual Shinies.",
+        "Verified 72 custom Gen 3-9 attacks, 24 signature Ultimates, and 11-language global localization."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-03-30",
+      "changes": [
+        "Added full Dual Shiny sheets (Classic Shiny + custom Alt-Palette Shiny) for every Gen 3-9 Pokémon.",
+        "Expanded localization coverage across all 11 supported in-game languages."
+      ]
+    }
+  ],
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "1.2.2",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/national-dex-gen3-9-v1.2.2.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/national-dex-gen3-9.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
+    }
+  ]
 }

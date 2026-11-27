@@ -19,6 +19,24 @@
   ],
   "image": "preview.png",
   "requirements": "Offline Mode (Mod Engine ON; works standalone or with National Dex Gen 3-9)",
+  "changelog": [
+    {
+      "version": "1.3.1",
+      "date": "2026-04-20",
+      "changes": [
+        "Fixed localization helper compatibility on PokéBonk v0.10.36.",
+        "Updated all 14 custom stages across Hoenn to Paldea with harmonized ground/path/cliff textures, 3D landmarks, and official region OSTs."
+      ]
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-04-04",
+      "changes": [
+        "Replaced placeholder thumbnails with real in-game 3D level screenshots for every stage.",
+        "Added 11-language localization for all 7 regions and 14 stage names."
+      ]
+    }
+  ],
   "tags": [
     "levels",
     "regions",
@@ -35,5 +53,27 @@
     "custom-terrain"
   ],
   "verified": true,
-  "summary": "All 7 Gen 3-9 regions & 14 maps with unique 3D terrain architectures, 14 official stage OSTs, custom pixel-art textures, and 11-language localization."
+  "summary": "All 7 Gen 3-9 regions & 14 maps with unique 3D terrain architectures, 14 official stage OSTs, custom pixel-art textures, and 11-language localization.",
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "1.3.1",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels-v1.3.1.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/gen3-9-regions-levels.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
+    }
+  ]
 }

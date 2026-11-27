@@ -1112,7 +1112,7 @@
   ],
   "bundlePatches": [
     {
-      "matchFile": "^assets/cosmetics-.*\\.js$",
+      "matchFile": "^assets/(?:cosmetics|assets)-.*\\.js$",
       "patches": [
         {
           "mode": "regex",
@@ -1127,20 +1127,20 @@
       "patches": [
         {
           "mode": "regex",
-          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)",
+          "find": "if\\(t===`shiny`&&(\\w+)\\(e\\)\\)r\\.style\\.visibility=`hidden`,(\\w+)\\(e\\)\\.then\\(e=>\\{e\\?r\\.src=e:i\\(\\),r\\.style\\.visibility=``\\}\\);else if\\(t===`classic`\\)r\\.onerror=\\(\\)\\=>\\{r\\.onerror=null,i\\(\\),r\\.style\\.filter=(\\w+)\\(e\\)\\},r\\.src=(\\w+)\\(`portraits-shiny/\\$\\{e\\}\\.png`\\)",
           "flags": "",
-          "replace": "if(t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))){r.onerror=()=>{r.onerror=null,i(),r.style.filter=K(e)},r.src=h(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)"
+          "replace": "if(t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))){r.onerror=()=>{r.onerror=null,i(),r.style.filter=$3(e)},r.src=$4(`portraits-alt-shiny/${e}.png`)}else if(t===`shiny`&&$1(e))r.style.visibility=`hidden`,$2(e).then(e=>{e?r.src=e:i(),r.style.visibility=``});else if(t===`classic`)r.onerror=()=>{r.onerror=null,i(),r.style.filter=$3(e)},r.src=$4(`portraits-shiny/${e}.png`)"
         },
         {
           "mode": "regex",
-          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?h\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?h\\(`pmd/\\$\\{e\\}\\.png`\\):h\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):h\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
+          "find": "re=d==null\\?t===`classic`&&p\\?\\.anims\\?(\\w+)\\(`pmd-shiny/\\$\\{e\\}\\.png`\\):p\\?\\.anims\\?\\1\\(`pmd/\\$\\{e\\}\\.png`\\):\\1\\(p\\?\\.fallback\\?\\?`front/\\$\\{e\\}\\.png`\\):\\1\\(`pmd-forms/\\$\\{d\\}\\.png`\\),ie=d!=null&&t===`classic`\\?(\\w+)\\(e\\):(\\w+)\\(t,e\\);",
           "flags": "",
-          "replace": "re=d==null?t===`classic`&&p?.anims?h(`pmd-shiny/${e}.png`):t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))&&p?.anims?h(`pmd-alt-shiny/${e}.png`):p?.anims?h(`pmd/${e}.png`):h(p?.fallback??`front/${e}.png`):h(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$1(e):d==null&&t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))?``:$2(t,e);"
+          "replace": "re=d==null?t===`classic`&&p?.anims?$1(`pmd-shiny/${e}.png`):t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))&&p?.anims?$1(`pmd-alt-shiny/${e}.png`):p?.anims?$1(`pmd/${e}.png`):$1(p?.fallback??`front/${e}.png`):$1(`pmd-forms/${d}.png`),ie=d!=null&&t===`classic`?$2(e):d==null&&t===`shiny`&&(window.__pbHasAltShiny?window.__pbHasAltShiny(e):(e>=2001&&e<=2023))?``:$3(t,e);"
         }
       ]
     },
     {
-      "matchFile": "^assets/relay-.*\\.js$",
+      "matchFile": "^assets/(?:relay|moves)-.*\\.js$",
       "patches": [
         {
           "mode": "regex",
@@ -1184,12 +1184,14 @@
           "replace": "(this.flags[t]&131072?$1:this.flags[t]&2048&&(window.__pbHasAltShiny?window.__pbHasAltShiny(this.species[t]):(this.species[t]>=2001&&this.species[t]<=2023))?4e4:0)+this.species[t]"
         },
         {
-          "find": "t()!==`es`&&await this.localize();",
-          "replace": "t()!==`es`&&await this.localize();await this._pbLocalizeMods?.();"
+          "find": "(\\w+)\\(\\)!==`es`&&await this\\.localize\\(\\);",
+          "replace": "$1()!==`es`&&await this.localize();await this._pbLocalizeMods?.();",
+          "mode": "regex",
+          "flags": ""
         },
         {
           "find": "async localize(){",
-          "replace": "async _pbLocalizeMods(){try{const lang=t()||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
+          "replace": "async _pbLocalizeMods(){try{const lang=(()=>{try{return localStorage.getItem(`pokebonk.lang`)}catch{return null}})()||document.documentElement.lang||`en`,urls=[...new Set(window.__pbI18nUrls||[])];if(!urls.length)return;const packs=await Promise.all(urls.map(u=>fetch(u).then(r=>r.ok?r.json():null).then(d=>d?Object.assign(d,{_u:u}):null).catch(()=>null)));for(const pk of packs){if(!pk)continue;window.__pbApplyModI18nData?.(pk);const L=pk.langs?.[lang]||pk.langs?.en;if(!L)continue;if(L.pokemon||L.flavor||L.roles){for(const p of this.all){const k=String(p.id);if(L.pokemon?.[k])p.name=L.pokemon[k];if(L.flavor?.[k])p.flavor=L.flavor[k];if(L.roles?.[k])p.role=L.roles[k]}}if(L.moves){for(const[mk,mv]of this.movesByKey){const tr=L.moves[mk];if(typeof tr===`string`)mv.name=tr;else if(tr&&typeof tr===`object`){if(tr.name)mv.name=tr.name;if(tr.flavor)mv.flavor=tr.flavor}}}if(L.items){for(const[ik,it]of Object.entries(this.items)){const tr=L.items[ik];if(tr?.name)it.name=tr.name;if(tr?.desc)it.desc=tr.desc}}if(L.ults&&typeof NC!==`undefined`){for(const[uid,tr]of Object.entries(L.ults)){const u=NC[Number(uid)];if(u&&tr){if(tr.name)u.names=[tr.name];if(tr.desc)u.descs=[tr.desc]}}}if(L.biomes&&Array.isArray(window.__pbBiomesRef)){for(const b of window.__pbBiomesRef){const tr=L.biomes[b.id];if(tr){if(tr.name)b.name=tr.name;if(tr.desc)b.desc=tr.desc;if(tr.sanctuary&&b.sanctuary)b.sanctuary.name=tr.sanctuary;if(tr.landmark&&b.landmark)b.landmark.name=tr.landmark}}}if(L.regions&&Array.isArray(window.__pbRegionsRef)){for(const rg of window.__pbRegionsRef){const tr=L.regions[rg.id];if(tr)rg.name=tr}}}}catch(e){console.warn(`[ModI18n]`,e)}}async localize(){"
         }
       ]
     },
@@ -1208,12 +1210,16 @@
       "matchFile": "^assets/i18n-.*\\.js$",
       "patches": [
         {
-          "find": "export{t as a,",
-          "replace": "(window.__pbAltShinyRanges??=[]).push([2001,2023]);window.__pbHasAltShiny=(id)=>(window.__pbAltShinyRanges||[]).some(([a,b])=>id>=a&&id<=b);(window.__pbI18nUrls??=[]).push(`assets/i18n-nondexed.json`);export{t as a,"
+          "find": "export\\{(\\w+) as a,",
+          "replace": "(window.__pbAltShinyRanges??=[]).push([2001,2023]);window.__pbHasAltShiny=(id)=>(window.__pbAltShinyRanges||[]).some(([a,b])=>id>=a&&id<=b);(window.__pbI18nUrls??=[]).push(`assets/i18n-nondexed.json`);export{$1 as a,",
+          "mode": "regex",
+          "flags": ""
         },
         {
-          "find": "function l(e,t){r=e,i=t,d=null}",
-          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign(i,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[r]){Object.assign(i,data.strings[r]);d=null}};function l(e,t){r=e,i=t,d=null;_pbMergeModTr(e)}"
+          "find": "function (\\w+)\\(e,t\\)\\{(\\w+)=e,(\\w+)=t,(\\w+)=null\\}",
+          "replace": "var _pbModTr={};function _pbMergeModTr(lang){for(const u of(window.__pbI18nUrls||[])){if(_pbModTr[u]&&_pbModTr[u].strings?.[lang])Object.assign($3,_pbModTr[u].strings[lang])}}window.__pbApplyModI18nData=(data)=>{if(!data)return;_pbModTr[data._u]=data;if(data.strings?.[$2]){Object.assign($3,data.strings[$2]);$4=null}};function $1(e,t){$2=e,$3=t,$4=null;_pbMergeModTr(e)}",
+          "mode": "regex",
+          "flags": ""
         }
       ]
     },
@@ -1225,6 +1231,28 @@
           "replace": "_pbRef=(window.__pbBiomesRef=n,window.__pbRegionsRef=i),a=e=>i.find(t=>e>=t.dex[0]&&e<=t.dex[1])??i[0],"
         }
       ]
+    }
+  ],
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "2.0.1",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack-v2.0.1.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
     }
   ]
 }

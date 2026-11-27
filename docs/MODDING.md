@@ -40,9 +40,7 @@ All mod toggles, config panels, and mod actions live inside **Unbound Settings**
 
 ## 1. Folder Structure & Discovery
 
-The mod engine scans these directories in order:
-1. `%APPDATA%\pokebonk-unbound\mods` (or `<POKEBONK_UNBOUND_DATA_DIR>/mods`)
-2. `./mods/` beside the executable (if present)
+The mod engine scans `<GameFolder>/mods/` (chosen on the Startup Homescreen, defaulting to `Documents\My Games\PokéBonk Unbound\mods` on Windows, `~/Games/PokéBonk Unbound/mods` on Linux, `Documents/PokéBonk Unbound/mods` on iOS, or the app folder on Android; overridable via `POKEBONK_UNBOUND_DATA_DIR`). Any legacy `./mods/` folder beside the executable is also scanned if present.
 
 Each structured mod is a folder containing a `mod.json` file:
 
@@ -85,7 +83,9 @@ mods/
     script.js
 ```
 
-Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.json`, `.png`, `.ogg`, `.glb`) are also picked up and can be toggled on or off individually.
+Standalone non-empty drop-in files placed directly in `./mods/` (`.css`, `.js`, `.mjs`, `.patch.json`, images, audio, `.glb`/`.gltf`) are also picked up and can be toggled individually.
+
+Engine config files inside `./mods/` (`mods-config.json`, `hyrules-config.json`, `mod-settings.json`, `modpack-enemy-spawns.json`, `mod-browser-*.json`), dotfiles, `README*` files, unrecognized files (such as `.txt` or non-patch `.json`), and 0-byte files are kept hidden from **Manage Mods**. Structured helper packages can also set `"hidden": true` (or `"internal": true`) in `mod.json` to stay hidden from the installed list.
 
 ---
 
@@ -100,7 +100,12 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `description` | `string` | Short summary of what the mod adds. |
 | `category` | `string` | Category label (`Characters`, `Levels`, `Audio`, `Gameplay`, `Quality of Life`, etc.). |
 | `scope` | `"gameplay" \| "client"` | Co-op parity scope. Auto-detected if omitted (`gameplay` mods must match version across all Co-op peers; `client` mods like audio/UI can differ freely). |
+| `totalConversion` | `boolean` | When `true`, enabling this mod overrides and disables all other active mods except Hyrule's Collection. |
+| `requires` | `(string \| object)[]` | Required dependency mod IDs (or `{ id, minVersion, reason }`). Automatically ordered before this mod and flagged in Mod Issues if missing/disabled. |
+| `conflicts` | `(string \| object)[]` | Declared incompatible mod IDs (or `{ id, reason }`). Surfaced in Mod Issues with guided resolution if both are enabled. |
+| `loadAfter` | `string[]` | Soft load-order hints ensuring listed mod IDs load before this mod when both are active. |
 | `experimental` | `boolean` | When `true`, the mod is isolated strictly to the **Experimental** tab in the Mod Browser (never shown in All/Featured/category tabs). |
+| `hidden` / `internal` | `boolean` | When `true`, hides an internal helper package from the **Manage Mods** list. |
 | `tags` | `string[]` | Searchable tags for the Mod Browser. |
 | `gameVersions` | `string[]` | Tested PokéBonk build versions (e.g. `["0.10.31", "0.10.36"]`). |
 | `minGameVersion` / `maxGameVersion` | `string` | Optional inclusive game version range. |
@@ -117,11 +122,13 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `enableCustomEnemies` | `(string \| number \| object)[]` | Activates `optInBiomes` declared on custom enemies by key/ID (or overrides biomes per entry). |
 | `customMoves` | `object[]` | Inline custom attack definitions. |
 | `movesDir` | `string` | Relative directory containing `.json` attack files. |
+| `customFusions` | `object[]` | Inline declarative attack fusion / synergy recipes injected into `machine-*.js`. |
+| `fusionsDir` | `string` | Relative directory containing `.json` custom fusion definitions. |
 | `customVfx` | `object[]` | Reusable declarative GPU visual effect presets. |
 | `vfxDir` | `string` | Relative directory containing `.json` VFX preset files. |
-| `customItems` | `object[]` | Inline custom Pokéball pickup item definitions. |
+| `customItems` | `object[]` | Inline custom Pokéball pickup & optional shop (`shop: true`, `shopPrice`) item definitions. |
 | `itemsDir` | `string` | Relative directory containing `.json` item files. |
-| `customLevels` | `object[]` | Inline procedural (`proceduralGen`, `prefabScatters`) or 3D `.glb` custom stage definitions. |
+| `customLevels` | `object[]` | Inline procedural (`proceduralGen`, `proceduralGen.interior`, `landmarks`, `bossWaves`, `prefabScatters`) or 3D `.glb` custom stage definitions. |
 | `levelsDir` | `string` | Relative directory containing `.json` level files. |
 | `customPrefabs` | `object[]` | Reusable 3D/2D prefab assets (`.glb`/`.gltf`, billboard sprites, textures, composite `parts`) shared by map mechanics and `prefabScatters`. |
 | `prefabsDir` | `string` | Relative directory containing `.json` prefab files. |
@@ -129,20 +136,26 @@ Standalone drop-in files placed directly in `./mods/` (`.css`, `.js`, `.patch.js
 | `mechanicsDir` | `string` | Relative directory containing `.json` map mechanic files. |
 | `customMusic` | `object[]` | Additive custom music tracks (`.ogg`, `.mp3`, `.wav`, `.m4a`, `.webm`, `.flac`). |
 | `musicDir` | `string` | Relative directory of custom music `.json` descriptors or drop-in audio files. |
+| `musicOverrides` | `object` | Opt-in map of vanilla track IDs (`menu`, biome IDs, `boss`) to custom track IDs (with optional `settingKey` / `biomes` conditions). |
 | `customSfx` | `object[]` | Additive custom SFX clips routed through the native SFX bus. |
 | `sfxDir` | `string` | Relative directory of custom SFX `.json` descriptors or drop-in audio files. |
+| `sfxOverrides` | `object` | Opt-in map of vanilla `Audio` SFX method names (`click`, `hover`, `victory`, etc.) to custom audio files or `sfxId`s (with optional `settingKey` / `biomes`). |
+| `i18n` | `object` | Declarative localization map keyed by language code (`"en"`, `"es"`, `"*"`, etc.) merged automatically into `i18n-*.js` and `localize()`. |
+| `localesDir` | `string` | Relative directory containing per-language JSON translation files (e.g. `locales/en.json`, `locales/es.json`). |
 | `customTreasures` | `object[]` | Inline custom Treasure roulette wheels. |
 | `treasuresDir` | `string` | Relative directory containing `.json` treasure wheel files. |
-| `configModule` | `object` | Custom UI module `{ script, style, title, subtitle }` mounted inside **Unbound Settings -> Mods Config** when the mod is enabled. |
+| `customAchievements` | `object[]` | Declarative custom achievements evaluated strictly against isolated `profile.customProgress`. |
+| `achievementsDir` | `string` | Relative directory containing `.json` custom achievement definitions. |
+| `configModule` | `object` | Custom UI module `{ script, style, title, subtitle }` mounted inside **Unbound Settings -> Mods Config** across Desktop, Android, and iOS. |
 | `configPanel` | `string` | Shorthand for `{ "script": "<path>" }`. |
 | `configSections` | `object[]` | Optional grouped section metadata for declarative settings. |
 | `settings` | `object[]` | Declarative mod settings (`toggle` / `select`) rendered automatically in **Unbound Settings -> Mods Config**. |
 | `toolbarActions` | `object[]` | Action buttons displayed inside **Unbound Settings -> Manage Mods** and **Mods Config**. |
-| `styles` | `string[]` | Relative CSS files injected into the game document. |
-| `scripts` | `string[]` | Relative JS files executed in Offline Mode with `window.pokebonkModAPI`. |
+| `styles` | `string[]` | Relative CSS files served via `/local-api/mod-styles.css` across Desktop, Android, and iOS. |
+| `scripts` | `string[]` | Relative JS files executed inside isolated IIFEs via `/local-api/mod-runtime.js` with `window.pokebonkModAPI` and `window.pokebonkHooks` across Desktop, Android, and iOS. |
 | `assetsDir` | `string` | Directory whose files override matching game asset paths. |
 | `assetAliases` | `object` | Map of `fromPath -> toPath` aliases (supports trailing `/` prefixes). |
-| `dataPatches` | `string[]` | Relative JSON files patching `data/pokemon.json` stats or fields. |
+| `dataPatches` | `string[]` | Relative JSON files containing `pokemonPatches` (for `data/pokemon.json`) and/or `movePatches` (for `data/moves.json`). |
 | `bundlePatches` | `object[]` | Targeted exact or regex replacements applied in memory to served JS/CSS chunks. |
 | `profilePatch` | `string` | Relative JSON file granting non-destructive species or biome unlocks. |
 | `enableAllEvents` | `boolean` | Enables the seasonal events hub if `true`. |
@@ -287,7 +300,7 @@ Mods can add custom Wardrobe looks, custom shader palettes, full replacement spr
 | `pmdAltShinySheet` (aliases `altShinySheet`, `classicSheet`) | `/assets/pmd-alt-shiny/<id>.png` | Second distinct shiny PMD sheet used when `classic` (Classic Shiny) is equipped. |
 | `portraitAltShiny` (aliases `altShinyPortrait`, `classicPortrait`) | `/assets/portraits-alt-shiny/<id>.png` | Custom 40x40 portrait for the second shiny look. |
 | `hasAltShiny` | `boolean` | Automatically `true` whenever `pmdAltShinySheet` or `portraitAltShiny` is set. |
-| `unlockSkins` | `boolean \| string[]` | Set `true` to unlock `shiny`, `classic`, and `m1`/`m2`/`t1`/`t2` immediately, or pass specific look keys like `["shiny", "classic", "m1"]`. |
+| `unlockSkins` | `boolean \| string[]` | Set `true` to unlock all slots (`shiny`, `classic`, `m1`, `m2`, `t1`, `t2`, `l1`, `l2`, `l3`, `st`, `vg`, `my`) immediately, or pass specific look keys. |
 
 ### Wardrobe Entries (`character.wardrobe` or top-level `customWardrobe` / `wardrobeDir`)
 
@@ -321,7 +334,7 @@ Attach skins inline on a character via `"wardrobe": [...]` (or `"skins": [...]`)
 | Field | Type | Description |
 | --- | --- | --- |
 | `member` (aliases `speciesId`, `characterId`) | `number` | Target species ID (not required when declared inside a character's `wardrobe` array). Cannot target unplayable enemy IDs `5000`-`8999`. |
-| `slot` / `n` | `"m1" \| "m2" \| "t1" \| "t2"` or `1`-`4` | Wardrobe slot (`m1`=`1`, `m2`=`2`, `t1`=`3`, `t2`=`4`). |
+| `slot` / `n` | `"m1" \| "m2" \| "t1" \| "t2" \| "l1" \| "l2" \| "l3" \| "st" \| "vg" \| "my"` or `1`-`10` | Full Wardrobe slot support (`m1`=`1`, `m2`=`2`, `t1`=`3`, `t2`=`4`, `l1`=`5`, `l2`=`6`, `l3`=`7`, `st`=`8`, `vg`=`9`, `my`=`10`). |
 | `name` | `string` | Skin display name shown in Wardrobe. |
 | `style` | `string` | Any built-in shader style (`metal`, `crystal`, `holo`, `galaxy`, `shadow`, `neon`, `stone`, `aurora`, `gb`, `magma`, `ember`, `verdant`, `tidal`, `psionic`, `spectre`, `storm`, `geode`, `candy`, `frost`, `gothic`, `circuit`, `toxic`, `ukiyo`, `glitch`, `calavera`, `synth`). |
 | `pal` | `string` | Space-separated 4-color hex ramp (darkest to brightest). |
@@ -840,9 +853,61 @@ Add custom Treasure wheels (`customTreasures` / `treasuresDir`) to PokéBonk's *
 
 ---
 
+## 12.5. Vanilla Progression Isolation & Custom Pokédex / Achievements
+
+PokéBonk Unbound strictly isolates modded gameplay from base PokéBonk progression and unlocks:
+
+- **Zero Base Progression Leakage**: Playing with gameplay mods, Hyrule cheats, custom Pokémon (`#252+` / `#2000+`), or custom regions/levels never modifies base PokéBonk counters, Pokédex+ (`#1-#251`), Research Notebook, League unlocks, Map clears, Time Medals, Stardust, Bonkoins, or Base Achievements. Explicit unlock-all cheats in Hyrule's Collection remain the only way to unlock base progression via cheats.
+- **Hidden by Default**: **Custom Achievements** are completely hidden unless an active mod brings its own achievements via `customAchievements` or `achievementsDir`. **Custom Pokédex** is hidden unless active mods add custom Pokémon (`> 251`), regions, levels, moves, items, or achievements.
+- **Isolated Persistence (`profile.customProgress`)**: All custom Pokédex entries, custom map clears, custom counters, custom achievement claims, and custom tracked pins persist inside `profile.customProgress` on disk without touching base PokéBonk saves.
+
+### Declaring Custom Achievements (`customAchievements` / `achievementsDir`)
+
+In `mod.json` (or inside JSON files under `achievementsDir`):
+
+```json
+"customAchievementCategories": [
+  { "id": "hyrule", "name": "Hyrule Trials", "icon": "crown" }
+],
+"customAchievements": [
+  {
+    "id": "hyrule-clear",
+    "name": "Hero of Hyrule",
+    "desc": "Clear Hyrule Field on any difficulty.",
+    "cat": "hyrule",
+    "counter": "win_hyrule_field",
+    "goal": 1,
+    "reward": 250,
+    "title": "Hero of the Minish",
+    "species": 2010,
+    "unlockSpecies": [2024],
+    "unlockBiome": ["dark_world"]
+  },
+  {
+    "id": "custom-slayer",
+    "name": "Dark World Vanquisher",
+    "desc": "Defeat 1,000 foes across modded runs.",
+    "cat": "combat",
+    "counter": "kills",
+    "goal": 1000,
+    "reward": 500,
+    "secret": false
+  }
+]
+```
+
+Supported `counter` values (evaluated strictly against `profile.customProgress`):
+- Run counters: `runs`, `wins`, `kills`, `bosses`, `alphas`, `legendaries`, `reactions`, `captures`, `shinies`, `classics`, `playtime`, `maxLevel`, `maxTime`, `best_kills`, `mapsWon`
+- Per-biome / per-species counters: `win_<biomeId>`, `kills_<biomeId>`, `boss_<biomeId>`, `win_sp_<speciesId>`
+- Collection evaluators: `@customSeen`, `@customCaught`, `@customLeague`, `@customShinies`, `@customClassics`, `@customMaps`, `@customHard`, `@customNight`, `@customChamp`, `@customSpecies:<id1,id2>`, `@customBiomes:<b1,b2>` (optional `speciesList` / `biomes` filter arrays supported)
+- Rewards: `reward` credits `profile.customProgress.stardust`; `unlockSpecies` (`> 251`) and `unlockBiome` (non-vanilla IDs) unlock custom content strictly inside `profile.customProgress`.
+- Runtime inspection endpoint: `GET /local-api/mod-api/achievements` (Offline Mode + Mods ON).
+
+---
+
 ## 13. Custom Mod Config Modules, Declarative Settings & Actions
 
-Mods have two ways to expose configuration inside **Unbound Settings -> Mods Config** (across both Desktop and Android):
+Enabled mods exposing settings appear inside **Unbound Settings -> Mods Config** across Desktop, Android, and iOS, grouped by `category` into collapsible sections and collapsible per-mod cards (with **Collapse All** / **Expand All** controls and persisted collapse state).
 
 ### A. Custom Mod Config Modules (`configModule`)
 
@@ -902,7 +967,8 @@ Your `config/panel.js` registers a renderer on `window.PokebonkModConfigModules[
 
 `ctx` passed to `mount(ctx)` provides:
 - `container`: DOM element where the module mounts its UI
-- `mod`: full mod descriptor (`id`, `name`, `version`, `settingsSchema`, `settingsValues`, `actions`, `capabilities`, etc.)
+- `mod`: full mod descriptor (`id`, `name`, `version`, `category`, `settingsSchema`, `settingsValues`, `configSections`, `actions`, `capabilities`, etc.)
+- `embedded`: boolean (`true` when mounted inside a collapsible Mods Config card; omit duplicate outer card borders/titles when `true`)
 - `state`: current Unbound Settings state (`mode`, `mods`, `customMusic`, `hyruleConfig`, `offlineVersion`, etc.)
 - `isOffline`: boolean (`true` only when client is in Offline Mode)
 - `api`: host actions (`updateModSettings(modId, patch)`, `runModAction(modId, actionId)`, `updateHyruleConfig(patch)`, `mutateProfile(mutation)`, `reloadGame()`, `openBrowser(focusModId)`)
@@ -938,7 +1004,8 @@ For simpler mods, add a `"settings"` array to `mod.json`. Values save automatica
 ]
 ```
 
-- Supported `type` values: `"toggle"` (boolean switch) and `"select"` (dropdown of strings or `{ "value", "label" }` objects).
+- Supported `type` values: `"toggle"` (boolean switch), `"select"` (dropdown of strings or `{ "value", "label" }` objects), `"range"` / `"number"` (`min`, `max`, `step`), and `"text"`.
+- Add `"section": "<id>"` on fields (and optional `"configSections": [{ "id": "...", "label": "..." }]` in `mod.json`) to group settings into collapsible subsections inside the mod's card.
 - Set `"cheat": true` on gameplay-altering settings so the engine locks them automatically while in Online Mode.
 
 ### C. Mod Actions (`toolbarActions`)
@@ -984,20 +1051,46 @@ Action buttons appear inside the mod's card in **Unbound Settings -> Manage Mods
 
 ## 14. Scripts, Styles, Assets, Patches & Compatibility
 
-### Runtime Mod SDK (`scripts`)
+### Runtime Mod SDK (`scripts`) & Event Bus (`window.pokebonkHooks`)
 
-Scripts listed in `"scripts"` run in Offline Mode with `window.pokebonkModAPI`:
+Scripts listed in `"scripts"` and styles listed in `"styles"` are served automatically via `/local-api/mod-runtime.js` and `/local-api/mod-styles.css` across **Desktop (Windows, Linux, macOS), Android, and iOS** whenever Offline Mode + Modding Core are active (and completely omitted in Pure Vanilla Offline and Online Mode). Each script runs inside an isolated IIFE with:
+
+- `window.pokebonkModAPI.getPlatform()` -> `{ os, mobile }`
+- `window.pokebonkModAPI.getSettings(modId)` / `getAllSettings()` -> live declarative mod settings
 - `window.pokebonkModAPI.getProfile()` -> `GET /local-api/mod-api/profile`
 - `window.pokebonkModAPI.getCharacters()` -> `GET /local-api/mod-api/characters` (includes `has3dModel`, `modelUrl`, `hasAltShiny`, `wardrobeCount`)
 - `window.pokebonkModAPI.getWardrobe()` -> `GET /local-api/mod-api/wardrobe`
 - `window.pokebonkModAPI.getEnemies()` -> `GET /local-api/mod-api/enemies`
 - `window.pokebonkModAPI.getMoves()` -> `GET /local-api/mod-api/moves`
+- `window.pokebonkModAPI.getFusions()` -> `GET /local-api/mod-api/fusions`
 - `window.pokebonkModAPI.getVfx()` -> `GET /local-api/mod-api/vfx`
 - `window.pokebonkModAPI.getMechanics()` -> `GET /local-api/mod-api/mechanics` (includes active `prefabs` and `mechanics`)
+- `window.pokebonkModAPI.getLevels()` -> `GET /local-api/mod-api/levels`
+- `window.pokebonkModAPI.getAchievements()` -> `GET /local-api/mod-api/achievements`
 - `window.pokebonkModAPI.getAudio()` -> `GET /local-api/mod-api/audio`
 - `window.pokebonkModAPI.mutateProfile(mutation)` -> `POST /local-api/mod-api/mutate` (Offline Mode + Mods ON only)
 - `window.pokebonkModAPI.fetchPokeApi(path)` / `getPokeApiSpriteUrl(id, shiny)` / `reloadGame()`
-- Runtime hooks: `window.pokebonkMapMechanics`, `window.pokebonkTerrainGen`, `window.pokebonkVfx`, `window.pokebonkAudio`, and read-only `GET /local-api/mods`.
+- **Runtime Event Bus (`window.pokebonkHooks`)**:
+  - `window.pokebonkHooks.on(event, fn)` / `once(event, fn)` / `off(event, fn)` / `emit(event, payload)`
+  - Built-in lifecycle events: `runStart`, `tick` (zero-overhead when unused), `levelUp`, `fusionCast`, `settingsChange`.
+  - `window.pokebonkHooks.registerActiveSlot({ id, key, label, color, onTrigger, getState })`: registers an active ability/item hotkey (keyboard on Desktop + clickable HUD button on Desktop, Android, and iOS).
+- Additional runtime hooks: `window.pokebonkMapMechanics`, `window.pokebonkTerrainGen`, `window.pokebonkVfx`, `window.pokebonkAudio`, and read-only `GET /local-api/mods`.
+
+### Validating Your Mod Before Release (`npm run validate:mods`)
+
+Run `npm run validate:mods` from the repository root to automatically validate every mod in `mods/` and `mods-database/`:
+- Verifies `mod.json` / `info.json` JSON syntax, referenced asset files, ID range safety, move archetypes, wardrobe slots, and mod script JS syntax.
+- Dry-runs declarative patches and `bundlePatches` against `bundled-build/assets/*` and checks every patched JS chunk for syntax errors, reporting any stale or unmatched patch anchors.
+
+### Declarative APIs Replacing Common `bundlePatches`
+
+Prefer these built-in manifest fields over regex `bundlePatches` so your mod survives PokéBonk updates automatically:
+- **Localization (`i18n` / `localesDir`)**: `"i18n": { "en": { "pokemon.2010": "Link" }, "*": { "My Key": "My Text" } }`
+- **Custom Fusions (`customFusions` / `fusionsDir`)**: `"customFusions": [{ "key": "fu-custom-nova", "name": "Astral Nova", "parts": ["quick-attack", "shadow-ball"], "type": "psychic", "power": 2.4, "color": "#a855f7" }]`
+- **Exclusive Moveset & Shop Items**: Set `"exclusiveMoveset": true` (or `"movePool": [...]`) on characters, and `"shop": true, "shopPrice": 180` on `customItems`.
+- **Opt-In Vanilla Audio Overrides (`sfxOverrides` / `musicOverrides`)**: Redirect named vanilla SFX methods or music tracks conditionally via `settingKey` and `biomes`.
+- **Level Landmarks, Interior Mode & Boss Waves**: Declare `landmarks: [...]`, `proceduralGen: { interior: true }`, and `bossWaves: { "1": [...], "2": [...] }` directly on `customLevels`.
+- **Dependencies & Load Order**: Declare `requires`, `conflicts`, and `loadAfter` in `mod.json` for deterministic load ordering and 1-click Mod Issues resolution.
 
 ### Asset Overrides & Aliases
 

@@ -15,5 +15,45 @@
     "5 Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja with 37 attacks & 15 GPU VFX"
   ],
   "image": "preview.png",
-  "requirements": "Offline Mode (Mod Engine ON)"
+  "requirements": "Offline Mode (Mod Engine ON)",
+  "changelog": [
+    {
+      "version": "2.0.1",
+      "date": "2026-04-20",
+      "changes": [
+        "Fixed localization helper compatibility on PokéBonk v0.10.36.",
+        "Verified all 18 animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form fighters with Dual Shinies, 37 attacks, 15 VFX, and 18 Ultimates."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-04-02",
+      "changes": [
+        "Upgraded Mega Mewtwo X and Ash-Greninja to animated multi-frame sheets (0 static sprites across the entire pack).",
+        "Added full 11-language localization and Dual Shinies for all 18 fighters."
+      ]
+    }
+  ],
+  "gameVersions": [
+    "0.10.31",
+    "0.10.36"
+  ],
+  "minGameVersion": "0.10.31",
+  "maxGameVersion": "0.10.36",
+  "minClientVersion": "1.0.5",
+  "preservedVersions": [
+    {
+      "version": "2.0.1",
+      "gameVersions": [
+        "0.10.31"
+      ],
+      "minGameVersion": "0.10.31",
+      "maxGameVersion": "0.10.31",
+      "minClientVersion": "1.0.0",
+      "maxClientVersion": "1.0.5",
+      "downloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack-v2.0.1.zip",
+      "fallbackDownloadUrl": "https://github.com/HyruleChosenOne/Pokebonk-Unbound/releases/download/mods-database/custom-characters-pack.zip",
+      "note": "Preserved release for PokéBonk Unbound v1.0.5 (Offline PokéBonk v0.10.31)."
+    }
+  ]
 }
