@@ -27,6 +27,7 @@ Install multi-mod collections together with 1 click inside **Unbound Settings ->
 | `classic-sfx-pack` | [Classic Sound Effects Pack](#classic-sfx-pack) | Client (Optional) | — | Audio | 2.22 MB | `v1.1.2` | Authentic Pokémon Emerald menu UI, Poké Ball, battle hit, and attack/move SFX + classic Gen 3 fanfares. |
 | `pokemon-audio-pack` | [Gen 1&2 Soundtrack](#pokemon-audio-pack) | Client (Optional) | — | Audio | 83.29 MB | `v1.3.3` | 53 authentic FRLG, HGSS & GB Sounds tracks covering EVERY PokéBonk song including all seasonal events. |
 | `custom-characters-pack` | [Non-Dexed Pokémon Pack (18 Fighters)](#custom-characters-pack) | **Gameplay** (Parity Required) | — | Characters | 9.85 MB | `v2.0.1` | 18 fully animated Non-Dexed, Glitch, Beta, Spin-Off & Special Form Pokémon with Dual Shinies, 37 attacks, 18 Ultimates & 11-language translation. |
+| `isaac-rebirth-modpack` | [The Binding of Isaac: Rebirth (Total Conversion)](#isaac-rebirth-modpack) | **Gameplay** (Parity Required) | — | Modpacks (Experimental) | 69.93 MB | `v0.15.0` | Experimental total conversion showcase with Isaac characters, enemies, chapters, items, synergies, mechanics, models, music, and SFX. |
 | `minish-cap-link` | [The Minish Cap Showcase Pack (Test Mod — Link & Zelda)](#minish-cap-link) | **Gameplay** (Parity Required) | — | Characters | 5.55 MB | `v3.0.1` | Test & showcase mod demonstrating PokéBonk Unbound modding capabilities: custom fighters, movesets, VFX, SFX/cries, Wardrobe skins, and 3D stages. |
 
 ---
@@ -182,6 +183,31 @@ Polished 18-fighter Non-Dexed Pokémon Pack (#2001-#2023) featuring 13 iconic No
 - Complete 11-language global localization (EN, ES, PT, FR, DE, IT, JA, KO, RU, ZH, ZHT) for all 18 fighters, roles, 37 moves, 18 Ultimates, and 5 items
 - Glitch, Beta & Spin-Off icons: MissingNo., Substitute Doll, Bad Egg, Shadow Lugia XD001, Primal Dialga, Shadow Mewtwo, Eternal Flower Floette, Ultra Necrozma, Beta Arceus, Purple Kecleon, Mikon, Pikachu Libre, and Hakogame
 - 5 Special Forms: Mega Rayquaza, Primal Groudon, Primal Kyogre, Mega Mewtwo X, and Ash-Greninja with 37 attacks & 15 GPU VFX
+
+
+<a id="isaac-rebirth-modpack"></a>
+### The Binding of Isaac: Rebirth (Total Conversion) *(Experimental)*
+
+![The Binding of Isaac: Rebirth (Total Conversion)](mods-database/isaac-rebirth-modpack/preview.png)
+
+- **ID**: `isaac-rebirth-modpack`
+- **Co-op Scope**: Gameplay (all Co-op players must enable the same version)
+- **Category**: Modpacks (**Experimental · Total Conversion**)
+- **Size**: 69.93 MB (1545 files)
+- **Version**: `v0.15.0`
+- **Author**: Experimental Showcase
+- **Requirements**: Offline Mode (Mod Engine ON) — Total Conversion (compatible with Hyrule's Collection)
+- **Info File**: [`mods-database/isaac-rebirth-modpack/info.json`](mods-database/isaac-rebirth-modpack/info.json)
+- **Tags**: `total-conversion`, `isaac`, `rebirth`, `modpack`, `experimental`, `characters`, `bosses`, `levels`, `enemies`, `synergies`, `items`, `audio`, `3d-models`, `mechanics`, `gore`, `wallpaper`, `ui`
+
+Experimental proof of concept and total-conversion showcase. Replaces core game assets, UI, and event themes with The Binding of Isaac: Rebirth while remaining a togglable mod. It adds 55 playable characters and bosses, 45 custom enemies, eight multi-room chapters, Isaac-themed Expedition/Tower/Boss Rush maps, 40 custom items, 61 custom attacks, 71 synergies, 38 interactive mechanics, an Isaac HUD, 63 custom 3D models, 20 music tracks, and 114 sound effects.
+
+**Highlights:**
+- 55 playable characters and bosses; only Isaac starts unlocked
+- 45 custom dungeon enemies and eight Isaac chapters with rooms, locked doors, bombs, secret rooms, and void pits
+- 40 custom items, 61 attacks, 71 synergies, and 18 completion-mark achievements
+- Isaac HUD with heart containers, pickups, active items, tarot cards/pills, and fog-of-war minimap
+- 63 custom 3D models, 20 music tracks, and 114 sound effects
 
 
 <a id="minish-cap-link"></a>

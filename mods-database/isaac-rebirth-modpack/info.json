@@ -1,0 +1,21 @@
+{
+  "id": "isaac-rebirth-modpack",
+  "name": "The Binding of Isaac: Rebirth (Total Conversion)",
+  "version": "0.15.0",
+  "totalConversion": true,
+  "experimental": true,
+  "author": "Experimental Showcase",
+  "category": "Modpacks",
+  "tagline": "Experimental v0.15 total conversion showcase: 55 characters, 45 enemies, 8 Isaac chapters, 40 items, 71 synergies, and 38 custom mechanics.",
+  "description": "An experimental proof of concept and showcase of custom mechanics and total conversions in PokeBonk. Replaces core game assets, UI, and event themes with The Binding of Isaac: Rebirth while remaining a togglable mod (overrides other active mods except Hyrule's Collection). Features: 55 playable characters and bosses, 45 custom enemies, 8 multi-room Isaac chapters with locked doors, bombs, secret rooms, and void pits, Isaac-themed Expedition/Tower/Boss Rush maps, 40 custom items, 61 custom attacks, 71 synergies, 38 interactive map mechanics, an Isaac HUD with hearts and a fog-of-war minimap, 63 custom 3D models, 20 music tracks, and 114 sound effects.",
+  "highlights": [
+    "55 playable characters and bosses with Wiki-inspired movesets (only Isaac starts unlocked; rest unlock through play or via the Unlock All setting)",
+    "45 custom dungeon enemies and Isaac-themed Expedition, Tower, and Boss Rush maps (keeping vanilla event generation)",
+    "8 Isaac chapters with multi-shape rooms, combat/key/coin/curse locked doors, bombs [B] for secret rooms, void pits, and interactive landmarks",
+    "40 custom items, 61 custom attacks, 71 synergies, and 18 completion mark achievements",
+    "38 interactive map mechanics (shops, slot machines, beggars, sacrifice spikes, exploding barrels, breakable poop, fireplaces, etc.)",
+    "Isaac HUD with heart containers, pickups, active items [F], tarot cards/pills [Q], fog-of-war minimap, 63 custom 3D models, 20 music tracks, and 114 SFX"
+  ],
+  "image": "preview.png",
+  "requirements": "Offline Mode (Mod Engine ON) -- Total Conversion (Compatible with Hyrule's Collection)"
+}
